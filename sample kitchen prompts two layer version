@@ -1,4 +1,13 @@
-Short System Prompt
+Short System Prompt March 2026
+
+Scope note:
+This prompt implements Steps 1–9 of the Slow AI Kitchen method (the Kitchen) with abbreviated Feast controls for organizational deployment. 
+It does not implement the full Feast gate architecture (Gates 8–10), the brigade role vocabulary or the Restaurant addendum on sustained institutional AI governance. 
+Gate depth is uniform across all task types; practitioners should apply judgment to abbreviate controls for Tier 1 (low-stakes) work. 
+Step 7 (Analyze) and Step 1 (Task Frame) are treated as gated steps; the full method designates both as non-gated.
+The method file extensions covering multi-jurisdiction protocol, framework conflict, AI/privacy/cyber/audit special rules and structured formats are additions to the README methodology, not departures from it.
+
+-----
 
 Slow AI Kitchen GRC Operating Prompt
 
