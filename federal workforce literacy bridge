@@ -1,0 +1,142 @@
+# SLOW AI KITCHEN
+
+### Federal Workforce Literacy Bridge
+
+*Integrating the U.S. Department of Labor's AI Literacy Framework*
+
+**A standalone add-on module for organizations aligning governed AI methodology with federal workforce AI literacy standards.**
+
+**Son-U Michael Paik**
+CEO, GRC Solutions Korea
+General Counsel, BABL AI
+[www.grcskorea.com](http://www.grcskorea.com)
+
+**Final Liability rests with the Human.**
+
+---
+
+## 1. Purpose and Scope
+
+On February 13, 2026, the U.S. Department of Labor issued Training and Employment Notice 07-25, releasing its AI Literacy Framework. The framework defines AI literacy as a foundational set of competencies enabling individuals to use and evaluate AI technologies responsibly. It identifies five foundational content areas and seven delivery principles intended to guide workforce and education program design across the United States.
+
+Slow AI Kitchen is a twelve-step governed AI methodology for professional work. It operates in two registers: Steps 1 through 9 (the Kitchen) govern individual and team work product; Steps 10 through 12 (the Feast) govern organizational deployment of multiple AI tools across multiple users and functions. An addendum, Your Restaurant, extends the method to permanent institutional governance, risk management and compliance.
+
+This module is a standalone add-on. It does not alter any step, gate, role or principle of the core method. It maps the DOL's foundational content areas and delivery principles onto the existing Slow AI Kitchen architecture so that organizations operating under the method can demonstrate alignment with the federal framework without adopting a second, parallel system. For organizations subject to DOL workforce programs, WIOA-funded training or state workforce board oversight, this module provides a documented compliance bridge. For private-sector organizations not directly subject to DOL guidance, the module offers a credible external benchmark against which their internal AI literacy programs can be measured.
+
+---
+
+## 2. Why These Two Frameworks Fit
+
+The DOL framework answers a competency question: *what should workers know about AI?* Slow AI Kitchen answers an operating question: *how should workers use AI in governed professional work?* The two are not competing taxonomies. They are complementary layers. One defines the literacy floor; the other provides the production discipline that makes literacy operationally meaningful.
+
+A worker who understands AI principles (DOL Content Area 1) but has never been required to define success criteria before prompting will still produce ungoverned output. A worker who follows the Kitchen's twelve steps but cannot explain why AI generates probabilistic outputs rather than deterministic answers will follow the method mechanically without understanding what it protects against. Both failures are real. Both are preventable when the frameworks operate together.
+
+The structural alignment is not accidental. The DOL framework emphasizes human oversight, bounded AI use, output verification, accountability for outcomes and responsible deployment. Slow AI Kitchen was built on exactly these commitments before the DOL framework existed. The convergence reflects the fact that any serious approach to governed AI use arrives at the same set of controls. The difference is that the DOL framework expresses them as competencies to be learned, and Slow AI Kitchen expresses them as gates to be passed.
+
+---
+
+## 3. Mapping: DOL Foundational Content Areas to Kitchen Steps
+
+The following table maps each of the DOL's five foundational content areas to the Slow AI Kitchen steps where that competency is exercised, tested or enforced. The purpose is not to suggest that one step "covers" one content area in isolation. Several content areas surface across multiple steps, and several steps engage more than one content area. The mapping identifies the primary integration points where facilitators and compliance officers can verify that the DOL competency is being addressed within the method.
+
+| DOL Content Area | Primary Kitchen Steps | How the Method Addresses It |
+| --- | --- | --- |
+| 1. Understand AI Principles | Step 1 (Define the Dish), Step 4 (Read the Kitchen), Workshop Module 1 | Step 1 requires task framing that implicitly demands understanding of what AI can and cannot do. Step 4 maps socio-technical context, which requires understanding probabilistic outputs, hallucination risk and human design constraints. Module 1 instruction covers these principles directly. |
+| 2. Explore AI Uses | Step 5 (Apply Heat), Workshop Module 2 | Step 5 is the bounded AI use gate. Workers explore appropriate and inappropriate uses within a defined frame. The method's distinction between amplifier, critic, simulator, organizer and drafting assistant maps directly to the DOL's examples of productivity tools, decision-support systems and task-specific applications. |
+| 3. Direct AI Effectively | Step 5 (Apply Heat), Step 3 (Knife Work) | Step 3 ensures the human has done irreversible manual preparation before AI is introduced, which is the precondition for effective prompting. Step 5 requires bounded, purposeful AI interaction. Together they enforce the DOL's emphasis on contextual framing, iterating on outputs and avoiding vague prompts. |
+| 4. Evaluate AI Outputs | Step 8 (Taste Before Service), Step 2 (Mise en Place) | Step 8 is the verification and validation gate: testing the deliverable against the Definition of Done, evidence, logic, arithmetic, audience fit and operational context. Step 2 sets the observable pass/fail criteria that make evaluation measurable rather than subjective. This directly satisfies the DOL's emphasis on verifying accuracy, spotting logical errors and aligning with strategic intent. |
+| 5. Use AI Responsibly | Step 6 (Name the Chef de Partie), Steps 10–12 (the Feast), Your Restaurant addendum | Step 6 assigns human accountability before any consequential AI-assisted output is relied upon. Steps 10 through 12 govern tool authorization, operator competency and operational audit at organizational scale. Your Restaurant extends this to permanent institutional governance, risk management and compliance. The DOL's emphasis on protecting sensitive information, following workplace policies and maintaining accountability is structurally embedded across these elements. |
+
+---
+
+## 4. Mapping: DOL Delivery Principles to Workshop Design
+
+The DOL framework identifies seven delivery principles for effective AI literacy instruction. The Slow AI Kitchen workshop was designed independently but converges on the same pedagogical commitments. The following table maps each DOL delivery principle to the workshop elements that satisfy it.
+
+| DOL Delivery Principle | Kitchen Workshop Element | Integration Note |
+| --- | --- | --- |
+| 1. Enable Experiential Learning | Workshop Exercise (all modules) | The workshop requires teams to produce a genuine artifact on a real business problem, not a simulated one. Exercises run the full twelve-step sequence. The facilitator principle "reward clear framing, good constraints, quality of review" reinforces learning by doing. |
+| 2. Embed Learning in Context | Workshop Exercise, Module 4 | Suitable exercise examples are drawn from the participants' own work: client advisories, policy summaries, workflow design, management briefings, risk analyses and training notes. Module 4 treats the tool used in the exercise as the subject of an organizational deployment question. |
+| 3. Build Complementary Human Skills | Step 3 (Knife Work), Module 1 instruction | The manual first pass is the method's core mechanism for building and preserving the human skills that AI cannot replace. The method's teaching move — showing that the most dangerous AI outputs are often the most fluent — directly addresses critical thinking, judgment and domain expertise. |
+| 4. Address Prerequisites to AI Literacy | See Integration Note | The core method assumes participants have baseline digital literacy and tool access. Organizations deploying this module in WIOA-funded or workforce board settings should add a pre-workshop readiness assessment covering device access, broadband connectivity and basic digital fluency. This is the one area where the DOL framework identifies a requirement that Slow AI Kitchen does not independently address, because the method was designed for professional knowledge workers rather than workforce entry populations. |
+| 5. Create Pathways for Continued Learning | Step 9 post-action review, Step 12 operational audit cycle, Your Restaurant Pillar 5 | Step 9 turns the method into a learning system by requiring post-action review after every deployment decision. Step 12 requires updated training standards as tools evolve. Pillar 5 of Your Restaurant institutionalizes continuous improvement. The method's three-register architecture (Kitchen, Feast, Restaurant) is itself a progression pathway from individual discipline to organizational deployment to institutional program governance. |
+| 6. Prepare Enabling Roles | Roles architecture (Steps 1–9 and Steps 10–12), Workshop Module 4 | The method defines both task roles (Preparer, Builder, Reviewer, Approver, Owner) and organizational roles (AI Owner, AI Operator, Executive Sponsor). Module 4 trains participants to assign brigade roles and training requirements. The facilitator principles provide a train-the-trainer framework. |
+| 7. Design for Agility | Step 12 (Run the Event), Your Restaurant Pillars 4 and 5 | Step 12 requires periodic review of the tool registry against regulatory developments, new risk disclosures and operational experience. Pillar 4 manages the full AI lifecycle including version tracking and performance monitoring. Pillar 5 institutionalizes a regular review cycle for the governance framework itself. These elements satisfy the DOL's requirement for built-in adaptation mechanisms. |
+
+---
+
+## 5. The Gap and the Bridge
+
+The mapping above reveals one structural gap and one positioning opportunity.
+
+### 5.1 The Gap: Workforce Entry Prerequisites
+
+The DOL framework's Delivery Principle 4, Address Prerequisites to AI Literacy, identifies barriers that the core Slow AI Kitchen method does not address: device access, broadband connectivity, digital literacy fundamentals and accommodation for participants at varying skill levels and learning speeds. This is not an oversight in the method; it is a scope boundary. Slow AI Kitchen was designed for professional knowledge work, where digital fluency and tool access are assumed. The DOL framework, by contrast, is designed to reach every worker in the American economy, including populations for whom these prerequisites are not yet met.
+
+Organizations deploying Slow AI Kitchen in workforce development contexts should add a pre-workshop readiness module. This module should assess baseline digital fluency, identify device and connectivity barriers, provide light-touch digital literacy support where needed and ensure that no participant is excluded from the workshop exercise by a prerequisite gap rather than a competency gap. This readiness module is not part of Slow AI Kitchen proper. It is a deployment-context adaptation that sits outside the method's gates but inside the organization's training program design.
+
+### 5.2 The Opportunity: Credential Positioning
+
+The DOL framework is voluntary guidance, not a regulatory mandate. But voluntary federal frameworks have a well-documented habit of becoming the benchmark against which funded programs are evaluated. Organizations that can demonstrate alignment between their internal AI governance methodology and the DOL's AI Literacy Framework are better positioned for WIOA funding eligibility, state workforce board partnerships, Registered Apprenticeship integration and employer credibility in regulated sectors.
+
+Slow AI Kitchen, with this module attached, provides that alignment without requiring the organization to adopt a second system. The method's existing architecture already satisfies the DOL's content areas and most of its delivery principles. This module documents the alignment explicitly, so that compliance officers, grant writers and workforce program managers can reference it without reverse-engineering the mapping themselves.
+
+---
+
+## 6. Facilitator Guidance for DOL-Aligned Delivery
+
+Workshop facilitators deploying this module should make the following adjustments to the standard Slow AI Kitchen workshop.
+
+### 6.1 Opening Frame
+
+Add a brief reference to the DOL AI Literacy Framework in the opening session. Position Slow AI Kitchen as the operating method that delivers the competencies the DOL framework describes. The frame should be: the DOL tells us what workers need to know; the Kitchen teaches them how to do it under governed conditions. This takes no more than five minutes of the opening session and should not displace the core framing about discipline over access.
+
+### 6.2 Module 1 Enhancement
+
+When teaching Foundations (Steps 1 through 3), explicitly connect the manual first pass in Step 3 to DOL Content Area 3 (Direct AI Effectively). The DOL framework emphasizes that effective AI interaction depends on the user's ability to provide context and iterate strategically. The Kitchen's position is stronger: workers who have done the knife work arrive at Step 5 with the cognitive scaffolding to prompt well, not because they have been taught prompting tricks, but because they have already formed a judgment that the AI is being asked to extend. Make this point explicitly.
+
+### 6.3 Module 2 Enhancement
+
+When teaching Governance (Steps 4 through 6), connect Step 6 (Name the Chef de Partie) to DOL Content Area 5 (Use AI Responsibly). The DOL framework's language about maintaining accountability and avoiding treating AI responses as final or authoritative maps directly onto the Chef de Partie gate. Facilitators should surface this connection so that participants understand the Kitchen's accountability step is not a bureaucratic formality but a structural expression of the same responsible-use principle the federal government has identified as foundational.
+
+### 6.4 Module 3 Enhancement
+
+When teaching Execution (Steps 7 through 9), connect Step 8 (Taste Before Service) to DOL Content Area 4 (Evaluate AI Outputs). The DOL framework describes output evaluation as verifying factual accuracy, assessing completeness, spotting logical errors and aligning with strategic intent. The Kitchen's Step 8 operationalizes every one of these checks through the Definition of Done set in Step 2. Make the connection explicit: the DOL describes the competency; the Kitchen provides the mechanism.
+
+### 6.5 Module 4 Enhancement
+
+When teaching Organizational Deployment (Steps 10 through 12), connect the Feast's tool registry, brigade structure and operational audit to DOL Delivery Principles 5 (Create Pathways for Continued Learning), 6 (Prepare Enabling Roles) and 7 (Design for Agility). The DOL's language about structured routes to advanced skills, equipping managers and counselors, and built-in adaptation mechanisms maps directly onto the Feast architecture. Module 4 is where the organizational-scale alignment is most visible and most valuable for compliance documentation.
+
+### 6.6 Workshop Outputs Addition
+
+Add a twelfth workshop output to the standard eleven: a DOL AI Literacy Framework alignment summary. This is a one-page document produced by each team at the conclusion of the workshop, mapping their completed exercise artifacts to the five DOL content areas. It serves as both a learning exercise and a compliance record. For organizations in workforce development contexts, this document can be included in program reporting.
+
+---
+
+## 7. Definition of Done for This Module
+
+If you want to know whether the Federal Workforce Literacy Bridge was properly integrated into a Slow AI Kitchen deployment, use this test. The workshop opening referenced the DOL AI Literacy Framework and positioned Slow AI Kitchen as the delivery vehicle. Each of the four instructional modules made at least one explicit connection between a Kitchen step and a DOL content area or delivery principle. The workshop exercise produced a DOL alignment summary as its twelfth output artifact. For workforce development deployments, a pre-workshop readiness assessment addressed digital literacy prerequisites. The facilitator did not treat the DOL mapping as a checklist exercise separate from the method, but as an integrated explanation of why the method works.
+
+If those conditions are met, the organization can document that its AI governance training program is aligned with the U.S. Department of Labor's AI Literacy Framework as released in TEN 07-25 (February 13, 2026).
+
+---
+
+## 8. Scope Boundaries
+
+This module addresses only the DOL's AI Literacy Framework as issued in TEN 07-25. It does not address the EU AI Act's separate AI literacy obligations under Article 4, which impose a mandatory (not voluntary) requirement on providers and deployers of AI systems to ensure sufficient AI literacy among their personnel. Organizations operating across jurisdictions should treat this module as covering the U.S. federal workforce dimension and should consult the Your Restaurant addendum's Pillar 3 (Regulatory Compliance) for the EU dimension. Korea's AI Basic Act, effective January 22, 2026, introduces its own competency and transparency requirements that are addressed separately in the AI GRC System.
+
+This module does not modify any step, gate, role or principle of Slow AI Kitchen. It adds a compliance mapping layer and facilitator guidance. The method remains the method. The module makes visible what was already true: that Slow AI Kitchen, properly followed, produces the competencies the DOL framework describes, because both were built on the same conviction.
+
+---
+
+## 9. Further Resources
+
+The NIST Trustworthy and Responsible AI Resource Center at https://airc.nist.gov is the authoritative starting point for organizations that want to move beyond literacy alignment into structured AI risk management. The center hosts the AI Risk Management Framework (AI RMF 1.0), the AI RMF Playbook and a clause-level crosswalk mapping the AI RMF to ISO/IEC 42001. All three resources are free and maintained by the National Institute of Standards and Technology. Organizations operating in workforce development contexts will find the AI RMF's four functions — Govern, Map, Measure and Manage — directly aligned with the governance architecture described in the Slow AI Kitchen addendum, Your Restaurant.
+
+Organizations that move from workforce literacy alignment into permanent AI program governance will find the complete reference architecture — covering NIST publications organized by governance pillar, primary regulatory instruments including the EU AI Act and Korea's AI Basic Act, OECD AI Principles, and the ISO/IEC standards catalogue anchored by 42001 — at the Slow AI Kitchen GitHub repository: [Restaurant Resources](https://github.com/rolldabones/slow-ai-kitchen/blob/main/restaurant%20resources). That resource file is organized by the same five-pillar structure (Governance, Risk Management, Regulatory Compliance, AI Lifecycle Management and Continuous Improvement) used throughout the Slow AI Kitchen system. It is a pathway for organizations ready to build the institutional layer, not a prerequisite for the Bridge documented here.
+
+---
+
+*AI is a tool in the kitchen, not the chef.*
+
+**Final Liability rests with the Human.**
