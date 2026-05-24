@@ -1,0 +1,221 @@
+# Slow AI Cookbook
+
+### Starter Edition
+
+*Workflows that are Human-made, for Easy Work, Simply Done.*
+
+**Son-U Michael Paik**
+CEO, GRC Solutions Korea
+
+*AI is a tool in the kitchen, not the chef.*
+
+---
+
+## How to Use This Cookbook
+
+This is a starter set. Each recipe is one pass through the Kitchen, Steps 1 through 9 of the Slow AI Kitchen method, for work a single professional or a small team can run without an org chart. It stays in Tier 1 and Tier 2. For high-stakes work, organizational deployment and sustained programs, the Feast and the Restaurant addendum in the method govern instead.
+
+Every recipe uses the same eight fields. The order is the discipline. AI does not enter until field five. By the time you bring it in, you have already framed the task, defined done, completed the manual first pass and read the context. The AI extends a judgment you have already formed. It does not form one for you.
+
+**Read a recipe top to bottom. If you reach for AI before field five, you are cooking the wrong way.**
+
+Recipes name capabilities, not models. A recipe that needs long context or file upload says so. It never names a product, because the model is interchangeable and the discipline is not.
+
+Each recipe carries a tier. Tier 1 is low-stakes work where a quick human check is enough. Tier 2 is work that informs a real decision or leaves the team, so it needs a named reviewer and an evidence note. The tier on the card is a floor, not a ceiling. If a task starts to carry consequences beyond its tier, stop and run the full method.
+
+**The card**
+
+1. The Dish. What you are making, for whom, and the decision it supports.
+2. Done Means. Three to five pass/fail checks, written before you touch AI.
+3. Prep by Hand. The first pass you do yourself. No AI yet.
+4. Watch For. Where this goes wrong and who is affected if it does.
+5. Bring in AI. What to use it for, and what to never hand it.
+6. Who Signs. The named human who owns the output.
+7. Plate and Taste. Build to Done Means, then test against it.
+8. Serve. Release within scope. One line on what you would change next time.
+
+---
+
+## Recipe 1: Client Advisory
+
+**Tier 2. Capabilities: long context, file upload.**
+
+**The Dish.** A written advisory that answers the Client's actual question and tells them what to do next.
+
+**Done Means.**
+- Answers the question asked, not an adjacent one.
+- States the rule or authority relied on, verified against source.
+- States the assumptions and what would change the answer.
+- Gives one clear recommended action and who takes it.
+- Flags where escalation or outside counsel is required.
+
+**Prep by Hand.** Write the precise question in one sentence. Note the facts and jurisdiction that matter. Draft your own first-cut answer and the authority you would cite. Spot the issue yourself before AI sees it.
+
+**Watch For.** Confident wrong law. Stale or superseded authority. Jurisdiction mismatch. Advice that drifts past the scope of the question. The real risk the Client did not think to ask about.
+
+**Bring in AI.**
+- Use it for: structuring the advisory, stress-testing your reasoning, surfacing the counterargument, tightening prose.
+- Never hand it: the legal conclusion, an unverified citation, the judgment on the Client's specific facts, the decision to give comfort.
+
+**Who Signs.** The advising professional, named. A second reviewer at Tier 2.
+
+**Plate and Taste.** Verify every authority against its source. Confirm the answer matches the question asked. Confirm assumptions are stated, not buried.
+
+**Serve.** Send within scope. Note what the Client actually did with it. That is the prep list for the next advisory.
+
+---
+
+## Recipe 2: Policy Summary
+
+**Tier 1, or Tier 2 if the summary drives a compliance decision. Capabilities: file upload, long context. Web access only to confirm the current version, then verify against source.**
+
+**The Dish.** A plain-language summary of a policy or regulation for a defined audience and the decision they need it for.
+
+**Done Means.**
+- Accurate to the source text.
+- Scoped to what this audience needs, not the whole instrument.
+- Separates what is mandatory from what is optional.
+- States effective dates and who is bound.
+- Invents no requirement that is not in the source.
+
+**Prep by Hand.** Read the source yourself. Mark the operative provisions. Write the one line of what this means for us before AI touches it.
+
+**Watch For.** Hallucinated provisions. Mandatory language softened to advisory. Dropped exceptions. Summarizing the wrong version. Dates lost in the compression.
+
+**Bring in AI.**
+- Use it for: compressing, reorganizing for the audience, drafting the plain-language version, building a comparison table.
+- Never hand it: which provisions are operative, whether language is mandatory, the source-of-truth reading.
+
+**Who Signs.** The function owner who will be asked whether the summary is right.
+
+**Plate and Taste.** Check every claimed requirement against the source text. A summary that adds or removes an obligation is not a summary.
+
+**Serve.** Distribute. Note the questions it raised. Those are the gaps for the next version.
+
+---
+
+## Recipe 3: Customer-Intake Workflow
+
+**Tier 2. Capabilities: long context, optional diagramming.**
+**⚠ If intake processes personal data, confirm a lawful basis before deployment and assess whether a data protection impact assessment is required. High-volume or sensitive processing typically triggers one under applicable law such as GDPR Article 35.**
+
+**The Dish.** A repeatable intake process that routes a customer request to the right outcome.
+
+**Done Means.**
+- Every path ends in a defined action and a named owner.
+- The common exceptions are handled, not just the happy path.
+- States what data is collected and why.
+- Names the point where a human must intervene.
+- Meets the data rules that apply.
+
+**Prep by Hand.** Map the current intake by hand. List the request types and exceptions you actually see, from experience, before AI generalizes them away.
+
+**Watch For.** A clean flowchart that ignores messy reality. The missing human-in-the-loop point. Data collected with no basis. Dead-end paths. Privacy exposure hidden inside convenience.
+
+**Bring in AI.**
+- Use it for: drafting the flow, generating edge cases you missed, writing the step scripts, producing the diagram.
+- Never hand it: where a human must intervene, the data-minimization judgment, the routing rules tied to risk.
+
+**Who Signs.** The process owner who answers for a misrouted request.
+
+**Plate and Taste.** Walk three real past cases through the flow. If any of them breaks it, the flow is not done.
+
+**Serve.** Pilot on small volume. Note where it broke. Revise before scaling.
+
+---
+
+## Recipe 4: Management Briefing
+
+**Tier 2. Capabilities: long context.**
+
+**The Dish.** A short briefing that gives a manager the decision to make and the basis for it.
+
+**Done Means.**
+- Leads with the decision or the ask.
+- One screen of context, not ten.
+- States real options with their tradeoffs.
+- Gives a recommendation with its rationale.
+- Says what happens if no decision is made.
+
+**Prep by Hand.** Decide the actual ask yourself. Draft the recommendation and identify the one number that should drive it.
+
+**Watch For.** The ask buried on page two. False confidence. Options that are not real options. Padding. Fluent AI text that reads well and says nothing. Polished language is not correct analysis.
+
+**Bring in AI.**
+- Use it for: structuring, tightening, pressure-testing the recommendation, generating the counter-case.
+- Never hand it: the recommendation, the judgment of what the manager needs, the choice of the decisive number.
+
+**Who Signs.** The person delivering the briefing.
+
+**Plate and Taste.** Can a busy reader get the ask in twenty seconds. Is every number sourced. If not, it is not ready.
+
+**Serve.** Deliver. Note the decision made and how fast. That tells you if the briefing worked.
+
+---
+
+## Recipe 5: Risk Analysis
+
+**Tier 2. Capabilities: long context.**
+**Note: if the analysis becomes a regulated determination or feeds a consequential external decision, it leaves starter scope and becomes Tier 3 under the full method.**
+
+**The Dish.** A structured analysis of what could go wrong in a defined activity, prioritized, with owners.
+
+**Done Means.**
+- Scope is stated.
+- Risks are specific, not register boilerplate.
+- Each risk is rated by likelihood and impact with the basis stated.
+- Each risk has a named owner and a control.
+- Residual risk is noted and assumptions are listed.
+
+**Prep by Hand.** List the risks you already know from experience first, before AI widens the net. Your judgment sets the floor. AI raises the ceiling.
+
+**Watch For.** Generic risk-register filler. False precision in the scoring. The one risk that matters lost in a long list. Risks with no owner. Treating the list itself as the control.
+
+**Bring in AI.**
+- Use it for: broadening the risk set, challenging your scoring, surfacing second-order risks, structuring the register.
+- Never hand it: the impact judgment, the scoring rationale, owner assignment, the call on whether residual risk is acceptable.
+
+**Who Signs.** The risk owner, with a reviewer.
+
+**Plate and Taste.** Test the analysis against a known past incident. If it would not have caught that, it is not done.
+
+**Serve.** Register the risks and assign owners. Schedule the review date now, not later.
+
+---
+
+## Recipe 6: Training Note
+
+**Tier 1. Capabilities: minimal. A basic model is enough.**
+
+**The Dish.** A short note that teaches one rule or skill so a defined audience can do something differently.
+
+**Done Means.**
+- One learning objective, stated.
+- Accurate.
+- Includes a worked example.
+- Tells the reader what to do, not only what to know.
+- Short enough to actually be read.
+
+**Prep by Hand.** State the one behavior you want changed. Write the example yourself, because a wrong example teaches the wrong thing.
+
+**Watch For.** Scope sprawl into a manual. Generic advice. An inaccurate example. A note that informs but changes no behavior. Padding.
+
+**Bring in AI.**
+- Use it for: drafting, simplifying, generating alternative examples, adjusting the reading level.
+- Never hand it: the learning objective, the accuracy of the rule, the correctness of the example.
+
+**Who Signs.** The author who owns the subject.
+
+**Plate and Taste.** Would a new hire know what to do after reading it once. If not, cut and sharpen.
+
+**Serve.** Publish. Note the questions you still receive. Those are the next note.
+
+---
+
+## A Closing Word on the Card
+
+The eight fields never change. The Dish, Done Means, Prep by Hand and Watch For are yours before AI arrives. Bring in AI is bounded. Who Signs is named. Plate and Taste is the proof. Serve is the release and the lesson. Run them in order and the discipline holds itself up.
+
+The kitchen teaches discipline. This starter set teaches the first six dishes. The rest is practice.
+
+**Final Liability rests with the Human.**
