@@ -1,14 +1,79 @@
-# slow-ai-kitchen
-A 12-step governed AI methodology for professional work — from individual task discipline through organizational deployment and institutional program governance. Includes risk tiers, role architecture, workshop guide and addendum on sustained AI GRC. Built on one principle: Final Liability rests with the Human.
+[README.md](https://github.com/user-attachments/files/28936696/README.md)
+# Slow AI Kitchen
 
-# SLOW AI KITCHEN
 ### Method and Workshop Guide
 
 *AI is a tool in the kitchen, not the chef.*
 
 **Son-U Michael Paik**
-CEO, GRC Solutions Korea
-www.grcskorea.com
+CEO, GRC Solutions Korea | General Counsel, BABL AI
+[www.grcskorea.com](http://www.grcskorea.com)
+
+| Version | Date | Status | License |
+|---|---|---|---|
+| v2.0 | 2026-06-11 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+
+A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
+
+**Final Liability rests with the Human.**
+
+---
+
+## Contents
+
+- [How to Use This Repository](#how-to-use-this-repository)
+- [Repository Contents](#repository-contents)
+- [What Slow AI Kitchen Is](#what-slow-ai-kitchen-is)
+- [Core Principles](#core-principles)
+- [Why This Works](#why-this-works)
+- [The Method at a Glance](#the-method-at-a-glance)
+- [Risk Tiers](#risk-tiers)
+- [Roles](#roles)
+- [The Twelve-Step Method](#the-twelve-step-method)
+  - [Step 1: Define the Dish](#step-1-define-the-dish)
+  - [Step 2: Mise en Place (Gate 1: Definition of Done)](#step-2-mise-en-place-gate-1-definition-of-done)
+  - [Step 3: Knife Work (Gate 2: Manual First Pass)](#step-3-knife-work-gate-2-manual-first-pass)
+  - [Step 4: Read the Kitchen (Gate 3: Socio-Technical Context)](#step-4-read-the-kitchen-gate-3-socio-technical-context)
+  - [Step 5: Apply Heat (Gate 4: Bounded AI Use)](#step-5-apply-heat-gate-4-bounded-ai-use)
+  - [Step 6: Name the Chef de Partie (Gate 5: Final Liability)](#step-6-name-the-chef-de-partie-gate-5-final-liability)
+  - [Step 7: Build the Plate](#step-7-build-the-plate)
+  - [Step 8: Taste Before Service (Gate 6: Verification and Validation)](#step-8-taste-before-service-gate-6-verification-and-validation)
+  - [Step 9: Open the Pass (Gate 7: Human Release Decision)](#step-9-open-the-pass-gate-7-human-release-decision)
+- [The Feast](#the-feast)
+  - [Step 10: Plan the Menu (Gate 8: Authorized Tool Registry)](#step-10-plan-the-menu-gate-8-authorized-tool-registry)
+  - [Step 11: Staff the Brigade (Gate 9: Competency and Authorization Record)](#step-11-staff-the-brigade-gate-9-competency-and-authorization-record)
+  - [Step 12: Run the Event (Gate 10: Operational Audit and Review Cycle)](#step-12-run-the-event-gate-10-operational-audit-and-review-cycle)
+- [Definition of Done for the Method Itself](#definition-of-done-for-the-method-itself)
+- [The Workshop](#the-workshop)
+- [Addendum: Your Restaurant](#addendum-your-restaurant)
+- [Related Work](#related-work)
+- [How to Cite](#how-to-cite)
+- [License](#license)
+- [Changelog](#changelog)
+- [About the Author](#about-the-author)
+
+---
+
+## How to Use This Repository
+
+**One professional, one task.** Read [Core Principles](#core-principles) and Steps 1 through 9, then cook from the [Slow AI Cookbook](./slow-ai-cookbook.md). The Cookbook stays in Tier 1 and Tier 2 and needs no org chart.
+
+**A team lead or trainer.** Run [The Workshop](#the-workshop). Load one of the sample kitchen prompts as the operating prompt for the exercise.
+
+**A function or program owner.** Read [The Feast](#the-feast) and [Your Restaurant](#addendum-your-restaurant), then start the tool registry at Step 10. The [restaurant resources](./restaurant-resources.md) file collects the referenced standards. The [federal workforce literacy bridge](./federal-workforce-literacy-bridge.md) aligns the method with U.S. federal workforce AI literacy standards.
+
+## Repository Contents
+
+| File | What it is | Use it when |
+|---|---|---|
+| [README.md](./README.md) | The canonical method: principles, tiers, roles, twelve steps, workshop guide and the Your Restaurant addendum | Always; every other file defers to this one |
+| [slow-ai-cookbook.md](./slow-ai-cookbook.md) | Starter Edition recipes. Each recipe is one pass through Steps 1 through 9 in eight fields, scoped to Tier 1 and Tier 2 work | You want to run the Kitchen on a real task today |
+| [sample-kitchen-prompts-compressed-builder-version.md](./sample-kitchen-prompts-compressed-builder-version.md) | Single-layer operating prompt implementing Steps 1 through 9 for GRC work (March 2026) | You want the discipline enforced inside the AI session itself |
+| [sample-kitchen-prompts-two-layer-version.md](./sample-kitchen-prompts-two-layer-version.md) | Two-layer operating prompt: Steps 1 through 9 plus abbreviated Feast controls (March 2026) | You want session-level discipline with light deployment controls |
+| [restaurant-resources.md](./restaurant-resources.md) | Reference standards for the Restaurant addendum, including ISO/IEC 42001 and NIST resources, with a note on certification versus substance | You are building the program governance layer |
+| [federal-workforce-literacy-bridge.md](./federal-workforce-literacy-bridge.md) | Standalone add-on module integrating the U.S. Department of Labor AI Literacy Framework (TEN 07-25) with the method | You are aligning training to federal workforce literacy standards |
+
+Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
 ---
 
@@ -28,15 +93,15 @@ It is called a kitchen because a kitchen is not a theory space. It is a producti
 
 Five principles govern the method. They are not aspirational. They are operating constraints.
 
-**Think before prompting.** AI should extend thought, not replace the initial act of thinking.
+**1. Think before prompting.** AI should extend thought, not replace the initial act of thinking.
 
-**Define success before producing output.** The team must know what "done" means before it starts.
+**2. Define success before producing output.** The team must know what "done" means before it starts.
 
-**Use AI inside a bounded frame.** AI is introduced only after the task, constraints and context are clear.
+**3. Use AI inside a bounded frame.** AI is introduced only after the task, constraints and context are clear.
 
-**Verify before reliance.** Plausible output is not trustworthy output.
+**4. Verify before reliance.** Plausible output is not trustworthy output.
 
-**Keep responsibility human.** AI can assist, draft, simulate and challenge. It does not own the decision.
+**5. Keep responsibility human.** AI can assist, draft, simulate and challenge. It does not own the decision.
 
 ---
 
@@ -47,6 +112,31 @@ The problem with most organizational AI use is not that the tools are bad. It is
 Slow AI Kitchen corrects this by inserting irreversible human-first steps before AI is available. By the time AI is used, the team has already formed a judgment. The AI extends that judgment rather than substituting for it.
 
 The method does not slow AI down arbitrarily. It slows it down to the speed of human verification, which is the only speed at which AI output can be responsibly relied upon. At organizational scale, the same logic applies: the Feast steps prevent institutions from deploying tools before they have defined what governed use looks like, staffed the people who will be accountable for it and built the operational layer to detect when it fails.
+
+---
+
+## The Method at a Glance
+
+The method is both a sequence and a control architecture. It operates in two registers. Steps 1 through 9 (the Kitchen) govern the production of individual and team work product. Steps 10 through 12 (the Feast) govern the organizational deployment of multiple AI tools across multiple users and functions.
+
+Ten of the twelve steps function as gates: checkpoints that output or deployment decisions must pass before advancing. Steps 1 and 7 are pure production steps with no gate function. A gate that is skipped does not disappear; it becomes a liability.
+
+| Step | Register | Name | Gate | Gate Function | Primary Role | Output |
+|---|---|---|---|---|---|---|
+| 1 | Kitchen | Define the Dish | — | Production step | Preparer | Task brief |
+| 2 | Kitchen | Mise en Place | Gate 1 | Definition of Done | Preparer | DoD checklist |
+| 3 | Kitchen | Knife Work | Gate 2 | Manual First Pass | Preparer | Annotated sources, first-pass draft |
+| 4 | Kitchen | Read the Kitchen | Gate 3 | Socio-Technical Context | Preparer | Context and risk map |
+| 5 | Kitchen | Apply Heat | Gate 4 | Bounded AI Use | Builder | AI-assisted working draft |
+| 6 | Kitchen | Name the Chef de Partie | Gate 5 | Final Liability | Owner (named here) | Accountability record |
+| 7 | Kitchen | Build the Plate | — | Production step | Builder | Versioned deliverable |
+| 8 | Kitchen | Taste Before Service | Gate 6 | Verification and Validation | Reviewer | Evidence and validation log |
+| 9 | Kitchen | Open the Pass | Gate 7 | Human Release Decision | Approver, Owner | Decision record, post-action review |
+| 10 | Feast | Plan the Menu | Gate 8 | Authorized Tool Registry | Executive Sponsor, AI Owner | Tool registry, deployment policy |
+| 11 | Feast | Staff the Brigade | Gate 9 | Competency and Authorization Record | AI Owner | Role matrix, training log, escalation chain |
+| 12 | Feast | Run the Event | Gate 10 | Operational Audit and Review Cycle | AI Owner, Executive Sponsor | Audit log, incident record, revised registry |
+
+**Steps 1–9 are the kitchen. Steps 10–12 are the feast.**
 
 ---
 
@@ -66,39 +156,49 @@ Controls: full DoD; socio-technical context check; named reviewer; evidence log.
 Examples: decisions affecting customers, employees or regulated operations; legal, compliance or risk determinations; external representations; automation tied to action.
 Controls: full Steps 1–9 method; explicit escalation path; second review; sign-off record; remediation or rollback plan.
 
+### Tier Application Map
+
+Tiering adjusts the depth of each gate. It never deletes a gate. These are defaults; a function may set stricter requirements through its tool registry under Step 10, never looser ones for Tier 3 work.
+
+| Gate | Tier 1 | Tier 2 | Tier 3 |
+|---|---|---|---|
+| Gate 1: Definition of Done | Abbreviated: 1–3 pass/fail tests | Full: 3–7 tests | Full: 3–7 tests |
+| Gate 2: Manual First Pass | At least one light form (sketch or outline) | At least one full form | Full first pass, retained as evidence |
+| Gate 3: Socio-Technical Context | Rapid scan: who is affected if this is wrong | Documented context check | Documented context and risk map with escalation triggers |
+| Gate 4: Bounded AI Use | Required | Required | Required; tools and uses logged |
+| Gate 5: Final Liability | Individual is Owner by default | Named reviewer and Owner | Distinct Reviewer, Approver and Owner; escalation path named |
+| Gate 6: Verification and Validation | Basic human review | Review against DoD with evidence log | Second review with evidence log |
+| Gate 7: Human Release Decision | No external deployment without verification | Reviewer sign-off before release | Sign-off record; remediation or rollback plan on file |
+
 ---
 
 ## Roles
 
 The method uses two distinct role sets at two different levels. Task roles govern Steps 1 through 9 and apply to individual and team work. Organizational roles govern Steps 10 through 12 and apply to the deployment and oversight of AI tools across functions.
 
-**Task roles (Steps 1–9):**
+### Task Roles (Steps 1–9)
 
-**Preparer** — Frames the task, gathers sources, performs first-pass work.
-**Builder** — Uses AI within the approved frame to produce the artifact.
-**Reviewer** — Checks substance, logic, completeness and fit.
-**Approver** — Signs off on consequential use or deployment.
-**Owner** — Bears final responsibility for the outcome.
+| Role | Responsibility |
+|---|---|
+| Preparer | Frames the task, gathers sources, performs first-pass work |
+| Builder | Uses AI within the approved frame to produce the artifact |
+| Reviewer | Checks substance, logic, completeness and fit |
+| Approver | Signs off on consequential use or deployment |
+| Owner | Bears final responsibility for the outcome |
 
-**Organizational roles (Steps 10–12):**
+### Organizational Roles (Steps 10–12)
 
-**AI Owner** — Accountable for AI-assisted outcomes within a specific function. Maps to the Approver and Owner roles at task level, but carries organizational rather than task-specific accountability.
-**AI Operator** — Trained and authorized to use specific tools at specific risk tiers within their function. Maps to the Builder role at task level.
-**Executive Sponsor** — The named executive at the top of the escalation chain. Bears organizational liability for the deployment program.
+| Role | Responsibility | Task-Level Analogue |
+|---|---|---|
+| AI Owner | Accountable for AI-assisted outcomes within a specific function; carries organizational rather than task-specific accountability | Approver and Owner |
+| AI Operator | Trained and authorized to use specific tools at specific risk tiers within their function | Builder |
+| Executive Sponsor | The named executive at the top of the escalation chain; bears organizational liability for the deployment program | None; this role exists only at scale |
 
 In a small team, one person may hold multiple task roles. In a larger team, they should be distinct. In every context, the Owner cannot be the AI.
 
 ---
 
 ## The Twelve-Step Method
-
-The method is both a sequence and a control architecture. It operates in two registers. Steps 1 through 9 (the Kitchen) govern the production of individual and team work product. Steps 10 through 12 (the Feast) govern the organizational deployment of multiple AI tools across multiple users and functions.
-
-Ten of the twelve steps function as gates: checkpoints that output or deployment decisions must pass before advancing. Steps 1 and 7 are pure production steps with no gate function. All other steps carry a gate label in the step title. A gate that is skipped does not disappear; it becomes a liability.
-
-**Steps 1–9 are the kitchen. Steps 10–12 are the feast.**
-
----
 
 ### Step 1: Define the Dish
 
@@ -190,10 +290,9 @@ This step turns the method into a learning system rather than a one-time ritual.
 
 ---
 
-## THE FEAST
-*Organizational Deployment of Multiple Tools for Multiple Users*
+## The Feast
 
----
+*Organizational Deployment of Multiple Tools for Multiple Users*
 
 A single dish, well executed, is a kitchen success. Feeding an organization is a different challenge entirely. A feast requires a menu, a brigade and a plan for running the event. Steps 10 through 12 address what happens when Slow AI Kitchen scales from one team producing one deliverable to an organization deploying multiple AI tools across multiple functions, roles and risk tiers.
 
@@ -241,34 +340,32 @@ The event does not end when the last plate goes out. It ends when the debrief is
 
 If you want to know whether Slow AI Kitchen was properly applied, use this test:
 
-- the task was clearly framed
-- "done" was defined in advance
-- a real manual first pass occurred
-- context and downstream consequences were considered
-- AI was used in a bounded way
-- a human owner was identified
-- the deliverable was tested before reliance
-- the outcome was reviewed after use
+- [ ] the task was clearly framed
+- [ ] "done" was defined in advance
+- [ ] a real manual first pass occurred
+- [ ] context and downstream consequences were considered
+- [ ] AI was used in a bounded way
+- [ ] a human owner was identified
+- [ ] the deliverable was tested before reliance
+- [ ] the outcome was reviewed after use
 
 For organizational deployment, add:
 
-- a tool registry authorizes the AI system in use
-- operators are trained and assigned to their tier
-- an audit and review cycle is active and maintained
+- [ ] a tool registry authorizes the AI system in use
+- [ ] operators are trained and assigned to their tier
+- [ ] an audit and review cycle is active and maintained
 
 If those are not true, the method was not followed, even if AI was used productively.
 
 ---
 
-# THE WORKSHOP
+## The Workshop
 
----
-
-## Purpose
+### Purpose
 
 The workshop teaches teams how to use AI properly in the normal course of work. It is not a prompt trick session. It is not a tour of features. It is a discipline workshop. Participants leave with a completed artifact, not a slide deck.
 
-## Learning Objectives
+### Learning Objectives
 
 By the end of the workshop, participants will be able to:
 
@@ -284,27 +381,27 @@ By the end of the workshop, participants will be able to:
 - assign brigade roles and training requirements at organizational scale
 - design an operational audit and review cycle for deployed AI tools
 
-## Module Structure
+### Module Structure
 
-### Module 1: Foundations (Steps 1–3)
+**Module 1: Foundations (Steps 1–3)**
 Focus: task clarity, Definition of Done, manual cognition and first-pass reasoning.
 Message: human thinking is not optional overhead. It is the control surface.
 
-### Module 2: Governance (Steps 4–6)
+**Module 2: Governance (Steps 4–6)**
 Focus: socio-technical context, pacing and bounded AI use, accountability.
 Message: AI output lives inside systems. Systems create risk. Risk requires named ownership.
 
-### Module 3: Execution (Steps 7–9)
+**Module 3: Execution (Steps 7–9)**
 Focus: building, validation, decision and deployment, review and improvement.
 Message: real work is not finished when text appears. It is finished when a human can defend using it.
 
-### Module 4: Organizational Deployment (Steps 10–12)
+**Module 4: Organizational Deployment (Steps 10–12)**
 Focus: tool authorization and registry, brigade structure and training at scale, operational governance and audit.
 Message: individual discipline does not aggregate into organizational reliability without deliberate structure. A feast without a menu, a brigade and a debrief is just a lot of cooking happening at the same time.
 
-## Workshop Agendas
+### Workshop Agendas
 
-### Full-Day Format (8 hours including breaks)
+#### Full-Day Format (8 hours including breaks)
 
 | Time | Session |
 |---|---|
@@ -322,7 +419,7 @@ Message: individual discipline does not aggregate into organizational reliabilit
 | 16:00 – 16:40 | Exercise 4: Draft a tool registry entry, assign brigade roles, design an audit cycle |
 | 16:40 – 17:00 | Closing: teams present deployment decision; common failure modes; next steps |
 
-### Half-Day Format (3.5 hours)
+#### Half-Day Format (3.5 hours)
 
 | Time | Session |
 |---|---|
@@ -333,7 +430,7 @@ Message: individual discipline does not aggregate into organizational reliabilit
 | 11:30 – 12:00 | Module 4 debrief: draft tool registry entry and brigade assignment for the exercise tool |
 | 12:00 – 12:30 | Debrief: failure modes surfaced, accountability assigned, deployment and registry decisions |
 
-## Workshop Exercise
+### Workshop Exercise
 
 Use one real business problem relevant to the participants. The exercise must produce a genuine artifact, not a simulated one. Suitable examples:
 
@@ -348,31 +445,31 @@ Teams work the full sequence through Step 9: define the task, set the DoD, compl
 
 This creates behavior change, not mere agreement.
 
-## Workshop Outputs
+### Workshop Outputs
 
 A properly run workshop ends with eleven tangible artifacts:
 
-- completed task brief
-- DoD checklist
-- first-pass notes
-- context and risk map
-- AI-assisted draft
-- accountability record
-- validated final artifact
-- short post-action review
-- draft AI tool registry entry
-- brigade role assignment matrix
-- audit and review cycle design
+- [ ] completed task brief
+- [ ] DoD checklist
+- [ ] first-pass notes
+- [ ] context and risk map
+- [ ] AI-assisted draft
+- [ ] accountability record
+- [ ] validated final artifact
+- [ ] short post-action review
+- [ ] draft AI tool registry entry
+- [ ] brigade role assignment matrix
+- [ ] audit and review cycle design
 
 Teams leave with evidence of a process, not just slides.
 
-## Facilitator Principles
+### Facilitator Principles
 
 Do not reward speed alone. Reward clear framing, good constraints, quality of review, the ability to spot weak outputs and the willingness to reject plausible but unfit AI output.
 
 The core teaching move: show that the most dangerous AI outputs are often the most fluent ones, not the most useful. Polished language is not correct analysis.
 
-## Common Failure Modes
+### Common Failure Modes
 
 Surface these explicitly in every session. They are not edge cases; they are the default behavior the method is designed to replace.
 
@@ -390,10 +487,9 @@ Surface these explicitly in every session. They are not edge cases; they are the
 
 ---
 
-# ADDENDUM: Your Restaurant
-*Sustained Institutional Deployment of AI*
+## Addendum: Your Restaurant
 
----
+*Sustained Institutional Deployment of AI*
 
 Slow AI Kitchen is a method for producing governed AI-assisted work. The Feast extends it to organizational deployment. But both are episodic: a task, a project, an event. They are not a permanent institution.
 
@@ -415,7 +511,7 @@ A restaurant operates under health codes, labor law and food safety regulation. 
 
 ### 4. AI Lifecycle Management
 
-A restaurant does not serve the same menu indefinitely. Ingredients change. Suppliers fail. Dishes are retired. The menu is revised. An institutional AI program must manage the full lifecycle of each deployed system: initial authorization, version tracking as models and tools are updated by vendors, performance monitoring for drift or degradation, incident response when outputs fail and formal decommissioning when a tool is retired or replaced. ISO 42001, the international standard for AI management systems, provides a lifecycle framework purpose-built for this work, covering design, development, deployment, monitoring and continual improvement of AI systems within a governed institutional structure. A tool that was fit for deployment in year one may not be fit in year two. Lifecycle management is the discipline that catches the difference before a Client does.
+A restaurant does not serve the same menu indefinitely. Ingredients change. Suppliers fail. Dishes are retired. The menu is revised. An institutional AI program must manage the full lifecycle of each deployed system: initial authorization, version tracking as models and tools are updated by vendors, performance monitoring for drift or degradation, incident response when outputs fail and formal decommissioning when a tool is retired or replaced. ISO/IEC 42001, the international standard for AI management systems, provides a lifecycle framework purpose-built for this work, covering design, development, deployment, monitoring and continual improvement of AI systems within a governed institutional structure. A tool that was fit for deployment in year one may not be fit in year two. Lifecycle management is the discipline that catches the difference before a Client does.
 
 ### 5. Continuous Improvement
 
@@ -423,11 +519,41 @@ A well-run restaurant debriefs every service, adjusts its prep, retrains its sta
 
 ---
 
-These five pillars are not a checklist. They are a description of what a permanent institution requires to operate AI responsibly over time. The twelve-step method teaches the discipline of the kitchen. The feast teaches how to scale it to an event. Your restaurant is what you build when the events become a way of life.
+These five pillars are not a checklist. They are a description of what a permanent institution requires to operate AI responsibly over time. The twelve-step method teaches the discipline of the kitchen. The feast teaches how to scale it to an event. Your restaurant is what you build when the events become a way of life. The [restaurant resources](./restaurant-resources.md) file in this repository collects the referenced standards and explains which are load-bearing and which are signals.
 
 No method, framework or audit standard removes the obligation to govern. It can only make governance easier to see, easier to assign and harder to avoid. The pillar that holds up every other pillar is the one the twelve-step method places at the center of every step: a named human who owns the outcome and can be held to account for it.
 
 *The kitchen teaches discipline. The feast teaches scale. The restaurant teaches permanence.*
+
+---
+
+## Related Work
+
+- **Final Liability Rests with the Human** (book, free release) and companion appendices, including the AI GRC Master Reference and the AI Audit Due Diligence Checklist: [github.com/rolldabones](https://github.com/rolldabones)
+- **GRC Workbook**: [github.com/rolldabones/grc-workbook](https://github.com/rolldabones/grc-workbook)
+
+---
+
+## How to Cite
+
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+
+---
+
+## License
+
+This repository, including the method and all companion files, is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). You may share and adapt this material for non-commercial purposes provided you give appropriate credit, indicate if changes were made and distribute your contributions under the same license. Commercial use requires the author's prior written permission.
+
+Suggested attribution: "Slow AI Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0."
+
+Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+---
+
+## Changelog
+
+- **v2.0 (2026-06-11):** Added linked table of contents, repository contents index, gate map, Tier Application Map, role tables, checkbox Definition of Done, Related Work, citation, license and changelog sections. Licensed the repository under CC BY-NC-SA 4.0 and added a LICENSE file. Renamed the companion files to kebab-case with .md extensions and updated the internal cross-reference in federal-workforce-literacy-bridge.md accordingly. Corrected the standard designation to ISO/IEC 42001. Consolidated to a single title block. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+- **v1.0 (2026):** Initial publication: method, risk tiers, roles, workshop guide, the Feast and the Your Restaurant addendum.
 
 ---
 
@@ -441,8 +567,8 @@ He holds a Juris Doctor from Columbia Law School, a Master of Business Administr
 
 Slow AI Kitchen is an expression of his central conviction: that AI governance is not a compliance exercise. It is a professional discipline. And like any discipline, it must be taught, practiced and enforced by humans who own the outcome.
 
-**GRC Solutions Korea:** www.grcskorea.com
-**LinkedIn:** linkedin.com/in/sonupaik
+**GRC Solutions Korea:** [www.grcskorea.com](http://www.grcskorea.com)
+**LinkedIn:** [linkedin.com/in/sonupaik](https://linkedin.com/in/sonupaik)
 
 ---
 
