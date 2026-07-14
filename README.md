@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.0.2 | 2026-07-14 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.1.0 | 2026-07-14 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -45,7 +45,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 - [Definition of Done for the Method Itself](#definition-of-done-for-the-method-itself)
 - [The Workshop](#the-workshop)
 - [Addendum: Your Restaurant](#addendum-your-restaurant)
-- [Related Work](#related-work)
+- [Part of the ecosystem](#part-of-the-ecosystem)
 - [How to Cite](#how-to-cite)
 - [License](#license)
 - [Changelog](#changelog)
@@ -526,17 +526,22 @@ No method, framework or audit standard removes the obligation to govern. It can 
 
 ---
 
-## Related Work
+## Part of the ecosystem
 
-- **Final Liability Rests with the Human** (book, free release) and companion appendices, including the AI GRC Master Reference and the AI Audit Due Diligence Checklist: [github.com/rolldabones](https://github.com/rolldabones)
-- **GRC Workbook**: [github.com/rolldabones/grc-workbook](https://github.com/rolldabones/grc-workbook)
-- **The Definition of Done Is the Work of the Human** (the depth companion to Gates 1, 6 and 7): [github.com/rolldabones/definition-of-done](https://github.com/rolldabones/definition-of-done)
+This method is one component of a larger body of AI governance, risk management and compliance work. The canonical map of all repositories is [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md) in the profile repository.
+
+Nearest neighbors:
+- [definition-of-done](https://github.com/rolldabones/definition-of-done): the depth companion to Gates 1, 6 and 7
+- [origami-method](https://github.com/rolldabones/origami-method): the workflow-design discipline within this method's larger arc; use it to turn a recurring Kitchen task into a repeatable, gated workflow
+- [grc](https://github.com/rolldabones/grc): the GRC next primitives underneath the Feast and the Restaurant, with the tool registry as a Service inventory, tiers as Tolerances and escalation chains as Switches
+- [grc-workbook](https://github.com/rolldabones/grc-workbook): the module-by-module instrument for building the permanent governance, risk management and compliance capability the Restaurant addendum describes
+- [the-ai-generalist](https://github.com/rolldabones/the-ai-generalist): the one-day corporate workshop that compresses this method for a general professional audience
 
 ---
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.0.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.1.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -552,10 +557,9 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-- **v2.0.2 (2026-07-14):** Merged the slow-ai-cookbook-starter repository into this one. slow-ai-cookbook.md is now the sole canonical Starter Edition and the standalone repository is retired; its two editorial corrections to the card field descriptions are incorporated. Executed the kebab-case .md companion-file renames recorded in the v2.0 changelog but not previously applied, so all Repository Contents links now resolve. Renamed the license file to LICENSE. Removed a stray upload-artifact link line from this README. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
-- **v2.0.1 (2026-07-10):** Added *The Definition of Done Is the Work of the Human* (the depth companion to Gates 1, 6 and 7) to Related Work and updated the title block. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
-- **v2.0 (2026-06-11):** Added linked table of contents, repository contents index, gate map, Tier Application Map, role tables, checkbox Definition of Done, Related Work, citation, license and changelog sections. Licensed the repository under CC BY-NC-SA 4.0 and added a LICENSE file. Renamed the companion files to kebab-case with .md extensions and updated the internal cross-reference in federal-workforce-literacy-bridge.md accordingly. Corrected the standard designation to ISO/IEC 42001. Consolidated to a single title block. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
-- **v1.0 (2026):** Initial publication: method, risk tiers, roles, workshop guide, the Feast and the Your Restaurant addendum.
+The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
+
+Current version: **v2.1.0 (2026-07-14)**. Added the Part of the ecosystem section, moved the version history to CHANGELOG.md, corrected a stale version reference in How to Cite and refreshed the regulatory-currency notes in restaurant-resources.md and federal-workforce-literacy-bridge.md to 14 July 2026. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
 
 ---
 

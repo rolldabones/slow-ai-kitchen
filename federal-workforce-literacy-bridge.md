@@ -13,6 +13,8 @@ General Counsel, BABL AI
 
 **Final Liability rests with the Human.**
 
+> **Regulatory currency:** TEN 07-25 and the DOL AI Literacy Framework were verified live and unamended at `https://www.dol.gov/agencies/eta/advisories/ten-07-25` on 14 July 2026 (KST). The framework remains voluntary guidance, not a regulatory mandate. Verify again before relying on this module in funding applications or compliance documentation.
+
 ---
 
 ## 1. Purpose and Scope
@@ -123,7 +125,7 @@ If those conditions are met, the organization can document that its AI governanc
 
 ## 8. Scope Boundaries
 
-This module addresses only the DOL's AI Literacy Framework as issued in TEN 07-25. It does not address the EU AI Act's separate AI literacy obligations under Article 4, which impose a mandatory (not voluntary) requirement on providers and deployers of AI systems to ensure sufficient AI literacy among their personnel. Organizations operating across jurisdictions should treat this module as covering the U.S. federal workforce dimension and should consult the Your Restaurant addendum's Pillar 3 (Regulatory Compliance) for the EU dimension. Korea's AI Basic Act, effective January 22, 2026, introduces its own competency and transparency requirements that are addressed separately in the AI GRC System.
+This module addresses only the DOL's AI Literacy Framework as issued in TEN 07-25. It does not address the EU AI Act's separate AI literacy obligations under Article 4, which impose a mandatory (not voluntary) requirement on providers and deployers of AI systems to ensure sufficient AI literacy among their personnel. Organizations operating across jurisdictions should treat this module as covering the U.S. federal workforce dimension and should consult the Your Restaurant addendum's Pillar 3 (Regulatory Compliance) for the EU dimension. Korea's AI Basic Act, effective January 22, 2026, together with its Enforcement Decree, introduces its own transparency and operator-obligation requirements; those are outside the scope of this module and are covered by the Korea AI Basic Act entry in restaurant-resources.md and the Your Restaurant addendum's Pillar 3 (Regulatory Compliance).
 
 This module does not modify any step, gate, role or principle of Slow AI Kitchen. It adds a compliance mapping layer and facilitator guidance. The method remains the method. The module makes visible what was already true: that Slow AI Kitchen, properly followed, produces the competencies the DOL framework describes, because both were built on the same conviction.
 

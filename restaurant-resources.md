@@ -1,5 +1,7 @@
 # Reference Resources for the Restaurant
 
+> **Regulatory currency:** the legal and standards claims in this file were verified against primary and official sources on 14 July 2026 (KST). The dated status notes below record what was current on that date. Verify again before relying on this file in client-facing or regulatory submissions.
+
 ---
 
 ## A Note on Standards
@@ -23,7 +25,7 @@ That said, a frank institutional note is warranted. Every standard listed in the
 
 The authoritative hub for AI risk management resources maintained by the National Institute of Standards and Technology. Contains the AI RMF framework document, the Playbook, all publications in the NIST AI 100-series, crosswalk documents mapping the AI RMF to ISO 42001 and other frameworks, and use case examples. The starting point for any organization implementing the Restaurant pillars.
 
-> **Status note (March 2026):** NIST AI RMF 1.0 is under revision. The White House AI Action Plan (July 2025) tasked NIST with producing an updated version. The Playbook will be revised after AI RMF 1.1 is published. Practitioners should monitor `https://airc.nist.gov` for the updated release and treat current Playbook actions as the working baseline until then.
+> **Status note (14 July 2026):** NIST AI RMF 1.0 remains the current published version. The revision tasked by the White House AI Action Plan (July 2025) is ongoing; AI RMF 1.1 has not been published as of this date. NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure in April 2026. Treat current Playbook actions as the working baseline and monitor `https://airc.nist.gov` for the updated release.
 
 ---
 
@@ -137,14 +139,14 @@ Published in the Official Journal of the European Union on 12 July 2024. Entered
 Official text (EUR-Lex, English): `https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng`
 Stable ELI permalink: `http://data.europa.eu/eli/reg/2024/1689/oj`
 
-> **Status note (March 2026):** The European Commission has proposed the Digital Omnibus amendment (Regulation amending (EU) 2024/1689) to simplify implementation requirements, particularly for high-risk AI systems. The proposal is at EUR-Lex reference 52025PC0836 and is not yet law. Monitor EUR-Lex for the adopted text before citing specific obligation timelines in client-facing or regulatory submissions.
+> **Status note (14 July 2026):** The Digital Omnibus on AI (amending Regulation (EU) 2024/1689) has been adopted by the co-legislators (European Parliament 16 June 2026, Council 29 June 2026) and enters into force on the third day after its publication in the Official Journal, expected in July 2026 ahead of the 2 August 2026 deadline. Key changes on adoption: high-risk obligations for stand-alone Annex III systems are deferred to 2 December 2027 and for Annex I embedded systems to 2 August 2028; most Article 50 transparency obligations still apply from 2 August 2026, with the Article 50(2) watermarking obligation for systems already on the market deferred to 2 December 2026; a new Article 5 prohibition on AI generation of non-consensual intimate imagery and CSAM applies from 2 December 2026. Until the amending regulation is published in the Official Journal, the original timeline remains the law. Verify the consolidated text on EUR-Lex before citing obligation dates in client-facing or regulatory submissions.
 
 ---
 
 ### Korea AI Basic Act
 
 **Framework Act on the Development of Artificial Intelligence and Establishment of Trust** (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법)
-Law No. 20676. Promulgated 21 January 2025. Effective 22 January 2026. The first comprehensive AI legislation in the Asia-Pacific region. Establishes a dual-track structure distinguishing general AI governance from High-Impact AI obligations in critical sectors including healthcare, energy and public services. Requires mandatory labeling for certain generative AI applications. Provides for a national AI safety research institute and AI ethics committees. Subordinate Presidential Decrees governing High-Impact AI classification and sector-specific implementation are under development by the Ministry of Science and ICT (MSIT).
+Law No. 20676. Promulgated 21 January 2025. Effective 22 January 2026. The first comprehensive AI legislation in the Asia-Pacific region. Establishes a dual-track structure distinguishing general AI governance from High-Impact AI obligations in critical sectors including healthcare, energy and public services. Requires mandatory labeling for certain generative AI applications. Provides for a national AI safety research institute and AI ethics committees. The Enforcement Decree (Presidential Decree No. 36053, promulgated 21 January 2026) took effect alongside the Act on 22 January 2026 and sets, among other things, the high-performance AI compute threshold (cumulative training compute of at least 10^26 FLOPs) and the domestic-representative thresholds for foreign operators.
 
 Official Korean text (Korean Law Information Center):
 `https://www.law.go.kr/법령/인공지능발전과신뢰기반조성등에관한기본법`
@@ -152,7 +154,7 @@ Official Korean text (Korean Law Information Center):
 English translation (CSET Georgetown, July 2025):
 `https://cset.georgetown.edu/publication/south-korea-ai-law-2025/`
 
-> **Status note (March 2026):** Subordinate regulations defining the scope of High-Impact AI classifications are not yet finalized. Compliance obligations in regulated sectors depend on these Presidential Decrees. Monitor MSIT (`https://www.msit.go.kr`) for implementing regulations.
+> **Status note (14 July 2026):** The Act and its Enforcement Decree have been in force since 22 January 2026. MSIT is operating a grace period of at least one year before imposing administrative fines, except in exceptional cases involving serious social harm, and continues to supplement guidance on High-Impact AI assessment and operator obligations during that period. Substantive obligations apply notwithstanding the fine grace period. Monitor MSIT (`https://www.msit.go.kr`) for updated guidelines.
 
 ---
 
@@ -238,9 +240,8 @@ Search: `https://www.iso.org` for ISO/IEC 22989
 Describes how ML components fit into AI system architectures. Helps teams design modular, testable solutions by distinguishing datasets, training pipelines, models, serving layers and feedback loops. Use to structure documentation and align engineering with governance expectations in 42001 and 23894.
 Search: `https://www.iso.org` for ISO/IEC 23053
 
-**ISO/IEC 42006** — Requirements for Bodies Providing Audit and Certification of Artificial Intelligence Management Systems
-Conformity assessment companion to 42001. Specifies requirements for certification bodies conducting 42001 audits. Relevant for AI audit positioning and for organizations preparing for third-party certification.
-[VERIFY] publication status before citing in client-facing documents.
+**ISO/IEC 42006:2025** — Requirements for Bodies Providing Audit and Certification of Artificial Intelligence Management Systems
+Conformity assessment companion to 42001. Published July 2025. Specifies additional requirements to ISO/IEC 17021-1 for certification bodies conducting 42001 audits. Relevant for AI audit positioning and for organizations preparing for third-party certification; accreditation bodies have begun transitioning AIMS accreditation to the published standard.
 Search: `https://www.iso.org` for ISO/IEC 42006
 
 ---
@@ -251,18 +252,17 @@ Search: `https://www.iso.org` for ISO/IEC 42006
 Technical report covering trustworthiness concepts, threats and mitigation approaches across the AI lifecycle. Orientation document for continuous improvement programs targeting explainability, robustness and fairness.
 Search: `https://www.iso.org` for ISO/IEC TR 24028
 
-**ISO/IEC 12792** — Artificial Intelligence: Transparency Taxonomy of AI Systems
-Provides a transparency taxonomy for AI systems. Reference standard for building transparency metrics into improvement cycles.
-[VERIFY] current publication status before citing in client-facing documents.
+**ISO/IEC 12792:2025** — Artificial Intelligence: Transparency Taxonomy of AI Systems
+Published November 2025 and adopted by CEN-CENELEC as EN ISO/IEC 12792:2025. Specifies a taxonomy of information elements to help AI stakeholders identify and address transparency needs. Reference standard for building transparency metrics into improvement cycles.
 Search: `https://www.iso.org` for ISO/IEC 12792
 
 ---
 
 ## URL Stability Notes
 
-NIST links point to official `.gov` domains. NIST periodically revises publications — if a CSRC link resolves to a redirect, navigate from the AIRC centerpiece at `https://airc.nist.gov` to locate the current version. The AI RMF and Playbook are under active revision as of March 2026; monitor the AIRC for updated versions.
+NIST links point to official `.gov` domains. NIST periodically revises publications — if a CSRC link resolves to a redirect, navigate from the AIRC centerpiece at `https://airc.nist.gov` to locate the current version. The AI RMF and Playbook remain under active revision as of July 2026; monitor the AIRC for updated versions.
 
-ISO links point to purchase pages on `iso.org`. Content does not change without a formal revision cycle. ISO/IEC 42006 and ISO/IEC 12792 publication status should be verified at `https://www.iso.org` or `https://aistandardshub.org` before citing in client-facing or regulatory submissions.
+ISO links point to purchase pages on `iso.org`. Content does not change without a formal revision cycle. ISO/IEC 42006:2025 and ISO/IEC 12792:2025 are both published; verify edition currency at `https://www.iso.org` or `https://aistandardshub.org` before citing in client-facing or regulatory submissions.
 
 ---
 
