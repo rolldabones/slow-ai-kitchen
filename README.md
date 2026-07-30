@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.1.0 | 2026-07-14 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.1.1 | 2026-07-30 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -60,6 +60,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 **A team lead or trainer.** Run [The Workshop](#the-workshop). Load one of the sample kitchen prompts as the operating prompt for the exercise.
 
 **A function or program owner.** Read [The Feast](#the-feast) and [Your Restaurant](#addendum-your-restaurant), then start the tool registry at Step 10. The [restaurant resources](./restaurant-resources.md) file collects the referenced standards. The [federal workforce literacy bridge](./federal-workforce-literacy-bridge.md) aligns the method with U.S. federal workforce AI literacy standards.
+
+**Prefer a guided tool.** A web application implementing the twelve steps is available at https://slow-ai-kitchen.msagent.ai/, in English, Korean, Vietnamese and Japanese.
 
 ## Repository Contents
 
@@ -533,7 +535,7 @@ This method is one component of a larger body of AI governance, risk management 
 Nearest neighbors:
 - [definition-of-done](https://github.com/rolldabones/definition-of-done): the depth companion to Gates 1, 6 and 7
 - [origami-method](https://github.com/rolldabones/origami-method): the workflow-design discipline within this method's larger arc; use it to turn a recurring Kitchen task into a repeatable, gated workflow
-- [grc](https://github.com/rolldabones/grc): the GRC next primitives underneath the Feast and the Restaurant, with the tool registry as a Service inventory, tiers as Tolerances and escalation chains as Switches
+- [grc](https://github.com/rolldabones/grc): the GRCnext™ primitives underneath the Feast and the Restaurant, with the tool registry as a Service inventory, tiers as Tolerances and escalation chains as Switches
 - [grc-workbook](https://github.com/rolldabones/grc-workbook): the module-by-module instrument for building the permanent governance, risk management and compliance capability the Restaurant addendum describes
 - [the-ai-generalist](https://github.com/rolldabones/the-ai-generalist): the one-day corporate workshop that compresses this method for a general professional audience
 
@@ -541,7 +543,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.1.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.1.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -559,7 +561,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.1.0 (2026-07-14)**. Added the Part of the ecosystem section, moved the version history to CHANGELOG.md, corrected a stale version reference in How to Cite and refreshed the regulatory-currency notes in restaurant-resources.md and federal-workforce-literacy-bridge.md to 14 July 2026. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+Current version: **v2.1.1 (2026-07-30)**. Patch release: trademark rendering corrected to the canonical closed-up form GRCnext™ in the grc line of the Part of the ecosystem section, and a pointer to the web application added to How to Use This Repository. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
 
 ---
 

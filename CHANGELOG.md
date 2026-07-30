@@ -2,6 +2,20 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.1.1 (2026-07-30)
+
+Patch release. Trademark rendering and a web-application pointer.
+
+### Added
+- How to Use This Repository now points to the web application implementing the twelve steps at https://slow-ai-kitchen.msagent.ai/, available in English, Korean, Vietnamese and Japanese. The application has existed alongside this repository and was undocumented here; Japanese was added to it on 26 to 27 July 2026. The repository is the canonical statement of the method and the application implements it, so the two version independently.
+
+### Changed
+- Trademark rendering corrected to the canonical closed-up form GRCnext™. The retired spaced form "GRC next" is withdrawn from repository prose. One occurrence, in the grc line of the Part of the ecosystem section.
+- Version table row, How to Cite reference and version pointer updated in lockstep.
+
+### Unchanged
+- The twelve steps, the ten gates, the three tiers, the workshop design and the Your Restaurant addendum.
+
 ## v2.1.0 (2026-07-14)
 
 - Added the standard Part of the ecosystem section to README.md, linking the canonical [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md) and five nearest neighbors (definition-of-done, origami-method, grc, grc-workbook, the-ai-generalist). The former Related Work section is superseded by it; its entries are carried into the neighbor list and the canonical map.
