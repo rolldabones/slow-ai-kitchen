@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.1.2 | 2026-08-13 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.1.3 | 2026-08-13 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -561,7 +561,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.1.2 (2026-08-13)**. Patch release: trademark rendering corrected to the canonical closed-up form GRCnext™ in the grc line of the Part of the ecosystem section, and a pointer to the web application added to How to Use This Repository. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+Current version: **v2.1.3 (2026-08-13)**. Patch release: trademark rendering corrected to the canonical closed-up form GRCnext™ in the grc line of the Part of the ecosystem section, and a pointer to the web application added to How to Use This Repository. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
 
 ---
 
