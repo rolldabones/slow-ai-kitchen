@@ -8,7 +8,7 @@
 
 **Son-U Michael Paik**
 CEO, GRC Solutions Korea
-General Counsel, BABL AI
+Former General Counsel, BABL AI
 [www.grcskorea.com](http://www.grcskorea.com)
 
 **Final Liability rests with the Human.**

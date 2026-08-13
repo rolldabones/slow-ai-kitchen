@@ -5,7 +5,7 @@
 *AI is a tool in the kitchen, not the chef.*
 
 **Son-U Michael Paik**
-CEO, GRC Solutions Korea | General Counsel, BABL AI
+CEO, GRC Solutions Korea | former General Counsel, BABL AI
 [www.grcskorea.com](http://www.grcskorea.com)
 
 | Version | Date | Status | License |
@@ -567,7 +567,7 @@ Current version: **v2.1.1 (2026-07-30)**. Patch release: trademark rendering cor
 
 ## About the Author
 
-Son-U Michael Paik is an attorney, AI auditor and governance architect with more than 25 years of experience designing risk and compliance systems for cross-border institutions in regulated, high-stakes sectors across Asia, Europe and the United States. He is General Counsel at BABL.ai, a global AI audit provider, and Founder and Chief Executive Officer of GRC Solutions Korea, where he advises finance, industrial and public-sector Clients on AI governance, audit readiness and regulatory compliance.
+Son-U Michael Paik is an attorney, AI auditor and governance architect with more than 25 years of experience designing risk and compliance systems for cross-border institutions in regulated, high-stakes sectors across Asia, Europe and the United States. He is the former General Counsel of BABL.ai, a global AI audit provider, and Founder and Chief Executive Officer of GRC Solutions Korea, where he advises finance, industrial and public-sector Clients on AI governance, audit readiness and regulatory compliance.
 
 Before founding GRC Solutions Korea, Paik served as General Counsel, Chief Legal Officer and senior executive for three listed groups in Korea, including Hankook Tire, SeAH Holdings and STX Group, with responsibility for legal, compliance and trade operations across multinational businesses. Earlier in his career he practiced at Wilson Sonsini Goodrich & Rosati and Cahill Gordon & Reindel in the United States, advising on mergers and acquisitions, venture capital and cross-border regulatory matters.
 
