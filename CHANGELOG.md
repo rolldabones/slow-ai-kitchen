@@ -2,6 +2,19 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.1.5 (2026-08-17)
+
+Maintenance. Korea instrument citations corrected to the texts in force; two status notes re-dated on re-verification.
+
+**Correction of substance.** *[Binding law. Pinpoint: Act No. 21311; Presidential Decree No. 36506. As at 17 August 2026 (KST).]* The Korea AI Basic Act entry in `restaurant-resources.md` presented **Law No. 20676** and **Presidential Decree No. 36053** as the instruments in force. **That is struck.** Both have been amended. The Act in force is **Act No. 21311 of 20 January 2026**, in force 21 July 2026. The Enforcement Decree in force is **Presidential Decree No. 36506 of 20 July 2026**, in force 21 July 2026. The original enactments are retained in the entry as the commencement record, not as the operative texts. This correction was made in `ai-governance-for-boards` v1.5.0 on 13 August 2026 and did not propagate to this repository at the time.
+
+**Status notes re-dated on re-verification, not silently.**
+
+- **Korea note, 14 July 2026 to 17 August 2026 (KST).** The grace-period position is unchanged. The note now records the amendment.
+- **NIST note, 14 July 2026 to 17 August 2026 (KST).** Re-checked against NIST: AI RMF 1.0 remains the current published version, the AI Action Plan revision is still in progress and AI RMF 1.1 has not been published. Substance unchanged; the date moves because the claim was re-verified, not because the file was touched.
+
+**Unchanged.** The twelve steps, the ten gates, the three tiers, the workshop design and the Your Restaurant addendum.
+
 ## v2.1.4 (2026-08-13)
 
 OJ text of the amending regulation obtained; Article 5 date corrected.

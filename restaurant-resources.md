@@ -1,6 +1,6 @@
 # Reference Resources for the Restaurant
 
-> **Regulatory currency:** the legal and standards claims in this file were verified against primary and official sources on 14 July 2026 (KST). The dated status notes below record what was current on that date. Verify again before relying on this file in client-facing or regulatory submissions.
+> **Regulatory currency:** the legal and standards claims in this file were verified against primary and official sources on 14 July 2026 (KST), except where a status note below carries a later date. The EU entry was updated on 13 August 2026 (KST); the Korea and NIST entries were re-verified on 17 August 2026 (KST). Each status note carries its own verification date and controls over this line. Verify again before relying on this file in client-facing or regulatory submissions.
 
 ---
 
@@ -25,7 +25,7 @@ That said, a frank institutional note is warranted. Every standard listed in the
 
 The authoritative hub for AI risk management resources maintained by the National Institute of Standards and Technology. Contains the AI RMF framework document, the Playbook, all publications in the NIST AI 100-series, crosswalk documents mapping the AI RMF to ISO 42001 and other frameworks, and use case examples. The starting point for any organization implementing the Restaurant pillars.
 
-> **Status note (14 July 2026):** NIST AI RMF 1.0 remains the current published version. The revision tasked by the White House AI Action Plan (July 2025) is ongoing; AI RMF 1.1 has not been published as of this date. NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure in April 2026. Treat current Playbook actions as the working baseline and monitor `https://airc.nist.gov` for the updated release.
+> **Status note (17 August 2026, KST):** NIST AI RMF 1.0 remains the current published version. The revision tasked by the White House AI Action Plan (July 2025) is ongoing; AI RMF 1.1 has not been published as of this date. NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure in April 2026. Treat current Playbook actions as the working baseline and monitor `https://airc.nist.gov` for the updated release.
 
 ---
 
@@ -146,7 +146,7 @@ Stable ELI permalink: `http://data.europa.eu/eli/reg/2024/1689/oj`
 ### Korea AI Basic Act
 
 **Framework Act on the Development of Artificial Intelligence and Establishment of Trust** (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법)
-Law No. 20676. Promulgated 21 January 2025. Effective 22 January 2026. The first comprehensive AI legislation in the Asia-Pacific region. Establishes a dual-track structure distinguishing general AI governance from High-Impact AI obligations in critical sectors including healthcare, energy and public services. Requires mandatory labeling for certain generative AI applications. Provides for a national AI safety research institute and AI ethics committees. The Enforcement Decree (Presidential Decree No. 36053, promulgated 21 January 2026) took effect alongside the Act on 22 January 2026 and sets, among other things, the high-performance AI compute threshold (cumulative training compute of at least 10^26 FLOPs) and the domestic-representative thresholds for foreign operators.
+Act No. 21311 of 20 January 2026 (partial amendment), in force 21 July 2026. Originally enacted as Act No. 20676, promulgated 21 January 2025, effective 22 January 2026. The first comprehensive AI legislation in the Asia-Pacific region. Establishes a dual-track structure distinguishing general AI governance from High-Impact AI obligations in critical sectors including healthcare, energy and public services. Requires mandatory labeling for certain generative AI applications. Provides for a national AI safety research institute and AI ethics committees. The Enforcement Decree in force is Presidential Decree No. 36506 of 20 July 2026 (partial amendment), in force 21 July 2026; the original Decree, Presidential Decree No. 36053, promulgated 21 January 2026, took effect alongside the Act on 22 January 2026. The Decree sets, among other things, the high-performance AI compute threshold (cumulative training compute of at least 10^26 FLOPs) and the domestic-representative thresholds for foreign operators.
 
 Official Korean text (Korean Law Information Center):
 `https://www.law.go.kr/법령/인공지능발전과신뢰기반조성등에관한기본법`
@@ -154,7 +154,7 @@ Official Korean text (Korean Law Information Center):
 English translation (CSET Georgetown, July 2025):
 `https://cset.georgetown.edu/publication/south-korea-ai-law-2025/`
 
-> **Status note (14 July 2026):** The Act and its Enforcement Decree have been in force since 22 January 2026. MSIT is operating a grace period of at least one year before imposing administrative fines, except in exceptional cases involving serious social harm, and continues to supplement guidance on High-Impact AI assessment and operator obligations during that period. Substantive obligations apply notwithstanding the fine grace period. Monitor MSIT (`https://www.msit.go.kr`) for updated guidelines.
+> **Status note (17 August 2026, KST):** The Act and its Enforcement Decree have been in force since 22 January 2026. Both have since been amended: the operative texts are Act No. 21311 of 20 January 2026 and Presidential Decree No. 36506 of 20 July 2026, both in force 21 July 2026. Earlier editions of this file cited the original enactments as current. MSIT is operating a grace period of at least one year before imposing administrative fines, except in exceptional cases involving serious social harm, and continues to supplement guidance on High-Impact AI assessment and operator obligations during that period. Substantive obligations apply notwithstanding the fine grace period. Monitor MSIT (`https://www.msit.go.kr`) for updated guidelines.
 
 ---
 
