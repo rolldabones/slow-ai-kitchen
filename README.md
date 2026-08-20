@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.1.5 | 2026-08-17 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.2 | 2026-08-20 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -61,6 +61,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A function or program owner.** Read [The Feast](#the-feast) and [Your Restaurant](#addendum-your-restaurant), then start the tool registry at Step 10. The [restaurant resources](./restaurant-resources.md) file collects the referenced standards. The [federal workforce literacy bridge](./federal-workforce-literacy-bridge.md) aligns the method with U.S. federal workforce AI literacy standards.
 
+**An architect or systems designer.** Read [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md): the architecture reference behind Gates 4 and 5, the Feast and the Restaurant's five pillars.
+
 **Prefer a guided tool.** A web application implementing the twelve steps is available at https://slow-ai-kitchen.msagent.ai/, in English, Korean, Vietnamese and Japanese.
 
 ## Repository Contents
@@ -73,6 +75,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [sample-kitchen-prompts-two-layer-version.md](./sample-kitchen-prompts-two-layer-version.md) | Two-layer operating prompt: Steps 1 through 9 plus abbreviated Feast controls (March 2026) | You want session-level discipline with light deployment controls |
 | [restaurant-resources.md](./restaurant-resources.md) | Reference standards for the Restaurant addendum, including ISO/IEC 42001 and NIST resources, with a note on certification versus substance | You are building the program governance layer |
 | [federal-workforce-literacy-bridge.md](./federal-workforce-literacy-bridge.md) | Standalone add-on module integrating the U.S. Department of Labor AI Literacy Framework (TEN 07-25) with the method | You are aligning training to federal workforce literacy standards |
+| [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion reference: enterprise AI architecture across ten competencies, with a practice layer, artifact templates and diagram set. Grounded in one vendor's platform; on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
@@ -543,7 +546,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.1.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -553,6 +556,8 @@ This repository, including the method and all companion files, is licensed under
 
 Suggested attribution: "Slow AI Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0."
 
+Quotations and other third-party materials identified in a file's own conventions remain the property of their owners and are excluded from this grant.
+
 Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ---
@@ -561,7 +566,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.1.5 (2026-08-17)**. Patch release: the Korea AI Basic Act entry in restaurant-resources.md corrected to the instruments now in force, Act No. 21311 and Presidential Decree No. 36506; the Korea and NIST status notes re-dated on re-verification. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+Current version: **v2.2 (2026-08-20)**. Addition: the Enterprise AI Architecture Primer joins as a companion reference, with README registration and a third-party-materials sentence in the License section. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
 
 ---
 
