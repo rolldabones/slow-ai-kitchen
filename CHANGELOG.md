@@ -2,6 +2,10 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.2 (2026-08-20)
+
+Addition. `enterprise-ai-architecture-primer.md` joins the repository as a companion reference: enterprise AI architecture across ten competencies, with a practice layer (review sequence, defect and misdiagnosis catalogs, evidence register), twenty-five artifact templates, an eighteen-diagram set and a vocabulary. The document carries its own masthead (v1.0.0, 2026-08-20 KST) and a license-and-third-party-materials convention: quoted third-party material remains its owners' and is excluded from the CC BY-NC-SA 4.0 grant. README updated accordingly: the primer registered in Repository Contents, an architect entry added to How to Use This Repository and a third-party-materials sentence added to the License section. How to Cite corrected from a stale version number. GitHub truncates the rendered view of the file at this size; Raw and download carry the full document. On method questions the README controls, per the repository rule. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+
 ## v2.1.5 (2026-08-17)
 
 Maintenance. Korea instrument citations corrected to the texts in force; two status notes re-dated on re-verification.
