@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.2 | 2026-08-20 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.3 | 2026-08-24 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -63,6 +63,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **An architect or systems designer.** Read [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md): the architecture reference behind Gates 4 and 5, the Feast and the Restaurant's five pillars.
 
+**A skeptic, an auditor or a technically minded reader.** Read [karpathys-kitchen.md](./karpathys-kitchen.md): the core principles derived from the mechanisms of the technology rather than asserted. It changes no step, gate, role or principle.
+
 **Prefer a guided tool.** A web application implementing the twelve steps is available at https://slow-ai-kitchen.msagent.ai/, in English, Korean, Vietnamese and Japanese.
 
 ## Repository Contents
@@ -76,6 +78,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [restaurant-resources.md](./restaurant-resources.md) | Reference standards for the Restaurant addendum, including ISO/IEC 42001 and NIST resources, with a note on certification versus substance | You are building the program governance layer |
 | [federal-workforce-literacy-bridge.md](./federal-workforce-literacy-bridge.md) | Standalone add-on module integrating the U.S. Department of Labor AI Literacy Framework (TEN 07-25) with the method | You are aligning training to federal workforce literacy standards |
 | [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion reference: enterprise AI architecture across ten competencies, with a practice layer, artifact templates and diagram set. Grounded in one vendor's platform; on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
+| [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone add-on module: twelve works by Andrej Karpathy read for what they establish about the technology's limits, closing with a table running from technical fact through failure mode, principle, control and evidence to a named role from the tables below. An independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
@@ -546,7 +549,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.3. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -566,7 +569,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.2 (2026-08-20)**. Addition: the Enterprise AI Architecture Primer joins as a companion reference, with README registration and a third-party-materials sentence in the License section. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+Current version: **v2.3 (2026-08-24)**. Addition: Karpathy's Kitchen joins as a standalone add-on module, deriving the method's core principles from twelve works by Andrej Karpathy, with README registration. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
 
 ---
 

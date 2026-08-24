@@ -1,21 +1,22 @@
-# SLOW AI KITCHEN
+# KARPATHY'S KITCHEN
 
-### Karpathy's Kitchen
+### A Technical Reading and Viewing Guide for Governance, Risk, Audit and Accountability
 
-*A Technical Reading and Viewing Guide for Governance, Risk, Audit and Accountability*
-
-**A standalone add-on module for readers who want Slow AI derived from the technology's actual mechanisms rather than asserted as policy.**
+*A standalone add-on module to Slow AI Kitchen, for readers who want Slow AI derived from the technology's actual mechanisms rather than asserted as policy.*
 
 **Son-U Michael Paik**
-CEO, GRC Solutions Korea
-Former General Counsel, BABL AI
+CEO, GRC Solutions Korea | former General Counsel, BABL AI
 [www.grcskorea.com](http://www.grcskorea.com)
 
-August 24, 2026 (KST)
+| Version | Date | Status | License |
+|---|---|---|---|
+| v1.0.0 | 2026-08-24 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
-> **Attribution and independence.** This module is an independent reading of Andrej Karpathy's published work. He has no involvement in it, has not reviewed it and does not endorse it. His works are cited and linked to their primary sources and are quoted only in short passages under fair use. The governance conclusions drawn from them are the author's own and should not be attributed to him. The title is descriptive of the subject and signals no association.
+> **Attribution and independence.** This module is an independent reading of Andrej Karpathy's published work. He has no involvement in it, has not reviewed it and does not endorse it. The governance conclusions drawn from his work are the author's own and should not be attributed to him. The title is descriptive of the subject and signals no association, affiliation, sponsorship or endorsement.
+
+> **License and third-party materials.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Karpathy's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0." Quotations, titles, project names and reported figures drawn from third-party sources, including Andrej Karpathy's published essays, lectures, repositories and recorded interviews, are used with attribution for identification, description and commentary. They remain the property of their owners and are excluded from this license grant. Trademarks belong to their respective holders.
 
 > **Link currency.** Every external link in this module was checked on 24 August 2026 (KST). The status of each is recorded in the [Link Register](#link-register) at the end. Third-party material moves, and a link that resolved on that date may not resolve later. Check the register before relying on any citation.
 
