@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.3 | 2026-08-24 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.3.1 | 2026-08-24 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -549,7 +549,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.3. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.3.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -569,7 +569,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.3 (2026-08-24)**. Addition: Karpathy's Kitchen joins as a standalone add-on module, deriving the method's core principles from twelve works by Andrej Karpathy, with README registration. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+Current version: **v2.3.1 (2026-08-24)**. Maintenance: one perishable pricing figure in the primer's Appendix I recast so it does not go stale on a known date; repository moved to a three-component version. Prior at v2.3: Karpathy's Kitchen joined as a standalone add-on module, deriving the method's core principles from twelve works by Andrej Karpathy, with README registration. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
 
 ---
 

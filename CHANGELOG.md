@@ -2,6 +2,30 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.3.1 (2026-08-24)
+
+Maintenance. One perishable figure recast so that it does not go stale on a
+known date. No change to the twelve steps, the ten gates, the three tiers, the
+workshop design, the Your Restaurant addendum or Karpathy's Kitchen.
+
+- **`enterprise-ai-architecture-primer.md`, Appendix I, Claude Sonnet 5 pricing
+  row.** The row read "$2 / $10 to 31 Aug 2026, then $3 / $15". That phrasing is
+  correct only while read before 31 August 2026; from 1 September the
+  promotional rate reads as current when it is not. Recast to state both rates
+  against explicit date boundaries, to carry the 2026-08-11 verification date
+  for both, and to record that the 1 September rate was documented as scheduled
+  at that date and has not been re-verified since. **The figures themselves are
+  unchanged and were not re-verified for this release.** Only the framing moves,
+  per the rule that claims are re-dated only when re-verified.
+- Sole occurrence account-wide, confirmed by grep before the edit.
+
+**Version numbering.** This release also moves the repository to a
+three-component version. `v2.2` and `v2.3` were two-component, which the account
+maintenance sweep silently excluded from its tag comparisons; the sweep was
+corrected the same day and now reports the inconsistency rather than dropping
+it. See `account-maintenance` v1.1.0 and runbook trap 16. The earlier tags
+stand as released.
+
 ## v2.3 (2026-08-24)
 
 Addition. `karpathys-kitchen.md` joins the repository as a standalone add-on module: *Karpathy's Kitchen*, a technical reading and viewing guide deriving the method's core principles from twelve works by Andrej Karpathy, running from the Intro to Large Language Models lecture through Software 2.0, the training-recipe essay, Zero to Hero, microgpt (February 2026) and Software Is Changing (Again) to the Tesla talks, the Verifiability post and Animals vs Ghosts. The module states the method's origin in the author's voice: the limitations Karpathy documents in order to build well are the limits an institution has to control for in order to deploy safely. It carries a seven-point governance synthesis, a five-layer architecture read against the twelve steps, the demo-to-product gap and the march of nines as the standard of evidence for raising an autonomy level, verifiability as the triage rule for a use-case inventory, a study sequence in three passes plus a one-hour short pass for executives and vendor meetings, a derivation table whose owner column names only the task and organizational roles already fixed in the README, and a link register recording the browser-checked status of all twenty-nine external citations as at 24 August 2026 (KST), including one that does not resolve and is recorded rather than dropped. The document carries its own masthead (v1.0.0, 2026-08-24 KST) and the license-and-third-party-materials convention adopted at v2.2. It is an independent reading: Andrej Karpathy has no involvement in it, has not reviewed it and does not endorse it. Record note: the module file was committed to `main` earlier on 24 August 2026 under a commit message carrying the superseded working version number v2.1, from a draft release plan written against a stale reading of this repository. That message is left as written rather than rewritten. The version in force for this addition is v2.3. README updated accordingly: the module registered in Repository Contents, a reader entry added to How to Use This Repository, and the version table, How to Cite and current-version pointer moved in lockstep. On method questions the README controls, per the repository rule. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.

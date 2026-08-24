@@ -15253,7 +15253,7 @@ Every number here came from Anthropic's live documentation in August 2026. **Eve
 | Claude Fable 5 | $10 / $50 | Most capable widely released; 1M context, 128,000 max output; always-on adaptive thinking; effort defaults to `high` |
 | Claude Mythos 5 | $10 / $50 | Project Glasswing only |
 | Claude Opus 5 | $5 / $25 | 1M context, 128,000 max output; effort defaults to high |
-| Claude Sonnet 5 | $2 / $10 to 31 Aug 2026, then $3 / $15 ⧉ | Frontier intelligence at scale; 1M context, 128,000 max output; effort defaults to `high`. ⧉ This is the one figure in the table with a scheduled change built into it. Any sizing model in 8.10 built on the promotional rate understates cost after that date |
+| Claude Sonnet 5 | Promotional **$2 / $10** through 31 Aug 2026. Standard **$3 / $15** from 1 Sep 2026 ⧉ | Frontier intelligence at scale; 1M context, 128,000 max output; effort defaults to `high`. ⧉ The only figure in this table with a scheduled change built into it, so it is the only one that goes stale on a known date rather than an unknown one. Both rates were verified 2026-08-11, at which date the 1 Sep 2026 rate was documented as scheduled; it has not been re-verified since and should be confirmed before it is relied on. Establish which side of 31 Aug 2026 you are on before using either number. Any sizing model in 8.10 built on the promotional rate understates cost from 1 Sep 2026 |
 | Claude Haiku 4.5 | $1 / $5 | Fastest and cheapest; positioned for subagent tasks; 200,000 context, 64,000 max output; supports extended thinking rather than adaptive thinking |
 
 Legacy: Opus 4.8, 4.7, 4.6, 4.5 at $5 / $25; Sonnet 4.6 and 4.5 at $3 / $15.
