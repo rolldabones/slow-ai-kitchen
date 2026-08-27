@@ -2,6 +2,31 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.4.0 (2026-08-27)
+
+New module. Newton's Kitchen (`newtons-kitchen.md`) joins as a standalone
+add-on module: the three doctrines compressed into three laws of consequential
+motion (Intent, Motion, Liability), each stated as an axiom beneath the doctrine
+it restates, set out in the order of the *Principia* (definitions, laws,
+corollaries, scholia), with a corollary on materiality and README registration
+(reader path, file table, current-version paragraph). Restates Slow AI,
+Informed Intent and Final Liability at the altitude of mechanics under the
+doctrine delta rule; varies no rule. No change to the twelve steps, the ten
+gates, the three tiers, the workshop design, the Your Restaurant addendum, the
+primer or Karpathy's Kitchen.
+
+- **`newtons-kitchen.md`**, new, v1.0.0, Final, CC BY-NC-SA 4.0. Eight
+  definitions, three laws, five corollaries, a scholium on the limits of the
+  Newtonian correspondence and a general scholium carrying the proposition:
+  do not govern intelligence in the abstract, govern consequential motion
+  through the world. No third-party citations; internal links checked
+  2026-08-27 (KST).
+- **`README.md`**: title block to v2.4.0; reader path added after the
+  skeptic's; file table row added after `karpathys-kitchen.md`;
+  current-version paragraph updated.
+- Not in scope, logged for the weekly sweep: `karpathys-kitchen.md` closes on
+  "identifiable human principal" where DOCTRINE.md says "named human owner".
+
 ## v2.3.1 (2026-08-24)
 
 Maintenance. One perishable figure recast so that it does not go stale on a

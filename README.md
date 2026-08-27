@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.3.1 | 2026-08-24 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.4.0 | 2026-08-27 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -65,6 +65,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A skeptic, an auditor or a technically minded reader.** Read [karpathys-kitchen.md](./karpathys-kitchen.md): the core principles derived from the mechanisms of the technology rather than asserted. It changes no step, gate, role or principle.
 
+**A reader who wants the compression.** Read [newtons-kitchen.md](./newtons-kitchen.md): the three doctrines derived as three laws of consequential motion, set out in the order of the *Principia*, with the four-property test of what governed means while the agent moves and a corollary on materiality. It changes no step, gate, role or principle.
+
 **Prefer a guided tool.** A web application implementing the twelve steps is available at https://slow-ai-kitchen.msagent.ai/, in English, Korean, Vietnamese and Japanese.
 
 ## Repository Contents
@@ -79,6 +81,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [federal-workforce-literacy-bridge.md](./federal-workforce-literacy-bridge.md) | Standalone add-on module integrating the U.S. Department of Labor AI Literacy Framework (TEN 07-25) with the method | You are aligning training to federal workforce literacy standards |
 | [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion reference: enterprise AI architecture across ten competencies, with a practice layer, artifact templates and diagram set. Grounded in one vendor's platform; on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
 | [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone add-on module: twelve works by Andrej Karpathy read for what they establish about the technology's limits, closing with a table running from technical fact through failure mode, principle, control and evidence to a named role from the tables below. An independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
+| [newtons-kitchen.md](./newtons-kitchen.md) | Standalone add-on module: the three doctrines compressed into three laws of consequential motion (Intent, Motion, Liability), each stated as an axiom beneath the doctrine it restates, in the order of the *Principia* (definitions, laws, corollaries, scholia), with a corollary on materiality, closing on the proposition that governance governs motion through the world rather than intelligence in the abstract. Restates DOCTRINE.md at the altitude of mechanics and varies nothing | You want the conceptual warrant for the method rather than its assertion |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
@@ -569,7 +572,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.3.1 (2026-08-24)**. Maintenance: one perishable pricing figure in the primer's Appendix I recast so it does not go stale on a known date; repository moved to a three-component version. Prior at v2.3: Karpathy's Kitchen joined as a standalone add-on module, deriving the method's core principles from twelve works by Andrej Karpathy, with README registration. No change to the twelve steps, the ten gates, the three tiers, the workshop design or the Your Restaurant addendum.
+Current version: **v2.4.0 (2026-08-27)**. Newton's Kitchen joined as a standalone add-on module, compressing the three doctrines into three laws of consequential motion in the order of the *Principia*, with README registration. Prior at v2.3.1: maintenance, one perishable pricing figure in the primer's Appendix I recast so it does not go stale on a known date, and the repository moved to a three-component version. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer or Karpathy's Kitchen.
 
 ---
 
