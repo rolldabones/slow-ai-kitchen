@@ -2,6 +2,40 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.5.0 (2026-08-30)
+
+New module. Coetzee's Kitchen (`coetzees-kitchen.md`) joins as a standalone
+add-on module: the epistemics of the human-AI working session, read through
+J. M. Coetzee's 2003 Nobel lecture *He and His Man*. It names the three
+problems the method's gates answer (the report is not the world, the report
+lands in a system, the report changes its reader), introduces **Return to
+Source** and **Cognitive Provenance** as disciplines operationalizing the
+doctrines inside the loop, supplies the socio-technical warrant for Gate 3
+(Read the Kitchen) and maps the doctrines onto the loop: Informed Intent
+governs entry, Slow AI the interaction, Final Liability the exit. Restates the
+doctrines at the altitude of the working session under the doctrine delta
+rule; varies no rule. The two disciplines are disciplines of the module, not
+doctrine; DOCTRINE.md is unchanged. No change to the twelve steps, the ten
+gates, the three tiers, the workshop design, the Your Restaurant addendum, the
+primer, Karpathy's Kitchen or Newton's Kitchen.
+
+- **`coetzees-kitchen.md`**, new, v1.0.0, Final, CC BY-NC-SA 4.0. Preface and
+  twelve sections in continuous prose, a method-mapping apparatus and four
+  third-party sources verified 2026-08-29 (KST): the Pursuit of Wonder video
+  under its current title (retitled by its creator since first circulation),
+  the Nobel lecture (Swedish Academy, 7 December 2003), Trist and Bamforth
+  1951 and NIST AI 100-1. Two short quotations only, "a kind of parrot" (the
+  lecture) and "inherently socio-technical in nature" (NIST); the Defoe
+  epigraph is public domain. Declines to adopt a socio-technical versus
+  socio-technological suffix distinction for want of authority, and says so
+  in its own text.
+- **`README.md`**: title block to v2.5.0; reader path added after the
+  compression reader's; file table row added after `newtons-kitchen.md`;
+  current-version paragraph updated.
+- **Correction, itemised.** README How to Cite read v2.3.1 and had not moved
+  at the v2.4.0 release; corrected to v2.5.0. Same defect class as the v2.2
+  How to Cite correction.
+
 ## v2.4.0 (2026-08-27)
 
 New module. Newton's Kitchen (`newtons-kitchen.md`) joins as a standalone

@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.4.0 | 2026-08-27 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.5.0 | 2026-08-30 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -67,6 +67,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A reader who wants the compression.** Read [newtons-kitchen.md](./newtons-kitchen.md): the three doctrines derived as three laws of consequential motion, set out in the order of the *Principia*, with the four-property test of what governed means while the agent moves and a corollary on materiality. It changes no step, gate, role or principle.
 
+**A reader who wants the epistemics.** Read [coetzees-kitchen.md](./coetzees-kitchen.md): the working session itself examined through Coetzee's 2003 Nobel lecture, with the report-versus-world problem, the socio-technical warrant for Gate 3 and two disciplines, Return to Source and Cognitive Provenance, that operationalize the doctrines inside the human-AI loop. It changes no step, gate, role or principle.
+
 **Prefer a guided tool.** A web application implementing the twelve steps is available at https://slow-ai-kitchen.msagent.ai/, in English, Korean, Vietnamese and Japanese.
 
 ## Repository Contents
@@ -82,6 +84,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion reference: enterprise AI architecture across ten competencies, with a practice layer, artifact templates and diagram set. Grounded in one vendor's platform; on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
 | [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone add-on module: twelve works by Andrej Karpathy read for what they establish about the technology's limits, closing with a table running from technical fact through failure mode, principle, control and evidence to a named role from the tables below. An independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
 | [newtons-kitchen.md](./newtons-kitchen.md) | Standalone add-on module: the three doctrines compressed into three laws of consequential motion (Intent, Motion, Liability), each stated as an axiom beneath the doctrine it restates, in the order of the *Principia* (definitions, laws, corollaries, scholia), with a corollary on materiality, closing on the proposition that governance governs motion through the world rather than intelligence in the abstract. Restates DOCTRINE.md at the altitude of mechanics and varies nothing | You want the conceptual warrant for the method rather than its assertion |
+| [coetzees-kitchen.md](./coetzees-kitchen.md) | Standalone add-on module: the epistemics of the human-AI working session, read through Coetzee's 2003 Nobel lecture *He and His Man*; names the three problems the method's gates answer (the report is not the world, the report lands in a system, the report changes its reader), introduces Return to Source and Cognitive Provenance as operating disciplines and supplies the socio-technical warrant for Gate 3. Restates DOCTRINE.md at the altitude of the working session and varies nothing | You want to understand what working with the machine does to the person doing the work, and why the gates exist |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
@@ -552,7 +555,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.3.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.5.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -572,7 +575,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.4.0 (2026-08-27)**. Newton's Kitchen joined as a standalone add-on module, compressing the three doctrines into three laws of consequential motion in the order of the *Principia*, with README registration. Prior at v2.3.1: maintenance, one perishable pricing figure in the primer's Appendix I recast so it does not go stale on a known date, and the repository moved to a three-component version. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer or Karpathy's Kitchen.
+Current version: **v2.5.0 (2026-08-30)**. Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with README registration; the How to Cite version, stale at v2.3.1 since the v2.4.0 release, corrected. Prior at v2.4.0: Newton's Kitchen joined as a standalone add-on module, compressing the three doctrines into three laws of consequential motion in the order of the *Principia*. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Karpathy's Kitchen or Newton's Kitchen.
 
 ---
 
