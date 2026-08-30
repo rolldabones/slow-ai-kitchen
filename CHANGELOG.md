@@ -2,6 +2,25 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.5.1 (2026-08-30)
+
+Maintenance. One formulation aligned to doctrine; nothing of substance moves.
+
+- **`karpathys-kitchen.md`**, v1.0.0 to v1.0.1. The module closed on "attach
+  consequential decisions to an identifiable human principal" where DOCTRINE.md
+  says "named human owner". The line now reads "attach consequential decisions
+  to a named human owner", per the doctrine delta rule. Logged out of scope at
+  the v2.4.0 release for the weekly sweep; executed in this release round
+  instead by decision of 30 August 2026. Sole occurrence account-wide,
+  confirmed by grep before the edit; the v2.4.0 changelog line recording the
+  defect stands as written. Link register untouched: links are re-dated only
+  when re-verified, and none was.
+- **`README.md`**: title block, How to Cite and current-version paragraph to
+  v2.5.1 in lockstep.
+- No change to the twelve steps, the ten gates, the three tiers, the workshop
+  design, the Your Restaurant addendum, the primer, Newton's Kitchen or
+  Coetzee's Kitchen.
+
 ## v2.5.0 (2026-08-30)
 
 New module. Coetzee's Kitchen (`coetzees-kitchen.md`) joins as a standalone

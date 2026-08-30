@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.0 | 2026-08-24 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.0.1 | 2026-08-30 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
@@ -886,7 +886,7 @@ Escalate uncertainty.
 
 Retain intervention.
 
-And attach consequential decisions to an identifiable human principal.
+And attach consequential decisions to a named human owner.
 
 That is where Karpathy's engineering and AI governance meet.
 

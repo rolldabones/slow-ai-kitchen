@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.5.0 | 2026-08-30 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.5.1 | 2026-08-30 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -555,7 +555,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.5.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.5.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -575,7 +575,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.5.0 (2026-08-30)**. Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with README registration; the How to Cite version, stale at v2.3.1 since the v2.4.0 release, corrected. Prior at v2.4.0: Newton's Kitchen joined as a standalone add-on module, compressing the three doctrines into three laws of consequential motion in the order of the *Principia*. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Karpathy's Kitchen or Newton's Kitchen.
+Current version: **v2.5.1 (2026-08-30)**. Maintenance: Karpathy's Kitchen closing line aligned to DOCTRINE.md, "identifiable human principal" corrected to "named human owner" under the doctrine delta rule; logged at v2.4.0 for the weekly sweep and executed in this release round. Prior at v2.5.0: Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with the How to Cite correction. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Newton's Kitchen or Coetzee's Kitchen.
 
 ---
 
