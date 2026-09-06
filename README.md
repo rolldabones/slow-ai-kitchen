@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.5.1 | 2026-08-30 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.6.0 | 2026-09-06 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -81,7 +81,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [sample-kitchen-prompts-two-layer-version.md](./sample-kitchen-prompts-two-layer-version.md) | Two-layer operating prompt: Steps 1 through 9 plus abbreviated Feast controls (March 2026) | You want session-level discipline with light deployment controls |
 | [restaurant-resources.md](./restaurant-resources.md) | Reference standards for the Restaurant addendum, including ISO/IEC 42001 and NIST resources, with a note on certification versus substance | You are building the program governance layer |
 | [federal-workforce-literacy-bridge.md](./federal-workforce-literacy-bridge.md) | Standalone add-on module integrating the U.S. Department of Labor AI Literacy Framework (TEN 07-25) with the method | You are aligning training to federal workforce literacy standards |
-| [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion reference: enterprise AI architecture across ten competencies, with a practice layer, artifact templates and diagram set. Grounded in one vendor's platform; on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
+| [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion reference: enterprise AI architecture across ten competencies, with a practice layer, artifact templates and diagram set. Grounded in one vendor's platform; on method questions this README controls. Also published in parts for reading under [primer/](primer/README.md); the single file remains the file of record | You are designing or reviewing the systems the Kitchen governs |
+| [primer/](./primer/README.md) | The Practice Primer in 23 derived parts with a reading index, so the text can be read in the browser. Derived from the single file above and verified to rebuild it byte for byte | You want to read the Primer rather than download it |
 | [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone add-on module: twelve works by Andrej Karpathy read for what they establish about the technology's limits, closing with a table running from technical fact through failure mode, principle, control and evidence to a named role from the tables below. An independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
 | [newtons-kitchen.md](./newtons-kitchen.md) | Standalone add-on module: the three doctrines compressed into three laws of consequential motion (Intent, Motion, Liability), each stated as an axiom beneath the doctrine it restates, in the order of the *Principia* (definitions, laws, corollaries, scholia), with a corollary on materiality, closing on the proposition that governance governs motion through the world rather than intelligence in the abstract. Restates DOCTRINE.md at the altitude of mechanics and varies nothing | You want the conceptual warrant for the method rather than its assertion |
 | [coetzees-kitchen.md](./coetzees-kitchen.md) | Standalone add-on module: the epistemics of the human-AI working session, read through Coetzee's 2003 Nobel lecture *He and His Man*; names the three problems the method's gates answer (the report is not the world, the report lands in a system, the report changes its reader), introduces Return to Source and Cognitive Provenance as operating disciplines and supplies the socio-technical warrant for Gate 3. Restates DOCTRINE.md at the altitude of the working session and varies nothing | You want to understand what working with the machine does to the person doing the work, and why the gates exist |
@@ -555,7 +556,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.5.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.6.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 ---
 
@@ -575,7 +576,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.5.1 (2026-08-30)**. Maintenance: Karpathy's Kitchen closing line aligned to DOCTRINE.md, "identifiable human principal" corrected to "named human owner" under the doctrine delta rule; logged at v2.4.0 for the weekly sweep and executed in this release round. Prior at v2.5.0: Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with the How to Cite correction. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Newton's Kitchen or Coetzee's Kitchen.
+Current version: **v2.6.0 (2026-09-06)**. Structure release: the Practice Primer is published in parts for reading under [primer/](primer/README.md), 23 derived parts and a reading index generated from the single file, which remains the file of record and is unchanged byte for byte. Prior at v2.5.1: Karpathy's Kitchen closing line aligned to DOCTRINE.md, "identifiable human principal" corrected to "named human owner" under the doctrine delta rule; logged at v2.4.0 for the weekly sweep and executed in this release round. Prior at v2.5.0: Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with the How to Cite correction. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Newton's Kitchen or Coetzee's Kitchen.
 
 ---
 
