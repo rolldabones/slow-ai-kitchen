@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.6.1 | 2026-09-06 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.6.2 | 2026-09-06 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -556,7 +556,9 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.6.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.6.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+
+A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
 ---
 
@@ -576,17 +578,17 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.6.1 (2026-09-06)**. Correction to v2.6.0: one of the 23 parts published that morning was 311,517 bytes and GitHub declined to render it, so the release did not deliver what it claimed. The parts are regenerated under a size ceiling and there are now 24. Prior at v2.6.0: the Practice Primer published in parts for reading under [primer/](primer/README.md), generated from the single file, which remains the file of record and is unchanged byte for byte. Prior at v2.5.1: Karpathy's Kitchen closing line aligned to DOCTRINE.md, "identifiable human principal" corrected to "named human owner" under the doctrine delta rule; logged at v2.4.0 for the weekly sweep and executed in this release round. Prior at v2.5.0: Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with the How to Cite correction. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Newton's Kitchen or Coetzee's Kitchen.
+Current version: **v2.6.2 (2026-09-06)**. Citation infrastructure: CITATION.cff, a How to Cite block pointing at it, the doctrine citation line and the company name corrected to BABL AI in the About the author section. Prior at v2.6.1: correction to v2.6.0, one of the 23 parts published that morning was 311,517 bytes and GitHub declined to render it, so the release did not deliver what it claimed. The parts are regenerated under a size ceiling and there are now 24. Prior at v2.6.0: the Practice Primer published in parts for reading under [primer/](primer/README.md), generated from the single file, which remains the file of record and is unchanged byte for byte. Prior at v2.5.1: Karpathy's Kitchen closing line aligned to DOCTRINE.md, "identifiable human principal" corrected to "named human owner" under the doctrine delta rule; logged at v2.4.0 for the weekly sweep and executed in this release round. Prior at v2.5.0: Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with the How to Cite correction. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Newton's Kitchen or Coetzee's Kitchen.
 
 ---
 
 ## About the Author
 
-Son-U Michael Paik is an attorney, AI auditor and governance architect with more than 25 years of experience designing risk and compliance systems for cross-border institutions in regulated, high-stakes sectors across Asia, Europe and the United States. He is the former General Counsel of BABL.ai, a global AI audit provider, and Founder and Chief Executive Officer of GRC Solutions Korea, where he advises finance, industrial and public-sector Clients on AI governance, audit readiness and regulatory compliance.
+Son-U Michael Paik is an attorney, AI auditor and governance architect with more than 25 years of experience designing risk and compliance systems for cross-border institutions in regulated, high-stakes sectors across Asia, Europe and the United States. He is the former General Counsel of BABL AI, a global AI audit provider, and Founder and Chief Executive Officer of GRC Solutions Korea, where he advises finance, industrial and public-sector Clients on AI governance, audit readiness and regulatory compliance.
 
 Before founding GRC Solutions Korea, Paik served as General Counsel, Chief Legal Officer and senior executive for three listed groups in Korea, including Hankook Tire, SeAH Holdings and STX Group, with responsibility for legal, compliance and trade operations across multinational businesses. Earlier in his career he practiced at Wilson Sonsini Goodrich & Rosati and Cahill Gordon & Reindel in the United States, advising on mergers and acquisitions, venture capital and cross-border regulatory matters.
 
-He holds a Juris Doctor from Columbia Law School, a Master of Business Administration from the Yale School of Management and a Bachelor of Arts in Economics from Syracuse University. He is admitted to the New York Bar and holds AI audit certifications from BABL.ai and ForHumanity, including certifications under the EU AI Act, GDPR and the Digital Services Act, as well as senior risk management credentials under ISO 31000. He has held faculty appointments at Seoul National University, Yonsei University and Ewha Womans University, and serves in board, fiduciary and advisory roles for listed and venture-backed organizations in Korea and internationally.
+He holds a Juris Doctor from Columbia Law School, a Master of Business Administration from the Yale School of Management and a Bachelor of Arts in Economics from Syracuse University. He is admitted to the New York Bar and holds AI audit certifications from BABL AI and ForHumanity, including certifications under the EU AI Act, GDPR and the Digital Services Act, as well as senior risk management credentials under ISO 31000. He has held faculty appointments at Seoul National University, Yonsei University and Ewha Womans University, and serves in board, fiduciary and advisory roles for listed and venture-backed organizations in Korea and internationally.
 
 Slow AI Kitchen is an expression of his central conviction: that AI governance is not a compliance exercise. It is a professional discipline. And like any discipline, it must be taught, practiced and enforced by humans who own the outcome.
 

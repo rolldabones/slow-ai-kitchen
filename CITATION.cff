@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you cite this work, please use the metadata below."
+title: "Slow AI Kitchen: Method and Workshop Guide"
+authors:
+  - family-names: "Paik"
+    given-names: "Son-U Michael"
+version: 2.6.2
+date-released: "2026-09-06"
+license: CC-BY-NC-SA-4.0
+repository-code: "https://github.com/rolldabones/slow-ai-kitchen"
+abstract: "The method: a 12-step governed AI methodology from individual task discipline to institutional program governance, with the Enterprise AI Architecture Primer as its companion architecture reference and three derivation modules."

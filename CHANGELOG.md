@@ -2,6 +2,15 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.6.2 (2026-09-06)
+
+Citation infrastructure, doctrine citation line and lockstep maintenance. Session C of the September 2026 improvement pack, one patch release per repository across all 21 public repositories.
+
+- **`CITATION.cff` added** in the house form settled at D-C1: no `type` field, `version` and `date-released` in lockstep with the README, `license` as the SPDX identifier for this repository's licence, `abstract` taken from this repository's ECOSYSTEM.md role line rather than newly written.
+- **How to Cite block** aligned to this release and pointing at `CITATION.cff`.
+- **Company name corrected.** `BABL.ai` to `BABL AI` in the About the author section, both occurrences.
+- All other files in this repository are unchanged byte for byte.
+
 ## v2.6.1 (2026-09-06)
 
 Patch. v2.6.0 shipped one part that GitHub will not render, which is the one
