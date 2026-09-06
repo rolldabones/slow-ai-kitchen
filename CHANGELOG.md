@@ -2,6 +2,69 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.6.1 (2026-09-06)
+
+Patch. v2.6.0 shipped one part that GitHub will not render, which is the one
+thing that release existed to fix. No change to the Primer text and no change to
+the method.
+
+**Correction of substance.** *[Author's doctrine. As at 6 September 2026 (KST).]*
+v2.6.0 stated that the Primer is "published in parts for reading". For
+`primer/02-part-2-solution-architecture.md`, 311,517 bytes, **that was not
+true.** GitHub returned `richText: null` and `richTextTruncated: true` for it,
+which is GitHub declining to render the file. Queried twice, twenty seconds
+apart, while the other 22 parts rendered on the first query. The claim is struck
+for that part and made good here rather than re-dated.
+
+**Why the guard passed.** The pre-release check tested a ceiling of 512,000
+bytes, which is the figure GitHub's own documentation and every secondary source
+give for the markdown rendering limit. Measured directly against this account on
+6 September 2026, that figure is wrong:
+
+| File | Bytes | GitHub |
+|---|---|---|
+| `final-liability-rests-with-the-human-book-wip/AI_GRC_Master_Reference_v7_9.md` | 242,312 | RENDERED |
+| `primer/02-part-2-solution-architecture.md` (v2.6.0) | 311,517 | NOT RENDERED |
+
+The true limit lies in (242,312, 311,517]. 262,144 bytes, being 256 KiB, is the
+obvious candidate and is **not established**. It is recorded as Unknown and
+bounded rather than asserted, and the ceiling is set inside the proven-safe
+range instead of at a guessed boundary.
+
+**What changed.**
+
+- `split_markdown.py` gains `--max-bytes`, default 200,000, invoked here at
+  **240,000**, below the largest size this account has directly observed GitHub
+  render. Any section above the ceiling is subdivided at H2, then at H3 if still
+  over, and the subdivisions are repacked up to the ceiling so a section that
+  only just exceeds it becomes two parts rather than one per heading. If a part
+  is still over after that, the run **dies before writing anything**.
+- `primer/` regenerated: **23 parts to 24**. Part 2 is now two files. Largest
+  part 236,696 bytes. Every other part is unchanged in content.
+- **Part filenames are renumbered from `02-` onward**, because the parts are
+  numbered in reading order. Links to individual v2.6.0 part files therefore do
+  not resolve at v2.6.1. The index at
+  [primer/README.md](primer/README.md) is the stable entry point and is
+  unchanged in that role. v2.6.0 was published the same day, so the exposure is
+  one day.
+- **A second defect, found while testing the first.** The verifier's
+  navigation-block stripper set a flag on `nav:start` and cleared it on
+  `nav:end`, and did nothing if `nav:end` never arrived. Everything after an
+  unterminated block was silently discarded, so a part whose tail had been
+  appended to, truncated, or had its closing marker deleted **verified clean**.
+  Found by deliberately breaking the condition the check tests. Markers must now
+  balance and no block may be left open, or the verify fails closed. Five cases
+  are exercised: clean round trip, mid-body tamper, append past the closing
+  marker, closing marker removed, part file missing. Before the fix, cases three
+  and four reported OK.
+
+**Unchanged, byte for byte.** `enterprise-ai-architecture-primer.md`, SHA-256
+`58fd015b29ad463643ee845f7d181539d13ba8c58fa24efb1545b310f70e2d72`, the same
+hash as at v2.6.0 and before it. Its own version table stays at v1.0.0,
+2026-08-20. The twelve steps, the ten gates, the three tiers, the workshop
+design, the Your Restaurant addendum, Karpathy's Kitchen, Newton's Kitchen and
+Coetzee's Kitchen. Nothing in the method moves in this release.
+
 ## v2.6.0 (2026-09-06)
 
 Structure release. The Practice Primer is published in parts that GitHub renders. No change to the Primer text and no change to the method.
