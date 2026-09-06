@@ -2,6 +2,19 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.8.0 (2026-09-06)
+
+The Consultant Workbook joins the repository as a standalone delivery instrument. A new instrument enters the repository, so minor.
+
+- **`consultant-workbook.md` added**, flat in the repository root like the other modules (decision D-D3 of 6 September 2026 for service-record.md, applied here). The 30-day initial engagement on one priority workflow for a named business owner: consultant operating brief, delivery cadence, the method and the Feast mapped to twenty-six working records (W01 to W24 with W05A and W24A), the canonical full-day agenda with the evidence each session produces, facilitator instructions and weekly clinics, a measurement protocol that counts all human effort once, a fictional supplier-dossier teaching case that fails expansion on first-pass quality while passing on effort, the delivery acceptance check and a resource register. Converted from the author's working draft of 6 September 2026; the markdown is the file of record and no other format is published.
+- **Sources cited by name.** The working draft pinned source versions in 29 "Source basis" lines, 58 pins in all, and every one was stale on the day the draft was dated: Slow AI Kitchen v2.4.0 against v2.7.0, GRC Workbook v4.2.1 against v4.2.2, Definition of Done v1.1.0 against v1.1.2, grc v2.2.1 against v2.2.2, with the AI Impact Assessment Tool and AI GRC Copilot unpinned. The committed file cites sources by name and URL and pins versions once, in a dated currency table in the resource register, with an engagement-level field for adopted versions. Same pattern as law-firm-ai-deployment-spec.md in AI-Governance-Academy, which carries no pins.
+- **Doctrine alignment.** W10 carries both limbs of Informed Intent as stated in DOCTRINE.md v1.1.1: the instrument (purpose, authority, boundaries, exit) above the authorizer's five conditions (Knowledge, Evidence, Authority, Time, Permission). The doctrine paragraph in the organizational deployment section uses the canonical formulations and cites DOCTRINE.md. Doctrine delta rule, ECOSYSTEM.md protocol item 6.
+- **Service Record wired in.** The Step 9 evidence cell, the W05 tier depths, the W13 footer, the worked case and the delivery acceptance check name the Service Record added at v2.7.0: required Tier 3, recommended Tier 2, optional Tier 1.
+- **External-counsel guardrail.** W07 and the consultant operating brief state that applicability determinations rest with the Client's counsel or qualified local counsel and that items with legal effect carry the note "confirm with external counsel", the guardrail the AI-Governance-Academy templates already carry. The file closes with the informational-purposes disclaimer used in karpathys-kitchen.md.
+- **House style applied in conversion.** Client capitalized, no Oxford commas, no em dashes, completion spaces rendered as escaped underscore lines so that GitHub does not read them as horizontal rules, sheet headings navigable in the browser.
+- **README, three touches plus lockstep.** "How to Use This Repository" gains the consultant or facilitator line; "Repository Contents" gains the row; the Changelog paragraph is brought forward. Version table, How to Cite and `CITATION.cff` move to v2.8.0.
+- The twelve steps, the ten gates, the three tiers, the workshop, the Your Restaurant addendum, the Primer with its derived parts, the three derivation modules and the Service Record are otherwise unchanged byte for byte.
+
 ## v2.7.0 (2026-09-06)
 
 The Service Record joins the repository as a standalone module. Session D2 of the September 2026 improvement pack. A new instrument enters the method, so minor.
