@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.6.2 | 2026-09-06 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.7.0 | 2026-09-06 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -86,6 +86,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone add-on module: twelve works by Andrej Karpathy read for what they establish about the technology's limits, closing with a table running from technical fact through failure mode, principle, control and evidence to a named role from the tables below. An independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
 | [newtons-kitchen.md](./newtons-kitchen.md) | Standalone add-on module: the three doctrines compressed into three laws of consequential motion (Intent, Motion, Liability), each stated as an axiom beneath the doctrine it restates, in the order of the *Principia* (definitions, laws, corollaries, scholia), with a corollary on materiality, closing on the proposition that governance governs motion through the world rather than intelligence in the abstract. Restates DOCTRINE.md at the altitude of mechanics and varies nothing | You want the conceptual warrant for the method rather than its assertion |
 | [coetzees-kitchen.md](./coetzees-kitchen.md) | Standalone add-on module: the epistemics of the human-AI working session, read through Coetzee's 2003 Nobel lecture *He and His Man*; names the three problems the method's gates answer (the report is not the world, the report lands in a system, the report changes its reader), introduces Return to Source and Cognitive Provenance as operating disciplines and supplies the socio-technical warrant for Gate 3. Restates DOCTRINE.md at the altitude of the working session and varies nothing | You want to understand what working with the machine does to the person doing the work, and why the gates exist |
+| [service-record.md](./service-record.md) | The one-page close-out of a single service: steps skipped, gates argued, what the owner would not sign, what the service changes in the method, the judgment and the carry-forward. Written by the named owner within a day of release and kept with the evidence log. Ten records trigger a method review under Step 12, Gate 10 | You have released a service and are closing it out, or you are refining the method against records rather than recollection |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
@@ -174,7 +175,7 @@ Controls: full Steps 1–9 method; explicit escalation path; second review; sign
 
 Tiering adjusts the depth of each gate. It never deletes a gate. These are defaults; a function may set stricter requirements through its tool registry under Step 10, never looser ones for Tier 3 work.
 
-| Gate | Tier 1 | Tier 2 | Tier 3 |
+| Gate or close-out | Tier 1 | Tier 2 | Tier 3 |
 |---|---|---|---|
 | Gate 1: Definition of Done | Abbreviated: 1–3 pass/fail tests | Full: 3–7 tests | Full: 3–7 tests |
 | Gate 2: Manual First Pass | At least one light form (sketch or outline) | At least one full form | Full first pass, retained as evidence |
@@ -183,6 +184,7 @@ Tiering adjusts the depth of each gate. It never deletes a gate. These are defau
 | Gate 5: Final Liability | Individual is Owner by default | Named reviewer and Owner | Distinct Reviewer, Approver and Owner; escalation path named |
 | Gate 6: Verification and Validation | Basic human review | Review against DoD with evidence log | Second review with evidence log |
 | Gate 7: Human Release Decision | No external deployment without verification | Reviewer sign-off before release | Sign-off record; remediation or rollback plan on file |
+| Service Record (close-out after Gate 7) | Optional | Recommended | Required |
 
 ---
 
@@ -298,7 +300,7 @@ Make the human decision. The pass is the final counter between the kitchen and t
 
 Then review the result: did it achieve the objective, did AI help, where did risk surface and what control should change next time? This post-action review is not a formality. It is the prep list for the next service, and for any organization deploying AI at scale, it is the direct input into Steps 10 through 12.
 
-This step turns the method into a learning system rather than a one-time ritual.
+This step turns the method into a learning system rather than a one-time ritual. The service closes with a Service Record, written by the owner within a day of release; see [service-record.md](./service-record.md).
 
 *Output: Decision record, deployment note and post-action review.*
 
@@ -368,6 +370,7 @@ For organizational deployment, add:
 - [ ] a tool registry authorizes the AI system in use
 - [ ] operators are trained and assigned to their tier
 - [ ] an audit and review cycle is active and maintained
+- [ ] every Tier 3 service in the review period has a Service Record on file
 
 If those are not true, the method was not followed, even if AI was used productively.
 
@@ -556,7 +559,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.6.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.7.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -578,7 +581,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.6.2 (2026-09-06)**. Citation infrastructure: CITATION.cff, a How to Cite block pointing at it, the doctrine citation line and the company name corrected to BABL AI in the About the author section. Prior at v2.6.1: correction to v2.6.0, one of the 23 parts published that morning was 311,517 bytes and GitHub declined to render it, so the release did not deliver what it claimed. The parts are regenerated under a size ceiling and there are now 24. Prior at v2.6.0: the Practice Primer published in parts for reading under [primer/](primer/README.md), generated from the single file, which remains the file of record and is unchanged byte for byte. Prior at v2.5.1: Karpathy's Kitchen closing line aligned to DOCTRINE.md, "identifiable human principal" corrected to "named human owner" under the doctrine delta rule; logged at v2.4.0 for the weekly sweep and executed in this release round. Prior at v2.5.0: Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with the How to Cite correction. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Newton's Kitchen or Coetzee's Kitchen.
+Current version: **v2.7.0 (2026-09-06)**. The Service Record joins the repository as a standalone module: the one-page close-out of a single service, written by the named owner within a day of release, required for Tier 3 work, recommended for Tier 2 and optional for Tier 1. Step 9 names it, the Tier Application Map carries it and the Definition of Done for the Method Itself gains one test for it. Prior at v2.6.2: citation infrastructure, CITATION.cff, a How to Cite block pointing at it, the doctrine citation line and the company name corrected to BABL AI in the About the author section. Prior at v2.6.1: correction to v2.6.0, one of the 23 parts published that morning was 311,517 bytes and GitHub declined to render it, so the release did not deliver what it claimed. The parts are regenerated under a size ceiling and there are now 24. Prior at v2.6.0: the Practice Primer published in parts for reading under [primer/](primer/README.md), generated from the single file, which remains the file of record and is unchanged byte for byte. Prior at v2.5.1: Karpathy's Kitchen closing line aligned to DOCTRINE.md, "identifiable human principal" corrected to "named human owner" under the doctrine delta rule; logged at v2.4.0 for the weekly sweep and executed in this release round. Prior at v2.5.0: Coetzee's Kitchen joined as a standalone add-on module, the epistemics of the human-AI working session read through Coetzee's 2003 Nobel lecture, introducing Return to Source and Cognitive Provenance as operating disciplines and supplying the socio-technical warrant for Gate 3, with the How to Cite correction. No change to the twelve steps, the ten gates, the three tiers, the workshop design, the Your Restaurant addendum, the primer, Newton's Kitchen or Coetzee's Kitchen.
 
 ---
 

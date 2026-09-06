@@ -2,6 +2,17 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.7.0 (2026-09-06)
+
+The Service Record joins the repository as a standalone module. Session D2 of the September 2026 improvement pack. A new instrument enters the method, so minor.
+
+- **`service-record.md` added**, flat in the repository root like the other modules, per decision D-D3 of 6 September 2026. The one-page close-out of a single service: header, steps skipped or abbreviated, gates argued, what the owner would not sign, what the service changes in the method, the judgment and the carry-forward. Written by the named owner under Gate 5 within one day of release and kept with the evidence log. Ten records trigger a method review under Step 12, Gate 10.
+- **Tier rule.** Required for Tier 3 work, recommended for Tier 2, optional for Tier 1. Tiering adjusts depth; nothing is deleted at the lower tiers and the record is not optional at Tier 3.
+- **README, four touches.** "Repository Contents" gains the row; the Tier Application Map gains the row "Service Record (close-out after Gate 7) | Optional | Recommended | Required"; Step 9 gains one sentence naming the record and pointing at the file; "Definition of Done for the Method Itself" gains one test, that every Tier 3 service in the review period has a Service Record on file.
+- **The Tier Application Map's first column is now headed "Gate or close-out"** rather than "Gate". The Service Record is a close-out written after Gate 7, not a gate, and a row under a column headed "Gate" would have asserted an eleventh gate. The ten gates are unchanged.
+- **`CITATION.cff` and the How to Cite block** moved to v2.7.0 in lockstep with the README, per the D-C1 house form.
+- The twelve steps, the ten gates, the three tiers, the workshop, the Your Restaurant addendum, the Primer with its derived parts and the three derivation modules are otherwise unchanged byte for byte.
+
 ## v2.6.2 (2026-09-06)
 
 Citation infrastructure, doctrine citation line and lockstep maintenance. Session C of the September 2026 improvement pack, one patch release per repository across all 21 public repositories.
