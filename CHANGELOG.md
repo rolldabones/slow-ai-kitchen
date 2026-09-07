@@ -2,6 +2,20 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.9.0 (2026-09-07)
+
+Take-Out, Delivery & Vending Machines joins the repository as a standalone operating companion for AI agents. A new instrument enters the repository, so minor.
+
+- **`take-out-delivery-and-vending-machines.md` added**, flat in the repository root like the other modules (decision D-D3 of 6 September 2026). Governed delegation for AI agents across three service patterns: take-out, where the agent prepares work for a human to collect and carry into use; delivery, where the agent is also authorized to carry released work to a specified destination and act there; and vending machines, where a bounded service is available for repeated use at distributed points of access. Prepared against README v2.8.0 at commit `7869f35` and DOCTRINE.md v1.1.1. The manuscript carries its own v1.0.0 and final status; the repository version is this release.
+- **Two instruments, both keyed to existing records.** The service ticket is written under the four headings of Informed Intent (purpose, authority, boundaries, exit) and indexes existing briefs, evidence and workbook sheets rather than duplicating them. The service receipt is the run record, reconciling approved actions as successful, failed, unknown or not attempted, and it feeds the Service Record added at v2.7.0. No new gate, no new form to complete twice.
+- **The preparation and release distinction made concrete.** Step 10 and Gate 8 authorize the system, Step 5 and Gate 4 bound its use, Steps 8 and 9 with Gates 6 and 7 carry verification and the human release decision. Approval may cover a verified batch identified by exact targets, content, permitted effects and validity conditions; a material change to content, recipients or source conditions returns for review. A completion summary cannot supply missing prior authority.
+- **Newton's four-property test applied to the executing system.** Bounded, observable, interruptible and attributable, each with the evidence required before live execution. Restrictions are placed where actions occur rather than in the prompt, encountered content cannot grant permissions, delegation to subagents stays inside the ticket and an uncertain action is not blindly retried.
+- **Tiering unchanged.** Automation tied to action is Tier 3 under the existing tiers, with the distinct Reviewer, Approver and Owner, second review, sign-off, escalation and rollback the README already requires. Drafting-only work follows its actual stakes and consequences are counted across related agents and runs.
+- **Fictional worked order.** A stalled-onboarding investigation carried into an authorized three-message send batch, then extended to the same service at three branch portals. One confirmed arrival, one unknown outcome, one action withdrawn after a source change, and an Owner who refuses to confirm the batch as complete. All people, identifiers, addresses, evidence records and test results are illustrative and are labelled as such.
+- **README, three touches plus lockstep.** "How to Use This Repository" gains the professional or team delegating to agents line; "Repository Contents" gains the row; the Changelog paragraph is brought forward. Version table, How to Cite and `CITATION.cff` move to v2.9.0.
+- **ECOSYSTEM.md.** The slow-ai-kitchen role line in the profile repository is updated in the same commit series under maintenance protocol item 2.
+- The twelve steps, the ten gates, the three tiers, the workshop, the Your Restaurant addendum, the Primer with its derived parts, the three derivation modules, the Service Record and the Consultant Workbook are otherwise unchanged byte for byte.
+
 ## v2.8.0 (2026-09-06)
 
 The Consultant Workbook joins the repository as a standalone delivery instrument. A new instrument enters the repository, so minor.
