@@ -743,7 +743,7 @@ Run/test ID __________  Deliverable/version __________  DoD/version __________
 
 **Confirmation and permitted use**
 
-Confirm, refuse, or amend and confirm. Identify permitted audience/action, restrictions and the reviewed final version.
+Confirm, refuse or amend and confirm. Identify permitted audience/action, restrictions and the reviewed final version.
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 

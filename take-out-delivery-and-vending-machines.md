@@ -97,7 +97,7 @@ Apply the existing Feast and [Your Restaurant](./README.md#addendum-your-restaur
 | **Menu and access** | Permitted tasks, intended users, task tiers and prohibited uses. Each request is checked against the caller's current access and the specific records it needs. A visible menu is not permission to use every item. |
 | **Sources and versions** | Approved source, model, instruction and tool versions; freshness requirements; review dates; changes requiring revalidation. Stale or unverified items are held or withdrawn. |
 | **Ownership and coverage** | The organizational AI Owner is accountable for the service. Each task has a named human Owner with decision rights, oversight and intervention power. Reviewers, operators and escalation coverage are available when required. |
-| **All active locations** | An inventory of interfaces and running instances, their configurations and permissions, and limits on total workload, spending and reach. Opening another instance does not reset shared limits. |
+| **All active locations** | An inventory of interfaces and running instances, their configurations and permissions and limits on total workload, spending and reach. Opening another instance does not reset shared limits. |
 | **Intervention and withdrawal** | Tested suspension across affected locations, queues and delegated work, with a manual fallback and a record of operations already in flight. Previously released outputs remain traceable for correction and follow-up. |
 
 A standing authorization can cover repeated, specified operations while its conditions remain valid. Each run references that authorization and records the requester, task scope, applicable versions and Owner. A menu selection starts work only within those bounds.

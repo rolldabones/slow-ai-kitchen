@@ -23,7 +23,7 @@ That said, a frank institutional note is warranted. Every standard listed in the
 **NIST Trustworthy and Responsible AI Resource Center (AIRC)**
 `https://airc.nist.gov`
 
-The authoritative hub for AI risk management resources maintained by the National Institute of Standards and Technology. Contains the AI RMF framework document, the Playbook, all publications in the NIST AI 100-series, crosswalk documents mapping the AI RMF to ISO 42001 and other frameworks, and use case examples. The starting point for any organization implementing the Restaurant pillars.
+The authoritative hub for AI risk management resources maintained by the National Institute of Standards and Technology. Contains the AI RMF framework document, the Playbook, all publications in the NIST AI 100-series, crosswalk documents mapping the AI RMF to ISO 42001 and other frameworks and use case examples. The starting point for any organization implementing the Restaurant pillars.
 
 > **Status note (17 August 2026, KST):** NIST AI RMF 1.0 remains the current published version. The revision tasked by the White House AI Action Plan (July 2025) is ongoing; AI RMF 1.1 has not been published as of this date. NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure in April 2026. Treat current Playbook actions as the working baseline and monitor `https://airc.nist.gov` for the updated release.
 

@@ -102,11 +102,11 @@ He documents these limits going up, in order to build well. The method applies t
 
 There is a second thing these lectures gave me and it is harder to write down than the first.
 
-I am a lawyer. I did not train as an engineer and I am not going to become one. For a long time that felt like a permanent disqualification from holding an informed view of the systems I was being asked to advise on, and the natural response to that feeling is deference: accept the vendor's account of what the system does, treat the model as a black box because someone said it was one, and write governance language that floats above the technology without ever touching it. A great deal of published AI governance reads exactly like that, and the reason is not laziness. It is nerve.
+I am a lawyer. I did not train as an engineer and I am not going to become one. For a long time that felt like a permanent disqualification from holding an informed view of the systems I was being asked to advise on, and the natural response to that feeling is deference: accept the vendor's account of what the system does, treat the model as a black box because someone said it was one and write governance language that floats above the technology without ever touching it. A great deal of published AI governance reads exactly like that, and the reason is not laziness. It is nerve.
 
 Karpathy's lectures made the deference unnecessary. Not because they turned me into an engineer. Because they demonstrate that the mechanism is comprehensible to anyone willing to sit with it, and that the people who understand it best are the ones most willing to say plainly where it fails.
 
-So I studied on my own, in the evenings, at my own pace, using AI to learn AI: asking models to explain their own mechanisms, then checking those explanations against the primary sources, and building an account I could defend rather than one I had been handed. The method was itself an instance of the doctrine. Bounded use, verification against something the tool could not fabricate, judgment retained.
+So I studied on my own, in the evenings, at my own pace, using AI to learn AI: asking models to explain their own mechanisms, then checking those explanations against the primary sources and building an account I could defend rather than one I had been handed. The method was itself an instance of the doctrine. Bounded use, verification against something the tool could not fabricate, judgment retained.
 
 Karpathy describes the same trap from the teacher's side, and names why the checking matters:
 
@@ -156,9 +156,9 @@ The sections are a sequence, not a list. Each one adds a distinct move, and the 
 
 | Sections | What they establish | What it forces |
 |---|---|---|
-| 1 to 3 | What the thing is: output is generated rather than retrieved, capability is uneven, and the deployed object is a stack rather than a model | You cannot govern the model. You have to govern the system and the use |
+| 1 to 3 | What the thing is: output is generated rather than retrieved, capability is uneven and the deployed object is a stack rather than a model | You cannot govern the model. You have to govern the system and the use |
 | 4 and 9 | What it is allowed to do: capability follows permissions, and execution authority is delegable by degree | Govern verbs, and set autonomy per verb on evidence |
-| 5 to 8 | Why it cannot simply be inspected: behavior is learned rather than specified, failure is silent, and the mechanism is small enough to see plainly | Verification has to sit inside the workflow, and explanation has to be assembled around the model rather than extracted from it |
+| 5 to 8 | Why it cannot simply be inspected: behavior is learned rather than specified, failure is silent and the mechanism is small enough to see plainly | Verification has to sit inside the workflow, and explanation has to be assembled around the model rather than extracted from it |
 | 10 and 11 | Where it will and will not work: the demo-to-product gap, and verifiability as the predictor of reliability | Triage the use-case inventory, and never authorize on a demonstration |
 | 12 | What it is not: not an animal, not a mind, not a bearer of responsibility | The principal stays human, and the language in governance artifacts has to say so |
 
@@ -492,7 +492,7 @@ Different verbs can occupy different levels. The slider is set per verb, deliber
 
 **Purpose:** Learn to price the gap between what you were shown and what you would be running.
 
-Karpathy led the Tesla Autopilot vision team from 2017 to 2022. The talks from that period are worth studying because driving exposes what conversational AI lets us ignore: the system operates in the world, the failures are irreversible, and nobody grades the work.
+Karpathy led the Tesla Autopilot vision team from 2017 to 2022. The talks from that period are worth studying because driving exposes what conversational AI lets us ignore: the system operates in the world, the failures are irreversible and nobody grades the work.
 
 His archive collects them. Four repay a governance reader's time, in this order:
 
@@ -529,7 +529,7 @@ He then generalizes off the road and into ordinary software, unprompted:
 
 **Governance lesson:** A demonstration carries almost no information about production reliability, and the remaining distance is not a matter of polish. It is a fixed, repeated cost per nine.
 
-This is the answer to the most common failure of AI procurement. A vendor demonstrates a system that works, the room is impressed, and the impression is converted into an authorization. Nothing in the demonstration establishes the ninth-tenth-hundredth case, and the party that will carry the consequence of those cases is not the party doing the demonstrating.
+This is the answer to the most common failure of AI procurement. A vendor demonstrates a system that works, the room is impressed and the impression is converted into an authorization. Nothing in the demonstration establishes the ninth-tenth-hundredth case, and the party that will carry the consequence of those cases is not the party doing the demonstrating.
 
 Note also what he says about which work has this property. Vibe coding does not. Production code does, because a single mistake becomes a security vulnerability or a mass disclosure of personal data. Regulated work sits on the same side of that line as self-driving, not the same side as the weekend project.
 
@@ -593,7 +593,7 @@ There is a second, quieter mechanism in the same interview that matters more to 
 
 *"anything that happens during the training of the neural network, the knowledge is only a hazy recollection of what happened in training time... Whereas anything that happens in the context window of the neural network... is very directly accessible to the neural net."*
 
-Weights are a hazy recollection. Context is working memory. That single distinction explains why a model asked about a document from memory will produce something roughly right and confidently wrong at the edges, and why the same model given the document performs far better. It is the technical case for retrieval, for supplying source material rather than relying on recall, and for treating any unsourced factual assertion from a model as an artifact of compression rather than a citation.
+Weights are a hazy recollection. Context is working memory. That single distinction explains why a model asked about a document from memory will produce something roughly right and confidently wrong at the edges, and why the same model given the document performs far better. It is the technical case for retrieval, for supplying source material rather than relying on recall and for treating any unsourced factual assertion from a model as an artifact of compression rather than a citation.
 
 The same conversation is also where Karpathy broke publicly with the industry's timeline. He argued for "the decade of agents" rather than the year of agents, explaining it as "a reaction to a pre-existing quote... I was triggered by that because there's some over-prediction going on in the industry." He described current models as carrying "cognitive deficits." On the code produced by frontier models when he was building his own repository, he was blunter:
 
@@ -733,7 +733,7 @@ Applied to the seven principles:
 | Capability is jagged across tasks, and the jaggedness tracks verifiability (2, 11) | Reliability inferred from adjacent brilliance | Assume capability is jagged | Use-case testing in the actual workflow, triaged by whether the task is resettable, cheap to attempt and automatically scorable (Step 4, Gate 3; Step 8, Gate 6) | Per-use-case evaluation results and the verifiability assessment behind the test depth | Reviewer, with the AI Owner for use cases carried in the registry |
 | Output is generated, not retrieved, and networks fail silently (1, 6) | Plausible wrongness passes inspection | Design for silent failure | Verification inside the workflow rather than after it (Step 8, Gate 6) | Gate results and sign-offs | Reviewer |
 | Learned behavior is not rule-specified; the core is stochastic (5) | Explanations are demanded that the weights cannot give | Put determinism around probability | Deterministic permissions, thresholds, logging, review and shutdown authority (Steps 10 and 12, Gates 8 and 10) | Decision records: inputs, model, tools, output, review, decision | Approver |
-| Agency accrues without responsibility, the system is not a mind, and consequences bind in the environment (9, 10, 12) | A capable system with no accountable principal | Preserve the human principal | Named ownership with authority to detect, decide, intervene and recover (Step 6, Gate 5; Step 12, Gate 10) | Ownership register and intervention logs | Owner, with the Executive Sponsor at program scale |
+| Agency accrues without responsibility, the system is not a mind and consequences bind in the environment (9, 10, 12) | A capable system with no accountable principal | Preserve the human principal | Named ownership with authority to detect, decide, intervene and recover (Step 6, Gate 5; Step 12, Gate 10) | Ownership register and intervention logs | Owner, with the Executive Sponsor at program scale |
 
 Numbers in the first column refer to the sections of this guide. Step and gate references are to the twelve-step method.
 
@@ -782,13 +782,13 @@ I would approach the curriculum in three passes.
 
 ### The short pass
 
-If you have one hour rather than thirty, read these three in this order. They are short, they are recent, and between them they carry most of what a governance reader needs.
+If you have one hour rather than thirty, read these three in this order. They are short, they are recent and between them they carry most of what a governance reader needs.
 
 1. Verifiability: https://karpathy.bearblog.dev/verifiability/
 2. Vibe coding MenuGen: https://karpathy.bearblog.dev/vibe-coding-menugen/
 3. A Recipe for Training Neural Networks, sections 1 and 2 only: https://karpathy.github.io/2019/04/25/recipe/
 
-*Question: where will this technology be reliable, where will it fail quietly, and how would I know the difference?*
+*Question: where will this technology be reliable, where will it fail quietly and how would I know the difference?*
 
 This is the pass to give an executive, a board member or a new team member. It is also the one to run before a vendor meeting, with one addition: read the march of nines passage in section 10 of this guide on the way into the room.
 
@@ -852,7 +852,7 @@ Two titles are worth noting because they differ from how the works are commonly 
 
 Every quotation in this module was taken from the source named beside it and checked against that source on the date above. Where a phrase is attributed to Karpathy without quotation marks it is a paraphrase, and the source is linked in the same section so the reader can test the paraphrase against the original.
 
-Three biographical statements do not come from the sources above and are marked here rather than left implicit. That he founded Eureka Labs in 2024, that he coined vibe coding in February 2025, and that the phrase was named Collins Dictionary's word of the year for 2025 are taken from press reporting, consistent across independent outlets, and are not load-bearing for any argument in this module. The Collins page was not reachable on the day of the check because the site was running a bot verification screen.
+Three biographical statements do not come from the sources above and are marked here rather than left implicit. That he founded Eureka Labs in 2024, that he coined vibe coding in February 2025 and that the phrase was named Collins Dictionary's word of the year for 2025 are taken from press reporting, consistent across independent outlets, and are not load-bearing for any argument in this module. The Collins page was not reachable on the day of the check because the site was running a bot verification screen.
 
 ---
 

@@ -133,7 +133,7 @@ The ducks did not die of a false sentence. They died of an unmapped system.
 
 A note on the word, because the auditor and the scholar share it at different altitudes. In AI assurance, socio-technical is the working term for exactly this inspection: NIST's AI Risk Management Framework describes AI systems as "inherently socio-technical in nature," influenced by societal dynamics and human behavior, and an audit worth the name examines the workflows, the training, the incentives and the human-in-the-loop structure around the model, not the code alone. The scholarly literature uses the same word one level up, for whole societies of ponds: socio-technical systems, regimes and transitions, the study of how a technology and a society remake each other. A variant, socio-technological, sometimes appears in the societal register, but I can find no settled division of labor between the suffixes, and minting one would be a small decoy of its own. His man notes in passing that fen is an English word and stays home, although wetlands are everywhere. The distinction that matters is not in the suffix. It is in the unit of analysis.
 
-One pond is a deployment. It has an owner, a specification, gates and records that can be audited, and everything in this module and in the method it serves applies there. The fen country is the technology at large: thousands of ponds, the market that makes them worth digging, the practice spreading from county to county, and no single owner anywhere. At that scale governance stops being a specification and becomes law, standards, professional norms and, not least, the private discipline of attention each of us brings to our own feeds. This module works at the scale of the pond. But the fens keep reaching into it: the recommendation engine that chooses what a professional reads before the session opens, the ambient assistants of Section IV, the customs one industry imports from another. The disciplines below are built to notice fen-scale forces when they arrive at pond scale, which, as Section XII will confess, is exactly how this essay began.
+One pond is a deployment. It has an owner, a specification, gates and records that can be audited, and everything in this module and in the method it serves applies there. The fen country is the technology at large: thousands of ponds, the market that makes them worth digging, the practice spreading from county to county and no single owner anywhere. At that scale governance stops being a specification and becomes law, standards, professional norms and, not least, the private discipline of attention each of us brings to our own feeds. This module works at the scale of the pond. But the fens keep reaching into it: the recommendation engine that chooses what a professional reads before the session opens, the ambient assistants of Section IV, the customs one industry imports from another. The disciplines below are built to notice fen-scale forces when they arrive at pond scale, which, as Section XII will confess, is exactly how this essay began.
 
 So for consequential AI the question is never only what the model said. It is also what the system around it will do with the saying.
 
@@ -187,7 +187,7 @@ If AI increasingly participates in constructing those categories, then governing
 
 ## VI. Cognitive Provenance
 
-We already understand the importance of provenance in information systems. Where did this data come from, who collected it, has it been altered, what is the authoritative source, and can we trace the conclusion back to evidence? AI adds another provenance problem. Not merely the provenance of information.
+We already understand the importance of provenance in information systems. Where did this data come from, who collected it, has it been altered, what is the authoritative source and can we trace the conclusion back to evidence? AI adds another provenance problem. Not merely the provenance of information.
 
 The provenance of thought.
 
@@ -253,7 +253,7 @@ The decision does not have to.
 
 Eventually, however, the recursive loop must end. Something must happen in the world. A contract is signed and money moves. A person is hired, a transaction closes, a product launches, a system is deployed. A claim is made; someone is denied something; someone is given something. A decision becomes consequential.
 
-At that point, someone must be able to step outside the human-machine loop and say: this is the decision, these are the reasons, and I own it.
+At that point, someone must be able to step outside the human-machine loop and say: this is the decision, these are the reasons and I own it.
 
 That is **Final Liability**.
 

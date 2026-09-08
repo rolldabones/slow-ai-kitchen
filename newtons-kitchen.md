@@ -121,7 +121,7 @@ An AI system can exercise delegated agency. It cannot absorb institutional respo
 
 The name is necessary and not sufficient. The owner holds three attributes, all of them: decision rights over the delegation; oversight of the system's material behavior, with access to the evidence needed to exercise judgment; and the power to constrain or terminate the system. A person who is named but holds none of these is a nominee, and nominating one is worse than naming nobody, because it manufactures the appearance of accountability.
 
-Final Liability does not require a human to confirm every machine action. That would remove most of the value of delegation. It requires something more precise. Every material outcome is confirmed by the named owner against criteria defined in advance, with three lawful outcomes (confirm, refuse, or amend and confirm), each with a record and no fourth. And accountability, once attached, holds for as long as the organization or anyone else relies on the output, which is usually far longer than the project that produced it.
+Final Liability does not require a human to confirm every machine action. That would remove most of the value of delegation. It requires something more precise. Every material outcome is confirmed by the named owner against criteria defined in advance, with three lawful outcomes (confirm, refuse or amend and confirm), each with a record and no fourth. And accountability, once attached, holds for as long as the organization or anyone else relies on the output, which is usually far longer than the project that produced it.
 
 The motion ends. The reliance does not, and the accountability runs with the reliance.
 

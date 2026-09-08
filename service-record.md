@@ -14,7 +14,7 @@ Service (the dish) · Date of release · Tier · Named owner · Reviewer and app
 Which steps, and why. "Time" is an answer; record it as such.
 
 ## 2. Gates argued
-Which gate, what the disagreement was, how it resolved: confirm, refuse, or amend and confirm. There is no fourth outcome.
+Which gate, what the disagreement was, how it resolved: confirm, refuse or amend and confirm. There is no fourth outcome.
 
 ## 3. What the owner would not sign
 The output, clause or claim refused at Gate 7, and what changed so that it could be signed, or the record that it was not released.
@@ -23,7 +23,7 @@ The output, clause or claim refused at Gate 7, and what changed so that it could
 A proposed fold, in Origami terms: which step or gate, what wording, why. Or "nothing", which is a finding too. Carried to the repository CHANGELOG or declined at the next method review.
 
 ## 5. The judgment
-Two or three sentences, dated and initialed by the owner: what was known at the time, what was done, and why that was enough. Written for the reader who arrives after the fact with a standard that did not exist today.
+Two or three sentences, dated and initialed by the owner: what was known at the time, what was done and why that was enough. Written for the reader who arrives after the fact with a standard that did not exist today.
 
 ## 6. Carry-forward
 One line for the next service.

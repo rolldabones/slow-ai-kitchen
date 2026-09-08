@@ -2,6 +2,18 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.9.1 (2026-09-08)
+
+A style correction. Twenty-three serial commas are removed from the author's own prose across nine module files. No instrument changes, so patch.
+
+- ~~"Client capitalized, no Oxford commas, no em dashes, completion spaces rendered as escaped underscore lines so that GitHub does not read them as horizontal rules, sheet headings navigable in the browser."~~ **STRUCK**, as to the words "no Oxford commas" only. The v2.8.0 bullet **House style applied in conversion** asserted that the house style was applied to `consultant-workbook.md` in its conversion. It was not applied completely. `consultant-workbook.md` line 746 carried a serial comma on the day that assertion shipped, and carried it through v2.8.0 and v2.9.0. The rest of that bullet is unaffected and stands. The v2.8.0 entry is left as written rather than rewritten, per the repository rule that prior versions are superseded and never silently overwritten.
+- **The three lawful outcomes of Gate 7 carried the comma in every file that states them, and the defect was recorded as one instance.** `consultant-workbook.md` line 746, `service-record.md` line 17 and `newtons-kitchen.md` line 124 all read "confirm, refuse, or amend and confirm" and now read "confirm, refuse or amend and confirm". Only the first was registered. The formula is doctrinal and appears nowhere else in the repository in either form, so the three are corrected together and the statement of the three outcomes is now identical wherever it is made.
+- **Twenty further corrections in the author's own prose**, each the removal of one comma and nothing else: `karpathys-kitchen.md` ten, `coetzees-kitchen.md` three, `service-record.md` one, `federal-workforce-literacy-bridge.md` two and one each in `README.md`, `restaurant-resources.md` and `take-out-delivery-and-vending-machines.md`. Every changed line was verified to differ from its predecessor by exactly one deleted comma and by no other byte.
+- **Four categories carry a serial comma and are deliberately unchanged**, because none of them is the author's own prose in the sense the house style governs. Direct quotations, including Defoe at `coetzees-kitchen.md` line 50 and Karpathy at `karpathys-kitchen.md` line 408, because altering a quotation misquotes its source. `LICENSE`, which carries the canonical Creative Commons legal code that governs by its own terms. Shipped changelog entries, which are superseded and not rewritten. EU AI Act pinpoint citations, whose commas are the citation form required by the account convention and not a style choice.
+- **The Enterprise AI Architecture Primer and its twenty-four derived parts are unchanged byte for byte**, and the rebuild was verified before the commit. The Primer carries serial commas of the same class in an order of magnitude not proportionate to a patch, and correcting them is registered for a release of its own rather than folded in here.
+- **README and `CITATION.cff` in lockstep.** Version table, How to Cite, current-version pointer and `CITATION.cff` move to v2.9.1.
+- The twelve steps, the ten gates, the three tiers, the workshop, the Your Restaurant addendum, the Primer with its derived parts, the Service Record, the Consultant Workbook and Take-Out, Delivery & Vending Machines are otherwise unchanged byte for byte.
+
 ## v2.9.0 (2026-09-07)
 
 Take-Out, Delivery & Vending Machines joins the repository as a standalone operating companion for AI agents. A new instrument enters the repository, so minor.
