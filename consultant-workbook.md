@@ -1378,7 +1378,7 @@ This file is licensed with the repository under CC BY-NC-SA 4.0; commercial use 
 
 ## Resource navigator for delivery
 
-[Slow AI Kitchen application](https://slow-ai-kitchen.msagent.ai/)
+[Slow AI Kitchen application](https://kitchen.grcskorea.com/)
 
 Use during instruction to navigate steps, roles and risk tiers. Approval of a training exercise does not approve the app for Client data.
 

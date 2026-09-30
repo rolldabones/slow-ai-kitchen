@@ -2,6 +2,15 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.9.2 (2026-09-30)
+
+A link correction. The web application implementing the twelve steps now runs at https://kitchen.grcskorea.com/. No instrument changes, so patch.
+
+- **`README.md`**, How to Use This Repository: application link repointed to https://kitchen.grcskorea.com/.
+- **`consultant-workbook.md`**, Resource navigator for delivery: application link repointed.
+- The prior address, `slow-ai-kitchen.msagent.ai`, is superseded. The v2.1.1 entry that introduced it is shipped history and is unchanged.
+- Title block, Changelog section, How to Cite and `CITATION.cff` move to v2.9.2 in lockstep. No step, gate, tier, role or principle changes.
+
 ## v2.9.1 (2026-09-08)
 
 A style correction. Twenty-three serial commas are removed from the author's own prose across nine module files. No instrument changes, so patch.
