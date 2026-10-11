@@ -2,6 +2,13 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.11.1 (2026-10-11)
+
+A description correction. The web application was rebuilt on 11 October 2026 against README v2.11.0 and now carries most of the repository, not the twelve steps alone. No instrument changes, so patch.
+
+- **`README.md`, How to Use This Repository, the guided-tool entry:** names what the application carries since the rebuild (the twelve steps, the Cookbook, the sample prompts, the Consultant Workbook, the agent companion, the three derivation modules, the federal bridge and the reference resources), states that this repository is the text of record, and states that the application declares the release its text follows and is rebuilt only after a human release. Read from the deployed bundle on 11 October 2026 (KST).
+- Title block, Changelog section, How to Cite and `CITATION.cff` move to v2.11.1 in lockstep. No step, gate, tier, role or principle changes; every other file unchanged byte for byte.
+
 ## v2.11.0 (2026-10-11)
 
 Three additions from the author's LinkedIn posts of 9, 29 and 30 September 2026, and the style and currency corrections to `restaurant-resources.md` prepared the same day. The README and two modules gain content, so minor. No gate is added or removed; no step, tier, role or principle changes.
