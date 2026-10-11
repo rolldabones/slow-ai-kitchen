@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.1.0 | 2026-10-11 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license-and-attribution)) |
+| v1.2.0 | 2026-10-11 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license-and-attribution)) |
 
 **For:** consultants and Client delivery teams running a 30-day initial engagement on one priority workflow for a named business owner. The canonical method is the [README](./README.md); this workbook adds a delivery sequence, working records, measurement rules and a fictional teaching case.
 
@@ -1089,6 +1089,7 @@ Tool __________  Workflow __________  Task risk tier __________  Operating tier 
 | Verify sources and detect material errors | ________________________ | ________ |
 | Refuse, pause and escalate appropriately | ________________________ | ________ |
 | Retain evidence and explain responsibility | ________________________ | ________ |
+| Explain the work to a prepared listener, without the model: what was done, how, why, what was tried and rejected | ________________________ | ________ |
 
 **Remediation or restrictions**
 

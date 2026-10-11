@@ -6,7 +6,7 @@
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.1.0 | 2026-10-11 (KST) | Final manuscript | CC BY-NC-SA 4.0 |
+| v1.2.0 | 2026-10-11 (KST) | Final manuscript | CC BY-NC-SA 4.0 |
 
 ## Contents
 
@@ -154,7 +154,7 @@ Evidence location, access, retention and Service Record deadline:
 
 Under [Informed Intent](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#2-informed-intent), the authorizer must have **Knowledge, Evidence, Authority, Time and Permission**: understanding of the specific action; evidence of tests, residual risk, dissent and alternatives; current institutional authority; time to consider; and freedom to decline without retaliation. A filled form does not establish those conditions by itself.
 
-Set materiality in advance with regard to affected people and cumulative consequences. Record unresolved limits as unresolved. They grant no additional permission.
+Set materiality in advance with regard to affected people and cumulative consequences. Set limits on counts, not rates: a tenfold better error rate at a hundredfold volume is ten times the errors, and each one is a wrong payment, a false denial or a changed record. A grant may authorize a bounded first batch and count its errors before it is extended. Record unresolved limits as unresolved. They grant no additional permission.
 
 ---
 
@@ -316,7 +316,7 @@ Take-out governs what a human collects. Delivery governs what the system carries
 
 ## Source basis and attribution
 
-Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST). Revised at v1.1.0 against README v2.10.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.10.0) and DOCTRINE.md v1.1.1, 11 October 2026 (KST).
+Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST). Revised at v1.1.0 against README v2.10.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.10.0) and at v1.2.0 against README v2.11.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.11.0) and DOCTRINE.md v1.1.1, 11 October 2026 (KST).
 
 On goal-directed runs: OpenAI, *Using Goals in Codex*, 9 May 2026, https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex, read 11 October 2026 (KST), which describes a goal as a "scoped, user-controlled completion contract", lists six things the strongest goals define, among them boundaries and a blocked stop condition, and states that reaching a budget limit is not the same as completing the objective.
 

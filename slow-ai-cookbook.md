@@ -36,6 +36,34 @@ Each recipe carries a tier. Tier 1 is low-stakes work where a quick human check 
 
 ---
 
+## The One Sheet
+
+Before the first recipe, and before the first prompt. If you prompt before you have decided what you want, the first draft decides for you.
+
+Take a sheet of A4 paper. Fold it in half, then again at right angles. Open it flat: four boxes on each side. On the front, leave a strip along the bottom for the authorization. At the top, name who can authorize the AI's work and who owns the outcome; they may be the same person.
+
+The four boxes on the front are fields 1 to 4 of the card, Steps 1 to 4 of the Kitchen. AI enters at Step 5.
+
+1. The Dish. What am I trying to achieve, for whom and why? The decision supported, the deadline, the scope and the constraints.
+2. Done Means. Three to seven observable pass/fail checks: what the result must achieve, what evidence must support it, how it will be verified.
+3. Prep by Hand. Read, reason, calculate or sketch. Record the first view, the assumptions and the uncertainties.
+4. Watch For. Where the work will be used, who could be affected, what could go wrong, when the work should stop or be escalated.
+
+Before AI enters, complete the strip:
+
+AI may: ___
+Within these limits: ___
+Stop or return control when: ___
+Authorized by: ___ Date: ___
+
+The strip is Informed Intent on paper: purpose, authority, boundaries and exit, settled before action. The authorizer must understand the work, have the evidence and the authority, have time to consider it and be free to say no.
+
+On the reverse, the other four fields: Bring in AI, Who Signs, Plate and Taste, Serve. Together the two sides are the card.
+
+Paper is the cheapest place to discover that you have not yet decided what you want.
+
+---
+
 ## Recipe 1: Client Advisory
 
 **Tier 2. Capabilities: long context, file upload.**
