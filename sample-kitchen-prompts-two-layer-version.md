@@ -6,6 +6,7 @@ It does not implement the full Feast gate architecture (Gates 8–10), the briga
 Gate depth is uniform across all task types; practitioners should apply judgment to abbreviate controls for Tier 1 (low-stakes) work. 
 Step 7 (Analyze) and Step 1 (Task Frame) are treated as gated steps; the full method designates both as non-gated.
 The method file extensions covering multi-jurisdiction protocol, framework conflict, AI/privacy/cyber/audit special rules and structured formats are additions to the README methodology, not departures from it.
+The Verification gate in this prompt is performed by the model on its own output. It is a completeness check against the Definition of Done and is not Gate 6, which the README assigns to the human Reviewer.
 
 -----
 

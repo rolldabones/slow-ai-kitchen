@@ -5,6 +5,7 @@ This prompt implements Steps 1–9 of the Slow AI Kitchen method (the Kitchen).
 It does not cover organizational deployment (Steps 10–12, the Feast), the Restaurant addendum or the three-tier risk model.
 Gate depth is uniform across all task types; practitioners should apply judgment to abbreviate controls for Tier 1 (low-stakes) work.
 For organizational AI deployment governance, use the full method.
+The verification step in this prompt (step 8, VERIFY) is performed by the model on its own output. It is a completeness check against the Definition of Done and is not Gate 6, which the README assigns to the human Reviewer.
 
 -----
 

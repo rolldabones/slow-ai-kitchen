@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea | former General Counsel, BABL AI
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.0 | 2026-09-06 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license-and-attribution)) |
+| v1.1.0 | 2026-10-11 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license-and-attribution)) |
 
 **For:** consultants and Client delivery teams running a 30-day initial engagement on one priority workflow for a named business owner. The canonical method is the [README](./README.md); this workbook adds a delivery sequence, working records, measurement rules and a fictional teaching case.
 
@@ -816,7 +816,7 @@ Define unit of work, population, case mix, periods, operators, sample size and a
 
 **Definitions to settle before measurement**
 
-Active effort is total human minutes across all participants, including preparation, prompting, review, correction, re-review, approval and fallback. Elapsed turnaround includes waiting and queues. Record them separately; parallel reviewers add human effort without necessarily adding elapsed time.
+Active effort is total human minutes across all participants, including preparation, prompting, review, correction, re-review, approval and fallback. Elapsed turnaround includes waiting and queues. It ends at the recorded human release decision under Gate 7 (W13), not at the first draft. Record them separately; parallel reviewers add human effort without necessarily adding elapsed time.
 
 First-pass acceptance measures quality before substantive correction. Final acceptance measures the released version after correction. Record material defects, omissions, unsupported claims, refusals and control failures, including failed or abandoned attempts.
 

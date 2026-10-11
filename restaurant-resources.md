@@ -1,6 +1,6 @@
 # Reference Resources for the Restaurant
 
-> **Regulatory currency:** the legal and standards claims in this file were verified against primary and official sources on 14 July 2026 (KST), except where a status note below carries a later date. The EU entry was updated on 13 August 2026 (KST); the Korea and NIST entries were re-verified on 17 August 2026 (KST). Each status note carries its own verification date and controls over this line. Verify again before relying on this file in client-facing or regulatory submissions.
+> **Regulatory currency:** the legal and standards claims in this file were verified against primary and official sources on 14 July 2026 (KST), except where a status note below carries a later date. The EU entry was updated on 13 August 2026 (KST); the Korea and NIST entries were re-verified on 17 August 2026 (KST); the Singapore entry was added on 11 October 2026 (KST). Each status note carries its own verification date and controls over this line. Verify again before relying on this file in client-facing or regulatory submissions.
 
 ---
 
@@ -167,6 +167,42 @@ The OECD's definition of an AI system and its lifecycle are the definitional fou
 
 OECD AI Principles overview: `https://oecd.ai/en/ai-principles`
 Full Recommendation text: `https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449`
+
+---
+
+## Supervisory Guidance
+
+Guidance issued by a financial regulator under its supervisory powers. It is not primary law. It states the expectations the regulator supervises against for the institutions it licenses, and it sits below the instruments above and beside the NIST layer in authority.
+
+---
+
+### Singapore: MAS Guidelines on AI Risk Management
+
+**Guidelines on Artificial Intelligence Risk Management**, Monetary Authority of Singapore (MAS), issued 7 October 2026. Published on mas.gov.sg under the title *Guidelines on Artificial Intelligence Risk Management for Financial Institutions*. Supervisory guidelines for MAS-regulated financial institutions, applied in proportion to size and risk profile (para 2.1). They take effect on 7 October 2027; Sections 3 and 4 may be met from that date and Sections 5 and 6 by 7 October 2028 (para 1.8).
+
+Section 4 requires an institution to identify AI use across the business, including AI embedded in material third-party services (para 4.2), to keep an AI inventory (paras 4.5 to 4.9) and to assess the risk materiality of each use case on impact, complexity and reliance, applying controls proportionate to the rating (paras 4.10 to 4.13). Section 6 makes the competence and capacity of the people who develop, deploy and use AI a supervisory expectation (paras 6.1 and 6.2), with adequate technology infrastructure (para 6.3). The institution retains primary accountability for its use of third-party AI (para 5.11); the board is to understand AI well enough to provide oversight and challenge (para 3.4(d)); local senior management remains accountable where a group framework is adopted (para 3.6).
+
+**The minimum set, paragraph 2.5.** Where poor performance or unavailability of an AI tool is unlikely to have a material adverse impact on the institution, its customers or other stakeholders (para 2.3; the examples in para 2.4 include drafting, summarizing and initial document review for internal reference and chatbots that locate internal resources, with footnote 13 expecting human review of outputs before use), basic AI governance policies and procedures should minimally include: (a) clear accountability for AI oversight, such as a designated member of senior management; (b) permitted and prohibited uses of AI, together with effective human oversight, including when human review and validation of outputs before use is mandatory; (c) an approved list of AI tools and a defined process for approving new ones; (d) staff education on the AI policies; (e) regular compliance checks; and (f) periodic and trigger-based review of whether the use still meets the para 2.3 criteria.
+
+Read against the Feast (the author's mapping, not anything MAS states): (a) is the AI Owner and Executive Sponsor named at Step 10, Gate 8; (b) and (c) are the deployment policy and the authorized tool registry of Step 10, Gate 8, with the human review of outputs carried by the Tier Application Map; (d) is Step 11, Gate 9, the competency and authorization record; (e) and (f) are Step 12, Gate 10, the operational audit and review cycle and the revised registry.
+
+Author's view: for practical guidance, Singapore is the benchmark for AI governance, risk management and compliance in Asia-Pacific.
+
+Guidelines page: `https://www.mas.gov.sg/regulation/guidelines/guidelines-on-artificial-intelligence-risk-management-for-financial-institutions`
+
+The nine sources linked in the Guidelines' footnotes, each read and resolving on 11 October 2026 (KST). Footnote 3 also names, without links, the Cyber Security Agency of Singapore's Guidelines and Companion Guide on Securing AI Systems, IMDA's Model AI Governance Framework and the AI Verify Foundation.
+
+MAS, Principles to Promote Fairness, Ethics, Accountability and Transparency (FEAT) (fn 2, 35): `https://www.mas.gov.sg/publications/monographs-or-information-paper/2018/feat`
+MAS, Cyber Risks Associated with Generative Artificial Intelligence, MAS/TCRS/2024/05 (fn 9): `https://www.mas.gov.sg/regulation/circulars/cyber-risks-associated-with-generative-artificial-intelligence`
+MAS, Guidelines on Risk Management Practices, Technology Risk (fn 47, 50): `https://www.mas.gov.sg/regulation/guidelines/technology-risk-management-guidelines`
+PDPC, Advisory Guidelines on use of Personal Data in AI Recommendation and Decision Systems (fn 30): `https://www.pdpc.gov.sg/organisations/regulations-decisions/regulatory-guidance/advisory-guidelines-on-use-of-personal-data-in-ai-recommendation-and-decision-systems`
+PDPC, Advisory Guidelines on use of Personal Data in Generative AI (fn 30): `https://www.pdpc.gov.sg/organisations/regulations-decisions/regulatory-guidance/advisory-guidelines-on-use-of-personal-data-in-generative-ai`
+IMDA, Model AI Governance Framework for Agentic AI (fn 11): `https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf`
+IMDA, Transparency Guidelines for Generative AI Chatbots (fn 34): `https://www.imda.gov.sg/-/media/imda/file/emerging-technologies-and-research/artificial-intelligence/transparency-guidelines-for-generative-ai-chatbots.pdf`
+IMDA, Starter Kit for Testing LLM-Based Applications for Safety and Reliability (fn 43, 46): `https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/large-language-model-starter-kit.pdf`
+NIST, AI Risk Management Framework, AI 100-1 (fn 31, 51): `https://doi.org/10.6028/NIST.AI.100-1`
+
+> **Status note (11 October 2026, KST):** Verified against the Guidelines PDF linked from the MAS page above, 30 pages, dated 7 October 2026 on every page. Not yet in effect; the first compliance date is 7 October 2027. MAS states that the Guidelines will be updated or augmented as necessary (para 1.12).
 
 ---
 

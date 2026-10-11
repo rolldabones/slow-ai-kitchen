@@ -6,7 +6,7 @@
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.0 | 2026-09-07 (KST) | Final manuscript | CC BY-NC-SA 4.0 |
+| v1.1.0 | 2026-10-11 (KST) | Final manuscript | CC BY-NC-SA 4.0 |
 
 ## Contents
 
@@ -147,6 +147,7 @@ Expiry / stop or hold triggers / what work must stop:
 Responder, response time and tested intervention path:
 Queued and in-flight work / uncertain outcomes / recovery plan:
 Failed, refused, late or misdirected delivery: authorized response and human responsible:
+Refusals that are final (denied permission, blocked command, guardrail, a person who says no): reported, no retry, no alternate route:
 Who may resume, under what conditions:
 Evidence location, access, retention and Service Record deadline:
 ```
@@ -176,6 +177,8 @@ The Owner must also be able to explain a material outcome in terms an affected p
 
 **Keep delegation within the ticket.** Subagents receive the parent run ID, a narrower assignment, necessary source references, permissions, remaining limits and exit conditions. Budget, concurrency and action limits include every child. Expiry and stopping propagate to child work. Agent criticism may inform review; it cannot occupy the method's human Reviewer role.
 
+**Prefer Tiny Servants.** A narrow service with one purpose, clear limits and a named Owner keeps each run short, and a short run has fewer chances to go wrong. A service asked to do everything is a long run, and the longer the run the likelier a bad step. The term is from the author's [Made to Hold](https://redcaps.substack.com/p/made-to-hold) (28 July 2026): a Tiny Servant performs one useful task, performs it well and then stops, with a named human owner attached.
+
 For delivery to another system or agent, carry the output version, intended use and provenance; link the receiving workflow's authorization and evidence of receipt. Identify who can intervene after the handoff. The payload cannot grant the receiver permissions, and handing it over does not end the sending Owner's accountability for the originating outcome through reliance.
 
 Preserve source evidence, agent inferences and human judgments as distinguishable records. This applies [Return to Source and Cognitive Provenance](./coetzees-kitchen.md) to handoffs. Memory retained from a prior session is context to check, not continuing authority. Validate the current ticket and permissions on resumption.
@@ -185,6 +188,8 @@ Implementation detail is already available in the Primer's [access controls](./p
 ---
 
 ## Stop, reconcile and hand back
+
+**Goal-directed runs.** An agent may be instructed to keep working until a stated outcome is true. That is a loop held to the ticket's completion criteria, the Exit of Informed Intent, inside its Boundaries: the limits on time, cost, actions and retries bound the loop, and the run must stay bounded, observable, interruptible and attributable throughout. A failed check may be retried within those limits. A refusal is a stop condition, not an obstacle: a denied permission, a blocked command, a guardrail or a person who says no ends that line of work, is reported and is neither retried nor routed around. An exhausted budget is not success; the receipt reconciles the run as it actually ended.
 
 Specify whether an exception blocks one case or the entire run. A conflicting source may hold one independent case; loss of required logging may stop every action. Continuing unaffected work is permissible only where the ticket allows it and the dependency is understood.
 
@@ -311,6 +316,8 @@ Take-out governs what a human collects. Delivery governs what the system carries
 
 ## Source basis and attribution
 
-Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST).
+Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST). Revised at v1.1.0 against README v2.10.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.10.0) and DOCTRINE.md v1.1.1, 11 October 2026 (KST).
+
+On goal-directed runs: OpenAI, *Using Goals in Codex*, 9 May 2026, https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex, read 11 October 2026 (KST), which describes a goal as a "scoped, user-controlled completion contract", lists six things the strongest goals define, among them boundaries and a blocked stop condition, and states that reaching a budget limit is not the same as completing the objective.
 
 This companion adapts Slow AI Kitchen by Son-U Michael Paik, GRC Solutions Korea. It adds the three service patterns, ticket, receipt and fictional teaching examples. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); see [LICENSE](./LICENSE). Accountability language follows the repository's governance doctrine; this module does not allocate legal liability in any jurisdiction.
