@@ -5,7 +5,7 @@
 *A standalone add-on module to Slow AI Kitchen, for readers who want the epistemics of the working session rather than only the mechanics of deployment. Karpathy's Kitchen derives the method from what the technology is. Newton's Kitchen derives it from what the technology is permitted to do. This module derives it from what working with the technology does to the person doing the work.*
 
 **Son-U Michael Paik**
-CEO, GRC Solutions Korea | former General Counsel, BABL AI
+CEO, GRC Solutions Korea
 [www.grcskorea.com](http://www.grcskorea.com)
 
 | Version | Date | Status | License |

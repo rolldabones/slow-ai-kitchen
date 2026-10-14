@@ -5,7 +5,7 @@
 *A standalone add-on module to Slow AI Kitchen, for readers who want Slow AI derived from the technology's actual mechanisms rather than asserted as policy.*
 
 **Son-U Michael Paik**
-CEO, GRC Solutions Korea | former General Counsel, BABL AI
+CEO, GRC Solutions Korea
 [www.grcskorea.com](http://www.grcskorea.com)
 
 | Version | Date | Status | License |

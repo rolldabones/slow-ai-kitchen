@@ -5,7 +5,7 @@
 *A standalone delivery instrument for the Slow AI Kitchen. It changes no step, gate, tier, role or principle.*
 
 **Son-U Michael Paik**
-CEO, GRC Solutions Korea | former General Counsel, BABL AI
+CEO, GRC Solutions Korea
 [www.grcskorea.com](http://www.grcskorea.com)
 
 | Version | Date | Status | License |

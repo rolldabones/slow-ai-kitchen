@@ -5,7 +5,7 @@
 *A standalone add-on module to Slow AI Kitchen, for readers who want the three doctrines derived from the mechanics of consequential action rather than asserted as policy. Karpathy's Kitchen derives the method from what the technology is. This module derives it from what the technology is permitted to do.*
 
 **Son-U Michael Paik**
-CEO, GRC Solutions Korea | former General Counsel, BABL AI
+CEO, GRC Solutions Korea
 [www.grcskorea.com](http://www.grcskorea.com)
 
 | Version | Date | Status | License |

@@ -2,6 +2,15 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v2.11.2 (2026-10-15)
+
+Byline correction, on the author's instruction of 15 October 2026 (KST). No instrument changes, so patch.
+
+- **Credit line, five files** (`README.md`, `consultant-workbook.md`, `karpathys-kitchen.md`, `coetzees-kitchen.md`, `newtons-kitchen.md`): "CEO, GRC Solutions Korea | former General Counsel, BABL AI" now reads "CEO, GRC Solutions Korea". Name, credit line and website link remain a three-line block.
+- **`federal-workforce-literacy-bridge.md`:** the separate byline line "Former General Counsel, BABL AI" is removed, so the block reads name, "CEO, GRC Solutions Korea" and the website link, as in the other modules.
+- **Module mastheads do not move.** A credit-line edit is not a change of substance under the module masthead rule of 11 October 2026. The About the author section, which names the former role in prose, is unchanged. No heading is added, removed or renamed in any file.
+- Title block, Changelog section, How to Cite and `CITATION.cff` move to v2.11.2 in lockstep. `enterprise-ai-architecture-primer.md` and `primer/` are unchanged byte for byte. No step, gate, tier, role or principle changes.
+
 ## v2.11.1 (2026-10-11)
 
 A description correction. The web application was rebuilt on 11 October 2026 against README v2.11.0 and now carries most of the repository, not the twelve steps alone. No instrument changes, so patch.
