@@ -4,7 +4,9 @@
 
 *Integrating the U.S. Department of Labor's AI Literacy Framework*
 
-**A standalone add-on module for organizations aligning governed AI methodology with federal workforce AI literacy standards.**
+**A standalone add-on module for organizations aligning governed AI methodology with the U.S. Department of Labor's AI Literacy Framework for the public workforce and education systems.**
+
+> **Scope note, 15 October 2026 (KST).** The framework this module maps is addressed, by TEN 07-25's own distribution line, to state workforce agencies, workforce boards, American Job Centers, ETA grantees, community and tribal colleges, apprenticeship agencies, Job Corps centers and state education agencies, and is issued "as a resource for program design" for "the public workforce and education systems". It is a federal framework for the public workforce system, not a literacy standard for the federal workforce. The federal-employee AI literacy duty sits elsewhere, in OMB Memorandum M-25-21 (3 April 2025, implementing Executive Order 14179 of 23 January 2025), which this module does not map; a reader needing that mapping should treat it as out of scope here. The module's title is kept for link stability; its subject is as stated in this note.
 
 **Son-U Michael Paik**
 CEO, GRC Solutions Korea
@@ -12,7 +14,7 @@ CEO, GRC Solutions Korea
 
 **Final Liability rests with the Human.**
 
-> **Regulatory currency:** TEN 07-25 and the DOL AI Literacy Framework were verified live and unamended at `https://www.dol.gov/agencies/eta/advisories/ten-07-25` on 14 July 2026 (KST). The framework remains voluntary guidance, not a regulatory mandate. Verify again before relying on this module in funding applications or compliance documentation.
+> **Regulatory currency:** TEN 07-25 and the DOL AI Literacy Framework were verified live and unamended at `https://www.dol.gov/agencies/eta/advisories/ten-07-25` on 14 July 2026 (KST) and again on 15 October 2026 (KST), when the advisory page read "There are no rescissions or cancelations for this advisory." The framework remains voluntary guidance, not a regulatory mandate. Verify again before relying on this module in funding applications or compliance documentation.
 
 ---
 
@@ -78,7 +80,7 @@ Organizations deploying Slow AI Kitchen in workforce development contexts should
 
 ### 5.2 The Opportunity: Credential Positioning
 
-The DOL framework is voluntary guidance, not a regulatory mandate. But voluntary federal frameworks have a well-documented habit of becoming the benchmark against which funded programs are evaluated. Organizations that can demonstrate alignment between their internal AI governance methodology and the DOL's AI Literacy Framework are better positioned for WIOA funding eligibility, state workforce board partnerships, Registered Apprenticeship integration and employer credibility in regulated sectors.
+The DOL framework is voluntary guidance, not a regulatory mandate. But voluntary federal frameworks have a well-documented habit of becoming the benchmark against which funded programs are evaluated. Organizations that can demonstrate alignment between their internal AI governance methodology and the DOL's AI Literacy Framework are better positioned for ~~WIOA funding eligibility,~~ state workforce board partnerships, Registered Apprenticeship integration and employer credibility in regulated sectors (the funding-eligibility claim is struck 15 October 2026 (KST): the TEN calls the framework "a resource for program design" and ties no eligibility to it).
 
 Slow AI Kitchen, with this module attached, provides that alignment without requiring the organization to adopt a second system. The method's existing architecture already satisfies the DOL's content areas and most of its delivery principles. This module documents the alignment explicitly, so that compliance officers, grant writers and workforce program managers can reference it without reverse-engineering the mapping themselves.
 
@@ -124,7 +126,7 @@ If those conditions are met, the organization can document that its AI governanc
 
 ## 8. Scope Boundaries
 
-This module addresses only the DOL's AI Literacy Framework as issued in TEN 07-25. It does not address the EU AI Act's separate AI literacy obligations under Article 4, which impose a mandatory (not voluntary) requirement on providers and deployers of AI systems to ensure sufficient AI literacy among their personnel. Organizations operating across jurisdictions should treat this module as covering the U.S. federal workforce dimension and should consult the Your Restaurant addendum's Pillar 3 (Regulatory Compliance) for the EU dimension. Korea's AI Basic Act, effective January 22, 2026, together with its Enforcement Decree, introduces its own transparency and operator-obligation requirements; those are outside the scope of this module and are covered by the Korea AI Basic Act entry in restaurant-resources.md and the Your Restaurant addendum's Pillar 3 (Regulatory Compliance).
+This module addresses only the DOL's AI Literacy Framework as issued in TEN 07-25. It does not address the EU AI Act's separate AI literacy duty under Article 4, which ~~impose a mandatory (not voluntary) requirement on providers and deployers of AI systems to ensure sufficient AI literacy among their personnel~~ as amended by Regulation (EU) 2026/1744 requires providers and deployers to "take measures to support the development of AI literacy of their staff" and states that it does not require any specific level of AI literacy of any individual (Article 4(1) as amended, read in the Official Journal text on 15 October 2026 (KST); the pre-Omnibus "ensure" duty described here until that date is struck). The account's canonical statement of the amended Act's timeline is the [EU AI Act currency note](https://github.com/rolldabones/ai-governance-for-boards/blob/main/05-jurisdictions/eu.md#eu-ai-act-currency-note) in ai-governance-for-boards. Organizations operating across jurisdictions should treat this module as covering the U.S. federal workforce dimension and should consult the Your Restaurant addendum's Pillar 3 (Regulatory Compliance) for the EU dimension. Korea's AI Basic Act, effective January 22, 2026, together with its Enforcement Decree, introduces its own transparency and operator-obligation requirements; those are outside the scope of this module and are covered by the Korea AI Basic Act entry in restaurant-resources.md and the Your Restaurant addendum's Pillar 3 (Regulatory Compliance).
 
 This module does not modify any step, gate, role or principle of Slow AI Kitchen. It adds a compliance mapping layer and facilitator guidance. The method remains the method. The module makes visible what was already true: that Slow AI Kitchen, properly followed, produces the competencies the DOL framework describes, because both were built on the same conviction.
 
