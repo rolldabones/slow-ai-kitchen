@@ -10,9 +10,11 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.2.0 | 2026-10-11 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license-and-attribution)) |
+| v1.3.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license-and-attribution)) |
 
 **For:** consultants and Client delivery teams running a 30-day initial engagement on one priority workflow for a named business owner. The canonical method is the [README](./README.md); this workbook adds a delivery sequence, working records, measurement rules and a fictional teaching case.
+
+**Amendment, 17 October 2026 (KST), v1.3.0.** The doctrine paragraph copies the short forms of DOCTRINE.md section 8, so Final Liability carries the canon's three attributes and no others; the resource register is re-verified against the released versions of 17 October 2026 and names the GRC Workbook's release tiering as it states it; seven headings and labels regain the hyphens and commas a conversion stripped. Found by the whole-account review of 15 October 2026 (doc section 8; reviewer report 02, items 17 to 20 and 33). No record, gate or measurement rule changes.
 
 **Final Liability rests with the Human.**
 
@@ -108,7 +110,7 @@ Thirty days is an initial delivery period for the agreed workflow. Integration, 
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-## Thirty day delivery cadence
+## Thirty-day delivery cadence
 
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [GRC Solutions Korea practice](https://library.grcskorea.com/practice)
 
@@ -152,7 +154,7 @@ Canonical Steps 1 to 9 govern a work product. Steps 1 and 7 are production steps
 | 8 Taste Before Service | Gate 6: verify evidence, logic, arithmetic and fitness for use. | W12 and W13 validation |
 | 9 Open the Pass | Gate 7: human confirmation before reliance; review what happened. | W13 release; W18 learning; Service Record (required Tier 3, recommended Tier 2) |
 
-Prior authorization names the accountable human before the system acts. Step 6 confirms task-level ownership; it does not permit an unowned pilot to begin. Humans retain authorship of the Definition of Done and final confirmation. The manual first pass remains human work. The service closes with a [Service Record](./service-record.md), written by the named owner within one day of release; ten records trigger a method review under Step 12.
+Prior authorization names the accountable human before the system acts. Step 6 confirms task-level ownership; it does not permit an unowned pilot to begin. People, not the system, retain authorship of the Definition of Done and final confirmation. The manual first pass remains human work. The service closes with a [Service Record](./service-record.md), written by the named owner within one day of release; ten records trigger a method review under Step 12.
 
 ## Organizational deployment and sustained governance
 
@@ -174,7 +176,7 @@ Use LEARN for context and stakeholders; ALIGN for objectives, tolerances and res
 
 The Kitchen addendum identifies five continuing pillars: Governance Structure, Risk Management Framework, Regulatory Compliance, AI Lifecycle Management and Continuous Improvement. Assign continuing owners and gaps in W24.
 
-Slow AI requires governed, explainable and auditable use. Informed Intent requires prior authorization stating purpose, authority, boundaries and exit, given by a human with the knowledge, evidence, authority, time and permission to give it. Final Liability rests with the Human: every material outcome attaches to a named human owner with decision rights, oversight and the power to intervene, supported by evidence and corrective capacity. The normative statement of the three doctrines is [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md); this workbook adds instruments, not doctrine.
+Slow AI: AI that cannot be governed, explained and audited is not deployed; the three tests are conjunctive, and the doctrine is a precondition, not a speed limit. Informed Intent: no AI system acts without prior authorization stating its purpose, authority, boundaries and exit, given by a human who meets the five authorizer conditions. Final Liability rests with the Human: every material outcome attaches to a named human owner with decision rights, oversight and the power to intervene. The normative statement of the three doctrines is [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md); this workbook adds instruments, not doctrine.
 
 **Existing Client program and policies this work will use**
 
@@ -184,7 +186,7 @@ Slow AI requires governed, explainable and auditable use. Informed Intent requir
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-## Full day workshop agenda
+## Full-day workshop agenda
 
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen)
 
@@ -535,7 +537,7 @@ Record exact source/version, applicability rationale, control ID, mechanism, ope
 
 Separate control design, implementation and operating effectiveness. Mark evidence Requested, Provided, Verified or Not verified in W14. A claim of alignment with a standard is not a certification result.
 
-## W08 Human authored Definition of Done
+## W08 Human-authored Definition of Done
 
 W08   Workflow ID __________   Version/date __________   Status __________
 
@@ -802,7 +804,7 @@ Prepared by __________   Accountable owner __________   Evidence location ______
 
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
-**Hypothesis and pre agreed success thresholds**
+**Hypothesis and pre-agreed success thresholds**
 
 Business owner writes measurable quality, time, effort and control conditions before the pilot.
 
@@ -1171,7 +1173,7 @@ Metric, threshold, alert recipient, response time and evidence. Complete W24A wi
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Next 30 60 and 90 days**
+**Next 30, 60 and 90 days**
 
 Use W24A for actions, resources, acceptance tests and review dates. Broader program gaps remain visible until resolved.
 
@@ -1181,7 +1183,7 @@ Receiving owner/date __________  Access verified by/date __________  Next review
 
 The receiver demonstrates finding the decision pack, operating the review, escalating an issue and using fallback. Retain ongoing authorization expiry and change triggers after the consultant leaves.
 
-## W24A Monitoring and ninety day actions
+## W24A Monitoring and ninety-day actions
 
 W24A   Workflow ID __________   Version/date __________   Status __________
 
@@ -1213,7 +1215,7 @@ Monitoring owner; time budget; retained report/alert; response evidence; last te
 | Days 31 to 60 | ________________________ | ________________________ |
 | Days 61 to 90 | ________________________ | ________________________ |
 
-**Scheduled review meetings and off cycle triggers**
+**Scheduled review meetings and off-cycle triggers**
 
 Actual dates, chair, inputs and decision authority. Include incidents, model/data/purpose changes, scope expansion, legal changes and owner absence.
 
@@ -1356,22 +1358,22 @@ This check closes the consulting delivery. W23 records the organizational use de
 
 ## Resource register and source attribution
 
-The resources below anchor the workbook. Sources are cited by name throughout; versions are pinned here once. Currency note: versions as reviewed on 6 September 2026 (KST). At each engagement, record the adopted versions in the field at the end of this workbook and examine subsequent changes before replacing them.
+The resources below anchor the workbook. Sources are cited by name throughout; versions are pinned here once. Currency note: versions as re-verified on 17 October 2026 (KST) against the released tags; first reviewed 6 September 2026 (KST). At each engagement, record the adopted versions in the field at the end of this workbook and examine subsequent changes before replacing them.
 
 | Resource | Version reviewed | Role in this workbook |
 | --- | --- | --- |
 | [Slow AI Kitchen](./README.md) (this repository) | Moves with this repository; the README controls | Canonical 12 steps, 10 gates, roles, risk tiers, workshop and the five institutional pillars |
 | [Service Record](./service-record.md) (this repository) | Moves with this repository | One-page close-out after Gate 7; required Tier 3, recommended Tier 2, optional Tier 1 |
-| [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) | v1.1.1, 6 September 2026 | Normative statement of Slow AI, Informed Intent (two limbs) and Final Liability |
-| [Definition of Done](https://github.com/rolldabones/definition-of-done) | v1.1.2, 6 September 2026 | Human definition and confirmation of done; four lenses for material factors |
-| [GRC Workbook](https://github.com/rolldabones/grc-workbook) | v4.2.2, 6 September 2026 | Operating cycle, the authorizer's five conditions (Module 10), release tiers 0 to 5, accountability, oversight and continuing governance |
-| [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) | v1.2.6, 6 September 2026 | Assessment design, evidence states (Requested, Provided, Verified, Not verified), testing, monitoring and decision records |
-| [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) | v1.1.5, 6 September 2026 | Artifact ownership, control steps, evidence, systems of record, cadence, testing, exceptions and approval |
-| [GRC method](https://github.com/rolldabones/grc) | v2.2.2, 6 September 2026 | Underlying governance, risk management and compliance operating method and companion resources |
+| [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) | v1.2.0, 17 October 2026 | Normative statement of Slow AI, Informed Intent (two limbs) and Final Liability, with the short forms (section 8) |
+| [Definition of Done](https://github.com/rolldabones/definition-of-done) | v1.2.4, 17 October 2026 | Human definition and confirmation of done; four lenses for material factors |
+| [GRC Workbook](https://github.com/rolldabones/grc-workbook) | v4.3.2, 17 October 2026 | Operating cycle, the authorizer's five conditions (Module 10), release tiering from observation to autonomous operation (recorded here as the operating tier), accountability, oversight and continuing governance |
+| [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) | v1.2.12, 17 October 2026 | Assessment design, evidence states (Requested, Provided, Verified, Not verified), testing, monitoring and decision records |
+| [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) | v1.1.8, 17 October 2026 | Artifact ownership, control steps, evidence, systems of record, cadence, testing, exceptions and approval |
+| [GRC method](https://github.com/rolldabones/grc) | v2.2.4, 17 October 2026 | Underlying governance, risk management and compliance operating method and companion resources |
 
 ### Authorship and production
 
-Son-U Michael Paik, GRC Solutions Korea, is the author of record. The workbook was drafted with AI assistance from the sources above and was reviewed, corrected and authorized by the author before publication, which is the Cognitive Provenance the method asks of any work product (see [coetzees-kitchen.md](./coetzees-kitchen.md)). It adds a 30-day delivery sequence, working forms, measurement rules and a fictional case. It applies the source doctrines without replacing the canonical method; the README controls in any conflict. The markdown file is the file of record; no other format is published.
+Son-U Michael Paik, GRC Solutions Korea, is the author of record. The workbook was drafted with AI assistance from the sources above and was reviewed, corrected and authorized by the author before publication, which Coetzee's Kitchen describes as Cognitive Provenance (see [coetzees-kitchen.md](./coetzees-kitchen.md)). It adds a 30-day delivery sequence, working forms, measurement rules and a fictional case. It applies the source doctrines without replacing the canonical method; the README controls in any conflict. The markdown file is the file of record; no other format is published.
 
 ### License and attribution
 

@@ -10,11 +10,13 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.0 | 2026-08-27 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.1.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
-> **Doctrine.** The three doctrines used here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of mechanics. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls.
+> **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of mechanics. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms).
+
+> **Amendment, 17 October 2026 (KST), v1.1.0.** Law I now names the authorizer's five conditions beside the four elements, and Law III states when the task-level owner is named; the doctrine block takes the uniform form shared by the three derivation modules. Found by the whole-account review of 15 October 2026 (doc section 1; reviewer report 02, items 10, 11 and 32). No law, corollary or property is added or removed.
 
 > **License.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Newton's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0."
 
@@ -76,7 +78,7 @@ This reframes the central question. Instead of asking only how capable the model
 
 ***An agent's default state is rest. It moves only when authorized and only as authorized, and it stops at the exit.***
 
-**Doctrine.** No consequential AI without **Informed Intent**: prior authorization that specifies what the system may do, on whose authority, within what boundaries and with what exit. Four elements, all required ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) §2). Define the trajectory before permitting the motion.
+**Doctrine.** No consequential AI without **Informed Intent**: prior authorization that specifies what the system may do, on whose authority, within what boundaries and with what exit. Four elements, all required. The human who gives the authorization meets five conditions, all required: Knowledge, Evidence, Authority, Time, Permission ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) §2). Define the trajectory before permitting the motion.
 
 Newton's mechanics begins from a state a body keeps unless something acts on it. Governance begins from the same place. Nothing acts on the organization's behalf until authorized, and the authorization is the reference against which every later observation is read. Without it an organization can record what the system did but cannot say whether the system did what was intended, and governance collapses into retrospective explanation.
 
@@ -117,7 +119,7 @@ Slow AI is not a speed limit. It is a precondition, and its three tests are conj
 
 **Doctrine.** No material consequence without **Final Liability**: every material outcome produced by an AI system attaches to a named human owner with decision rights, oversight and the power to intervene ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) §3). There is no such thing as an outcome the model is responsible for.
 
-An AI system can exercise delegated agency. It cannot absorb institutional responsibility, and it cannot be made to. Systems are not liability-bearing entities. For every material domain in which an agent may act there is therefore a named human owner, and the naming happens at specification, as part of the authorization. Naming after the fact is selection of a scapegoat, not allocation of accountability.
+An AI system can exercise delegated agency. It cannot absorb institutional responsibility, and it cannot be made to. Systems are not liability-bearing entities. For every material domain in which an agent may act there is therefore a named human owner, and the naming happens at specification, as part of the authorization: at task level the owner is named in the Step 1 task brief and confirmed at Step 6 (Gate 5), which confirms ownership and does not permit an unowned task to begin. Naming after the fact is selection of a scapegoat, not allocation of accountability.
 
 The name is necessary and not sufficient. The owner holds three attributes, all of them: decision rights over the delegation; oversight of the system's material behavior, with access to the evidence needed to exercise judgment; and the power to constrain or terminate the system. A person who is named but holds none of these is a nominee, and nominating one is worse than naming nobody, because it manufactures the appearance of accountability.
 
@@ -131,7 +133,7 @@ The motion ends. The reliance does not, and the accountability runs with the rel
 
 **Informed Intent → Governed Authority → Observable Action → Final Liability**
 
-Informed Intent establishes where the system is supposed to go. Authority determines how much of the world it can affect. Slow AI governs its movement through that world. Evidence and logs make the trajectory reconstructable. Human gates permit intervention where consequence warrants it. Final Liability names the person who owns the delegation and its material outcomes, from specification, through confirmation, for as long as anyone relies on the result.
+Informed Intent establishes where the system is supposed to go. Authority determines how much of the world it can affect. Slow AI governs its movement through that world. Evidence and logs make the trajectory reconstructable. human gates permit intervention where consequence warrants it. Final Liability names the person who owns the delegation and its material outcomes, from specification, through confirmation, for as long as anyone relies on the result.
 
 **Corollary II. The test.** The purpose of governance is not to eliminate machine motion. It is to make the motion governable. A governed agent is:
 
@@ -181,7 +183,7 @@ The analogy matters less for its vocabulary than for its method, and the method 
 
 Three laws.
 
-**Law I. Intent.** An agent's default state is rest. No consequential AI without Informed Intent: purpose, authority, boundaries and exit, specified before the system moves.
+**Law I. Intent.** An agent's default state is rest. Informed Intent: no AI system acts without prior authorization stating its purpose, authority, boundaries and exit, given by a human who meets the five authorizer conditions.
 
 **Law II. Motion.** What an agent can cause is bounded by its authority and its reach, not by its intelligence. No consequential motion by a system that cannot be governed, explained and audited.
 
@@ -219,8 +221,8 @@ The method this module compresses is the twelve-step Slow AI Kitchen, published 
 
 *AI is a tool in the kitchen, not the chef.*
 
-**Final Liability rests with the Human.**
+*This document is provided for general informational purposes regarding the conceptual foundations of AI governance. It does not constitute legal advice with respect to any specific matter, jurisdiction or engagement.*
 
 ---
 
-*This document is provided for general informational purposes regarding the conceptual foundations of AI governance. It does not constitute legal advice with respect to any specific matter, jurisdiction or engagement.*
+**Final Liability rests with the Human.**

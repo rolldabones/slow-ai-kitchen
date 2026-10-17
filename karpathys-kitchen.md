@@ -10,9 +10,13 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.1 | 2026-08-30 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.1.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
+
+> **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of the technology. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms). GRCnext™ is the account's operating framework, not a doctrine.
+
+> **Amendment, 17 October 2026 (KST), v1.1.0.** The module gains the doctrine block the other two derivation modules carry; the Informed Intent framework connection names the canon's four elements; the five-layer correspondence is mapped to the doctrines that hold each layer; the gate map is corrected to the README's (Steps 1 and 7 are the gateless steps; Step 3 is Gate 2); the closing sentence no longer counts GRCnext™ among the doctrines; the ecosystem map row of the Link Register is re-checked. Found by the whole-account review of 15 October 2026 (doc sections 1 and 8; reviewer report 02, items 1 to 4 and 7). No derivation, quotation or source is added or removed.
 
 > **Attribution and independence.** This module is an independent reading of Andrej Karpathy's published work. He has no involvement in it, has not reviewed it and does not endorse it. The governance conclusions drawn from his work are the author's own and should not be attributed to him. The title is descriptive of the subject and signals no association, affiliation, sponsorship or endorsement.
 
@@ -190,7 +194,7 @@ It is:
 
 That is the beginning of risk classification.
 
-**Framework connection:** **Informed Intent**. Before deploying the model, define the objective, permitted use, constraints and acceptance criteria.
+**Framework connection:** **Informed Intent**. State the four elements before the model is deployed: purpose, authority, boundaries and exit. Define the acceptance criteria before the work begins (Gate 1).
 
 **Control implication:** Risk-tier the use, not merely the model.
 
@@ -701,13 +705,13 @@ Karpathy's technical worldview can therefore be translated into five governance 
 
 These correspond closely to:
 
-Informed Intent → Slow AI → Govern the Verb → Evidence → Final Liability
+Layers 1 to 3 → Informed Intent · Layer 4, Evidence → Slow AI (audited) · Layer 5, Liability → Final Liability
 
 The sequence is important.
 
 Governance begins before the prompt and ends after the output.
 
-These five layers are not a second structure standing beside the method. They are the method read at a different altitude. Intent is Step 1 and Step 2 (Gate 1). Boundary is Step 4 (Gate 3) and Step 5 (Gate 4). Authority is Step 6 (Gate 5) at task level and Steps 10 and 11 (Gates 8 and 9) at organizational level. Evidence is Step 8 (Gate 6). Liability is Step 9 (Gate 7) and Step 12 (Gate 10). Steps 3 and 7 do not appear here because they are production work rather than governance layers, which is why the method marks them as the two steps without a gate.
+These five layers are not a second structure standing beside the method. They are the method read at a different altitude. Intent is Step 1 and Step 2 (Gate 1). Boundary is Step 4 (Gate 3) and Step 5 (Gate 4). Authority is Step 6 (Gate 5) at task level and Steps 10 and 11 (Gates 8 and 9) at organizational level. Evidence is Step 3 (Gate 2), the human baseline, and Step 8 (Gate 6), which verifies against it. Liability is Step 9 (Gate 7) and Step 12 (Gate 10). Step 7 does not appear here because it is production work rather than a governance layer; with Step 1 it is one of the two steps the method marks as having no gate.
 
 ---
 
@@ -843,7 +847,7 @@ Every external link in this module was opened in a browser on 24 August 2026 (KS
 | youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ | 7, Master Resources | Neural Networks: Zero to Hero playlist |
 | youtube.com/@AndrejKarpathy | Master Resources | Andrej Karpathy channel |
 | grcskorea.com | Masthead | GRC Solutions Korea |
-| github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md | Closing | The ecosystem map, v1.7.7 |
+| github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md | Closing | The ecosystem map, v1.7.28 (re-checked 17 October 2026, KST) |
 | karpathy.ai/stateofgpt.pdf | 3 | **Does not resolve** |
 
 **The one failure.** Karpathy's own site links a slide deck at `karpathy.ai/stateofgpt.pdf` beside the State of GPT talk. Requesting that address returns the karpathy.ai home page as HTML rather than a PDF, which is what a static site does when it serves its index in place of a missing file. This was confirmed in a browser, not inferred from a failed fetch. The talk is unaffected and the deck is not cited in this module. If you find a working copy, the citation can be restored.
@@ -892,14 +896,14 @@ That is where Karpathy's engineering and AI governance meet.
 
 The model may remain probabilistic. Governance cannot afford to be.
 
-The method this module derives is the twelve-step Slow AI Kitchen, published in the [repository README](./README.md). The doctrines referenced throughout, Slow AI, Informed Intent, Final Liability and GRCnext™, are maintained and mapped in [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md).
+The method this module derives is the twelve-step Slow AI Kitchen, published in the [repository README](./README.md). The doctrines referenced throughout, Slow AI, Informed Intent and Final Liability, are stated in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md); GRCnext™, the operating framework, and the repositories are mapped in [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md).
 
 ---
 
 *AI is a tool in the kitchen, not the chef.*
 
-**Final Liability rests with the Human.**
+*This document is provided for general informational purposes regarding the technical foundations of AI governance. It does not constitute legal advice with respect to any specific matter, jurisdiction or engagement.*
 
 ---
 
-*This document is provided for general informational purposes regarding the technical foundations of AI governance. It does not constitute legal advice with respect to any specific matter, jurisdiction or engagement.*
+**Final Liability rests with the Human.**

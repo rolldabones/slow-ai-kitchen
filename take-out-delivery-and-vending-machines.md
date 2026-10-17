@@ -6,7 +6,7 @@
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.2.0 | 2026-10-11 (KST) | Final manuscript | CC BY-NC-SA 4.0 |
+| v1.2.0 | 2026-10-11 (KST) | Final | CC BY-NC-SA 4.0 |
 
 ## Contents
 
@@ -248,7 +248,7 @@ The fictional service is assumed to provide mailbox-arrival evidence; acceptance
 
 **The completed ticket.**
 
-| Field | Ticket T1, version 1 — Kitchen Tier 3 |
+| Field | Ticket T1, version 1, Kitchen Tier 3 |
 |---|---|
 | Purpose | Investigate C17–C20 against D1; prepare follow-ups. Each proposed customer communication is material. Elena Park records that threshold and its basis in D1. |
 | Authority | Arun Patel, operations director, authorizes the run at 13:35. AUTH1 records current authority and all five Informed Intent conditions. Elena Park is Owner, with oversight and stop power; Jo Kim is AI Operator; Mira Cho is Reviewer; Arun performs second review and is Approver. |
@@ -286,7 +286,7 @@ R1 permits only these recipient-and-message pairs under S1. A changed source ver
 
 **Three approved = one successful + zero confirmed failed + one unknown + one not attempted.**
 
-While Jo investigates M2, C20 uploads Form C and its record becomes v6. S1 no longer permits A3. Its receipt state becomes **not attempted — withdrawn after source change**. The original three approved actions stay in the record; the agent cannot use the old approval. A2 remains held until its state is established. Updates preserve the initial stop record.
+While Jo investigates M2, C20 uploads Form C and its record becomes v6. S1 no longer permits A3. Its receipt state becomes **not attempted: withdrawn after source change**. The original three approved actions stay in the record; the agent cannot use the old approval. A2 remains held until its state is established. Updates preserve the initial stop record.
 
 At 14:07 Elena **refuses confirmation of the batch as complete** against D1, records A1's verified result and assigns Jo the unresolved A2 investigation, due for escalation by 14:20. Jo may investigate M2; switching to a personal address or another channel requires new authority. RC1 retains the decision and the open follow-up. The Service Record captures the effective stop and the incomplete delivery result separately. A successful intervention does not make an unfinished task complete.
 
@@ -310,8 +310,6 @@ Size concurrent work to the team's capacity to inspect exceptions and intervene.
 
 Take-out governs what a human collects. Delivery governs what the system carries onward. Vending machines extend that discipline to repeated use at a distance. In every case, the service must remain bounded, the result must be checked and a named human must own its consequences.
 
-**Final Liability rests with the Human.**
-
 ---
 
 ## Source basis and attribution
@@ -321,3 +319,7 @@ Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.c
 On goal-directed runs: OpenAI, *Using Goals in Codex*, 9 May 2026, https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex, read 11 October 2026 (KST), which describes a goal as a "scoped, user-controlled completion contract", lists six things the strongest goals define, among them boundaries and a blocked stop condition, and states that reaching a budget limit is not the same as completing the objective.
 
 This companion adapts Slow AI Kitchen by Son-U Michael Paik, GRC Solutions Korea. It adds the three service patterns, ticket, receipt and fictional teaching examples. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); see [LICENSE](./LICENSE). Accountability language follows the repository's governance doctrine; this module does not allocate legal liability in any jurisdiction.
+
+---
+
+**Final Liability rests with the Human.**

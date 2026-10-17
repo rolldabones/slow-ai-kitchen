@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.11.3 | 2026-10-15 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.12.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -59,7 +59,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A team lead or trainer.** Run [The Workshop](#the-workshop). Load one of the sample kitchen prompts as the operating prompt for the exercise.
 
-**A function or program owner.** Read [The Feast](#the-feast) and [Your Restaurant](#addendum-your-restaurant), then start the tool registry at Step 10. The [restaurant resources](./restaurant-resources.md) file collects the referenced standards. The [federal workforce literacy bridge](./federal-workforce-literacy-bridge.md) aligns the method with the U.S. Department of Labor's AI Literacy Framework for the public workforce and education systems (TEN 07-25).
+**A function or program owner.** Read [The Feast](#the-feast) and [Your Restaurant](#addendum-your-restaurant), then start the tool registry at Step 10. The [restaurant resources](./restaurant-resources.md) file collects the referenced standards. The [workforce AI literacy bridge](./federal-workforce-literacy-bridge.md) aligns the method with the U.S. Department of Labor's AI Literacy Framework for the public workforce and education systems (TEN 07-25).
 
 **A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): the 30-day initial engagement on one priority workflow for a named business owner, with the delivery cadence, twenty-six working records keyed to the steps and gates, measurement rules that count all human effort once and a fictional teaching case that fails expansion on quality while passing on effort. It changes no step, gate, tier, role or principle.
 
@@ -73,7 +73,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A reader who wants the epistemics.** Read [coetzees-kitchen.md](./coetzees-kitchen.md): the working session itself examined through Coetzee's 2003 Nobel lecture, with the report-versus-world problem, the socio-technical warrant for Gate 3 and two disciplines, Return to Source and Cognitive Provenance, that operationalize the doctrines inside the human-AI loop. It changes no step, gate, role or principle.
 
-**Prefer a guided tool.** A web application at https://kitchen.grcskorea.com/ carries the twelve steps and, since 11 October 2026, the Cookbook, the sample prompts, the Consultant Workbook, the agent companion, the three derivation modules, the federal bridge and the reference resources, in English, Korean, Vietnamese and Japanese. This repository is the text of record; the application states the release its text follows and is rebuilt from it only after a human release.
+**Prefer a guided tool.** A web application at https://kitchen.grcskorea.com/ carries the twelve steps and, since 11 October 2026, the Cookbook, the sample prompts, the Consultant Workbook, the agent companion, the three derivation modules, the workforce AI literacy bridge and the reference resources, in English, Korean, Vietnamese and Japanese. This repository is the text of record; the application states the release its text follows and is rebuilt from it only after a human release.
 
 ## Repository Contents
 
@@ -112,7 +112,7 @@ It is called a kitchen because a kitchen is not a theory space. It is a producti
 
 ## Core Principles
 
-Five principles govern the method. They are not aspirational. They are operating constraints.
+Five operating rules follow from that principle and govern the method. They are not aspirational. They are operating constraints.
 
 **1. Think before prompting.** AI should extend thought, not replace the initial act of thinking.
 
@@ -144,13 +144,13 @@ Ten of the twelve steps function as gates: checkpoints that output or deployment
 
 | Step | Register | Name | Gate | Gate Function | Primary Role | Output |
 |---|---|---|---|---|---|---|
-| 1 | Kitchen | Define the Dish | — | Production step | Preparer | Task brief |
+| 1 | Kitchen | Define the Dish | none | Production step | Preparer | Task brief, with the named Owner |
 | 2 | Kitchen | Mise en Place | Gate 1 | Definition of Done | Preparer | DoD checklist |
 | 3 | Kitchen | Knife Work | Gate 2 | Manual First Pass | Preparer | Annotated sources, first-pass draft |
 | 4 | Kitchen | Read the Kitchen | Gate 3 | Socio-Technical Context | Preparer | Context and risk map |
 | 5 | Kitchen | Apply Heat | Gate 4 | Bounded AI Use | Builder | AI-assisted working draft |
-| 6 | Kitchen | Name the Chef de Partie | Gate 5 | Final Liability | Owner (named here) | Accountability record |
-| 7 | Kitchen | Build the Plate | — | Production step | Builder | Versioned deliverable |
+| 6 | Kitchen | Name the Chef de Partie | Gate 5 | Final Liability | Owner (named at Step 1, confirmed here) | Accountability record |
+| 7 | Kitchen | Build the Plate | none | Production step | Builder | Versioned deliverable |
 | 8 | Kitchen | Taste Before Service | Gate 6 | Verification and Validation | Reviewer | Evidence and validation log |
 | 9 | Kitchen | Open the Pass | Gate 7 | Human Release Decision | Approver, Owner | Decision record, post-action review |
 | 10 | Feast | Plan the Menu | Gate 8 | Authorized Tool Registry | Executive Sponsor, AI Owner | Tool registry, deployment policy |
@@ -198,7 +198,7 @@ Tiering adjusts the depth of each gate. It never deletes a gate. These are defau
 
 The method uses two distinct role sets at two different levels. Task roles govern Steps 1 through 9 and apply to individual and team work. Organizational roles govern Steps 10 through 12 and apply to the deployment and oversight of AI tools across functions.
 
-### Task Roles (Steps 1–9)
+### Task Roles (Steps 1 to 9)
 
 | Role | Responsibility |
 |---|---|
@@ -208,7 +208,7 @@ The method uses two distinct role sets at two different levels. Task roles gover
 | Approver | Signs off on consequential use or deployment |
 | Owner | Bears final responsibility for the outcome |
 
-### Organizational Roles (Steps 10–12)
+### Organizational Roles (Steps 10 to 12)
 
 | Role | Responsibility | Task-Level Analogue |
 |---|---|---|
@@ -224,9 +224,9 @@ In a small team, one person may hold multiple task roles. In a larger team, they
 
 ### Step 1: Define the Dish
 
-State the task clearly before work begins. Identify the objective, audience, business use, deadline, constraints and decision to be supported. This prevents the most common failure mode: using AI to compensate for a poorly formed task. This step has no gate function; it is the act of picking up the recipe. The gate that follows it ensures the dish is worth making.
+State the task clearly before work begins. Identify the objective, audience, business use, deadline, constraints and decision to be supported, and name the Owner: the human who will be accountable for the outcome. This prevents the most common failure mode: using AI to compensate for a poorly formed task. This step has no gate function; it is the act of picking up the recipe. The gate that follows it ensures the dish is worth making.
 
-*Output: Task brief.*
+*Output: Task brief, with the named Owner.*
 
 ---
 
@@ -274,7 +274,7 @@ Inappropriate uses: replacing the first pass, substituting for expert review, ma
 
 ### Step 6: Name the Chef de Partie *(Gate 5: Final Liability)*
 
-Before relying on any consequential AI-assisted output, identify the accountable human. The chef de partie is the station chef who owns a specific section of the kitchen and is answerable for everything that leaves it. Name the equivalent here: the decision owner, reviewer, approver and escalation path for this output. If no one owns the outcome, the process stops.
+Before relying on any consequential AI-assisted output, confirm the accountable human named in the task brief at Step 1. The chef de partie is the station chef who owns a specific section of the kitchen and is answerable for everything that leaves it. Confirm the equivalent here: the decision owner named at Step 1, and name the reviewer, approver and escalation path for this output. If no one owns the outcome, the process stops.
 
 This step prevents the standard institutional dodge: "the system said so."
 
@@ -356,7 +356,7 @@ Key requirements: role assignment matrix mapping functions to authorized tools a
 
 A feast that has been planned and staffed still has to be executed. Running the event means coordinating the brigade in real time, managing exceptions as they arise, logging what went wrong and why and conducting a full debrief afterward. Organizational AI governance requires exactly this: not a policy document that lives in a folder, but an active operational layer that monitors, responds, records and revises.
 
-Operational requirements: audit logging for consequential AI-assisted decisions (what tool, what input, what output, what human reviewed it); incident response procedure for AI failures, errors or misuse; periodic review of the tool registry against regulatory developments, new risk disclosures and operational experience; updated training standards as tools change; executive reporting on AI use, incidents and governance health.
+Operational requirements: audit logging for consequential AI-assisted decisions (what tool, what input, what output, what human reviewed it); incident response procedure for AI failures, errors or misuse; periodic review of the tool registry against regulatory developments, new risk disclosures and operational experience; updated training standards as tools change; executive reporting on AI use, incidents and governance health. Ten Service Records trigger a method review under this step.
 
 The event does not end when the last plate goes out. It ends when the debrief is complete, the waste log is filed and the prep list for next service is written. An organization that skips the debrief repeats the same failures under a different tool name.
 
@@ -561,10 +561,12 @@ No method, framework or audit standard removes the obligation to govern. It can 
 
 This method is one component of a larger body of AI governance, risk management and compliance work. The canonical map of all repositories is [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md) in the profile repository.
 
+The three doctrines are used in this repository as stated in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md), the account's single normative statement; where this repository compresses a doctrine, it uses the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms).
+
 Nearest neighbors:
 - [definition-of-done](https://github.com/rolldabones/definition-of-done): the depth companion to Gates 1, 6 and 7
 - [origami-method](https://github.com/rolldabones/origami-method): the workflow-design discipline within this method's larger arc; use it to turn a recurring Kitchen task into a repeatable, gated workflow
-- [grc](https://github.com/rolldabones/grc): the GRCnext™ primitives underneath the Feast and the Restaurant, with the tool registry as a Service inventory, tiers as Tolerances and escalation chains as Switches
+- [grc](https://github.com/rolldabones/grc): the working method on the OCEG spine; the Feast's tool registry, tiers and escalation chains map to the GRCnext™ primitives as a Service inventory, Tolerances and Switches, run as an engine in GRCnext-Copilot
 - [grc-workbook](https://github.com/rolldabones/grc-workbook): the module-by-module instrument for building the permanent governance, risk management and compliance capability the Restaurant addendum describes
 - [the-ai-generalist](https://github.com/rolldabones/the-ai-generalist): the one-day corporate workshop that compresses this method for a general professional audience
 
@@ -572,7 +574,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.11.3. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.12.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -594,7 +596,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.11.3 (2026-10-15)**. Legal currency patch to two companion files, restaurant-resources.md and federal-workforce-literacy-bridge.md: the pre-Omnibus EU timeline sentence struck and re-pointed to the account's canonical note, NIST and AI Standards Hub entries corrected, the bridge re-scoped to the DOL framework for the public workforce system and its Article 4 sentence re-read against the amended text. No step, gate, tier, role or Tier Application Map text changes.
+Current version: **v2.12.0 (2026-10-17)**. Doctrine conformance and mechanical release, session T3 of the whole-account review of 15 October 2026: the Owner is named at Step 1 and confirmed at Step 6 (Gate 5), in the step table, Step 1, Step 6, the Cookbook card, both sample prompts and the Service Record; the three derivation modules carry one doctrine block and the DOCTRINE.md short forms; the bridge is retitled for the framework it maps. Minor, because the step table changes; no gate, tier or role is added or removed.
 
 ---
 

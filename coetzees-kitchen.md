@@ -10,17 +10,19 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.0 | 2026-08-30 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.1.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
-> **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of the working session. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. **Return to Source** and **Cognitive Provenance**, introduced below, are disciplines of this module, not doctrine: they operationalize the doctrines inside the human-AI loop and state no rule of their own.
+> **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of the working session. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms). **Return to Source** and **Cognitive Provenance**, introduced below, are disciplines of this module, not doctrine: they operationalize the doctrines inside the human-AI loop and state no rule of their own.
+
+> **Amendment, 17 October 2026 (KST), v1.1.0.** Section VII gains the question of authority and the authorizer, Final Liability is stated with the canon's three attributes and as governing the whole span rather than exit, and the scope note counts the five gates the disciplines land on. Found by the whole-account review of 15 October 2026 (doc section 1; reviewer report 02, items 12 to 15). No discipline, gate or doctrine is added.
 
 > **License.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Coetzee's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0."
 
 > **Link currency.** This module cites the third-party sources listed under [Sources](#sources). External links were checked on 29 August 2026 (KST). All other links are internal to the account.
 
-**Scope note.** This module does not alter any step, gate, role or principle of the core method. It supplies the epistemic warrant for three of the method's standing gates, verification, context and intent, by naming the problems they answer: the report is not the world, the report lands in a system and the report changes its reader. It borrows two things from Coetzee's lecture: its unresolved question of who is writing whom, and its opening emblem, the decoy ducks of the Lincolnshire fens. It makes no claim to settle the lecture's meaning, and no reading offered here should be attributed to its author. It takes no position on the philosophical status of AI systems; it governs the practical consequences of working with them. It works at the altitude of the single deployment, the pond rather than the fens; the technology's societal scale enters only where it reaches into the session. It assumes no other module and requires none.
+**Scope note.** This module does not alter any step, gate, role or principle of the core method. It supplies the epistemic warrant for five of the method's standing gates (Gates 1, 2, 3, 6 and 7), grouped as verification, context and intent, by naming the problems they answer: the report is not the world, the report lands in a system and the report changes its reader. It borrows two things from Coetzee's lecture: its unresolved question of who is writing whom, and its opening emblem, the decoy ducks of the Lincolnshire fens. It makes no claim to settle the lecture's meaning, and no reading offered here should be attributed to its author. It takes no position on the philosophical status of AI systems; it governs the practical consequences of working with them. It works at the altitude of the single deployment, the pond rather than the fens; the technology's societal scale enters only where it reaches into the session. It assumes no other module and requires none.
 
 ---
 
@@ -227,6 +229,10 @@ What would count as success, and what would cause us to stop?
 
 What requires escalation, and what must remain a human decision?
 
+On whose authority is the work being done, and does the person giving that authority meet the five conditions DOCTRINE.md section 2 sets for an authorizer?
+
+These questions restate the instrument's four elements, purpose, authority, boundaries and exit, at the altitude of the session.
+
 This is not merely good prompting. It is a governance control. If we do not know our intent before entering the recursive human-AI loop, something else can happen: the system we asked to help us achieve an objective can gradually help us determine what the objective was. That is not necessarily improper, since discovery is often the point of intellectual work. But there is a material difference between deliberately revising an objective because new information warrants it and simply drifting into a new objective because the interaction carried us there.
 
 The former is learning. The latter may be loss of control.
@@ -259,7 +265,7 @@ That is **Final Liability**.
 
 **Final Liability rests with the Human.**
 
-Not because humans are always wiser than machines; plainly, we are not. Not because human reasoning is unbiased; it is not. Not because human judgment is somehow pristine; history rather decisively disposes of that proposition. Final Liability rests with the Human because governance ultimately requires a principal who has authority, responsibility and the capacity to intervene in the world where the consequences occur.
+Not because humans are always wiser than machines; plainly, we are not. Not because human reasoning is unbiased; it is not. Not because human judgment is somehow pristine; history rather decisively disposes of that proposition. Final Liability rests with the Human because governance ultimately requires a principal who holds decision rights, oversight and the power to intervene in the world where the consequences occur.
 
 The human cannot discharge that responsibility by pointing backward into the recursive loop and saying that the AI recommended it. That is not accountability. It is an attribution of causation masquerading as one.
 
@@ -269,7 +275,7 @@ Put together, the architecture begins to look quite simple:
 
 **Informed Intent → Slow AI → Final Liability**
 
-Informed Intent governs entry, Slow AI governs the interaction and Final Liability governs exit. And two complementary disciplines run through the whole process. Return to Source protects the connection between representation and reality; Cognitive Provenance protects visibility into how the human-machine interaction shaped the reasoning itself. One looks outward and asks whether this account is sufficiently connected to the world. The other looks inward and asks what this interaction has done to the person making the decision.
+Informed Intent governs entry, Slow AI governs the interaction and Final Liability governs the whole span: the owner was named before the loop opened and remains answerable after it closes. And two complementary disciplines run through the whole process. Return to Source protects the connection between representation and reality; Cognitive Provenance protects visibility into how the human-machine interaction shaped the reasoning itself. One looks outward and asks whether this account is sufficiently connected to the world. The other looks inward and asks what this interaction has done to the person making the decision.
 
 And all of it runs somewhere. Intent is declared, the loop turns and liability is owned inside a socio-technical system, among incentives, workloads and customs the specification never fully captures. The architecture is only as strong as the deployment that carries it, which is why mapping the system is not a preliminary. It is part of the governance.
 

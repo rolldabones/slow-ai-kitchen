@@ -26,11 +26,11 @@ Each recipe carries a tier. Tier 1 is low-stakes work where a quick human check 
 **The card**
 
 1. The Dish. What you are making, for whom and the decision it supports.
-2. Done Means. Three to five pass/fail checks, written before you touch AI.
+2. Done Means. Three to seven pass/fail checks, written before you touch AI.
 3. Prep by Hand. The first pass you do yourself. No AI yet.
 4. Watch For. Where this goes wrong and who is affected if it does.
 5. Bring in AI. What to use it for and what to never hand it.
-6. Who Signs. The named human who owns the output.
+6. Who Signs. The named human who owns the output, named at the top of the sheet before the work began and confirmed here.
 7. Plate and Taste. Build to Done Means, then test against it.
 8. Serve. Release within scope. One line on what you would change next time.
 
@@ -56,7 +56,7 @@ Within these limits: ___
 Stop or return control when: ___
 Authorized by: ___ Date: ___
 
-The strip is Informed Intent on paper: purpose, authority, boundaries and exit, settled before action. The authorizer must understand the work, have the evidence and the authority, have time to consider it and be free to say no.
+The strip is Informed Intent on paper: purpose, authority, boundaries and exit, settled before action. The authorizer meets the five conditions of DOCTRINE.md section 2: Knowledge, Evidence, Authority, Time, Permission.
 
 On the reverse, the other four fields: Bring in AI, Who Signs, Plate and Taste, Serve. Together the two sides are the card.
 
