@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.13.1 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.0.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -77,8 +77,9 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [sample-kitchen-prompts-two-layer-version.md](./sample-kitchen-prompts-two-layer-version.md) | Two-layer operating prompt: Steps 1 through 9 plus abbreviated Feast controls (March 2026) | You want session-level discipline with light deployment controls |
 | [restaurant-resources.md](./restaurant-resources.md) | Reference standards and supervisory guidance for the Restaurant addendum (ISO/IEC 42001, NIST, MAS), with a note on certification versus substance | You are building the program governance layer |
 | [federal-workforce-literacy-bridge.md](./federal-workforce-literacy-bridge.md) | Standalone module aligning the method with the U.S. Department of Labor AI Literacy Framework (TEN 07-25) for the public workforce and education systems | You are aligning training to the DOL framework for state workforce agencies, boards, grantees and colleges |
-| [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion architecture reference across ten competencies, grounded in one vendor's platform; on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
-| [primer/](./primer/README.md) | The Primer in 24 derived parts with a reading index, verified to rebuild the single file byte for byte | You want to read the Primer rather than download it |
+| [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion architecture reference across ten competencies, grounded in one vendor's platform, with its own How to Cite and amendment record; perishable figures in [primer/figures.yaml](./primer/figures.yaml); on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
+| [primer/](./primer/README.md) | The Primer in 21 derived parts with a reading index and a section index, verified to rebuild the single file byte for byte | You want to read the Primer rather than download it |
+| [primer-workbook/](./primer-workbook/README.md) | The Primer's practice set: scenario drills, the self-check bank, twenty-five artifact templates, eighteen diagrams as Mermaid sources and the enterprise vocabulary, each file rendering as it is | You want to practice the Primer or copy an artifact template |
 | [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone module: twelve works by Andrej Karpathy read for what they establish about the technology's limits; an independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
 | [newtons-kitchen.md](./newtons-kitchen.md) | Standalone module: the three doctrines as three laws of consequential motion in the order of the *Principia*; restates DOCTRINE.md and varies nothing | You want the conceptual warrant for the method rather than its assertion |
 | [coetzees-kitchen.md](./coetzees-kitchen.md) | Standalone module: the epistemics of the human-AI working session, read through Coetzee's 2003 Nobel lecture; introduces Return to Source and Cognitive Provenance | You want to understand what working with the machine does to the person doing the work, and why the gates exist |
@@ -569,7 +570,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.13.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.0.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -589,8 +590,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v2.13.1 (2026-10-18)**.
-Front-door trim, session T7 of the whole-account review of 15 October 2026 (KST): shorter wayfinding, the Step 8 evidence note moved to Karpathy's Kitchen, no change to any step, gate, tier, role or rule.
+Current version: **v3.0.0 (2026-10-18)**.
+The Primer split, session T8 of the whole-account review of 15 October 2026 (KST): the Enterprise AI Architecture Primer v2.0.0 with its practice set moved to `primer-workbook/`, its perishable figures in `primer/figures.yaml` and the interview question bank removed; no change to any step, gate, tier, role or rule of the method.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---

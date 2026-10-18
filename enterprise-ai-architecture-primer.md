@@ -1,10 +1,12 @@
-# PRACTICE PRIMER
+# Enterprise AI Architecture Primer
 
 **Son-U Michael Paik** CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 | --- | --- | --- | --- |
-| v1.0.0 | 2026-08-20 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v2.0.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+
+*Amendment record. v1.0.0, 20 August 2026 (KST), first issue. 24 August 2026: the Appendix I Sonnet price row was recast without a masthead change; recorded here on 18 October 2026, since an amendment belongs on the instrument. v2.0.0, 18 October 2026 (KST): split under ruling 2 of 15 October 2026. The drills, the self-check bank, the twenty-five artifacts, the eighteen diagrams and the enterprise vocabulary move to the [Primer Workbook](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/README.md); the interview question bank (Appendix E) leaves the public repository; perishable figures move to `primer/figures.yaml`, from which Appendix I's tables are generated, re-verified 18 October 2026, and the body names model classes rather than versions; a doctrine block, a gate and tier concordance, a How to Cite and this record are added; the intake funnel's gates become filters; worked examples are labeled illustrative; listed corrections are itemized in the slow-ai-kitchen CHANGELOG at v3.0.0.*
 
 ## Enterprise AI architecture
 
@@ -33,11 +35,11 @@ Everything here is organized against that claim. The material runs from the mech
 
 **As a reference.** Parts 1 to 10 in order, or by subject. Each part closes with a one-page version: the whole part compressed to what you would need if you had to run it from memory.
 
-**As a review instrument.** The Practice Layer is the working tool: a twelve-question review sequence for interrogating a proposed or live system, a defect catalog of every failure mode a review can find in a built system, with its symptom and its architectural fix, a misdiagnosis catalog of the tempting wrong fixes, an evidence register naming the artifact that proves each control exists and a capability checklist. Appendix F holds twenty-five artifact templates you should be able to produce on demand. Appendix G holds eighteen diagrams you should be able to draw on a whiteboard without notes.
+**As a review instrument.** The Practice Layer is the working tool: a twelve-question review sequence for interrogating a proposed or live system, a defect catalog of every failure mode a review can find in a built system, with its symptom and its architectural fix, a misdiagnosis catalog of the tempting wrong fixes, an evidence register naming the artifact that proves each control exists and a capability checklist. The Primer Workbook holds the twenty-five artifact templates you should be able to produce on demand and the eighteen diagrams you should be able to draw on a whiteboard without notes, with drills and a self-check bank (Appendices C, D, F and G index them).
 
 **As a competency map.** Appendix J maps seven competency areas to the sections that carry the material, and closes with a three-level self-assessment for finding your own gaps.
 
-**As interview and boardroom preparation.** Appendix E holds eighty-three senior-role questions grouped by competency, each with what is being tested, an answer skeleton, the weak answer to avoid and the follow-up probe an experienced interviewer will use. Part 9 covers the executive briefing, the roadmap, the stakeholder map and the language discipline that survives a board.
+**As boardroom preparation.** Part 9 covers the executive briefing, the roadmap, the stakeholder map and the language discipline that survives a board.
 
 ## Conventions
 
@@ -47,13 +49,44 @@ Everything here is organized against that claim. The material runs from the mech
 
 **⌂ marks an architect's lens block.** Each one asks the enterprise question the surrounding material skips, names the governance decision that belongs at the same moment as the technical decision, states what the decision costs the organization beyond tokens and latency, and gives the executive translation.
 
-**Unknown** and **Insufficient data** mean exactly that. Nothing is invented to fill a space.
+**Unknown** and **Insufficient data** mean exactly that. Nothing is invented to fill a space, with one labeled exception: **worked examples are constructed composites**, marked *illustrative*, and their figures are invented to show the method, not reported from a real organization.
 
 **Nothing in this document is legal advice, and no legal or regulatory specific in it should be relied on without confirmation.** Framework names, statutory schemes and sector expectations are described by purpose and architectural consequence rather than by clause. Where a determination is jurisdiction-specific it is marked ⚠ and the question to put to counsel is stated instead of an answer.
 
-**Product figures move.** Every perishable number is collected in Appendix I with the date it was verified. Re-verify before relying on one in a design decision.
+**Product figures move.** Every perishable number is kept in `primer/figures.yaml`, one row per figure with its source and the date it was verified, and Appendix I's tables are generated from it. The body names model classes ("the current Opus-class model") and cites the figure key rather than restating a version or a price. Re-verify before relying on one in a design decision.
 
-**License and third-party materials.** The text of this primer is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Practice Primer by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0." Quotations, product and model names, reported figures and the titles of frameworks and standards drawn from third-party sources, including Anthropic's published engineering essays, platform documentation and constitution and the ISO/IEC standards named in Part 4, are used with attribution for identification, description and commentary. They remain the property of their owners and are excluded from this license grant. Trademarks belong to their respective holders. This is an independent work: no affiliation with, sponsorship by or endorsement by Anthropic or any standards body is implied.
+**License and third-party materials.** The text of this primer is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Enterprise AI Architecture Primer by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0." Quotations, product and model names, reported figures and the titles of frameworks and standards drawn from third-party sources, including Anthropic's published engineering essays, platform documentation and constitution and the ISO/IEC standards named in Part 4, are used with attribution for identification, description and commentary. They remain the property of their owners and are excluded from this license grant. Trademarks belong to their respective holders. This is an independent work: no affiliation with, sponsorship by or endorsement by Anthropic or any standards body is implied.
+
+## Doctrine
+
+*As stated in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md), the account's single normative statement of the three doctrines.* This Primer applies them; it restates none of them.
+
+| Doctrine | Short form (DOCTRINE.md section 8) | Where this Primer carries it |
+|---|---|---|
+| Slow AI | Slow AI: AI that cannot be governed, explained and audited is not deployed; the three tests are conjunctive, and the doctrine is a precondition, not a speed limit. | Part 4 as the spine; 1.8 production readiness; 8.2 evaluation before release |
+| Informed Intent | Informed Intent: no AI system acts without prior authorization stating its purpose, authority, boundaries and exit, given by a human who meets the five authorizer conditions. | 2.12 human in the loop; 4.6 human oversight; artifact F5, the human oversight design specification |
+| Final Liability | Final Liability rests with the Human: every material outcome attaches to a named human owner with decision rights, oversight and the power to intervene. | 4.7 named ownership and decision rights; 10.7 the architect's stance |
+
+GRCnext™, the account's governance architecture framework (Services, Tolerances, Pipes, Switches, Exits), is not applied in this Primer; see [GRCnext-Copilot](https://github.com/rolldabones/GRCnext-Copilot).
+
+## Gates and tiers: a concordance
+
+The words gate and tier carry different meanings across this Primer and the Slow AI Kitchen it serves. Each is defined where it is used; this table keeps them apart. No correspondence between the schemes is asserted: a system is tiered under each on that scheme's own criteria.
+
+| Term | Where defined | Meaning there |
+|---|---|---|
+| Gate 1 to Gate 10 | [Slow AI Kitchen README](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md), Steps 2 to 12 | The method's ten checkpoints, from Definition of Done to Operational Audit and Review Cycle |
+| Filter 1 to Filter 5 | This Primer, 1.6, the intake and prioritization funnel | Problem, assignment, feasibility, governance (a rule-out before cost and latency), portfolio |
+| Gate (workflow) | This Primer, Appendix H | A programmatic check between steps of a chained workflow |
+| Tier 1 to Tier 3 | Slow AI Kitchen README, tiering | Stakes of the work (low, moderate, high), setting each gate's depth |
+| T1 to T4 | This Primer, 4.2 | Risk tier of an AI system, Low to Critical, by additive score and overrides |
+| Public, Internal, Confidential, Restricted | This Primer, 6.4 | Data classification, which sets the deployment route |
+
+Where this Primer serves the Kitchen's gates: Part 2's patterns and 2.12 bear on Gate 4 (Bounded AI Use); 4.6 and 4.7 bear on Gate 5 (Final Liability); Part 8 bears on Gate 6 (Verification and Validation).
+
+## How to Cite
+
+> Paik, Son-U Michael. *Enterprise AI Architecture Primer*, v2.0.0. In *Slow AI Kitchen*, v3.0.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md
 
 ---
 
@@ -75,7 +108,7 @@ Ten parts, the practice layer and ten appendices. Each part closes with a one-pa
 
 **[Part 2: Solution Architecture](#part-2-solution-architecture)**
 
-- [2.1 The four decisions](#the-four-decisions)
+- [2.1 The four decisions](#21-the-four-decisions)
 - [2.2 How Claude behaves: four properties, four consequences](#22-how-claude-behaves-four-properties-four-consequences)
 - [2.3 The platform map and the seven primitives](#23-the-platform-map-and-the-seven-primitives)
 - [2.4 Pattern selection](#24-pattern-selection)
@@ -216,11 +249,11 @@ Ten parts, the practice layer and ten appendices. Each part closes with a one-pa
 
 - [Appendix A: Twenty Principles](#appendix-a-twenty-principles)
 - [Appendix B: Quick Reference](#appendix-b-quick-reference)
-- [Appendix C: Scenario Drills](#appendix-c-scenario-drills)
-- [Appendix D: Self-Check Bank](#appendix-d-self-check-bank)
-- [Appendix E: Interview Question Bank](#appendix-e-interview-question-bank)
-- [Appendix F: The Architect's Artifact Set](#appendix-f-the-architects-artifact-set)
-- [Appendix G: The Diagram Set](#appendix-g-the-diagram-set)
+- [Appendix C: Scenario Drills (moved to the Primer Workbook)](#appendix-c-scenario-drills)
+- [Appendix D: Self-Check Bank (moved to the Primer Workbook)](#appendix-d-self-check-bank)
+- [Appendix E: Interview Question Bank (removed)](#appendix-e-interview-question-bank)
+- [Appendix F: The Architect's Artifact Set (index to the Primer Workbook)](#appendix-f-the-architects-artifact-set)
+- [Appendix G: The Diagram Set (index to the Primer Workbook)](#appendix-g-the-diagram-set)
 - [Appendix H: Vocabulary](#appendix-h-vocabulary)
 - [Appendix I: Sources and Current Figures](#appendix-i-sources-and-current-figures)
 - [Appendix J: Competency Map](#appendix-j-competency-map)
@@ -341,7 +374,7 @@ Four tells that a shadow process is operating:
 
 Surface the shadow process without punishing it. It exists because the documented process was inadequate, and the workarounds usually encode genuine domain knowledge. The survey's job is to move that knowledge into the design, not to report it as non-compliance.
 
-**Worked example, professional services.** A global consultancy surveyed its engagement letter process, documented as five steps and eight days. Process mining showed a median of 19 days across 1,400 cases a year, path variance of 31 distinct routes with the top three covering 46 percent and a rework rate of 27 percent. Observation found the shadow: partners maintained personal precedent folders and drafted from those rather than from the firm template, then risk review rewrote against the template, which was the rework loop. The wait ratio was 84 to 1. The initial proposal was a drafting assistant. The survey redirected it: the actual defect was that the firm template was three years stale and partners had rationally abandoned it. The intervention was a maintained clause library with an AI first pass that drafted from it and flagged partner deviations for risk review at draft time rather than after. Rework fell to 9 percent and cycle time to 7 days, and roughly half of that gain came from the clause library alone.
+**Worked example, professional services (illustrative).** A global consultancy surveyed its engagement letter process, documented as five steps and eight days. Process mining showed a median of 19 days across 1,400 cases a year, path variance of 31 distinct routes with the top three covering 46 percent and a rework rate of 27 percent. Observation found the shadow: partners maintained personal precedent folders and drafted from those rather than from the firm template, then risk review rewrote against the template, which was the rework loop. The wait ratio was 84 to 1. The initial proposal was a drafting assistant. The survey redirected it: the actual defect was that the firm template was three years stale and partners had rationally abandoned it. The intervention was a maintained clause library with an AI first pass that drafted from it and flagged partner deviations for risk review at draft time rather than after. Rework fell to 9 percent and cycle time to 7 days, and roughly half of that gain came from the clause library alone.
 
 ## 1.2 Discovery interviews
 
@@ -616,6 +649,8 @@ Two refinements. Volume never promotes a step across a restraint boundary; it on
 
 ### Worked examples across four functions
 
+*Illustrative: a constructed composite, not a reported case. Figures in it are invented to show the method.*
+
 | Domain | Step | V | J | Need | R | S | A | E | Restraint | Destination |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Legal** | Extract parties, term and governing law from executed contracts | 4 | 2 | 6 | 2 | 2 | 3 | 2 | 9 | AI with a human gate on low confidence |
@@ -646,7 +681,7 @@ Most enterprise "AI opportunities" arriving through an intake process are determ
 
 The professional move is not to reject the request. It is to re-scope it: return an integration and rules proposal that delivers the stated outcome faster and cheaper than the AI proposal, and reserve the AI budget for the steps that actually scored above 4 on need. This is a credibility engine. A center that occasionally ships a deterministic answer is trusted when it says a model is required.
 
-**Worked example, financial services.** A retail bank's intake produced 43 candidate use cases in one quarter. Scored on the seven factors, 24 landed in deterministic automation, 11 in AI with a human gate, 5 in agentic AI and 3 were killed on the volume floor. The 24 were routed to the existing robotic process automation and integration team, which delivered 19 of them in two quarters. The AI team, freed of them, shipped 4 of the 11 gated cases in the same period, at a measurable quality baseline. The head of the program reported the deterministic 19 as program outcomes, which is correct: the program's job was the outcome, not the instrument.
+**Worked example, financial services (illustrative).** A retail bank's intake produced 43 candidate use cases in one quarter. Scored on the seven factors, 24 landed in deterministic automation, 11 in AI with a human gate, 5 in agentic AI and 3 were killed on the volume floor. The 24 were routed to the existing robotic process automation and integration team, which delivered 19 of them in two quarters. The AI team, freed of them, shipped 4 of the 11 gated cases in the same period, at a measurable quality baseline. The head of the program reported the deterministic 19 as program outcomes, which is correct: the program's job was the outcome, not the instrument.
 
 ## 1.5 Automate or redesign
 
@@ -684,7 +719,7 @@ Apply to every step in the surveyed process.
 
 A step that survives all three tests is a genuine step and can be automated in place. A step that fails one should be redesigned out, and automating it instead permanently entrenches a constraint you have already removed.
 
-**Worked example, healthcare.** A hospital network's prior authorization process had six steps and a 9 day median. The AI proposal was to draft the authorization letter, which was step 5 and took a coordinator 25 minutes. Applying the cowpath tests: step 2, a coordinator reading the chart to determine which payer policy applied, existed only because reading was expensive. Step 3, a queue for a clinical reviewer to confirm the indication, existed only because a first pass was scarce. The redesign moved the policy determination and evidence assembly to an AI first pass at the point the order was placed, delivering the clinical reviewer a prepared packet with the policy criteria and the supporting chart excerpts already cited. Steps 2 and 3 collapsed into the order entry moment. Median fell to 2 days. The letter drafting, the original proposal, contributed less than a day of that. Had the team automated only step 5 they would have paved a six-step cowpath and reported a 1 day improvement.
+**Worked example, healthcare (illustrative).** A hospital network's prior authorization process had six steps and a 9 day median. The AI proposal was to draft the authorization letter, which was step 5 and took a coordinator 25 minutes. Applying the cowpath tests: step 2, a coordinator reading the chart to determine which payer policy applied, existed only because reading was expensive. Step 3, a queue for a clinical reviewer to confirm the indication, existed only because a first pass was scarce. The redesign moved the policy determination and evidence assembly to an AI first pass at the point the order was placed, delivering the clinical reviewer a prepared packet with the policy criteria and the supporting chart excerpts already cited. Steps 2 and 3 collapsed into the order entry moment. Median fell to 2 days. The letter drafting, the original proposal, contributed less than a day of that. Had the team automated only step 5 they would have paved a six-step cowpath and reported a 1 day improvement.
 
 ## 1.6 Operating model engineering
 
@@ -752,7 +787,7 @@ Two different jobs, two different success metrics, and conflating them is the mo
 ### The intake and prioritization funnel
 
 ```
-  INTAKE FUNNEL, five gates, each one able to end the process
+  INTAKE FUNNEL, five filters, each one able to end the process
   ---------------------------------------------------------------
    requests in
        |
@@ -773,12 +808,12 @@ Two different jobs, two different success metrics, and conflating them is the mo
        v
    build queue
   ---------------------------------------------------------------
-  Gate 4 runs before cost and latency are weighed, never beside.
+  Filter 4 runs before cost and latency are weighed, never beside.
 ```
 
-Gate 4's position is doctrinal: governance and regulated-industry constraints are a rule-out filter applied before cost and latency, not a factor weighed alongside them. A funnel that costs a design and then discovers the route is unavailable has wasted the design.
+Filter 4's position is doctrinal: governance and regulated-industry constraints are a rule-out filter applied before cost and latency, not a factor weighed alongside them. A funnel that costs a design and then discovers the route is unavailable has wasted the design.
 
-Gate 5 is the one most organizations lack, and it is the difference between a program and a pile. It asks whether this system will reuse the portfolio's existing assets, who operates it once live and whether that person has capacity. A system with no named production owner is not approved, it is deferred.
+Filter 5 is the one most organizations lack, and it is the difference between a program and a pile. It asks whether this system will reuse the portfolio's existing assets, who operates it once live and whether that person has capacity. A system with no named production owner is not approved, it is deferred.
 
 ### The estate that never reaches intake
 
@@ -855,7 +890,7 @@ The failure to watch is funding delivery through capital projects and leaving th
 
 **The rule: you cannot skip stage 3, because governance without a platform is policy, and policy that cannot be technically enforced is documentation.**
 
-**Worked example, manufacturing.** A diversified manufacturer ran federated for eighteen months and accumulated 31 AI systems across 6 divisions. An inventory found 5 separate retrieval implementations, 4 vendors, 11 systems with no logging and 3 sending engineering drawings to an external service with no agreement in place. The correction was hub and spoke with a deliberately thin waist: gateway, audit sink and identity mandatory, everything else recommended. Migration took two quarters and the hub funded the engineering. The divisions kept their prompts, their evals and their domain corpora, which is why the migration succeeded. An earlier attempt to also centralize prompt authoring had been abandoned after the divisions simply stopped submitting work.
+**Worked example, manufacturing (illustrative).** A diversified manufacturer ran federated for eighteen months and accumulated 31 AI systems across 6 divisions. An inventory found 5 separate retrieval implementations, 4 vendors, 11 systems with no logging and 3 sending engineering drawings to an external service with no agreement in place. The correction was hub and spoke with a deliberately thin waist: gateway, audit sink and identity mandatory, everything else recommended. Migration took two quarters and the hub funded the engineering. The divisions kept their prompts, their evals and their domain corpora, which is why the migration succeeded. An earlier attempt to also centralize prompt authoring had been abandoned after the divisions simply stopped submitting work.
 
 ### ⌂ The architect's lens
 
@@ -938,7 +973,7 @@ Four places the rule fails:
 | **Three uses by one person** | That is one use repeated, not evidence of generality. The abstraction encodes one person's habits | Require three distinct owners, not three occurrences |
 | **Cheap re-derivation** | Some assets cost more to maintain, version and review than to rewrite each time | Never promote. A library of trivial assets buries the load-bearing ones |
 
-**Worked example, financial services.** A bank promoted a know-your-customer refresh playbook to shared status after it was used three times in one region. Two other regions adopted it. Nine months later an internal audit found that the shared playbook encoded the first region's enhanced due diligence thresholds, which were stricter than one region's requirement and materially looser than another's. The asset was correct in one of three places. The fix was structural rather than editorial: the playbook was split into a shared core with the reasoning and process, plus a per-entity threshold appendix owned by that entity's compliance function, with jurisdiction added as a required metadata field for every asset in the library. ⚠ Threshold content of this kind is a regulatory determination and belongs with the accountable compliance owner, not with the architecture team.
+**Worked example, financial services (illustrative).** A bank promoted a know-your-customer refresh playbook to shared status after it was used three times in one region. Two other regions adopted it. Nine months later an internal audit found that the shared playbook encoded the first region's enhanced due diligence thresholds, which were stricter than one region's requirement and materially looser than another's. The asset was correct in one of three places. The fix was structural rather than editorial: the playbook was split into a shared core with the reasoning and process, plus a per-entity threshold appendix owned by that entity's compliance function, with jurisdiction added as a required metadata field for every asset in the library. ⚠ Threshold content of this kind is a regulatory determination and belongs with the accountable compliance owner, not with the architecture team.
 
 ## 1.8 Production readiness as an architectural checklist
 
@@ -962,7 +997,7 @@ Property 7 is the one that cannot be recovered at all: if the inputs were not re
 
 **This checklist is the design-time form of the readiness gate in 8.1, and the two do not cover the same ground.** 8.1 asks at launch, in eight evidenced dimensions with five signatories, whether the properties are present; 1.8 asks at each design decision whether they are being established. Seven of the nine map onto a gate dimension: measurability onto Evaluation, observability and operability onto Operational, containment onto Security, accountability onto the signatory set, auditability and deletability onto Governance. **Two do not appear on the gate at all.** Reversibility in 8.1 means rollback of a deployment, not undo of an action the system has already taken in a downstream system, and portability has no dimension: 8.1's Change dimension gates changes rather than planning a model deprecation. A team that passes the gate has not answered properties 2 and 6, so both have to be carried by the decision record and the dependency register rather than by the readiness review.
 
-**Worked example, legal.** A law firm deployed a document review assistant and passed every readiness item except property 8. Eighteen months later a client terminated the relationship and exercised a contractual right to have its data returned and destroyed. The source documents were deleted. The chunk store, the embedding index, the prompt cache, the request logs and, most awkwardly, the eval set built from real matter examples all still held client content. Reconstructing what had to be deleted took six weeks of engineering and a disclosure to the client. The data map that would have prevented it would have taken two days at design time.
+**Worked example, legal (illustrative).** A law firm deployed a document review assistant and passed every readiness item except property 8. Eighteen months later a client terminated the relationship and exercised a contractual right to have its data returned and destroyed. The source documents were deleted. The chunk store, the embedding index, the prompt cache, the request logs and, most awkwardly, the eval set built from real matter examples all still held client content. Reconstructing what had to be deleted took six weeks of engineering and a disclosure to the client. The data map that would have prevented it would have taken two days at design time.
 
 ## Workflow Architecture: the one-page version
 
@@ -1137,7 +1172,7 @@ Every engagement claims one of five value pillars, and the pillar determines wha
 | **Cost** | Cost per completed outcome, not cost per request, including human minutes (8.10) | Finance partner |
 | **Performance SLAs** | The committed percentile and the availability figure, measured as users experience them rather than at the service boundary | Service owner |
 
-**Worked contrast: the same problem under two pillars.** A contract review workload, eighty agreements a week, currently three hours each. Under **efficiency**, the design is a workflow: extract the clauses, compare against the standard positions, produce a marked-up summary, and a lawyer reviews the summary rather than the agreement. It is chained, testable, and it targets the three hours. Under **performance SLAs**, where the commitment is a same-day turnaround on an unpredictable arrival pattern, the design changes: the extraction runs on arrival rather than in a batch, capacity headroom is sized for the peak rather than the mean, a degraded path returns a partial summary rather than queuing, and the caching strategy targets time to first token rather than cost per document. Same workload, same model, materially different architecture, and neither is a better design in the abstract. The pillar decided it.
+**Worked contrast: the same problem under two pillars.** A contract review workload, eighty agreements a week, currently three hours each. Under **efficiency**, the design is a workflow: extract the clauses, compare against the standard positions, produce a marked-up summary, and a lawyer reviews the summary rather than the agreement. It is chained, testable and it targets the three hours. Under **performance SLAs**, where the commitment is a same-day turnaround on an unpredictable arrival pattern, the design changes: the extraction runs on arrival rather than in a batch, capacity headroom is sized for the peak rather than the mean, a degraded path returns a partial summary rather than queuing, and the caching strategy targets time to first token rather than cost per document. Same workload, same model, materially different architecture, and neither is a better design in the abstract. The pillar decided it.
 
 ⧉ **Unstated and conflicting pillars are the common case, not the exception.** The sponsor wants cycle time, finance is funding it as a cost reduction and the operations lead has been promised a turnaround commitment, and nobody has noticed that the three select different designs. The architect's move is to force the question early and in writing, because it is answerable in one sentence at intake and becomes unanswerable once a build is underway and three parties have a stake in the answer. Where they genuinely conflict, the sponsor arbitrates and the decision is recorded in the intake record (F1) with the pillars that were not chosen named explicitly, so the eventual complaint that the system did not reduce cost has a documented answer.
 
@@ -2112,13 +2147,13 @@ Anthropic's selection guidance establishes four criteria, and the fourth is the 
 
 That sentence should change how you answer a whole family of questions. The older mental model was a three-rung ladder, where cost pressure meant moving down a tier and quality pressure meant moving up. The current model has a continuous dial inside each tier, which means the correct first response to "this is too slow and too expensive" may be to lower effort rather than to change model, and the correct first response to "this is not quite good enough" may be to raise it.
 
-Documented specifics, all perishable: effort defaults to `high` on Claude Opus 5 and Claude Opus 4.8, including in Claude Code and the Messages API; on Opus 5 the guidance is to start at the default and step up to `xhigh` for the most demanding coding and agentic work; on Opus 4.8 and Opus 4.7, `xhigh`, which sits between `high` and `max`, is described as the best setting for most coding and agentic use cases.
+Documented specifics, all perishable: the effort default differs by model and is not uniform within a generation (Appendix I, `fable.effort.default`, `opus.effort.default`, `sonnet.effort.default`, `haiku.effort.default`), so read it for the model you ship; the levels above the default, including `xhigh` and `max`, and the guidance on when to use them are model-specific and are read from the Effort page rather than carried from one model to another.
 
-Also documented: Claude Opus 5 and Claude Opus 4.8 support **fast mode** (research preview), delivering up to 2.5 times higher output speed at premium pricing. That is a third lever on the speed axis, alongside model choice and effort.
+Also documented: **fast mode**, on the current Opus-class model and in research preview on two legacy Opus models (Appendix I, `fastmode.models`), delivering up to 2.5 times higher output speed at premium pricing. That is a third lever on the speed axis, alongside model choice and effort.
 
 #### The selection method, in four questions
 
-1. **What is the binding constraint?** Depth, speed, cost or context capacity. Name one. If you cannot, two answers are in circulation and they differ: the conservative default is the balanced option, and Anthropic's stated starting point for the unsure case is the more capable one, recorded in the selection matrix below. The divergence is real and the matrix records it rather than resolving it.
+1. **What is the binding constraint?** Depth, speed, cost or context capacity. Name one. If you cannot, the rule is: start capability-first on the vendor's stated default model and move down a class only on evidence from the evaluation set (section 8.2). Anthropic's models overview names the current Opus-class model as the place to start "for most workloads" when unsure (Appendix I, `vendor.start.default`).
 2. **Is the task uniform, or a mix of easy and hard?** If mixed, one model for everything is the wrong answer. Route: a cheap model for the easy majority, a capable model for the hard minority. This is Anthropic's own named example of routing.
 3. **What is the cost of a wrong answer at this step?** High cost justifies capability. This is why a delegation map and a model choice are related decisions.
 4. **Does the step need capability, or does it need current information?** A surprising amount of apparent capability shortfall is actually a knowledge shortfall, fixed by retrieval rather than by a bigger model. The knowledge property in 2.2.
@@ -2127,9 +2162,9 @@ Also documented: Claude Opus 5 and Claude Opus 4.8 support **fast mode** (resear
 
 Anthropic gives two, and which one is correct depends on the situation.
 
-**Start efficiency-first.** Begin with Claude Haiku 4.5, test thoroughly, evaluate against requirements and upgrade only if there is a specific capability gap. Best for initial prototyping and development, applications with tight latency requirements, cost-sensitive implementations and high-volume straightforward tasks.
+**Start efficiency-first.** Begin with the current Haiku-class model (Appendix I, `class.haiku.current`), test thoroughly, evaluate against requirements and upgrade only if there is a specific capability gap. Best for initial prototyping and development, applications with tight latency requirements, cost-sensitive implementations and high-volume straightforward tasks.
 
-**Start capability-first.** Implement with Claude Opus 5, optimize prompts for it, evaluate, then increase efficiency later by lowering effort or moving to a smaller model as the workflow is optimized. Best for complex reasoning; scientific or mathematical work; tasks requiring nuanced understanding; applications where accuracy outweighs cost; and advanced coding and high-autonomy agentic work.
+**Start capability-first.** Implement with the current Opus-class model (Appendix I, `class.opus.current`), optimize prompts for it, evaluate, then increase efficiency later by lowering effort or moving to a smaller model as the workflow is optimized. Best for complex reasoning; scientific or mathematical work; tasks requiring nuanced understanding; applications where accuracy outweighs cost; and advanced coding and high-autonomy agentic work.
 
 Note the asymmetry in how you exit each path: from efficiency-first you upgrade on a **demonstrated capability gap**; from capability-first you downgrade on **demonstrated workflow optimization**. Both exits require evidence, which is the same discipline that runs through this whole primer.
 
@@ -2137,14 +2172,14 @@ Note the asymmetry in how you exit each path: from efficiency-first you upgrade 
 
 | When you need | Start with | Example use cases |
 | --- | --- | --- |
-| The highest available capability | **Claude Fable 5** | Long-running agents, deep reasoning, long-horizon agentic tasks, advanced research |
-| Complex agentic coding and enterprise work | **Claude Opus 5** | Multi-hour autonomous coding agents, large-scale refactoring, complex systems engineering, knowledge work, vision-heavy workflows, computer use |
-| Frontier intelligence at scale for coding, agents and enterprise workflows | **Claude Sonnet 5** | Code generation, data analysis, content creation, visual understanding, agentic tool use |
-| Near-frontier performance with very fast speed and extended thinking at the most economical price | **Claude Haiku 4.5** | Real-time applications, high-volume intelligent processing, cost-sensitive deployments needing strong reasoning, **subagent tasks** |
+| The highest available capability | **The current Fable-class model** (`class.fable.current`) | Long-running agents, deep reasoning, long-horizon agentic tasks, advanced research |
+| Complex agentic coding and enterprise work | **The current Opus-class model** (`class.opus.current`) | Multi-hour autonomous coding agents, large-scale refactoring, complex systems engineering, knowledge work, vision-heavy workflows, computer use |
+| Frontier intelligence at scale for coding, agents and enterprise workflows | **The current Sonnet-class model** (`class.sonnet.current`) | Code generation, data analysis, content creation, visual understanding, agentic tool use |
+| Near-frontier performance with very fast speed and adaptive thinking at the most economical price | **The current Haiku-class model** (`class.haiku.current`) | Real-time applications, high-volume intelligent processing, cost-sensitive deployments needing strong reasoning, **subagent tasks** |
 
-Two details worth carrying. Anthropic's stated default for the unsure case is **Claude Opus 5 for complex agentic coding and enterprise work**, with Claude Fable 5 where the highest available capability is required. And **Haiku is explicitly positioned for subagent tasks**, which connects model selection to multi-agent design: a coordinator on a capable model with workers on a cheap fast one is a documented pattern, not an improvisation.
+Two details worth carrying. Anthropic's stated default for the unsure case is **the current Opus-class model, for most workloads** (Appendix I, `vendor.start.default`), with the current Fable-class model for demanding reasoning and long-horizon agentic work, or when evaluations on the Opus-class model at higher effort still fall short (`vendor.start.escalation`). And **Haiku is explicitly positioned for subagent tasks**, which connects model selection to multi-agent design: a coordinator on a capable model with workers on a cheap fast one is a documented pattern, not an improvisation.
 
-Claude Mythos 5 is available only through Project Glasswing and is not a generally available option.
+The Mythos-class models (Appendix I, `class.mythos.current`) are limited availability, offered only to organizations verified through Anthropic's verification programs, and are not a generally available option.
 
 #### When to change models
 
@@ -2187,7 +2222,7 @@ The characteristic error in model selection is **over-selection**, reaching for 
 **The failure has three mechanisms and each one is recognizable before it lands.**
 
 - **The absence of a tier decision is itself a decision, and it defaults to the most expensive option.** An architecture document with no model-tier entry at any step does not leave the question open. It carries the implicit default through to deployment, and no one ever revisits a choice that was never made. Per-step selection is impossible without per-step evaluation, so the missing eval set and the missing tier decision arrive together.
-- **Cost visibility lags the build.** Where spend is reviewed monthly rather than modelled during development, the gap between projected and actual surfaces weeks after launch, which moves the cost conversation out of design and into change management. The same correction that would have been a paragraph in an architecture document becomes a migration on a live system with trained users.
+- **Cost visibility lags the build.** Where spend is reviewed monthly rather than modeled during development, the gap between projected and actual surfaces weeks after launch, which moves the cost conversation out of design and into change management. The same correction that would have been a paragraph in an architecture document becomes a migration on a live system with trained users.
 - **Without an eval set during the build there is nothing to argue with.** When "use the best available model" is proposed in a design conversation, an eval set is the only thing that grounds a different answer. This is the argument for building the set before the release gate needs it: **the eval set is not only a release gate, it is what makes the tier decision defensible at the moment it is being made.**
 
 Two collateral settings ride along with the same error. **Extended thinking left on where it earns nothing** adds billed reasoning tokens and latency to every request through a step that does no reasoning, and a routing classifier is the usual place it hides. And **a latency budget agreed at launch is the constraint that reveals the mistake first**, because cost is reviewed on a monthly cycle while a median sitting well above an agreed target is visible immediately.
@@ -2515,7 +2550,7 @@ Practical technique: target the ambiguous cases, since two to four examples show
 
 Reasoning before answering. Helps on genuinely multi-step problems; costs tokens and latency on simple ones.
 
-Current mechanics: the documentation distinguishes **extended thinking**, **adaptive thinking** and the **effort** parameter as separate pages. On Claude 4.7 and later, including Claude Fable 5, Mythos 5, Opus 5 and Sonnet 5, **adaptive thinking is always on and is the only mode**. Effort defaults to `high` on Claude Fable 5, Claude Opus 5 and Claude Sonnet 5, on the Claude API and in Claude Code. Defaults differ by model and are collected in Appendix I, which is the single place they are stated; 2.6 develops how to use the parameter. Do not carry a remembered default from one model to another. Newer models increasingly manage their own reasoning depth rather than working to a fixed token budget you set.
+Current mechanics: the documentation distinguishes **extended thinking**, **adaptive thinking** and the **effort** parameter as separate pages. On models after the 4.6 generation, extended thinking with `budget_tokens` is not accepted and **adaptive thinking is the only thinking mode**; on the current Fable-class and Opus-class models it is always on (Appendix I, `thinking.current`, `thinking.extended`). Effort defaults differ by model, even within one generation (Appendix I, `<class>.effort.default`). Defaults differ by model and are collected in Appendix I, which is the single place they are stated; 2.6 develops how to use the parameter. Do not carry a remembered default from one model to another. Newer models increasingly manage their own reasoning depth rather than working to a fixed token budget you set.
 
 The consequence: designs that assume you set a numeric thinking budget are dated for current models, and designs that treat thinking as an opt-in extra are dated too. The professional discipline survives the mechanical change: exhaust prompt improvement, measured through evaluations, before reaching for more reasoning, and treat reasoning depth as a parameter to tune against evals rather than to maximize.
 
@@ -2550,15 +2585,15 @@ Automatic caching is available on the Claude API, Claude Platform on AWS, Google
 | --- | --- |
 | 5-minute cache **write** | 1.25x base input |
 | 1-hour cache **write** | 2x base input |
-| Cache **read** or refresh | 0.1x base input |
+| Cache **read** or refresh | 0.1x base input on most models; 0.05x or 0.025x on some current models (Appendix I, `cache.read.multiplier.*`) |
 
-So a cache read costs a tenth of fresh processing, and a write costs a quarter more at the five-minute lifetime or double at the one-hour lifetime, paid once. A healthy application shows a small write at session start and a long run of cheap reads.
+So a cache read costs at most a tenth of fresh processing, and a write costs a quarter more at the five-minute lifetime or double at the one-hour lifetime, paid once. A healthy application shows a small write at session start and a long run of cheap reads.
 
 **Lifetime.** Five minutes by default, **refreshed at no additional cost each time the cached content is used.** A one-hour option is available at the higher write price. Choosing between them: if the prompt is used more frequently than every five minutes, stay on the default, because it keeps refreshing for free. Use the one-hour cache when prompts are used less often than every five minutes but more often than hourly, when latency matters and follow-ups may arrive beyond five minutes, or **to improve rate-limit utilization, because cache hits are not deducted against your rate limit.**
 
 That last point is worth isolating: caching is a rate-limit strategy as well as a cost and latency strategy.
 
-**Minimum cacheable length**, which varies by model and is the most easily missed mechanic. Shorter prompts are **not cached even if marked**, and **no error is returned**. Currently documented: 512 tokens for Opus 5, Fable 5 and Mythos 5; 1,024 for Opus 4.8, Sonnet 5, Sonnet 4.6 and Sonnet 4.5; 2,048 for Mythos Preview and Opus 4.7; 4,096 for Opus 4.6, Opus 4.5 and Haiku 4.5. To check whether caching happened, read `cache_creation_input_tokens` and `cache_read_input_tokens`; if both are zero, nothing was cached. The current figures are collected in Appendix I.
+**Minimum cacheable length**, which varies by model and is the most easily missed mechanic. Shorter prompts are **not cached even if marked**, and **no error is returned**. The minimum ranges from 512 to 4,096 tokens depending on the model (Appendix I, `cache.min_length.*`). To check whether caching happened, read `cache_creation_input_tokens` and `cache_read_input_tokens`; if both are zero, nothing was cached. The current figures are collected in Appendix I.
 
 **Breakpoints.** Up to **four** per request. Breakpoints themselves add no cost; you pay only for what is written and read. Automatic caching consumes one of the four slots when combined with explicit breakpoints.
 
@@ -2619,6 +2654,8 @@ A second reuse axis alongside the standing-instructions-versus-Skill rule above;
 **And a Skill is an integration decision as well as a packaging one, which is why it is developed in 3.1 rather than finished here.** It has a request-time attachment surface, a publication and versioning endpoint, and a sandboxed execution dependency. The consequence for a reviewer at this point in the design: choosing a Skill over a template is not a documentation preference, it commits the deployment to a runtime that has to clear the same security review as any other compute in the system.
 
 ### Worked example: a reusable prompt asset
+
+*Illustrative: a constructed composite, not a reported case. Figures in it are invented to show the method.*
 
 The task: a support-ticket assistant operating under a never-promise guardrail, needing a cache-breakpoint placement, an output-contract guardrail and a packaging choice, with a brief rationale for each.
 
@@ -2781,8 +2818,8 @@ Five surfaces; the platform map in 2.3 lists entry points illustratively, this i
 | **Claude.ai** (web, mobile, desktop) | The end-user chat product: users open conversations, attach files, use Projects for shared context and connect Slack, Outlook or Google Drive through built-in connectors. Consumer tiers (Free, Pro, Max) and Claude for Work: **Team** adds admin controls, SSO and SAML, domain capture and a contractual commitment not to train on customer content; **Enterprise** adds SCIM provisioning, configurable retention, audit logs, a Compliance API and a HIPAA-ready option with a signed BAA | Knowledge workers using Claude as a thinking partner for research, drafting, analysis and review. No code is written: the entry point for applied AI users, not builders. Consumer tiers fit individuals and small teams, Claude for Work organizations needing governance and identity controls | Zero build cost versus zero integration: you get the product Anthropic ships and cannot embed it elsewhere or customize what is exposed. The right tier depends on governance needs |
 | **Claude Code** (terminal, IDE plugin, desktop, web) | An agentic coding tool that reads files, edits code, runs commands and executes multi-step engineering tasks under configurable permission boundaries, in a terminal, IDE plugins (VS Code, JetBrains, others), on desktop and on the web at claude.ai/code | Engineers doing development work: exploring codebases, refactoring across files, debugging, building features. Same agent, wherever you work | Purpose-built for engineering: outstanding for code, but the wrong shape for a customer-service product or any non-engineering workflow |
 | **Claude Cowork** | A desktop agent for non-developers, working with local files and applications and automating file and task management under configurable permissions. On all paid plans (Pro, Max, Team, Enterprise) via the Claude Desktop app on macOS and Windows; **Linux support is in beta** | Operations, admin and other non-engineering roles needing Claude to act on their computer rather than produce text in a chat window | Real system actions versus supervision overhead: powerful for file and task automation because Cowork operates on the machine directly, so permission scoping and human review matter more than in a chat-only entry point |
-| **Claude in Chrome** | A browsing agent inside the Chrome browser, navigating pages and taking actions on behalf of the user | Knowledge workers whose tasks are anchored in web applications rather than files or codebases | Not stated |
-| **Claude for Excel** | A spreadsheet agent inside Excel, working directly with cells, formulas and structured data | Analysts, finance teams and any role whose main working tool is a spreadsheet | Not stated |
+| **Claude in Chrome** | A browsing agent inside the Chrome browser, navigating pages and taking actions on behalf of the user | Knowledge workers whose tasks are anchored in web applications rather than files or codebases | Unknown |
+| **Claude for Excel** | A spreadsheet agent inside Excel, working directly with cells, formulas and structured data | Analysts, finance teams and any role whose main working tool is a spreadsheet | Unknown |
 
 ### Route selection: the five delivery routes
 
@@ -2792,7 +2829,7 @@ Five surfaces; the platform map in 2.3 lists entry points illustratively, this i
 | **AWS Bedrock** | Claude as a managed model on AWS, called via the Messages API at /anthropic/v1/messages on AWS-managed infrastructure, billed on the AWS account, authenticated through IAM. The previous Bedrock Runtime integration (InvokeModel/Converse via boto3 or the AWS SDK) remains the documented legacy path. Regional availability matters; inference profiles solve cross-region routing | A committed AWS enterprise agreement, the rest of the stack on AWS, AI spend drawing down against that commitment. Identity, networking and audit inherit from the AWS account |
 | **Claude Platform on AWS** | Claude served by Anthropic on AWS-adjacent commercial terms rather than as a Bedrock managed model, billed and contracted differently, with feature availability tracking the first-party Claude API more closely, including workspace-level cache isolation, which Bedrock does not provide (2.7) | The organization wants AWS paper and procurement but cannot accept Bedrock's feature lag or organization-only cache isolation. Confirm current commercial terms before committing: the billing model is the part of this route that moves |
 | **GCP Vertex AI** | Claude as a managed model in Google Cloud's Vertex AI Model Garden, called via the Anthropic Vertex client or Google's SDK, billed on the GCP project, authenticated with Google Cloud credentials; models are enabled per project in the Model Garden console | The organization runs on GCP, its ML stack lives in Vertex AI and it wants a single billing and audit entry point across foundation models |
-| **Microsoft Foundry** (Azure) | Claude through Microsoft's Foundry catalog on Azure, billed on the Azure subscription, authenticated through Entra ID, deployed into its Azure region. Two hosting forms: **Hosted on Azure** (generally available; inference runs in the organization's Azure environment; as of this writing, Opus 4.8, Sonnet 5 and Haiku 4.5) and **Hosted on Anthropic infrastructure** (other models; inference routes to Anthropic-managed infrastructure) | A Microsoft enterprise agreement, identity through Entra ID and a cloud footprint on Azure; Foundry consolidates AI procurement on the same paper. Verify the current hosted-model list before committing, and where residency or GDPR requirements are strict, verify the hosting form and compliance posture of the models deployed |
+| **Microsoft Foundry** (Azure) | Claude through Microsoft's Foundry catalog on Azure, billed on the Azure subscription, authenticated through Entra ID, deployed into its Azure region. Two hosting forms: **Hosted on Azure** (generally available; inference runs in the organization's Azure environment; the hosted-model list changes and is not restated here; Appendix I, `routes.foundry_hosted`) and **Hosted on Anthropic infrastructure** (other models; inference routes to Anthropic-managed infrastructure) | A Microsoft enterprise agreement, identity through Entra ID and a cloud footprint on Azure; Foundry consolidates AI procurement on the same paper. Verify the current hosted-model list before committing, and where residency or GDPR requirements are strict, verify the hosting form and compliance posture of the models deployed |
 
 ### Regulated-industry constraints
 
@@ -2967,7 +3004,7 @@ Duplication is cheap and reversible. Premature abstraction is expensive and stic
 | **Business rules** | A rule with two owners has no owner. Rules belong to the function accountable for them |
 | **Corpora with different permission models** | Merging two corpora merges their access control, and the merge is always to the looser model unless someone does the work |
 
-**Worked example, financial services.** A bank stood up a platform team that built a shared retrieval service, a shared prompt service and a shared agent framework before it had three consumers. Fourteen months later there were four production systems, three of which had bypassed the retrieval service because it could not do the chunking their corpus needed, and two of which had forked the agent framework. The platform team was maintaining three services with a combined consumer count of two. The recovery was to withdraw the retrieval and agent services, keep the gateway and the registry, mandate the audit sink and let the four teams keep their own retrieval. Delivery velocity roughly doubled in the following quarter and the estate became more governable rather than less, because the mandatory waist was now short enough that nobody had a reason to route around it.
+**Worked example, financial services (illustrative).** A bank stood up a platform team that built a shared retrieval service, a shared prompt service and a shared agent framework before it had three consumers. Fourteen months later there were four production systems, three of which had bypassed the retrieval service because it could not do the chunking their corpus needed, and two of which had forked the agent framework. The platform team was maintaining three services with a combined consumer count of two. The recovery was to withdraw the retrieval and agent services, keep the gateway and the registry, mandate the audit sink and let the four teams keep their own retrieval. Delivery velocity roughly doubled in the following quarter and the estate became more governable rather than less, because the mandatory waist was now short enough that nobody had a reason to route around it.
 
 ### Sequencing a portfolio, and the second system problem
 
@@ -3068,7 +3105,7 @@ A thin abstraction at the gateway, giving you a policy, identity and logging bou
 
 The control is the eval gate, run per system, segmented, before any model change reaches production. This is the stage-gate rule applied at portfolio scale: evaluations gate any model swap, and at forty systems that means forty gates, which is exactly why the eval harness is a shared service and the eval sets are not.
 
-**Worked example, financial services.** An insurer had 30 AI systems across underwriting, claims and servicing, all on two pinned models, none registered. A deprecation notice with a nine month horizon triggered an inventory. Eleven systems passed their eval sets on the successor model with no change. Fourteen needed prompt work, mostly format and verbosity drift against strict downstream parsers. Three had no eval set at all and could not be assessed, so they were migrated on a shadow deployment with manual comparison over four weeks. Two, both in a regulated underwriting path, required model change notification to the supervisor and consumed the entire runway. ⚠ Whether a model change is notifiable is a regulatory determination and belongs to the compliance function, not the architecture team. The lesson the insurer wrote down: the three systems with no eval set cost more than the other twenty-seven combined.
+**Worked example, financial services (illustrative).** An insurer had 30 AI systems across underwriting, claims and servicing, all on two pinned models, none registered. A deprecation notice with a nine month horizon triggered an inventory. Eleven systems passed their eval sets on the successor model with no change. Fourteen needed prompt work, mostly format and verbosity drift against strict downstream parsers. Three had no eval set at all and could not be assessed, so they were migrated on a shadow deployment with manual comparison over four weeks. Two, both in a regulated underwriting path, required model change notification to the supervisor and consumed the entire runway. ⚠ Whether a model change is notifiable is a regulatory determination and belongs to the compliance function, not the architecture team. The lesson the insurer wrote down: the three systems with no eval set cost more than the other twenty-seven combined.
 
 ## 2.12 Human in the loop as an architecture
 
@@ -3179,7 +3216,7 @@ Four measures. Anything less and you have an assumption.
 
 Add inter-reviewer agreement where two reviewers run the same items: low agreement means an underspecified rubric and a control measuring reviewers, not outputs.
 
-**Worked example, healthcare.** A payer ran AI-assisted clinical coding with pre-action approval by certified coders: approval at 97 percent, the program reported high quality. Seeded-defect testing at 2 percent injection found a 41 percent catch rate and a median 11 seconds on task against a design assumption of 90. The cause was the handoff package: coders saw the full note and proposed codes, new versus carried-forward codes unisolated and the supporting text unindicated. Showing only changed codes with the supporting passage highlighted took the catch rate to 88 percent and the median to 47 seconds, at a throughput cost of about 20 percent: the control's real price, which the organization had not been paying and not getting.
+**Worked example, healthcare (illustrative).** A payer ran AI-assisted clinical coding with pre-action approval by certified coders: approval at 97 percent, the program reported high quality. Seeded-defect testing at 2 percent injection found a 41 percent catch rate and a median 11 seconds on task against a design assumption of 90. The cause was the handoff package: coders saw the full note and proposed codes, new versus carried-forward codes unisolated and the supporting text unindicated. Showing only changed codes with the supporting passage highlighted took the catch rate to 88 percent and the median to 47 seconds, at a throughput cost of about 20 percent: the control's real price, which the organization had not been paying and not getting.
 
 ### ⌂ The architect's lens
 
@@ -3270,7 +3307,7 @@ Three different answers to "the system should know this," routinely confused, wi
 
 The deletion row is the one that decides most enterprise cases. An erasure obligation over fine-tuned facts is satisfied only by retraining, which is why fine-tuning is a behavior tool and not a knowledge tool in any environment with data subject rights.
 
-**Worked example, legal.** A firm enabled user-scoped memory across its research assistant. A partner working on two adverse matters found that the assistant referenced the opposing party's position from the first matter while drafting in the second. Nothing had leaked outside the partner, who was properly on both matters, so no confidentiality breach occurred. The firm still treated it as a control failure, correctly: the memory design made a breach possible for any user who was not on both matters, and no control prevented it. The remediation scoped memory to matter rather than user, added the matter identifier to the storage key, filtered memory retrieval through the matter access control list and added a cross-matter retrieval assertion to the eval set. Retention was set to the matter's retention period so that memory expires with the matter file rather than persisting independently.
+**Worked example, legal (illustrative).** A firm enabled user-scoped memory across its research assistant. A partner working on two adverse matters found that the assistant referenced the opposing party's position from the first matter while drafting in the second. Nothing had leaked outside the partner, who was properly on both matters, so no confidentiality breach occurred. The firm still treated it as a control failure, correctly: the memory design made a breach possible for any user who was not on both matters, and no control prevented it. The remediation scoped memory to matter rather than user, added the matter identifier to the storage key, filtered memory retrieval through the matter access control list and added a cross-matter retrieval assertion to the eval set. Retention was set to the matter's retention period so that memory expires with the matter file rather than persisting independently.
 
 ### ⌂ The architect's lens
 
@@ -3432,11 +3469,11 @@ A conventional release note lists changes. For a system whose behavior is statis
 | **The rollback tuple and rehearsed restore time** | Exactly what will be restored and how long it takes |
 | **What to watch, for how long** | The two or three metrics operations should monitor, the threshold that triggers a rollback and the date the heightened watch ends |
 
-**Worked example, professional services.** A firm upgraded the model behind its research assistant. The eval delta was positive in aggregate, plus 4 points. The release note carried per-segment results and one segment, tax queries, was down 6 points against a noise floor of 2, which was a real regression. The release proceeded with the regression declared, the tax segment routed to the pinned prior model through the routing configuration and a two week watch on the tax escalation rate. Because the regression was in the release note, the tax practice raised no incident, the routing exception was visible in the dependency register with a removal date and the fix shipped three weeks later. The same regression on an aggregate-only release note would have surfaced as an angry practice head and an emergency rollback of everything.
+**Worked example, professional services (illustrative).** A firm upgraded the model behind its research assistant. The eval delta was positive in aggregate, plus 4 points. The release note carried per-segment results and one segment, tax queries, was down 6 points against a noise floor of 2, which was a real regression. The release proceeded with the regression declared, the tax segment routed to the pinned prior model through the routing configuration and a two week watch on the tax escalation rate. Because the regression was in the release note, the tax practice raised no incident, the routing exception was visible in the dependency register with a removal date and the fix shipped three weeks later. The same regression on an aggregate-only release note would have surfaced as an angry practice head and an emergency rollback of everything.
 
 ## Solution Architecture: the one-page version
 
-1. Four decisions organize a solution: ownership, shape, architecture, and a fourth bundling entry point, model tier, context strategy and delivery route. They are a diagnostic set, not a sequence, and the risk is mis-recognition rather than mis-ordering, because a delegation error upstream produces symptoms that look like architecture errors downstream.
+1. Four decisions organize a solution: ownership, shape, architecture and a fourth bundling entry point, model tier, context strategy and delivery route. They are a diagnostic set, not a sequence, and the risk is mis-recognition rather than mis-ordering, because a delegation error upstream produces symptoms that look like architecture errors downstream.
 2. Four behavior properties, four design consequences. Prediction means verification is architecture rather than quality assurance; fixed knowledge means everything current and proprietary is supplied; a hard context edge means context is curated and sized rather than accumulated; probabilistic steering means anything that must always hold is constrained in code rather than instructed. The properties do not announce themselves, so a system that ignores them drifts instead of erroring.
 3. The platform map is three layers chosen by three different people for three different reasons: entry point for the user and the work, build-time interface for the engineering team, delivery route for the organization's cloud. "Can we use Claude" is three questions, and conflating them either kills a viable deployment or waves through a non-compliant one.
 4. Seven primitives, seven jobs: tools act, MCP connects, subagents isolate and parallelize, hooks guarantee, skills package a procedure, agent teams coordinate peers, dynamic workflows compose at runtime. Select by naming the need rather than the technology, and hold the sharpest line in the set: hooks for deterministic guarantees, prompts for probabilistic guidance.
@@ -3453,7 +3490,7 @@ A conventional release note lists changes. For a system whose behavior is statis
 15. Entry point, build-time interface and five delivery routes, with governance as a rule-out filter applied before cost and latency, never beside them. Residency, business associate agreement coverage, privilege and authorized-environment constraints eliminate routes outright, and a design costed before the route is checked is a design wasted.
 16. An AI decision record adds seven clauses: model dependency, non-determinism tolerance, eval gate, oversight point, egress boundary, blast radius, and the reversal path with its switching condition.
 17. Ask what happens when the component succeeds and is wrong, not only what happens when it fails.
-18. Mandate three shared services and no more at first: gateway, identity and secrets, audit sink.
+18. Mandate three operated services at first: gateway, identity and secrets, audit sink; the other three mandatory items are enforced through them.
 19. Share only when the interface is stable, defects mean the same thing everywhere and nobody is blocked. Otherwise let teams duplicate.
 20. Never share eval sets, live prompts, business rules or corpora with different permission models.
 21. Premature sharing kills adoption, and the platform then costs more than it saves. Name the queue tax out loud.
@@ -3638,7 +3675,7 @@ And the qualitative test, which is the best line in the documentation: **if a hu
 
 **Two variants exist and they take different queries.** The regex variant has Claude write a pattern; the BM25 variant takes a natural-language query. The choice affects how tool names and descriptions should be written, which is a further reason the namespacing rule below is not cosmetic.
 
-**Model support is a published list rather than a generation rule.** Verified 2026-08-11: the compatibility table names Fable 5, Mythos 5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Opus 4.5, Sonnet 4.6, Sonnet 4.5 and Haiku 4.5, and states that Opus 4.1 and earlier do not support it. **Sonnet 5 was not on that list at the verification date**, which is the reason to read the table rather than assume a newer model inherits the capability. The list, its date and the route-specific qualifications are in Appendix I.
+**Model support is a published list rather than a generation rule.** The compatibility table is the authority (Appendix I, `toolsearch.models`): it states that Opus 4.1 and earlier do not support tool search, and **Sonnet 5, absent from the table at the 2026-08-11 verification, is listed on 18 October 2026**, which is the reason to read the table rather than assume a newer model inherits the capability. The list, its date and the route-specific qualifications are in Appendix I.
 
 ### Tool definition quality
 
@@ -4392,8 +4429,12 @@ async def run_agent(client, messages, tools, dispatch, max_turns=8):
         )
         messages.append({"role": "assistant", "content": resp.content})
 
-        if resp.stop_reason != "tool_use":
+        if resp.stop_reason == "end_turn":
             return Result(status="complete", message=resp, turns=turn + 1)
+        if resp.stop_reason != "tool_use":
+            # max_tokens, model_context_window_exceeded, refusal and the rest are
+            # alertable conditions (2.2), never a silent completion
+            return Result(status=resp.stop_reason, message=resp, turns=turn + 1)
 
         results = []
         for block in (b for b in resp.content if b.type == "tool_use"):
@@ -5090,7 +5131,7 @@ Five layers: input, model, tool, output, process.
 
 **The strongest controls live at the tool layer**: preconditions, thresholds, allowlists, argument validation and approval gates are deterministic, permitting an action or not; the model layer is probabilistic. **The governing rule:** where a rule protects money, identity, legal exposure or anything irreversible, the control is deterministic and sits outside the model.
 
-A concrete input-layer control: **use a lightweight model such as Claude Haiku 4.5 to pre-screen input before the main conversation, with structured outputs constraining the verdict to a simple parseable classification.** Cheap, fast and deterministic to consume; the same pattern applies to tool output, point 7 below.
+A concrete input-layer control: **use a lightweight model such as the current Haiku-class model (Appendix I, `class.haiku.current`) to pre-screen input before the main conversation, with structured outputs constraining the verdict to a simple parseable classification.** Cheap, fast and deterministic to consume; the same pattern applies to tool output, point 7 below.
 
 #### Choosing the check type at each point on the request path
 
@@ -5968,7 +6009,7 @@ Frameworks are not interchangeable or competing answers to one question: they an
 | **Assurance and attestation standards** (for example **SOC 2** reporting against the **Trust Services Criteria**, and international attestation engagements in the **ISAE 3000** family) | Provide a third-party opinion to customers and counterparties | The service and its control set, over a period | A report with the auditor's opinion, control descriptions and test results | Scope is chosen by the reporting entity, so read the scope before the opinion. Design-only reports say nothing about operation |
 | **Statutory and regulator expectations** (risk-tiered AI legislation ⚠, sector regulator guidance, supervisory model risk expectations for regulated firms ⚠) | Compel specific obligations by legal force | The use case, the sector or the regulated entity | Whatever the regime requires, plus regulatory correspondence | Jurisdiction-bound, subject to change and interpretation. Do not treat guidance as settled detail ⚠ |
 | **Internal policy frameworks** | Bind the organization's own behavior and give the second line something to test against | The organization's own systems and staff | Policy, standards, exception register, attestations | Only as good as its enforcement. An unenforced internal standard is a documented gap |
-| **Binding AI-specific legislation** (for example the **EU AI Act** ⚠, with its prohibited, high-risk, limited-risk and minimal-risk tiering, its separate obligations regime for general-purpose models, and its split of duties between provider and deployer) | Impose mandatory obligations that attach to a defined role in respect of a defined system, with penalties for non-compliance | The AI system and the role the organization holds in respect of it | Technical documentation, conformity assessment records, registration entries, instructions for use, post-market monitoring and incident reporting records | The determinations that matter most are legal ones: whether the system is in scope, which tier it falls into and which role the organization holds. Architecture supplies the facts; it does not decide any of the three ⚠ |
+| **Binding AI-specific legislation** (for example the **EU AI Act** ⚠, with its prohibited practices, high-risk systems, Article 50 transparency obligations and otherwise unregulated (minimal-risk, in the Commission's shorthand) systems, its separate obligations regime for general-purpose models, and its split of duties between provider and deployer) | Impose mandatory obligations that attach to a defined role in respect of a defined system, with penalties for non-compliance | The AI system and the role the organization holds in respect of it | Technical documentation, conformity assessment records, registration entries, instructions for use, post-market monitoring and incident reporting records | The determinations that matter most are legal ones: whether the system is in scope, which tier it falls into and which role the organization holds. Architecture supplies the facts; it does not decide any of the three ⚠ |
 
 Five decision rules, one for each of the first five families:
 
@@ -6168,6 +6209,8 @@ An architect who cannot tell these apart will spend a quarter tuning retrieval a
 **Decision rule:** classify every observed failure as absence, contradiction or invisibility before proposing a fix, because the three fixes have different owners and only the third belongs to engineering.
 
 ### Worked example: a mid-size insurer's claims knowledge estate
+
+*Illustrative: a constructed composite, not a reported case. Figures in it are invented to show the method.*
 
 A claims organization commissions an assistant for first-line claims handlers. The inventory covers eleven knowledge domains. Results:
 
@@ -6410,7 +6453,7 @@ For a corpus that clears the threshold, the design sequence has seven stages.
 
 **4. Retrieve**, with both methods, dense and sparse, merged by reciprocal rank fusion as above. Neither method suffices alone; production systems run both.
 
-**5. Rerank.** The documented procedure is specific and worth knowing as a shape: **retrieve a wide initial candidate set, in Anthropic's tests the top 150; pass those plus the query through a reranking model; select the top-K, in their tests 20; pass those into the prompt.** Reranking provides better responses **and reduces cost and latency**, because the model processes less information. The latency cost of the rerank call itself is on the order of a hundred to a few hundred milliseconds.
+**5. Rerank.** The documented procedure is specific and worth knowing as a shape: **retrieve a wide initial candidate set, in Anthropic's tests the top 150; pass those plus the query through a reranking model; select the top-K, in their tests 20; pass those into the prompt.** Reranking provides better responses **and reduces cost and latency**, because the model processes less information. The latency cost of the rerank call itself is not quantified by the source (Appendix I records it as not verified); measure it in your own stack.
 
 **6. Assemble and generate.** Question plus retrieved chunks with sources attached, and an instruction to answer from the supplied material and to say when it does not contain the answer.
 
@@ -6670,6 +6713,8 @@ Both must be written for two readers at once: an agent that will execute them an
 **Decision rule:** a playbook without escalation triggers and exit criteria is a description, not a procedure, and must not be given to an agent.
 
 ### Worked example: a data subject access request playbook in machine-consumable form
+
+*Illustrative: a constructed composite, not a reported case. Figures in it are invented to show the method.*
 
 ⚠ The response deadlines, verification standards and refusal grounds below are jurisdiction-specific and change; the structure is the transferable part and the specific values require confirmation with counsel for each jurisdiction the organization operates in.
 
@@ -8233,7 +8278,7 @@ Write the prompt, build the dataset, run every case, grade, average into one num
 
 ### The minimum harness
 
-- **Thirty to fifty cases**, including deliberate edge cases: ambiguous, malformed, empty, adversarial and cases where the information is genuinely absent from the source
+- **Thirty to fifty cases per reported segment**, including deliberate edge cases: ambiguous, malformed, empty, adversarial and cases where the information is genuinely absent from the source
 - **A code grader** checking structural validity: parses, matches schema, required fields present, numbers reconcile
 - **A model grader** producing strengths, weaknesses and reasoning **before** a score
 - **A combined score**, and a single number per run
@@ -8252,7 +8297,7 @@ A harness whose number moves for reasons nobody can name is not an instrument. B
 | Pinned | Why a run is not comparable without it |
 | --- | --- |
 | **Model identifier and version** | The most common silent mover: a provider-initiated change arrives without a deployment on your side |
-| **Sampling settings** | Temperature, top-p, maximum tokens, seed where available and the effort or thinking configuration. The last is the one omitted, and 8.5 already names it as a first suspect |
+| **Sampling settings** | Effort, thinking configuration and maximum tokens. Effort and thinking are the ones omitted, and 8.5 already names them as a first suspect. Temperature, top-p and top-k are not pinned: the model deprecations page states that a non-default value returns a 400 error on Claude 4.7 and later models (Appendix I, `params.sampling`) |
 | **Dataset version** | A set that gained four cases between runs produced two scores over two populations |
 | **Grader version, including the grader's own prompt and the model it runs on** | The instrument's own calibration. An edited rubric moves the score with nothing changed in the system, and it is the field least versioned |
 | **Retrieval index snapshot** | An index rebuilt with different chunking is a behavior change of prompt magnitude, per the release tuple in 2.15 |
@@ -8424,7 +8469,7 @@ Observability is the ability to answer questions about a running system without 
 | --- | --- |
 | **Correlation identifier** tying every step of one logical request together across model calls, tool calls and agents | Without it, multi-step systems are undebuggable. The most important item here |
 | **Prompt version and model identifier**, with effort and thinking configuration | When quality changes this is the first thing you want and the most commonly missing. Effort belongs in this set |
-| **The three token fields**: `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens` | They bill at 1x, 1.25x and 0.1x respectively. Note that `input_tokens` counts **only tokens after the last cache breakpoint**, so total input is the sum of all three. Getting this wrong understates usage |
+| **The three token fields**: `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens` | They bill at 1x, 1.25x and the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`) respectively. Note that `input_tokens` counts **only tokens after the last cache breakpoint**, so total input is the sum of all three. Getting this wrong understates usage |
 | **Latency as a distribution**: median, p95, p99 and time-to-first-token separately | Averages hide the tail, and the tail is what users complain about |
 | **Tool calls, arguments and outcomes**, with error categories | Tells you what the system actually did |
 | **Retrieval detail**: what was retrieved, with scores, and whether the answer used it | Retrieval quality is invisible unless logged, and it is the most common cause of confident wrong answers |
@@ -8570,7 +8615,7 @@ Online comparison is A/B testing, and the discipline it requires is the one A/B 
 
 There is one failure mode specific to these systems and it is temporal rather than statistical. **A change that improves performance on typical inputs can degrade performance on an input class that is rare during the test window and common later.** Nothing in the arithmetic catches this, because within the window the rare class contributes too few observations to move any metric, and the result is correctly computed and wrong about the future.
 
-The usual shape is seasonal. A workload whose input mix shifts at a quarter end, a filing deadline, an enrolment period or a renewal cycle will run its experiment against one distribution and its production life against several. **Test-period and input-distribution alignment matters more here than in most software experiments**, and the practical discipline is to state, alongside the result, which input classes the window under-represented and to treat the change as unvalidated on those classes rather than validated overall. Where a known spike is coming, the alternatives are to run the test through it or to hold the rare classes out and score them offline against the golden set.
+The usual shape is seasonal. A workload whose input mix shifts at a quarter end, a filing deadline, an enrollment period or a renewal cycle will run its experiment against one distribution and its production life against several. **Test-period and input-distribution alignment matters more here than in most software experiments**, and the practical discipline is to state, alongside the result, which input classes the window under-represented and to treat the change as unvalidated on those classes rather than validated overall. Where a known spike is coming, the alternatives are to run the test through it or to hold the rare classes out and score them offline against the golden set.
 
 #### Shadow testing as an experimental posture, not only a release step
 
@@ -8948,7 +8993,7 @@ Cost engineering is choosing the cheap design. **Cost operations is keeping it c
 | Input | Detail |
 | --- | --- |
 | **Volume** | Requests per day, and the **peak rate**, usually several times the average. Peak is what has to fit inside rate limits |
-| **Tokens per request** | Split three ways: fresh input at 1x, cache writes at 1.25x and cache reads at 0.1x, with output priced separately and higher. The split is the thing most cost models get wrong. **Count the tokens on the model you will ship**, because the tokenizer changed at 4.7 and later models produce materially more tokens for the same text, so a count carried over from an earlier generation understates the bill by a margin no other line in this table can absorb |
+| **Tokens per request** | Split three ways: fresh input at 1x, cache writes at 1.25x and cache reads at the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`), with output priced separately and higher. The split is the thing most cost models get wrong. **Count the tokens on the model you will ship**, because the tokenizer changed at 4.7 and later models produce materially more tokens for the same text, so a count carried over from an earlier generation understates the bill by a margin no other line in this table can absorb |
 | **Call multiplier** | How many model calls per completed task. Rung 0 on the complexity ladder is a single call, rung 1 is one to a few, rung 7 is a dynamic workflow whose number of calls is variable and composed at runtime, and rung 8, the autonomous agent, is the unbounded one. This is where the ladder and the cost model meet |
 | **Unit prices** | Per model, per token type. Perishable; verify |
 | **Cost per request** | The arithmetic |
@@ -8956,7 +9001,7 @@ Cost engineering is choosing the cheap design. **Cost operations is keeping it c
 | **Sensitivity** | What happens if conversations get fifty percent longer, retrieved context doubles or volume triples |
 | **Feasibility** | Whether it clears the business case at all |
 
-Two refinements the current pricing structure adds. **Cache hits are not deducted against rate limits**, so caching relieves a capacity constraint as well as a cost one. And **the cache hit ratio is the single most informative number in a cost model**, because the gap between 1x and 0.1x is where the money is: a system with a cold cache costs roughly ten times more per input token than the same system with a warm one.
+Two refinements the current pricing structure adds. **Cache hits are not deducted against rate limits**, so caching relieves a capacity constraint as well as a cost one. And **the cache hit ratio is the single most informative number in a cost model**, because the gap between 1x and the cache-read multiplier is where the money is: a system with a cold cache costs roughly ten to forty times more per input token than the same system with a warm one, depending on the model (Appendix I, `cache.read.multiplier.*`).
 **Two qualifications on the caching and batch lines above, both of which change a cost model rather than refine it.** Caching savings assume the cache is warm when the next request arrives, so a workload whose request frequency is lower than the cache lifetime will not realize them consistently: the model shows a saving the traffic pattern never delivers. And where the batch discount is load-bearing in a regulated deployment, ⚠ verify that batch processing is covered under the applicable business associate agreement and compliance configuration before routing protected data through it, because a cost model resting on a route the compliance position does not cover is not a cost model.
 
 
@@ -9014,9 +9059,9 @@ Nearly everything that improves quality costs time. Agentic systems in particula
 | Lever | Effect |
 | --- | --- |
 | **Lower effort** | Trades intelligence for latency and cost within the same model. Frequently the first thing to try |
-| **Fast mode** (research preview, Opus 5 and Opus 4.8) | Up to 2.5x higher output **tokens per second** at premium pricing. It does not move time-to-first-token, so it is a lever on the generation segment and not on the wait before the first character. Not available with the batch lane |
+| **Fast mode** (current Opus-class model; research preview on two legacy Opus models; Appendix I, `fastmode.models`) | Up to 2.5x higher output **tokens per second** at premium pricing. It does not move time-to-first-token, so it is a lever on the generation segment and not on the wait before the first character. Not available with the batch lane |
 | **Prompt caching** | Cuts time-to-first-token; **pre-warming** with `max_tokens: 0` removes the first-request penalty |
-| **A smaller model** | Haiku 4.5 for the easy majority, with escalation |
+| **A smaller model** | The current Haiku-class model (Appendix I, `class.haiku.current`) for the easy majority, with escalation |
 | **Streaming** | Improves perceived latency where total time cannot be reduced |
 | **Parallel rather than sequential calls** | Where subtasks are independent |
 | **Tighter retrieval** | Less context to process. Reranking reduces cost and latency because the model processes less |
@@ -9193,7 +9238,7 @@ Documentation is the mechanism by which a design survives the departure of its a
 3. Evaluation is the asset that outlives any prompt. Make the success criterion specific, measurable, achievable and relevant; measure the five families of accuracy, latency, cost, safety and security; combine a code grader for validity with a model grader for quality; have the grader reason and then discard the reasoning.
 4. Prioritize volume over quality by automating the grading rather than keeping the set small, reserve humans for calibration and sampled review, and freeze the dataset so comparison keeps meaning something.
 5. **A stale eval suite is worse than none**, because it passes while measuring behavior the system no longer produces. Update the set in the same change as the behavior it measures.
-6. The evaluation harness is the component most often specified and least often built, so ask to see it running: thirty to fifty cases, two prompt versions, segment reporting and a deliberate breakage. Every run emits a manifest pinning model, sampling settings, dataset, grader, index and code version, because a score without one cannot be reproduced or defended. A number that moves when a known defect is fixed is what makes the harness an instrument.
+6. The evaluation harness is the component most often specified and least often built, so ask to see it running: thirty to fifty cases per reported segment, two prompt versions, segment reporting and a deliberate breakage. Every run emits a manifest pinning model, sampling settings, dataset, grader, index and code version, because a score without one cannot be reproduced or defended. A number that moves when a known defect is fixed is what makes the harness an instrument.
 7. Multi-step and multi-turn are different categories. Score a multi-step run on outcome as primary and on trajectory against constraints rather than against a reference path, charge the first step whose output was wrong rather than a fraction of steps completed, and separate the three tool-call failures that share one symptom. Multi-turn needs its own golden dataset of full transcripts and catches what single-turn scoring cannot see.
 8. Quality is a service level indicator with a measurement lag, so instrument fast proxies and shrink the exposure window. Commit to availability, latency percentiles and a measured quality level on a named population, never to correctness on a case.
 9. You cannot commit to availability you do not control, so take one of three positions and disclose which: pass-through, degraded mode or multi-provider. **An unevaluated fallback trades a visible outage for an invisible quality event.** Write the quality objective with a population, an instrument, a window and an action on a miss, run an error budget against it, and when the number drops localize in a fixed order beginning with the harness.
@@ -9791,7 +9836,7 @@ A policy assistant with a well-tuned retrieval stack: appropriate chunking, a la
 
 ### The human control with no authority
 
-A tier-one deployment routed high-impact outputs to a human approver. The control was documented, tested and audited. Approval rate: 99.8 percent. The approver was a junior analyst with two hundred items a day queued, no time to open a source, no subject-matter standing to disagree with a senior originator and a performance measure based on throughput.
+A tier-four deployment routed high-impact outputs to a human approver. The control was documented, tested and audited. Approval rate: 99.8 percent. The approver was a junior analyst with two hundred items a day queued, no time to open a source, no subject-matter standing to disagree with a senior originator and a performance measure based on throughput.
 
 **Systemic diagnosis:** the control existed in the design and not in the world. **A human control requires four things and this one had one:** time to perform it, information to perform it with, standing to disagree and an incentive that does not punish disagreement. This is a **people-and-controls interaction failure**, the most dangerous of the five: it produces a complete evidence trail of a control that never operated, worse than no control, since the organization has relied on it and can prove it.
 
@@ -10559,7 +10604,7 @@ Every figure in this block is perishable and several have changed in ways that a
 
 - Caching order: **tools → system → messages**. Everything before the breakpoint is cached
 - Cache lifetime **5 minutes**, refreshed **free** on each use; **1 hour** optional at 2x write price
-- Cache write **1.25x** base input (5m) or **2x** (1h); cache read **0.1x**
+- Cache write **1.25x** base input (5m) or **2x** (1h); cache read **0.1x** on most models and lower on some current ones (Appendix I, `cache.read.multiplier.*`)
 - Up to **4 breakpoints**; **20-block** lookback; below the model's minimum cacheable length, nothing caches and **no error is returned**
 - **Modifying a tool definition invalidates the entire cache.** Changing effort invalidates message caching
 - **Cache hits are not deducted against rate limits**
@@ -10631,3898 +10676,72 @@ Every figure in this block is perishable and several have changed in ways that a
 
 ## Appendix C: Scenario Drills
 
-Thirty design-review drills and two capstones, thirty-six items in all, then a closing run of five field postmortems and seven bench exercises in a different shape. The first capstone runs one workload through the decisions in order; the second puts four complete architectures side by side and asks which single commitment disqualifies each of the three that fail. Each one puts a situation in front of you with a defect planted in it and a short list of candidate responses, and the skill being practiced is locating the problem and then refusing the tempting wrong fix. The drills are diagnostic rather than definitional: one discriminating fact decides each of them, and the wrong moves are drawn from the seven wrong-move families in the Practice Layer's misdiagnosis catalog. The key names the section that decides each drill.
-
-### How to use these
-
-Work them after the recall run in Appendix D. Read the question sentence before the situation, note what the situation says is unchanged and hold to roughly two minutes each. Where a drill says select two, both have to be right. The drills run in mixed subject order and the key states each drill's subject. Read the key for the misses only, and for each miss name the wrong-move family you fell for before you read the rationale.
-
-### The drills
-
-**1.** A sponsor opens discovery with "we want an AI claims assistant, and it needs to be very accurate." Which question does the most design-determining work next?
-
-A. Which model tier does the budget support?
-B. If it gets a specific claim wrong, what happens, to whom and who finds out?
-C. What is the target launch date?
-D. Which vendor stack does IT prefer?
-
-**2.** An internal operations agent legitimately spans about 60 tools across five connected services. Every tool is appropriate to the role, but tool selection has become unreliable and definitions consume a large share of the context before any work starts. Which change fits?
-
-A. Remove tools until fewer than ten remain
-B. Add a confirmation prompt before every tool call
-C. Defer most definitions with tool search, keeping the few most-used tools non-deferred
-D. Move to a model with a larger context window
-
-**3.** An application sends five stable blocks of policy and instructions, then a sixth block containing a timestamp and the user message, with `cache_control` on block six. Billing shows a cache write on every request and no reads. What fixes it?
-
-A. Switch the breakpoint to the one-hour lifetime
-B. Move the breakpoint to block five, the last block identical across requests
-C. Enable automatic caching instead of the explicit breakpoint
-D. Raise `max_tokens` so generation is not truncated
-
-**4.** A team proposes an autonomous agent for vendor-contract intake because "no two contracts arrive alike." A wrong commitment posts payment terms to the ERP and cannot be recalled. What is the best response to the proposal?
-
-A. Approve it; an unpredictable path is the stated criterion for an agent
-B. Approve it with monitoring and alerting on anomalous commitments
-C. Decline it as scoped; unpredictability alone does not license an agent when an unexpected output is not acceptable and recoverable, so re-open the delegation map
-D. Approve it on a smaller model to cap the blast radius
-
-**5.** The policy validator that screens outbound customer messages has an outage. Messages are contractual once sent. While the validator is down, the system should:
-
-A. Fail open with alerting so service continues
-B. Fail closed: nothing goes out until the validator returns
-C. Degrade to sampling ten percent of outbound messages
-D. Ask the model to self-certify each message against the policy
-
-**6.** A four-document-type extraction system reports 97 percent aggregate accuracy, and the team proposes cutting human review by 80 percent on that basis. What is missing?
-
-A. Nothing; 97 percent clears any reasonable bar
-B. Accuracy by segment first, because an aggregate can mask total failure on one document type
-C. A larger model to push the aggregate higher
-D. A second aggregate run to confirm the first
-
-**7.** An underwriting agent must hand document-verification goals to a vendor-operated agent across an organizational boundary, with neither side exposing internals. The same agent also reaches its own document tools. Which layering is right?
-
-A. MCP for both connections
-B. A2A across the organizational boundary and MCP from each agent to its own tools
-C. Direct API calls in both directions
-D. A2A internally and MCP across the boundary
-
-**8.** A new engineer's sessions ignore the team's coding conventions. The conventions live in a senior engineer's personal configuration. The fix is to:
-
-A. Have the new engineer copy the personal file at each sprint start
-B. Move the conventions into the project, in version control, so everyone who checks out receives them
-C. Paste the conventions into every prompt
-D. Hold onboarding until the conventions are memorized
-
-**9.** High-volume extraction from semi-structured claims must survive unreliable first passes on edge cases. Asked to name the reference architecture, the strongest option is:
-
-A. Evaluator-optimizer
-B. Document processing pipeline → Evaluator-optimizer
-C. Retrieval-augmented generation (RAG)
-D. Agent
-
-**10.** A model grader returns a bare 7 out of 10 for nearly everything and comparisons have stopped moving. The change that fixes it is:
-
-A. Reword the rubric to demand stricter numbers
-B. Require strengths, weaknesses and reasoning before the score, then discard the reasoning
-C. Replace the grader with scaled human review
-D. Grade only the passing cases to save tokens
-
-**11.** A client escalates that "the assistant keeps getting renewal answers wrong." The vendor replies that uptime was 99.9 percent last quarter. What is the correct framing?
-
-A. The commitment was met; close the escalation
-B. Availability and quality are different promises; a quality commitment needs a named metric, a stated population, a routing rule for the remainder and an agreed consequence of a miss
-C. Offer a service credit and move on
-D. Raise the availability target
-
-**12.** A quarterly-updated policy corpus measures about 120,000 tokens. The team is scoping a vector database, an ingestion service and freshness monitoring. The better first answer is:
-
-A. Proceed; retrieval is the standard mechanism for knowledge bases
-B. Skip the pipeline: put the corpus in the prompt behind a cache breakpoint and refresh it at each quarterly update
-C. Build the pipeline but drop freshness monitoring to save cost
-D. Deploy an agent with web search instead
-
-**13.** Requests carrying base64 attachments are rejected with 413 `request_too_large` even though the counted tokens are under the model limit. Separately, some long generations end mid-sentence with no error. What is happening?
-
-A. Both are the token limit; move to a larger context window
-B. The 413 is the byte limit on the raw request body, a different unit from tokens; the mid-sentence endings are generation running into the window, which succeeds while truncating and should be monitored as a named condition
-C. The 413 is rate limiting; retry with backoff
-D. The prompt was too long, so a 400 should be expected instead
-
-**14.** A design routes any output whose self-reported confidence falls below 0.7 to human review, using the model's reported values directly. This is:
-
-A. Sound; confidence is the standard routing signal
-B. Unusable until reported confidence is compared against a labeled set and thresholds are derived from that calibration, because self-reported confidence is confidently wrong on exactly the hard cases
-C. Fixable by raising the threshold to 0.9
-D. Better replaced by routing on user sentiment
-
-**15. (Select two.)** A research orchestrator runs six subagents. About three percent of runs see one subagent return an empty result, and a separate incident lost an entire run when the orchestrator crashed mid-synthesis. Which two responses does the design call for?
-
-A. Fail the whole run whenever any subagent returns empty
-B. Validate each result and retry or re-route the failed unit, recording the gap rather than failing the run
-C. Protect orchestrator state and checkpoint progress so a failed run resumes rather than restarts
-D. Have the orchestrator redo dropped units itself
-E. Give every subagent the full conversation history so nothing is lost
-
-**16.** An eval set has stayed at 25 hand-graded cases because grading time is expensive, and the team asks for endorsement. The principle points to:
-
-A. Endorsing it; careful composition beats size
-B. Automating the grading and expanding the set, prioritizing volume and reserving humans for calibrating the automated grader
-C. Dropping offline evals in favor of production A/B testing
-D. Sampling five of the 25 per run to cut cost further
-
-**17.** A prompt instructs "only issue refunds for verified customers," and an audit asks whether that satisfies the authorization control. It does not, because:
-
-A. The instruction needs few-shot examples to hold
-B. The instruction must be repeated in both the system prompt and the user turn
-C. Authorization is enforced outside the model, in code, before the action executes; the model may request and the system decides
-D. Only the most capable model tier can follow it reliably
-
-**18.** An architect walks a steering committee through a single recommended design with no alternatives and no stated costs. The predictable outcome, and the fix:
-
-A. It reads decisive; keep it
-B. It reads unexamined and invites the room to invent alternatives; present the decision, the options considered, the criterion, the option chosen and the consequences accepted
-C. It needs more architecture detail for the executives
-D. It should be deferred to the committee to choose
-
-**19.** An Opus-tier workload is accurate but too slow and too expensive, and the tasks are of uniform moderate difficulty. The first lever to try is:
-
-A. Switching to the smallest model regardless of task fit
-B. Lowering the effort parameter and re-running the eval set
-C. Truncating retrieved context by half
-D. Adding chain-of-thought to the prompt
-
-**20.** Engineers append "summarize this per template X" inside the tool result that carries fetched third-party pages, and the instruction is intermittently ignored or flagged. The structural fix is:
-
-A. Repeat the instruction more emphatically inside the result
-B. Move your own instructions out of tool results, into a following user turn or the system prompt, because tool results are the channel the model is trained to distrust
-C. Raise the temperature so the model reads more loosely
-D. JSON-encode your instruction inside the result
-
-**21.** One deployment has two needs: exploratory research should run isolated with read-only tools, and a payment rule above a set threshold must be mechanically impossible to execute. Which primitive pairing serves both?
-
-A. Two Skills, one per need
-B. A Subagent with a tool allowlist for the research and a Hook for the rule
-C. A Subagent for the research and a Skill for the rule
-D. Hooks for the research and Dynamic Workflows for the rule
-
-**22.** A CI review agent reposts the same findings on every push and developers have stopped reading it. The fix is to:
-
-A. Tag findings with higher severity so they stand out
-B. Supply the previous findings on each re-run and ask only for what is new or still outstanding
-C. Run the review twice and post the union
-D. Return the reviews to humans only
-
-**23.** Output quality dropped after a configuration change. The model version is unchanged and latency is similar. The first suspect is:
-
-A. Silent drift in the model weights
-B. The effort or thinking configuration
-C. A temperature set too low
-D. A shrunken context window
-
-**24.** A 40,000-contract corpus is queried both by clause citation and by paraphrase, and the documents carry reliable article and section structure. The retrieval design is:
-
-A. Fixed-size chunking with dense indexing
-B. Semantic chunking with dense indexing
-C. Hierarchical chunking with hybrid indexing, merged by reciprocal rank fusion
-D. Hierarchical chunking with sparse indexing only
-
-**25.** A product manager wants Friday's release to swap the deployed model for the newest one because public benchmarks improved. The gate that should govern is:
-
-A. Swap and monitor complaints for a week
-B. Run the use case's own eval set against both models, with a rollback criterion set before the swap
-C. Poll the engineers on which output feels better
-D. Send ten percent of live traffic to the new model before any offline comparison
-
-**26.** A healthcare client's BAA covers its Bedrock configuration, and the team now wants to turn on a beta feature in that route for PHI work. The correct move is:
-
-A. Proceed; the BAA covers the route
-B. Confirm the feature's BAA eligibility first, because beta features are generally excluded from coverage unless explicitly listed as eligible
-C. Move the workload to consumer Claude.ai to ship faster
-D. Proceed and add logging on the new feature
-
-**27.** A departing architect leaves a current system diagram and interface contracts. Within a month the successor unknowingly reverses a deliberate throttling decision. The missing artifact was:
-
-A. A longer runbook
-B. Architecture decision records, the artifact that stops the next person from unknowingly undoing a deliberate choice
-C. A more detailed diagram
-D. The escalation matrix
-
-**28.** A ticket system classifies intent, sends documentation questions to a knowledge index, answers order-status queries from an hourly-refreshed snapshot index and routes escalations to a human queue. The defect is:
-
-A. The refresh interval; shorten it to five minutes
-B. Order status served from an index; replace that path with a tool call to the order-status service
-C. No agent tier for the complex cases
-D. The classifier; routing should be deterministic code end to end
-
-**29. (Select two.)** A routed ticket workflow was composed with RAG over policy text for exception cases. The single end-to-end eval suite is green, yet exception answers are degrading. Which two instruments does this call for?
-
-A. A separate eval set per architecture, one for the routed workflow and one for the RAG component
-B. A labeled retrieval set for the RAG side, because retrieval quality is not visible in the output
-C. Continued trust in the green composed suite
-D. An agent tier above the router
-E. A shorter index refresh interval
-
-**30.** A nightly re-scoring job over 200,000 records runs on the real-time lane "because batch usually finishes fast anyway," while a separate two-second SLA path shares the same capacity. The right split is:
-
-A. Move the nightly job to the batch lane at roughly half cost and keep the SLA path real-time
-B. Move both to batch, since it usually finishes quickly
-C. Downsize the SLA path's model to free capacity
-D. Truncate the records so both fit the real-time lane
-
-### Capstone: one scenario, three decisions
-
-One workload, the four decisions run in order. A regional insurer wants a claims triage assistant that reads each claim, decides priority, looks up policy status and drafts the customer reply. The insurer runs on AWS under an enterprise agreement, and its regulator requires processing to stay inside the approved cloud. Today low-confidence extractions flow through untouched, and the sponsor asks for "one agent that does it all."
-
-**31.** The defensible delegation map is:
-
-A. Claude owns all four steps end to end
-B. Claude reads the claim and drafts the reply; the policy-status lookup is a tool call to the system of record; Claude may classify priority while code routes on it; the reply is collaborative, with a person deciding before it sends
-C. Existing systems own reading the claim, since parsing is deterministic
-D. Humans perform the policy-status lookup so nothing is automated
-
-**32.** Given the regulator's cloud requirement and the AWS enterprise agreement, the route reasoning is:
-
-A. Direct Anthropic API, because the newest features ship there first
-B. AWS Bedrock, because governance and regulated-industry constraints rule routes out before cost or latency are weighed, and this route keeps processing inside the approved cloud while billing and identity inherit the existing agreement
-C. claude.ai Enterprise, because it adds SSO and audit logging
-D. Microsoft Foundry, because Entra ID is the stronger identity system
-
-**33.** The pipeline is about to ship with low-confidence extractions still clearing like clean ones. The most direct fix is:
-
-A. A better embedding model for the extraction step
-B. A human gate on the low-confidence branch
-C. A retry loop that re-runs extraction until confidence rises
-D. Logging low-confidence cases for quarterly audit
-
-### Second capstone: one brief, four complete architectures
-
-The first capstone runs one workload through the decisions in order. This one inverts the exercise. **Four architectures are proposed, each of them complete, each committing to all five decisions: entry point, pattern, the split across Claude, existing systems and people, model and context strategy, and the human-in-the-loop posture. One holds. The other three are individually plausible and each fails on exactly one decision**, which is the discrimination the drill is training. The skill is not spotting a bad design. It is spotting which single commitment disqualifies an otherwise sound one.
-
-**The brief.** A mid-market law firm of one hundred and eighty lawyers wants to shorten contract review. Senior associates spend an estimated twelve to eighteen hours a week reading vendor and partnership agreements to flag clauses conflicting with the firm's standard playbook. Average agreement length is thirty-five pages. The current work product is a redlined document with margin comments. The firm stores documents in a matter management system, has a private gateway approved by its own technology leadership, and is bound by privilege requirements that exclude consumer-grade tools. The target is a sixty percent reduction in associate time per contract with the senior associate remaining the final reviewer.
-
-**Option A.** Build on the end-user chat product, with associates uploading each contract into a shared project holding the playbook as reference files. A parallelized workflow reviews the contract section by section and aggregates the flagged clauses. A mid tier is the default with progressive context. The senior associate reviews every output before anything reaches a client.
-
-**Option B.** Build on the API or SDK, embedded in a thin internal application authenticating via the firm's sign-on and routing through the approved gateway. The playbook is loaded into the system prompt in full on every call so the model always has the firm's standard in context. A parallelized workflow reviews the contract by section and aggregates results. A mid tier is the default. The senior associate reviews every output.
-
-**Option C.** Build on the API or SDK, embedded in a thin internal application behind sign-on and the approved gateway. An open-ended agent is given the contract and the document-system tools and left to decide for itself how to work through it. The playbook is retrieved per clause at call time. The most capable tier runs on every call for maximum accuracy. The senior associate reviews every output.
-
-**Option D.** Build on the API or SDK, embedded in a thin internal application authenticating via sign-on and routing through the approved gateway. A parallelized workflow reviews the contract section by section, with an evaluator pass enforcing a strict schema on the flagged-clauses output. Claude handles extraction, classification against the playbook and draft redlines. The playbook stays in the firm's systems as a versioned source of truth, retrieved per clause at call time. The matter management system handles document fetch. A mid tier is the default with progressive context, and extended thinking is enabled per clause only where an eval set justifies it. The senior associate signs off on every output, and low-confidence clauses are flagged for attention.
-
-**34.** The architecture you would put in front of a partner-side review committee is:
-
-A. Option A
-B. Option B
-C. Option C
-D. Option D
-
-**35.** Option A is otherwise sound. The single decision that disqualifies it is:
-
-A. The pattern, since a parallelized workflow cannot preserve cross-clause context
-B. The entry point, since privilege requirements exclude the consumer-grade product and the firm already holds an approved gateway that the design bypasses
-C. The human posture, since reviewing every output does not reach a sixty percent time reduction
-D. The model tier, since contract review requires the most capable tier
-
-**36.** Option B differs from Option D at one place only. That difference costs it:
-
-A. Nothing material; B and D are equivalent designs
-B. Governance, since loading the playbook into the prompt removes the audit trail
-C. Both cost and correctness, since a full playbook resent on every call is monolithic context paid for on every clause, and a copy pasted into a prompt is a fork of a source of truth that is versioned somewhere else
-D. Latency, since a longer system prompt slows every call
-
-### Answer key with rationale
-
-1. **B.** Workflow. The consequence-of-error question drives review, control type, model tier, latency budget, eval content and viability; no other discovery question has that reach. A and C are inputs it later determines; D is technology-first. (1.2)
-2. **C.** Integration. Every tool is role-appropriate, so this is excess scale, not excess privilege: removal is unavailable and the answer is deferred loading, keeping the most-used tools non-deferred. A is a destructive shortcut, B a compensating control, D the a-bigger-window-does-not-buy-attention move. (3.2)
-3. **B.** Solution shape. Writes happen only at the breakpoint and the lookback finds only entries prior requests wrote, so a breakpoint on a block that changes every request never reads. C falls into the same trap, since automatic caching places the breakpoint on the last cacheable block, which here is the varying one. A and D are true irrelevance. (2.7)
-4. **C.** Solution shape. The two only-clauses are conjunctive: the path cannot be enumerated AND an unexpected output is acceptable and recoverable. Irreversible ERP commitments fail the second clause, so the work as scoped does not fit an agent. B is a compensating control; D is a destructive shortcut that changes nothing about recoverability. (2.4)
-5. **B.** Governance. Irreversible and contractual once sent is the fail-closed case. A misapplies the fail-open condition, which requires a reversible action; C mistakes a measurement instrument for a control; D makes the model a control over its own output. (4.4)
-6. **B.** Evaluation. Aggregate accuracy can mask complete failure on one segment; segment before reducing review. (8.5)
-7. **B.** Integration. A2A is the horizontal connection to a peer another party controls; MCP is the vertical connection from an agent to its own tools. D swaps them; A and C put one mechanism where two layers belong. (3.1)
-8. **B.** Adoption. Shared material belongs in the project, where version control distributes it. A and D are compensating controls, manual rituals layered over a defect that version control removes rather than makes visible; C spends context on every request. (7.5)
-9. **B.** Solution shape. A problem-class situation takes the compound name; the bare sub-pattern is accurate about the wrong component and drops the half of the name that carries the problem. (2.5)
-10. **B.** Evaluation. Encourage reasoning: think first, then score, then discard the reasoning, which exists to improve the score rather than as an artifact. C is the avoid-if-possible answer; A restates the problem; D destroys the comparison. (8.2)
-11. **B.** Operations. Availability is the system responding; quality is the answer being right, and a holdable quality commitment has four components. (8.8)
-12. **B.** Retrieval. Under roughly 200,000 tokens, about 500 pages, put the corpus in the prompt and cache it; a pipeline is infrastructure maintained forever. (5.3)
-13. **B.** Solution shape. Two limits in two units plus one silent failure: 400 for tokens, 413 for bytes, and generation running into the window returns success while truncating. A, C and D each mis-assign the mechanism. (2.2)
-14. **B.** Governance. Uncalibrated self-reported confidence is unusable as a routing signal and becomes usable only after comparison against a labeled set. C re-tunes an unusable signal; D swaps in the named unreliable trigger. (2.12)
-15. **B and C.** Solution shape. The asymmetry: subagent failures are recoverable, so validate, retry or re-route and record the gap rather than failing the run; orchestrator failures are often unrecoverable, so protect state and checkpoint progress so a run resumes. A contradicts record-the-gap; D violates "never does the sub-task work itself"; E ignores that a subagent inherits nothing by design. (2.4)
-16. **B.** Evaluation. Prioritize volume over quality: many automated cases beat few hand-graded ones, with humans reserved for calibrating the grader. (8.2)
-17. **C.** Governance. The model is not a security boundary; a prompt shifts probabilities and cannot enforce. D is the model-size wrong move. (3.5)
-18. **B.** Executive. The five-part structure, and consequences accepted is the element most often missing. (9.7)
-19. **B.** Solution shape. Tuning effort is often a better lever than switching models, and the change is then verified against the eval set. A is the downsizing wrong move; C is a destructive shortcut; D adds cost and latency. (2.6)
-20. **B.** Governance. The counter-intuitive point: your own instructions do not belong in tool results, because that channel is treated as untrusted; send them in a following user turn or the system prompt. D misapplies the JSON-encoding point, which is for the untrusted content, not for your instructions. (4.4)
-21. **B.** Solution shape. Different roles need different capability, so a subagent with a tool allowlist; a rule that must never be violated gets a hook, deterministic code the model cannot skip. Skills package procedures and cannot guarantee anything. (2.3)
-22. **B.** Adoption. Supply previous findings and ask only for what is new or still outstanding, or repeated comments spend developer trust until the reviews are ignored. (7.5)
-23. **B.** Operations. Quality change after a config change with no model change points at effort or thinking configuration, the diagnosis row easiest to miss on the current platform. A, C and D fail on what the situation says is unchanged. (8.5)
-24. **C.** Retrieval. Two decisions from two inputs: structured documents where section context carries meaning take hierarchical chunking, and a citation-plus-paraphrase query mix takes hybrid indexing merged by reciprocal rank fusion. D is the near miss that answers only the citation half. (5.3)
-25. **B.** Evaluation. Evaluations gate any model swap, and the rollback criterion is set before the change, not after. D inverts offline-before-online. (2.1, 8.6)
-26. **B.** Governance. A BAA that exists for one configuration does not extend to another, and beta features are generally excluded from coverage unless explicitly listed as eligible. D is a compensating control on a compliance gate. (2.8)
-27. **B.** Operations. Decision records are the load-bearing artifact because they alone preserve why, which is what prevents unknowing reversal. (8.11)
-28. **B.** Solution shape. Live state served through a snapshot index is the most emphasized failure in this set of architectures; the fix is a tool call to the system of record, and the shorter refresh interval is a named non-fix. (2.5)
-29. **A and B.** Evaluation. Each architecture carries its own eval contract, so separate sets per architecture, never one for the composed system; and retrieval quality is invisible in the output, so it needs a labeled set. E is a named non-fix. (2.5, 5.3)
-30. **A.** Operations. Nothing blocked belongs in the batch lane at roughly half cost, and a guarantee you do not have is not a guarantee, so the SLA path stays real-time. B is the named trap; C and D are destructive shortcuts. (8.10)
-31. **B.** Workflow. Three owners: Claude for language understanding and drafting, the system of record for policy status, humans for the consequential reply, with classification allowed to Claude while code routes on it. A collapses all three buckets into the first, the most common and most expensive early mistake. (1.3, 2.5)
-32. **B.** Solution shape. Governance and regulated-industry constraints rule routes out before cost or latency are weighed; the surviving route also inherits billing, identity and audit from the existing agreement. (2.3, 2.8)
-33. **B.** Solution shape. The document-pipeline architecture's named failure is no exception path, and the fix is a human gate on the low-confidence branch. A is a tuning non-fix; C is an invented remedy that adds cost without adding a control; D is a compensating control. (2.5)
-34. **D.** Solution shape. Only D commits correctly at all five decisions, and two of its commitments are the ones the other options miss: the playbook retrieved per clause from the firm's own versioned source rather than copied into the prompt, and extended thinking enabled selectively where an eval set justifies it rather than globally or not at all. The evaluator pass enforcing a schema on the flagged-clauses output is what makes the work product checkable, and flagging low-confidence clauses gives the reviewing associate somewhere to spend attention, which is what converts "reviews every output" from a rubber stamp into a control. (2.4, 2.6, 2.8)
-35. **B.** Solution shape. A's pattern, model, context strategy and human posture are all defensible, and it fails at the entry point alone. Privilege requirements exclude the consumer-grade product, and the firm has already built the thing the design needs: an approved gateway through which the audit trail is the firm's own. This is the rule-out rule of 2.1 and 2.8 in its purest form, since the governing constraint eliminates the option before any of the four sound decisions are weighed. A is wrong on the facts, because section-level parallelism is the right shape here. C misreads the target, since the reduction comes from the associate reading a marked-up summary rather than the agreement. D is the reach-for-the-strongest-tier move. (2.8)
-36. **C.** Solution shape. B is D with one substitution, the playbook loaded whole into the system prompt instead of retrieved per clause, and that substitution costs on two axes at once. **On cost**, a full playbook is monolithic context resent on every call, paid for on every clause of every contract, and it is the silent budget failure of 2.6 rather than a tuning inefficiency. **On correctness**, a playbook pasted into a prompt is a copy of a document that is versioned in the firm's own systems, so the two diverge the first time the standard positions are amended and nothing in the design notices. A is the trap, since the two options read as near-identical. B names a real concern that is not the one that bites, because the gateway still logs every request. D is true and trivial next to the other two. (2.6, 5.8)
-
-**Reading your misses.** Twenty-nine or more correct is a comfortable band on a set of this difficulty, counting a select-two drill as correct only when both halves are right. Below twenty-four, go back to the subjects the key shows you missing rather than re-running the set. A miss whose rationale you disagree with after reading it is worth more attention than one you merely forgot. **On the second capstone specifically, getting 34 right and 35 or 36 wrong is the diagnostic result**, because it means you recognized the sound architecture without being able to name what disqualified the others, which is the half of the skill a review committee actually asks for.
-
----
-
-### Field postmortems
-
-Five failures, each reconstructed from the pattern rather than from a single incident. They are drills of a different shape from the thirty above: there is no candidate list, because in the field there is no candidate list. Read the situation, name what actually broke before reading on, then check your answer against the resolution and, more importantly, against the misdiagnosis. **The misdiagnosis is the point of each one.** Every failure here has an obvious wrong fix that a competent team would reach for, and reaching for it leaves the defect in place.
-
-**P1. The evaluation suite that measured the wrong thing.** A contract review assistant is built for a professional services firm. The team tests it by hand against ten contracts they know well, declares it ready and ships. Two weeks later it is extracting obligations from the wrong section on contracts with non-standard obligation structures, a class it was never tested against. An evaluation suite existed throughout. It was built at the start of the project from the same ten development contracts, and it passed on every run, including the runs after the prompt was rewritten.
-
-*What broke.* Three decisions compound. The dataset was assembled from convenient inputs rather than a representative sample, so it measured a different system from the one shipped. The expected outputs were never updated after the prompt changed, so the suite kept scoring the behavior the prompt no longer produced, and the stability of the score was the evidence that nothing was testing the change. And manual spot-checks were treated as a substitute for evaluation, when a spot-check can only confirm that a known input yields a known output and says nothing about unknown inputs.
-
-*The misdiagnosis to refuse.* "The prompt regressed, so revise the prompt." The prompt is downstream. A suite that passes while production fails is the instrument under investigation, and the first question is whether its cases still resemble the live distribution.
-
-*⧉ The tell.* An evaluation score that has not moved across several substantive changes is not stable. It is disconnected.
-
-**P2. The demonstration cost profile that became the production bill.** A document triage system moves to production and is reviewed sixty days later. Three findings, from one team, describing one mistake from three directions. The demonstration ran ten to fifty requests a day, so the bill was negligible and was presented without extrapolation. The token distribution was assumed uniform and was not: the long documents in the tail consumed the large majority of total spend. And when the endpoint returned a server error at peak on day three, the entire workflow went down, because no failure path had ever been exercised.
-
-*What broke.* One root cause with three surfaces. A proof of concept was treated as a cost model, a distribution model and a reliability model, and it is none of the three. It answers whether the system can do the task. It does not answer what the task costs at volume, what the real input distribution looks like or what happens when a dependency fails.
-
-*The misdiagnosis to refuse.* "Move to a cheaper model tier." Tier substitution addresses the average and the problem is in the tail. Model the distribution first, because a design whose cost is driven by a small fraction of large requests does not respond to an across-the-board discount the way the average suggests.
-
-**P3. The scoping call that skipped the constraints.** A partner asks for a document review assistant that flags non-standard clauses. The architect confirms capability, promises a feasibility write-up and quotes six weeks. Two weeks into the build the partner mentions the operating reality: about eight hundred contracts a day, some framework agreements running to three hundred pages, results required inside thirty seconds.
-
-*What broke.* The feasibility verdict was issued before three constraints were gathered: volume, input size and latency. Each is an input to the verdict rather than a detail to be handled afterward. Whether a three-hundred-page contract fits without chunking is a function of the context window of the tier chosen, which makes context capacity part of the tier decision rather than a settled assumption.
-
-*The arithmetic worth doing before anyone panics.* Eight hundred requests a day is one request every hundred and eight seconds on average, so a thirty-second latency requirement is not the binding constraint it appears to be, and sequential processing is viable without parallelism. **At this volume the pressure lands on cost, not on latency.** Latency is set by task complexity, model size and output length, which are the variables the tier decision is actually built around.
-
-*The misdiagnosis to refuse.* "The latency requirement makes this infeasible, so negotiate the service level." The service level was never the problem, and negotiating it spends the partner's goodwill on a constraint that was not binding.
-
-**P4. The personally identifiable field that went straight into the prompt.** A patient intake summarization tool works correctly. The system prompt asks for presenting concerns, medications and allergies. The user message carries the patient's name, date of birth, national identification number, insurance identifier and clinical narrative, because that is the record the application had to hand. Review before production certification finds thousands of request-log entries holding identification numbers in plaintext in the application's own logs.
-
-*What broke.* The data handling was designed around what was convenient to pass rather than around what was necessary to pass. None of the identifiers were required by the language task. The remedy is an architecture change rather than a logging change: server-side redaction of non-essential fields before the call, and a retrieval function that supplies only the fields the task needs.
-
-*The misdiagnosis to refuse.* "Redact the logs." Retroactive redaction across a log history never designed to support it is the most expensive fix in this class, and it leaves the next request to build the same exposure again.
-
-*The rule that generalizes.* **Necessity is the filter. If a field is not required for the language task, it does not belong in the context window**, and a reference identifier is usually enough where routing rather than reading is the purpose.
-
-**P5. The fifty-session winner that was not.** A team with a working customer service agent and no formal experimentation process tests a revised system prompt against fifty sessions per arm. Task success reads sixty-eight percent against sixty-two. They ship it. Two weeks later the new version has settled at sixty-one.
-
-*What broke.* Three defects, any one of which is sufficient on its own. The sample was far below what a six-point difference on a high-variance metric requires, so the observed gap sat inside the noise floor. The input distribution was not controlled, and the treatment arm happened to receive fewer edge cases than the control, so part of the apparent gain was an artifact of routing rather than of the change. And the primary metric was selected after the result was seen, which converts a test into a search for whichever metric moved.
-
-*The misdiagnosis to refuse.* "Run it longer and it will hold up." Duration fixes the first defect only. Distribution control and metric pre-specification are design properties, and neither is recoverable by extending a test that was built without them.
-
-### Bench exercises
-
-Seven briefs to work rather than answer. Each is sized for a whiteboard, and the resolution names what a defensible answer contains rather than supplying a single correct string. The last three are cumulative and each is ordered so an early answer constrains the later ones: B5 assembles a production system, B6 a responsible one, and B7 runs a deployment through its full lifecycle to a handoff.
-
-**B1. The lever that does the work.** A customer service deployment processes fifty thousand requests a month. The system prompt is five thousand tokens and stable across every request. Average user input is three hundred tokens and average output four hundred. The ceiling is a fixed monthly figure and the target is a p95 inside a few seconds. Given a choice between moving up a model tier, enabling prompt caching and raising the output cap, which lever gets the configuration inside both targets.
-
-*Resolution.* Caching, and the reasoning is arithmetic rather than preference. A stable five-thousand-token prefix repeated across fifty thousand requests is the dominant input-cost driver in the model, and it is exactly the shape caching is built for. Moving up a tier raises cost and usually latency, which is the wrong direction on both targets at once. Raising the output cap buys headroom nobody asked for and pays for it in both. **The general form: find the largest repeated quantity in the cost model before touching the tier.**
-
-**B2. Feasibility triage.** Three requests, each needing a verdict and, more importantly, the single load-bearing constraint that makes the verdict defensible.
-
-| Request | Verdict and the constraint that carries it |
-| --- | --- |
-| A professional services firm wants an assistant that summarizes reports of ten to forty pages and drafts client briefings. Fifty reports a week, briefings inside a day, a modest monthly ceiling | **Feasible as scoped.** Input size sits well inside the context window, and volume, latency and cost are all comfortably in range at a mid tier. No property presents a disqualifying constraint, which is what makes this verdict available |
-| A logistics company wants unstructured carrier emails read for delay reasons and revised arrival times, written back to the order management system. Five thousand emails a day, inside ten seconds, a modest ceiling | **Feasible with constraints.** The load-bearing constraint is not volume, which a fast tier with caching absorbs. It is that the output is a transactional write into a system of record, which calls for a code-based check on extraction accuracy plus a human gate on low-confidence extractions before anything is written |
-| A financial services firm wants trading recommendations from current market conditions plus a proprietary model, inside two seconds | **Not feasible as described.** The load-bearing constraint is the live-state knowledge gap. Current market data has to come from a tool call to a live feed, and whether that round trip fits inside a two-second budget is a measurement that has to be taken before any verdict is issued |
-
-The pattern across all three: **the verdict is the cheap part. The constraint is the work**, and a verdict offered without one is an opinion.
-
-**B3. Critique the integration diagram.** A customer service agent at a multi-tenant software company. Seven labeled components. Name the ones that are integration defects and leave the sound ones alone.
-
-| Component | Verdict |
-| --- | --- |
-| The developer-facing coding agent used as the backend for the customer-facing chat product | **Defect.** That surface is built for developer workflows, not as a multi-tenant product backend. The API, a client SDK or the agent SDK is the right route |
-| One shared API key across all tenants | **Defect.** Attribution and isolation both fail here, and they fail at peak, which is when you need them |
-| Capability decided from a claim in the user message that the sender is a premium customer | **Defect.** Authorization taken from manipulable input. Entitlement is resolved server side, never asserted by the caller |
-| Account number and email in the user message, appearing in request logs | **Defect.** Convenience over necessity, and the exposure lands in the application's own logs |
-| A server-side authentication layer in front of the API | **Sound.** This is the control the third row was missing |
-| Tenant data isolated per tenant at the storage layer | **Sound.** Necessary, and not sufficient on its own while the key is shared |
-| The response passed to the downstream system with no logging at the integration layer | **Defect.** The unlogged hop is the one you will be asked to reconstruct |
-
-**Five defects and two sound components, and the two sound ones are the instructive part.** A design can hold correct controls at the storage and authentication layers and still fail, because the defects sit at the identity, attribution, data handling and observability layers instead. Partial correctness reads as safety in a diagram review, which is why the review has to walk every layer rather than stop at the first control it recognizes.
-
-**B4. The evaluation framework brief.** A regional insurer deploys a system that reads a submitted claim, extracts structured fields, summarizes the narrative for an adjuster and flags claims that may warrant fraud review. It must answer within seconds, hold a per-claim cost, never leak one claimant's material into another's summary and never automatically decline a claim. Write the framework: for each of five dimensions, the metric, the grading method and one sentence of justification.
-
-*Resolution: what a defensible framework contains.*
-
-| Dimension | Metric | Method | Why that method |
-| --- | --- | --- | --- |
-| **Accuracy** | Field-level correctness per field, and separately whether a genuinely absent field was reported absent rather than invented | Code-based | The expected value is known and the comparison is deterministic. Nothing here needs judgment |
-| **Latency** | Time to first token and total time, as distributions, reported at p95 rather than as a mean | Instrumented measurement | Not a grading problem at all. The common error is grading it like one |
-| **Safety** | Summary faithfulness to the claim file, and a hard check that no output constitutes a decline | Model judge for faithfulness, code-based for the decline prohibition | Faithfulness needs interpretation. The prohibition is absolute, and an absolute rule belongs in code where it cannot be reasoned around |
-| **Security** | Cross-claimant leakage rate, tested with deliberately adjacent records | Code-based, with adversarial cases in the set | Leakage is detectable by matching identifiers across outputs. The difficulty is in constructing the cases, not in scoring them |
-| **Cost** | Fully loaded cost per completed claim, including retries and human review minutes | Instrumented measurement | Per-request cost understates it. The unit is a completed claim |
-
-Two properties separate this from a list of metrics. **Each dimension names its method for a stated reason**, which is what makes the framework reviewable. And **the two absolute constraints, no leakage and no automatic decline, are enforced in code rather than scored by a judge**, because a constraint that can be argued with is not a constraint.
-
-**B5. The cumulative brief.** A consulting firm of roughly six hundred people wants an internal knowledge assistant: retrieve excerpts from past engagement reports, answer questions about firm methodologies and draft first responses to client proposals using prior work. Twelve thousand documents ranging from five to eighty pages. Peak eight hundred requests a day. A fixed monthly ceiling in the low thousands. Sub-eight-second p95. Existing single sign-on and an existing document management system. Some documents carry client-confidential material under non-disclosure obligations.
-
-Five decisions, in this order, each of which should be answerable before any build begins.
-
-1. **Evaluation strategy.** Name the primary task, then how retrieval relevance and draft quality are each measured, then which grading method each takes and why. One behavior suited to code-based grading and one that requires a judge. The golden dataset strategy, and the handling of the confidentiality constraint, which is a provenance and access question about the evaluation corpus itself rather than a scoring question.
-2. **The proof-of-concept-to-production checklist.** What must be verified before commitment. A cost model built at eight hundred requests a day rather than at demonstration volume, tested against the ceiling. The reliability pattern that matters most here and why. The failure mode specific to this architecture, which is a retrieval system and therefore drifts rather than crashes.
-3. **Sizing and feasibility.** Run it through the four properties. Working memory against eighty-page documents. Knowledge against proprietary methodologies that are not in training data, and the mitigation that follows. Then the verdict, and the load-bearing boundary condition that makes it defensible.
-4. **Integration pattern.** Where the identity boundary sits relative to the model call given the existing sign-on. How the confidential subset is handled given that the document store holds it alongside everything else. What is instrumented, and what question each record exists to answer.
-5. **Experimentation posture.** A hypothesis for a proposed retrieval change, stated so it can fail. Treatment, primary metric and the constraint on secondary metrics. Then the sample the effect requires, and what that implies for duration at eight hundred requests a day. Then the input distribution control the corpus structure demands, since documents ranging from five to eighty pages will not distribute evenly across arms by accident.
-
-*Resolution: what a defensible answer contains at each decision.* The arithmetic is worth doing rather than gesturing at, because three of the five decisions turn on a number.
-
-**Decision 1, evaluation strategy.** The primary task is retrieval-grounded drafting, which splits into two measurable behaviors that take different methods. **Code-based:** schema compliance on the citations the system emits, meaning document name, page and section present and well formed. Deterministic, and it catches the failure where a draft is fluent and its provenance is unusable. **Model judge:** relevance and appropriateness of the draft to the proposal it answers, which no function can encode. The golden dataset is built from past proposals with client names redacted, sourced from the firm's own historical engagements so it reflects the real distribution rather than a convenient sample. **The confidentiality constraint is a provenance question about the evaluation corpus, not a scoring question**, and it resolves the same way in both directions: documents under non-disclosure obligations are excluded from the eval set unless the client has given explicit approval. A team that treats this as a redaction problem has misread it. Redaction changes the document; exclusion changes who may hold the set.
-
-**Decision 2, the checklist.** Eight hundred requests a day is twenty-four thousand a month, and the per-request budget is roughly two thousand tokens of system prompt and standing methodology framing, three thousand of retrieved context and two hundred of query, so about five thousand two hundred input tokens against roughly six hundred output. A mid tier with caching on the stable prefix brings that inside a ceiling in the low thousands. **The answer is not complete until it says that this is a flat average and flat averages are the named failure of this exercise.** A corpus running from five to eighty pages produces a retrieved-context size that is plausibly bimodal rather than clustered at the mean, and a tail of large excerpt requests understates input cost on an average model. The within-ceiling verdict holds under the assumed distribution and is provisional until the sensitivity analysis of 8.10 has been run against it. The reliability pattern that earns its place is a fallback to a faster tier on latency spikes, since the binding commitment is a p95 rather than a cost ceiling at the margin. And **the failure mode specific to this architecture is retrieval quality drift**: a retrieval system degrades as documents are added and indexed inconsistently, it does not crash, and draft quality degrades behind it without an error anywhere.
-
-**Decision 3, sizing and feasibility.** The working-memory analysis is the one most answers get backwards. An eighty-page document is roughly twenty-nine thousand tokens and fits inside a current context window with room to spare, so **the individual document is not the constraint and chunking is not the load-bearing decision here.** The constraint is corpus scale: twelve thousand documents averaging on the order of fourteen thousand six hundred tokens is approximately one hundred and seventy-five million tokens, which exceeds any window by three orders of magnitude. That is what forces a retrieval layer, and naming the right reason matters because the wrong reason sends the design toward a chunking strategy for long documents rather than toward index coverage. On knowledge, the firm's proprietary methodologies are absent from training data, and the mitigation is to index them into the same retrieval corpus as the engagement reports rather than to expect the model to hold them. **The system does not need the model to know the methodologies. It needs the retrieval layer to put the right methodology excerpt in front of it**, which makes retrieval precision on methodology queries a metric in its own right rather than a component of general quality. Verdict: **feasible with constraints.** The load-bearing boundary condition is retrieval index coverage and freshness. The system works while the index contains the relevant methodology and engagement material and stays current as the corpus changes; if documents are added without being indexed, or the index drifts out of sync with the document store, the knowledge mitigation fails silently and the system omits or misrepresents firm methodology. That condition belongs in the scope document as an operational constraint with an owner, not as a note.
-
-**Decision 4, integration.** The sign-on token is verified server side, and the user's role and authorized document sets are injected into the prompt by the server rather than supplied by the user, which is the rule from 8.5 and 3.5 applied to a system whose whole value is differential access. The confidential subset is handled at the retrieval layer, not at the prompt: documents tagged confidential in the document store are retrievable only by consultants whose role covers the relevant engagement, and **the access check happens before content reaches the model rather than as an instruction to the model about what to ignore.** Client names are replaced with anonymized identifiers before a document enters the context window. Instrumentation records model version, input token count with cache hit or miss, retrieval precision for the request measured against the grounding documents, output token count, user role and session identifier, and the consultant's acceptance or revision of the draft as the outcome signal. Alerts sit on the p95 crossing the eight-second commitment and on retrieval precision falling below its threshold. **Each record exists to answer a question someone will ask**: cache hit or miss answers the cost question, retrieval precision answers the boundary-condition question from decision 3, and the acceptance signal is the only one of the five that measures whether the system is useful.
-
-**Decision 5, experimentation.** The hypothesis has to be falsifiable and constrained on both sides: the new retrieval configuration raises draft task success, measured as consultant acceptance without major revision, from a seventy percent baseline to at least seventy-five, without pushing the p95 above eight seconds or per-request cost up by more than a tenth. Detecting a five-point improvement on a seventy percent baseline at eighty percent power and a five percent two-sided significance level needs about one thousand two hundred and fifty sessions per arm, which most planning conventions round up to one thousand five hundred to absorb the sessions that will be discarded as unusable. At eight hundred requests a day split evenly, the calculated figure is a little over three days and the rounded one under four, which is short enough that the experiment is worth running properly rather than approximated. **Quote the rounded number and the calculation behind it, because a sample size presented without its inputs cannot be checked**, and the inputs are the baseline rate, the minimum detectable effect and the power and significance levels. **The input distribution control is not optional here and the corpus is the reason.** Proposal complexity varies with document length and with the number of source documents retrieved, both of which vary widely across a five-to-eighty-page corpus, so the arms are stratified on those proxies and their composition is reported alongside the result. Segment by proposal type where the volume supports it.
-
-**What separates a strong answer from a complete one: the numbers, and the fact that each one comes from the decision before it.** A hundred and seventy-five million tokens, one thousand five hundred sessions an arm, four days. An answer that names the architecture without the arithmetic has described a design rather than sized one.
-
-**The reason this brief is cumulative rather than long: every decision constrains the next one.** The confidentiality constraint in decision one reappears as a data handling decision in four. The cost model in two sets the ceiling that the tier choice in three has to respect. The verdict in three determines whether decision five is testing a system that is allowed to run unsupervised. Working them in isolation produces five defensible answers that do not compose.
-
-**B6. The responsible deployment brief.** A public-sector benefits assistant helps an agency decide programme eligibility, recommending approve, deny or refer. The governing framework is a government authorization regime at the agency's required impact level, plus the agency's own rule that a denied applicant receives the specific reason. The high-stakes case is an applicant near the eligibility threshold with incomplete documentation, where a wrong denial removes someone's benefits. The skew-prone output is the recommendation and the reason attached to a denial. The data comprises applicant-submitted fields, agency records retrieved at decision time, and derived features.
-
-Five decisions, in order, and the order is load-bearing in a way the other briefs are not. **A weak early choice narrows what the later ones can do, and one of them cannot be recovered at all.** If a domain rule is left in trained behavior at decision one, no downstream control can put it back, because nothing downstream is watching for a rule that was never written.
-
-1. **Set the boundary between trained behavior and your application layer.** Which obligations belong to the provider's layer and which are yours.
-2. **Place the runtime controls.** Input screening, output screening and tool-call authorization: where each sits, whether each is model-based or deterministic, and the failure direction for each.
-3. **Specify the fairness and transparency controls.** Which injection points could skew this outcome, and what the decision log has to capture.
-4. **Define the human-review routing.** The rule, and the placement.
-5. **Build the control register.** Obligation to control to owner to evidence artifact.
-
-*Resolution: what a defensible answer contains.*
-
-| Decision | What the answer has to name |
-| --- | --- |
-| **1. Boundary** | The programme's eligibility rules. Trained behavior refuses broad harm classes and has never seen this programme, so eligibility, the denial-reason obligation and any entitlement scoping are application-layer rules. **The test is mechanical: for each obligation, name the layer that holds it.** An obligation whose answer is the model has been identified as unenforced |
-| **2. Runtime controls** | All three points, each with a check type and a direction. **Fail closed**, and the reason is specific to this deployment rather than general: a screen that fails open lets an unscreened denial reach an applicant, and a denial is the output the agency's own rule attaches an obligation to |
-| **3. Fairness and transparency** | Which of 4.5's five routes to skew can reach a denial here. The agency records retrieved at decision time are the corpus route and the one the architect controls. Build the decision log **once**, because the affected applicant, the regulator, the build team and the control register all draw on the same record and differ only in the slice and the retention |
-| **4. Review routing** | Route on confidence, reversibility and cost, not volume. A low-confidence denial near the threshold on incomplete documentation is hard to reverse and high-cost, so it goes to **pre-action approval**. **Reversibility and cost set the stakes; confidence only sets how much of the high-stakes volume can pass unreviewed.** Keying the rule to volume waves a high-stakes denial through a quiet queue |
-| **5. Control register** | Each obligation to a control, a named owner and the evidence a reviewer accepts. The authorization record for the route, the residency or data-flow record, and a sample reconstruction of one decision from the live log. **A control with no evidence artifact is a claim you cannot prove operated** |
-
-**Two things separate a strong answer from a general one.** It is specific to this brief at every decision: which injection points, which failure direction, which routing variables, which artifact. And it notices that **the denial-reason obligation from the brief is the thread running through four of the five decisions**: it makes the denial an explainable output in decision one, it is why the screening direction matters in two, it sets what the log must hold in three, and it is an evidence obligation in five. A brief that mentions a requirement once and never again has usually not been read as a system.
-
-**B7. The lifecycle brief, from a stakeholder's first sentence to a handoff.** A regional healthcare network running across two states deploys a clinical documentation assistant. Nurses dictate patient interactions and the assistant drafts the structured clinical note. A licensed clinician must authorize every note before it reaches the patient record. The workflow carries a health-privacy obligation with an audit-trail requirement and a data-residency rule. The partner is standardized on one cloud and runs some non-regulated back-end work on the first-party API. You are four weeks in, the original architect is rotating off, and the finance function is asking what the deployment is worth.
-
-Seven decisions, in lifecycle order. This brief differs from B5 and B6 in what it is testing: not whether you can design the system, but **whether the reasoning survives your departure**.
-
-1. **Discovery.** Name the must-prove constraint that most shapes the architecture, and write the one requirement row it forces.
-2. **Tradeoff framing.** The network asks for the lowest-latency design. Frame the tradeoff between trimming logging and keeping the audit trail, in three elements.
-3. **Feedback loop.** Define one governance row mapping the required output audit to a review trigger, independent of any metric.
-4. **Documentation.** Name the one decision-log row whose absence would let a successor reverse a compliance-load-bearing choice, and the rejected alternative it must carry.
-5. **Entry point.** Pick primary and secondary routes, and name the configuration step that prevents the common residency failure.
-6. **Outcome document.** Name the before-and-after business metric and the auditable control that make it usable to a finance reader.
-7. **Phase gate.** Name the artifact that gates the next phase transition, and judge whether that gate is satisfied.
-
-*Resolution: what a defensible answer contains.*
-
-| Decision | What the answer has to land |
-| --- | --- |
-| **1. Discovery** | The audit-trail obligation, written as a requirement row: the deployment must produce an auditable record of every model-generated note authorized by a licensed clinician, traceable to the specific interaction. **The assumption column carries the scope**, which is confirmed with compliance rather than inferred from the word healthcare |
-| **2. Tradeoff** | Gain: faster perceived response and a smoother clinician workflow. Give up: the per-interaction audit detail the obligation requires. **Reversal cost: once the system is built around the latency gain, restoring logging is a redesign of the interaction layer, and the gap period is a compliance exposure that has to be disclosed and remediated.** The third element is the one that decides the meeting, and here it is also the one that makes the first two moot |
-| **3. Feedback loop** | A calendar-fired row: periodic output audit against the documentation standard, triggered on schedule regardless of eval score or error rate, owned by the compliance lead, actioned as a stakeholder review with the audit record submitted. **The point of the row is that it fires when nothing is wrong** |
-| **4. Documentation** | The context and routing decision: explicit in-region execution rather than a global endpoint. Rejected alternative: the global endpoint, for simpler configuration. Tradeoff resolved: setup simplicity against residency compliance. **Load-bearing because a successor solving an unrelated performance problem will revert to the simpler configuration and break residency without knowing they have** |
-| **5. Entry point** | Primary: the partner's standardized cloud route, configured for explicit in-region execution, because the partner is standardized there and the residency rule governs. Secondary: the first-party API for the non-regulated back-end work where feature currency matters and no residency rule applies. **Configuration step: set the region parameter explicitly rather than relying on default endpoint resolution** |
-| **6. Outcome document** | Before and after: average time from dictation to a completed, clinician-authorized note, on the same definition both times. Auditable control: the clinician-authorization log, timestamped and tying clinician, note and interaction, **which is what makes the comparison auditable rather than asserted** |
-| **7. Phase gate** | The outcome document gates the expansion decision. **The gate is not satisfied at week four**, and saying so is the answer. The before metric exists from baseline; the after metric requires enough post-deployment runtime to measure. The correct action is to name the measurement owner, confirm the control is logging, and schedule completion at a defined post-launch milestone rather than producing a document the numbers cannot yet support |
-
-**Decision 7 is the one that separates a strong answer.** Every other decision rewards producing an artifact. This one rewards refusing to produce one yet, and saying why. An architect who fills in an after metric at week four to close out an engagement has manufactured the number the whole document exists to make auditable.
+Moved on 18 October 2026 to the Primer Workbook: [primer-workbook/scenario-drills.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/scenario-drills.md), thirty design-review drills, two capstones, an answer key, five field postmortems and seven bench exercises.
 
 ## Appendix D: Self-Check Bank
 
-162 questions, grouped by subject, weighted toward the subjects where the work is hardest rather than evenly across the ten. Answer from memory, then check the key. The section reference after each answer says where the material is developed, so a miss sends you somewhere specific.
-
-### Workflow and delegation
-
-1. Name the three owners every solution has, and say what belongs to each.
-2. State the three-way delegation rule in one line.
-3. Name the three justification criteria for a delegation assignment, each as the question it asks.
-4. Reversibility and stakes are not the same axis. Give an example that is low on one and high on the other.
-5. State the three outcomes of a delegation decision, and say which one most designs collapse into another.
-6. What is the reverse test that most delegation maps are missing?
-7. A policy states a spending threshold in prose. Who finds the threshold and who applies it?
-8. What three things does over-assigning to Claude do to a process?
-
-### Solution shape and patterns
-
-9. State the four key decisions, in order.
-10. Is there an ordering doctrine for the four, and what holds instead?
-11. Name the characteristic failure of choosing the entry point first.
-12. Name the three layers of the platform map, what each one is chosen for and who in a client organization typically chooses it.
-13. A client's regulator requires that processing happen inside its own cloud tenancy. Which layer of the platform map has been constrained, and which two have not?
-14. Name all seven primitives with their jobs, and give the distinguishing question for tools versus Skills.
-15. Why is a subagent a context-management primitive and not only a delegation primitive?
-16. What does a subagent inherit from its parent?
-17. Distinguish subagents from agent teams in one sentence, and give the question that tells them apart.
-18. When do you reach for a hook rather than a prompt instruction?
-19. What is the difference between a tool and an MCP resource, in terms of who decides to use it?
-20. Name the rungs of the complexity ladder in order.
-21. What two things fall as you climb the ladder, and what does that do to your testing strategy?
-22. State Anthropic's rule about adding complexity, and explain what each of its two key words is doing.
-23. What are the three augmentations of the augmented LLM?
-24. Where exactly is the line between a workflow and an agent?
-25. Name the five workflow sub-patterns.
-26. What is prompt chaining's trade-off, and why does that make it wrong for a latency problem?
-27. What distinguishes parallelization from orchestrator-workers?
-28. Name the two variations of parallelization.
-29. What are the two signs of good fit for evaluator-optimizer?
-30. What must an agent obtain at each step, and what happens without it?
-31. Give the two conditions for choosing an agent, and explain why they are conjunctive.
-32. Name the four constraints that bind an agent in production, and say whether they are optional.
-33. Name Anthropic's three implementation principles for agents.
-34. Name the five comparison factors and the question each answers.
-35. Why is a workflow rated Low on predictability and an agent High, and what does that tell you about how to read the table?
-36. What is the mechanical reason a guardrail is harder to place inside an agent than between workflow steps?
-37. Name the two roles in a multi-agent system, and say what the orchestrator never does.
-38. Name the three things that must be designed rather than assumed in a multi-agent system.
-39. Which multi-agent failure is often unrecoverable, and what are the two design responses?
-40. A subagent returns an empty result. What do you do with the run?
-41. Where does a human-in-the-loop gate belong in a multi-agent design, and what is the alternative for lower-stakes actions?
-42. What is the test for whether you have a reference architecture?
-43. Name the five reference architectures.
-44. Two of the five names contain an arrow. What does the arrow tell you?
-45. What are reference architectures, and what are they not?
-46. When do you draw on a second pattern, and what does it mean if you are reaching for one because you have not decided what problem you are solving?
-47. Name the three symptoms of the most common reference architecture mistake, and the three non-fixes.
-48. Why is switching up the autonomy ladder more expensive than switching down?
-49. Give the core trade-off each of Claude.ai, Claude Code and Cowork carries, and the trade-off carried by the direct API and by the SDKs.
-
-### Models, prompting and context
-
-50. Name the four properties of the model and the design verb each implies.
-51. What is the value of naming the four properties up front?
-52. Why is a model's self-reported confidence poorly calibrated, in terms of the mechanism?
-53. Give the four-part risk concentration list for next-token prediction, and the named mitigations.
-54. Why does a required schema field cause fabrication, in terms of the mechanism?
-55. An instruction's letter and its intent diverge. What is the mitigation, and what is it not?
-56. What is the "right altitude" problem, and what are its two failure modes?
-57. Name Anthropic's three techniques for long-horizon tasks and the selection rule between them.
-58. What is context rot, and what is its architectural cause?
-59. Does a larger context window solve attention quality?
-60. Name the four questions that design a context system, and the strategy each drives.
-61. State the principle distinguishing context strategy from context sizing.
-62. What is just-in-time context, what does it buy and what does it cost?
-63. Name the four strategies for tool context pressure and what each one reduces.
-64. Give the three considerations for deciding between a prompt library and a Skill, and which side of each favors a Skill.
-65. In the worked example of a reusable prompt asset, what belongs in the cached prefix, and why?
-
-### Integration
-
-66. Name the four integration mechanisms, say which three move a capability and which one moves a procedure, and give the selection rule.
-67. Name the four build-time interfaces, and say what makes MCP and API tool use different layers rather than alternatives.
-68. An agent holds tools its role never uses. Name the correct fix and two wrong ones.
-69. What is Anthropic's test for whether a tool set is too large?
-70. An agent legitimately needs 60 tools. Is the answer removal, and if not, what is it and what is the trade-off?
-71. Where do authorization decisions belong, and why?
-72. Name four authentication or authorization gaps common in AI integrations.
-73. Name the three properties a token presented to a remote MCP server must have, and the failure each one prevents.
-74. What is token passthrough, why is it tempting, and what does it actually delete?
-75. Why is local versus remote MCP an authorization decision before it is a deployment decision?
-76. Agent-to-agent raises two authorization questions the single-agent case never does. Name both.
-77. Distinguish server tools from Anthropic-schema client tools, and say why the line matters architecturally.
-78. Name two supplied tools that carry an egress or execution risk a design document usually omits, and say what each implies.
-79. Why should the latency budget be allocated by segment before any optimization lever is chosen?
-80. What almost always owns an unbounded latency tail, and what is the design response?
-
-### Retrieval and knowledge
-
-81. State the retrieval principle, and say why the failure is hard to detect.
-82. When should you not build a retrieval pipeline at all?
-83. A knowledge base is 150,000 tokens and changes monthly. Design the retrieval approach.
-84. Why can retrieval not answer "how many of our contracts contain this clause"?
-85. A user searches by contract number and never finds anything. What is wrong?
-86. Name the three chunking approaches, what they are chosen by and which one suits contracts and policies.
-87. Name the three indexing strategies, what they are chosen by and give three examples of a sparse-retrieval query.
-88. What is reciprocal rank fusion, and what property makes it the default?
-89. Name the three things every retrieval design trades off, and say which two move in the same direction.
-90. State the rule that decides whether retrieval is needed at all, and the threshold attached to it.
-91. A counting query returns a wrong number from a retrieval-backed system. Name the correct diagnosis and the wrong fix.
-
-### Evaluation, testing and operations
-
-92. Why must a model grader be asked for reasoning before a score?
-93. Your team wants to keep the eval set small because grading is expensive. What does Anthropic's guidance say to do?
-94. How many eval sets does a composed two-architecture system need, and why?
-95. Why is 97 percent overall accuracy insufficient grounds for reducing human review?
-96. What is the single most important item in an observability capture set, and why?
-97. What is the difference between a system failure and a quality failure, in terms of instrumentation?
-98. What are the four components of a quality commitment you can hold?
-99. Why can you not make a quality commitment before an evaluation harness exists?
-100. Give the cost optimization order, and name two things not on the list.
-101. What does "sizing" mean, and which number actually matters?
-102. Give the seven verbs of the ops loop in order.
-103. In the ops reference design, what does the machine do and what does the human retain?
-104. What is the test of whether documentation is adequate, and which artifact is load-bearing?
-105. How many cases does an evaluation set need, and what determines the answer?
-106. Describe the failure mode of an evaluation set iterated against for six months, and the two habits that prevent it.
-107. The harness score is rising and the production metric is flat. Which one is under investigation?
-108. What is the peeking problem, and what is the remedy?
-109. Why is reporting a primary metric across twelve segments not twelve free results?
-110. Traffic is too low for a clean online split. Name the three honest options and the dishonest one.
-
-### Governance, safety and risk
-
-111. Name the five guardrail layers and say which carries the strongest controls and why.
-112. Beyond placing a control, what must you also decide, and what are the three options?
-113. Where must untrusted third-party content be placed, and where must your own instructions not be placed?
-114. Which of the five human-in-the-loop patterns is a measurement instrument rather than a control?
-115. Why is uncalibrated self-reported confidence unusable for review routing?
-116. State the discriminator between hooks and permission boundaries, and the separate discriminator between permission boundaries and sandboxing, both under Claude Code's governing layer.
-117. Which bias source is most within an architect's control?
-118. Why is equal accuracy across two groups not sufficient evidence of fairness?
-119. Which named constraint in the regulated-industry constraints table rules out a route on the ground that a BAA exists for a different configuration than the one in use, and why does BAA existence alone not settle the question?
-120. A healthcare network holds a confirmed AWS BAA. A competing proposal would negotiate a separate Anthropic BAA instead. Name the deciding factor, and the row of the regulated-industry constraints table that confirms it.
-121. Under the GDPR row of the regulated-industry constraints table, which delivery route cannot be confirmed for residency, and what do you do instead?
-122. Government-authorized delivery routes run on a lag relative to commercial releases. What does that mean for a design that names a specific Claude model and a FedRAMP requirement together?
-123. What distinguishes binding AI legislation from every other framework family, and what does architecture owe the determination?
-124. Why is a hook attached to an observe-only event not a control?
-125. An enterprise policy and a project setting disagree. Which applies, and why does the answer matter?
-
-### Stakeholder work and adoption
-
-126. Name the three rooms and what is decided in each.
-127. Who is interviewed first and second in discovery, and why is the second the highest-value interview?
-128. What is the single most design-determining discovery question, and what does it drive?
-129. Name the five-part structure for presenting a decision and the part most often missing.
-130. Which lifecycle phase is most reliably botched, and what does the failure look like?
-131. Name the five business value pillars and say what each one selects.
-132. The same contract review workload is designed under efficiency and under a turnaround commitment. Name two ways the architecture differs.
-133. Three parties hold three different pillars for the same system and nobody has noticed. What is the architect's move?
-134. Which instrument does each pillar name, and why does the owner matter as much as the number?
-135. What are the four questions the input stage must answer, and which one is characteristically omitted?
-136. What is the characteristic omission of the output stage, and why does it bite specifically in AI systems?
-137. The feedback stage is designed but nothing improves. Name the missing element.
-138. Name three requirements the four-stage pass produces that pattern selection alone never raises.
-139. What does the review asymmetry mean for sizing an AI-assisted delivery pipeline?
-140. A program reports higher deployment frequency and higher change failure rate in the same quarter. What has happened?
-
-### Enablement and productivity
-
-141. Name the four development workflows, and the wrong answer to reject when complexity is already stated in the requirements.
-142. State the shared-versus-personal diagnostic pattern: symptom, cause and fix.
-143. What four things does an automated review pipeline require?
-144. What is the success measure the word "enablement" implies?
-145. Name the four configuration scopes in precedence order and what belongs in each.
-146. Distinguish slash commands, Skills and plugins by the question each answers.
-147. Why is the marketplace the governance artifact rather than the plugin?
-148. Name the four AI-assisted delivery integration points and the characteristic failure of each.
-149. State the three rules for an agent doing live incident diagnosis.
-150. What is the failure mode of agent-assisted diagnosis, and what contains it?
-
-### Product mechanics and figures
-
-151. In what order does prompt caching process the prompt, and why does that order matter?
-152. Your application pays a cache write on every request and never records a read. What is wrong, and what is the fix?
-153. What happens if your cached prefix is below the model's minimum cacheable length?
-154. Which single change invalidates the entire cache, and what does that imply about how you treat that artifact?
-155. Name three benefits of prompt caching beyond cost.
-156. Name the two errors that occur at the edge of the context window, the status code each returns and the third failure that returns no error at all.
-157. One parameter is often a better lever than switching models. Which, and what does it trade?
-158. Which model generations take adaptive thinking with the effort parameter as the recommended control, and what happens to `budget_tokens` on each?
-159. Which model tier do you start a new deployment on absent other constraints, and what is the documented default for complex agentic coding and enterprise work?
-160. Name the five end-user entry points, and which one is purpose-built for engineering rather than general knowledge work.
-161. Name Claude Code's six permission modes, and which two are scoped to unattended or CI use rather than interactive work.
-162. Name the five delivery routes and, for each, the one fact that most directly signals when a client should pick it.
-
-### Answer key
-
-1. What Claude does: work benefiting from language understanding, summarization, planning, drafting or tool-mediated action. What existing systems do: anything the client has already paid to make reliable, being the order-status service, the policy engine, the rules table, the database of record. What humans do: the judgment calls, the exception paths, the approvals, the moments where being right matters more than being fast. (1.3)
-2. Claude owns the judgment and drafting work; existing systems own what the client already paid to make reliable; humans own the consequential calls. (1.3)
-3. Reversibility: can a wrong call be undone? Stakes: what does a wrong call cost? Accountability: who must answer for it? (1.3)
-4. A message sent to a client is cheap and irreversible; a miscalculated quote caught before issue is expensive if it escapes and fully reversible before it does. Different designs follow: the first needs a gate before sending, the second needs a check before release. (1.3)
-5. AI-appropriate work, human-retained work and collaborative work where Claude drafts and a person decides. Collaborative work is the one that gets collapsed into AI-appropriate, which strips out the provenance and the real point of refusal that an approved draft needs. (1.3)
-6. For every step assigned to Claude, name the thing that verifies it. If you cannot, add verification or move the step. (1.3)
-7. Claude may find the threshold in the policy; the policy engine, an existing system, must apply it. (1.3)
-8. Makes it more expensive, slower and harder. Slower is the counter-intuitive one. (1.3)
-9. What part of the work does Claude own; what is the shape of the work; can you name the reference architecture; where does your work interact with Claude. (2.1)
-10. No general doctrine. Do not treat the four as stages: recognize which decision is in front of you, as each one rewards a different move. Two narrower claims hold. Naming a reference architecture up front saves expensive pivots, and over-assigning to Claude is the most common and most expensive early mistake. (2.1)
-11. The team commits to a surface because it is familiar, then discovers the work does not fit it and rebuilds. The tell is that someone can name the tool but not the architecture. (2.1)
-12. Entry points, chosen for the user and the work, typically by product with the architect. Build-time interfaces, chosen for the engineering team and the integration, by engineering. Delivery routes, chosen for the client's cloud, by infrastructure, procurement and compliance. (2.3)
-13. The delivery route, and only that. The entry point and the build-time interface are untouched. Conflating the three is the most common source of muddled architecture conversations, and the practical cost of the error is either killing a viable deployment or waving through a non-compliant one. (2.3)
-14. Tools (ACT), MCP (CONNECT), Subagents (ISOLATE / PARALLELIZE), Hooks (GUARANTEE), Skills (PACKAGE A PROCEDURE), Agent Teams (COORDINATE PEERS), Dynamic Workflows (COMPOSE AT RUNTIME). Tools versus Skills: does it create a new capability, or describe how to use existing ones? (2.3)
-15. Because it works in a clean context and returns only a condensed summary, so verbose exploration never enters the parent's window. (2.3)
-16. Nothing. Not history, not other subagents' findings. Everything must be written into its instructions. (2.3)
-17. A subagent receives a scoped sub-task handed down from a parent and returns a result; an agent team is multiple agents working as coordinated peers, each owning part of a larger goal. The question: is the work handed **down**, or **across**? (2.3)
-18. When the rule must hold every time. Hooks are deterministic; prompts are probabilistic. Financial, legal and irreversible actions get hooks. (2.3)
-19. A tool is used reactively, when the model decides mid-task that it needs something done. A resource is fetched proactively by the application, with no model decision involved. (2.3)
-20. Single call; augmented call; chaining; routing; parallelization; evaluator-optimizer; orchestrator-workers; dynamic workflow; autonomous agent; agent team. (2.4)
-21. Predictability and testability. A fixed path can be tested step by step; an agent's path differs run to run, so climbing invalidates your testing strategy. (2.4, 2.5)
-22. Add complexity only when it demonstrably improves outcomes. "Demonstrably" means measured, not argued. "Only" puts the burden of proof on complexity, not on simplicity. (2.4)
-23. Retrieval, tools and memory. (2.4)
-24. Who controls the control flow. In a workflow your code decides what happens next; in an agent the model does. (2.4)
-25. Prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer. (2.4)
-26. It trades latency for higher accuracy by making each call an easier task. So if the problem in front of you is latency, chaining makes it worse. (2.4)
-27. Whether the subtasks are pre-defined. Parallelization's are known in advance; orchestrator-workers' are determined by the orchestrator from the specific input. (2.4)
-28. Sectioning, being independent subtasks run in parallel, and voting, being the same task run multiple times. (2.4)
-29. That responses demonstrably improve when a human articulates feedback, and that the model can provide such feedback. (2.4)
-30. Ground truth from the environment, such as tool results or code execution. Without it the agent cannot assess progress, catch its own errors or adapt. (2.4)
-31. The path through the work cannot be enumerated in advance, and the cost of an unexpected or inconsistent output is acceptable and recoverable. Conjunctive because unpredictability alone does not license an agent: an unpredictable path with an unrecoverable failure mode means the work does not belong to an agent as scoped. (2.4)
-32. Constrained tool entry points, per-turn budgets, explicit permissions and stopping criteria. They are not optional. They keep an agent from becoming a liability. (2.4)
-33. Maintain simplicity; prioritize transparency by showing planning steps; carefully craft the agent-computer interface through tool documentation and testing. (2.4)
-34. Predictability, can you enumerate the steps in advance? Error cost, what does a wrong answer cost: a retry, an audit, a lawsuit? Observability, can your operations team see what happened and reconstruct why? Latency budget, what is the user-visible deadline? Cost, what is the per-request token cost at your expected volume? (2.4)
-35. Because the ratings grade how much of that factor's burden the pattern imposes on you, not the level of the named quality. A workflow imposes no unpredictability burden because you wrote the path; an agent's trajectory is unpredictable by design. Read every cell as "how much of this will hurt," so Low is favorable throughout. (2.4)
-36. In a workflow the control flow lives in your code, so there are seams between steps where deterministic guards sit. In an agent the model's trajectory is the control flow, and there is no code boundary where a guard can sit. (2.4)
-37. The orchestrator and the subagents. The orchestrator owns the goal: it decomposes the work, decides what to delegate and synthesizes the results into a single answer. It never does the sub-task work itself; its job is delegation and synthesis. Subagents own scoped sub-tasks: each runs in its own context, does one piece and returns a result. (2.4)
-38. How the work is decomposed into sub-tasks; how each subagent's result is structured so the orchestrator can combine it; how the orchestrator resolves conflicts or gaps when the results come back. Each of the three has a default a designer falls into without deciding, which is why **assumed** is the word doing the work. (2.4)
-39. The orchestrator losing the goal or its synthesis state. Protect orchestrator state, and checkpoint progress so a failed run can resume rather than restart. Everything else in the table is recoverable, and the asymmetry is the point: make subagent work idempotent and retryable, and protect the orchestrator's state. (2.4)
-40. Validate each result, retry or re-route the failed unit, then record the gap rather than failing the run. The correct behavior on an unrecoverable sub-task failure is to degrade with a recorded gap, not to abort. (2.4)
-41. Before any irreversible or high-stakes action a subagent would otherwise take autonomously. The alternative for lower-stakes actions is to **sample** them, not to gate each one and not to ignore them. The gate is positioned by the risk and reversibility of the action about to be taken, the same two axes as reversibility and stakes in the delegation criteria, and it is part of the orchestration design rather than something bolted on afterward. (2.4, 2.12)
-42. Can you name it? If not, you have an accretion: no known failure modes, no cost model, no precedent. (2.5)
-43. Agent; Retrieval-augmented generation (RAG); Document processing pipeline → Evaluator-optimizer; Customer-service / ticket triage → Routing; Coding agent (agentic exploration with deterministic edit/test/review steps). (2.5)
-44. That the left side is a problem class and the right side is one of the workflow sub-patterns, so the arrow reads "is well served by." Reference architectures are proven pairings of a recurring problem to a pattern, not a separate taxonomy, which is why every row carries a cross-reference back to the pattern material. (2.5)
-45. They are documented patterns for how to wire an LLM application together to solve a recurring class of problem, already proven in the Claude ecosystem. They are references to adapt, not specifications to implement as drawn: the goal is explicitly not matching a problem to a fixed design and building it exactly. (2.5)
-46. Draw on a second when the two parts of your problem break in different ways that are worth managing separately. If you are reaching for a second because you have not decided what problem you are solving, adapt a single pattern instead: that is a design decision you are deferring, not a pattern you are applying. Composing two roughly doubles the surface area you maintain, so when in doubt, pick one. (2.5)
-47. Symptoms: stale chunks; results that shift with each index refresh; answers that contradict what is in the database. Non-fixes: a better chunker or embedding model, a shorter refresh interval, a higher similarity threshold. The fix is a tool call to the system that owns the live state. (2.5)
-48. Because switching up invalidates your testing strategy: control flow moves to the model, and what could be tested step by step no longer can. Context passing, error propagation and provenance all become new problems. (2.5)
-49. Each entry point carries its own core trade-off: Claude.ai trades zero build cost against zero integration; Claude Code is purpose-built for engineering, which is the trade-off, since it is the wrong shape for non-engineering work; Cowork trades real system actions against supervision overhead. The build-time interfaces trade maximum control against maximum responsibility for the direct API, and ergonomics against control for the SDKs. (2.8)
-50. Next-token prediction → verify. Knowledge → supply. **Working memory** → curate. Steerability → constrain. (2.2)
-51. It keeps later design conversations precise: you can say "this is a knowledge-boundary problem" instead of debating whether the model is "good enough." (2.2)
-52. "I don't know" is itself just a plausible continuation, selected on the same basis as any other output. Nothing in the mechanism inspects the model's own state. (2.2)
-53. Names, dates, citations, statistics. The named mitigations are citations, uncertainty signaling and generator-verifier loops, plus routing specific factual lookups through tool calls or authoritative sources. (2.2)
-54. Because generation is continuation. Filling the field is a more plausible continuation than leaving it empty, so a required field the source lacks gets invented. (2.2)
-55. Restate the goal explicitly alongside the instruction. It is not repeating the instruction more emphatically, not adding constraints and not lengthening the prompt. (2.2)
-56. Getting a system prompt's specificity right. Too brittle: hardcoded if-else logic in prose. Too vague: high-level guidance that assumes shared context. (2.7)
-57. Compaction, structured note-taking, subagent architectures. Compaction for tasks needing extensive back-and-forth; note-taking for iterative development with clear milestones; multi-agent where parallel exploration pays dividends. (2.2)
-58. As token count rises, recall accuracy from context decreases. Cause: transformers create n-squared pairwise relationships, which stretches thin as length grows. Models also see shorter sequences more often in training. (2.6)
-59. No. Windows of all sizes remain subject to context pollution and relevance concerns. A bigger window does not buy attention quality. (2.6)
-60. "What does the model need at the start?" drives the monolithic baseline. "What does it need from the most recent steps?" drives the progressive window. "What might it need to fetch on demand?" drives the retrieval layer. "What earlier material can be compressed without losing decision-relevant detail?" drives the compaction policy. (2.6)
-61. Context strategy and context sizing are separate decisions that interact but do not determine each other. Treating them as one is where most context-management designs go wrong. (2.6)
-62. Maintaining lightweight references and loading data at runtime through tools. Buys scale, relevance and lean context, plus behavioral signal from the reference metadata. Costs round trips, and requires good tools and heuristics or the agent wastes context chasing dead ends. (2.6)
-63. Tool search reduces definitions loaded up front; programmatic tool calling reduces tool-result round trips; prompt caching reduces the cost of repeated tokens without reducing their number; context editing removes stale tool results from history. Pick the one matching where your tokens are actually going. (2.6)
-64. Repeatability, distribution, governance. A Skill is favored when the procedure is stable and run the same way every time, distributed across teams or products needing the same procedure and needs versioning, approval and rollback. A library is favored when the prompt is assembled and tweaked per use, shared within one codebase or team and lightly governed. (2.7)
-65. The role, tone rules, output contract and never-promise guardrail, as the stable prefix, with only the ticket and manual section as per-request content. Dynamic content before the breakpoint changes the prefix on every call, so the cache never hits. (2.7)
-66. Direct API or CLI, MCP and agent-to-agent move a **capability** across a boundary; the **Skill** moves a **procedure**, and it belongs in this decision because it has a request-time surface, a publication surface and a runtime dependency. One rule covers all four: prefer the simplest mechanism satisfying reuse and ownership. One consumer, call directly; a capability surface owned once and used by many, MCP; two autonomous systems delegating goals across an organizational boundary, agent-to-agent; one procedure that must be versioned and distributed and whose sandboxed runtime is acceptable, a Skill. (3.1)
-67. Direct API, SDKs, MCP, Agent SDK. MCP is the protocol for sharing a tool entry point across multiple clients; API tool use, available through the direct API or an SDK, is how Claude calls a tool inside one request. An MCP server exposes tools that any MCP-aware client then calls using API tool use, so the two compose rather than compete. (2.8)
-68. Remove them from the configuration. Wrong: adding logging and adding a confirmation prompt. Both are detective or compensating controls that do not reduce attack surface. (3.2)
-69. If a human engineer cannot definitively say which tool should be used in a given situation, the model cannot be expected to do better. (3.2)
-70. No. Removal answers excess *privilege*; this is excess *scale*, and the answer is tool search, deferring definitions until Claude searches for them. The trade-off is one extra round trip on first discovery, which is why below roughly ten tools loading everything up front is faster. (3.2)
-71. Outside the model, in code, before the action executes. A probabilistic component cannot enforce a deterministic rule, and the model is not a security boundary. (3.5)
-72. Any four of: shared privileged service account; agent inheriting full operator scope; the model asked to enforce authorization; credentials in shared configuration; long-lived credentials with no revocation; no per-request attribution; tenant bleed in retrieval; injected content treated as authority; over-broad scope at the connector. (3.5)
-73. Audience binding, so a token issued for one server is not replayable against another. Governed or dynamic client registration, so the client population is enumerable and revocation is surgical rather than a broadcast. And no token passthrough, so the server obtains its own credential downstream rather than forwarding the caller's. (3.5)
-74. Forwarding the caller's downstream token instead of exchanging it. It is tempting because it removes a credential exchange and appears to preserve end-user identity. It deletes the boundary between the connector and the system behind it, so a scope granted for the connector becomes a scope held against everything the connector can reach. (3.5)
-75. A local server runs with the desktop user's ambient authority: their filesystem, their network position, their authenticated sessions. Nothing in the protocol constrains that and no central function can see it. Anything reading or changing regulated data therefore belongs in a remote server behind the gateway, where token, scope, audience and log are all controlled. (3.1, 3.5)
-76. On whose behalf is the calling agent acting, and does the receiving agent get to know, since authenticating the agent is not establishing the human principal. And how far does delegation extend, which requires authority to attenuate at every hop and the chain to be recorded. (3.5)
-77. Server tools are executed on Anthropic's infrastructure; client tools are executed on yours from a published schema. The line is a data-flow decision: a server tool means content leaves your boundary, and for web search and web fetch the system also reaches the public internet from there. It belongs in the data-flow diagram and the residency assessment, and it is invisible in the one line of code that enables it. (3.3)
-78. Web fetch, which retrieves content the system did not choose, making every fetched page untrusted input. And code execution, which runs generated code, a capability the risk tier must have contemplated. Neither is an argument against use; both are an argument for naming them in the architecture. (3.3, 4.2, 4.4)
-79. Because the easiest lever to pull is rarely the one that owns the wall clock. Teams spend quarters on model latency in systems whose retrieval stage dominates. Instrument every segment separately, budget against the ninety-fifth percentile rather than the median, and leave headroom unassigned. (8.10, 3.9)
-80. A retry loop, a tool call without a timeout, or a cache miss on a cold path. The response is an explicit deadline for the whole request, propagated to every segment so each knows how much time remains, plus a defined answer for what the system returns when the deadline passes. A partial answer on time is a design decision; a complete answer late is often an incident. (8.10)
-81. Retrieval is for stable knowledge: things that were true yesterday and will be true tomorrow. Tool use is for live state: things whose current value is owned by a system and changes independently of your index. Hard to detect because the system shows no error signal: normal latency, no errors, a fluent and confident answer and nobody in a position to notice except the user whose own data it is. (2.5)
-82. When the corpus fits comfortably in the context window and rarely changes. Cache it in the prefix: simpler, more accurate, often cheaper. (5.3)
-83. Skip retrieval. At 150,000 tokens it is under Anthropic's ~200,000-token threshold, so put the whole corpus in a cached prefix and re-warm it after each monthly update. Simpler, more accurate and cheaper than a pipeline, with no ingestion or index freshness to operate. (5.3)
-84. Retrieval samples; it does not enumerate. It will answer confidently from the handful of chunks it retrieved. Use a structured query. (5.3)
-85. Purely semantic search with no lexical component. Semantic matching is weak on exact identifiers. (5.3)
-86. Fixed-size, semantic and hierarchical, chosen by the structure of the source material and not by a default size. Hierarchical suits structured documents such as contracts, manuals and policies, where section context carries meaning, and it retrieves at the level that fits. (5.3)
-87. Dense (embeddings), sparse (keyword, for example BM25) and hybrid, chosen by the query pattern. Three sparse examples: part numbers, statute citations, error codes. Hybrid is the common production case. (5.3)
-88. The standard way to merge the two ranked lists a hybrid index returns: each result is scored by its rank in each list, and the combined score favors items that rank well in both. It is the default because it is **low-tuning**: ranking rather than scoring means it never has to reconcile two incompatible scoring scales. (5.3)
-89. Retrieval quality, latency and maintenance. Quality and latency move in the same direction, not against each other: smaller chunks and hybrid indexing raise both, while larger chunks and dense-only indexing lower latency and maintenance but miss exact-match queries. (5.3)
-90. Retrieval is for stable knowledge; tool use is for live state owned by a system of record. Below roughly two hundred thousand tokens of corpus, the retrieval layer may not be needed at all and the whole corpus can be supplied directly. (5.3)
-91. The diagnosis is that retrieval cannot answer counting queries: similarity returns a sample, not a population. The wrong fix is a better chunker, a shorter refresh interval or a higher similarity threshold. The correct move is a tool call to the system that owns the count. (5.3, 5.4)
-92. Asked for a bare number it gives everything a middling score. Forced to state strengths, weaknesses and reasoning first, it differentiates. (8.2)
-93. The opposite of keeping it small. The principle is to prioritize volume over quality: automate the grading and expand the set, because many automatically graded cases beat few hand-graded ones. Human grading is to be avoided where possible and reserved for calibration. (8.2)
-94. Two, one per architecture, never a single set for the composed system. The reason: a system that looks healthy at the top level can be masking failures in one of its components. Each architecture carries its own eval contract. (2.5, 8.2)
-95. It can mask complete failure on one document type or one field. Segment before concluding. (8.5)
-96. A correlation identifier tying every step of one logical request together. Without it, multi-step systems are undebuggable. (8.5)
-97. A crashed request appears in the logs. A fluent, well-formatted, confidently wrong answer does not. Logs tell you the system ran; only evaluation and sampled review tell you it was right. (8.5)
-98. A named task-appropriate metric; the population it applies to; the routing rule for the remainder; the agreed consequence of a miss. (8.8)
-99. Because a quality commitment requires the evaluation apparatus: a defined metric, a measurement method, a segment breakdown and an agreed threshold. Availability is a different promise with a different remedy, and if someone has already made a quality commitment on your behalf, surface it early. (8.8)
-100. Measure, cache the stable prefix, trim unused content, route by difficulty, parallelize, defer non-blocking work, stream, shorten prompts last with measurement. Not on the list: truncating required content and downsizing the model doing the hard work. (8.10)
-101. Capacity and cost modeling: volume and peak, token split, call multiplier, unit prices, sensitivity, feasibility. The number that matters is cost per completed outcome. (8.10)
-102. Notice, triage, reproduce, diagnose, propose, review, capture. (8.9)
-103. The machine collects the period's errors, discards noise, deduplicates so a hundred instances of one failure are one problem, diagnoses each distinct issue against the codebase and produces a proposed change. The human retains the decision: nothing applies without review. (8.9)
-104. Whether a competent person who has never met you could operate, diagnose and safely change the system. The load-bearing artifact is the architecture decision records, because they are the only thing preventing the next person from unknowingly undoing a deliberate choice. (8.11)
-105. A floor of thirty to fifty per segment you intend to report on, not thirty to fifty in total, and beyond that the effect size you need to detect against the measured noise floor. Run the unchanged system against the set several times and treat the spread as the floor: a difference smaller than it is not a result. (8.2)
-106. It becomes a training set: every revision was selected because it moved the score on those cases, so the score measures fit to the set rather than capability. Hold out a portion from the start and check it only at a release gate, and rotate cases, retiring those every version passes and replacing them from production failures. (8.2)
-107. The harness. Production is the population and the set is the sample, so when they disagree the field is right. Look first at whether the set still resembles the live distribution, and resist the reading that production is noisy. (8.2)
-108. Checking an online test repeatedly and stopping when it turns significant inflates the false-positive rate, because each look is another chance for noise to cross the line. The remedy is a stopping rule fixed in advance: a target sample size, or an explicitly sequential design whose thresholds account for repeated looks. A continuously watched dashboard is a peeking machine. (8.6)
-109. It is twelve tests, and at a conventional threshold roughly one will look significant by chance. Nominate the primary metric and primary segment in advance and treat the rest as exploratory, generating hypotheses for the next test rather than conclusions for this one. (8.6)
-110. Lengthen the window and accept the delay; test on a faster-moving proxy metric validated separately against the outcome metric; or abandon the online test and rely on offline comparison plus staged rollout with tight monitoring. The dishonest option is running the underpowered test anyway and presenting the result as evidence. (8.6)
-111. Input, model, tool, output, process. The tool layer, because that is where actions happen and its controls are deterministic. (4.4)
-112. What happens when it fails. Fail closed for safety-critical or irreversible actions; fail open with alerting only where blocking causes more harm and the action is reversible; or degrade to human review. (4.4)
-113. Untrusted content goes **only in tool results**, never in system prompts or plain user text blocks, because Claude is trained to treat tool-result content with skepticism. Your own instructions must **not** go in tool results, for the same reason: they may be ignored or flagged as an injection. Put them in a following user turn or a mid-conversation system message. (4.4)
-114. Sampled review. It tells you the error rate; it does not prevent the unsampled remainder from being wrong. (2.12)
-115. It is poorly calibrated and is confidently wrong precisely on the hard cases, which is where the signal was needed. Usable only after calibration against a labeled set. (2.12)
-116. Hooks govern what must happen before or after an action; permissions govern what the agent is allowed to touch. Sandboxing governs what the agent is physically capable of reaching regardless of what it asks; the environment itself enforces the boundary rather than the agent's judgment or an approval prompt. (2.8)
-117. The retrieval corpus. The architect chooses what is indexed, and skew in the corpus is inherited by every answer. (4.5)
-118. Because equal accuracy with unequal error *types* is still unfair: a false positive and a false negative have different consequences for the person affected. (4.5)
-119. HIPAA. A BAA that exists for one configuration does not extend to another, so an uncovered route is ruled out even when the client holds a BAA elsewhere. Feature eligibility also matters, since beta features are generally excluded from BAA coverage unless explicitly listed as eligible. (2.8)
-120. The existing, already-confirmed BAA under AWS Bedrock, against a not-yet-negotiated BAA for the competing direct API proposal. Confirmed by the HIPAA row: an uncovered configuration is ruled out even where a BAA exists elsewhere, and BAA existence alone is not sufficient. (2.8)
-121. Microsoft Foundry. Its residency guarantees cannot be confirmed here. Verify against the Foundry route's current documentation before relying on it for residency. (2.8)
-122. The model named may not yet be available on the government-authorized route at all, regardless of which route otherwise fits the compliance requirement. The real constraint may be "confirm the model is offered on that route," not just "pick the FedRAMP-authorized route." (2.8)
-123. It is entered by operating a system rather than adopted voluntarily, and the obligations depend on the role the organization holds rather than on how it describes itself. Architecture owes a factual record precise enough to support the determination: what the system does, what it is used for, what data it processes, what a human can and cannot override, and what changed since the last assessment. Scope, tier and role are legal conclusions. (4.16)
-124. Because a control must be able to refuse. A hook that can only observe is telemetry. When a design says a step is mandatory, the question is which hook class enforces it and whether that class can block. (2.8)
-125. Managed policy wins, ahead of the command line, then project settings, then user settings. It matters because a control placed in version-controlled project settings can be lifted by anyone with commit rights to the repository it was meant to constrain, which makes it documentation rather than a control. The test is whether the person the control binds can change it. (2.8)
-126. Discovery, where the real requirements are set (1.2); approval, where a trade-off is won or lost (9.3, 9.7); handoff, where the design either survives your absence or quietly degrades (8.11, 10.6).
-127. The business owner first, for the outcome and the metric that frame everything else. The people who do the work today second, because they know how it actually works rather than how the process document says, and they hold the unmeasured current error rate that becomes your baseline. Highest-value, most frequently skipped. (1.2)
-128. What is the consequence of a specific error? It drives whether human review is required, whether controls must be deterministic, which model tier is justified, the latency budget, the evaluation set and project viability. (1.2)
-129. The decision, the options considered, the criterion used, the option chosen and the consequences accepted. The fifth is the one most often missing, and it is what distinguishes a professional recommendation from advocacy. (9.7)
-130. Handoff. The design lives in the architect's head, operators inherit something they cannot reason about, and quality degrades quietly because nobody knows what normal looks like. Handoff is a property designed for from the beginning, not an event at the end. (10.6)
-131. Efficiency, transformation, productivity, cost and performance service level commitments. The pillar selects what the design optimizes, the metric it is measured against and the baseline that metric needs. Name the pillar before defending the design. (2.1)
-132. Under a commitment, extraction runs on arrival rather than in a batch and capacity is sized for the peak rather than the mean; a degraded path returns a partial summary rather than queuing; and caching targets time to first token rather than cost per document. Same workload, same model, different architecture, and neither is better in the abstract. (2.1)
-133. Force the question at intake, in writing, because it is answerable in one sentence then and unanswerable once three parties have a stake. Where they genuinely conflict the sponsor arbitrates, and the decision is recorded with the pillars that were not chosen named explicitly. (2.1)
-134. Cycle time for efficiency, a previously non-existent outcome measure for transformation, throughput per person with rework alongside for productivity, cost per completed outcome including human minutes for cost, and the committed percentile as users experience it for service levels. The owner matters because an unowned baseline is renegotiated at the moment it would have been inconvenient. (2.1, 8.7)
-135. Where each input originates and who owns it; what validates shape and content and what happens on failure; what the maximum size is and what happens above it; and which inputs are untrusted. Size and failure are omitted: designs specify the happy input and discover the ceiling in production. (2.5)
-136. The failure form and the idempotent write. It bites because retries are unavoidable and agents retry on their own initiative, so a write that never considered a retry duplicates records. (2.5, 3.3)
-137. The route. Measurement without a defined path by which a result changes a prompt, a retrieval configuration or a model choice, under a named approver, is reporting rather than feedback. (2.5, 8.8)
-138. The idempotent write, the licensed unclassifiable or absent value, and the correction signal the architecture generates for free and most implementations discard. Pattern choice gives the shape; the four stages give what the shape has to survive. (2.5, 2.4)
-139. Generation is cheap and review is not, so every integration point raises the volume presented for human judgment while judgment capacity stays fixed. Size against review capacity rather than generation capacity, and treat an unreviewed merge as a defect rather than as throughput. (7.5)
-140. Work has moved downstream into incidents and the productivity claim is unearned. Change failure rate is the metric that decides the argument, which is why the baseline has to be taken before the rollout rather than after. (7.5)
-141. Plan first, direct execution, test first, independent review. Reject "start directly and switch to planning if complexity emerges" when the complexity is already stated in the requirements. (7.5)
-142. Symptom: a new team member is not receiving the team's conventions. Cause: someone put them in a personal location, where version control cannot distribute them. Fix: move them to the project. (7.5)
-143. Run non-interactively, or the pipeline waits forever; request machine-readable output; supply project conventions so generated work matches house standards; on re-runs, supply the previous findings and ask only for what is new or still outstanding. (7.5)
-144. That the team runs the system without the architect. Success is the architect's absence being unremarkable. (8.9)
-145. Managed policy for non-negotiable prohibitions; command-line invocation for run-specific choices including pipeline permission mode; project settings, shared for team conventions and local for personal deviations; and user settings for individual ergonomics. Managed policy beats the command line, which beats project settings, which beat user settings. (2.8)
-146. A slash command stops a team retyping one instruction. A Skill stops a team re-explaining a multi-step procedure without paying context for it on every task. A plugin, distributed through a marketplace, ships a versioned and revocable bundle of both plus subagents, hooks and server definitions to a large population at once. (2.8)
-147. Because it makes the configuration estate enumerable, which is the precondition for saying what is deployed, revoking a component that turns out to be wrong and evidencing that the deployed standard is the documented one. Configuration distributed by pasting files into a chat channel does none of the three. (2.8)
-148. Change review, which fails on volume that trains the team to dismiss everything. Test generation, which fails by writing tests against the implementation so they pass permanently and detect nothing. Pipeline gating, which fails on non-determinism at the gate. Documentation generation, which fails by describing intent rather than behavior, and is then trusted. (7.5)
-149. Read before write, enforced by the credential and permission mode rather than by instruction. A proposed fix enters normal change control, with the emergency procedure that already exists as the route. And the trace identifier is the handoff, so an estate where an agent cannot rebuild a failed run from its identifier has just measured its own instrumentation. (8.9)
-150. Confident narrative: a coherent causal account produced whether or not the evidence supports one, arriving during an incident into an audience that wants one. Require the account to cite the specific log lines, trace segments or code paths it rests on, treat an uncited step as a gap, and record it with its evidence so the post-incident review can test it. (8.9)
-151. Tools, then system, then messages, up to and including the block marked with the breakpoint. It matters because each level builds on the previous one, so a change at one level invalidates that level and everything after it. (2.7, Appendix I)
-152. The breakpoint sits on a block that changes every request, typically one containing a timestamp or the user message. Cache writes happen only at the breakpoint, and the lookback finds only entries prior requests actually wrote, so nothing ever matches. Move the breakpoint to the last block that is identical across requests. (2.7, Appendix I)
-153. Nothing is cached, and **no error is returned**. You have to check `cache_creation_input_tokens` and `cache_read_input_tokens`; if both are zero, caching did not happen. (2.7, Appendix I)
-154. Modifying a tool definition, meaning its name, description or parameters, invalidates the whole cache. It implies tool definitions should be treated as a stable versioned artifact rather than something tweaked casually. (2.7, Appendix I)
-155. Lower latency, specifically time-to-first-token; **rate-limit relief**, because cache hits are not deducted against rate limits; the ability to afford twenty or more high-quality examples in a prompt that would otherwise be too expensive. Pre-warming also removes the first-request latency penalty. (2.7, Appendix I)
-156. Token limit exceeded returns **400 `invalid_request_error`**, prompt too long, rejected before generation. A raw body over the byte limit returns **413 `request_too_large`**. The third is generation running into the window: no error, the request succeeds and the output is cut short. (2.2, 2.6, Appendix I)
-157. Effort. It trades intelligence for latency and cost within a single model. (2.6, Appendix I)
-158. Opus 4.6 and later, Sonnet 4.6 and later, together with Sonnet 5. `budget_tokens` is deprecated on the 4.6 generation. Adaptive thinking is the only available mode on Claude 4.7 and later, which is why `budget_tokens` returns a 400 error on those models rather than a deprecation warning. (2.6, Appendix I)
-159. Sonnet, absent other constraints. The documented default for complex agentic coding and enterprise work is Claude Opus 5. The two are not in conflict, since a tier is not a pinned generation, and both figures are perishable. (2.6, Appendix I)
-160. Claude.ai, Claude Code, Claude Cowork, Claude in Chrome, Claude for Excel. Claude Code is purpose-built for engineering, and it could be the wrong shape for a customer-service product or any non-engineering workflow. (2.8, Appendix I)
-161. Default, `acceptEdits`, plan mode, auto mode, `dontAsk`, `bypassPermissions`. `dontAsk` and `bypassPermissions` are the two scoped to unattended or CI use: `dontAsk` auto-denies anything not covered by allow rules, and `bypassPermissions` skips all checks and is scoped to containers or CI only. (2.8, Appendix I)
-162. Anthropic first-party: no binding cloud commitment, wants newest features immediately. AWS Bedrock: a committed AWS enterprise agreement. Claude Platform on AWS: an AWS commitment to draw down, but first-party feature timing and cache isolation matter more than Bedrock's operational model. GCP Vertex AI: the rest of the ML stack already lives in Vertex AI. Microsoft Foundry: a Microsoft enterprise agreement and identity through Entra ID. (2.8, Appendix I)
-
----
+Moved on 18 October 2026 to the Primer Workbook: [primer-workbook/self-check-bank.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/self-check-bank.md), 162 questions with a key.
 
 ## Appendix E: Interview Question Bank
 
-Eighty-three questions across ten groups, for four target roles: Enterprise AI Architect, Head of Legal AI, Legal Operations and Innovation lead and AI Governance executive. Eighteen are case based and are marked **Situation**. Each entry gives the question as an interviewer would ask it, what is being tested, a strong answer skeleton, the weak answer to avoid and the follow-up probe an experienced interviewer would use.
-
-**Role weighting.** Groups 1, 2, 5 and 6 carry most weight for the Enterprise AI Architect. Groups 3, 4 and 9 carry most weight for the Head of Legal AI. Groups 3, 8, 9 and 10 carry most weight for the AI Governance executive. Groups 6, 7 and 8 carry most weight for the Legal Operations and Innovation lead. Group 10 is used by all four and is where most candidates are lost.
-
----
-
-### Group 1: Architecture and design judgment
-
-#### E1. How do you decide what part of a workflow the model should own?
-
-- **What is being tested:** whether delegation is a scored decision or an intuition.
-- **Strong answer skeleton:**
-  - Three owners, not one: what the model does, what existing systems already do reliably and what humans must retain.
-  - Score need first (variance plus judgment) and restraint second (reversibility, stakes, auditability and cost of error); low need means deterministic code whatever the volume.
-  - High restraint constrains ownership of the **decision**, not use of the model; drafting can be delegated when deciding cannot.
-  - Volume decides whether to build at all, never whether to cross a restraint boundary.
-- **The weak answer to avoid:** "We give the model everything it can plausibly do and add review at the end."
-- **Follow-up probe:** give me a step in your last program that scored high on restraint and high on need, and tell me exactly where the human sat.
-
-#### E2. When is an agent the wrong shape, even though the path cannot be enumerated?
-
-- **What is being tested:** whether the candidate knows the second clause.
-- **Strong answer skeleton:**
-  - Unpredictability alone licenses nothing; the failure must also be acceptable and recoverable.
-  - Unpredictable plus unrecoverable means re-scope the work, not add monitoring.
-  - Where the control flow lives names the pattern: in your code there are seams where deterministic guards sit; inside the model there is no code boundary for a guard.
-  - Take the simplest shape that meets the error tolerance and observability requirements and escalate only on measurement.
-- **The weak answer to avoid:** "We would deploy the agent with alerting and a kill switch."
-- **Follow-up probe:** a kill switch stops the next action. What does it do about the payment that already posted?
-
-#### E3. Walk me through how you choose between retrieval, a tool call and fine-tuning.
-
-- **What is being tested:** the single most common architectural error in enterprise AI.
-- **Strong answer skeleton:**
-  - Retrieval is for what was true yesterday and will be true tomorrow; live state belongs to the system that owns it and is reached by tool call.
-  - Symptoms of getting it wrong are stale chunks, results shifting with each refresh and answers contradicting the database; a better chunker, a shorter refresh and a higher threshold are all named non-fixes.
-  - Fine-tuning is for behavior and format, never for facts, because deletion cost decides it: erasing a fine-tuned fact means retraining.
-  - Memory is for the principal, scoped to the smallest useful principal and enforced at storage rather than in the prompt.
-- **The weak answer to avoid:** "We would fine-tune on the corpus so the model just knows it."
-- **Follow-up probe:** the client exercises an erasure right over one matter. Walk me through what you delete under each of those three designs.
-
-#### E4. Situation: a client proposes one agent that reads the claim, sets priority, checks policy status and drafts the customer reply. What do you tell them?
-
-- **What is being tested:** decomposition under sponsor pressure.
-- **Strong answer skeleton:**
-  - Split by owner: the model reads and drafts; policy status is a tool call to the system of record; classification may be the model's while the routing on it is code's; the outbound reply is collaborative with a person deciding.
-  - Name that collapsing all three owners into the model is the most common and most expensive early mistake, and that it makes the process slower, more expensive and harder.
-  - Place the human gate by reversibility and stakes: the outbound message is irreversible and contractual, so it is gated; low-confidence extractions get an exception path rather than clearing like clean ones.
-  - Governance rules the route out first, so residency and the existing cloud agreement are settled before cost or latency are weighed.
-- **The weak answer to avoid:** "One agent is simpler to build and we can constrain it with the system prompt."
-- **Follow-up probe:** which of those four steps would you still automate if the accuracy target were 100 percent, and why?
-
-#### E5. When do you compose two architectures, and what does it cost?
-
-- **What is being tested:** discipline against pattern accumulation.
-- **Strong answer skeleton:**
-  - Compose only when the two halves break in different ways worth managing separately.
-  - Reaching for a second pattern while the problem is undecided is a deferred decision dressed as a design; adapt one instead.
-  - Composition roughly doubles the maintenance surface and the eval surface together.
-  - Each architecture keeps its own eval set; a single end-to-end suite goes green while a component regresses.
-- **The weak answer to avoid:** "We combine patterns as needed and test the whole system end to end."
-- **Follow-up probe:** your composed suite is green and the exception path is degrading. Which instrument tells you that, and did you build it?
-
-#### E6. What goes in an architecture decision record for an AI system that would not go in a normal one?
-
-- **What is being tested:** whether governance and architecture are the same act.
-- **Strong answer skeleton:**
-  - Seven clauses: model dependency with a deprecation horizon, non-determinism tolerance, the eval gate, the human oversight point, the data egress boundary, the failure mode with its blast radius and the reversal path with its switching condition.
-  - The test is that the record would read differently if the component were a deterministic service.
-  - Ask what happens when the component succeeds and is wrong, not only when it fails.
-  - Records preserve why, which is the only thing that stops a successor unknowingly reversing a deliberate choice.
-- **The weak answer to avoid:** "We keep a current-state diagram and interface contracts."
-- **Follow-up probe:** show me a decision in your last system that a successor reversed, and tell me which clause would have stopped them.
-
-#### E7. Situation: an internal agent legitimately spans about sixty tools across five services, every one appropriate to the role, and selection has become unreliable. What do you change?
-
-- **What is being tested:** the privilege-versus-scale discrimination.
-- **Strong answer skeleton:**
-  - This is excess scale, not excess privilege, so removal is unavailable.
-  - Defer most definitions and keep the few most-used tools non-deferred; selection accuracy degrades past roughly 30 to 50 loaded tools.
-  - Note that a bigger context window buys room, not attention quality, so it does not address selection.
-  - Also examine tool descriptions and naming, since three to four sentence descriptions and service-prefixed names materially change selection.
-- **The weak answer to avoid:** "Remove tools until fewer than ten remain."
-- **Follow-up probe:** now change one fact. Three of those sixty tools are not appropriate to the role. What changes in your answer?
-
-#### E8. How do you keep an orchestrator and its subagents from failing in ways you cannot recover?
-
-- **What is being tested:** understanding of multi-agent asymmetry.
-- **Strong answer skeleton:**
-  - Subagent failure is recoverable: validate each result, retry or re-route and record the gap rather than failing the run.
-  - Orchestrator failure is often unrecoverable: protect state and checkpoint progress so a run resumes rather than restarts.
-  - The orchestrator owns the goal, decomposes, delegates and synthesizes, and never does the sub-task work itself.
-  - Three things must be designed rather than assumed: decomposition, result structure and conflict-and-gap resolution; one trace identifier propagates end to end.
-- **The weak answer to avoid:** "We give every subagent the full history so nothing is lost."
-- **Follow-up probe:** every component reported success and the coverage is incomplete. What is the finding?
-
-#### E9. What is the simplest architecture you have ever talked a client out of complicating?
-
-- **What is being tested:** whether restraint is practiced or recited.
-- **Strong answer skeleton:**
-  - Name the constraint that justified staying on the lower rung: error tolerance and observability, not capability.
-  - Cite the specific measurement that would have licensed escalation and did not appear.
-  - Note what the simpler shape bought: fewer eval sets, a code seam for guards and a reconstructable trace.
-  - Acknowledge the political cost and how it was paid, usually by shipping the outcome the sponsor wanted through a cheaper instrument.
-- **The weak answer to avoid:** a story about a complex system that was impressive to build.
-- **Follow-up probe:** what would have had to be true in the measurements for you to have gone one rung higher?
-
----
-
-### Group 2: Integration and engineering depth
-
-#### E10. How do you carry a user's identity through an agent to a downstream system without giving the agent broad access?
-
-- **What is being tested:** whether authorization is understood as an architecture rather than a policy.
-- **Strong answer skeleton:**
-  - Token exchange or on-behalf-of, so the downstream call presents the user's identity with an agent marker rather than a service account.
-  - The effective permission is the intersection of the user's entitlements, the agent's role and the task's requirement, never the union.
-  - Evaluate at the resource, at execution time, in code, against the caller's identity; scope bounds the client, role bounds the principal, attribute bounds the record.
-  - Delegation attenuates and is recorded, and non-human identities need joiner, mover and leaver processes that review scope rather than existence.
-- **The weak answer to avoid:** "The agent runs as a service account and the prompt tells it whose behalf it is acting on."
-- **Follow-up probe:** the agent has a valid token and reads a document containing an instruction. What structural control stops the confused deputy?
-
-#### E11. An agent fired a tool call, the call timed out, and you do not know whether it executed. What do you do?
-
-- **What is being tested:** production instincts under partial failure.
-- **Strong answer skeleton:**
-  - Never blind retry a non-idempotent action.
-  - Query the downstream system for the effect using the idempotency key recorded **before** execution; retry with the same key only if it did not fire.
-  - If it fired, record that in the run so the agent does not re-decide to fire it; if it fired and should not have, use the compensating operation designed alongside the forward one.
-  - Actions with no compensation are exactly where a human gate belongs.
-- **The weak answer to avoid:** "Retry with exponential backoff."
-- **Follow-up probe:** which of your last system's write operations had no compensating operation, and what did you do about it?
-
-#### E12. Why do you want an AI gateway when applications could call the provider directly?
-
-- **What is being tested:** whether the candidate sees the control point.
-- **Strong answer skeleton:**
-  - Key management, quota, routing policy, redaction, logging, cost attribution and tenant isolation must be uniform to be assertable to an auditor; eleven applications implement them eleven ways.
-  - It is a governance, risk management and compliance control point that also happens to route.
-  - Abstract thin at the gateway; thick vendor normalization costs the lowest common denominator, doubles the eval surface and creates portability nobody has tested.
-  - Keep prompts, business logic and evals out of it, or it becomes a bottleneck and a queue tax.
-- **The weak answer to avoid:** "It gives us caching and failover."
-- **Follow-up probe:** what did you deliberately refuse to put in the gateway, and who pushed for it?
-
-#### E13. How do you test a system whose output is non-deterministic?
-
-- **What is being tested:** engineering literacy that most governance candidates lack.
-- **Strong answer skeleton:**
-  - Split the problem: mock the model and test your own control flow deterministically against recorded responses, which is where most bugs live.
-  - Score the model against a labeled golden set as a separate job with a threshold, asserting on structure and invariants rather than prose.
-  - Establish a self-disagreement baseline first; below the noise floor is not a finding.
-  - Gate on per-segment results, because an aggregate pass hides a segment regression.
-- **The weak answer to avoid:** "We run the prompts and a human checks whether the answers look right."
-- **Follow-up probe:** what is your system's self-disagreement rate, and how did you measure it?
-
-#### E14. Situation: an agent needs to answer questions over a data warehouse and the team wants it to write SQL. What controls do you require?
-
-- **What is being tested:** whether capability is constrained structurally.
-- **Strong answer skeleton:**
-  - Read-only role and allowlisted curated views rather than raw tables.
-  - A real parser rejecting anything that is not a single SELECT, an injected limit, a statement timeout and a result cap with a truncation flag.
-  - Row-level security applied from the session identity, never from the generated statement.
-  - Every statement written to the audit log with the run identifier; warehouse for analysis and system of record for live state, so current entitlements are never read from the warehouse.
-- **The weak answer to avoid:** "We prompt it to only write SELECT statements."
-- **Follow-up probe:** the generated query is valid, permitted and returns the wrong answer because the join is wrong. Which control catches that?
-
-#### E15. What is in a trace of an agent run, and what is the test that it is sufficient?
-
-- **What is being tested:** observability versus monitoring.
-- **Strong answer skeleton:**
-  - Correlation identifiers at request, session and run level; user and tenant; model and version with effort configuration; prompt version or hash.
-  - Retrieval detail with scores and what survived filtering; every tool call with arguments, result and error class; token fields; latency by segment; stop reason; evaluation scores; human decisions.
-  - The test is whether a disputed answer can be reconstructed from the trace alone months later, without the current system.
-  - Monitoring, evaluation and audit are three systems with three consumers, three retentions and three access models.
-- **The weak answer to avoid:** "We log errors and latency to the standard observability stack."
-- **Follow-up probe:** a client disputes an answer given eight months ago. Reconstruct it for me from what you actually retain.
-
-#### E16. When would you not use an event bus?
-
-- **What is being tested:** whether patterns are applied or accumulated.
-- **Strong answer skeleton:**
-  - When the caller needs the result to proceed, or when there will only ever be two systems involved.
-  - A bus for a permanent pair adds operational surface, ordering questions and a dead letter queue in exchange for a decoupling nobody will use.
-  - Choose the loosest coupling that meets the latency requirement, not the loosest coupling available.
-  - Long agent work is a job with an identifier, a polling endpoint as well as a callback and a terminal state for every run.
-- **The weak answer to avoid:** "Event-driven is always more scalable."
-- **Follow-up probe:** what does your dead letter queue look like today, and who drains it?
-
-#### E17. What makes a schema a contract rather than a suggestion?
-
-- **What is being tested:** whether silent wrong data is understood as the real risk.
-- **Strong answer skeleton:**
-  - `additionalProperties: false`, or you are collecting silent defects rather than errors.
-  - A required field with no legitimate value forces fabrication; when fields are invented, look at what was marked required before looking at the model.
-  - Enums are the governance surface, and the model must never supply a field that asserts a fact it cannot know; approval is the canonical example.
-  - Additive changes only, and remember the prompt is a consumer of the contract.
-- **The weak answer to avoid:** "We validate the output and retry on failure."
-- **Follow-up probe:** you retried a 422 in a loop for a week. What did that cost, and what should have happened instead?
-
-#### E18. Situation: a nightly re-scoring job over two hundred thousand records runs in the real-time lane because it usually finishes fast, sharing capacity with a two-second path. What is your call?
-
-- **What is being tested:** lane discipline under a plausible excuse.
-- **Strong answer skeleton:**
-  - Nothing is blocked by the nightly job, so it belongs in the batch lane at roughly half the cost.
-  - The two-second path has a human waiting and stays real-time; "usually finishes fast" is not a guarantee.
-  - Do not downsize the model on the service level path or truncate records to make both fit; both surrender the requirement.
-  - Attribute cost per completed task from day one so the saving is provable rather than asserted.
-- **The weak answer to avoid:** "Move both to batch since it usually finishes quickly anyway."
-- **Follow-up probe:** the batch lane misses its window on quarter end. What is the defined degradation?
-
----
-
-### Group 3: Governance, risk management and compliance
-
-#### E19. How do you know whether an organization has governance, risk management and compliance for AI, or only documentation of it?
-
-- **What is being tested:** the difference between artifacts and control.
-- **Strong answer skeleton:**
-  - Pick an architectural decision at random from a live system and ask who made the governance decision at that moment, on what date and where the artifact is.
-  - Documentation produces a policy; governance produces a named person and a dated artifact tied to a specific design choice.
-  - Test whether each control can produce evidence on demand, and distinguish design-time evidence from operating-effectiveness evidence, because auditors test the second.
-  - Build the independent count of the control population on day one, because completeness is what sinks first audits.
-- **The weak answer to avoid:** "We have an AI policy and a responsible AI framework."
-- **Follow-up probe:** name one control in your last program that could not produce evidence, and tell me what you did.
-
-#### E20. How do you tier AI risk, and what does additive scoring get wrong?
-
-- **What is being tested:** whether the candidate has actually built a tiering scheme.
-- **Strong answer skeleton:**
-  - Eight dimensions scored 0 to 4: autonomy, reversibility, stakes, affected population, data sensitivity, external exposure, regulatory character and novelty, with novelty decaying as operating evidence accumulates.
-  - Tier by capability, not intent: score what the system can do without a human.
-  - Additive scoring lets eight moderate answers outvote one catastrophic one, which is backwards, so overrides restore the asymmetry: a single maximum dimension floors the tier, effects on legal rights or entitlements floor it and require human decision authority, high autonomy with low reversibility floors it higher.
-  - Self-tiering is the weak point; calibration sampling and objective triggers are the fix.
-- **The weak answer to avoid:** "We use a high, medium and low classification agreed with the business."
-- **Follow-up probe:** a low-autonomy system handling privileged material scores low. What does your scheme do about that?
-
-#### E21. What is the single most reliable indicator that human oversight is not real?
-
-- **What is being tested:** whether controls are measured or assumed.
-- **Strong answer skeleton:**
-  - An approval rate at or near 100 percent, corroborated by median review time below the measured reading time of the material.
-  - Either the system does not need the reviewer, in which case remove the step and sample instead, or the reviewer is not reviewing. There is no third explanation.
-  - Measure properly: seeded-defect catch rate, override rate against the system's measured error rate, time on task and downstream escape rate.
-  - Design against fatigue and automation bias: cap batches, no defaults, no bulk approve, isolate the claim.
-- **The weak answer to avoid:** "Our approval rates are very high, which shows the system is performing."
-- **Follow-up probe:** what is the base rate against which that approval rate should be read, and do you know it?
-
-#### E22. Which human placements are preventive and which are not?
-
-- **What is being tested:** control taxonomy under pressure.
-- **Strong answer skeleton:**
-  - Five placements: pre-action approval, post-action review, sampled audit, escalation on uncertainty and exception only.
-  - Only pre-action approval, escalation and exception-only are preventive.
-  - Post-action review is worthless without a real undo window; sampled audit is a quality instrument, never a safety control.
-  - Escalate on structural signals, never on self-reported confidence or sentiment.
-- **The weak answer to avoid:** "We sample ten percent of outputs, which gives us coverage."
-- **Follow-up probe:** the action is irreversible and you have sampling. What exactly does the sample protect?
-
-#### E23. Situation: an agent can raise a purchase order, approve it and trigger payment. What is your finding?
-
-- **What is being tested:** whether the candidate sees collapsed segregation of duties.
-- **Strong answer skeleton:**
-  - A segregation of duties control has been collapsed inside a component that looks like one job, and the control it destroyed lives in a system nobody included in the AI design review.
-  - The remedy is structural: separate credentials, or a mandatory human authorization on the crossing step enforced outside the model.
-  - A review gate on the output is not the remedy, because the privilege remains and detective controls do not shrink the attack surface.
-  - Then check whether the same collapse exists elsewhere: this is a class problem, not an instance.
-- **The weak answer to avoid:** "Add an approval step in the prompt and log every purchase order."
-- **Follow-up probe:** who owned the original three-way segregation, and were they in the design review?
-
-#### E24. How do you avoid running several governance frameworks at once and paying for each separately?
-
-- **What is being tested:** operating efficiency at portfolio scale.
-- **Strong answer skeleton:**
-  - Make the control the unit and the framework requirement an attribute of the control, so evidence is collected once and framework reporting is a generated view rather than a maintained document.
-  - Surface contradictions explicitly, most often retention period and logging depth against minimization.
-  - Resolve each contradiction to the stricter requirement or to a recorded exception with an owner and a date.
-  - Note the limits of frameworks: they answer different questions and produce different artifacts, so stacking them without a mapping produces duplicate evidence and a control population nobody can enumerate.
-- **The weak answer to avoid:** "We map everything to our primary framework and report against it."
-- **Follow-up probe:** name a contradiction you found between two of your frameworks, and how it was resolved.
-
-#### E25. What does an AI audit log need that application logging does not?
-
-- **What is being tested:** whether the log is understood as an evidentiary artifact.
-- **Strong answer skeleton:**
-  - It is written for a party who does not trust you, so it must be complete, immutable, attributable and retained to a legal driver rather than an operational one.
-  - Fifteen fields including what did **not** happen: refusals, escalations, overrides and filtered results.
-  - Access to the log itself is controlled and logged; the record is split where accountability and minimization conflict.
-  - It is simultaneously the only reconstruction capability for a non-reproducible incident and a discoverable artifact that will be read as a narrative.
-- **The weak answer to avoid:** "We keep application logs for ninety days."
-- **Follow-up probe:** who can read your prompt and output logs today, and did anyone ask?
-
-#### E26. What resilience scenario do AI continuity plans miss?
-
-- **What is being tested:** whether the candidate has thought past outage planning.
-- **Strong answer skeleton:**
-  - The provider changing the model underneath you: it is not an outage, so nothing alerts, latency is normal and errors are absent.
-  - The behavior change surfaces as complaints on the cases that matter most, which is the worst possible detection path.
-  - Cheap defenses: version pinning with an expiry and an owner, logging the model identifier on every request and a continuously running evaluation suite that detects it by measurement.
-  - A provider-initiated change is a change and requires the same evaluation evidence as one you initiated.
-- **The weak answer to avoid:** "We have a fallback provider configured."
-- **Follow-up probe:** when did you last exercise that fallback, and what did the eval set say about it?
-
-#### E27. How do you decide who signs off, and does that change with tier?
-
-- **What is being tested:** decision rights, not committee theater.
-- **Strong answer skeleton:**
-  - One named person per asset, with a deputy who has done the job; team accountability is not accountability.
-  - Decision rights fixed across the lifecycle stages, and only go-live authority moves with tier: named owner, function head, committee, board.
-  - The committee has to be able to say no on a Tuesday, or the gate is decorative.
-  - The vendor owns the weights; you own everything else, including the assertion that the running configuration matches the contract.
-- **The weak answer to avoid:** "The AI steering committee reviews all use cases quarterly."
-- **Follow-up probe:** name the last thing your committee refused, and what happened next.
-
----
-
-### Group 4: Legal, privacy and privilege
-
-#### E28. Does putting legal content through an AI vendor risk privilege waiver?
-
-- **What is being tested:** whether the candidate stays inside the architect's remit.
-- **Strong answer skeleton:**
-  - That determination is jurisdiction and fact specific and belongs to counsel in each relevant forum; nothing in the architecture is a legal conclusion.
-  - What the architecture controls is the factual footprint the analysis operates on.
-  - Six design choices that change the facts: verified zero retention, verified no training use, a documented and minimal subprocessor chain with notification rights, a defined jurisdiction of processing, confidentiality obligations flowed through the contract chain and configuration preventing vendor personnel access.
-  - Confidentiality and privilege are different obligations, and the second is the one that fails catastrophically, in litigation and for the whole set rather than one document.
-- **The weak answer to avoid:** a confident statement that using the vendor does or does not waive privilege.
-- **Follow-up probe:** which of those six did you verify rather than accept on a datasheet, and how?
-
-#### E29. Where does privileged material actually leak in an AI architecture?
-
-- **What is being tested:** whether the candidate looks past the model.
-- **Strong answer skeleton:**
-  - Not the model. The observability estate, where prompts, retrieved passages and outputs accumulate with broad read access, long retention, replication to analytics platforms and no classification.
-  - That estate is discoverable, sits outside the matter file and is outside legal's control.
-  - Three fixes: classify log records at emission, segregate privileged log content with its own access control and retention and make legal hold operable on the log estate.
-  - Prompts drafted by counsel may reflect strategy and mental impressions, which makes the prompt store a sensitive artifact rather than a configuration file.
-- **The weak answer to avoid:** "We use a vendor with a zero retention agreement, so nothing is retained."
-- **Follow-up probe:** your vendor retains nothing. What does your own gateway retain, and for how long?
-
-#### E30. Situation: privileged material and general policy content live in one index behind a boolean flag. What do you do?
-
-- **What is being tested:** structural versus configurational segregation.
-- **Strong answer skeleton:**
-  - Segregate the store, not just the filter: a separate index with separate credentials fails safe, while a shared index behind a flag fails open on any bug.
-  - Classify at ingestion rather than at retrieval, because a tag applied at query time is a filter that will eventually be missed.
-  - Filters before similarity, with a scheduled negative probe test specifically for the privileged partition.
-  - Propagate the tag to every derived artifact (chunks, embeddings, caches, logs, evaluation sets and outputs) and mark the output, because the recipient's handling obligation depends on it.
-- **The weak answer to avoid:** "We add a permission check to the retrieval query."
-- **Follow-up probe:** post-filtering still returns zero results for a forbidden query. Why is that a disclosure?
-
-#### E31. How do you make legal hold operable over an AI system?
-
-- **What is being tested:** whether preservation was designed in or discovered late.
-- **Strong answer skeleton:**
-  - The artifacts a hold must reach include prompt assets and version history, the model version in use, the retrieval corpus as it existed, the audit log for the period, evaluation sets and results, human review records and the governance artifacts.
-  - Three are routinely destroyed by normal operation first: the corpus, because it is continuously reindexed; the model version, because the provider may retire it; and short-retention log tiers, because they expire on schedule.
-  - Each needs a hold-aware retention mechanism rather than a fixed expiry, which is a build-time decision and is not implementable during a hold.
-  - Retention minimization is simultaneously a discovery cost control and a privacy control.
-- **The weak answer to avoid:** "We would export the relevant data when a hold is issued."
-- **Follow-up probe:** the hold covers a period during which the provider retired the model. What can you now say about the outputs?
-
-#### E32. What does an erasure obligation actually reach in a retrieval system?
-
-- **What is being tested:** deletability as an architectural property.
-- **Strong answer skeleton:**
-  - Chunks, embeddings, caches, logs, evaluation sets and memory, not just the source document.
-  - Embeddings derived from deleted content are copies of it, so deletion capability must reach them.
-  - The data map has to exist before the first ingestion; deletability is one of the properties that cannot be retrofitted cheaply.
-  - Evaluation sets built from real matter examples are the store people forget, and they are the most awkward to explain afterward.
-- **The weak answer to avoid:** "We delete the document from the source system and reindex."
-- **Follow-up probe:** what is in your eval set today that a client could demand you destroy?
-
-#### E33. Three public documents are combined into an analysis. What classification is the output?
-
-- **What is being tested:** whether classification is treated as inheritance.
-- **Strong answer skeleton:**
-  - Higher than any input, typically, because aggregation and inference create sensitivity that no source contains.
-  - Classification does not inherit safely; purpose sets a floor.
-  - Workable controls: a floor classification set by purpose, policy-based routing on source combinations and human confirmation at the point of export.
-  - Classification also sets the route before cost or latency is weighed, and caches and logs are copies, so cache keys are scoped by tenant and classification.
-- **The weak answer to avoid:** "Public in, public out."
-- **Follow-up probe:** the analysis is exported to a shared drive by an authorized user. Which control fired?
-
-#### E34. How do residency and transfer requirements change the architecture rather than the paperwork?
-
-- **What is being tested:** whether compliance is a design input.
-- **Strong answer skeleton:**
-  - Region becomes a first-class attribute of records, indexes and routes.
-  - Routing per jurisdiction becomes a gateway policy lookup rather than a deployment.
-  - The data flow inventory is generated from configuration rather than drawn by hand, so it stays true.
-  - Deletion becomes a tested capability reaching logs, caches, evaluation sets and derived embeddings; the specific legal requirements are for counsel.
-- **The weak answer to avoid:** "We signed the standard data processing terms."
-- **Follow-up probe:** the entry point, the region and the privilege position were decided by three different people at three different times. What went wrong?
-
-#### E35. Situation: the business associate agreement covers the current cloud configuration and the team wants to enable a beta feature on that route for regulated health data. What is your answer?
-
-- **What is being tested:** whether coverage is assumed to extend.
-- **Strong answer skeleton:**
-  - Confirm the feature's eligibility under the agreement first, because beta features are generally excluded unless explicitly listed as eligible.
-  - An agreement that exists for one configuration does not extend to another configuration on the same route.
-  - Adding logging or monitoring on the new feature is a compensating control on a compliance gate and does not fix eligibility.
-  - Record the decision and the date, because the question will be asked again in six months by someone else.
-- **The weak answer to avoid:** "The route is covered, so proceed and monitor."
-- **Follow-up probe:** who in your organization can answer that eligibility question in under a day, and is that documented?
-
----
-
-### Group 5: Data and knowledge architecture
-
-#### E36. A retrieval system is returning confident wrong answers. Where do you look before you touch the prompt?
-
-- **What is being tested:** failure localization discipline.
-- **Strong answer skeleton:**
-  - Reproduce with the retrieved chunks captured, then split: right chunks with a wrong answer is generation, everything else is upstream.
-  - Corpus quality first on six dimensions (completeness, accuracy, consistency, timeliness, validity, uniqueness), with timeliness and uniqueness first because both fail silently.
-  - Check whether supersession and version metadata exist at all, whether permission filters run before ranking and whether duplicates are crowding the top results.
-  - Retrieval quality is bounded by corpus quality and no prompt fixes a bad corpus.
-- **The weak answer to avoid:** "We would tune the prompt and add a stronger grounding instruction."
-- **Follow-up probe:** the right chunks came back and the answer is still wrong on numbers only. Where is that?
-
-#### E37. What data entities does an AI system need that transaction systems do not have?
-
-- **What is being tested:** data modeling for AI rather than for reporting.
-- **Strong answer skeleton:**
-  - Document, chunk, embedding, run, evaluation, decision, override and evidence.
-  - A design with no run entity cannot be explained; one with no override entity discards its best data.
-  - Embeddings must carry their model version or an upgrade silently mixes incomparable vectors.
-  - The system of intelligence proposes and never commits; any design where the AI store is the only home of a fact has misassigned the layer.
-- **The weak answer to avoid:** "We store the documents and the vectors."
-- **Follow-up probe:** what have you learned from your override data in the last quarter?
-
-#### E38. What metadata does a chunk have to carry, and why that set?
-
-- **What is being tested:** whether governance is expressible in the data layer.
-- **Strong answer skeleton:**
-  - Source document identifier and version, effective and expiry dates, jurisdiction, sensitivity, owner, permission set, supersession pointer, structural path and ingest provenance.
-  - Each one is a predicate some control depends on at query time.
-  - A control that cannot be expressed as a metadata predicate must be enforced by excluding the content from the index.
-  - Index both current and superseded versions, with currency as a filter, because "what was the policy then" is a real question.
-- **The weak answer to avoid:** "We store the source filename and a timestamp."
-- **Follow-up probe:** which of those fields could you not backfill today, and what does that cost you?
-
-#### E39. Situation: forty thousand documents, no budget to rewrite them and the assistant has to work. What now?
-
-- **What is being tested:** triage under a real constraint.
-- **Strong answer skeleton:**
-  - Triage on observed query traffic against stakes, ranked by traffic rather than by opinion.
-  - Fully engineer the top band, metadata-retrofit the high-traffic low-stakes band and exclude the tail from the index.
-  - Exclusion is itself a quality improvement, because the cost of indexing everything is dilution, not storage.
-  - One absolute: an unowned document must not be retrievable, and serving it with a caveat is not an option.
-- **The weak answer to avoid:** "Index everything, storage is cheap, and let ranking sort it out."
-- **Follow-up probe:** you excluded the tail. Where do those questions go, and who sees the list?
-
-#### E40. How do you choose chunking and indexing for a real corpus?
-
-- **What is being tested:** two decisions from two different inputs.
-- **Strong answer skeleton:**
-  - The corpus chooses the chunking: fixed-size for homogeneous prose, semantic where a chunk must be self-contained, hierarchical for contracts, manuals and policies where section context carries meaning.
-  - The queries choose the indexing: dense for paraphrase and intent, sparse for citations, part numbers and error codes, hybrid for the mixed case, merged by reciprocal rank fusion.
-  - Situate each chunk before embedding it, run lexical alongside semantic and retrieve wide then rerank down.
-  - Ask first whether a pipeline is needed at all; under roughly 200,000 tokens, cache the corpus instead.
-- **The weak answer to avoid:** "We use 512-token chunks with 50-token overlap because that is the default."
-- **Follow-up probe:** justify your chunk size using something other than a default, and tell me what you measured.
-
-#### E41. What does a lineage record need to be usable as evidence rather than as debugging?
-
-- **What is being tested:** the evidentiary standard.
-- **Strong answer skeleton:**
-  - A stable identifier for the specific claim, the source document version and hash, the chunk identifiers with offsets, the retrieval parameters including rejected candidates, the model and prompt versions, trustworthy timestamps, the acting principal with the delegation chain and the human review decisions.
-  - Append-only, tamper-evident storage, retained to the dispute horizon rather than the engineering horizon.
-  - The retrieved set is persisted rather than recomputed, because re-running the query later produces a different answer.
-  - The test is whether an outside reviewer with no access to today's system can reconstruct the answer.
-- **The weak answer to avoid:** "We can re-run the query and see what it returns."
-- **Follow-up probe:** the index has been rebuilt twice since. What does re-running prove?
-
-#### E42. How would you make it possible to answer, a year from now, whether this system worked?
-
-- **What is being tested:** analytics readiness as a design-time decision.
-- **Strong answer skeleton:**
-  - Define the metric in the semantic layer before build and capture the baseline before launch.
-  - Emit a contracted event model including an outcome event, with the run identifier on every event.
-  - Write the run identifier into the business system's own record so outcomes join back.
-  - Fix the segmentation dimensions in advance, because they cannot be backfilled; corpus, metadata and baseline are all cheap now and unrecoverable later.
-- **The weak answer to avoid:** "We will survey users after six months on time saved."
-- **Follow-up probe:** you were brought in after launch and there is no baseline. What is the strongest claim you can honestly make?
-
-#### E43. What is the difference between a playbook and a runbook, and why does it matter for agents?
-
-- **What is being tested:** knowledge asset literacy.
-- **Strong answer skeleton:**
-  - A runbook handles a named condition where the next step is known in advance; a playbook handles a situation class where judgment is required.
-  - A playbook must carry decision points, escalation triggers and exit criteria or an agent cannot safely execute it.
-  - A decision tree written in prose is a deterministic rule sitting inside a model-owned step; lift it into code with a test.
-  - Assets need an owner, a scope, a jurisdiction, a version, an eval reference and a review date, and are named after the work rather than the model or the vendor.
-- **The weak answer to avoid:** treating them as interchangeable process documents.
-- **Follow-up probe:** show me a playbook you wrote and point to its exit criteria.
-
----
-
-### Group 6: Evaluation, operations and measurement
-
-#### E44. How do you know a production AI system is healthy?
-
-- **What is being tested:** whether absence of errors is mistaken for health.
-- **Strong answer skeleton:**
-  - Not from the error dashboard, because the dominant failure mode produces no errors: fluent, confident and wrong, at normal latency.
-  - Sampled grading including the high-confidence stratum, which is the stratum teams skip.
-  - Distribution-shift alerting on refusal rate, escalation rate and retrieval score distribution as fast proxies for quality, which has a measurement lag.
-  - Six monitoring layers, and stopping at three reports a healthy system producing wrong answers.
-- **The weak answer to avoid:** "Latency and error rate are within target and there are no open tickets."
-- **Follow-up probe:** what is your detection latency for a silent quality regression, and how do you know?
-
-#### E45. What service level agreement would you sign for this?
-
-- **What is being tested:** commitment discipline.
-- **Strong answer skeleton:**
-  - Availability and latency percentiles directly, segmented by task class; mean latency is never the answer for an agent run.
-  - Quality as a measured level on a named population, with a defined routing rule for the remainder and an agreed response when it misses.
-  - Never correctness on an individual case.
-  - Say out loud that quality has a measurement lag, and commit to shrinking the exposure window rather than to instantaneous detection.
-- **The weak answer to avoid:** "We commit to 95 percent accuracy."
-- **Follow-up probe:** accuracy on which population, measured how, and what happens the month you miss?
-
-#### E46. A model upgrade is coming. What is your process?
-
-- **What is being tested:** release engineering for non-deterministic systems.
-- **Strong answer skeleton:**
-  - Shadow evaluation before cutover against the full suite plus the labeled retrieval set, then canary with guardrail metrics that halt regardless of the primary result.
-  - Assume behavior changed and re-baseline; do not assume improvement.
-  - Expect five regression classes: format, verbosity, refusal boundary, tool behavior and prompt sensitivity.
-  - Gate per segment, because an aggregate pass hides the segment regression, and set the rollback criterion before the swap.
-- **The weak answer to avoid:** "We swap it and watch complaints for a week."
-- **Follow-up probe:** your canary is sliced by user hash and the regression lives in one document type. What do you see?
-
-#### E47. How do you roll back a non-deterministic system?
-
-- **What is being tested:** whether the deployable artifact is understood.
-- **Strong answer skeleton:**
-  - Restore the release tuple: prompt version, model version, tool definitions, index version, routing configuration, guardrail configuration and eval set version.
-  - All of it without a deployment, and per field, because partial rollback is usually what you actually want.
-  - The index is the field nobody versions and the one that most often causes an unsuccessful rollback.
-  - A rollback plan that requires a deployment is not a rollback plan.
-- **The weak answer to avoid:** "We redeploy the previous release."
-- **Follow-up probe:** you rolled back and the behavior did not return. Which field did you miss?
-
-#### E48. Situation: costs tripled and volume did not. What do you look at, in order?
-
-- **What is being tested:** cost operations discipline.
-- **Strong answer skeleton:**
-  - Attempts per completed task first, because retries and loops are the usual cause.
-  - Then cache hit ratio, then unused context.
-  - Model change is last and never before measurement, because a quality problem addressed with a cheaper model gets worse **and** more expensive.
-  - Track fully loaded cost per completed task, including human review minutes, and attribute it from day one.
-- **The weak answer to avoid:** "Move to a cheaper model tier."
-- **Follow-up probe:** what proportion of your cost is human review minutes, and did that appear in the business case?
-
-#### E49. What gates a release into production, and what makes a gate real?
-
-- **What is being tested:** whether readiness is a checklist or a set of design decisions.
-- **Strong answer skeleton:**
-  - Nine properties, each established at a specific design decision: measurability, reversibility, observability, containment, accountability, portability, auditability, deletability and operability.
-  - Three of the nine defeat a retrofit, and they defeat it differently: auditability cannot be recovered at all once the inputs were not retained, deletability can be recovered only by reconstruction that is itself a disclosable event, and measurability can be added and is worthless when it is, because an eval set written after launch certifies what the system already does.
-  - Binary evidenced conditions with named signatories, three outcomes and a gate nobody can fail is not a gate.
-  - Four promotion gates run per segment: eval, cost, safety and operability.
-- **The weak answer to avoid:** "We have a go-live checklist reviewed by the project board."
-- **Follow-up probe:** when did your gate last produce a "no", and who signed it?
-
-#### E50. What triggers a re-run of your evaluation suite?
-
-- **What is being tested:** whether corpus change is treated as a change.
-- **Strong answer skeleton:**
-  - All five change types: prompt change, model change, tool or configuration change, **corpus publication** and guardrail or threshold change.
-  - Corpus change is the one that is routinely omitted and the one that most often causes a silent regression.
-  - The golden set grows by addition, never by replacement, and the judge is recalibrated on a schedule.
-  - Continuous evaluation is a running control, not a project phase.
-- **The weak answer to avoid:** "We re-run evals when we change the prompt or the model."
-- **Follow-up probe:** who can publish to your corpus today without triggering anything?
-
-#### E51. How do you prove this program delivered value?
-
-- **What is being tested:** honesty about attribution.
-- **Strong answer skeleton:**
-  - Baseline measured before launch, or the claim cannot be made and you say so.
-  - Choose an attribution method and name its limits; staged rollout with regional or cohort comparison is the realistic default.
-  - Self-reported time saved is directional only and is never presented alone.
-  - Refuse the vanity metrics, because query counts, tokens consumed and seats provisioned all rise as the system gets worse.
-- **The weak answer to avoid:** "Adoption is up 300 percent and users love it."
-- **Follow-up probe:** what is your escape rate now against what it was, and if you do not have the before, say so.
-
----
-
-### Group 7: Organizational adoption and change
-
-#### E52. Centralized, federated or hub and spoke?
-
-- **What is being tested:** operating model judgment.
-- **Strong answer skeleton:**
-  - Hub and spoke with a deliberately thin mandatory waist: gateway, audit sink and identity.
-  - Centralize what an auditor expects to be uniform; federate what a domain expert would want to tune, meaning prompts, evals and domain corpora.
-  - Defend every addition to the waist, because each one adds a queue tax the spokes will route around.
-  - A platform team needs two consumers to be a platform team; until then it is an embedded team.
-- **The weak answer to avoid:** "We centralize everything for consistency."
-- **Follow-up probe:** what did the business route around last year, and why?
-
-#### E53. Situation: your center of excellence has fifty pilots and three production systems. What is wrong?
-
-- **What is being tested:** diagnosis of a common program failure.
-- **Strong answer skeleton:**
-  - It is a demo factory, and the cause is a success metric that counts launches rather than operated systems.
-  - Change the metric to systems in production with a named operational owner at ninety days.
-  - Add a portfolio gate that refuses intake without that owner.
-  - Watch the other three center failures: bottleneck, ivory tower and tollbooth, and pair every mandatory gate with a service you actually provide.
-- **The weak answer to avoid:** "We need more engineering capacity to productionize the backlog."
-- **Follow-up probe:** of your three production systems, how many have an operational owner who agreed in writing?
-
-#### E54. A business unit brings you twenty AI use cases. What do you do first?
-
-- **What is being tested:** whether the candidate can say no to AI.
-- **Strong answer skeleton:**
-  - Score all twenty on need, restraint and worth, and expect most to be deterministic automation in an AI costume.
-  - Five tells: the rule can be written down and nobody disputes it, inputs are already structured or one upstream form would make them so, the output is consumed by a system rather than read, the stated accuracy target is 100 percent and the business case is labor hours on a stable format.
-  - Re-scope rather than reject: return an integration and rules proposal that delivers the outcome faster and cheaper, and route it to the team that does that work.
-  - Report the deterministic deliveries as program outcomes, because the program's job was the outcome and not the instrument.
-- **The weak answer to avoid:** "We prioritize by business value and start the top five."
-- **Follow-up probe:** what was the last thing you refused to build with a model, and how did the sponsor take it?
-
-#### E55. How do you know whether to automate the current process or redesign it?
-
-- **What is being tested:** whether the candidate paves the cowpath.
-- **Strong answer skeleton:**
-  - Ask which constraint made each step necessary and test it against the constraints AI relaxes: reading, drafting, a first pass, translation and consistency checking.
-  - If a step exists only because one of those was expensive, delete it rather than automating it.
-  - Automating a process encodes it and makes it harder to change than it was when it was manual.
-  - AI does not relax being wrong, accountability or trust, so steps that exist for those reasons stay.
-- **The weak answer to avoid:** "We automate the documented standard operating procedure as written."
-- **Follow-up probe:** what did you delete rather than automate, and what did that save?
-
-#### E56. When do you turn something into a reusable asset?
-
-- **What is being tested:** restraint against premature platforming.
-- **Strong answer skeleton:**
-  - On the third use by three distinct owners, with four exceptions: promote at the first use when stakes are high, scope per jurisdiction in a regulated group, discount repeated use by one person and never promote something cheaper to rewrite than to maintain.
-  - Share a service only when the interface is stable across consumers, defects mean the same thing to everyone and nobody is blocked waiting for it.
-  - Never share eval sets, live prompts, business rules or corpora with different permission models.
-  - Premature sharing kills adoption, and the platform then costs more than it saves.
-- **The weak answer to avoid:** "We standardize on the first good implementation."
-- **Follow-up probe:** name a shared asset you deprecated, and what triggered it.
-
-#### E57. How do you run discovery on a workflow you have never seen?
-
-- **What is being tested:** method rather than instinct.
-- **Strong answer skeleton:**
-  - Five passes: boundary, discovery, profile, failure and shadow, and the fifth governs because the documented process is not the process.
-  - Four instruments, all of them: process mining says what happened, observation says why, interviews say what people believe and artifacts say what was actually decided.
-  - Decompose at four levels: case, task, decision and handoff, and build the delegation map at decision level.
-  - Profile five variances, and get the wait ratio and the escape rate, because a high wait ratio means touch-time savings will never be visible.
-- **The weak answer to avoid:** "We interview the sponsor and map the process."
-- **Follow-up probe:** what did shadowing show you that the standard operating procedure did not?
-
-#### E58. Situation: adoption stalled at fifteen percent of the eligible population six months after launch. What do you do?
-
-- **What is being tested:** whether adoption is diagnosed or evangelized.
-- **Strong answer skeleton:**
-  - Segment the fifteen percent against the eighty-five and find what differs: task mix, trust, workflow placement or a defect concentrated in one segment.
-  - Check the query log for the questions the system cannot answer; that list is the content backlog and is routed to business owners rather than engineering.
-  - Check whether the tool sits inside the workflow or beside it, because a system requiring a context switch loses to the incumbent path regardless of quality.
-  - Check user drift, which is the drift always missed: the population using the system today is not the population it was evaluated against.
-- **The weak answer to avoid:** "More training and a communications campaign."
-- **Follow-up probe:** what did the non-adopters say when you asked them, and did you ask?
-
-#### E59. How do you fund a platform so it does not die?
-
-- **What is being tested:** commercial literacy.
-- **Strong answer skeleton:**
-  - Fund showback first, then chargeback once cost per outcome is attributable.
-  - Never leave the platform to be funded as a side effect of a project, because the first project cancellation takes it out.
-  - Attribute cost from day one, including human review minutes, so the unit economics argument exists before it is needed.
-  - Name the queue tax out loud when you propose a shared service, so the trade is explicit.
-- **The weak answer to avoid:** "It is funded from the transformation budget."
-- **Follow-up probe:** what is your cost per completed task, and who else knows that number?
-
----
-
-### Group 8: Executive and stakeholder leadership
-
-#### E60. A sponsor opens with "we want an AI assistant and it needs to be very accurate." What do you ask next?
-
-- **What is being tested:** discovery instinct.
-- **Strong answer skeleton:**
-  - "If it gets a specific case wrong, what happens, to whom and who finds out?"
-  - That single question determines review design, control type, model tier, latency budget, eval content and viability.
-  - Budget, launch date and vendor preference are downstream of it, not inputs to it.
-  - A stated want is examined rather than accepted; "very accurate" is a proposed solution wearing a requirement's clothes.
-- **The weak answer to avoid:** "What accuracy target do you need?"
-- **Follow-up probe:** the sponsor says 100 percent. What do you say back, in one sentence?
-
-#### E61. How do you present an architecture trade-off to a board?
-
-- **What is being tested:** audience translation.
-- **Strong answer skeleton:**
-  - Five parts: the decision, the options considered, the criterion, the option chosen and the consequences accepted.
-  - Consequences accepted is the part most often missing and the part a board is actually accountable for.
-  - Never one option, one number or one document; alternatives with what each costs, translated into what the audience answers for.
-  - Technical detail offered to an executive audience obscures the decision rather than supporting it.
-- **The weak answer to avoid:** "We present the recommended architecture and the implementation plan."
-- **Follow-up probe:** what consequence did you write down that you were tempted to leave out?
-
-#### E62. Situation: a client escalates that the assistant keeps getting renewal answers wrong. Your delivery lead replies that uptime was 99.9 percent. What do you do?
-
-- **What is being tested:** whether the candidate hears the wrong promise being answered.
-- **Strong answer skeleton:**
-  - Availability and quality are different promises; the complaint is about correctness and the answer was about the system responding.
-  - Convert the commitment: a named metric, a stated population, a routing rule for the remainder and an agreed consequence of a miss.
-  - Then localize the defect: renewal answers wrong points at source and the retrieval-versus-tool-call boundary before it points at the model.
-  - Report detection latency honestly, because how long it ran undetected is the number that predicts harm.
-- **The weak answer to avoid:** "Offer a service credit and raise the availability target."
-- **Follow-up probe:** how long had it been wrong before the client told you?
-
-#### E63. How do you set expectations about non-determinism with a general counsel or a regulator?
-
-- **What is being tested:** precision under an audience that punishes imprecision.
-- **Strong answer skeleton:**
-  - State the property plainly: the same input may produce different outputs, so the commitment is a measured level on a population, never correctness on a case.
-  - Show the reconstruction capability: the trace, the lineage record and the release tuple, which together answer "why did it say that."
-  - Show the control placement: where a human decides, where a code gate makes an action impossible and what each control does on failure.
-  - Never claim a prompting technique eliminates hallucination, and never present over-refusal as caution.
-- **The weak answer to avoid:** "The model is very accurate and we have guardrails."
-- **Follow-up probe:** a regulator asks why the system produced this specific output on this date. Show me your answer.
-
-#### E64. What do you do when the sponsor's requested design is one you would not sign?
-
-- **What is being tested:** professional spine.
-- **Strong answer skeleton:**
-  - Present the options, the criterion and the consequences accepted, and make the refused option's consequence explicit and dated.
-  - Separate the outcome from the instrument: usually the outcome is deliverable through a shape you would sign.
-  - If it proceeds regardless, record the position in the decision record with a named owner rather than letting the artifact trail imply agreement.
-  - Escalate on the risk, not on the disagreement, and name what would change your view.
-- **The weak answer to avoid:** "The sponsor owns the risk decision, so we build what they ask for."
-- **Follow-up probe:** tell me about a time you wrote your objection down and were overruled.
-
-#### E65. How do you talk about AI cost to a chief financial officer?
-
-- **What is being tested:** unit economics rather than token pricing.
-- **Strong answer skeleton:**
-  - Fully loaded cost per completed task, including human review minutes and rework, not cost per token or per seat.
-  - The lever order and what each costs in quality: measure, cache, trim, route, parallelize, defer, stream, shorten last.
-  - The cost-quality frontier as a decision taken deliberately, with the point on it named, rather than a drift discovered in a bill.
-  - Attribution from day one, so a claim of saving survives a challenge.
-- **The weak answer to avoid:** "Token prices keep falling so unit cost takes care of itself."
-- **Follow-up probe:** you cut cost 40 percent. Show me what happened to the escape rate.
-
-#### E66. Situation: two business units both claim ownership of the same corpus and both want to change it. What do you do?
-
-- **What is being tested:** decision rights in practice.
-- **Strong answer skeleton:**
-  - One named owner per asset with a deputy who has done the job; shared ownership is no ownership.
-  - Scope the disagreement: usually there are two corpora with different jurisdictions or permission models being forced into one.
-  - Apply the absolute: an unowned document must not be retrievable, so the escalation has a deadline attached.
-  - Record the resolution with a conflict rule for next time, since this recurs.
-- **The weak answer to avoid:** "We form a working group."
-- **Follow-up probe:** what happens to the index while the working group meets?
-
-#### E67. What does your first ninety days look like?
-
-- **What is being tested:** sequencing judgment.
-- **Strong answer skeleton:**
-  - Inventory what is actually running, including the systems nobody registered, and tier them by capability rather than intent.
-  - Find the three retrofit-defeating properties in the running estate, auditability, deletability and honest measurability, and price the gaps, noting that only auditability is unrecoverable and deletability has a known and disclosable recovery cost.
-  - Establish the thin mandatory waist and one credible refusal, so the gate is known to be real.
-  - Deliver one thing that works within the period, chosen for the credibility it buys rather than its size.
-- **The weak answer to avoid:** "Publish the AI policy and stand up the governance committee."
-- **Follow-up probe:** what would you refuse to do in the first ninety days that you will be asked to do?
-
----
-
-### Group 9: Failure, incident and accountability
-
-#### E68. Situation: your assistant has been giving wrong answers for two weeks and nobody noticed. What went wrong operationally?
-
-- **What is being tested:** whether detection is instrumented.
-- **Strong answer skeleton:**
-  - Detection latency is the failure, and it is the number that predicts harm.
-  - The missing instruments are almost always high-confidence sampling and distribution-shift alerting, because everything the system reported was green throughout.
-  - Absence of errors is not evidence of health; the dominant failure produces normal latency, no errors and nobody positioned to notice except the person harmed.
-  - Fix the class, not the instance: triage instance against class every time and close visibly, or the reporting signal stops.
-- **The weak answer to avoid:** "We fixed the prompt and added a regression test for that case."
-- **Follow-up probe:** how many other cases in that class shipped, and how do you know?
-
-#### E69. How do you run an incident for a system that has no stack trace and does not reproduce?
-
-- **What is being tested:** incident management adapted to non-determinism.
-- **Strong answer skeleton:**
-  - Severity must include harm with no technical signature, or the incident never gets raised.
-  - Contain with the narrowest of the available options that works, and every containment option must be executable without a deployment.
-  - Reconstruct from the trace and the persisted retrieved set rather than by re-running, because re-running produces a different answer.
-  - Regulatory notification is a legal judgment, never engineering's.
-- **The weak answer to avoid:** "We follow the standard major incident process."
-- **Follow-up probe:** name your narrowest containment option and tell me who can execute it at 2am.
-
-#### E70. Situation: the model produced a defamatory statement about a named third party in a client-facing document. Walk me through the first four hours.
-
-- **What is being tested:** composure and correct sequencing under legal exposure.
-- **Strong answer skeleton:**
-  - Contain first with the narrowest effective option, then preserve: freeze the trace, the prompt version, the model version, the corpus state and the log tier before any of them expire or are reindexed.
-  - Establish scope: instance or class, and how many recipients, using the run identifier written into the business record.
-  - Notify counsel and let the notifiability judgment sit with them; engineering supplies facts, not conclusions.
-  - Then the control question: what would have made it impossible rather than visible, and where was the human placement.
-- **The weak answer to avoid:** "We disable the system and investigate."
-- **Follow-up probe:** your short-retention log tier expires in six hours. What did you do about that in hour one?
-
-#### E71. Who is accountable when the model is wrong?
-
-- **What is being tested:** whether accountability is located or diffused.
-- **Strong answer skeleton:**
-  - A named person per system with a deputy, fixed decision rights across the lifecycle and go-live authority moving with tier.
-  - Partnering distributes execution and never distributes accountability; the vendor owns the weights and you own everything else.
-  - Accountability is one of the three delegation criteria and can force human retention on its own, whatever the reversibility.
-  - Where an answer offers "the team reviews it," insist on a person and an artifact.
-- **The weak answer to avoid:** "The business owns the risk and IT owns the platform."
-- **Follow-up probe:** name the person accountable for your largest running system, and tell me whether they agreed.
-
-#### E72. Situation: a control was identified as inadequate nine months ago and never remediated. It just failed. What is your exposure and what do you do?
-
-- **What is being tested:** whether the candidate understands that governance artifacts cut both ways.
-- **Strong answer skeleton:**
-  - Governance artifacts are an asset when they show a considered, controlled design and a liability when they show a risk identified and unremediated.
-  - This is an argument for remediation tracking with owners and dates, not an argument against writing things down.
-  - Immediate: remediate, then reconstruct why it sat, because the cause is usually an unowned finding rather than a disputed one.
-  - Structural: every finding gets an owner, a date and an escalation path when the date passes.
-- **The weak answer to avoid:** "We should be more careful about what we put in writing."
-- **Follow-up probe:** how many open findings do you have today with a date in the past?
-
-#### E73. What is the worst AI failure you have personally been close to?
-
-- **What is being tested:** whether the candidate has operated rather than advised.
-- **Strong answer skeleton:**
-  - Name the actual failure, the detection path and the detection latency.
-  - Locate it at a stage rather than blaming the model, and say what the trace could and could not tell you.
-  - Say what the structural fix was and what it cost, including what you had to stop doing.
-  - Name the thing you would still not be able to detect today.
-- **The weak answer to avoid:** a failure that was entirely someone else's, or a failure with no consequence.
-- **Follow-up probe:** what did you change about how you design, not about that system?
-
-#### E74. How do you tell an instance failure from a class failure?
-
-- **What is being tested:** triage discipline.
-- **Strong answer skeleton:**
-  - Ask what the reported case has in common with the population: document type, jurisdiction, tenant, query pattern or corpus segment.
-  - Query the run store for the same signature rather than reasoning about it; this is what the run entity exists for.
-  - Fixing only the reported case is incomplete and is the most common failure of AI incident handling.
-  - Feed the class into the golden set by addition, so the regression cannot recur silently.
-- **The weak answer to avoid:** "We fix the reported case and monitor for recurrence."
-- **Follow-up probe:** show me the query you would run against your run store to answer that.
-
-#### E75. What do you do when a vendor tells you the behavior change was not a change?
-
-- **What is being tested:** whether the candidate can hold a vendor to evidence.
-- **Strong answer skeleton:**
-  - Produce the measurement: the pinned model identifier logged per request and the continuously running eval suite showing the shift, with the date.
-  - A provider-initiated change is a change and requires the same evaluation evidence as one you initiated.
-  - Escalate on the dependency register entry, not on the anecdote, and exercise the rehearsed fallback if the evidence supports it.
-  - Record it, because concentration risk is counted at the shared failure and this is evidence for the next continuity review.
-- **The weak answer to avoid:** "We raise a support ticket and wait."
-- **Follow-up probe:** you did not log the model identifier per request. What can you now prove?
-
----
-
-### Group 10: The disqualifying questions
-
-These separate a candidate who has run a program from one who has read about it. Each is chosen because the correct answer cannot be produced from general familiarity, only from having been accountable for the outcome.
-
-#### E76. What have you deliberately not built with AI, and what did it cost you politically?
-
-- **What is being tested:** whether the candidate has ever refused, and survived it.
-- **Strong answer skeleton:**
-  - A specific case with the score behind it: low need, so deterministic code whatever the volume.
-  - The re-scope that was delivered instead, with the outcome the sponsor actually wanted.
-  - The political cost, named honestly, and how credibility was rebuilt.
-  - The general point: being able to say no to AI is what makes the yes believable.
-- **The weak answer to avoid:** "We evaluate every use case on its merits."
-- **Follow-up probe:** who was angry, and are they still?
-
-#### E77. Show me an eval set you built. What is in it and how did it grow?
-
-- **What is being tested:** whether evaluation is practiced or described.
-- **Strong answer skeleton:**
-  - Composition by segment, with the segments fixed in advance because they cannot be backfilled.
-  - Growth by addition from production failures, never by replacement and calibration of the judge on a schedule.
-  - Separate sets per architecture and a labeled retrieval set, because retrieval quality is invisible in the output.
-  - What it cost to maintain, and what you deleted from it when a client exercised an erasure right.
-- **The weak answer to avoid:** "We have a set of test prompts we run before releases."
-- **Follow-up probe:** how many cases, in how many segments, and when did it last catch something?
-
-#### E78. What is your escape rate, and what was it before?
-
-- **What is being tested:** whether a baseline was ever taken.
-- **Strong answer skeleton:**
-  - A number for the human baseline captured before launch, with the sampling method that produced it.
-  - The current number on the same instrument, segmented.
-  - Honest limits of the attribution method chosen, named without prompting.
-  - If there is no baseline, say so plainly and name the strongest available alternative claim.
-- **The weak answer to avoid:** any confident improvement figure with no baseline behind it.
-- **Follow-up probe:** who measured the baseline, and would they measure the same thing today?
-
-#### E79. Name a control in your program that has never fired. What did you conclude?
-
-- **What is being tested:** whether controls are tested or trusted.
-- **Strong answer skeleton:**
-  - A control that never fires is either unnecessary, misplaced or broken, and there is no fourth option.
-  - Test it deliberately: seeded defects, negative probes against restricted partitions and rehearsed fallbacks.
-  - A fallback unexercised in six months is not a fallback; a gate nobody can fail is not a gate.
-  - Say what you removed as a result, because removing a decorative control is a real outcome.
-- **The weak answer to avoid:** "That control has had no incidents, which is a good sign."
-- **Follow-up probe:** when did you last deliberately try to make one of your controls fail?
-
-#### E80. Situation: you inherit a running system with no eval set, no baseline and a log tier that expires in thirty days. What do you do first, and what do you accept you have lost?
-
-- **What is being tested:** triage plus the honesty to name what is unrecoverable.
-- **Strong answer skeleton:**
-  - First: extend the log retention and stop the clock, because the record is the only evidence and it is expiring now.
-  - Second: build the eval set from production traffic, accepting that it certifies current behavior rather than intended behavior, and say so in writing.
-  - Third: establish deletability and auditability positions, since those are the two that cannot be retrofitted cheaply and will be asked about.
-  - Accept as lost: the pre-launch baseline, and therefore any clean claim of value; name the strongest honest alternative.
-- **The weak answer to avoid:** "We would run a full assessment and produce a remediation roadmap."
-- **Follow-up probe:** the sponsor wants a value claim for the board next month. What do you give them?
-
-#### E81. What is the difference between what you were accountable for and what you advised on?
-
-- **What is being tested:** whether the experience is operational or advisory, asked directly.
-- **Strong answer skeleton:**
-  - Name the systems where you signed the go-live and the systems where you wrote the recommendation.
-  - For the first category, name the incident you owned and the number you reported.
-  - For the second, name where your advice was not taken and what happened.
-  - Do not inflate: an advisor who says so and knows the difference outranks an operator who cannot show a number.
-- **The weak answer to avoid:** blurring the two, or claiming ownership of an outcome you observed.
-- **Follow-up probe:** whose name was on the go-live decision?
-
-#### E82. Situation: your best engineer says the governance requirement is impossible and proposes shipping without it. How do you respond?
-
-- **What is being tested:** technical credibility under internal pressure.
-- **Strong answer skeleton:**
-  - Get specific about which requirement and which property: usually the objection is to a control's implementation, not to the property it establishes.
-  - Offer the structural alternative rather than a policy exception: exclusion from the index instead of a filter, a separate store instead of a flag, a code gate instead of a prompt.
-  - If it is genuinely impossible in the timeline, reduce the scope of the system rather than the scope of the control, and record the trade.
-  - Never accept a compensating control on a compliance gate as equivalent to the gate.
-- **The weak answer to avoid:** "We would grant an exception with a remediation date."
-- **Follow-up probe:** you granted the exception, the date passed and the engineer left. Where does that sit now?
-
-#### E83. What would you need to see in our organization in the first month to know this program is in worse shape than described?
-
-- **What is being tested:** whether the candidate has diagnostic instincts rather than a delivery plan.
-- **Strong answer skeleton:**
-  - A control population nobody can enumerate independently, meaning no one can produce the count without asking the teams.
-  - Approval rates near 100 percent with review times below reading time.
-  - No baseline before any launch, and value claims already in circulation.
-  - Systems running that were never tiered, and a mandatory waist that the business has already routed around.
-- **The weak answer to avoid:** "I would spend the first month listening."
-- **Follow-up probe:** which of those four would make you decline the role?
-
----
-
-### Preparation notes
-
-| Role | Groups to rehearse cold | The question most likely to end the interview |
-| --- | --- | --- |
-| Enterprise AI Architect | 1, 2, 5, 6, 10 | E13, testing a non-deterministic system |
-| Head of Legal AI | 3, 4, 9, 10 | E29, where privilege actually leaks |
-| Legal Operations and Innovation lead | 6, 7, 8, 10 | E54, saying no to twenty use cases |
-| AI Governance executive | 3, 8, 9, 10 | E19, governance against documentation |
-
-Rehearse the eight questions in Group 10 out loud with real numbers before rehearsing anything else. Every one of them is answerable in ninety seconds by someone who has run a program and is unanswerable by someone who has not, and interviewers know it.
-
----
-
----
+Removed on 18 October 2026 under ruling 2 of 15 October 2026: interview preparation for named job titles is candidate material, not a practitioner reference, and is kept privately. Earlier tagged releases still carry it.
 
 ## Appendix F: The Architect's Artifact Set
 
-Twenty-five artifacts. An enterprise artificial intelligence architect is judged on whether these exist, are current and are signed. Each entry states its purpose, its owner, when it is produced and who signs it, then gives the fillable structure. A worked example row is supplied where the artifact is tabular.
+Twenty-five artifacts, now one file each in the Primer Workbook, [primer-workbook/artifacts/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/README.md), each with front matter naming its owner, the trigger that produces it and its signatory. References in this Primer of the form F1 to F25 resolve there.
 
-Three rules govern the whole set. **An artifact with no named owner is a draft.** **An artifact with no generation trigger is a one-time document that will be stale within a quarter.** And **an artifact that no decision depends on should be deleted**, because a set nobody reads trains the organization to sign without reading.
-
----
-
-### F1. AI use case intake form
-
-**Purpose.** Capture enough about a proposed use case to tier it, route it and refuse it without a design phase.
-**Owner.** Requesting business function, completed with the architect.
-**Produced.** Before any design work, at first request.
-**Signed by.** Requesting function head, and the architect who accepts it into the pipeline.
-
-```
-INTAKE ID              AI-2026-0147
-Requesting function    Procurement
-Named business owner   [person, not team]
-Deputy                 [person]
-Date received          2026-03-04
-
-THE WORK
-Problem in one sentence  Contract review before signature is a
-                         12 day queue and the queue is the risk
-Unit of work (case)      One inbound supplier contract, receipt
-                         to signature recommendation
-Current volume           1,900 per year, peak 260 in March
-Current touch time       95 minutes per case, 3 roles
-Current failure rate     Escapes to signature with a
-                         non-standard indemnity: 4%
-Do-nothing consequence   Queue grows 18% on forecast volume
-Existing manual path     Yes, fully staffed today
-
-THE PROPOSAL
-What Claude would do     Draft clause comparison against the
-                         standard playbook, with citations
-What stays with systems  Threshold application, workflow state,
-                         signature routing
-What stays with humans   Every deviation decision
-Entry point sought       Internal web application via gateway
-Deadline and why         None stated. Confirmed not artificial
-
-INPUTS
-Data classes             Confidential. Counterparty commercial
-                         terms. No special category identified
-Systems of record        Contract lifecycle system, supplier
-                         master
-Affected population      Internal only at this stage
-External exposure        None. No third-party content ingested
-
-BENEFIT
-Metric that will move    Days from receipt to recommendation
-Baseline value           12.1 days, measured Jan to Feb 2026
-Target and by when       6 days by Q4, agreed by the owner
-Who claims the benefit   Procurement director, in their own
-                         quarterly review
-
-PRELIMINARY POSITION
-Estimated tier           T2 pending assessment
-Known blockers           None
-Routing decision         Accept to design / Return for
-                         rework / Refuse, with reason
-```
-
-**The two fields that do the work** are the do-nothing consequence and who claims the benefit. A use case with no do-nothing consequence is an enthusiasm. A benefit nobody outside the technology function will claim in their own review will not survive a budget cycle.
-
-**A note on the worked figures, because 9.1 carries a similar one and they are not the same scenario.** This is a procurement function reviewing inbound supplier contracts at 1,900 a year with a 95-minute touch time across three roles. 9.1's briefing is an in-house legal function reviewing commercial contracts, and its 1,900 is the pilot volume over ten weeks at a different touch time and a different failure rate. The coincidence of the number across two contract-review examples is accidental. **Do not reconcile the two or carry a figure from one into the other.**
-
----
-
-### F2. AI architecture decision record
-
-**Purpose.** Record the decision, the alternatives and the seven properties an artificial intelligence system has that a deterministic service does not.
-**Owner.** Architect.
-**Produced.** At design approval, and again on any material change to model, tools, corpus or oversight placement.
-**Signed by.** Architect as author, business system owner as accepting party and for tier 3 and above the governance committee.
-
-```
-ADR ID / version / date / supersedes
-Status        proposed | accepted | superseded | reversed
-Context       the situation forcing the decision, 5 lines max
-Decision      what will be built, in one sentence
-Alternatives  each with the reason it was not chosen
-
-CONVENTIONAL CLAUSES
-Criterion     the measure the decision was made against
-Consequences  what is now harder, what is now foreclosed
-
-THE SEVEN AI CLAUSES
-1 Model dependency and deprecation horizon
-    identifier, pinned yes/no, assumed support end,
-    migration owner, runway required
-2 Non-determinism tolerance
-    what may vary between runs, what must not,
-    what downstream consumers assume about stability
-3 Eval gate
-    which set, which threshold, segmented how,
-    run by whom, what it blocks
-4 Human oversight point
-    which of the five placements, at which step,
-    handoff package, reviewer capacity assumption
-5 Data egress boundary
-    what data crosses which line, to whom, under
-    which agreement, retained where, for how long
-6 Failure mode and blast radius
-    what a wrong output does, to how many cases,
-    over what period, before detection
-7 Reversal path and switching condition
-    how to undo, whether undo needs a deployment,
-    time to restore, how it was rehearsed, and the
-    observable condition that would reopen the decision
-```
-
-**Test question per clause, asked out loud before signing.** Who moves this when the model is retired. If we run it twice what may differ. What number on what set blocks production. Which specific action pauses and who is on the other side. Draw the line the data crosses and name the agreement. How many wrong outputs are acted on before anyone notices. Restore the previous behavior, how long, does it need a deploy.
-
----
-
-### F3. Risk tiering assessment and classification record
-
-**Purpose.** Assign the tier that determines how much of the control set applies, and record the reasoning so the assignment can be challenged.
-**Owner.** Business system owner, scored with the architect.
-**Produced.** At intake, and on any of the nine re-tier triggers.
-**Signed by.** Business system owner; second-line risk owner countersigns at tier 3 and above.
-
-| Dimension | Score 0 to 4 | Evidence for the score |
-| --- | --- | --- |
-| Autonomy | 1 | Draft only, no state change, no outbound message |
-| Reversibility | 1 | A bad draft is discarded at no cost |
-| Stakes | 3 | A missed indemnity in a live negotiation is material |
-| Affected population | 1 | Internal professionals who chose the tool |
-| Data sensitivity | 4 | Privileged and commercially confidential material |
-| External exposure | 1 | Internal corpus, no untrusted ingestion |
-| Regulatory character | 1 | No specific regime identified for this use |
-| Novelty | 2 | Second deployment of an established pattern |
-| **Raw total** | **14** | Band T2 before overrides |
-
-```
-OVERRIDES APPLIED
- [x] 1  any single dimension at 4 floors the tier at T3
- [ ] 2  output affects legal rights, entitlements, employment,
-        credit, health or liberty: floor T3 plus human decision
-        authority
- [ ] 3  autonomy >= 3 AND reversibility <= 1: floor T4
- [ ] 4  novelty = 4: one tier above computed for the first
-        operating period, then re-score
-
-FINAL TIER              T3
-Rationale               Data sensitivity carries the entire
-                        risk. Low autonomy misleads here
-Control consequences    Data protection impact assessment,
-   forced by the tier   third-party assessment, privilege
-                        segregation, retrieval filtering,
-                        quarterly review, staged rollout
-Dissent recorded        None / [who disagreed and on what point]
-Re-tier triggers armed  All nine: new tool on the allowlist;
-                        corpus class change; new user population
-                        or jurisdiction; model or version change;
-                        any incident; regulatory character
-                        change; review cadence lapse; departure
-                        of the named owner at T3 and above;
-                        change in the recorded purpose of the
-                        system or of its corpus
-Next scheduled review   2026-09-30
-Regulatory band field   [separate field, left blank unless a
-                        determination has been made by counsel]
-```
-
-**Never merge the internal tier field with the regulatory classification field.** They classify by different inputs, internal tiering by what the system can do and regulatory schemes typically by what it is for, and a tier quietly relabeled as a legal classification is a misrepresentation waiting to be found.
-
----
-
-### F4. Delegation map
-
-**Purpose.** Assign every step of the work to Claude, to an existing system or to a human, with the reasoning stated.
-**Owner.** Architect.
-**Produced.** Before pattern selection, and re-issued whenever a step moves owner.
-**Signed by.** Architect and business process owner.
-
-| Step | Owner | Reversibility | Stakes | Accountability | Verified by | Outcome class / routing |
-| --- | --- | --- | --- | --- | --- | --- |
-| Extract clause set from the contract | Claude | Reversible, draft only | Low | Architect | Schema validation plus citation check | AI-appropriate |
-| Resolve counterparty to the supplier master | Existing system | Reversible | Medium | Data owner | Deterministic match, ask on multiple hits | Routed: exact match the supplier master already does reliably |
-| Apply the approval threshold | Existing system | Reversible | High | Policy owner | Policy engine test suite | Routed: deterministic rule, never a prompt |
-| Compare each clause to the standard playbook | Claude | Reversible | Medium | Architect | Labeled comparison set, quarterly | Collaborative |
-| Decide whether a deviation is acceptable | Human | Irreversible once signed | High | Contract counsel | Named reviewer, recorded decision | Human-retained |
-| File the executed contract | Existing system | Reversible | Low | Records manager | Records schedule | Routed: records system of record, on its own schedule |
-
-**The three outcome classes describe what Claude does**, and there are exactly three: AI-appropriate, human-retained and collaborative. A step owned by an existing system is recorded here as routed, with the reason, because the three classes describe delegation to the model and say nothing about what the estate already does reliably.
-
-```
-COMPLETENESS CHECKS, all four must pass
- [ ] Every step has exactly one owner
- [ ] Every step assigned to Claude names the thing that
-     verifies it. If nothing verifies it, add verification
-     or move the step
- [ ] No deterministic business rule sits in a prompt
- [ ] Every irreversible or high-stakes step has a human
-     owner or a preventive gate, and the ungated remainder
-     has a stated sampling rate
-```
-
-**Absence of this artifact is the single best predictor of over-assignment to the model.** It is the first thing to ask for in a review and the fastest to read.
-
----
-
-### F5. Human oversight design specification
-
-**Purpose.** Turn "a human reviews it" into a control with a throughput, a latency, a competence requirement and a defined effect of objection.
-**Owner.** Business process owner, designed with the architect.
-**Produced.** At design, before the readiness gate.
-**Signed by.** Business process owner, who is accepting the capacity commitment, and the operational owner.
-
-```
-CONTROL ID / system / step it sits at
-
-PLACEMENT       pre-action approval | post-action review |
-                sampled audit | escalation on uncertainty |
-                exception only
-Preventive or detective?   [sampled audit is detective and
-                            is not a safety control]
-Trigger         which actions reach a human, stated as a rule
-Ungated remainder and its sampling rate
-
-1 INFORMATION   what the reviewer sees
-   [ ] the output          [ ] the retrieved set, cited
-   [ ] the tool calls made [ ] what was suppressed or refused
-   [ ] the specific question they are being asked
-   Handoff package format: who, what the issue is, what was
-   established, recommended action, why. A raw transcript is
-   not a handoff
-
-2 TIME          measured reading time of the material  __ min
-                budgeted review time                    __ min
-                if budget < reading time the control is
-                nominal and must be redesigned
-   Volume at peak __ /day. Reviewer capacity __ /day.
-   If volume exceeds capacity the design is wrong, not
-   the reviewer
-
-3 COMPETENCE    what the reviewer must be able to judge
-                substantive: [e.g. whether the cited clause
-                supports the recommendation]
-                not merely: [that a citation exists]
-                qualification held: __________
-
-4 AUTHORITY     effect of an objection: [stops the action]
-                who may overrule: [named role]
-                record required on overrule: [yes]
-
-5 INCENTIVE     what the reviewer is measured on: __________
-                a caught error is recorded as: [a success]
-                approvals per hour is NOT a measure
-
-MEASUREMENT     override rate, override direction, time on
-                task against reading time, disagreement
-                sampling, blind re-review rate, outcome
-                tracing on approved items
-Investigation threshold: override rate below __% triggers a
-review of the control, not congratulation
-```
-
-**An oversight control reporting a 100 percent approval rate is evidence of failure.** Either the system needs no oversight and the step should become sampling, or the reviewers are not reviewing. There is no third explanation.
-
----
-
-### F6. Evaluation charter
-
-**Purpose.** Define what good means before anything is built, so that "better" is a number rather than an impression.
-**Owner.** Quality or evaluation owner.
-**Produced.** Before build, updated at every material change.
-**Signed by.** Quality owner as author, business owner as the party accepting the thresholds and the residual error rate.
-
-```
-SYSTEM / tier / charter version / date
-
-1 WHAT GOOD MEANS
-  Task the system performs, in the business owner's words
-  Success criterion, stated as an observable outcome
-  Named populations and segments that must be reported
-  separately: [payer, service line, jurisdiction, language,
-  document type, affected group]
-  Explicitly out of scope: __________
-  Behavior required on out-of-scope input: [refuse and route]
-```
-
-**2. The sets.**
-
-| Set | Size | Source | Frozen | Refresh rule |
+| ID | Artifact | Owner | Produced | File |
 | --- | --- | --- | --- | --- |
-| Golden set | 400 | Human-labeled real cases | Yes | Add only, never edit |
-| Regression suite | 180 | Every fixed production failure | Yes | Add on every fix |
-| Labeled retrieval set | 250 | Query to correct chunk | Yes | Add on every gap found |
-| Adversarial set | 90 | Red team plus injection cases | Yes | Add on every finding |
-| Online sample | Continuous | Stratified live traffic | No | Not applicable |
-
-**3. Graders.** A metric produced by a model grader is reported with the date of its last human calibration attached. An uncalibrated judge score is not admissible evidence for a change.
-
-| Measure | Grader | Rubric | Calibration |
-| --- | --- | --- | --- |
-| Citation validity | Deterministic check | Offset and span match | Not applicable |
-| Criterion coverage | Model judge | Four point, reasons stated first | Human agreement per class, quarterly |
-| Faithfulness | Model judge | Binary plus the unsupported span | Human agreement per class, quarterly |
-| Overall acceptability | Human, sampled | Written rubric | Inter-rater agreement |
-
-**4. Thresholds.**
-
-| Measure | Threshold | Per segment | Blocks what |
-| --- | --- | --- | --- |
-| Citation validity | 95% | Yes | Promotion |
-| Criterion coverage | 90% | Yes | Promotion |
-| False refusal rate | 3% or below | No | Promotion |
-| Recall at 8 | 0.92 | Yes | Promotion |
-
-```
-5 CADENCE AND SIGN-OFF
-  Blocking at change: regression suite, golden set
-  Scheduled: labeled retrieval set daily, online sample
-  continuous, human review sample weekly
-  Shadow evaluation before any model or version change
-  Segment representation: no segment below __ cases
-  Baseline of the simpler alternative, dated: __________
-  Self-disagreement baseline (same input, n runs): __
-  Judge model and version: __________ pinned: yes
-  Last human calibration: __________ agreement per class: __
-  Sign-off on results: quality owner
-  Acceptance of the residual error rate: business owner
-```
-
-**The business owner is not signing that the system is accurate.** They are signing that they accept a known error rate on a named population with a defined routing rule for the remainder.
-
----
-
-### F7. Production readiness gate checklist with signatories
-
-**Purpose.** Stop systems that are not ready, and produce a record of who accepted what when one ships anyway.
-**Owner.** Governance, risk management and compliance function operates the gate; the delivery lead presents.
-**Produced.** Before first production traffic, and again on any change that crosses a re-tier trigger.
-**Signed by.** Eight dimensions, five signatories, each signing only the dimensions they can actually judge. No single approver.
-
-| Dimension | Binary condition | Evidence | Pass | Signatory |
-| --- | --- | --- | --- | --- |
-| Functional | Scope stated with explicit exclusions; behavior on out-of-scope input defined; output contract enforced outside the model | Scope statement, contract schema, refusal test | Y/N | Business owner |
-| Evaluation | Eval suite exists; baseline recorded; performance known by segment; retrieval measured separately; thresholds agreed | Eval report with segment breakdown | Y/N | Business owner |
-| Resilience | Behavior defined for transient, validation, business-rule and permission failures; timeouts and retries set; degraded mode defined; load tested at peak and three times peak | Failure matrix, load test results | Y/N | Operational owner |
-| Security | Tool capability reviewed against role need; authorization enforced outside the model; injection tested against retrieved and tool content; secrets and egress reviewed | Threat review, test note | Y/N | Security owner |
-| Governance | Data path documented; retention and deletion designed including derived artifacts; approvals recorded; risk assessment complete; disclosure agreed | Data flow, records schedule, approval log | Y/N | Governance, risk management and compliance owner |
-| Operational | Named operational owner who is not the architect; runbook; on-call route; observability answers "what happened on request X" without redeploying; rollback without a deployment | Runbook, ownership record, trace demonstration | Y/N | Operational owner |
-| Commercial | Cost per completed outcome known at expected and three times expected volume; budget approved; hard stop ceiling and lifting authority agreed | Sizing model, budget approval | Y/N | Business owner |
-| Change | Prompt, model, tool, corpus and guardrail changes all trigger an eval run; versioning in place; no path to production bypasses the gate | Change policy, pipeline configuration | Y/N | Engineering owner |
-
-```
-OUTCOME, exactly three are available
- [ ] Pass. Proceed to shadow, then canary, then full
- [ ] Ship with a time-bounded accepted risk
-       condition failed: __________  expires: __________
-       accepted by (named person, not a role): __________
-       remediation owner and date: __________
- [ ] Do not ship
-
-There is no fourth outcome. The absence of a fourth outcome
-is what gives the gate teeth.
-```
-
-**Diagnostic on the gate itself.** If no condition could plausibly have blocked any system shipped in the last twelve months, the gate is decorative.
-
----
-
-### F8. Model and prompt asset register
-
-**Purpose.** Know which model version and which prompt text is running where, so that a deprecation notice or a quality change has an answerable blast radius.
-**Owner.** Model configuration owner.
-**Produced.** At first deployment, updated on every change, reconciled to production monthly.
-**Signed by.** Model configuration owner attests quarterly that the register matches production.
-
-| Asset ID | Type | Version | Pinned | Systems using it | Owner | Deputy | Eval set bound to it | Last change | Deprecation horizon | Migration owner |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| PRM-014 | System prompt | v7 | n/a | Contract review assistant | A. Okafor | R. Lindqvist | GS-CR-400 | 2026-02-18 | n/a | n/a |
-| MDL-002 | Model | sonnet-class, exact identifier recorded | Yes | Contract review, intake triage | A. Okafor | R. Lindqvist | GS-CR-400, GS-IT-120 | 2026-01-06 | Assumed 12 months from pin | Platform lead |
-| EMB-001 | Embedding model | v2 | Yes | Policy corpus index | D. Marsh | S. Iyer | RET-250 | 2025-11-02 | Assumed 18 months | Data platform lead |
-| TPL-009 | Output template | v3 | n/a | Contract review assistant | A. Okafor | R. Lindqvist | Structural check | 2026-03-01 | n/a | n/a |
-
-```
-REGISTER RULES
- The embedding model is a second, separately versioned model
- dependency. Registering the generation model only is the
- common omission and it hides the dependency that forces a
- full reindex when it changes.
- Prompt assets are versioned artifacts, not text in a file
- someone edits. A tool definition change invalidates the
- prompt cache entirely, so tool definitions are registered
- here too and treated as stable.
- Reconciliation: the register is compared to the model
- identifier captured on live requests, monthly. A register
- that has never disagreed with production has never been
- reconciled.
-```
-
----
-
-### F9. Tool and connector register with least-privilege review
-
-**Purpose.** Enumerate every capability the system can exercise, the scope it holds and the justification, so that excess privilege can be removed rather than logged.
-**Owner.** Security owner, maintained with the architect.
-**Produced.** At design, on every tool addition or scope widening and at scheduled recertification.
-**Signed by.** Security owner; the business owner countersigns any state-changing tool.
-
-| Tool ID | What it does | State-changing | Scope granted | Scope actually used (90 days) | Identity used | Justification | Gate | Recertified | Decision |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TL-01 | Read contract by ID | No | Read, own tenant | Read, own tenant | End-user delegated | Core function | None | 2026-03-01 | Keep |
-| TL-02 | Search supplier master | No | Read all suppliers | Read, 4 fields of 31 | End-user delegated | Counterparty resolution | None | 2026-03-01 | Narrow to 4 fields |
-| TL-03 | Create purchase order | Yes | Create, no ceiling | Created 0 in 90 days | Service account | Requested in original design | None | 2026-03-01 | **Remove.** Unused and unbounded |
-| TL-04 | Send email to counterparty | Yes | Send as function mailbox | 212 sends | Service account | Acknowledgement only | Pre-action approval | 2026-03-01 | Keep, gate confirmed |
-
-```
-REVIEW QUESTIONS, per row
- 1 Would a competent engineer be able to say definitively when
-   this tool should be used? If not, the model cannot either
- 2 Is the granted scope wider than the used scope? Narrow it
- 3 Does the tool act as the user or as a shared service
-   account? A shared privileged account removes attribution
- 4 Is authorization decided outside the model, before the
-   action executes?
- 5 If this is excess privilege, the answer is removal.
-   Logging it, confirming it or gating it does not close the
-   exposure
- 6 If the catalog is large but each tool is legitimate, this
-   is a scale problem and the answer is progressive
-   disclosure, not removal. The two problems have different
-   answers
-```
-
----
-
-### F10. Data classification and handling record for an AI system
-
-**Purpose.** Fix the deployment route, the logging depth and the caching rules before cost or latency is considered.
-**Owner.** Data owner for each source, consolidated by the architect.
-**Produced.** At design, on any new data source and on any change to the output's purpose.
-**Signed by.** Data owner per source; privacy owner for the record as a whole.
-
-| Data element or source | Tier | Enters as | Leaves boundary to | Agreement permitting it | Route permitted | Content logging | Cache scope | Retention | Deletion path |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Executed contract text | Confidential | Retrieved chunk | Gateway to managed model route | Enterprise agreement, no training use | Managed private route | Metadata only, content to segregated store | Per tenant and per classification | 30 days audit sink | Source delete propagates to chunks, embeddings, index, cache, assembled-context log, eval sets |
-| Supplier bank details | Restricted | Not ingested | Does not leave | n/a | **Does not go to a model** | n/a | n/a | System of record | n/a |
-| Reviewer decision record | Confidential | Written by the system | Stays inside | n/a | Internal | Full | Not cached | Per legal retention | Legal hold aware |
-| The generated recommendation | Confidential by purpose | Output | Contract system | Internal | Internal | Full | Not cached | Record retention | Business record, not deletable on request |
-
-```
-OUTPUT CLASSIFICATION
- Rule: an output's classification is the higher of its
- inputs' classifications and the classification its purpose
- implies. Purpose usually wins.
- Purpose floor for this system: Confidential
- Aggregation check: does combining these sources create
- something more sensitive than any input? [state the answer]
-
-DERIVED ARTIFACT MAP, required before the first erasure
- request arrives, not after
- source record -> chunks -> embeddings -> index entries ->
- response cache -> assembled-context logs -> evaluation sets
- -> memory stores -> analytics extracts
- Named owner able to execute a delete across all nine: ______
-```
-
----
-
-### F11. Knowledge source register and ingestion contract
-
-**Purpose.** Record what is in the estate, who owns it, whether it is authoritative and on what terms it enters the index.
-**Owner.** Knowledge owner per domain.
-**Produced.** Before ingestion of any source; reviewed on the freshness cadence.
-**Signed by.** Knowledge owner for authority, data owner for access permission and whoever holds the license for the right to index. Those are three different signatures and the third is the one most often assumed.
-
-**Right to index** is a separate column from sensitivity and from access permission, and it is the field 4.14 requires. Access permission answers whether people here may read the work. Right to index answers whether the organization may copy it, derive representations of it and expose its substance through an assistant, which a reading license does not by itself permit. Populate it before ingestion, from the license or the contract, and record the basis rather than a yes.
-
-| Knowledge domain | Location | Named owner | Authority | Right to index | State | Effective dates | Sensitivity | Query traffic | Ingest decision |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Approval thresholds for outbound payments | ERP configuration table | Finance systems lead | Authoritative | Own content | Current | Live | Internal | High | **Do not index.** Route to a tool call |
-| Approval thresholds, wiki page | Confluence | Unowned | Copy | Own content | Contradicted | Unknown | Internal | High | Deprecate and redirect |
-| Standard contract playbook | Document management, /legal/playbooks | Contract counsel | Authoritative | Own content | Current | From 2025-07-01 | Confidential | High | Ingest |
-| Historic negotiation notes | Shared drive | Departed | Derived | Own content | Aging | Unknown | Confidential | Low | Elicit and rewrite, or exclude |
-| Subscribed standards library | Vendor portal | Compliance lead | Authoritative | **Read license only, no index right** ⚠ | Current | Per subscription term | Confidential | Medium | **Do not index.** Link out, or negotiate an index right at renewal |
-
-```
-INGESTION CONTRACT, per source that is ingested
- Source ID / connector / credential / owner of the credential
- Freshness requirement    stated in time: [4 hours | 30 days]
- Reindex strategy         continuous incremental | scheduled
-                          full rebuild
- Parse method             table-aware | text | OCR
- Parse fidelity check     sampled at __%, by whom, cadence
- Reconciliation           document count at source vs count in
-                          index, run daily, alert on drift
- Required metadata, all nine present or the chunk is rejected
-   document id | version | effective from | effective until |
-   supersedes | jurisdiction | classification | access labels
-   | authority flag
- Access labels            propagated to chunk level, applied as
-                          a pre-filter at query time
- Deletion propagation     source delete removes chunk,
-                          embedding, index entry, cache entry
-                          within __ hours, evidenced
- Supersession behavior    superseded content is removed from
-                          the retrievable set, not merely
-                          marked
- Advisory labeling        guidelines carry an explicit advisory
-                          label in the retrieved text
- Freshness published      to the user interface: yes
- Write path owner         who may put content into this index
-```
-
-**The write path owner is the field most often blank and the largest quiet security gap.** Retrieval is treated as a read-side concern while the set of principals who can put content into the index is larger and less reviewed than the set who can read from it.
-
----
-
-### F12. Retrieval design specification
-
-**Purpose.** Record the chunking, indexing, filtering and citation decisions with the input that drove each, so that a bad answer can be localized to a stage.
-**Owner.** Architect.
-**Produced.** At design; revised on any change to corpus, chunker, embedding model or filter.
-**Signed by.** Architect; data owner for the filter design.
-
-```
-SYSTEM / corpus / version / date
-
-0 PRECONDITION
-  Corpus size in tokens: __________
-  Under roughly 200,000 tokens and rarely changing?
-  If yes, do not build retrieval. Cache the corpus in the
-  prefix and record that decision here instead.
-  Questions that are counts or aggregations over the corpus
-  are routed to a structured query, not to retrieval
-
-1 CHUNKING, chosen by what the corpus is
-  Corpus structure: [clause-numbered legal documents]
-  Strategy: fixed-size | semantic | hierarchical
-  Chosen: hierarchical      Because: the corpus has a stable
-  clause hierarchy and mid-clause cuts destroy meaning
-  Size / overlap / table handling / heading retention
-
-2 INDEXING, chosen by how queries are phrased
-  Observed query pattern: [mixed. exact clause identifiers
-  and paraphrased concepts]
-  Strategy: dense | sparse | hybrid
-  Chosen: hybrid, merged by reciprocal rank fusion
-  Because: identifiers need lexical, concepts need semantic
-  Embedding model and version: __________ (registered in F8)
-
-3 RETRIEVAL
-  k retrieved: 150   passed after rerank: 20   in context: 8
-  Reranker and version: __________
-  Filters, and the order they run in:
-    tenant -> access labels -> effective date -> jurisdiction
-    -> similarity
-  **Filters run before ranking, never after.** Post-filtering
-  leaks through result counts, latency and citations
-  Identity used for filtering: the end user, not a service
-  account
-
-4 ASSEMBLY AND CITATION
-  Context budget and what is dropped first
-  Ordering rule
-  Chunk identity preserved end to end: yes
-  Citation granularity: sentence to chunk to document offset
-  Grounding and citation are separate requirements. State
-  which is enforced and how
-
-5 TENANCY
-  Logical | namespace | physical.  Chosen: __________
-  Test: if one misconfigured filter could expose one tenant
-  to another and that exposure would be notifiable, logical
-  separation is insufficient
-
-6 MEASUREMENT, retrieval measured separately from generation
-  Recall at k __ | Precision at k __ | Mean reciprocal rank __
-  Groundedness __ | Citation accuracy __ | Faithfulness __
-  Never report a single accuracy number for this system
-```
-
----
-
-### F13. Evidence register, extended
-
-**Purpose.** The primer's Practice Layer register lists what to demand of a design under review. This extension lists what the architecture must emit while it runs, with the trigger that produces it.
-**Owner.** Each row has its own named owner. The governance, risk management and compliance function owns the register.
-**Produced.** At design, because generation triggers must be built rather than added.
-**Signed by.** Governance, risk management and compliance owner; each row owner attests their own row at the review cadence.
-
-The primer's fourteen rows carry forward unchanged. The rows below are the operating-effectiveness additions, each of which requires the build to emit something continuously.
-
-| Control | Artifact emitted | Owner | Generation trigger | Retention | Assertion supported |
-| --- | --- | --- | --- | --- | --- |
-| Risk tiering | Tier record with per-dimension scores, overrides and rationale | Business system owner | Intake and each of the nine re-tier triggers | Life of system plus retention period | Risk was assessed before build and re-assessed on change |
-| Tier calibration | Second-line re-score sample with disagreement rate | Second-line risk owner | Quarterly | Rolling plus prior period | Self-tiering is monitored and optimism is measurable |
-| Oversight operation | Review event records: reviewer, decision, duration, changes made | Operations owner | Every review event | Per tier logging retention | Oversight operated, and override rate is computable |
-| Oversight effectiveness | Override rate and direction, disagreement sample, blind re-review results | Quality owner | Monthly at T3 and above | Rolling 24 months | Oversight was meaningful rather than nominal |
-| Guardrail operation | Control verdict log: which screens ran, verdicts, failure behavior invoked | Platform owner | Every request | Per tier logging retention | Controls operated per event, including when they failed |
-| Refusals and suppressions | Negative event log with reason codes | Platform owner | Every refusal, block or suppression | Per tier logging retention | Over-refusal is measurable, not anecdotal |
-| Permission-aware retrieval | Filter configuration baseline plus negative probe test results | Retrieval owner | At design, on filter or corpus change, plus scheduled probes | Life of system | Filters apply before similarity and tenant isolation holds |
-| Access entitlement | Grant, change and revocation records for the system and its corpus, plus recertification results with the removals made | Security owner | Every grant, change and revocation, and at each recertification cycle | Per tier logging retention plus recertification history | Access was granted deliberately, reviewed on a cadence and actually removed |
-| Vendor commitment conformance | Production configuration attestation against contracted terms | Vendor relationship owner | Onboarding, contract change, quarterly | Contract life plus retention | Retention, training use, residency and subprocessor terms are as contracted |
-| Judge calibration | Human agreement per class with date | Quality owner | Quarterly and on judge model change | Rolling 24 months | Metrics produced by a model grader are trustworthy |
-| Evaluation | Dated eval run with per-segment results, the set version graded and the release tuple it graded | Quality owner | Every release candidate, every scheduled run and every re-run trigger | Life of system plus retention period | Performance was measured against thresholds before promotion and is comparable across runs |
-| Completeness | Independent event count from the gateway, identity provider or billing record, reconciled to the audit log | Platform owner | Daily | Per tier logging retention | The logged population is the whole population |
-| Model change | Version change record with pre-change and post-change evaluation | Model configuration owner | Any model or version change, including provider-initiated | Life of system | The system was re-evaluated when its largest dependency changed |
-| Resilience test | Exercise report with degraded-mode and manual-fallback results | Resilience owner | Annually at T3, semi-annually at T4 | Rolling three periods | Continuity arrangements were tested rather than documented |
-| Incident | Incident record and post-incident review, including the harm assessment and the notification decision record | Incident commander | At declaration, and again at closure for the review | Life of system plus the limitation period | Incidents were detected, contained, assessed and learned from rather than absorbed |
-| Legal hold | Hold notice, the scope applied across every store including derived artifacts, suspension of the deletion job and the release record | Records management with legal | Issue of a hold, any extension of scope and release | Until release plus the retention period, and never shorter | Preservation reached the logs, the index and the derived stores, not only the source system |
-
-```
-THE THREE CONCEPTS EVERY ASSURANCE CONVERSATION USES
- Population     the complete set of events subject to the
-                control in the period. Asked for before any
-                sample. This is why the audit log is complete
-                and not sampled
- Completeness   demonstration that the population is whole,
-                by reconciliation to an independent count.
-                If the platform is the only source of its own
-                event count, the assertion is circular
- Sampling       how operating effectiveness is tested once
-                the population is established. One deviation
-                in a small sample can invalidate the period
-
-The gap that sinks first audits is completeness, not quality.
-Design the independent counter on day one. It is small work
-at design time and impossible retrospectively.
-```
-
----
-
-### F14. Named ownership and decision rights matrix for the AI lifecycle
-
-**Purpose.** Put a person, not a team, against every asset and every decision, so that questions have an addressee and commitments survive reorganization.
-**Owner.** Governance, risk management and compliance function.
-**Produced.** At program establishment; owner attestation at the review cadence.
-**Signed by.** The accountable executive for the program.
-
-**Part one, the asset register.** Seven fields and no more. Everything else belongs in the artifact.
-
-| Asset ID | Asset | Accountable person | Deputy | Tier of the system it serves | Last attestation | Next review |
-| --- | --- | --- | --- | --- | --- | --- |
-| PRM-014 | Contract review system prompt | A. Okafor | R. Lindqvist | T3 | 2026-03-01 | 2026-06-01 |
-| RET-002 | Policy corpus and filters | D. Marsh | S. Iyer | T3 | 2026-03-01 | 2026-06-01 |
-| CTL-007 | Pre-action approval gate | J. Ferreira | M. Adeyemi | T3 | 2026-03-01 | 2026-06-01 |
-
-**Part two, decision rights.** Exactly one Accountable per row. Fill with role titles the organization actually has.
-
-| Lifecycle stage | Accountable | Responsible | Consulted | Informed |
-| --- | --- | --- | --- | --- |
-| Intake and tiering | Business system owner | Architect | Second-line risk, privacy, security | Governance committee |
-| Design approval | Architect | Delivery team | Second-line risk, security, privacy, legal at T3 and above | System owner |
-| Data approval | Data owner for the source system | Delivery team | Privacy, legal, records management | Architect, system owner |
-| Evaluation sign-off | Quality owner | Delivery team | Second-line risk, affected business function | Governance committee |
-| Go-live | Business system owner at T1, function head at T2, governance committee at T3, executive or board at T4 | Delivery lead | Security, operations, second line | All parties |
-| Change | Asset owner for the asset changed | Delivery team | Second line where the change crosses a re-tier trigger | System owner |
-| Incident | Incident commander, pre-named per tier | Response team | Legal, privacy, communications, second line | Executive, per severity |
-| Retirement | Business system owner | Delivery team | Records management, legal for holds, privacy for erasure | Governance committee |
-
-```
-NON-DELEGABLE DECISIONS, listed explicitly in the charter
- Tier assignment at T4
- Acceptance of residual risk above the stated appetite
- Approval to deploy without a required control
- Any decision binding the organization's position on
- privilege or on regulatory classification
-
-DELEGATION RULES
- To a named individual only, never a team, vendor or committee
- The delegate holds the authority and the budget to discharge
- it. Delegation without resource is abandonment with paperwork
- Recorded, dated and time-bounded. Permanent delegation is a
- role change and is processed as one
-
-SUCCESSION
- Every deputy has performed the role at least once
- Vacancy has a maximum duration by tier, after which the asset
- is suspended rather than left unowned
- Owner departure is a re-tier trigger at T3 and above
-```
-
----
-
-### F15. Third-party and model provider assessment
-
-**Purpose.** Assess the provider as a critical third party rather than as a software vendor, and record the substitution position before it is needed in anger.
-**Owner.** Vendor relationship owner, with security, privacy and the architect.
-**Produced.** Before contracting; refreshed annually and on any contract or subprocessor change.
-**Signed by.** Vendor relationship owner, security owner, privacy owner and, for a critical third party, the accountable executive.
-
-| Assessment area | Question | Finding | Evidence held | Residual risk | Owner |
-| --- | --- | --- | --- | --- | --- |
-| Criticality | Would failure of this supplier prevent delivery of an important business service | Yes. Critical third party | Dependency map | Accepted with exit plan | Resilience owner |
-| Data handling | What is retained, for how long, where and by whom | Zero retention on the contracted configuration | Contract clause reference, configuration attestation | Configuration drift | Vendor relationship owner |
-| Training use | Is customer content used to train | Contractually excluded | Contract clause reference | None | Privacy owner |
-| Subprocessors | Who else touches the data, notice of change | Named list, 30 day notice | Subprocessor schedule | Change may arrive without action | Privacy owner |
-| Residency | Where is processing performed and where is data at rest | Named region, pinned | Deployment configuration | Failover may cross the boundary | Architect |
-| Security posture | Independent assurance held, scope and period | Report held, scope reviewed | Report on file | Scope excludes the service we use | Security owner |
-| Availability and support | Committed levels, remedies, support hours, escalation route | Documented | Contract | Pass-through availability only | Operational owner |
-| Model lifecycle | Deprecation notice period, version pinning available, change notification | Pinning available, notice stated | Contract and documentation | Provider may change the model behind a stable identifier | Model configuration owner |
-| Viability | Funding, customer concentration, category maturity | Assessed | Public filings, references | Category immature | Vendor relationship owner |
-| Exit | Data return format, deletion certification, transition assistance | Defined | Contract exit clause | Untested | Resilience owner |
-
-```
-SUBSTITUTABILITY POSITION, set by tier and not by preference
- L0 Locked        provider-specific features load-bearing,
-                  prompts and evals tuned to one model  -> rebuild
- L1 Portable with rework   abstraction exists, prompts and
-                  evals model-specific                  -> months
- L2 Substitutable abstraction plus a maintained evaluation
-                  suite that runs against any candidate  -> weeks
- L3 Dual-run      second provider configured and exercised
-                  with live traffic                      -> days
-
- Current level: __   Target for this tier: __   Gap plan: ______
- The evaluation suite is the thing that makes substitution
- possible. Exit planning that does not fund evaluation is a
- document rather than a capability.
-
-CONFIGURATION CONFORMANCE, the assertion nobody owns
- Contracted term      Production setting     Verified   Date
- zero retention       retention = 0          [ ]        ____
- no training use      flag = off             [ ]        ____
- region pinned        region = ____          [ ]        ____
- Named owner of this verification: __________
-```
-
-**Legal determinations about which regime applies, which clauses are required and whether a given arrangement is permitted belong to counsel.** This artifact records what was agreed and whether the running configuration matches it.
-
----
-
-### F16. Data protection impact assessment structure, as an architecture artifact
-
-**Purpose.** Assess privacy risk in a form an architect can act on, producing design changes rather than a narrative.
-**Owner.** Privacy owner, drafted with the architect.
-**Produced.** Before processing begins, and on material change.
-**Signed by.** Privacy owner; the named person accepting residual risk; legal where the assessment reaches a determination.
-
-```
-SYSTEM / tier / assessment version / date
-
-1 DESCRIPTION OF THE PROCESSING
-  What the system does, in plain language
-  Categories of individuals affected and approximate numbers
-  Categories of data, per source, with classification (F10)
-  Whether any category is special or otherwise heightened
-  Recipients, including the model provider and subprocessors
-  Retention per artifact, including derived artifacts
-  Cross-border movement, with the destination named
-
-2 NECESSITY AND PROPORTIONALITY
-  Purpose stated specifically enough to constrain reuse
-  Why the same outcome cannot be achieved with less data
-  Data minimized how, against the pull of the context window
-  Lawful basis, as determined by the privacy function
-  Whether this is a new purpose for data collected earlier
-  Information provided to individuals, and where
-
-3 RISKS TO INDIVIDUALS  [tabulated below]
-
-4 ARCHITECTURAL CONSEQUENCES, the section that makes this an
-  architecture artifact rather than a form
-  Each control above maps to a design element with an owner
-  and a test. List the design changes this assessment forced:
-    - identity-based pre-filtering replaced service-account
-      retrieval
-    - content logging moved to a segregated store at
-      Confidential and above
-    - erasure rehearsal added to the readiness gate
-
-5 DATA SUBJECT RIGHTS AS ENGINEERING REQUIREMENTS
-  Access        can we produce everything held about a person,
-                including chunks, logs and eval set entries
-  Rectification can a correction propagate to derived stores
-  Erasure       tested end to end, evidenced, within __ days
-  Objection     can processing be stopped for one individual
-  Explanation   can we reconstruct why the system said what it
-                said, from lineage (F12, F13 and the lineage
-                chain in G12)
-
-6 RESIDUAL RISK AND SIGN-OFF
-  Residual risk statement, in one paragraph
-  Accepted by (named person): __________  date: ______
-  Review trigger: any re-tier trigger, or __________
-```
-
-**Section 3, risks to individuals.** Likelihood and severity are graded low, medium or high.
-
-| Risk to the individual | Cause in this design | Likelihood | Severity | Control | Residual |
-| --- | --- | --- | --- | --- | --- |
-| A wrong output is relied on | Model error uncaught | M | H | Pre-action human approval, F5 | L |
-| Disclosure across users | Entitlement filter applied after ranking | L | H | Pre-filter by end-user identity, F12 | L |
-| Excess retention | Logs contain inputs and outputs and are therefore regulated data | H | M | Tiered logging, segregated content store, F10 | L |
-| Erasure not effective | Derived artifacts missed | H | H | Derived-artifact map plus a tested delete, F10 | M |
-| Inference beyond the stated purpose | Aggregation across sources | M | M | Purpose floor classification, F10 | M |
-| Unfair outcome by group | Corpus skew inherited by every answer | M | H | Segmented evaluation, F6 | M |
-
-**The legal determinations in sections 2 and 5, including lawful basis, whether an assessment is required and what rights attach, belong to the privacy function and counsel.** The architect owns sections 3, 4 and the testability of section 5.
-
----
-
-### F17. Incident record and post-incident review for an AI system
-
-**Purpose.** Record an incident whose signature may be a fluent correct-looking output rather than an error, and produce learning that compounds.
-**Owner.** Incident commander, pre-named per tier.
-**Produced.** At declaration; the review within a fixed period of closure.
-**Signed by.** Incident commander; business owner for the harm assessment; governance, risk management and compliance owner for the notification decision record.
-
-```
-INCIDENT RECORD
- ID / system / tier / declared by / declared at
- Awareness timestamp   [when the organization first knew.
-                        Recorded separately from declaration
-                        because clocks frequently start here]
- Severity  1 harm occurred or is occurring
-           2 systematic wrong output in a consequential
-             process, no confirmed harm yet
-           3 degraded quality or availability, contained
-           4 isolated defect, no pattern
- Harm type  financial | legal | discriminatory | confidentiality
-            | safety | regulatory obligation missed | none yet
-            [severity 1 includes harms with no technical
-             signature and every dashboard green]
-
- DETECTION
- Detected by   sampling | user complaint | outcome tracing |
-               alert | third party
- Detection latency   first bad output to detection: __
- What would have detected it sooner: __________
-
- BLAST RADIUS
- Defined by time window, not by system, because a prompt or
- model change affects every subsequent interaction
- Window: from ______ to ______
- Outputs in window: ____  Acted upon: ____  Enumerable: Y/N
- Affected individuals or tenants: ____
-
- CONTAINMENT, narrowest option that contains the harm
- [ ] disable one tool          [ ] roll back the prompt
- [ ] tighten a guardrail       [ ] roll back model or version
- [ ] route affected traffic to a human
- [ ] kill switch
- Chosen: ______  Executed at: ______  Required a deploy: Y/N
-
- PRESERVATION
- Logs, retrieved sets, prompt versions, model identifier and
- reviewer records preserved before any cleanup. The instinct
- to disable and tidy destroys the only evidence of what
- happened
-
- COMMUNICATION, three audiences on three clocks
- Affected users: what to distrust and what to do instead,
-   issued at ______, before cause was known
- Business owner: exposure and expected restoration, ______
- Governance, risk management and compliance: facts as facts,
-   no speculation about cause, ______
-
- NOTIFICATION DECISION
- Escalated to legal and the governance, risk management and
- compliance function at ______
- Whether an incident is notifiable, to whom and within what
- period is a determination for counsel. It is not made in
- the incident channel. Record the referral, the decision and
- who made it
-
-POST-INCIDENT REVIEW, blameless and timeboxed
- Four artifacts and no others
- 1 Timeline, with the awareness timestamp on it
- 2 Root cause reaching past the proximate trigger
- 3 Actions with named owners and dates
- 4 At least one new evaluation case, added permanently
- Two questions that are usually missing
-   How long was this running before anyone noticed
-   What would have detected it sooner
- Detection latency predicts the severity of the next one
-```
-
----
-
-### F18. Change record for a prompt, model, tool or corpus change
-
-**Purpose.** Apply one gate to all four change surfaces, because the fourth is ungoverned nearly everywhere.
-**Owner.** The asset owner for the asset being changed.
-**Produced.** Per change, before it reaches production.
-**Signed by.** The approver named per change type.
-
-| Field | Entry |
-| --- | --- |
-| Change ID and date | CHG-2026-0412, 2026-04-12 |
-| Change type | Corpus publication |
-| Asset changed | RET-002 policy corpus, 41 documents superseded |
-| Requested by | Contract counsel |
-| Description | Playbook v4 replaces v3 across all jurisdictions |
-| Crosses a re-tier trigger | Yes, corpus class unchanged but scope extended to a second jurisdiction |
-| Eval run required | Labeled retrieval set plus golden set |
-| Eval result | Recall at 8: 0.93 (was 0.92). Criterion coverage 91% overall, 84% in the new jurisdiction segment |
-| Segment regression | Yes, new jurisdiction below threshold |
-| Decision | Hold. Extend the labeled set for the new jurisdiction before publication |
-| Rollback method | Republish v3, no deployment, under 10 minutes |
-| Rollback rehearsed | Yes, 2026-03-20 |
-| Approver | Knowledge owner |
-| Second-line consulted | Yes, re-tier trigger crossed |
-
-```
-MINIMUM GATE BY CHANGE TYPE
- Prompt            regression suite plus golden set, offline
-                   before online                 -> quality owner
- Model or version  shadow evaluation, then canary with
-                   guardrail metrics   -> quality and business owner
- Tool added or scope widened   security review plus regression
-                   suite                        -> security owner
- Corpus publication  validation gate plus labeled retrieval
-                   set                         -> knowledge owner
- Guardrail or threshold  regression suite plus false-refusal
-                   measurement                  -> quality owner
-
-Corpus changes are made by content owners who are not
-engineers, through publication workflows that never touch the
-deployment pipeline, and they change behavior as thoroughly
-as a prompt edit does. A change policy that governs code and
-leaves the corpus ungoverned has left the largest surface
-uncontrolled.
-
-A cost reduction is a change. It goes through the same eval
-gate or it does not ship.
-```
-
----
-
-### F19. Adoption and enablement plan
-
-**Purpose.** Plan the human half of the deployment with the same specificity as the technical half, and measure it by funnel stage rather than by usage.
-**Owner.** Business function head, with change and enablement.
-**Produced.** Before first wave; revised per wave.
-**Signed by.** Business function head; human resources where roles change.
-
-```
-SYSTEM / function / wave / dates
-
-1 POPULATION AND SEGMENTS
- Eligible population: ____  Wave size: ____
- Segments reported separately: [role, seniority, location,
- tenure, prior tool exposure]
- Never report an average across segments. Averages hide the
- segment that is failing
-
-2 THE FUNNEL  [tabulated below]
- Read the ratios between adjacent stages. The absolute
- numbers do not diagnose
-
-3 DEPTH AND BREADTH
- Breadth: proportion of the eligible population using it
- Depth: proportion of a user's relevant work passing through
- Current pattern: wide and shallow | narrow and deep | wide
- and deep | narrow and shallow
- Pursue depth before breadth
-
-4 ENABLEMENT  [curriculum tabulated below]
- The four things nobody expects to teach: what the system
- cannot do, how to disagree with it, what to do when it is
- unavailable, and what must never be put into it
-
-5 SUPPORT AND FEEDBACK
- Support route and response time
- Correction path: how a user reports a wrong answer, who
- receives it, how it becomes an evaluation case
- Champion network: named people, funded time, per segment
-
-6 THE PEOPLE WHOSE WORK IS ABSORBED
- Named, with the redesigned role, the conversation date and
- who holds it. This is planned before launch or it is
- discovered during it
- Consultation obligations, where any apply, are confirmed
- with human resources and counsel before communication
-
-7 KILL CRITERION
- What result would cause this wave to stop, agreed in advance
-```
-
-**Section 2, the funnel.**
-
-| Stage | Metric | Target | Actual | Failure if short |
-| --- | --- | --- | --- | --- |
-| Aware | Percent of eligible who know it exists and what for | 90 | | Communication gap |
-| Provisioned | Percent with working access | 85 | | Access friction, licensing, approval queue |
-| Activated | Percent who completed one real task, not a demo | 60 | | No trigger in the workflow, or the first task chosen badly |
-| Habitual | Percent active in 4 of the last 6 weeks on real work | 40 | | Value not felt, or review burden exceeds the saving |
-| Dependent | Percent who would escalate if it were unavailable | 25 | | The system is peripheral to the real work |
-| Advocate | Percent who onboarded another user or contributed a correction | 10 | | No social proof, so the program pushes forever |
-
-**The targets in this column are illustrative starting values for a first wave and are not a benchmark.** 7.3 states no targets, deliberately, because the ratio between adjacent stages diagnoses and the absolute numbers do not. **Where a benchmark is wanted, use the gate conditions of 7.8's worked plan**, which sets activation above 80 percent and habitual above 55 percent at scale wave one and dependency above 40 percent at anchor. Those are higher because they are gate conditions on a system already proven in pilot, and the figures here are what a wave that has not yet proven itself might plan to. Replace both with your own before the first wave and record who agreed them.
-
-**Section 4, the curriculum.**
-
-| Audience | What they must be able to do | Format | Duration | Credential |
-| --- | --- | --- | --- | --- |
-| End users | Frame a task, read a citation, recognize a wrong answer | Just in time, inside the workflow | 40 minutes | None |
-| Reviewers | Judge substance rather than format, use the handoff package, exercise the authority to object | Classroom plus supervised live cases | 4 hours | Required before reviewing |
-| Configurers | Change a prompt asset within the change gate | Workshop | 1 day | Licensed to configure |
-| Managers | Read the funnel by segment, resist usage targets | Briefing | 60 minutes | None |
-
-**These four are the audiences a single wave has to enable, not the whole curriculum. 7.4 is the authority and names seven**, adding the executive, the power user and the control owner, each with its own objective and format. A wave plan that covers only these four has deferred three audiences rather than decided it does not need them, and the control owner is the one most often left deferred permanently.
-
----
-
-### F20. Executive decision brief, one page
-
-**Purpose.** Bring one decision to the people who can make it, in a form that can be decided in the meeting.
-**Owner.** Architect or program lead.
-**Produced.** Whenever a decision requires authority the program does not hold.
-**Signed by.** The decision maker, on the record, in the meeting.
-
-```
-DECISION BRIEF                                     [one page]
-
-THE DECISION
- One sentence, in the imperative. "Approve X" or "Choose
- between A and B by [date]". Not "discuss".
-
-THE ASK AND THE DEADLINE
- What is needed from this group, and what happens if the
- decision is not made by ______ (the cost of delay, stated
- as a quantity, not as urgency)
-
-REVERSIBLE OR IRREVERSIBLE
- Reversible: decide fast, at the lowest competent level
- Irreversible: decide slowly, with the people who answer
- for it. State which this is and match the speed to it
-
-OPTIONS
- | Option | What it gets us | What it costs | What it forecloses |
- | A |  |  |  |
- | B |  |  |  |
- | Do nothing |  |  |  |
- Do nothing is always an option and is always listed
-
-RECOMMENDATION
- One option, named, with the single reason that decides it
-
-WHAT WE ARE ACCEPTING IF WE APPROVE
- The residual risk, in one sentence, with the person who
- will hold it
-
-WHAT WOULD CHANGE THIS RECOMMENDATION
- The evidence that would reverse it. Naming it is what
- distinguishes a recommendation from an advocacy position
-
-CONSULTED / DISSENT
- Who was consulted. Any dissent, recorded as dissent, with
- the point of disagreement
-
-DECISION TAKEN
- Decision: ______  By: ______  Date: ______
- Circulated to: ______
-```
-
-**Never promise a regulatory outcome in a brief.** Whether a regulator or auditor will accept something is a judgment for counsel and for the regulator, and stating it as a deliverable creates a documented gap between assertion and reality.
-
----
-
-### F21. Roadmap on a page
-
-**Purpose.** Show capability sequence and dependency, not a list of use cases, so that a budget committee can see which cut costs a quarter and which cut costs the program.
-**Owner.** Program lead with the accountable executive.
-**Produced.** Annually, revised at each gate.
-**Signed by.** Accountable executive; each business owner for their own row.
-
-| Window | Capability delivered | Use case demonstrating it | Gate that must pass | Business owner |
-| --- | --- | --- | --- | --- |
-| M1 to M3 | Governed model access, contracted terms, data classification mapping, acceptable-use position | None. Consumer tool usage measured and reported | Contract executed. Counsel's position on data processing issued | Chief Information Officer with General Counsel |
-| M2 to M5 | Evaluation harness and first labeled sets; observability and evidence capture | Internal knowledge assistant, 40 users | Baseline measured before launch. Evidence replay demonstrated to internal audit | Program with second-line risk owner |
-| M4 to M8 | Identity and entitlement model; knowledge layer with ingest, freshness and deletion | Knowledge assistant at full corpus with entitlements enforced, 400 users | Entitlement tested by adversarial retrieval. Deletion demonstrated across derived artifacts | Data owner |
-| M7 to M11 | Control layer with defined failure behavior; human review patterns; escalation | Contract review assistant pilot, 24 reviewers | Pre-registered thresholds met. Kill criterion not triggered | General Counsel |
-| M10 to M14 | Operating model: named owners, support path, incident process, change gates | Contract review assistant, wave one | Adoption gates by segment. Reviewer load inside the revised capacity band | Function head |
-| M12 to M16 | Enablement capability: curricula, champion network funded, internal credential | Waves two and three; configurer population licensed | Segment parity or an explicit accepted exception | Human resources with program |
-| M14 to M18 | Portability and exit: second-provider evaluation, migration rehearsal, decommissioning plan | Regulated use case enters design, not build | Migration rehearsed on a real workload. Exit cost and duration stated | Chief Information Officer |
-
-```
-FIVE PROPERTIES THAT MAKE A ROADMAP SURVIVE A BUDGET CYCLE
- 1 Every item has a named business owner outside technology
- 2 The first four to six months contain a changed number in
-   a business report, not a demonstration
- 3 Costs are staged with decision points, never one
-   multi-year number
- 4 Benefits are attributed to the business owner's metric
- 5 The plan states what will be stopped
-
-FOUR PROHIBITIONS
- No capability whose foundation is not scheduled and funded
- No accuracy figure for a system that does not exist
- No headcount reduction on a date
- No regulatory outcome as a deliverable
-```
-
----
-
-### F22. Exit and decommissioning plan
-
-**Purpose.** Design the end at the same moment as the entry, because every obligation the system creates outlives it.
-**Owner.** Business system owner, with records management and the resilience owner.
-**Produced.** At design, as a funded deliverable. Refreshed annually.
-**Signed by.** Business system owner; records management; legal for preservation obligations; privacy for erasure.
-
-```
-SYSTEM / tier / plan version / date
-
-1 EVIDENCE PRESERVATION
- Artifacts that must outlive the system: logs, evaluation
- results, decision records, model identifiers, prompt
- versions, human review records, lineage
- Retention period: set by the limitation period, the
- regulatory retention obligation and the client contract.
- This is counsel's determination, not an engineering default
- Extraction format readable without the system: __________
- Rehearsed: date ______
-
-2 RECORD CONTINUITY
- Outputs that entered a business record: __________
- The context preserved alongside each at creation: prompt
- version, corpus version, model identifier, retrieved set
- An output whose meaning depended on artifacts that no
- longer exist is a record nobody can explain, and
- reconstruction at the end is generally impossible
-
-3 MANUAL CAPABILITY RESTORATION
- Does the manual path still exist:  Y / N
- Last exercised with real volume:  ______
- Staff trained on it today:  ____ of ____
- Time and cost to restore:  ______
- This is the workstream discovered late and it can add two
- quarters
-
-4 DATA DISPOSITION
- Per artifact: corpora, indexes, embeddings, caches,
- evaluation sets, logs, adapted artifacts, memory stores,
- analytics extracts
- | Artifact | Retention basis | Destruction method | Owner | Evidence |
- The derived-artifact map that erasure needed is the map
- decommissioning needs
-
-5 DEPENDENCY UNWINDING
- Downstream processes, reports, controls and systems that
- consume this system's output, including undocumented ones
- Discovered by instrumenting consumption before announcing
- the end date, not by asking
-
-6 KNOWLEDGE CAPTURE
- Why it was built, what it learned, why it is ending
-
-7 IF THIS IS A MIGRATION RATHER THAN A SHUTDOWN
- Behavioral difference by segment, both systems against the
- same labeled set. The new system will be worse on some
- segment. Find it before cutover
- Users' working methods invalidated: treat as an adoption
- event with its own enablement
- Evidence continuity across the boundary: identifiers and
- format that permit a question spanning the cutover date
- Parallel running: cost ______ end date ______, both stated
- at the decision. Parallel running with no end date becomes
- permanent and is worse than either alternative
-
-8 SUBSTITUTABILITY, carried from F15
- Current level L__  Target L__  Cost and duration of exit __
-```
-
----
-
-### F23. Service level definition for an AI system
-
-**Purpose.** Commit to what can be committed to, and state plainly the one thing that cannot.
-**Owner.** Operational owner, agreed with the business owner.
-**Produced.** At the readiness gate, before launch.
-**Signed by.** Operational owner and business owner. Not negotiated during an incident.
-
-| Indicator | Objective | Measured how | Measurement lag | Consequence of breach |
-| --- | --- | --- | --- | --- |
-| Availability | 99.5% monthly, pass-through of the provider minus our own | Gateway success rate | Seconds | Incident, and the disclosure that this is pass-through |
-| Latency, time to first token | p95 under 2.5 seconds where a human is waiting | Per request at the gateway | Seconds | Investigate. Report p50, p90, p95, p99 separately, never a mean |
-| Latency, end to end | p95 under 40 seconds, segmented by task class and turn count | Per run | Seconds | A p99 that doubles with a flat p50 is a retry loop or a non-converging agent |
-| Throughput | 260 cases in the peak month, about 13 per working day, with rate-limit headroom of 40% | Gateway | Seconds | Capacity review |
-| Task completion rate | 92% of runs reach a usable output without escalation | Run outcome field | Minutes | Leading quality indicator, investigate |
-| Escalation and override rate | Between 8% and 20% | Review event records | Minutes to hours | Outside the band in either direction triggers investigation of the control, not the population |
-| Quality | Criterion coverage 90% per segment on the golden set, 88% on the online stratified sample | Graded sample | Hours to days | Error budget consumption |
-| Reviewer capacity | 40 reviews per reviewer per day, one reviewer rostered with a named deputy | Roster and queue depth | Days | 40 a day against 13 at peak, which is the three-times-peak headroom the gate requires. Throughput is capped by this and it is a hard constraint |
-| Detection latency | Under 24 hours for a systematic quality regression | Time from first bad output to detection | Days | The number that converts an abstract quality argument into a quantity of harm |
-| Recovery time objective | 4 hours | Exercise | n/a | Resilience review |
-| Recovery point objective | 15 minutes | Exercise | n/a | Resilience review |
-| Recovery quality objective | Not below 80% criterion coverage during degraded operation | Eval suite against the degraded path | Hours | A system technically available while producing materially worse output is not recovered |
-
-```
-ERROR BUDGET
- Quality objective 90% on the named population. Budget is
- the gap to 100% over the period.
- While intact: ship changes.
- When exhausted: only changes that restore quality.
- Agreed before launch, not negotiated during an incident.
-
-THE HONEST STATEMENT, in the agreement itself
- We commit to availability, to latency percentiles, to a
- measured quality level on a named population with a
- defined routing rule for the remainder, and to a response
- procedure when quality misses.
- We do not commit to correctness on any individual case.
- Saying this at signature is the difference between a
- defensible agreement and an argument in month four.
-
-DEGRADED MODES, in descending capability
- Full service | Reduced capability (smaller model, narrower
- tools, higher human review rate, defined trigger) |
- Human-only (requires the manual path to exist and be
- staffed) | Suspended (with a defined communication and a
- named authority to declare it)
-```
-
----
-
-### F24. Cost model and unit economics sheet
-
-**Purpose.** Produce the one figure that belongs in a business case and the attribution that keeps it defensible.
-**Owner.** Business owner, modeled with the architect.
-**Produced.** At the readiness gate under the commercial dimension; refreshed monthly against actuals.
-**Signed by.** Business owner; finance where the figure enters a business case.
-
-| Line | Definition | Modeled | Actual month 1 | Actual month 3 | Note |
-| --- | --- | --- | --- | --- | --- |
-| Volume, expected | Completed tasks per month | 160 | 148 | 171 | |
-| Volume, peak | Completed tasks in the peak week | 62 | 58 | 74 | March peak, against F1's 260 for the month and F23's throughput objective |
-| Input tokens per attempt | Including retrieved context | 24,000 | 27,400 | 26,100 | Context grew after corpus extension |
-| Output tokens per attempt | | 1,800 | 2,050 | 2,010 | |
-| Cache hit ratio | Reads against reads plus writes | 0.85 | 0.71 | 0.88 | Month 1 dip was a changed prefix |
-| Call multiplier | Model calls per attempt, including graders | 2.4 | 3.1 | 2.5 | Judge calls counted |
-| Retrieval and tool cost per attempt | | 0.04 | 0.04 | 0.04 | |
-| **Cost per attempt** | Model plus retrieval plus tools for one run | 0.31 | 0.44 | 0.33 | The engineering number |
-| **Attempts per completed task** | Including retries and re-asks | 1.2 | 1.9 | 1.3 | The largest multiplier and a quality problem wearing a cost costume |
-| **Human minutes per completed task** | Review, correction, escalation handling | 9 | 16 | 10 | Usually dominant and usually unmeasured |
-| Loaded cost per human minute | Fully loaded | 1.40 | 1.40 | 1.40 | |
-| **Fully loaded cost per completed task** | All three combined | 12.97 | 23.24 | 14.43 | The only figure for a business case |
-| Baseline cost per completed task | The process before the system: 95 human minutes at the loaded rate, from F1's measured touch time | 133.00 | 133.00 | 133.00 | Held constant across the period; re-measure before the saving is claimed again |
-
-```
-SENSITIVITY, the three that move the answer and the one
-that does not
- Attempts per completed task +0.5   -> +__ per task
- Human minutes +3                   -> +__ per task
- Cache hit ratio -0.2               -> +__ per task
- Model unit price +20%              -> +__ per task
- Note which is largest. It is almost never the last one
-
-ATTRIBUTION, built on day one
- Every call carries a cost tag: tenant, business unit, use
- case, feature, task class
- Retrofitting attribution across a shared deployment is
- close to impossible, and unattributed cost becomes a
- central overhead line, which is cut centrally and equally,
- including across the use cases that pay for themselves
-
-BUDGET GUARDRAILS, four, and the fourth is skipped
- Per-request bound   max tokens, max tool calls, max turns
-                     -> terminate, log, degrade gracefully
- Per-user or tenant quota, rolling window
-                     -> throttle with an explicit message
- Per-use-case budget alert on run rate
-                     -> notify the owner, do not stop
- Hard stop, absolute ceiling per use case
-                     -> stops the use case. Agreed before
-                     launch with a named person who can lift
-                     it. A ceiling nobody agreed to in
-                     advance becomes an emergency
-                     negotiation during an incident
-
-OPERATING LEVERS WHEN AN ALARM FIRES, in fixed order
- 1 find out where the money went, segmented
- 2 fix the retry and re-ask loops
- 3 restore the cache hit ratio
- 4 trim context that is never used
- 5 route by difficulty
- 6 only then reconsider model or effort, with an eval run
- Never change the model in response to a cost alarm before
- measuring attempts per completed task
-```
-
----
-
-### F25. Developer tooling and team configuration standard
-
-**Purpose.** Fix what the engineering organization runs, where each setting lives, who may change it and what evidence exists that the standard is the thing actually deployed. Without it, agentic development tooling spreads as personal configuration and the organization cannot answer what its engineers are permitted to do.
-**Owner.** Engineering lead, with security for the managed policy rows and identity management for entitlement.
-**Produced.** Before the second team onboards, not before the first.
-**Signed by.** Engineering lead; head of application security; identity owner for the entitlement section.
-
-| Setting | Scope it lives in | Value | Changeable by | Why it is at this scope |
-| --- | --- | --- | --- | --- |
-| Denied command list | Managed policy | `curl` to non-allowlisted hosts, direct production database clients, credential printers | Security only, through device management | An engineer must not be able to lift it in the branch they are working in |
-| Permitted model set | Managed policy | Named models only; no third-party endpoints | Security | Route and residency commitment (2.8, 6.8) |
-| Mandatory pre-tool hook | Managed policy | Secret-scan and denied-path check, blocking | Security | A mandatory step on an observe-only event is not mandatory |
-| Telemetry destination | Managed policy | Central log sink with the correlation identifier | Platform engineering | Diagnosis and audit both depend on it |
-| Project conventions file | Project settings, shared | Repo layout, coding standards, test command, review expectations | Engineering team, through code review | Should apply to everyone who clones the repository |
-| Project MCP servers | Project settings, shared | Named servers, credentials by reference only | Engineering team, with security approval per server | Credentials in a committed file are an incident |
-| Permission mode, interactive | Project settings, shared | Plan mode default on this repository | Engineering team | |
-| Permission mode, pipeline | Command line, in the pipeline definition | Auto-deny, allow rules only | Pipeline author, reviewed as code | Run-specific, and must not inherit a developer's settings |
-| Personal deviations | Project settings, local (ignored) or user settings | Editor preferences, personal commands | The individual | Never lands in another engineer's session |
-
-```
-DISTRIBUTION
- Standard distributed as ................. plugin / marketplace / manual
- Marketplace owner .......................
- Version in force ........................  Superseded version ........
- Withdrawal path tested on ...............  (a component you cannot
-                                             withdraw is a component you
-                                             cannot correct)
-
-ENTITLEMENT
- Provisioned through .....................  group, from the corporate
-                                             directory
- Joiner / mover / leaver handled by ......
- Seats issued ............  Seats active in last 30 days ............
- Cost center receiving the invoice .......
-
-INTEGRATION POINTS IN THE PIPELINE, and the measure for each
- Change review ........ on / off   Finding acceptance rate ..........
- Test generation ...... on / off   Seeded-defect catch rate .........
- Pipeline gating ...... on / off   Flip rate on unchanged input .....
- Docs generation ...... on / off   Task completion without author ...
-
-DELIVERY BASELINE, taken before rollout
-                              Baseline      Target      Current
- Lead time for change ......  ........      ......      .......
- Deployment frequency ......  ........      ......      .......
- Change failure rate .......  ........      ......      .......
- Time to restore service ...  ........      ......      .......
- A rise in deployment frequency with a rise in change failure
- rate is work moved downstream, not productivity
-
-GENERATED CODE CONTROLS, all four or the section is incomplete
- Static analysis ............  Dependency scanning ..........
- Secret scanning ............  License provenance ...........
-
-DRIFT CHECK, quarterly
- Sample N engineer machines and compare deployed configuration
- against the standard. Record deviations and whether each was
- an exception, an error or an undocumented improvement worth
- adopting. A standard never checked against reality is a
- document, not a control
-```
-
----
-
----
+| F1 | AI use case intake form | Requesting business function, completed with the architect. | Before any design work, at first request. | [F01-ai-use-case-intake-form.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F01-ai-use-case-intake-form.md) |
+| F2 | AI architecture decision record | Architect. | At design approval, and again on any material change to model, tools, corpus or oversight placement. | [F02-ai-architecture-decision-record.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F02-ai-architecture-decision-record.md) |
+| F3 | Risk tiering assessment and classification record | Business system owner, scored with the architect. | At intake, and on any of the nine re-tier triggers. | [F03-risk-tiering-assessment-and-classification-record.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F03-risk-tiering-assessment-and-classification-record.md) |
+| F4 | Delegation map | Architect. | Before pattern selection, and re-issued whenever a step moves owner. | [F04-delegation-map.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F04-delegation-map.md) |
+| F5 | Human oversight design specification | Business process owner, designed with the architect. | At design, before the readiness gate. | [F05-human-oversight-design-specification.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F05-human-oversight-design-specification.md) |
+| F6 | Evaluation charter | Quality or evaluation owner. | Before build, updated at every material change. | [F06-evaluation-charter.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F06-evaluation-charter.md) |
+| F7 | Production readiness gate checklist with signatories | Governance, risk management and compliance function operates the gate; the delivery lead presents. | Before first production traffic, and again on any change that crosses a re-tier trigger. | [F07-production-readiness-gate-checklist-with.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F07-production-readiness-gate-checklist-with.md) |
+| F8 | Model and prompt asset register | Model configuration owner. | At first deployment, updated on every change, reconciled to production monthly. | [F08-model-and-prompt-asset-register.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F08-model-and-prompt-asset-register.md) |
+| F9 | Tool and connector register with least-privilege review | Security owner, maintained with the architect. | At design, on every tool addition or scope widening and at scheduled recertification. | [F09-tool-and-connector-register-with-least-privilege.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F09-tool-and-connector-register-with-least-privilege.md) |
+| F10 | Data classification and handling record for an AI system | Data owner for each source, consolidated by the architect. | At design, on any new data source and on any change to the output's purpose. | [F10-data-classification-and-handling-record-for-an-ai.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F10-data-classification-and-handling-record-for-an-ai.md) |
+| F11 | Knowledge source register and ingestion contract | Knowledge owner per domain. | Before ingestion of any source; reviewed on the freshness cadence. | [F11-knowledge-source-register-and-ingestion-contract.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F11-knowledge-source-register-and-ingestion-contract.md) |
+| F12 | Retrieval design specification | Architect. | At design; revised on any change to corpus, chunker, embedding model or filter. | [F12-retrieval-design-specification.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F12-retrieval-design-specification.md) |
+| F13 | Evidence register, extended | Each row has its own named owner. The governance, risk management and compliance function owns the register. | At design, because generation triggers must be built rather than added. | [F13-evidence-register-extended.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F13-evidence-register-extended.md) |
+| F14 | Named ownership and decision rights matrix for the AI lifecycle | Governance, risk management and compliance function. | At program establishment; owner attestation at the review cadence. | [F14-named-ownership-and-decision-rights-matrix-for.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F14-named-ownership-and-decision-rights-matrix-for.md) |
+| F15 | Third-party and model provider assessment | Vendor relationship owner, with security, privacy and the architect. | Before contracting; refreshed annually and on any contract or subprocessor change. | [F15-third-party-and-model-provider-assessment.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F15-third-party-and-model-provider-assessment.md) |
+| F16 | Data protection impact assessment structure, as an architecture artifact | Privacy owner, drafted with the architect. | Before processing begins, and on material change. | [F16-data-protection-impact-assessment-structure-as-an.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F16-data-protection-impact-assessment-structure-as-an.md) |
+| F17 | Incident record and post-incident review for an AI system | Incident commander, pre-named per tier. | At declaration; the review within a fixed period of closure. | [F17-incident-record-and-post-incident-review-for-an.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F17-incident-record-and-post-incident-review-for-an.md) |
+| F18 | Change record for a prompt, model, tool, corpus or guardrail change | The asset owner for the asset being changed. | Per change, before it reaches production. | [F18-change-record-for-a-prompt-model-tool-corpus-or.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F18-change-record-for-a-prompt-model-tool-corpus-or.md) |
+| F19 | Adoption and enablement plan | Business function head, with change and enablement. | Before first wave; revised per wave. | [F19-adoption-and-enablement-plan.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F19-adoption-and-enablement-plan.md) |
+| F20 | Executive decision brief, one page | Architect or program lead. | Whenever a decision requires authority the program does not hold. | [F20-executive-decision-brief-one-page.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F20-executive-decision-brief-one-page.md) |
+| F21 | Roadmap on a page | Program lead with the accountable executive. | Annually, revised at each gate. | [F21-roadmap-on-a-page.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F21-roadmap-on-a-page.md) |
+| F22 | Exit and decommissioning plan | Business system owner, with records management and the resilience owner. | At design, as a funded deliverable. Refreshed annually. | [F22-exit-and-decommissioning-plan.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F22-exit-and-decommissioning-plan.md) |
+| F23 | Service level definition for an AI system | Operational owner, agreed with the business owner. | At the readiness gate, before launch. | [F23-service-level-definition-for-an-ai-system.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F23-service-level-definition-for-an-ai-system.md) |
+| F24 | Cost model and unit economics sheet | Business owner, modeled with the architect. | At the readiness gate under the commercial dimension; refreshed monthly against actuals. | [F24-cost-model-and-unit-economics-sheet.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F24-cost-model-and-unit-economics-sheet.md) |
+| F25 | Developer tooling and team configuration standard | Engineering lead, with security for the managed policy rows and identity management for entitlement. | Before the second team onboards, not before the first. | [F25-developer-tooling-and-team-configuration-standard.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F25-developer-tooling-and-team-configuration-standard.md) |
 
 ## Appendix G: The Diagram Set
 
-Eighteen diagrams. Each should be drawable on a whiteboard in under two minutes, from memory, while talking. For each: what it shows, the three things to point at and the failure it makes visible. The last of those three is the reason to draw it at all; a diagram that reveals nothing is decoration.
-
----
-
-### G1. The socio-technical system
-
-```
-                        +-------------+
-                        |   PEOPLE    |
-                        +------+------+
-                               |
-        +----------------------+---------------------+
-        |                      |                     |
-  +-----+------+        +------+------+       +------+-----+
-  |  WORKFLOW  |--------| ARTIFICIAL  |-------|    DATA    |
-  +-----+------+        | INTELLIGENCE|       +------+-----+
-        |               +------+------+              |
-        +----------------------+---------------------+
-                               |
-        +----------------------+---------------------+
-        |                                            |
-  +-----+--------+                          +--------+-------+
-  |  GOVERNANCE  |--------------------------|  OPERATIONAL   |
-  |  decision    |                          |  CONTROLS      |
-  |  rights      |                          |  prevent/detect|
-  +--------------+                          +----------------+
-
-   EVERY EDGE IS BIDIRECTIONAL.
-   One change propagating through all six:
-     model upgraded, output 30% longer
-       -> WORKFLOW    review step 40% longer per item
-       -> PEOPLE      reviewer capacity model now wrong
-       -> CONTROLS    sampling rate misses its coverage
-       -> DATA        more retained text, wider erasure scope
-       -> GOVERNANCE  accepted residual risk is now stale
-```
-
-**What it shows.** An enterprise artificial intelligence deployment is six interacting elements whose behavior is a property of the interactions, not of the components.
-
-**Three things to point at.** The absence of a hierarchy: no element is the center, and the model is one box of six. The bidirectional edges: requirements flow both ways, so a change to one element changes what the other five require. The worked propagation: a supplier shipped a better model and nobody in the organization made a decision, yet five elements fell out of specification.
-
-**The failure it makes visible.** A change log confined to one element is a false record of the system. If a proposed change lists "none" against five of six elements, the analysis was not done.
-
----
-
-### G2. The delegation map
-
-```
-  THE WORK, step by step
-  ---------------------------------------------------------
-  step        CLAUDE      EXISTING SYSTEM     HUMAN
-  ---------------------------------------------------------
-  extract       [X]
-  resolve ID                   [X]
-  apply rule                   [X]   <- never a prompt
-  compare       [X]
-  decide                                       [X]
-  file                         [X]
-  ---------------------------------------------------------
-  For each assignment, three independent axes:
-     REVERSIBILITY   can it be undone, by whom, at what cost
-     STAKES          magnitude of one bad outcome
-     ACCOUNTABILITY  who answers for it
-
-  For every step assigned to Claude:
-        step ---> [ what verifies it? ] ---> if blank,
-                                             add verification
-                                             or move the step
-
-  Three outcome classes
-     AI-appropriate | human-retained | collaborative
-     (Claude drafts, a person decides)
-```
-
-**What it shows.** Ownership of each step was decided rather than defaulted, and the second owner is existing systems, meaning what the organization already paid to make reliable.
-
-**Three things to point at.** The middle column, which is the one teams forget. The verification arrow, which is empty on at least one row in most real designs. The deterministic rule sitting in the existing-system column, because that is the row that migrates into a prompt when nobody is watching.
-
-**The failure it makes visible.** Over-assignment to the model. Absence of this map is the best single predictor of it, and the map takes ten minutes to draw and an hour to argue about, which is the hour worth having.
-
----
-
-### G3. The three patterns compared
-
-```
-  AUTONOMY ------------------------------------------------>
-  ---------------------------------------------------------
-  AUGMENTED CALL      WORKFLOW              AGENT
-  [model + tools/     [your code decides    [model decides
-   retrieval]          what happens next]    what happens next]
-       |                    |                     |
-       |              chaining                    |
-       |              routing                     |
-       |              parallelization             |
-       |              orchestrator-workers        |
-       |              evaluator-optimizer         |
-       |                    |                     |
-  ---------------------------------------------------------
-  predictability   HIGH        MEDIUM         LOW
-  error cost       LOW         MEDIUM         HIGH
-  observability    HIGH        HIGH           LOW
-  latency          LOW         MEDIUM         HIGH (worst case)
-  cost             LOW         MEDIUM         HIGH
-  ---------------------------------------------------------
-  The line that separates workflow from agent is
-  WHO OWNS CONTROL FLOW, and crossing it invalidates your
-  testing strategy: a fixed path can be tested step by step,
-  an agent's path differs run to run.
-
-  Agent only when: the path cannot be enumerated
-               AND an unexpected output is acceptable
-               AND it is recoverable.
-```
-
-**What it shows.** Three points on an autonomy spectrum with the five workflow sub-patterns underneath, and the factor grid that decides between them.
-
-**Three things to point at.** The control-flow line, which is the only structural distinction and not a matter of degree. The five factors, where the tightest constraint decides and error cost usually is it. The three-part conjunction on the agent, all of which must hold.
-
-**The failure it makes visible.** Premature escalation. An agent deployed over a routed workflow that was never baselined, which shows up as a design nobody can test and a latency budget set on the median rather than the worst case.
-
----
-
-### G4. The reference architecture composition
-
-```
-  ONE NAMED ARCHITECTURE                TWO, COMPOSED
-  +--------------------+       +------------+   +------------+
-  |  RAG               |       | RAG        |-->| Evaluator- |
-  |  stable knowledge  |       | retrieval  |   | optimizer  |
-  +--------------------+       +------------+   +------------+
-                                     |                |
-  Can you name it?               eval set A       eval set B
-   yes -> known failure modes,      |                |
-          cost model, precedent     +-------+--------+
-   no  -> accretion                         |
-                                    THE COMPOSITION TEST
-  Five named architectures         do the two parts break in
-   Agent                           DIFFERENT WAYS worth
-   RAG                             managing separately?
-   Doc pipeline -> evaluator-        yes -> composition
-     optimizer                       no  -> a deferred
-   Ticket triage -> routing                decision, not an
-   Coding agent                            architecture
-
-  Composition roughly doubles maintenance surface AND eval
-  surface together. One eval set per architecture. Never one
-  for the composed system.
-```
-
-**What it shows.** Whether the architecture was chosen or accreted, and whether a second pattern earned its place.
-
-**Three things to point at.** The naming question, which is the cheapest diagnostic in the material. The two separate eval sets, because a single end-to-end set reports top-level health while a component rots. The composition test, which is a question about failure modes and not about capability.
-
-**The failure it makes visible.** A composed system evaluated end to end, and a second pattern present because the problem was never decided.
-
----
-
-### G5. The retrieval pipeline with owners
-
-```
- SOURCE -> INGEST -> PARSE -> ENRICH -> CHUNK -> EMBED
- (biz)     (data)    (data)   (data)   (arch)  (arch)
-   |                                              |
-   |                                              v
- EVALUATE <- CITE <- GENERATE <- ASSEMBLE <- RERANK <- INDEX
- (quality)  (arch)   (arch)      (arch)     (arch)  (platform)
-   ^                                              |
-   |                RETRIEVE (arch) <-------------+
-   +------------------ query log -----------------+
-
- STAGE          WHAT BREAKS          INSTRUMENT THAT SEES IT
- source     wrong authority, stale   estate inventory
- ingest     silently not collected   document count reconcile
- parse      tables flattened         parse fidelity sampling
- enrich     metadata absent          metadata completeness
- chunk      mid-idea cuts            chunk inspection
- embed      version changed silently embedding version log
- index      stale, partial rebuild   freshness monitor
- retrieve   filters after ranking    recall at k, labeled set
- rerank     right chunk cut          recall before/after
- assemble   truncation drops answer  assembled-context capture
- generate   correct context, wrong   faithfulness grading
-            reading  <- the ONLY genuine model failure
- cite       citation does not support citation accuracy
- evaluate   nothing measured, so     instrument the eval
-            nothing above is visible suite itself
-```
-
-**What it shows.** Retrieval is thirteen stages with distinct owners, distinct failures and distinct instruments, not a technique.
-
-**Three things to point at.** The owner row, where the first four stages belong to the business and to data engineering rather than to architecture. The single stage that is a model failure. The query log feeding back into evaluation, which is the loop most implementations never close.
-
-**The failure it makes visible.** Failure attribution. "The answer was wrong" is reported as a model defect nearly always and is one nearly never. Teams upgrade models against a corpus problem, see no improvement and conclude the technology is immature.
-
----
-
-### G6. The trust boundary diagram for an agentic system
-
-```
-+------------------------------------------------------------+
-| BOUNDARY A: enterprise control plane (fully trusted)       |
-|                                                            |
-|  [Identity]  [Policy engine]  [Audit log]  [Secrets]       |
-|       |             |              ^            |          |
-|  +----v-------------v--------------|------------v-------+  |
-|  | BOUNDARY B: orchestrator (trusted code you control)  |  |
-|  |  system prompt | tool router | authz check | budgets |  |
-|  +----|-----------------|--------------------|---------+  |
-|       |                 |                    |            |
-|  +----v-----+   +-------v---------+   +------v---------+  |
-|  | MODEL    |   | TOOL LAYER      |   | RETRIEVAL      |  |
-|  | semi-    |   | deterministic   |   | filters before |  |
-|  | trusted  |   | enforcement     |   | similarity     |  |
-|  +----------+   +-------|---------+   +------|---------+  |
-+-------------------------|-------------------|-------------+
-                          |                   |
-       BOUNDARY C: untrusted (content and third parties)
-                          |                   |
-                 [web, email, files]    [vendor APIs]
-
-  1 Nothing crossing C inward is an instruction. It is data.
-  2 Authorization is decided in B, never in the model.
-  3 Everything crossing B outward is logged to A.
-  4 The model is inside the boundary and is not trusted to
-    enforce it.
-```
-
-**What it shows.** Three boundaries and the four rules that follow from them.
-
-**Three things to point at.** The model's position, inside the perimeter but not a security boundary. Boundary C, and the fact that retrieved content and tool results arrive from it. The audit arrow running back to A, which is what makes the boundary assertable rather than asserted.
-
-**The failure it makes visible.** Authorization delegated to a probabilistic component, and instructions accepted from returned content. Both are invisible in an architecture diagram that has no boundaries drawn on it.
-
----
-
-### G7. The AI gateway as a control point
-
-```
- CALLERS            AI GATEWAY                    PROVIDERS
- +--------+   +---------------------------+   +--------------+
- | app A  |-->| 1 authn + tenant resolve  |-->| model, cloud |
- | app B  |   | 2 policy + classification |   +--------------+
- | agent  |   | 3 redaction inbound       |
- +--------+   | 4 routing + model pin     |   +--------------+
-              | 5 quota / rate / budget   |-->| model, in    |
-              | 6 cache lookup            |   | private net  |
-              | 7 call + retry + failover |   +--------------+
-              | 8 redaction out + filters |
-              | 9 log / trace / attribute |   +--------------+
-              +---------------------------+-->| self-hosted  |
-                     |            |           +--------------+
-                 +-------+   +---------+
-                 | audit |   | metrics |
-                 | store |   | + evals |
-                 +-------+   +---------+
-
-  Put a capability here when it must be UNIFORM across all
-  applications to be assertable to an auditor. Leave it in
-  the application otherwise.
-  It does identity, policy, routing, limits, redaction and
-  observability. It does not do prompts.
-```
-
-**What it shows.** The single point through which all model traffic passes, and the nine functions that cannot live in eleven applications consistently.
-
-**Three things to point at.** Step 2, where classification selects the route before cost or latency is considered. Step 9, which is the evidence base and the cost attribution simultaneously. The three provider boxes, which is what routing by classification buys.
-
-**The failure it makes visible.** Policy implemented eleven times inconsistently, keys that cannot be rotated without coordinated releases and cost that cannot be attributed retroactively. Also the gateway's own three failure modes: a single point of failure, a change bottleneck teams route around and a second place business logic lives.
-
----
-
-### G8. The human-in-the-loop placements
-
-```
-                 model output       ACTION       consequence
-                       |              |              |
-  1 PRE-ACTION   [ human ]----------->|              |
-    APPROVAL      blocks              |              |
-                                      |              |
-  2 POST-ACTION                       |-->[ human ]->|  undo
-    REVIEW                            |    reviews   |  window
-                                      |              |
-  3 SAMPLED                           |--------->[ n% ]---->
-    AUDIT                             |      detective only
-                                      |              |
-  4 ESCALATION   [ signal? ]--yes-->[ human ]        |
-    ON UNCERTAINTY   |--no--------------------------->
-                                      |              |
-  5 EXCEPTION    [ rule flags ]-yes->[ human ]       |
-    ONLY             |--no--------------------------->
-
-  1, 4 and 5 are PREVENTIVE.
-  2 is CORRECTIVE and needs a real undo window.
-  3 is DETECTIVE and is not a safety control.
-
-  Placement 4: route on STRUCTURAL signals (nothing above
-  threshold, required field absent, value out of range,
-  schema failure, two passes disagree, amount over limit).
-  Never on the model's self-reported confidence.
-```
-
-**What it shows.** Five placements positioned against the action, with the control class of each.
-
-**Three things to point at.** Where each sits relative to the action, because that is what determines whether it prevents anything. Row 3, which is a quality instrument and is routinely presented as a safety control. Row 4's signal list, because the wrong input there is the most common design error in the set.
-
-**The failure it makes visible.** A sampled audit described as the control that makes an irreversible action safe, and post-action review applied to something that cannot actually be reversed, such as anything already sent to a client.
-
----
-
-### G9. The evaluation and monitoring loop
-
-```
-   OFFLINE, before change            ONLINE, after change
-   +---------------------+          +---------------------+
-   | regression suite    |          | stratified capture  |
-   | golden set          |          |  errors 100%        |
-   | labeled retrieval   |          |  low conf   high %  |
-   | adversarial set     |          |  high conf  low %   |
-   +----------+----------+          |  thin segments 100% |
-              |                     +----------+----------+
-        [ BLOCKS PROMOTION ]                   |
-              |                          [ graders ]
-              v                                |
-   shadow -> canary -> full  ------------------+
-              |                                v
-              |                     +---------------------+
-              |                     | fast proxies, mins  |
-              |                     |  refusal rate       |
-              |                     |  escalation rate    |
-              |                     |  retrieval score    |
-              |                     |  distribution       |
-              |                     +----------+----------+
-              |                                |
-              +-------- new eval case <--------+
-                        from every incident and
-                        every fixed production failure
-
-   deploy   first bad   sample    graded    contained
-     |         output    drawn    result       |
-     |----------|----------|--------|----------|
-     t0       t0+m       t0+h    t0+h+g       t0+c
-                \_____________________________/
-                     THE EXPOSURE WINDOW
-```
-
-**What it shows.** Two instrument sets on two clocks, joined by a feedback edge, plus the exposure window that quality's measurement lag creates.
-
-**Three things to point at.** The blocking edge from offline sets to promotion. The three fast proxies, which move in minutes and are the only warning available before quality is measurable. The feedback arrow that turns every incident into a permanent eval case, which is what makes the loop compound rather than repeat.
-
-**The failure it makes visible.** Evaluation as a launch photograph. Also the high-confidence stratum being dropped to save review budget, which removes the only instrument pointed at the failure mode that matters most.
-
----
-
-### G10. The governance moment
-
-```
-  EVERY ARCHITECTURAL DECISION HAS A TWIN
-  ---------------------------------------------------------
-  TECHNICAL DECISION            GOVERNANCE DECISION
-  ---------------------------------------------------------
-  which model, which version -> who approves a change to it,
-                                and what evidence is produced
-  what the agent may call    -> who grants the scope, who
-                                recertifies it, on what cycle
-  what is indexed            -> who may write to the corpus,
-                                whose entitlements filter it
-  where the human gate sits  -> what an objection does, and
-                                who may overrule it
-  what is logged             -> who may read it, how long it
-                                is kept, and it is now
-                                regulated data
-  how it fails               -> who is told, on what clock,
-                                and who decides notification
-  ---------------------------------------------------------
-       |                                       |
-       +------------------+--------------------+
-                          v
-             MADE AT THE SAME MOMENT
-             by the same person, in the same record
-
-  Made later, the governance decision is made by whoever is
-  present when the question arrives, which is usually the
-  person with the least authority to answer it.
-```
-
-**What it shows.** Governance is not a review stage after design. Each technical decision carries a governance decision that is cheapest to make at the same moment.
-
-**Three things to point at.** The pairing itself, which is the whole idea. The logging row, because every observability decision is simultaneously a compliance decision and creates regulated data. The bottom line, because deferred governance decisions are not deferred, they are delegated downward by accident.
-
-**The failure it makes visible.** A design document with a separate governance annex, which is the physical form of a decision made twice by two people who never spoke.
-
----
-
-### G11. The risk tiering funnel
-
-```
- INPUTS (8)               SCORE          TIER       AUTHORITY
- ----------               -----          ----       ---------
- autonomy        \
- reversibility    \
- stakes            \
- affected pop      >-> weighted sum -> T4 crit -> board / exec
- data sensitivity /     0 to 32       T3 high -> committee
- external exposure/     then four     T2 mod  -> function head
- regulatory char /      overrides     T1 low  -> named owner
- novelty        /
-                             ^
-                             |
-  OVERRIDE 1  any single dimension at 4 floors the tier at T3
-  OVERRIDE 2  output affects legal rights, entitlements,
-              employment, credit, health or liberty: floor T3
-              and require human decision authority
-  OVERRIDE 3  autonomy >= 3 AND reversibility <= 1: floor T4
-  OVERRIDE 4  novelty = 4: one tier above computed for the
-              first operating period, then re-score
-
-  Bands before overrides: T1 0-8, T2 9-16, T3 17-24, T4 25-32
-  Tier by what the system CAN DO without a human, not by
-  what it is intended to do. Intent is not a control.
-```
-
-**What it shows.** Eight inputs producing a tier that determines how much of every other control applies.
-
-**Three things to point at.** The overrides, which matter more than the arithmetic because a pure additive score lets eight moderate answers outvote one catastrophic one. The authority column, because go-live authority is the one decision right in the lifecycle matrix that moves with tier while every other row of that matrix stays fixed. That is a narrow claim about decision rights and not about the lifecycle: six other things do change per tier, from oversight placement to logging depth. The novelty dimension, which decays as operating evidence accumulates and is therefore a measure of absent evidence rather than a fudge.
-
-**The failure it makes visible.** A tier that changes no design decision, which means the tiering did nothing. Also self-tiering, where the team scoring the system is the team whose delivery date depends on a low score.
-
----
-
-### G12. The lineage chain from source document to cited sentence
-
-```
-  INGEST                TRANSFORM              RETRIEVE/ANSWER
-  +----------+  fetch   +-------------+ chunk  +----------------+
-  | source   |--------->| doc v3      |------->| chunk c81      |
-  | DMS/1471 |  hash h9 | eff 2026-02 |  v.7   | offs 4120-4880 |
-  +----------+          | juris US    | embed  | emb model m2   |
-                        | class conf  |  m2    +----------------+
-                        +-------------+                |
-                                                       v
-   run r55 : query q, filters {tenant, current}, top-k 8
-             used c81, c14 ; REJECTED c92, c07
-                        |
-                        v
-   answer a12 : sentence 3  <-- c81 (doc v3, offs 4120-4880)
-                sentence 5  <-- c14
-   reviewer u77 : edited sentence 5, reason "outdated rate"
-
-  Sufficiency test: a competent reviewer with NO access to
-  the current system state can reconstruct why the system
-  said what it said.
-  The retrieved set is PERSISTED, never recomputed. Re-running
-  the query months later against a changed index reproduces a
-  different answer, and presenting that as the explanation is
-  misleading rather than merely useless.
-```
-
-**What it shows.** Three levels of lineage, and the third one, retrieval lineage, which must be designed in and cannot be added later.
-
-**Three things to point at.** The rejected candidates, which show what was available and not chosen and are what distinguish a governed selection from a lucky one. The sentence-level attribution, because disputes are about a sentence and not about a session. The reviewer edit, which is the difference between an assisted decision and an automated one and is frequently the decisive question.
-
-**The failure it makes visible.** Lineage retention set by the engineering horizon rather than the dispute horizon. Observability data kept for weeks is kept for the wrong purpose when contract disputes surface years later.
-
----
-
-### G13. The three lines of defense applied to AI
-
-```
- +------------+  +------------------+  +--------------------+
- | FIRST LINE |  | SECOND LINE      |  | THIRD LINE         |
- | owns and   |  | sets the         |  | independent        |
- | runs the   |  | standard and     |  | assurance          |
- | risk       |  | challenges       |  |                    |
- +------------+  +------------------+  +--------------------+
- business owner   risk, compliance,     internal audit
- architect        privacy, security     external assurance
- delivery team    governance committee
-       |                  |                     |
-   tiers itself      re-scores a sample     tests the whole
-   builds controls   sets the standard      arrangement,
-   produces          tests design           including whether
-   evidence          effectiveness          line 2 challenged
-       |                  |                     |
-       +------------------+---------------------+
-                          v
-     WHERE IT BREAKS FOR ARTIFICIAL INTELLIGENCE
-     1 the first line is the only line that understands the
-       system, so challenge becomes theater
-     2 the second line cannot test what it cannot read;
-       evidence must be emitted, not assembled on request
-     3 the third line arrives after the design is frozen and
-       finds design defects it can only report
-
-     Fix: second-line calibration sampling, objective
-     triggers that bypass scoring, and evidence generated
-     by the system rather than by a person before an audit.
-```
-
-**What it shows.** The conventional control model and the three specific places it fails when the first line holds all the expertise.
-
-**Three things to point at.** The calibration-sampling arrow from line two, which is the cheapest working mitigation because it makes optimism visible rather than punishing it. The evidence arrow, which must originate in the running system. Line three's position, arriving late, which is the argument for pulling assurance into the design review at tier 3 and above.
-
-**The failure it makes visible.** Effective challenge that cannot happen because only the builder understands the build. It shows up as a second line that signs everything and an audit finding written a year later about a decision nobody can now reverse.
-
----
-
-### G14. The adoption funnel
-
-```
-  STAGE          METRIC                  FAILURE AT THIS STAGE
-  -----          ------                  ---------------------
-  AWARE       %  of eligible who know    communication gap
-    |            it exists and what for
-    v
-  PROVISIONED %  with working access     access friction,
-    |            (login + entitlement)   licensing, approval
-    v                                    queue
-  ACTIVATED   %  who completed one real  no trigger in the
-    |            task, not a demo        workflow; first task
-    v                                    chosen badly
-  HABITUAL    %  active in 4 of the      value not felt; review
-    |            last 6 weeks on real    burden exceeds saving
-    v            work
-  DEPENDENT   %  who would escalate if   never reached: system
-    |            it were unavailable     is peripheral to the
-    v                                    real work
-  ADVOCATE    %  who onboarded another   no social proof; the
-                 user or contributed a   program relies on
-                 correction or template  push forever
-
-  The RATIO between adjacent stages diagnoses.
-  The absolute numbers do not.
-  DEPENDENT is the only stage that predicts survival of a
-  budget cycle.
-```
-
-**What it shows.** Six stages, one metric each, one distinct failure each.
-
-**Three things to point at.** The ratio rule: eighty percent provisioned against nine percent activated is a workflow-entry problem, and no amount of awareness work will move it. The dependent stage, which is the only honest predictor of survival. The advocate stage, whose absence means the program pushes forever.
-
-**The failure it makes visible.** A healthy-looking usage number covering a system nobody would escalate about, which will be cut, and the cut will be justified using the same usage number.
-
----
-
-### G15. The roadmap dependency graph
-
-```
-   [ Governed model access + contracted terms ]
-              |
-              +--------------------+-------------------+
-              v                    v                   v
-   [ Identity & entitlement ]  [ Evaluation ]   [ Observability
-              |                  harness ]        & evidence ]
-              v                    |                   |
-   [ Knowledge layer:              |                   |
-     ingest, freshness,            |                   |
-     deletion ]                    |                   |
-              |                    |                   |
-              +--------+-----------+---------+---------+
-                       v                     v
-              [ Control layer with    [ Operating model:
-                failure behavior ]      owners, support ]
-                       |                     |
-          +------------+------+--------------+
-          v                   v              v
-   [ UC1: internal      [ UC2: regulated  [ UC3: client
-     assistant ]          decision ]        facing ]
-     needs 1,2,3          needs ALL         needs ALL
-                                            + exit plan
-
-   Read from the BOTTOM. A use case cannot be scheduled
-   before every box above it is complete.
-   Order by dependency and by the political capital each
-   item generates or consumes. Where those conflict,
-   dependency wins.
-```
-
-**What it shows.** Capability sequence rather than a list of use cases, with each use case's prerequisites visible.
-
-**Three things to point at.** The entitlement layer, which no single use case pays for and without which four are impossible. The regulated use case sitting last, because sequencing it early means either shipping without controls or a public failure on the most-watched item. The exit plan attached to the client-facing case rather than treated as an end-of-life activity.
-
-**The failure it makes visible.** Which budget cut costs a quarter and which cut costs the program. A roadmap that shows only use cases cannot answer that question, so the committee cuts by cost and removes a foundation.
-
----
-
-### G16. The incident containment ladder
-
-```
-  BLAST RADIUS ---------------------------------------->
-  ------------------------------------------------------
-  1 disable one tool           narrow        minutes
-  2 tighten a guardrail        narrow-med    minutes
-    or threshold               (accept more false refusals)
-  3 route affected traffic     medium        minutes
-    to a human                 (preserves the service)
-  4 roll back the prompt       medium        minutes
-  5 roll back the model        wide          minutes-hours
-    or version
-  6 KILL SWITCH                total         immediate
-  ------------------------------------------------------
-  Take the NARROWEST option that contains the harm.
-
-  Every rung must be executable WITHOUT A DEPLOYMENT and
-  must be rehearsed before launch, evidenced in the
-  readiness gate under resilience.
-  A kill switch that requires a release is not a kill
-  switch. A rollback path nobody has exercised is a
-  hypothesis.
-
-  Before any rung: PRESERVE. Logs, retrieved sets, prompt
-  version, model identifier, reviewer records. The instinct
-  to disable and tidy destroys the only evidence.
-```
-
-**What it shows.** Six containment options ordered by blast radius, with the time each takes to have effect.
-
-**Three things to point at.** Rung 3, which preserves the service while removing reliance on the system, and is the rung teams forget exists. The no-deployment requirement, which is a design constraint decided months before the incident. The preservation step above rung 1, because containment and evidence destruction are the same action if nobody says otherwise.
-
-**The failure it makes visible.** A containment plan whose only rung is the kill switch, which means every quality problem becomes an outage, so the organization learns not to declare incidents.
-
----
-
-### G17. The environment and promotion pipeline
-
-```
- DEV ---> INTEGRATION ---> EVALUATION ---> STAGING ---> PRODUCTION
- real     real tool        FROZEN corpus   LIVE corpus  per-request
- subset   endpoints in     and index, so   and index,   identity,
- of data  sandbox mode     scores compare  shadow and   trace ids and
- (or the  (mocked tools    across runs     canary, no   model id
- prompt   hide error                       user-visible captured on
- is tuned handling and                     output on    every request
- against  retries)                         the shadow
- fiction)                                  path
-                                                    |
-                                                    v
-   [ G1 EVAL ]      per-segment thresholds vs frozen sets
-        |           plus a self-disagreement baseline
-        v
-   [ G2 COST ]      cost per completed outcome at 1x and 3x
-        |           volume, cache hit ratio verified
-        v
-   [ G3 SAFETY ]    harmful-output rate AND false-refusal
-        |           rate, injection resistance, permission
-        v           assertions
-   [ G4 OPERABILITY ] runbook current, owner named and
-        |             agreed, rollback rehearsed, alerts wired
-        v
-   SHADOW (no user output) --> CANARY (slice) --> FULL
-
-  Every gate is PER SEGMENT. An aggregate pass hides a
-  segment-level regression, which is how quality leaves
-  quietly.
-```
-
-**What it shows.** Five environments with the artificial-intelligence-specific requirement of each, and four gates that promote a candidate release tuple rather than a code build.
-
-**Three things to point at.** The evaluation environment, which most organizations lack and which is routinely collapsed into staging. The contradiction that forces the separation: eval needs a frozen corpus for comparability, staging needs a live one for realism, and one environment cannot hold both. G3's paired metrics, because measuring harmful output without measuring false refusal optimizes toward a system that refuses everything.
-
-**The failure it makes visible.** An aggregate pass concealing a segment regression, and a promotion decision made on a corpus that does not resemble production, which makes every retrieval number meaningless.
-
----
-
-### G18. The decommissioning flow
-
-```
-  DECISION TO RETIRE
-        |
-        +---> [1] EVIDENCE PRESERVATION
-        |         logs, evals, decision records, model ids,
-        |         prompt versions, review records, lineage
-        |         retention set by limitation period,
-        |         regulatory obligation and contract, which
-        |         is counsel's determination
-        |         extracted to a format readable WITHOUT
-        |         the system
-        |
-        +---> [2] RECORD CONTINUITY
-        |         outputs that entered a business record stay
-        |         interpretable, with the prompt, corpus and
-        |         model context preserved AT CREATION
-        |
-        +---> [3] MANUAL CAPABILITY RESTORATION  (BLOCKS: must
-        |         complete before the system stops carrying
-        |         volume) does the manual path still exist, is
-        |         anyone trained, what is the real capacity
-        |
-        +---> [4] DATA DISPOSITION
-        |         corpora, indexes, embeddings, caches, eval
-        |         sets, logs, adapted artifacts, memory
-        |         (the same derived-artifact map erasure used)
-        |
-        +---> [5] DEPENDENCY UNWINDING  (BLOCKS: must complete
-        |         before an end date is announced) instrument
-        |         consumption BEFORE announcing the end date;
-        |         do not discover consumers by asking
-        |
-        +---> [6] KNOWLEDGE CAPTURE
-                  why built, what was learned, why ending
-        |
-        v
-  IF REPLACEMENT: both systems exist at once
-     behavioral difference BY SEGMENT before cutover
-     users' working methods invalidated -> adoption event
-     evidence continuity across the boundary
-     parallel running: cost AND end date, both at the decision
-```
-
-**What it shows.** Six workstreams, two of which can block the others, plus the four recurring migration problems.
-
-**Three things to point at.** Workstreams 3 and 5 as the blockers, per 10.6: manual capability restoration has to complete before the system stops carrying volume, and dependency unwinding before an end date is announced, so either one moves the date rather than the plan. Workstream 1 is not a blocker in that sense but is the one that most often adds quarters, because a retention period set by counsel can outlive the system by years. The derived-artifact map appearing here for the second time, having first been built for erasure. Parallel running with a stated end date, because parallel running without one becomes permanent and the organization then operates two systems, two control sets and two evidence trails.
-
-**The failure it makes visible.** Obligations that outlive the system being discovered by whoever is present at the end, who is never the person who created them. Drawing this at design time is the argument for funding the exit plan as a deliverable.
-
----
-
----
+Eighteen diagrams, now one file each in the Primer Workbook, [primer-workbook/diagrams/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/README.md), as Mermaid sources GitHub renders, each with its ASCII original. References in this Primer of the form G1 to G18 resolve there.
+
+| ID | Diagram | File |
+| --- | --- | --- |
+| G1 | The socio-technical system | [G01-the-socio-technical-system.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G01-the-socio-technical-system.md) |
+| G2 | The delegation map | [G02-the-delegation-map.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G02-the-delegation-map.md) |
+| G3 | The three patterns compared | [G03-the-three-patterns-compared.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G03-the-three-patterns-compared.md) |
+| G4 | The reference architecture composition | [G04-the-reference-architecture-composition.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G04-the-reference-architecture-composition.md) |
+| G5 | The retrieval pipeline with owners | [G05-the-retrieval-pipeline-with-owners.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G05-the-retrieval-pipeline-with-owners.md) |
+| G6 | The trust boundary diagram for an agentic system | [G06-the-trust-boundary-diagram-for-an-agentic-system.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G06-the-trust-boundary-diagram-for-an-agentic-system.md) |
+| G7 | The AI gateway as a control point | [G07-the-ai-gateway-as-a-control-point.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G07-the-ai-gateway-as-a-control-point.md) |
+| G8 | The human-in-the-loop placements | [G08-the-human-in-the-loop-placements.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G08-the-human-in-the-loop-placements.md) |
+| G9 | The evaluation and monitoring loop | [G09-the-evaluation-and-monitoring-loop.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G09-the-evaluation-and-monitoring-loop.md) |
+| G10 | The governance moment | [G10-the-governance-moment.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G10-the-governance-moment.md) |
+| G11 | The risk tiering funnel | [G11-the-risk-tiering-funnel.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G11-the-risk-tiering-funnel.md) |
+| G12 | The lineage chain from source document to cited sentence | [G12-the-lineage-chain-from-source-document-to-cited-sentence.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G12-the-lineage-chain-from-source-document-to-cited-sentence.md) |
+| G13 | The three lines of defense applied to AI | [G13-the-three-lines-of-defense-applied-to-ai.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G13-the-three-lines-of-defense-applied-to-ai.md) |
+| G14 | The adoption funnel | [G14-the-adoption-funnel.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G14-the-adoption-funnel.md) |
+| G15 | The roadmap dependency graph | [G15-the-roadmap-dependency-graph.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G15-the-roadmap-dependency-graph.md) |
+| G16 | The incident containment ladder | [G16-the-incident-containment-ladder.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G16-the-incident-containment-ladder.md) |
+| G17 | The environment and promotion pipeline | [G17-the-environment-and-promotion-pipeline.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G17-the-environment-and-promotion-pipeline.md) |
+| G18 | The decommissioning flow | [G18-the-decommissioning-flow.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G18-the-decommissioning-flow.md) |
 
 ## Appendix H: Vocabulary
 
@@ -14530,7 +10749,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 ### Core terms
 
-**5xx errors.** The HTTP status class (500 to 599) for a server-side failure to fulfil an otherwise valid request. **500** internal error, **503** service unavailable, **529** overloaded. Usually transient and resolvable with backoff, and categorically distinct from the 4xx codes, which indicate a client-side problem and mostly must not be retried unchanged. The retry decision rule is in 3.8.
+**5xx errors.** The HTTP status class (500 to 599) for a server-side failure to fulfill an otherwise valid request. **500** internal error, **503** service unavailable, **529** overloaded. Usually transient and resolvable with backoff, and categorically distinct from the 4xx codes, which indicate a client-side problem and mostly must not be retried unchanged. The retry decision rule is in 3.8.
 
 **A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation standard. Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
 
@@ -14568,7 +10787,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Cache breakpoint.** The marker separating the cacheable prefix from the varying remainder. Everything before it can be reused.
 
-**Cache write / cache read.** The two billing lines of prompt caching. Writes cost 1.25x base input for a five-minute lifetime and 2x for one hour, paid once. Reads cost 0.1x. The ratio between them is where cost savings live.
+**Cache write / cache read.** The two billing lines of prompt caching. Writes cost 1.25x base input for a five-minute lifetime and 2x for one hour, paid once. Reads cost 0.1x on most models and less on some current ones (Appendix I, `cache.read.multiplier.*`). The ratio between them is where cost savings live.
 
 **Capability bloat.** Holding more tools or permissions than the role requires. Degrades tool selection and widens attack surface. Anthropic's test: if a human engineer cannot say which tool applies, the model cannot either.
 
@@ -14634,7 +10853,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Dynamic Workflow.** One of the seven primitives, job COMPOSE AT RUNTIME. A workflow whose steps are assembled while it runs rather than fixed in advance.
 
-**Effort.** A parameter that trades intelligence for latency and cost within a single model. Anthropic: tuning effort is often a better lever than switching models. Defaults to high on Opus 5 and Opus 4.8.
+**Effort.** A parameter that trades intelligence for latency and cost within a single model. Anthropic: tuning effort is often a better lever than switching models. The default differs by model (Appendix I, `<class>.effort.default`).
 
 **Embedding.** A numeric representation of a text's meaning, used so that similar meanings can be found by similarity.
 
@@ -14665,13 +10884,19 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Fallback chain.** The ordered set of alternatives the system uses when the primary path returns nothing usable: a lower model tier, a cached response, a deterministic path, a degraded mode. **Belongs in the orchestration layer**, because only the orchestrator knows what an acceptable substitute for the task is. The control most often built and least often exercised, which is why fallback behavior belongs in the eval suite rather than in the design document alone.
 
-**Fast mode.** A research-preview setting on Opus 5 and Opus 4.8 delivering up to 2.5x higher output speed at premium pricing.
+**Fast mode.** A setting on the current Opus-class model, and in research preview on two legacy Opus models (Appendix I, `fastmode.models`), delivering up to 2.5x higher output speed at premium pricing.
 
 **Few-shot prompting.** Teaching by worked examples. Anthropic's guidance: curate diverse canonical examples rather than stuffing edge cases.
 
 **Fixed-size / Semantic / Hierarchical.** The three chunking approaches, chosen by the structure of the source material, not by a default size. Hierarchical is the widest: it preserves document structure **and** retrieves at the level that fits.
 
-**Gate.** A programmatic check inserted between steps of a chained workflow to confirm the process is still on track. Anthropic's term.
+**Gate (workflow).** A programmatic check inserted between steps of a chained workflow to confirm the process is still on track. Anthropic's term. Not the Slow AI Kitchen's gates (see Gate, Kitchen) and not the intake filters of 1.6 (see Filter).
+
+**Gate (Kitchen).** One of the ten checkpoints of the Slow AI Kitchen method, Gate 1 Definition of Done to Gate 10 Operational Audit and Review Cycle, that an output or deployment decision must pass before advancing. Defined in the Kitchen README, not in this Primer; see the concordance in the front matter.
+
+**Filter (intake).** One of the five filters of the intake and prioritization funnel in 1.6: problem, assignment, feasibility, governance (a rule-out applied before cost and latency) and portfolio. Called gates before v2.0.0.
+
+**Risk tier.** In this Primer, the T1 Low to T4 Critical band a system is assigned by the additive score and overrides of 4.2. Not the Slow AI Kitchen's Tier 1 to 3 stakes tiers, and not the Public to Restricted data classification of 6.4.
 
 **GDPR (General Data Protection Regulation).** The European Union's data protection regime. Two points an architect keeps straight: it does not require European residency as such, because cross-border transfers are lawful with a valid transfer mechanism, and where a residency requirement nonetheless exists it usually comes from a contract, a regulator or internal policy rather than from the regulation itself.
 
@@ -14681,7 +10906,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Hallucination rate.** The measured proportion of outputs asserting something the source material does not support. A rate over a named population measured by a named instrument, not an impression. Distinct from groundedness, which asks whether an assertion is traceable to a retrieved passage.
 
-**Harmlessness screen.** A lightweight model, typically Haiku 4.5, pre-screening input before it reaches the main conversation, with structured outputs constraining the verdict to a parseable classification. Applies to tool output as well as user input.
+**Harmlessness screen.** A lightweight model, typically the current Haiku-class model (Appendix I, `class.haiku.current`), pre-screening input before it reaches the main conversation, with structured outputs constraining the verdict to a parseable classification. Applies to tool output as well as user input.
 
 **Hook.** Developer code that runs automatically at a defined lifecycle moment, able to inspect, transform or block. The deterministic counterpart to a prompt instruction.
 
@@ -14852,343 +11077,9 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 ### Enterprise vocabulary, by domain
 
-Grouped by domain. Where a term is commonly confused with another, the distinction is stated in the same line.
+Moved on 18 October 2026 to the Primer Workbook: [primer-workbook/enterprise-vocabulary.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/enterprise-vocabulary.md). The core terms above are the vocabulary the body relies on.
 
-#### Enterprise architecture and operating model
-
-**Application portfolio management.** The discipline of holding an inventory of every application with its owner, cost, lifecycle stage and business capability, and making invest, tolerate, migrate or eliminate decisions against it.
-
-**Architecture review board.** The standing body that approves designs against standards and grants exceptions. Distinct from a governance committee, which decides risk acceptance; the board decides technical conformance.
-
-**Business capability map.** A hierarchy of what an organization does, expressed independently of how it is organized or which systems it runs. The stable frame against which shifting systems and structures are compared.
-
-**Center of excellence.** A central team that sets standards, holds scarce expertise and enables delivery teams. Fails in four recognizable ways: the **bottleneck**, where every team queues behind it; the **ivory tower**, where it publishes standards nobody consults; the **demo factory**, where it produces pilots and no production system; and the **tollbooth**, where it charges for permission rather than supplying capability. The tollbooth is the most damaging, because teams route around it and the result is a shadow estate the organization cannot see.
-
-**Conway's law.** A system's structure mirrors the communication structure of the organization that built it. The practical consequence is that a boundary you want in the architecture needs a corresponding boundary in the org chart, or it will erode.
-
-**Domain-driven design.** Modeling software around business domains with explicit bounded contexts and a shared language per context. Its value here is the bounded context, which is the natural unit for a corpus, a tool set and an owner.
-
-**Federated operating model.** Central standards with local delivery. Contrast with centralized, where one team builds everything, and with fully devolved, where each function does as it wishes. The federated model is the common landing point and it fails when the standards have no teeth.
-
-**Golden path.** The paved, supported and pre-approved way to build something, where choosing it removes work rather than adding it. A golden path that is slower than the unofficial route will not be used.
-
-**Landing zone.** A pre-configured, pre-approved environment with identity, networking, logging and guardrails already in place, into which a workload can be deployed without renegotiating the controls.
-
-**Operating model.** How work is organized, decided, funded and supported: the arrangement of people, decision rights, processes and platforms. Distinct from the organization chart, which shows reporting lines only.
-
-**Platform team.** A team whose product is an internal capability used by delivery teams, measured on adoption and on the time it removes. Distinct from an embedded team, which sits inside a business function and delivers that function's outcomes.
-
-**Target operating model.** The intended future arrangement of capability, process, decision rights, technology and people, with the transition path stated. Without the transition path it is a picture rather than a plan.
-
-**Technical debt versus architectural debt.** Technical debt is local and repayable by a team in a sprint. Architectural debt is structural, crosses teams and is repaid only by a funded program. Reporting the second as the first is how it becomes permanent.
-
-**Value stream.** The end-to-end sequence of activities delivering a result to a customer, cutting across functions. The unit that reveals queues between departments, which is where most cycle time lives.
-
-#### Integration engineering
-
-**Anti-corruption layer.** A translation boundary that keeps a legacy system's model from leaking into a new one. The correct place to normalize an enterprise resource planning system's identifiers before they reach a tool schema.
-
-**API gateway versus AI gateway.** An API gateway does routing, authentication, rate limiting and protocol translation for services generally. An AI gateway adds model routing by classification, prompt and response logging, redaction, token budgets, cache orchestration and cost attribution. They can be the same product; they are not the same control set.
-
-**Backpressure.** A downstream component signaling upstream to slow down rather than dropping work. The mechanism that turns an overload into degraded throughput instead of a cascade.
-
-**Bulkhead.** Isolating resources so that exhaustion in one path cannot starve another. In practice, separate connection pools and separate queues per use case on a shared gateway.
-
-**Choreography versus orchestration.** In choreography each service reacts to events with no central coordinator. In orchestration one component directs the sequence. Orchestration is easier to observe and to gate, which is why agentic systems that must be auditable are orchestrated.
-
-**Circuit breaker.** A component that stops calling a failing dependency after a threshold and fails fast, then probes for recovery. Prevents a slow dependency from consuming every thread upstream.
-
-**Confused deputy.** A privileged component tricked into using its authority on behalf of a less privileged caller. The canonical agentic form: an agent holding a broad service-account scope acting on instructions that arrived inside retrieved content.
-
-**Contract test.** A test asserting that a provider still satisfies the expectations a specific consumer holds. Distinct from an integration test, which exercises the wiring; the contract test fails the provider's build, not the consumer's.
-
-**Dead letter queue.** Where messages go after exhausting retries. A dead letter queue nobody monitors is a silent data loss channel with a reassuring name.
-
-**Exactly-once versus at-least-once delivery.** At-least-once is what messaging systems actually provide and duplicates are normal. Exactly-once is achieved at the consumer through idempotency, not at the transport. Any design assuming the transport provides it is wrong.
-
-**Idempotency key.** A caller-supplied identifier letting a server recognize a retry and return the original result rather than acting twice. The single control that makes retries safe on state-changing calls.
-
-**N+1 problem.** Issuing one query for a list and then one per item. In agentic systems it appears as a tool that returns identifiers followed by a per-identifier lookup loop, which is a latency and cost defect the tool schema should have prevented by returning the batch.
-
-**Outbox pattern.** Writing a message to a database table in the same transaction as the state change, with a separate process publishing it. Removes the dual-write failure where the state changed and the event did not.
-
-**Poison message.** A message that fails every time it is processed and blocks the queue behind it. Handled by attempt counting and routing to a dead letter queue, not by retrying harder.
-
-**Rate limit versus quota.** A rate limit bounds requests per unit of time and protects the service. A quota bounds consumption over a period and protects the budget. They are enforced in different places and breaching them means different things.
-
-**Saga.** A sequence of local transactions with compensating actions for rollback, used where a distributed transaction is impossible. The compensating action is the design work; most sagas fail because someone assumed a step was reversible.
-
-**Schema registry.** A governed store of message and payload schemas with compatibility rules, so that a producer cannot ship a breaking change unnoticed. The enterprise control that makes additive-only evolution enforceable rather than aspirational.
-
-**Strangler fig.** Replacing a legacy system incrementally by routing slices of traffic to the new implementation until nothing reaches the old one. The realistic migration pattern where a big-bang cutover is unacceptable.
-
-**Webhook signature verification.** Validating that an inbound callback genuinely came from the claimed sender, using a shared secret over the raw body. Omitting it turns a webhook endpoint into an unauthenticated write path.
-
-#### Data and knowledge architecture
-
-**Authoritative source.** The one artifact designated as correct for a knowledge domain, with every other artifact in that domain labeled derived or copy. Related to but not identical with system of record: a system of record is a system, an authoritative source may be a document, and a domain with two authoritative sources is not ready for retrieval.
-
-**Conceptual, logical and physical model.** Three levels of data modeling: what the business means, how it is structured independently of technology and how it is implemented. An artificial intelligence system needs all three, because retrieval filters are written against the logical level and business meaning is what the model must reproduce.
-
-**Controlled vocabulary.** A fixed list of permitted terms for a field, with synonyms mapped to preferred terms. Makes filtering reliable and makes an enumeration meaningful rather than decorative.
-
-**Data contract.** An agreement between a data producer and its consumers covering schema, semantics, freshness, quality thresholds and change notice. Turns an implicit dependency into an obligation someone owns.
-
-**Data lake, warehouse and lakehouse.** A lake stores raw files with schema applied on read. A warehouse stores modeled, curated tables with schema applied on write. A lakehouse combines file storage with table semantics and transactions. The distinction matters here because retrieval evaluation needs reproducible snapshots, which the lake does not give for free.
-
-**Data mesh.** An operating model treating data as a product owned by the domain that produces it, with central standards and self-serve infrastructure. Its relevance is ownership: it names the person accountable for a corpus.
-
-**Data product.** A curated, documented, versioned and owned data asset with stated quality and freshness commitments and a consumer-facing interface. A corpus intended for retrieval should be built as one.
-
-**Data steward versus data owner.** The owner is accountable for the data and can authorize its use. The steward operates it day to day, maintains quality and definitions and has no authority to permit a new purpose. Confusing the two produces approvals from people who cannot give them.
-
-**Derived artifact.** Anything computed from a source record: chunks, embeddings, index entries, caches, assembled-context logs, evaluation sets, analytics extracts and memory stores. The set an erasure request must reach and the set a decommissioning must dispose of.
-
-**Document engineering.** Deliberately structuring documents so that a machine can use them: stable headings, one idea per section, tables as tables, explicit effective dates, explicit supersession and no meaning carried by layout alone.
-
-**Entity resolution.** Determining that two records refer to the same real-world thing. The step where identifier mismatch across systems becomes visible, and the step where an agent must ask rather than guess when multiple candidates match.
-
-**Freshness requirement.** The maximum acceptable lag between a change at source and its appearance in the retrievable set, stated in time rather than in effort. Drives the reindexing strategy and belongs in the user interface as a published commitment.
-
-**Golden record.** The single reconciled version of an entity assembled from multiple sources by master data management. The thing an agent should resolve against rather than any one contributing system.
-
-**Information lifecycle management.** Governing data from creation through active use, archive and destruction, with the basis for each transition recorded. The frame that turns retention from a storage setting into a control.
-
-**Knowledge estate.** Everything an organization knows, across systems nobody inventoried, in states nobody recorded, owned by people who have mostly left. The thing retrieval reads from, whose every property becomes a property of the answer.
-
-**Master data management.** The discipline of maintaining a single authoritative version of core entities such as customer, supplier, product and employee across systems. Its absence is why identifier resolution is the quiet cost in most integrations.
-
-**Metadata, five categories.** Technical describes structure and format. Business describes meaning and ownership. Operational describes runtime facts such as ingestion time and record counts. Provenance describes origin and transformation. Governance describes classification, retention and access. Retrieval systems fail on the last three most often.
-
-**Ontology versus taxonomy.** A taxonomy is a hierarchy of categories. An ontology adds typed relationships between entities, so it can express that a policy supersedes another policy or applies to a jurisdiction. Retrieval filters need a taxonomy; reasoning over relationships needs an ontology.
-
-**Records schedule.** The formal statement of how long each class of record is kept, on what basis and how it is disposed of. The document that answers a retention question with authority rather than with a default.
-
-**Semantic layer.** A governed mapping from physical tables to business concepts and metrics, so that "revenue" means one thing. The prerequisite for letting any system, human or otherwise, query the warehouse without inventing definitions.
-
-**Supersession.** The explicit statement that one artifact replaces another from a given date. Must be machine-readable and must remove the superseded content from the retrievable set rather than merely marking it, or the model will cite both.
-
-**Tacit versus embedded knowledge.** Tacit knowledge is in people's heads and requires elicitation before any pipeline can use it. Embedded knowledge is encoded in system behavior such as validation rules and workflow branches, is frequently the authoritative version and must be extracted into a tool call rather than described in a document. Only explicit knowledge is a retrieval problem.
-
-#### Governance, risk management and compliance
-
-**Assurance map.** A view of which risks are covered by which controls and which line of defense tests each, showing gaps and duplication. The artifact that reveals a risk everyone assumed someone else was testing.
-
-**Attestation.** A formal statement by a named person that something is true as at a date, made on the record. Cheap, weak on its own and valuable because it creates an addressee.
-
-**Control design versus operating effectiveness.** Design asks whether the control would address the risk if it operated. Operating effectiveness asks whether it operated as designed throughout a period. An organization can pass every design test and fail every operating test, and this is the normal first-year outcome for artificial intelligence controls.
-
-**Control mapping.** Relating one control set to another framework's requirements so that one implementation satisfies several external expectations. Done once and maintained, it prevents the same control being built three times under three names.
-
-**Control objective.** What a control is supposed to achieve, stated as an outcome rather than as an activity. "Only authorized users retrieve privileged material" is an objective; "run a quarterly access review" is an activity that may or may not achieve it.
-
-**Effective challenge.** Substantive, independent questioning of a design or a result by someone competent to do so and empowered to make it stick. Breaks in artificial intelligence programs because the first line is often the only line that understands the system.
-
-**Exception and waiver.** An approved, time-bounded departure from a standard, with a named approver, a stated compensating measure and an expiry. An exception with no expiry is a silent standard change.
-
-**Inherent versus residual risk.** Inherent is the risk before controls. Residual is what remains after them. Residual risk is the number that gets accepted, and the acceptance names a person, not a committee.
-
-**Issue and action tracking.** The register of known control weaknesses with owners, severities and due dates. The measure that matters is aging: an issue register whose average age is rising describes an organization that finds problems and does not fix them.
-
-**Key risk indicator versus key control indicator.** A risk indicator moves before the risk materializes, such as reviewer queue depth. A control indicator says whether the control operated, such as the proportion of changes with an eval run. Reporting the second while calling it the first is common and misleading.
-
-**Legal hold.** A directive to preserve material relevant to anticipated or actual proceedings, overriding normal deletion. For artificial intelligence systems it must reach prompts, outputs, logs, retrieved sets and evaluation artifacts, not only documents.
-
-**Materiality.** The threshold above which an error or omission would change a reasonable user's decision. Sets sampling depth and reporting thresholds, and it is a judgment made by the accountable function rather than a fixed number.
-
-**Model risk management.** The established discipline for governing quantitative models, covering development standards, independent validation, ongoing monitoring and an inventory. Predates generative systems, applies unevenly to them and is where many regulated organizations will place artificial intelligence governance whether or not it fits.
-
-**Non-delegable decision.** A decision the accountable person must take personally, listed explicitly in the charter. Typically top-tier classification, acceptance of residual risk above appetite, deployment without a required control and any position on privilege or regulatory classification.
-
-**Policy, standard, procedure and guideline.** Policy states what is required or prohibited and is mandatory. Standard states the mandatory how, at a measurable level. Procedure states the steps. Guideline recommends and is not mandatory. Mislabeling a guideline as policy is the most common source of over-refusal in enterprise assistants.
-
-**Population, sample and completeness.** The population is every event subject to a control in the period. Completeness is the demonstration that the population is whole, by reconciliation to an independent count. Sampling tests operating effectiveness once the population is established. Most first audits fail on completeness rather than on quality.
-
-**Preventive, detective and corrective control.** Preventive stops the event. Detective reveals that it happened. Corrective restores the position afterward. A detective control presented as protection for an irreversible action is the most common control-design error in artificial intelligence designs. Related to compensating control in the core terms above, which names the same trap.
-
-**Risk appetite versus risk tolerance.** Appetite is how much risk the organization seeks to take in pursuit of objectives, set at board level. Tolerance is the acceptable variation around a specific objective, set operationally. Appetite is a sentence; tolerance is a number.
-
-**Second line.** The functions that set the standard and challenge the first line: risk, compliance, privacy, security and the governance committee. Not an approval queue and not a delivery team, though it is routinely used as both.
-
-**Self-tiering.** A team assessing the risk tier of its own system. The largest single failure point in any tiering model, because the team scoring the system is the team whose delivery date depends on a low score. Mitigated by calibration sampling and by objective triggers that bypass scoring entirely.
-
-**Three lines of defense.** First line owns and runs the risk, second line sets standards and challenges, third line provides independent assurance. Widely used, widely criticized, and the vocabulary any assurance conversation will be conducted in.
-
-**Tier drift.** The gap between the tier a system was assessed at and the tier its current behavior warrants. Four causes: scope creep, corpus creep, usage creep and dependency creep. Only the first is dishonest.
-
-**Work product.** Material prepared in anticipation of litigation, which in many jurisdictions attracts a protection distinct from legal advice privilege. Whether either applies to prompts, retrieved sets or outputs is a determination for counsel; the architectural obligation is to segregate and label so that a determination is possible.
-
-#### Security and identity
-
-**Attribute-based access control.** Authorization decided from attributes of the subject, the resource, the action and the context. More expressive than roles and the only workable model when retrieval must filter by clearance, matter, jurisdiction and date simultaneously.
-
-**Authentication versus authorization.** Authentication establishes who is calling. Authorization decides what they may do. In agentic systems the second is where designs fail, because the model is asked to enforce it and a probabilistic component cannot enforce a deterministic rule.
-
-**Break-glass access.** A pre-approved emergency path granting elevated access outside normal process, with automatic alerting, a mandatory reason and a post-hoc review. Its absence produces shared credentials, which is break-glass with no record.
-
-**Client credentials versus authorization code flow.** Client credentials authenticates an application acting as itself, with no user context. Authorization code obtains delegated authority to act as a specific user. Using the first where the second is required is how an agent ends up holding more access than any of its users.
-
-**Egress control.** Restricting where a system may send data, by destination, protocol and content. The control that turns an exfiltration attempt into a blocked request rather than a successful one.
-
-**Entitlement review.** Periodic confirmation by an accountable person that each identity's access is still required, with revocation as the default for anything unconfirmed. Must cover non-human identities, which is where it is routinely incomplete.
-
-**Key rotation.** Replacing credentials on a schedule and on compromise. Distributed provider keys cannot be rotated without coordinated releases, which is the practical argument for holding them once at the gateway.
-
-**Non-human identity.** A credentialed principal that is not a person: a service account, workload identity or agent. Now typically the majority of identities in an environment and the least reviewed. Every agent action should be attributable to both a non-human identity and the human on whose behalf it acted.
-
-**Post-filtering versus pre-filtering.** Pre-filtering applies entitlement before ranking, so unauthorized content is never a candidate. Post-filtering ranks first and removes afterward, leaking through result counts, latency, ranking behavior and citations. Only pre-filtering is a control.
-
-**Red team versus penetration test.** A penetration test looks for exploitable technical weaknesses against a defined scope. A red team pursues an objective by any available route, including social and content-based ones. For artificial intelligence systems indirect injection must be explicitly in scope, because it is the threat a team testing its own design omits.
-
-**Role-based access control.** Authorization by assigned role. Simple, auditable and insufficient alone when access depends on the relationship between a person and a specific matter or record.
-
-**Secrets management.** Centralized storage, issuance, rotation and revocation of credentials, with no secret in source, configuration or a prompt. The failure mode is a credential in a shared configuration file that nobody can revoke without an outage.
-
-**Secure default.** The safe configuration is what you get without doing anything: no retention, no training use, no tools, no external network access, minimum scope, logging on. Every relaxation is a decision with an owner and a record.
-
-**Segregation of duties.** No single person can both initiate and approve a consequential action. Applies to agents: the identity that drafts a payment instruction must not be the identity that releases it.
-
-**STRIDE.** A threat classification covering spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege. Adapted for artificial intelligence systems by adding content-borne instruction, corpus poisoning, model substitution and inference of protected attributes.
-
-**Tenant isolation.** Enforced separation of one customer's or department's data, keys, caches, logs and quotas from another's. A cache shared across principals is a disclosure channel that no access control review will find, because the access control is correct and the cache sits beneath it.
-
-**Threat model.** A structured statement of what an attacker would want, how they could get it and which controls stand in the way, produced at design and revised on architecture change. A threat model with no remediation tracking is a document.
-
-**Zero trust.** Designing on the assumption that no network position confers trust, so every request is authenticated, authorized and encrypted. The relevant consequence here is that the orchestrator does not trust the model merely because the model is inside the perimeter.
-
-#### Privacy and data protection
-
-**Aggregation and inference problem.** A synthesis of individually non-sensitive sources can be more sensitive than any input. Classification schemes inherit from inputs, which is exactly wrong here, so the output's classification is set by purpose as well as by inheritance.
-
-**Anonymization versus pseudonymization.** Pseudonymization replaces identifiers with tokens and is reversible with the key, so the data generally remains personal data. Anonymization aims at irreversibility. Treating the first as the second is the most common and most consequential privacy error in data pipelines.
-
-**Controller versus processor.** The controller determines the purposes and means of processing; the processor acts on the controller's instructions. The distinction drives contractual obligations and liability, and the analysis for any specific arrangement belongs to counsel.
-
-**Cross-border transfer.** Movement of personal data between jurisdictions, which typically requires a specific lawful mechanism. Architecturally it means naming the region where processing occurs and the region where data rests, and confirming that failover does not silently cross the boundary.
-
-**Data minimization.** Processing only what is necessary for the stated purpose. Structurally opposed by the context window, which rewards supplying more, so minimization has to be a design constraint with a test rather than an intention.
-
-**Data protection impact assessment.** A structured assessment of privacy risk to individuals with mitigations and a residual risk acceptance by a named person. Treated here as an architecture artifact because its output should be design changes with owners and tests.
-
-**Data residency versus data sovereignty.** Residency is where data physically sits. Sovereignty is whose law reaches it, which can differ from residency because of the provider's corporate structure. A residency commitment does not by itself answer a sovereignty question.
-
-**Data subject rights.** The rights individuals hold over their personal data, commonly including access, rectification, erasure, objection and portability. As engineering requirements they mean: can we find everything, can a correction propagate, can we delete across derived artifacts, can we stop processing for one person and can we explain an outcome.
-
-**Erasure propagation.** Executing a deletion across every derived artifact rather than only at source. A deletion that reaches only the source is not a deletion, and the derived-artifact map has to exist before the first request arrives.
-
-**Personal data versus special category.** Special categories attract heightened obligations and vary by jurisdiction. The architectural consequence is fixed even where the legal detail is not: special-category content must be detectable at ingest, recorded as metadata so routing and logging respond and kept inside a defined boundary.
-
-**Privacy by design.** Building privacy into the architecture rather than reviewing for it afterward. Its operational form here is that every privacy risk in the assessment maps to a named design element with a test.
-
-**Purpose limitation.** Data collected for one purpose is not freely available for another. Structurally opposed by the pull of reuse, since a corpus assembled for one assistant is the obvious input to the next one.
-
-**Re-identification risk.** The possibility that supposedly anonymized data can be linked back to individuals, often through combination with other datasets. Rises as the number of available auxiliary sources rises, which means an assessment made two years ago may no longer hold.
-
-**Retention schedule.** Per-artifact retention periods with the basis for each. For artificial intelligence systems it must name logs, caches, embeddings, evaluation sets and memory stores separately, because they have different bases and different destruction methods.
-
-**Subprocessor.** A third party engaged by a processor to carry out part of the processing. Relevant because the subprocessor list changes, notice periods are short and nobody owns reading the notice.
-
-#### Operations, reliability and measurement
-
-**Canary release.** Exposing a change to a small traffic slice with guardrail metrics before full rollout. For non-deterministic systems the canary must be evaluated by segment, because an aggregate pass hides the segment that regressed.
-
-**Degraded mode.** A defined reduced-capability operating state with an automatic trigger, not an aspiration. Four levels: full service, reduced capability, human-only and suspended, each with a named authority to declare it.
-
-**Detection latency.** Time from the first bad output to someone noticing. The number that converts an abstract quality argument into a quantity of harm, and the best predictor of the severity of the next incident.
-
-**Drift.** Behavior changing without a change to the system. Five kinds worth separating: model drift when the provider changes the model, corpus drift as content ages, query drift as users ask different things, population drift as the user base changes and judge drift as the grader itself moves.
-
-**Error budget.** The gap between a quality objective and one hundred percent, spent by regressions. While intact, ship changes; when exhausted, only remediation ships. Converts an argument about slowing down into arithmetic, which is its entire value.
-
-**Exposure window.** The interval between a defect reaching production and its containment, which for quality defects includes the grading lag and cannot be reduced to zero. The reason fast proxies exist.
-
-**Feature flag.** A runtime switch changing behavior without a deployment. The mechanism that makes prompt rollback, tool disablement and kill switches executable in minutes.
-
-**Golden set.** A frozen, human-labeled set of known-correct cases used to measure absolute quality over time. Maintained by addition only; editing it breaks comparability across the entire history.
-
-**Judge calibration.** Measuring a model grader's agreement with human graders per class, not overall. A judge agreeing ninety percent overall may agree twenty percent on the rare failure class that was the reason for building it.
-
-**Kill switch.** A single control that stops the system immediately, executable without a deployment by an on-call person who holds the authority to use it. One that requires a release is not a kill switch.
-
-**Monitoring versus observability.** Monitoring watches known indicators against thresholds. Observability is the property of being able to answer a question you did not anticipate from the data already emitted. Observability is not only a system property; in enterprise operations it is also a funded capability with an owner, a retention policy and a cost line.
-
-**On-call and escalation policy.** Who is paged, in what order, with what response commitment and what authority. An incident commander appointed during an incident is appointed by whoever is in the room, which is why the role is pre-named per tier.
-
-**Post-incident review.** A blameless, timeboxed review producing exactly four artifacts: a timeline, a root cause reaching past the proximate trigger, actions with owners and dates and at least one new evaluation case. The last is what makes it compound rather than repeat.
-
-**Recovery time and recovery point objective.** Maximum acceptable downtime and maximum acceptable data loss. Both transfer intact to artificial intelligence systems and both are insufficient alone.
-
-**Recovery quality objective.** The minimum acceptable output quality during degraded operation, expressed against the evaluation suite. Without it, a system that is available while producing materially worse output is reported as recovered. No standard name exists; define it locally.
-
-**Regression suite.** A set that must keep passing, run blocking on every change. Distinct from a golden set, which measures absolute quality; the regression suite measures that nothing which worked stopped working.
-
-**Runbook versus playbook.** A runbook says what to do when a specific named thing happens or breaks, and is triggered rather than browsed. A playbook structures judgment for a situation class. A runbook is executable; a playbook bounds a decision.
-
-**Severity versus priority.** Severity is the magnitude of impact. Priority is the order of work. They diverge legitimately, and conflating them is how a low-frequency severity-one class gets deprioritized permanently.
-
-**Shadow deployment.** Running a candidate against live traffic with no user-visible output, to compare behavior at zero user risk. The only honest way to assess a model version change before exposure.
-
-**Stratified capture.** Sampling by stratum rather than uniformly: full capture for errors, escalations and thin segments, a meaningful rate for low-confidence outputs and a smaller rate for high-confidence ones. Uniform sampling spends the review budget on the common case.
-
-#### Commercial, sourcing and cost
-
-**Benefits realization.** Tracking whether the benefits claimed in a business case actually materialized, attributed to the business owner's own metric. A benefit the business owner claims in their own review survives; a benefit claimed by the program is contested.
-
-**Build, buy or partner.** Three genuinely different commitments assessed on weighted criteria rather than on cost alone. The useful output is not a verdict but the relocation of the argument from "build or buy" to "is differentiation really a five here".
-
-**Business associate agreement.** In United States health privacy practice, the contract required with a vendor handling protected health information. Notable architecturally because one configuration being covered does not mean another is, and because it is the fastest way to find a vendor nobody inventoried.
-
-**Chargeback versus showback.** Chargeback moves cost to the consuming business unit's budget. Showback reports it without moving it. Showback changes behavior less and is often the right first step, because chargeback without accurate attribution produces disputes rather than efficiency.
-
-**Commit and drawdown pricing.** A negotiated spend commitment consumed over a period, usually at a discount. Creates an incentive to consume the commitment that has nothing to do with value, which is worth naming before it distorts the roadmap.
-
-**Concentration risk.** Exposure from dependence on a single supplier, region or model family. Routinely understated because it is counted at the wrong level: three products on the same provider, region and model family are one dependency, not three.
-
-**Cost per completed task.** The only cost figure that belongs in a business case: cost per attempt multiplied by attempts per completed task, plus human minutes per completed task at a loaded rate. Cost per call is an engineering number.
-
-**Critical third party.** A supplier whose failure would prevent delivery of an important business service. Attracts heightened assessment, monitoring, exit and, in some regulated sectors, notification treatment. The model provider generally qualifies.
-
-**Substitutability.** The honest measure of exit capability, in four levels: locked, portable with rework, substitutable and dual-run. The maintained evaluation suite is what makes substitution possible, so exit planning that does not fund evaluation is a document rather than a capability.
-
-**Total cost of ownership.** All costs over the asset's life including build, run, support, evaluation, human review, enablement, evidence production and exit. The three most often omitted for artificial intelligence systems are human review minutes, continuous evaluation and the exit.
-
-**Unit economics.** The cost and value of one unit of output, where the unit is a completed task and never a request or a token. A system halving model cost while adding two review minutes per case has made the outcome more expensive.
-
-**Vendor viability.** Assessment of whether a supplier will still exist and still support the product over the commitment period, from funding, customer concentration and category maturity. Immature categories justify shorter commitments and higher substitutability targets.
-
-#### Organizational change and adoption
-
-**Automation bias.** The tendency to accept a machine-generated output that would have been challenged had a person produced it. Countered by presenting outputs without confidence signals the reviewer cannot calibrate, and by blind re-review on a sample.
-
-**Breadth versus depth.** Breadth is the proportion of the eligible population using the system. Depth is the proportion of a given user's relevant work passing through it. Independent, requiring different interventions, and depth should be pursued first because it produces evidence while breadth produces a number.
-
-**Champion network.** Named practitioners with funded time who support colleagues in their own segment. Fails when it is voluntary, unfunded and staffed entirely by early enthusiasts, whose experience does not transfer to the skeptical majority.
-
-**Cohort retention.** Tracking each starting group's continued use over time rather than aggregate activity. Aggregate usage can rise while every cohort decays, which is what a growing program with a retention problem looks like.
-
-**Enablement versus training.** Training transfers knowledge in a session. Enablement changes the conditions of work so the capability is usable: access, triggers in the workflow, support routes, templates and permission. Training without enablement produces an activated population that never becomes habitual.
-
-**Internal credential.** A formal, revocable license to perform a role with the system, such as reviewing outputs or configuring prompt assets. Turns competence from an assumption into a recorded fact, which is also what makes the human oversight control assertable.
-
-**Job design.** Deliberate redefinition of a role when a system absorbs part of its work, covering what the person now does, what they are measured on and what career path follows. Left undone, the redesign happens informally and badly.
-
-**Pilot, proof of concept and production.** A proof of concept tests feasibility and should be thrown away. A pilot tests value with real users on real work under real constraints, with pre-registered success criteria and a kill criterion. Production is neither. Calling a proof of concept a pilot is how pilot purgatory starts.
-
-**Pilot purgatory.** A state where pilots succeed, nothing scales and the program accumulates demonstrations. Designed out by fixing the scale decision criteria and the funding route before the pilot begins, not after it succeeds.
-
-**Resistance analysis.** Distinguishing the two legitimate resistances, meaning the person who is right about a defect and the person whose interests are genuinely harmed, from resistance that is fear or inertia. The first two require design or negotiation, not communication.
-
-**Rubber-stamping.** Approval at or near one hundred percent with review times far below reading time. Root cause is measuring reviewers on throughput. Measured by override rate against an investigation threshold rather than a target.
-
-**Sponsor.** The executive who holds the mandate, the budget and the political cover. The failure mode worth naming separately is the enthusiastic sponsor who wants the wrong thing, which is harder to manage than an absent one.
-
-**Stakeholder map.** Who is affected, what each stands to gain or lose, what each controls and what each needs to hear. Distinct from a communications plan, which is the output; the map is the analysis that makes the output correct.
-
-**Steering committee.** The body that resolves cross-functional conflict and decides what the program cannot decide alone. Works when it holds decisions and a short standing agenda; fails when it receives status reports.
-
-**Trust calibration.** Users holding an accurate model of what the system is reliable at and where it fails. The goal is neither maximum trust nor minimum trust, and the first ninety days set it asymmetrically because early errors cost far more confidence than early successes gain.
-
-**Works council.** In some jurisdictions a formally constituted employee representative body with consultation or co-determination rights over changes affecting work. Whether an obligation applies, and what it requires, is a determination for counsel and human resources and must be settled before communication rather than after.
+---
 
 ## Appendix I: Sources and Current Figures
 
@@ -15213,171 +11104,413 @@ All public. Building Effective Agents and Effective Context Engineering for AI A
 | **Governance and safety** | Mitigate jailbreaks; Reduce hallucinations; Increase output consistency; Reduce prompt leak; Skills for enterprise |
 | **Pricing and deprecations** | Pricing; Model deprecations; the Models API, for querying capabilities and limits programmatically rather than remembering them |
 
-### Current figures, verified August 2026
+### Current figures, verified 18 October 2026
 
-Every number here came from Anthropic's live documentation in August 2026. **Every one of them can change.** Every figure in the platform documentation moves: the model lineup, the effort parameter, tool search and context editing have all changed materially, and each change altered what a correct design looks like. Re-verify before relying on any of these figures in a design decision, and the fastest way to do it is the documentation pages listed above.
+Verified against Anthropic's documentation on 18 October 2026 (KST). Every row below whose Verified column reads 2026-10-18 was read that day from the Anthropic documentation page named in its Source column, and every number in those rows came from that page; where the page does not state a figure, the row says Unknown rather than carrying a remembered value. Rows marked not re-verified carry their last reading and are not presented as current: the Contextual Retrieval measurements (a dated publication), the A2A protocol facts (not an Anthropic source) and the entry-point and delivery-route facts. **Every one of them can change.** Every figure in the platform documentation moves: the model lineup, the effort parameter, tool search and context editing have all changed materially, and each change altered what a correct design looks like. Re-verify before relying on any of these figures in a design decision, and the fastest way to do it is the documentation pages listed above.
+
+The tables are generated from `primer/figures.yaml` by `build_appendix_i.py`; edit the YAML and rebuild rather than editing a table. The body of the Primer names model classes rather than model versions ("the current Opus-class model") and cites a figure key, such as `class.opus.current` or `cache.read.multiplier.opus`, which resolves in the tables below.
+
+<!-- figures:start (generated by build_appendix_i.py from primer/figures.yaml; edit the YAML, not this table) -->
+
+#### Model classes
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `class.fable.current` | Claude Fable 5.1 | `claude-fable-5-1` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Comparison table: 'For demanding reasoning and long-horizon agentic work' |
+| `class.opus.current` | Claude Opus 5.5 | `claude-opus-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Comparison table: 'For long-running agentic coding and knowledge work' |
+| `class.sonnet.current` | Claude Sonnet 5.5 | `claude-sonnet-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Comparison table: 'The best combination of speed and intelligence' |
+| `class.haiku.current` | Claude Haiku 5.5 | `claude-haiku-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Comparison table: 'For high-volume, latency-sensitive tasks such as classification, extraction, and routing' |
+| `class.mythos.current` | Claude Mythos 5.1 | `claude-mythos-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Limited availability: 'Available only to organizations verified through Anthropic's verification programs'. Not in the models overview comparison table |
+| `class.legacy` | Claude Fable 5, Claude Opus 5, Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Haiku 4.5 |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Listed as 'Legacy models (still available)'. Claude Mythos 5 is also Active on the deprecations page (limited availability) |
+| `class.deprecated` | Claude Sonnet 4.5 (deprecated 30 Sep 2026, retires 30 Nov 2026); Claude Mythos Preview (deprecated 9 Jun 2026, retirement to be announced) | `claude-sonnet-4-5-20250929; claude-mythos-preview` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | Recommended replacement for Sonnet 4.5: claude-sonnet-5-5 |
+| `class.retired` | Claude Opus 4.1 (5 Aug 2026); Claude Opus 4 and Claude Sonnet 4 (15 Jun 2026); Claude Haiku 3 (20 Apr 2026); Claude Sonnet 3.7 and Claude Haiku 3.5 (19 Feb 2026) | `claude-opus-4-1-20250805; claude-opus-4-20250514; claude-sonnet-4-20250514; claude-3-haiku-20240307; claude-3-7-sonnet-20250219; claude-3-5-haiku-20241022` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | Retired on Anthropic's platforms; the pricing page notes some remain on Bedrock or Google Cloud |
+| `class.ids.pinned` | Every Claude model ID is a pinned snapshot, including the dateless IDs used from the 4.6 generation on |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+
+#### Vendor default for model selection
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `vendor.start.default` | Claude Opus 5.5 | `claude-opus-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Verbatim: 'If you're unsure which model to use, start with Claude Opus 5.5 for most workloads.' |
+| `vendor.start.escalation` | Claude Fable 5.1 | `claude-fable-5-1` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Verbatim: 'Use Claude Fable 5.1 for demanding reasoning and long-horizon agentic work, or when your evals on Claude Opus 5.5 at higher effort still fall short.' |
+
+#### Current Fable-class model
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `fable.price.input` | $10 USD per MTok | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fable.price.output` | $50 USD per MTok | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fable.price.cache_write_5m` | $12.50 USD per MTok | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fable.price.cache_write_1h` | $20 USD per MTok | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fable.price.cache_read` | $0.25 USD per MTok | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Cache hits and refreshes |
+| `fable.batch.price.input` | $5 USD per MTok | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 50% of standard |
+| `fable.batch.price.output` | $25 USD per MTok | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 50% of standard |
+| `fable.effort.default` | high | `claude-fable-5-1` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Effort parameter default on the Claude API |
+| `fable.thinking` | Adaptive (always on) | `claude-fable-5-1` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `fable.context` | 1M tokens | `claude-fable-5-1` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `fable.max_output` | 128K tokens | `claude-fable-5-1` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Synchronous Messages API limit |
+| `fable.knowledge_cutoff` | Jun 2026 | `claude-fable-5-1` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Reliable knowledge cutoff; training data cutoff also Jun 2026 |
+| `fable.retirement` | Not sooner than September 1, 2027 | `claude-fable-5-1` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | State: Active |
+| `fable.cache.min_length` | 512 tokens | `claude-fable-5-1` | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `fable.toolsearch` | Supported | `claude-fable-5-1` | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) | Both variants |
+| `fable.batch.output_300k` | Not listed | `claude-fable-5-1` | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) | Not in the list of models the output-300k-2026-03-24 header covers |
+| `fable.residency` | Supported | `claude-fable-5-1` | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) | inference_geo supported on Claude 4.6 and later |
+
+#### Current Opus-class model
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `opus.price.input` | $4 USD per MTok | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `opus.price.output` | $20 USD per MTok | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `opus.price.cache_write_5m` | $5 USD per MTok | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `opus.price.cache_write_1h` | $8 USD per MTok | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `opus.price.cache_read` | $0.20 USD per MTok | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Cache hits and refreshes |
+| `opus.batch.price.input` | $2 USD per MTok | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 50% of standard |
+| `opus.batch.price.output` | $10 USD per MTok | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 50% of standard |
+| `opus.effort.default` | medium | `claude-opus-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Effort parameter default on the Claude API |
+| `opus.thinking` | Adaptive (always on) | `claude-opus-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `opus.context` | 1M tokens | `claude-opus-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `opus.max_output` | 128K tokens | `claude-opus-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Synchronous Messages API limit |
+| `opus.knowledge_cutoff` | Jun 2026 | `claude-opus-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Reliable knowledge cutoff; training data cutoff also Jun 2026 |
+| `opus.retirement` | Not sooner than September 22, 2027 | `claude-opus-5-5` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | State: Active |
+| `opus.cache.min_length` | 512 tokens | `claude-opus-5-5` | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `opus.toolsearch` | Supported | `claude-opus-5-5` | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) | Both variants |
+| `opus.batch.output_300k` | Supported | `claude-opus-5-5` | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) | With the output-300k-2026-03-24 beta header |
+| `opus.residency` | Supported | `claude-opus-5-5` | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) | inference_geo supported on Claude 4.6 and later |
+
+#### Current Sonnet-class model
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `sonnet.price.input` | $2 USD per MTok | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `sonnet.price.output` | $10 USD per MTok | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `sonnet.price.cache_write_5m` | $2.50 USD per MTok | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `sonnet.price.cache_write_1h` | $4 USD per MTok | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `sonnet.price.cache_read` | $0.10 USD per MTok | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Cache hits and refreshes |
+| `sonnet.batch.price.input` | $1 USD per MTok | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 50% of standard |
+| `sonnet.batch.price.output` | $5 USD per MTok | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 50% of standard |
+| `sonnet.effort.default` | high | `claude-sonnet-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Effort parameter default on the Claude API |
+| `sonnet.thinking` | Adaptive | `claude-sonnet-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `sonnet.context` | 1M tokens | `claude-sonnet-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `sonnet.max_output` | 128K tokens | `claude-sonnet-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Synchronous Messages API limit |
+| `sonnet.knowledge_cutoff` | Jun 2026 | `claude-sonnet-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Reliable knowledge cutoff; training data cutoff also Jun 2026 |
+| `sonnet.retirement` | Not sooner than September 28, 2027 | `claude-sonnet-5-5` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | State: Active |
+| `sonnet.cache.min_length` | 512 tokens | `claude-sonnet-5-5` | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `sonnet.toolsearch` | Supported | `claude-sonnet-5-5` | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) | Both variants |
+| `sonnet.batch.output_300k` | Supported | `claude-sonnet-5-5` | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) | With the output-300k-2026-03-24 beta header |
+| `sonnet.residency` | Supported | `claude-sonnet-5-5` | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) | inference_geo supported on Claude 4.6 and later |
+
+#### Current Haiku-class model
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `haiku.price.input` | $0.10 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts up to 100,000 tokens; models overview: 'From $0.10' |
+| `haiku.price.output` | $0.50 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts up to 100,000 tokens |
+| `haiku.price.cache_write_5m` | $0.125 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts up to 100,000 tokens |
+| `haiku.price.cache_write_1h` | $0.20 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts up to 100,000 tokens |
+| `haiku.price.cache_read` | $0.01 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Cache hits and refreshes; prompts up to 100,000 tokens |
+| `haiku.price.input.over_100k` | $0.50 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts over 100,000 tokens (long-context pricing) |
+| `haiku.price.output.over_100k` | $2.50 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts over 100,000 tokens (long-context pricing) |
+| `haiku.price.cache_write_5m.over_100k` | $0.625 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts over 100,000 tokens (long-context pricing) |
+| `haiku.price.cache_write_1h.over_100k` | $1 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts over 100,000 tokens (long-context pricing) |
+| `haiku.price.cache_read.over_100k` | $0.05 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts over 100,000 tokens (long-context pricing) |
+| `haiku.batch.price.input` | $0.05 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts up to 100,000 tokens; $0.25 over |
+| `haiku.batch.price.output` | $0.25 USD per MTok | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Prompts up to 100,000 tokens; $1.25 over |
+| `haiku.effort.default` | medium | `claude-haiku-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Effort parameter default on the Claude API |
+| `haiku.thinking` | Adaptive | `claude-haiku-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `haiku.context` | 1M tokens | `claude-haiku-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `haiku.max_output` | 128K tokens | `claude-haiku-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Synchronous Messages API limit |
+| `haiku.knowledge_cutoff` | Jun 2026 | `claude-haiku-5-5` | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | Reliable knowledge cutoff; training data cutoff also Jun 2026 |
+| `haiku.retirement` | Not sooner than October 7, 2027 | `claude-haiku-5-5` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | State: Active |
+| `haiku.cache.min_length` | 512 tokens | `claude-haiku-5-5` | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `haiku.toolsearch` | Supported | `claude-haiku-5-5` | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) | Both variants |
+| `haiku.batch.output_300k` | Supported | `claude-haiku-5-5` | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) | With the output-300k-2026-03-24 beta header |
+| `haiku.residency` | Supported | `claude-haiku-5-5` | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) | inference_geo supported on Claude 4.6 and later |
+
+#### Current Mythos-class model (limited availability)
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `mythos.price.input` | $10 USD per MTok | `claude-mythos-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Limited availability |
+| `mythos.price.output` | $50 USD per MTok | `claude-mythos-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `mythos.price.cache_read` | $0.25 USD per MTok | `claude-mythos-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `mythos.batch.price` | $5 / $25 USD per MTok (input / output) | `claude-mythos-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `mythos.retirement` | Not sooner than September 1, 2027 | `claude-mythos-5-1` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | State: Active |
+| `mythos.specs` | Unknown | `claude-mythos-5-1` | 2026-10-18 |  | Effort default, context window and max output are not stated on the pages checked |
+
+#### Legacy models still available
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `legacy.fable5.price` | $10 / $50 USD per MTok (input / output) | `claude-fable-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Fable 5. Cache read $1 (0.1x) |
+| `legacy.mythos5.price` | $10 / $50 USD per MTok (input / output) | `claude-mythos-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Mythos 5. Limited availability; cache read $1 |
+| `legacy.opus5.price` | $5 / $25 USD per MTok (input / output) | `claude-opus-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Opus 5. Cache read $0.50 |
+| `legacy.opus48.price` | $5 / $25 USD per MTok (input / output) | `claude-opus-4-8` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Opus 4.8. Cache read $0.50 |
+| `legacy.opus47.price` | $5 / $25 USD per MTok (input / output) | `claude-opus-4-7` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Opus 4.7. Cache read $0.50 |
+| `legacy.opus46.price` | $5 / $25 USD per MTok (input / output) | `claude-opus-4-6` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Opus 4.6. Cache read $0.50 |
+| `legacy.opus45.price` | $5 / $25 USD per MTok (input / output) | `claude-opus-4-5-20251101` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Opus 4.5. Cache read $0.50 |
+| `legacy.sonnet5.price` | $2 / $10 USD per MTok (input / output) | `claude-sonnet-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Sonnet 5. Pricing page footnote: the introductory $2/$10 'is now the standard price. The previously scheduled increase to $3/$15 per million input/output tokens on September 1, 2026 will not occur.' Cache read $0.20 |
+| `legacy.sonnet46.price` | $3 / $15 USD per MTok (input / output) | `claude-sonnet-4-6` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Sonnet 4.6. Cache read $0.30 |
+| `legacy.sonnet45.price` | $3 / $15 USD per MTok (input / output) | `claude-sonnet-4-5-20250929` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Sonnet 4.5. Deprecated; cache read $0.30 |
+| `legacy.haiku45.price` | $1 / $5 USD per MTok (input / output) | `claude-haiku-4-5-20251001` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Claude Haiku 4.5. Cache read $0.10 |
+| `legacy.specs` | Unknown |  | 2026-10-18 |  | Effort default, context window and max output for legacy models are on each model's own page, which was not among the pages checked |
+
+#### Lifecycle dates for legacy and deprecated models
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `retire.haiku45` | Not sooner than October 15, 2026 (state Active on 18 Oct 2026) | `claude-haiku-4-5-20251001` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.opus45` | Not sooner than November 24, 2026 | `claude-opus-4-5-20251101` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.sonnet45` | November 30, 2026 (deprecated September 30, 2026) | `claude-sonnet-4-5-20250929` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.opus46` | Not sooner than February 5, 2027 | `claude-opus-4-6` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.sonnet46` | Not sooner than February 17, 2027 | `claude-sonnet-4-6` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.opus47` | Not sooner than April 16, 2027 | `claude-opus-4-7` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.opus48` | Not sooner than May 28, 2027 | `claude-opus-4-8` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.fable5` | Not sooner than June 9, 2027 | `claude-fable-5` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.mythos5` | Not sooner than June 9, 2027 | `claude-mythos-5` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.sonnet5` | Not sooner than June 30, 2027 | `claude-sonnet-5` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
+| `retire.opus5` | Not sooner than July 24, 2027 | `claude-opus-5` | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) |  |
 
 #### Prompt caching
 
-| Fact | Value |
-| --- | --- |
-| Processing order | tools → system → messages |
-| Default lifetime | 5 minutes, refreshed free on each use |
-| Extended lifetime | 1 hour, optional |
-| Cache write, 5-minute | 1.25x base input |
-| Cache write, 1-hour | 2x base input |
-| Cache read or refresh | 0.1x base input |
-| Breakpoints per request | 4 maximum |
-| Lookback window | 20 blocks |
-| Minimum cacheable length | 512 tokens: Opus 5, Fable 5, Mythos 5. 1,024: Opus 4.8, Sonnet 5, Sonnet 4.6, Sonnet 4.5. 2,048: Mythos Preview, Opus 4.7. 4,096: Opus 4.6, Opus 4.5, Haiku 4.5 |
-| Below minimum | Not cached; **no error returned** |
-| Cache isolation | Between organizations everywhere. Between workspaces only on the Claude API, Claude Platform on AWS and Microsoft Foundry; Bedrock and Google Cloud are organization-level only |
-| Pre-warming | `max_tokens: 0` |
-| Rate limits | Cache hits are **not** deducted |
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `cache.order` | tools, then system, then messages |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.ttl.default` | 5 minutes, refreshed on each use |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.ttl.extended` | 1 hour (ttl: 1h), optional |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.write.5m.multiplier` | 1.25x base input price |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `cache.write.1h.multiplier` | 2x base input price |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `cache.read.multiplier.default` | 0.1x base input price |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 'All other models use the standard 0.1x multiplier' |
+| `cache.read.multiplier.fable` | 0.025x base input price | `claude-fable-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `cache.read.multiplier.mythos` | 0.025x base input price | `claude-mythos-5-1` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `cache.read.multiplier.opus` | 0.05x base input price | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `cache.read.multiplier.sonnet` | 0.05x base input price | `claude-sonnet-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `cache.read.multiplier.haiku` | 0.1x base input price | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Standard multiplier |
+| `cache.breakeven` | After one cache read for the 5-minute write; after two for the 1-hour write |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Stated for the 0.1x case |
+| `cache.breakpoints.max` | 4 per request |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Automatic caching uses one slot when combined with explicit breakpoints |
+| `cache.lookback` | 20 positions per breakpoint, counting the breakpoint itself |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.min_length.512` | Fable 5.1, Mythos 5.1, Opus 5.5, Opus 5, Sonnet 5.5, Fable 5, Mythos 5, Haiku 5.5 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Claude API, Claude Platform on AWS, Google Cloud and Microsoft Foundry; Bedrock publishes its own minimums |
+| `cache.min_length.1024` | Opus 4.8, Sonnet 5, Sonnet 4.6, Sonnet 4.5 (deprecated); retired Opus 4.1, Opus 4, Sonnet 4 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.min_length.2048` | Mythos Preview, Opus 4.7; retired Haiku 3.5 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.min_length.4096` | Opus 4.6, Opus 4.5, Haiku 4.5 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.below_min` | Processed without caching; no error returned |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.isolation` | Between organizations everywhere. Per workspace on the Claude API, Claude Platform on AWS and Microsoft Foundry; Bedrock and Google Cloud are organization-level only |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.prewarm` | max_tokens: 0 with a cache_control breakpoint; not allowed with streaming, extended thinking, structured outputs, forced tool_choice or batch requests |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.rate_limits` | Cache hits are not deducted against rate limits |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.automatic` | Automatic caching (top-level cache_control) on every platform except the legacy Amazon Bedrock integration (Opus 4.6 and earlier), where it returns a 400; use explicit breakpoints there |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.stacking` | Cache multipliers stack with the Batch API discount and data residency |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
 
 #### Cache invalidation
 
-| Change | Invalidates |
-| --- | --- |
-| Tool definitions | Everything |
-| Web search or citations toggle | System and messages |
-| Speed setting | System and messages |
-| `tool_choice` | Messages |
-| Images added or removed anywhere | Messages |
-| Thinking configuration or effort | Messages always; tools and system on some models |
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `cacheinv.tools` | Tool definitions: everything (tools, system, messages) |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cacheinv.websearch` | Web search toggle: system and messages |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cacheinv.citations` | Citations toggle: system and messages |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cacheinv.speed` | Speed setting (fast or standard): system and messages |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cacheinv.tool_choice` | tool_choice: messages |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cacheinv.images` | Images added or removed anywhere: messages |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cacheinv.thinking` | Thinking configuration: messages always; tools and system on models that render the configuration ahead of them |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cacheinv.effort` | Effort: messages always; tools and system model-specific as for thinking. Setting effort explicitly to the model's default does not invalidate |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
 
-#### Models
+#### Long-context pricing
 
-| Model | Input / output per Mtok | Notes |
-| --- | --- | --- |
-| Claude Fable 5 | $10 / $50 | Most capable widely released; 1M context, 128,000 max output; always-on adaptive thinking; effort defaults to `high` |
-| Claude Mythos 5 | $10 / $50 | Project Glasswing only |
-| Claude Opus 5 | $5 / $25 | 1M context, 128,000 max output; effort defaults to high |
-| Claude Sonnet 5 | Promotional **$2 / $10** through 31 Aug 2026. Standard **$3 / $15** from 1 Sep 2026 ⧉ | Frontier intelligence at scale; 1M context, 128,000 max output; effort defaults to `high`. ⧉ The only figure in this table with a scheduled change built into it, so it is the only one that goes stale on a known date rather than an unknown one. Both rates were verified 2026-08-11, at which date the 1 Sep 2026 rate was documented as scheduled; it has not been re-verified since and should be confirmed before it is relied on. Establish which side of 31 Aug 2026 you are on before using either number. Any sizing model in 8.10 built on the promotional rate understates cost from 1 Sep 2026 |
-| Claude Haiku 4.5 | $1 / $5 | Fastest and cheapest; positioned for subagent tasks; 200,000 context, 64,000 max output; supports extended thinking rather than adaptive thinking |
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `longctx.standard` | Claude 4.6 and later models (except Claude Haiku 5.5) and Claude Mythos Preview include the full 1M-token window at standard pricing |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `longctx.haiku` | Claude Haiku 5.5 is priced by prompt length: a prompt over 100,000 tokens pays the higher prices (haiku.price.*.over_100k). Prompt length counts all input tokens, including cache reads and writes; each request is priced on its own | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `longctx.discounts` | Prompt caching and batch discounts apply at standard rates across the full context window |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
 
-Legacy: Opus 4.8, 4.7, 4.6, 4.5 at $5 / $25; Sonnet 4.6 and 4.5 at $3 / $15.
+#### Tokenizer
 
-⧉ **The tokenizer changed at 4.7 and it is the figure most likely to break a sizing model silently.** Claude 4.7 and later models, and Claude Mythos Preview, use a newer tokenizer that produces **approximately 30 percent more tokens for the same text**, with the exact increase depending on content and workload shape. Sonnet 4.6 and earlier use the previous tokenizer. **A token count measured on an earlier generation and carried into a sizing model for a current one understates input cost, output cost and context occupancy at once**, and it does so without any error, any warning and any change in the design. This is why 2.2 says to measure the budget with the `usage` field or the token-counting API rather than estimating it, and why 8.10's sizing input says to count on the model you will ship.
-
-**Output ceilings on the batch path differ from the synchronous path.** Claude Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5 and Sonnet 4.6 support up to 300,000 output tokens on the Message Batches API behind a beta header. A sizing model built on the synchronous ceiling will understate what a batch workload can return in one response. Extended output is on the batch path only, is available on the Claude API and Claude Platform on AWS and is not on Bedrock, Google Cloud or Microsoft Foundry. A single 300,000-token generation can take over an hour, which has to fit inside the 24-hour window.
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `tokenizer.change` | Claude 4.7 and later models and Claude Mythos Preview use a newer tokenizer producing approximately 30% more tokens for the same text; Claude Sonnet 4.6 and earlier use the previous tokenizer |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | The exact increase depends on content and workload shape |
+| `tokenizer.words` | 1M tokens is roughly 555k words or 2.5M Unicode characters on the current tokenizer; models before it fit about 750k words in 1M tokens |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
 
 #### Batch behavior a cost model depends on
 
-| Fact | Value |
-| --- | --- |
-| Discount | 50 percent on both input and output |
-| Typical completion | Most batches under 1 hour |
-| Results available | On completion or at 24 hours, whichever comes first |
-| Expiry | Requests not processed within 24 hours expire and are not billed |
-| Results retained | 29 days from creation |
-| Batch size limit | 100,000 requests or 256 MB, whichever is reached first |
-| Server tools | All of them work. The batch worker runs the same agentic loop and more iterations per turn before pausing |
-| Client-side tools | One round trip through the queue per call. A paused turn is continued by a follow-up request |
-| Cache hits in batch | Best effort, typically 30 to 98 percent. Prefer the 1-hour lifetime, since batches routinely exceed five minutes |
-| Not supported in batch | `stream: true`, fast mode, `max_tokens: 0` pre-warming, threads |
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `batch.discount` | 50% on input and output |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.typical` | Most batches complete within 1 hour |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.results` | When all messages have completed or after 24 hours, whichever comes first |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.expiry` | Batches expire if processing does not complete within 24 hours; expired requests are not billed |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.retention` | 29 days from creation |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.size` | 100,000 requests or 256 MB, whichever is reached first |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.models` | All active models |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.server_tools` | All server tools work (web search, web fetch, code execution, MCP connectors, advisor, tool search); the batch loop runs more iterations per turn before pause_turn |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.pause` | A paused turn is continued by submitting the paused assistant content in a follow-up request (batch or synchronous) |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.client_tools` | One round trip through the queue per call |  | not re-verified (last 2026-08-11) |  | Not stated on the batch page as checked |
+| `batch.cache_hits` | Best effort; typically 30% to 98%; the 1-hour cache duration is recommended |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.unsupported` | stream: true; speed (fast mode); max_tokens: 0 (validation error) |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) | 'threads', in the August 2026 list, is not on the page: Unknown |
+| `batch.output_300k.header` | output-300k-2026-03-24 (beta) |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.output_300k.max` | 300,000 tokens |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.output_300k.models` | Opus 5.5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5.5, Sonnet 5, Sonnet 4.6, Haiku 5.5 |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) | Fable 5.1 is not listed |
+| `batch.output_300k.platforms` | Claude API and Claude Platform on AWS; not Amazon Bedrock, Google Cloud or Microsoft Foundry |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `batch.output_300k.duration` | A single 300k-token generation can take over an hour; plan within the 24-hour window |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
 
-**There is no long-context premium.** Requests above 200,000 tokens are charged at the same per-token rates as any other, across the full one-million-token window, and prompt caching and the batch discount both apply across it. This is worth stating explicitly because the opposite is a common assumption and it distorts a sizing model in the direction of under-using the window.
+#### Data residency
 
-**Pricing modifiers that stack**, and which an architect sizing a regulated deployment has to carry: the Batch API discount, which is 50 percent on both input and output, data residency and on Claude 4.6 and later a **1.1x multiplier on every token category** (input, output, cache writes, cache reads) when US-only inference is specified through `inference_geo`. Residency is not free, and it is charged on cached reads too, which is exactly where a caching-heavy design concentrates its volume. Fast mode is Claude API first-party only, not available on Claude Platform on AWS or the partner-operated clouds, and its premium pricing applies across the full context window. **Its gain is output tokens per second and not time-to-first-token**, it requires a beta header and access on request, it is unavailable with the batch lane and with a Priority Tier commitment, and switching between fast and standard speed invalidates the prompt cache because the two do not share cached prefixes.
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `residency.values` | us; global (default) |  | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) | No other inference_geo value is listed |
+| `residency.multiplier` | 1.1x all token categories, including cache writes and cache reads |  | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) |  |
+| `residency.models` | Claude 4.6 and later; requests with inference_geo on Opus 4.5, Sonnet 4.5, Haiku 4.5 or earlier return a 400 |  | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) |  |
+| `residency.haiku` | On Claude Haiku 5.5 the multiplier also applies to the over-100,000-token prices | `claude-haiku-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `residency.workspace_geo` | us is the only workspace geo; set at creation and cannot be changed |  | 2026-10-18 | [Data residency](https://platform.claude.com/docs/en/build-with-claude/data-residency) |  |
+| `residency.platforms` | Claude API and Claude Platform on AWS; Microsoft Foundry US Data Zone Standard at the same 1.1x; Bedrock and Google Cloud price regionally (10% premium for regional and multi-region endpoints) |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+
+#### Fast mode
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `fastmode.models` | Claude Opus 5.5; Claude Opus 5 and Claude Opus 4.8 in research preview |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fastmode.price.opus` | $8 / $40 USD per MTok (input / output) | `claude-opus-5-5` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fastmode.price.legacy` | $10 / $50 USD per MTok (input / output) | `claude-opus-5; claude-opus-4-8` | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fastmode.platforms` | Claude API; for Opus 5.5 also Microsoft Foundry deployments hosted on Azure; not Claude Platform on AWS or partner-operated clouds |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fastmode.window` | Premium pricing applies across the full context window |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fastmode.batch` | Not available with the Batch API |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fastmode.stacking` | Cache and data residency multipliers apply on top of fast mode pricing |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `fastmode.speedup` | Unknown |  | not re-verified (last August 2026) |  | August 2026 reading: up to 2.5x output tokens per second, not time-to-first-token; the Fast mode page was not checked |
+| `fastmode.access` | Unknown |  | not re-verified (last August 2026) |  | August 2026 reading: beta header, access on request, unavailable with Priority Tier; not stated on the pricing page |
 
 #### Tools and context
 
-| Fact | Value |
-| --- | --- |
-| Selection accuracy degrades past | ~30 to 50 loaded tools |
-| Server tools, executed by Anthropic | Web search, web fetch, code execution, tool search, advisor, MCP connector. Several bill on usage above token cost |
-| Anthropic-schema client tools, executed by you | Bash, text editor, computer use, memory. Ordinary token pricing |
-| Files API | Upload once, reference across requests, rather than re-sending contents |
-| 50 tool definitions cost | ~10,000 to 20,000 tokens |
-| Five-server setup cost | ~55,000 tokens before any work |
-| Tool search returns | Up to 5 matching tools by default |
-| Tool search definition-load reduction | Typically more than 85%, loading only the 3 to 5 tools a request needs |
-| Maximum deferred tools per request | 10,000 |
-| Tool search is slower below | ~10 tools |
-| Add tool search from, verified 2026-08-11 | **10 or more tools**, or tool definitions above 10,000 tokens, or an aggregation of multiple MCP servers, or a library that grows over time. Standard tool calling is the better fit below 10 tools, where every tool is used in every request, or where definitions total under 100 tokens. **A previous ~20 figure at 2.6, 8.2, 8.10 and Appendix B was reconciled to the documented 10 on 2026-08-11 and all sites now agree.** Re-verify before relying on it |
-| Tool description length | 3 to 4 sentences minimum |
-| Tool search variants | Two: a regex variant, where Claude writes a Python `re.search()` pattern of at most 200 characters, and a BM25 variant taking a natural-language query of at most 500 characters. Both search names, descriptions, argument names and argument descriptions |
-| **Tool search model support**, verified 2026-08-11 | Fable 5, Mythos 5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Opus 4.5, Sonnet 4.6, Sonnet 4.5, Haiku 4.5. Opus 4.1 and earlier are stated not to support it. **Sonnet 5 was not on the published compatibility table at the verification date.** Support is a published list rather than a generation rule, so read the table rather than assume a newer model inherits it |
-| Tool search by route, verified 2026-08-11 | Generally available on the Claude API and identical on Claude Platform on AWS. On Amazon Bedrock the server-side form is available through InvokeModel only, not through Converse |
-| Tool search and caching, verified 2026-08-11 | A tool carrying `defer_loading: true` cannot also carry `cache_control`; the API returns a 400. Put the breakpoint on a non-deferred tool. Deferred definitions are excluded from the system-prompt prefix, so the prefix cache survives discovery |
-| Tool search metering, verified 2026-08-11 | Not metered as a separate server tool. Definitions it loads count as ordinary input tokens |
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `tools.selection_degrades` | Past 30 to 50 available tools |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `tools.five_server` | ~55k tokens in definitions before any work |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) | GitHub, Slack, Sentry, Grafana and Splunk |
+| `tools.server_tools` | Web search, web fetch, code execution, MCP connectors, advisor, tool search |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
+| `tools.client_tools` | Bash, text editor, computer use, memory; ordinary token pricing |  | not re-verified (last August 2026) |  |  |
+| `tools.files_api` | Upload once, reference across requests |  | not re-verified (last August 2026) |  |  |
+| `tools.fifty_definitions` | ~10,000 to 20,000 tokens |  | not re-verified (last August 2026) |  |  |
+| `tools.description_length` | 3 to 4 sentences minimum |  | not re-verified (last August 2026) |  |  |
+| `tools.websearch.price` | $10 per 1,000 searches plus standard token costs |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `tools.webfetch.price` | No additional cost beyond standard token costs |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
+| `tools.codeexec.price` | Free with web_search_20260209 or web_fetch_20260209 (or later); otherwise 1,550 free hours per organization per month, then $0.05 per hour per container, 5-minute minimum |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
 
-#### Agent-to-agent (A2A)
+#### Tool search
 
-These are external protocol facts rather than Anthropic platform facts, and they move on the protocol's release cycle rather than on the model lineup. **They are the dated specifics moved out of 3.1**, which keeps only the MCP-vertical against A2A-horizontal distinction, because that distinction survives any change to the rows below. Source is the A2A project's own specification and documentation under the Linux Foundation.
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `toolsearch.models` | Fable 5.1, Mythos 5.1, Fable 5, Mythos 5, Opus 5.5, Opus 5, Sonnet 5.5, Sonnet 5, Haiku 5.5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6, Opus 4.5, Sonnet 4.5 (deprecated), Haiku 4.5 |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) | Both variants on every listed model. Support is a published list, not a generation rule |
+| `toolsearch.unsupported` | Claude Opus 4.1 and earlier |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.variants` | Regex (tool_search_tool_regex_20251119, Python re.search pattern, max 200 characters); BM25 (tool_search_tool_bm25_20251119, natural-language query, max 500 characters). Both search names, descriptions, argument names and argument descriptions |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.results_default` | Up to 5 matching tools; limit settable from 1 to 10,000 |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.max_deferred` | 10,000 tools per request |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.add_from` | 10 or more tools; definitions above 10k tokens; selection accuracy dropping; multiple MCP servers (200+ tools); a growing library |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.standard_better` | Fewer than 10 tools; every tool used in every request; definitions under 100 tokens total |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.reduction` | Typically over 85 percent, loading only the 3 to 5 tools a request needs |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.non_deferred` | At least one tool must stay non-deferred; keep the 3 to 5 most used tools non-deferred |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.bedrock` | Amazon Bedrock: server-side form through InvokeModel only, not Converse; Claude Platform on AWS identical to the Claude API |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.cache_control` | A tool with defer_loading: true cannot also carry cache_control (400); deferred tools are excluded from the system-prompt prefix, so the prefix cache survives discovery |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.metering` | Not metered as a separate server tool; loaded definitions count as input tokens |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) |  |
+| `toolsearch.status` | Unknown |  | 2026-10-18 | [Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool) | The page states neither a beta header nor general availability |
+| `toolsearch.slower_below` | Unknown |  | not re-verified (last 2026-08-11) |  | August 2026 reading: ~10 tools; not stated on the page |
 
-| Fact | Value |
-| --- | --- |
-| Origin and governance, verified 2026-08-11 | Originated by Google in 2025. Now a Linux Foundation project, and the specification site carries a Linux Foundation copyright |
-| Stable release, verified 2026-08-11 | **v1.0**, released early 2026, with **signed agent cards** as its headline addition: a cryptographic signature on the agent card lets a receiving agent verify the card was issued by the domain owner. This is what makes discovery trustworthy rather than merely machine-readable |
-| Adoption, verified 2026-08-11 | The project reports **more than 150 supporting organizations** at its one-year mark, with integration across the major cloud platforms. ⧉ A headcount from a project's own announcement is a marketing figure as well as a factual one. Treat it as evidence the protocol is not abandoned, not as evidence it is the safe default |
-| Task lifecycle, verified 2026-08-11 | **Eight states.** Interrupted: `input-required`, `auth-required`. Terminal: `completed`, `canceled`, `rejected`, `failed`. In flight: `submitted`, `working`. **A terminal task cannot restart**, so a refinement is a new task grouped under the same `contextId` by `referenceTaskIds`. A previous six-state list in 3.1 omitted `rejected` and `auth-required` and was corrected on this date |
-| Response shapes | An agent may answer with a stateless `Message` or initiate a stateful `Task`. Agents are message-only, task-generating or hybrid. **Artifact version history is deliberately not in the protocol** and is the client's responsibility |
+#### Refusal signaling and stop reasons
 
-#### Retrieval
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `stop.values` | end_turn, max_tokens, stop_sequence, tool_use, pause_turn, refusal, model_context_window_exceeded |  | 2026-10-18 | [Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons) |  |
+| `stop.refusal` | Returned as HTTP 200; read stop_details and retry on a fallback model |  | 2026-10-18 | [Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons) |  |
+| `stop.details` | Identifies the policy category on a refusal; null for every stop reason other than refusal; categories are on the Refusals and fallback page |  | 2026-10-18 | [Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons) |  |
+| `stop.details.availability` | Unknown |  | 2026-10-18 | [Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons) | August 2026 reading: from Claude Opus 4.7; not stated on the stop-reasons page |
+| `stop.details.categories` | Unknown |  | not re-verified (last August 2026) |  | August 2026 reading: cyber, bio, frontier_llm, reasoning_extraction; the Refusals and fallback page was not checked |
+| `stop.fallback` | Refusals on Fable 5.1, Fable 5, Opus 5.5, Opus 5, Sonnet 5.5 and Haiku 5.5 can usually be retried on another Claude model; Haiku 5.5 has no server-side fallback |  | 2026-10-18 | [Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons) |  |
+| `stop.context_exceeded` | model_context_window_exceeded is returned without a beta header on Sonnet 4.5 and newer; earlier models need model-context-window-exceeded-2025-08-26; typed only in the SDK beta namespace |  | 2026-10-18 | [Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons) |  |
+| `stop.pause_turn` | Default limit 10 server-tool iterations per request |  | 2026-10-18 | [Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons) |  |
+| `stop.refusal.continue` | Unknown |  | not re-verified (last August 2026) |  | August 2026 reading: further refusals on the same context; reset it. Not stated on the stop-reasons page |
 
-| Fact | Value |
-| --- | --- |
-| **Source and verification**, verified 2026-08-11 | Every row in this table was confirmed against Anthropic's "Introducing Contextual Retrieval" engineering post, published 2024-09-19. The figures are that post's measured results across codebases, fiction, ArXiv and science papers at top-20 retrieval, not a general benchmark |
-| Skip retrieval below, verified 2026-08-11 | ~200,000 tokens (~500 pages). Stated as: a knowledge base smaller than this can be included whole in the prompt with no need for retrieval, made economical by prompt caching. **This is the most-repeated number in the Primer, load-bearing in 5.3 and built into worked arithmetic in Appendix C** |
-| Contextual embeddings alone | 5.7% → 3.7% failure (35% reduction) |
-| Plus contextual BM25 | → 2.9% (49%) |
-| Plus reranking | → 1.9% (67%) |
-| Rerank shape | Retrieve ~150, rerank, pass top ~20 |
-| Generated chunk context length | 50 to 100 tokens |
-| Reranking latency, **not verified** | The source states only that reranking adds a small amount of latency and gives no figure. 5.3's "a hundred to a few hundred milliseconds" is unsourced ⧉ |
-| Embedding models named as effective | Gemini and Voyage, stated as tested rather than recommended |
+#### Thinking control
 
-#### Refusal signalling
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `thinking.current` | Adaptive on all four current models; always on for the current Fable-class and Opus-class models |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `thinking.extended` | Extended thinking (thinking.type enabled with budget_tokens) is deprecated on Claude Opus 4.6 and Claude Sonnet 4.6 and not accepted on later models |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `thinking.budget_tokens.error` | Unknown |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) | The models overview says 'not accepted'; the error code is not stated on the pages checked |
+| `thinking.disabled` | Models API capabilities.thinking.types.disabled reports whether a model accepts thinking turned off |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
+| `thinking.billing` | Output-token rate |  | not re-verified (last August 2026) |  |  |
 
-| Fact | Value |
-| --- | --- |
-| Stop reason when a streaming classifier intervenes | `stop_reason: "refusal"` on the Messages API |
-| Accompanying object | `stop_details`, carrying a policy category and a readable explanation. Available from Claude Opus 4.7; absent on earlier models, so a handler must tolerate its absence |
-| Both fields null when | The refusal maps to no named policy category |
-| Policy categories at the time of writing | `cyber`, `bio`, `frontier_llm`, `reasoning_extraction`. Enumerated in the stop-reasons documentation and perishable; read at runtime rather than hardcoding |
-| `model_context_window_exceeded`, verified 2026-08-11 | Confirmed as a published `stop_reason` returned on a **200**, not an error, so 2.2's third window failure is detectable rather than silent. **Returned without a beta header on Sonnet 4.5 and newer**; earlier models need the `model-context-window-exceeded-2025-08-26` header. It is currently typed only in the SDKs' beta namespace, so a strongly typed client reads it through `client.beta.messages`. The seven published stop reasons are `end_turn`, `max_tokens`, `stop_sequence`, `tool_use`, `pause_turn`, `refusal` and this one, and `stop_details` is null for every value except `refusal` |
-| Behavior on continuing the same context | Further refusals. Reset the context, by removing or rephrasing the triggering turn or clearing the history |
+#### Request parameters
 
-#### Extended thinking control, by generation
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `params.sampling` | temperature, top_p, top_k: a non-default value returns a 400 error on Claude 4.7 and later models and Claude Mythos Preview; the Python SDK v1.0 and later removes them |  | 2026-10-18 | [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | Recommended replacement: omit and use prompting |
+| `params.models_api` | The Models API returns max_input_tokens, max_tokens and a capabilities object for every available model |  | 2026-10-18 | [Models overview](https://platform.claude.com/docs/en/models/overview) |  |
 
-| Fact | Value |
-| --- | --- |
-| Adaptive thinking with effort, recommended control | Claude 4.6 and later |
-| Adaptive thinking, only mode available | Claude 4.7 and later |
-| `budget_tokens`, deprecated but still accepted | The 4.6 generation |
-| `budget_tokens`, removed (400 error on any request using it) | Claude 4.7 and later: Opus 4.7, Opus 4.8, Opus 5, Sonnet 5, Fable 5 and Mythos 5 |
-| Thinking token billing | Output-token rate; adds latency when engaged |
+#### Retrieval (Contextual Retrieval post, not re-verified)
 
-#### Entry points and build-time interfaces
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `retrieval.skip_below` | ~200,000 tokens (~500 pages): a smaller knowledge base can be included whole in the prompt, made economical by prompt caching |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
+| `retrieval.contextual_embeddings` | 5.7% to 3.7% failure (35% reduction) |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
+| `retrieval.plus_bm25` | to 2.9% (49%) |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
+| `retrieval.plus_rerank` | to 1.9% (67%) |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
+| `retrieval.rerank_shape` | Retrieve ~150, rerank, pass top ~20 |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
+| `retrieval.chunk_context` | 50 to 100 tokens |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
+| `retrieval.rerank_latency` | Unknown: the post gives no figure |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
+| `retrieval.embedding_models` | Gemini and Voyage, stated as tested rather than recommended |  | not re-verified (last 2026-08-11) |  | Anthropic engineering post 'Introducing Contextual Retrieval', 2024-09-19; dated measurements at top-20 retrieval |
 
-| Fact | Value |
-| --- | --- |
-| Agent SDK packages | `@anthropic-ai/claude-agent-sdk` (npm, TypeScript), `claude-agent-sdk` (PyPI, Python) |
-| Claude Cowork platforms | macOS and Windows, via the Claude Desktop app, on all paid plans (Pro, Max, Team, Enterprise); **Linux in beta** |
-| Claude for Work, Team tier adds | Admin controls, SSO and SAML, domain capture, contractual no-train-on-customer-content commitment |
-| Claude for Work, Enterprise tier adds | SCIM provisioning, configurable retention, audit logs, a Compliance API, a HIPAA-ready option with a signed BAA |
-| Claude Code `acceptEdits` covers | File edits and common filesystem commands: `mkdir`, `touch`, `rm`, `mv`, `cp`, `sed`. Other Bash commands still prompt |
-| Claude Code auto mode | Research preview; classifier-based; works on all plans; admin-enabled on Team and Enterprise; defaults to the Anthropic API as provider; environment variable available for the other delivery routes |
-| Claude Code `dontAsk` | Auto-denies anything that would prompt; runs only what allow rules cover; the mode for locked-down CI |
-| Claude Code `bypassPermissions` | Skips all checks; scoped to containers or CI only |
+#### Agent-to-agent (A2A), not an Anthropic source, not re-verified
 
-#### Delivery routes and compliance mechanics
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `a2a.origin` | Unknown as at 2026-10-18. Last reading: Originated by Google in 2025; now a Linux Foundation project |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
+| `a2a.stable_release` | Unknown as at 2026-10-18. Last reading: v1.0, early 2026; headline addition signed agent cards |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
+| `a2a.adoption` | Unknown as at 2026-10-18. Last reading: More than 150 supporting organizations at the one-year mark (project's own announcement) |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
+| `a2a.task_states` | Unknown as at 2026-10-18. Last reading: Eight: input-required, auth-required (interrupted); completed, canceled, rejected, failed (terminal); submitted, working (in flight). A terminal task cannot restart |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
+| `a2a.response_shapes` | Unknown as at 2026-10-18. Last reading: Stateless Message or stateful Task; artifact version history is not in the protocol |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
 
-Perishable, especially the Foundry-hosted model list.
+#### Entry points and build-time interfaces, not re-verified
 
-| Fact | Value |
-| --- | --- |
-| Anthropic first-party SDK languages | Python, TypeScript, C#, Java, Go, PHP, Ruby |
-| AWS Bedrock API paths | Current: Messages API at `/anthropic/v1/messages`. Legacy, still available: InvokeModel/Converse via boto3 or the AWS SDK |
-| Microsoft Foundry hosting forms | Hosted on Azure (GA; Opus 4.8, Sonnet 5, Haiku 4.5) and Hosted on Anthropic infrastructure (other models) |
-| FedRAMP-authorized routes | Claude for Government (C4G): FedRAMP High civilian. Bedrock GovCloud: FedRAMP High, DoD IL4/5. Vertex Assured Workloads: FedRAMP High, IL2 |
-| Direct API and FedRAMP | The enterprise offering on the direct API is not itself FedRAMP authorized and is not a substitute for the authorized routes above. Authorization attaches to a configuration, not to a vendor |
-| Government route model lag | Newest Claude models reach GovCloud and Assured Workloads after commercial release; confirm the current model offered before committing |
-| `inference_geo` supported values | `us` and `global`. There is no European pinning value. A European residency requirement is met through a cloud route rather than through this parameter |
-| Where the data processing agreement sits | Direct API: with Anthropic. Cloud route: terms inherited from the cloud contract. The route therefore decides which counterparty a notification or a regulator lands on |
-| Foundry European data residency | On the roadmap without a confirmed date at the time of verification. Verify current availability before committing a route that depends on it, and record the fallback if the date moves |
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `entry.agent_sdk` | Unknown as at 2026-10-18. Last reading: @anthropic-ai/claude-agent-sdk (npm, TypeScript); claude-agent-sdk (PyPI, Python) |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `entry.cowork` | Unknown as at 2026-10-18. Last reading: macOS and Windows via the Claude Desktop app on all paid plans; Linux in beta |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `entry.team_tier` | Unknown as at 2026-10-18. Last reading: Admin controls, SSO and SAML, domain capture, contractual no-train commitment |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `entry.enterprise_tier` | Unknown as at 2026-10-18. Last reading: SCIM, configurable retention, audit logs, Compliance API, HIPAA-ready option with a signed BAA |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `entry.accept_edits` | Unknown as at 2026-10-18. Last reading: File edits and common filesystem commands (mkdir, touch, rm, mv, cp, sed); other Bash commands prompt |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `entry.auto_mode` | Unknown as at 2026-10-18. Last reading: Research preview; classifier-based; all plans; admin-enabled on Team and Enterprise |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `entry.dont_ask` | Unknown as at 2026-10-18. Last reading: Auto-denies anything that would prompt; runs only what allow rules cover |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `entry.bypass_permissions` | Unknown as at 2026-10-18. Last reading: Skips all checks; containers or CI only |  | not re-verified (last August 2026) |  | Not on the pages checked |
+
+#### Delivery routes and compliance mechanics, not re-verified
+
+| Key | Value | Model ID | Verified | Source | Note |
+| --- | --- | --- | --- | --- | --- |
+| `routes.sdk_languages` | Unknown as at 2026-10-18. Last reading: Python, TypeScript, C#, Java, Go, PHP, Ruby |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `routes.bedrock_paths` | Unknown as at 2026-10-18. Last reading: Messages API at /anthropic/v1/messages; legacy InvokeModel/Converse still available |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `routes.foundry_hosted` | Unknown as at 2026-10-18. Last reading: Hosted on Azure (GA; Opus 4.8, Sonnet 5, Haiku 4.5) and Hosted on Anthropic infrastructure (other models) |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `routes.fedramp` | Unknown as at 2026-10-18. Last reading: Claude for Government: FedRAMP High civilian. Bedrock GovCloud: FedRAMP High, DoD IL4/5. Vertex Assured Workloads: FedRAMP High, IL2 |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `routes.direct_api_fedramp` | Unknown as at 2026-10-18. Last reading: The direct API enterprise offering is not itself FedRAMP authorized |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `routes.gov_model_lag` | Unknown as at 2026-10-18. Last reading: Newest models reach GovCloud and Assured Workloads after commercial release |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `routes.dpa` | Unknown as at 2026-10-18. Last reading: Direct API: with Anthropic. Cloud route: inherited from the cloud contract |  | not re-verified (last August 2026) |  | Not on the pages checked |
+| `routes.foundry_eu_residency` | Unknown as at 2026-10-18. Last reading: On the roadmap without a confirmed date |  | not re-verified (last August 2026) |  | Not on the pages checked |
+
+<!-- figures:end -->
+
+#### Notes on the figures
+
+**The scheduled Sonnet 5 price increase did not happen.** The August 2026 edition carried a ⧉ warning that Claude Sonnet 5 would move from a promotional $2 / $10 to a standard $3 / $15 on 1 September 2026, and that a sizing model built on the promotional rate would understate cost from that date. The pricing page now states that the $2 / $10 rate "is now the standard price" and that the increase "will not occur" (`legacy.sonnet5.price`). The warning is withdrawn. Claude Sonnet 5 is a legacy model; the current Sonnet-class model is at `class.sonnet.current`.
+
+**Cache reads are no longer a uniform tenth of base input.** Reads cost 0.1x on most models, 0.05x on the current Opus-class and Sonnet-class models and 0.025x on the current Fable-class and Mythos-class models (`cache.read.multiplier.*`). A cost model that carries one multiplier across classes misstates the value of a warm cache by a factor of up to four.
+
+⧉ **The tokenizer changed at 4.7 and it is the figure most likely to break a sizing model silently.** Claude 4.7 and later models, and Claude Mythos Preview, use a newer tokenizer that produces **approximately 30 percent more tokens for the same text**, with the exact increase depending on content and workload shape. Sonnet 4.6 and earlier use the previous tokenizer. (`tokenizer.change`) **A token count measured on an earlier generation and carried into a sizing model for a current one understates input cost, output cost and context occupancy at once**, and it does so without any error, any warning and any change in the design. This is why 2.2 says to measure the budget with the `usage` field or the token-counting API rather than estimating it, and why 8.10's sizing input says to count on the model you will ship.
+
+**Output ceilings on the batch path differ from the synchronous path.** The models listed at `batch.output_300k.models` support up to 300,000 output tokens on the Message Batches API behind a beta header; the current Fable-class model is not on that list. A sizing model built on the synchronous ceiling will understate what a batch workload can return in one response. Extended output is on the batch path only, is available on the Claude API and Claude Platform on AWS and is not on Bedrock, Google Cloud or Microsoft Foundry. A single 300,000-token generation can take over an hour, which has to fit inside the 24-hour window.
+
+**There is no long-context premium, with one exception.** On Claude 4.6 and later models other than the current Haiku-class model, requests anywhere in the one-million-token window are charged at the same per-token rates, and prompt caching and the batch discount both apply across it (`longctx.standard`, `longctx.discounts`). This is worth stating explicitly because the opposite is a common assumption and it distorts a sizing model in the direction of under-using the window. The exception is the current Haiku-class model, which is priced by prompt length: a request whose prompt exceeds 100,000 tokens, counting cache reads and cache writes, pays the higher prices on the whole request, five times the base input rate (`longctx.haiku`, `haiku.price.input.over_100k`). For that class the sizing error runs the other way.
+
+**Pricing modifiers that stack**, and which an architect sizing a regulated deployment has to carry: the Batch API discount, which is 50 percent on both input and output, data residency and on Claude 4.6 and later a **1.1x multiplier on every token category** (input, output, cache writes, cache reads) when US-only inference is specified through `inference_geo` (`residency.multiplier`). Residency is not free, and it is charged on cached reads too, which is exactly where a caching-heavy design concentrates its volume. Fast mode is available on the Claude API and, for the current Opus-class model, on Microsoft Foundry deployments hosted on Azure; it is not available on Claude Platform on AWS or the partner-operated clouds, and its premium pricing applies across the full context window (`fastmode.platforms`, `fastmode.window`). It is unavailable with the batch lane, and switching between fast and standard speed invalidates the system and message caches (`cacheinv.speed`). The August 2026 statements that its gain is output tokens per second and not time-to-first-token, that it requires a beta header and access on request and that it is unavailable with a Priority Tier commitment were not re-verified on 18 October 2026 and are recorded as Unknown (`fastmode.speedup`, `fastmode.access`).
+
+**Tool search compatibility is a published list, not a generation rule.** The August 2026 edition recorded that Claude Sonnet 5 was not on the compatibility table; on 18 October 2026 the table lists it, together with every current model (`toolsearch.models`). Read the table rather than assume a newer model inherits the capability.
+
+**Agent-to-agent (A2A).** These are external protocol facts rather than Anthropic platform facts, and they move on the protocol's release cycle rather than on the model lineup. **They are the dated specifics moved out of 3.1**, which keeps only the MCP-vertical against A2A-horizontal distinction, because that distinction survives any change to the rows below. Source is the A2A project's own specification and documentation under the Linux Foundation. They were not re-verified on 18 October 2026 and are Unknown as at that date; the `a2a.*` rows show the 11 August 2026 reading. ⧉ The adoption headcount comes from the project's own announcement and is a marketing figure as well as a factual one. Treat it as evidence the protocol is not abandoned, not as evidence it is the safe default.
+
+**Retrieval.** The `retrieval.*` rows are the measured results of Anthropic's "Introducing Contextual Retrieval" engineering post, published 2024-09-19, across codebases, fiction, ArXiv and science papers at top-20 retrieval, not a general benchmark. The skip-retrieval threshold is **the most-repeated number in the Primer, load-bearing in 5.3 and built into worked arithmetic in Appendix C**. The post gives no reranking latency figure, so 5.3's "a hundred to a few hundred milliseconds" is unsourced ⧉.
+
+**Delivery routes.** Perishable, especially the Foundry-hosted model list, which is Unknown as at 18 October 2026 (`routes.foundry_hosted`).
 
 ---
 
