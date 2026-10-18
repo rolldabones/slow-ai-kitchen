@@ -10,13 +10,15 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.1.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.2.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
 > **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of the technology. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms). GRCnext™ is the account's operating framework, not a doctrine.
 
 > **Amendment, 17 October 2026 (KST), v1.1.0.** The module gains the doctrine block the other two derivation modules carry; the Informed Intent framework connection names the canon's four elements; the five-layer correspondence is mapped to the doctrines that hold each layer; the gate map is corrected to the README's (Steps 1 and 7 are the gateless steps; Step 3 is Gate 2); the closing sentence no longer counts GRCnext™ among the doctrines; the ecosystem map row of the Link Register is re-checked. Found by the whole-account review of 15 October 2026 (doc sections 1 and 8; reviewer report 02, items 1 to 4 and 7). No derivation, quotation or source is added or removed.
+
+> **Amendment, 18 October 2026 (KST), v1.2.0.** Section 11 gains the evidence note of 11 October 2026 (Kamoi et al. 2024, Huang et al. 2024 and the author's test of 7 October 2026) that stood in the README's Step 8, moved here without change of text so that the twelve steps keep their register; the README keeps the Gate 6 rule and a pointer to this section. Found by the whole-account review of 15 October 2026 (doc section 9; reviewer report 01, item 24). Two sources are added; no derivation or quotation changes.
 
 > **Attribution and independence.** This module is an independent reading of Andrej Karpathy's published work. He has no involvement in it, has not reviewed it and does not endorse it. The governance conclusions drawn from his work are the author's own and should not be attributed to him. The title is descriptive of the subject and signals no association, affiliation, sponsorship or endorsement.
 
@@ -570,6 +572,10 @@ That produces an uncomfortable and useful conclusion. The tasks a governance fun
 **Framework connection:** **Informed Intent** and **Slow AI**. Verifiability belongs in the tool registry beside the risk tier. It is the question that decides how much evidence a use case needs before it may run.
 
 **Control implication:** Triage the use-case inventory by verifiability. Unverifiable tasks do not become prohibited; they become the ones where human review is load-bearing rather than ceremonial, and where the evidence requirement rises rather than falls.
+
+The README's Gate 6 rule, that a model's review of its own output in the same session is not verification, rests on the evidence below, moved here from README Step 8 on 18 October 2026 (KST).
+
+> **Evidence note (11 October 2026, KST).** Kamoi et al., TACL 12 (2024), https://arxiv.org/abs/2406.01297: no prior work demonstrates successful self-correction from a prompted LLM's own feedback outside tasks exceptionally suited to it; self-correction works where reliable external feedback exists. Huang et al., ICLR 2024, https://arxiv.org/abs/2310.01798: LLMs struggle to self-correct without external feedback, and performance at times degrades after it. Author's test, 7 October 2026: 288 closed-book answers per condition over three setups of two Claude models; 121 wrong without a self-review instruction, 123 with it, 0.7 accuracy points lower, 95% interval -7.6 to +6.2; of 94 wrong answers reviewed, 82 kept, 7 traded for another wrong answer, 5 fixed. Limits: one model family, nothing external to check against, a runner that mentioned a shell, a void first round, an unpublished test kit. Same-session self-review only; whether an independent instance suffices is not answered.
 
 ---
 
