@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v2.12.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v2.13.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -61,7 +61,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A function or program owner.** Read [The Feast](#the-feast) and [Your Restaurant](#addendum-your-restaurant), then start the tool registry at Step 10. The [restaurant resources](./restaurant-resources.md) file collects the referenced standards. The [workforce AI literacy bridge](./federal-workforce-literacy-bridge.md) aligns the method with the U.S. Department of Labor's AI Literacy Framework for the public workforce and education systems (TEN 07-25).
 
-**A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): the 30-day initial engagement on one priority workflow for a named business owner, with the delivery cadence, twenty-six working records keyed to the steps and gates, measurement rules that count all human effort once and a fictional teaching case that fails expansion on quality while passing on effort. It changes no step, gate, tier, role or principle.
+**A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): the 30-day initial engagement on one priority workflow for a named business owner, with the delivery cadence and a day-by-day calendar, six delivery instruments (interview guide, benefit and defect severity scales, synthetic case kit, sponsor report), twenty-six working records keyed to the steps and gates, each with a Done when line, measurement rules that count all human effort once and a fictional teaching case that fails expansion on quality while passing on effort. Each section and record is also published as one file under [workbook/](./workbook/README.md) for copying into a Client evidence store. It changes no step, gate, tier, role or principle.
 
 **An architect or systems designer.** Read [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md): the architecture reference behind Gates 4 and 5, the Feast and the Restaurant's five pillars.
 
@@ -91,7 +91,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [newtons-kitchen.md](./newtons-kitchen.md) | Standalone add-on module: the three doctrines compressed into three laws of consequential motion (Intent, Motion, Liability), each stated as an axiom beneath the doctrine it restates, in the order of the *Principia* (definitions, laws, corollaries, scholia), with a corollary on materiality, closing on the proposition that governance governs motion through the world rather than intelligence in the abstract. Restates DOCTRINE.md at the altitude of mechanics and varies nothing | You want the conceptual warrant for the method rather than its assertion |
 | [coetzees-kitchen.md](./coetzees-kitchen.md) | Standalone add-on module: the epistemics of the human-AI working session, read through Coetzee's 2003 Nobel lecture *He and His Man*; names the three problems the method's gates answer (the report is not the world, the report lands in a system, the report changes its reader), introduces Return to Source and Cognitive Provenance as operating disciplines and supplies the socio-technical warrant for Gate 3. Restates DOCTRINE.md at the altitude of the working session and varies nothing | You want to understand what working with the machine does to the person doing the work, and why the gates exist |
 | [service-record.md](./service-record.md) | The one-page close-out of a single service: steps skipped, gates argued, what the owner would not sign, what the service changes in the method, the judgment and the carry-forward. Written by the named owner within a day of release and kept with the evidence log. Ten records trigger a method review under Step 12, Gate 10 | You have released a service and are closing it out, or you are refining the method against records rather than recollection |
-| [consultant-workbook.md](./consultant-workbook.md) | Standalone delivery instrument: the 30-day initial engagement on one priority workflow, with a consultant operating brief, the delivery cadence, the method and the Feast mapped to twenty-six working records (W01 to W24 with W05A and W24A), the canonical full-day agenda with the evidence each session produces, a measurement protocol, a fictional supplier-dossier teaching case and the delivery acceptance check. Sources are cited by name and versions pinned once in its resource register; W10 carries both limbs of Informed Intent as stated in DOCTRINE.md | You are delivering the method to a Client as a bounded engagement, or training the consultants who will |
+| [consultant-workbook.md](./consultant-workbook.md) | Standalone delivery instrument: the 30-day initial engagement on one priority workflow, with a consultant operating brief, the delivery cadence and a thirty-day calendar, six delivery instruments, the method and the Feast mapped to twenty-six working records (W01 to W24 with W05A and W24A) each with a Done when line, the canonical full-day agenda with the evidence each session produces, a measurement protocol, a fictional supplier-dossier teaching case and the delivery acceptance check. Sources are cited by name and versions pinned once in its resource register; W10 carries both limbs of Informed Intent as stated in DOCTRINE.md | You are delivering the method to a Client as a bounded engagement, or training the consultants who will |
+| [workbook/](./workbook/README.md) | The Consultant Workbook in 48 derived parts with a reading index, one section or working record per file, so a single sheet can be copied into a Client evidence store. Derived from the single file above and verified to rebuild it byte for byte | You need one working sheet rather than the whole workbook |
 | [take-out-delivery-and-vending-machines.md](./take-out-delivery-and-vending-machines.md) | Standalone operating companion for AI agents: the three service patterns (take-out, delivery and vending machines), a service ticket and service receipt keyed to Informed Intent, the four-property test applied to a live system, stop, reconcile and hand-back procedure and a fictional worked order carrying an investigation into an authorized send batch and on to the same service at three branches. It changes no step, gate, tier, role or principle | You are commissioning an agent run or maintaining a reusable agent service under the existing method |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
@@ -574,7 +575,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.12.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v2.13.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -596,7 +597,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The full version history is maintained in [CHANGELOG.md](./CHANGELOG.md).
 
-Current version: **v2.12.0 (2026-10-17)**. Doctrine conformance and mechanical release, session T3 of the whole-account review of 15 October 2026: the Owner is named at Step 1 and confirmed at Step 6 (Gate 5), in the step table, Step 1, Step 6, the Cookbook card, both sample prompts and the Service Record; the three derivation modules carry one doctrine block and the DOCTRINE.md short forms; the bridge is retitled for the framework it maps. Minor, because the step table changes; no gate, tier or role is added or removed.
+Current version: **v2.13.0 (2026-10-18)**. Consultant Workbook release, session T5 of the whole-account review of 15 October 2026: the Workbook (v1.4.0) gains a thirty-day calendar, a discovery interview guide, benefit and defect severity scales, a synthetic case kit and a sponsor report; every working record carries a Done when line; the worked case uses W16's five effort categories; and the Workbook is published as derived parts under `workbook/`. Minor, because instrument text changes; no step, gate, tier, role or principle changes.
 
 ---
 

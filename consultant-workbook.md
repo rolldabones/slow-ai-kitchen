@@ -10,9 +10,11 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.3.0 | 2026-10-17 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license-and-attribution)) |
+| v1.4.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see [License](https://github.com/rolldabones/slow-ai-kitchen/blob/main/consultant-workbook.md#license-and-attribution)) |
 
-**For:** consultants and Client delivery teams running a 30-day initial engagement on one priority workflow for a named business owner. The canonical method is the [README](./README.md); this workbook adds a delivery sequence, working records, measurement rules and a fictional teaching case.
+**For:** consultants and Client delivery teams running a 30-day initial engagement on one priority workflow for a named business owner. The canonical method is the [README](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md); this workbook adds a delivery sequence, working records, measurement rules and a fictional teaching case.
+
+**Amendment, 18 October 2026 (KST), v1.4.0.** The workbook can now be run cold. Six delivery instruments are added: a thirty-day calendar, a discovery interview guide, a benefit scale for workflow selection, a defect severity scale, a synthetic case kit and a sponsor report. Every working record, W01 to W24A, carries a Done when line. W13 states that a model's review of its own output is not Gate 6, as the README does. The worked case's effort table uses W16's five categories; its totals are unchanged, and the rows that combined categories (manual preparation with production; review with final approval in both methods) are divided between the categories they now span. The resource register is re-verified on 18 October 2026. Links to other files in this repository are now absolute, so they resolve from the derived parts. Each section is also published as a derived part under [workbook/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/README.md). Found by the whole-account review of 15 October 2026 (doc section 5; reviewer report 02, items 25, 27 and 28 and idea 2). No gate, tier, role or principle changes; W01 to W24A keep their headings, so inbound anchors resolve.
 
 **Amendment, 17 October 2026 (KST), v1.3.0.** The doctrine paragraph copies the short forms of DOCTRINE.md section 8, so Final Liability carries the canon's three attributes and no others; the resource register is re-verified against the released versions of 17 October 2026 and names the GRC Workbook's release tiering as it states it; seven headings and labels regain the hyphens and commas a conversion stripped. Found by the whole-account review of 15 October 2026 (doc section 8; reviewer report 02, items 17 to 20 and 33). No record, gate or measurement rule changes.
 
@@ -67,7 +69,8 @@ Begin with the delivery guide. Complete the working sheets with the people who p
 
 | **Part** | **Use** |
 | --- | --- |
-| Delivery guide | Read the operating brief, 30-day cadence, method map and workshop agenda before kickoff. |
+| Delivery guide | Read the operating brief, 30-day cadence and calendar, method map and workshop agenda before kickoff. |
+| Delivery instruments | Run interviews, score candidates, grade defects, build synthetic cases and report to the sponsor with the guide, scales, kit and report before W01. |
 | Working sheets W01 to W08 | Agree scope, select a workflow, establish authority, classify risk, approve tools and define done. |
 | Working sheets W09 to W16 | Retain human first-pass work, authorize bounded use, test and verify, then record comparable performance. |
 | Working sheets W17 to W24 | Evaluate results, run reviews, handle incidents and changes, verify competence, decide and hand over. |
@@ -76,9 +79,9 @@ Begin with the delivery guide. Complete the working sheets with the people who p
 
 **Record discipline**
 
-Give every record a stable ID, version, owner and evidence location. Lines of underscores are completion spaces; work in a copy kept in the Client's evidence store, not in this repository. During delivery, replace unresolved blanks with Unknown or Not yet evidenced and assign an owner and due date. Use Not applicable only with a written rationale.
+Give every record a stable ID, version, owner and evidence location. Lines of underscores are completion spaces; work in a copy kept in the Client's evidence store, not in this repository. Each section is also published as one file under [workbook/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/README.md), so a single sheet can be copied. Each record's Done when line is its completion test; a sheet is not complete because its blanks are filled. During delivery, replace unresolved blanks with Unknown or Not yet evidenced and assign an owner and due date. Use Not applicable only with a written rationale.
 
-W01 to W24, including supplements W05A and W24A, are adapted delivery instruments. The full-day agenda follows the [README](./README.md); the 30-day schedule, measurement approach and case add engagement detail without changing its steps or gates. Source links identify the underlying resources.
+W01 to W24, including supplements W05A and W24A, are adapted delivery instruments. The full-day agenda follows the [README](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md); the 30-day schedule, measurement approach and case add engagement detail without changing its steps or gates. Source links identify the underlying resources.
 
 Use the headings for navigation. Expand response fields or attach records when more space is needed; duplicate sheets or rows as needed. The sample case is fictional and separate from all Client records. A completed template is not an approval.
 
@@ -114,13 +117,13 @@ Thirty days is an initial delivery period for the agreed workflow. Integration, 
 
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [GRC Solutions Korea practice](https://library.grcskorea.com/practice)
 
-Days are elapsed engagement days. Place sessions on Client working days and confirm actual dates in W01. Meeting durations below are delivery planning defaults.
+Days are elapsed engagement days. Place sessions on Client working days and confirm actual dates in W01. Meeting durations below are delivery planning defaults. The thirty-day calendar below sets each day's work.
 
 | **Period** | **Consultant and Client work** | **Decision and evidence** |
 | --- | --- | --- |
-| Days 1 to 5 | Kickoff 60 min; interviews and current-work walkthrough; compare candidate workflows; agree owners and baseline. | Scope agreed. W01 to W05 and W15 started. Mandatory unknowns assigned. |
+| Days 1 to 5 | Kickoff 60 min; interviews using the discovery interview guide and current-work walkthrough; compare candidate workflows; agree owners and baseline. | Scope agreed. W01 to W05 and W15 started. Mandatory unknowns assigned. |
 | Days 6 to 10 | Tool/data review; human-authored acceptance criteria; full-day workshop using authorized material. | Bounded rehearsal authorized. W06 to W11, W12 test plan and W22 competence evidence. |
-| Days 11 to 20 | Run matched baseline and supervised AI cases; weekly clinic; collect failures and corrections as well as successes. | Review at days 15 and 20. W13 to W19. Pause affected work for hard-stop triggers. |
+| Days 11 to 20 | Run matched baseline and supervised AI cases; weekly clinic; collect failures and corrections as well as successes. | Sponsor report at days 15 and 20. W13 to W19. Pause affected work for hard-stop triggers. |
 | Days 21 to 25 | Analyze performance and uncertainty; test fallback, change response and ownership coverage; remediate and retest. | Evidence challenged. W17, W19 to W22 current; open limits explicit. |
 | Days 26 to 30 | Independent challenge; sponsor decision; operating handover; schedule continuing review. | Expand specified scope, revise or stop. W23 and W24 signed; evidence pack transferred. |
 
@@ -135,6 +138,49 @@ They do not replace Kitchen gates. Organizational permission, trained operators 
 **Client time commitments and escalation contact**
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Thirty-day calendar
+
+Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook)
+
+The day-by-day plan behind the cadence above. Days are elapsed engagement days. Place each on a Client working day and record the actual date in W01. A day's output is due at its close. A missed output moves the days that depend on it; it does not move the day-30 decision unless the sponsor changes the schedule through W20.
+
+Done when: every day carries an actual date and an owner for its output, and every moved day records the reason and the days it moved.
+
+| **Day** | **Consultant and Client work** | **Records and output** |
+| --- | --- | --- |
+| 1 | Kickoff, 60 min, with sponsor and business owner; confirm the prerequisites in the operating brief; agree how disclosed tool use will be handled in interviews. | W01 drafted; evidence store access requested. |
+| 2 | Discovery interviews 1 to 3 using the interview guide; current-work walkthrough. | Interview notes; W03 started. |
+| 3 | Discovery interviews 4 to 6; inspect recent work samples. | W02 candidates scored on the benefit scale. |
+| 4 | Mandatory entry screen; select the workflow; name roles and alternates. | W02 signed; W04 drafted. |
+| 5 | Classify task risk, operating tier and legal questions; design the baseline. | W01 signed; W05 and W15 started; mandatory unknowns in W14 with owners. |
+| 6 | Tool and data review with the technical owner; weekly clinic 1. | W06 proposed; W18 first entry. |
+| 7 | Obligations and prerequisite controls; questions with legal effect sent to counsel. | W07; W05A for each material scenario. |
+| 8 | Business owner writes the acceptance tests; build the synthetic case set; approve the training environment. | W08 frozen; case kit issued; W06 approved for rehearsal; W12 drafted. |
+| 9 | Full-day workshop on authorized material. | Workshop outputs; W09 and W11 drafted; W22 evidence started. |
+| 10 | Authorize the bounded rehearsal; finalize the operator card and test plan. | W10 signed; W11 and W12 approved. |
+| 11 | First matched baseline and AI-assisted cases. | W09, W16 and W13 per case. |
+| 12 | Cases continue; check every W16 for completeness the same day. | W16, W13, W14. |
+| 13 | Cases continue; weekly clinic 2 on a failed or disputed case. | W18; W19 where triggered. |
+| 14 | Cases continue; grade every defect on the defect severity scale. | W16; W19 for every S1. |
+| 15 | Engagement review with the sponsor. | Sponsor report 1; W18. |
+| 16 | Cases continue on the second half of the case mix. | W16, W13. |
+| 17 | Cases continue. | W16, W13. |
+| 18 | Last cases; reconcile W16 to the case list, attempts and abandoned cases included. | W16 reconciled. |
+| 19 | Evidence catch-up; requested items chased. | W14 current. |
+| 20 | Engagement review with the sponsor; weekly clinic 3. | Sponsor report 2; W18. |
+| 21 | Calculate results, net benefit and limitations. | W17 drafted. |
+| 22 | Stop and fallback exercise in the test environment. | W21. |
+| 23 | Change response test, such as a model or owner change. | W20. |
+| 24 | Competence assessment of operators and reviewers. | W22. |
+| 25 | Remediate and retest failed items; close or carry incidents. | W19 closures; W17 and W14 current. |
+| 26 | Independent challenge of the draft recommendation. | W23 drafted; challenge recorded. |
+| 27 | Weekly clinic 4; handover preparation with the receiving owner. | W18; W24 and W24A drafted. |
+| 28 | Issue the decision pack to the sponsor, at least two working days before the decision. | Sponsor report 3; W14 decision pack. |
+| 29 | Receiver demonstration: find the decision pack, run the review, escalate an issue and use fallback. | W24 demonstration evidence. |
+| 30 | Sponsor decision; handover; delivery acceptance. | W23 and W24 signed; delivery acceptance check. |
+
+The calendar is a default for one workflow with five to six interviewees and 20 cases. Fewer cases do not shorten the authorization days; more cases extend days 11 to 19, not the gates.
 
 ## The task method and its evidence
 
@@ -154,7 +200,7 @@ Canonical Steps 1 to 9 govern a work product. Steps 1 and 7 are production steps
 | 8 Taste Before Service | Gate 6: verify evidence, logic, arithmetic and fitness for use. | W12 and W13 validation |
 | 9 Open the Pass | Gate 7: human confirmation before reliance; review what happened. | W13 release; W18 learning; Service Record (required Tier 3, recommended Tier 2) |
 
-Prior authorization names the accountable human before the system acts. Step 6 confirms task-level ownership; it does not permit an unowned pilot to begin. People, not the system, retain authorship of the Definition of Done and final confirmation. The manual first pass remains human work. The service closes with a [Service Record](./service-record.md), written by the named owner within one day of release; ten records trigger a method review under Step 12.
+Prior authorization names the accountable human before the system acts. Step 6 confirms task-level ownership; it does not permit an unowned pilot to begin. People, not the system, retain authorship of the Definition of Done and final confirmation. The manual first pass remains human work. The service closes with a [Service Record](https://github.com/rolldabones/slow-ai-kitchen/blob/main/service-record.md), written by the named owner within one day of release; ten records trigger a method review under Step 12.
 
 ## Organizational deployment and sustained governance
 
@@ -236,13 +282,168 @@ Which source supports this claim? Who can refuse this release? What did we disca
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
+## Discovery interview guide
+
+Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI GRC Master List of Questions](https://github.com/rolldabones/AI-GRC-Master-List-of-Questions)
+
+Use on days 2 and 3, before any candidate is ranked. Interview the business owner, at least two people who do the work, the reviewer who checks it, the technical owner and one person who uses the output downstream. Allow 45 minutes each, with one interviewer and one note-taker. Ask to see the work, not to hear it described.
+
+Done when: every role above is interviewed or the gap is in W14 with an owner; each note is confirmed by its interviewee within one working day; and each W02 candidate cites at least one interview and one inspected work sample.
+
+Interview ID ________  Role ________  Date ________  Interviewer ________  Note-taker ________
+
+| **Topic** | **Questions** | **Feeds** |
+| --- | --- | --- |
+| The work | What triggers the task? What do you produce, for whom and by when? Show me the last three you completed. | W03 |
+| Judgment | Where does your expertise change the answer? What would a capable newcomer get wrong? | W03, W09 |
+| Effort and queues | How many active minutes did each of those three take, and how long did each wait? Where does rework come from? | W15, benefit scale |
+| Quality | What does a defective output look like? Who catches it, and what happens when no one does? | W08, defect severity scale |
+| Sources and data | Which sources do you read? How are they classified, where are they stored and who may see them? | W06, W07 |
+| Authority | Who can approve, refuse or stop this work today? Whom do you call when it goes wrong? | W04 |
+| Exceptions | Which cases do you dread? How often do they arrive? | W12, synthetic case kit |
+| Tools in use | Is any AI tool already used for this work, approved or not? | W06, W07 |
+| Trust | What would have to be true for you to rely on a changed process? What would you refuse to sign? | W08, W10 |
+
+**Rules for the interviewer**
+
+Record facts and the interviewee's own words for pain points; mark your own inferences as such. Do not describe what AI can do before the walkthrough is finished. Agree with the sponsor at kickoff how disclosed tool use is handled, and tell each interviewee before the first question; record disclosed use for the owner as a fact, not a finding against a person.
+
+**Work samples inspected and their evidence IDs**
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Notes confirmed by interviewee/date**
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Benefit scale for workflow selection
+
+Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook)
+
+Use for the value column of W02. Score each candidate 0 to 3 on four factors from interview evidence and inspected work, never from a sponsor estimate alone. Record the evidence ID beside each score. The Client may set its own bands; record them in W02 before any candidate is scored.
+
+Done when: every candidate carries four scores with evidence IDs; any Client bands are recorded before scoring; and candidates are ranked only after they pass the mandatory entry screen.
+
+| **Factor** | **0** | **1** | **2** | **3** |
+| --- | --- | --- | --- | --- |
+| Volume: units of work per month | Under 5 | 5 to 20 | 21 to 100 | Over 100 |
+| Active human effort per unit, baseline | Under 15 min | 15 to 60 min | 61 to 240 min | Over 240 min |
+| Rework and queue burden | None observed | Occasional | Routine | Dominates the cycle |
+| Consequence of better or faster output | None identified | Local convenience | Measurable for the function | Measurable for the decision W01 names |
+
+The score ranks value among permitted candidates; it does not measure feasibility, which the mandatory entry screen and the constraints column carry. An Unknown factor is not scored zero: resolve it or record it as an open item before ranking. Break a tie in favor of the candidate with the lower task risk tier. A high score cannot override a failed permission or risk screen.
+
+## Defect severity scale
+
+Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [Definition of Done](https://github.com/rolldabones/definition-of-done) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool)
+
+Use in W13, W15, W16 and W19. Grade a defect by the consequence it would have if released, not by the effort to fix it. A material defect is S1 or S2. A first pass is accepted only when it carries no S1 or S2 defect. The Client may substitute its own scale; record it in W15 before the first case.
+
+Done when: W15 records this scale or the Client's replacement before the first case; every W16 defect carries a grade and the name of the reviewer who graded it; and every S1 has a W19.
+
+| **Grade** | **Definition** | **Required response** |
+| --- | --- | --- |
+| S1 Critical | A boundary or hard constraint breached: unauthorized input, recipient, tool or action; disclosure; or an error that would mislead a consequential decision if released. | Stop the affected activity at once; open W19; notify the owner and sponsor the same day; restart only on a named authorization. |
+| S2 Major | A mandatory DoD test failed; a fabricated or unsupported material claim; a material omission; an arithmetic error in a figure someone relies on. | Refuse release; correct and retest against the same test; count it as a first-pass failure; open W19 when it repeats or when review missed it. |
+| S3 Minor | An error that changes no meaning and no decision, such as format, a citation locator or non-material wording. | Correct before release; record in W16. |
+| S4 Observation | No defect; a quality or usability note. | Carry to W18. |
+
+The reviewer grades. The owner may raise a grade; lowering one needs a recorded reason and a second reviewer. Between two grades, choose the higher and record why. A defect found after release is graded on its consequence and always opens W19.
+
+## Synthetic case kit
+
+Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [Definition of Done](https://github.com/rolldabones/definition-of-done) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool)
+
+Use to build the rehearsal cases before real-data use is authorized, and for the W12 test set. A synthetic case takes the structure of real work and none of its content.
+
+Done when: the test set and its answer keys are frozen and stored before the first AI-assisted run; every case is labeled synthetic; the case mix and planted conditions are recorded below; and the business owner has confirmed that the cases resemble the real work.
+
+**Build the cases**
+
+- Take document types, field structure, length and defect patterns from the work samples inspected in interviews. Invent every name, party, figure and date. A real record with the names changed is not synthetic: it is redacted material and needs its own approval.
+
+- Use at least four difficulty groups and at least five cases in each, for example the worked case's four: short complete; routine; long; conflicting or incomplete. Match the observed mix, or weight toward difficult cases and record the weighting.
+
+- Plant known conditions in at least one case in four: a date conflict, a missing field, a contradicting source. Include at least two boundary cases for the W12 adversarial family: an instruction embedded in source text and a request outside scope.
+
+- A human who knows the work writes each answer key before the case is used: the material facts a correct output states, the planted conditions and the unknowns it should report. AI may help draft case text in an approved environment; it does not write the answer key and never sees the test set's keys.
+
+**Keep the sets apart**
+
+Tuning, workshop and test cases are separate sets. Freeze the test set before the first run. Operators do not see the answer keys. Workshop cases are not reused for measurement.
+
+| **Case ID** | **Group** | **Pattern taken from (sample ID)** | **Planted condition** | **Answer key ID** | **Set** |
+| --- | --- | --- | --- | --- | --- |
+| ________ | ________ | ________ | ________ | ________ | ________ |
+| ________ | ________ | ________ | ________ | ________ | ________ |
+| ________ | ________ | ________ | ________ | ________ | ________ |
+
+Label every file "SYNTHETIC: fictional teaching material" with its case ID, keep the kit in the approved environment and list it in W14. Synthetic results show how the workflow handles the planted patterns; they do not establish performance on real data. W23 states which results came from synthetic cases, and real-data use needs a W10 authorization for that data class.
+
+Kit author/date __________  Business owner confirmation/date __________  Frozen at __________
+
+## Sponsor report
+
+Sponsor report   Workflow ID __________   Report no. __________   Period __________
+
+Prepared by __________   Accountable owner __________   Evidence location __________
+
+Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook)
+
+Issue on days 15 and 20 and, as the decision pack, on day 28. One page; attach records rather than restating them.
+
+Done when: every figure traces to a W16 or W17 record; every open decision has an owner and a deadline; and the sponsor's acknowledgment and date are recorded.
+
+**Status against the calendar**
+
+On plan, at risk or off plan; days moved and why.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+| **Measure** | **W15 threshold** | **Result to date** | **Source record** |
+| --- | --- | --- | --- |
+| Attempted / accepted / refused / abandoned | ________ | ________ | ________ |
+| First pass accepted / attempted | ________ | ________ | ________ |
+| S1 and S2 defects; control failures | ________ | ________ | ________ |
+| Mean active minutes per completed case | ________ | ________ | ________ |
+
+**What failed and what was done**
+
+S1 and S2 defects, hard stops and W19 references.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Evidence still Requested, or Provided and not Verified**
+
+W14 items that block a decision, with owner and due date.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Decisions needed from the sponsor**
+
+For each: options, recommendation, deadline and the consequence of no decision.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Dissent and open risks**
+
+Recorded dissent from reviewers, operators or counsel; residual risks awaiting acceptance.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Sponsor acknowledged/date __________________
+
+Report measured values, estimates and assumptions separately, and report all attempts. A sponsor report informs a decision; it is not one. Decisions are recorded in W10, W20 or W23. The day-28 report carries the W23 draft and its challenge, early enough that the sponsor has the time and the evidence to decide.
+
 ## W01 Engagement charter
 
 W01   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
-Complete at kickoff with the sponsor and business owner. Done when scope, resources, evidence access and acceptance authority are agreed.
+Done when: scope, resources, evidence access and acceptance authority are agreed, and the sponsor and business owner have signed and dated the charter.
+
+Complete at kickoff with the sponsor and business owner.
 
 **Business objective and the decision this engagement will support**
 
@@ -284,7 +485,9 @@ W02   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
-Interview operators and inspect recent work before ranking candidates. A high benefit score cannot override a failed permission or risk screen.
+Done when: every candidate has a completed entry screen and benefit scores with evidence IDs; the selected candidate answers Yes to every mandatory screen item; and the business owner and risk reviewer have signed.
+
+Interview operators with the discovery interview guide and inspect recent work before ranking candidates. Score value on the benefit scale. A high benefit score cannot override a failed permission or risk screen.
 
 | **Candidate and owner** | **Value and frequency** | **Feasibility and constraints** | **Disposition** |
 | --- | --- | --- | --- |
@@ -315,6 +518,8 @@ Business owner/date __________________  Risk reviewer/date __________________
 W03   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: the exact task, the current process map, the sources and failure consequences and the baseline evidence are recorded; and the completion test at the foot of this sheet is met.
 
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook)
 
@@ -354,6 +559,8 @@ W04   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: every role has a named person and alternate with recorded authority; Tier 3 Reviewer, Approver and Owner are distinct; any other combined role carries a recorded rationale; and an intervention has been shown working.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook)
 
 | **Role** | **Named person and alternate** | **Authority and evidence** |
@@ -389,6 +596,8 @@ W05   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: task risk tier, operating tier and legal classification are each recorded with reasons; every material scenario has a W05A; and the hard-stop conditions name a risk acceptance authority.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool)
 
 Record three separate classifications: Kitchen task risk, GRC Workbook operating tier and applicable legal classification. They are not interchangeable.
@@ -422,6 +631,8 @@ Assessment ID and scenario IDs; objective, affected people, cause and consequenc
 W05A   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: inherent and residual risk are both recorded with their evidence basis; every claimed reduction rests on a control marked Verified in W14 or is shown as unverified; and the decision names its authority, conditions and review trigger.
 
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
@@ -467,6 +678,8 @@ W06   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: tool, configuration, data and connections are recorded against verified evidence; the named approver has ticked a status; and an expiry or review date is set.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
 **Tool provider and configuration**
@@ -509,6 +722,8 @@ W07   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: each material requirement has a source locator, an applicability rationale from counsel or the note to confirm with external counsel, a control ID and an evidence status; and every blocking unknown has an owner.
+
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
 Use Client-specific facts and current primary sources. Applicability determinations rest with the Client's counsel or qualified local counsel; the consultant records, links and tests, and does not determine. Items with legal effect carry the note: confirm with external counsel. Do not infer legal compliance from completion of this workbook.
@@ -542,6 +757,8 @@ Separate control design, implementation and operating effectiveness. Mark eviden
 W08   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: the named human has written and signed the tests before any AI use; the count meets the tier; the challenge questions are answered; and the agreed version is frozen.
 
 Source basis: [Definition of Done](https://github.com/rolldabones/definition-of-done) · [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen)
 
@@ -577,6 +794,8 @@ W09   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: the sources examined, the human outline and the material claims are recorded with a time earlier than the first AI run; and the first-pass evidence ID is entered.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [Definition of Done](https://github.com/rolldabones/definition-of-done)
 
 **Sources personally examined**
@@ -609,6 +828,8 @@ For each task/run, retain contemporaneous human first-pass evidence appropriate 
 W10   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: all four elements are stated; all five authorizer conditions are evidenced as met; and the named approver has signed a decision with its conditions and exit.
 
 Source basis: [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) · [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [Definition of Done](https://github.com/rolldabones/definition-of-done) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool)
 
@@ -654,6 +875,8 @@ W11   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: every stage names its human or system action and its boundary; the stop instructions cover each listed condition; and the run record is in use from the first run.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
 **Task entry and authorized materials**
@@ -691,6 +914,8 @@ W12   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: cases, sampling, test families and pass thresholds are approved before the first run; the independent checker is named; and test cases are held apart from tuning cases.
+
 Source basis: [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) · [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen)
 
 **Purpose and scope of the evaluation**
@@ -701,7 +926,7 @@ Workflow and configuration; DoD version; relevant controls; permitted data and e
 
 **Cases and sampling plan**
 
-Normal, difficult and failure cases; selection rationale; sample size; exclusion rules; separation of tuning and test cases.
+Normal, difficult and failure cases; selection rationale; sample size; exclusion rules; separation of tuning and test cases. Build synthetic cases with the synthetic case kit.
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -727,6 +952,8 @@ Record all attempts, failures and fallback work. Small samples cannot establish 
 W13   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: every criterion has an observed result and evidence; the human decision to confirm, refuse or amend and confirm is recorded with the permitted use; and every signature the tier requires is present.
 
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [Definition of Done](https://github.com/rolldabones/definition-of-done)
 
@@ -759,13 +986,15 @@ Reviewer/date __________  Second reviewer if required/date __________
 
 Approver and authority/date __________  Accountable Owner/date __________
 
-For Tier 3, Reviewer, Approver and Owner are distinct. No consequential reliance before the human decision. Link any refusal, defect or follow-up to W18 or W19. At Tier 3 the named owner completes a [Service Record](./service-record.md) within one day of release; recommended at Tier 2, optional at Tier 1. Keep it with the evidence log.
+For Tier 3, Reviewer, Approver and Owner are distinct. Verification is performed against something outside the model; a model's review of its own output in the same session is not verification and does not pass Gate 6. It may inform review; it cannot perform it. No consequential reliance before the human decision. Link any refusal, defect or follow-up to W18 or W19. At Tier 3 the named owner completes a [Service Record](https://github.com/rolldabones/slow-ai-kitchen/blob/main/service-record.md) within one day of release; recommended at Tier 2, optional at Tier 1. Keep it with the evidence log.
 
 ## W14 Evidence register and decision pack
 
 W14   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: every claim, control, test and decision in the decision pack links to an evidence ID with a status; overdue requests have owners; and the system of record and access rules are stated.
 
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
@@ -802,6 +1031,8 @@ W15   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: the business owner has written the thresholds before the pilot; the unit of work and case mix are defined; the defect severity scale or the Client's replacement is recorded; and costs are separated.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
 **Hypothesis and pre-agreed success thresholds**
@@ -824,7 +1055,7 @@ First-pass acceptance measures quality before substantive correction. Final acce
 
 **Scoring and observation method**
 
-Define a material defect, evaluator, blinding where feasible, data capture, missing-data treatment and permitted exclusions.
+Define a material defect (S1 or S2 on the defect severity scale unless the Client records its own), evaluator, blinding where feasible, data capture, missing-data treatment and permitted exclusions.
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -841,6 +1072,8 @@ Report measured values, estimates and assumptions separately. Use W16 for raw ob
 W16   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: all five effort categories and the total are entered with evidence; start, end and elapsed turnaround are recorded; and quality, disposition and the grade of any defect are entered.
 
 Duplicate for each case and method. Include unsuccessful attempts and manual fallback. Enter raw evidence references so totals can be reconstructed.
 
@@ -861,7 +1094,7 @@ Start ________  End ________  Elapsed turnaround ________  Tool cost/unit ______
 
 **Quality and disposition**
 
-First pass accepted Yes/No; defect type/severity; correction; final accepted/refused; release record W13.
+First pass accepted Yes/No; defect type and grade on the defect severity scale; correction; final accepted/refused; release record W13.
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -878,6 +1111,8 @@ Assign time once. W17 totals must include everyone's effort. Do not subtract rev
 W17   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: every measure is calculated from W16 across all attempts; net benefit is shown or marked incomplete with the missing cost named; and limitations sit beside the results.
 
 Calculate from W16. Keep comparison scope and units consistent. Report case-mix differences and missing observations alongside the results.
 
@@ -913,6 +1148,8 @@ Consider variability, reviewer burden and sample size. A failed mandatory gate c
 W18   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: one important case has been inspected; the review records an explicit disposition; and every action has an owner, due date and closure test.
 
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen)
 
@@ -956,9 +1193,11 @@ W19   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: severity is graded on the defect severity scale; containment times are recorded; every action has an effectiveness test; and a named verifier has verified closure with a restart reference where use was paused.
+
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
-Issue ID ________  Reported at ________  Workflow/version ________  Severity ________
+Issue ID ________  Reported at ________  Workflow/version ________  Severity (S1 to S4) ________
 
 **Event and affected people or outputs**
 
@@ -998,6 +1237,8 @@ CAPA means corrective and preventive action. Closure needs evidence that the act
 W20   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: old and new versions are recorded; the affected records are revisited; the required tests are run with a reviewer separate from the proposer; and a bounded decision is signed with its W10 reference.
 
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
@@ -1041,6 +1282,8 @@ W21   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: every action in the table has been demonstrated with observed evidence and time; the result is Pass or Fail against tolerances agreed before the drill; and every failure has a retest.
+
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) · [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen)
 
 **Scenario and pass conditions**
@@ -1077,6 +1320,8 @@ W22   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: each capability has an observed artifact or demonstration against criteria set before the assessment; a result is entered; and the authorizer has recorded scope and expiry.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook)
 
 Person/role __________  Function __________  Assessor __________  Assessment date __________
@@ -1110,6 +1355,8 @@ Set demonstration criteria before the assessment. Attendance alone is not verifi
 W23   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: each decision dimension cites its evidence; the recommendation has been independently challenged; and the sponsor and accountable owner have signed the exact next scope or stop disposition.
 
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen)
 
@@ -1151,6 +1398,8 @@ W24   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
 
+Done when: the receiving owner has demonstrated finding the decision pack, operating the review, escalating an issue and using fallback; every pillar has a named owner and next action; and W24A is complete.
+
 Source basis: [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen) · [GRC Workbook](https://github.com/rolldabones/grc-workbook)
 
 **Transferred operating capability**
@@ -1188,6 +1437,8 @@ The receiver demonstrates finding the decision pack, operating the review, escal
 W24A   Workflow ID __________   Version/date __________   Status __________
 
 Prepared by __________   Accountable owner __________   Evidence location __________
+
+Done when: every indicator has a threshold, recipient, alternate and response time; each period has actions with owners and acceptance evidence; and review dates are set with a chair and decision authority.
 
 Source basis: [GRC Workbook](https://github.com/rolldabones/grc-workbook) · [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) · [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot)
 
@@ -1231,7 +1482,7 @@ Fictional teaching case. All roles, records, numbers and thresholds in the worke
 
 **Internal supplier dossier summaries**
 
-Procurement analysts prepare a cited one-page factual summary for internal use. Procurement decisions remain with qualified humans using the original dossier. The rehearsal uses 20 synthetic cases in an approved environment. It excludes vendor ranking, approval, rejection, legal advice, sanctions determinations and external communications.
+Procurement analysts prepare a cited one-page factual summary for internal use. Procurement decisions remain with qualified humans using the original dossier. The rehearsal uses 20 synthetic cases, built with the synthetic case kit, in an approved environment. It excludes vendor ranking, approval, rejection, legal advice, sanctions determinations and external communications.
 
 Illustrative classification: Kitchen task Tier 2 and GRC operating Tier 1. The classification depends on actual consequence and must be reassessed if the summary is used to determine supplier eligibility. Named fictional roles: procurement operations manager owns the workflow; procurement director authorizes scope; two trained analysts prepare drafts; a different analyst reviews each output; IT/security owns tool evidence.
 
@@ -1259,16 +1510,18 @@ Fictional measurements. Five cases per difficulty group. Different analysts perf
 | Conflicting or incomplete | 5 | 300 | 225 | 4/5 | 3/5 |
 | Total | 20 | 900 | 600 | 18/20 | 16/20 |
 
-| **Human effort category** | **Manual minutes** | **AI minutes** |
+| **W16 human effort category** | **Manual minutes** | **AI minutes** |
 | --- | --- | --- |
-| Preparation and production | 600 | 230 |
-| Initial independent review | 200 | 220 |
-| Correction and re-review | 100 | 150 |
-| Total | 900 | 600 |
+| Preparation and first-pass work | 250 | 100 |
+| Production or AI interaction | 350 | 130 |
+| Initial review | 170 | 190 |
+| Correction and re-review including fallback | 100 | 150 |
+| Final approval and case-specific administration | 30 | 30 |
+| Total active human effort | 900 | 600 |
 
-AI preparation and production includes 100 minutes of human framing/source work plus 130 minutes of active interaction and draft handling. Final case approval is included in review. Categories are counted once.
+The categories are W16's five. With AI, preparation and first-pass work is 100 minutes of human framing and source work; production is 130 minutes of active interaction and draft handling. Final approval has its own row. No case fell back to manual work; fallback minutes would sit in the fourth row. A first pass fails on any S1 or S2 defect. Each minute is counted once.
 
-Mean active effort is 45 minutes manually and 30 minutes with AI. Case-processing saving is 900 minus 600 = 300 minutes, or 5 hours. Reduction is 300 divided by 900 = 33.3%. Reviewer and correction effort increased and is already included.
+Mean active effort is 45 minutes manually and 30 minutes with AI. Case-processing saving is 900 minus 600 = 300 minutes, or 5 hours. Reduction is 300 divided by 900 = 33.3%. Initial review rose from 170 to 190 minutes and correction from 100 to 150; both are already included.
 
 One-time setup, training and control design consumed 16 person-hours. The 5-hour case saving minus 16 invested is an 11-hour deficit before additional recurring oversight. Oversight effort and tool fees are unmeasured, so full net benefit is incomplete. Capacity released is not a realized cash saving.
 
@@ -1358,26 +1611,26 @@ This check closes the consulting delivery. W23 records the organizational use de
 
 ## Resource register and source attribution
 
-The resources below anchor the workbook. Sources are cited by name throughout; versions are pinned here once. Currency note: versions as re-verified on 17 October 2026 (KST) against the released tags; first reviewed 6 September 2026 (KST). At each engagement, record the adopted versions in the field at the end of this workbook and examine subsequent changes before replacing them.
+The resources below anchor the workbook. Sources are cited by name throughout; versions are pinned here once. Currency note: versions as re-verified on 18 October 2026 (KST), against the released tags and, for Definition of Done, the AI Impact Assessment Tool, the AI GRC Copilot and the GRC method, against the releases that ship with this one; first reviewed 6 September 2026 (KST). None of the 18 October releases changes a function cited here: the GRC Workbook's Module 11 Final Liability wording now matches the canon; Definition of Done keeps its four lenses; the AI Impact Assessment Tool and AI GRC Copilot releases follow the retirement of their custom GPTs and keep the evidence states and artifact steps this register names; the GRC method's release aligns its A2 and A4 prompts with its templates and remains the operating method with its guides, prompts and templates. At each engagement, record the adopted versions in the field at the end of this workbook and examine subsequent changes before replacing them.
 
 | Resource | Version reviewed | Role in this workbook |
 | --- | --- | --- |
-| [Slow AI Kitchen](./README.md) (this repository) | Moves with this repository; the README controls | Canonical 12 steps, 10 gates, roles, risk tiers, workshop and the five institutional pillars |
-| [Service Record](./service-record.md) (this repository) | Moves with this repository | One-page close-out after Gate 7; required Tier 3, recommended Tier 2, optional Tier 1 |
+| [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md) (this repository) | Moves with this repository; the README controls | Canonical 12 steps, 10 gates, roles, risk tiers, workshop and the five institutional pillars |
+| [Service Record](https://github.com/rolldabones/slow-ai-kitchen/blob/main/service-record.md) (this repository) | Moves with this repository | One-page close-out after Gate 7; required Tier 3, recommended Tier 2, optional Tier 1 |
 | [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) | v1.2.0, 17 October 2026 | Normative statement of Slow AI, Informed Intent (two limbs) and Final Liability, with the short forms (section 8) |
-| [Definition of Done](https://github.com/rolldabones/definition-of-done) | v1.2.4, 17 October 2026 | Human definition and confirmation of done; four lenses for material factors |
-| [GRC Workbook](https://github.com/rolldabones/grc-workbook) | v4.3.2, 17 October 2026 | Operating cycle, the authorizer's five conditions (Module 10), release tiering from observation to autonomous operation (recorded here as the operating tier), accountability, oversight and continuing governance |
-| [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) | v1.2.12, 17 October 2026 | Assessment design, evidence states (Requested, Provided, Verified, Not verified), testing, monitoring and decision records |
-| [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) | v1.1.8, 17 October 2026 | Artifact ownership, control steps, evidence, systems of record, cadence, testing, exceptions and approval |
-| [GRC method](https://github.com/rolldabones/grc) | v2.2.4, 17 October 2026 | Underlying governance, risk management and compliance operating method and companion resources |
+| [Definition of Done](https://github.com/rolldabones/definition-of-done) | v1.2.5, 18 October 2026 | Human definition and confirmation of done; four lenses for material factors |
+| [GRC Workbook](https://github.com/rolldabones/grc-workbook) | v4.3.3, 18 October 2026 | Operating cycle, the authorizer's five conditions (Module 10), release tiering from observation to autonomous operation (recorded here as the operating tier), accountability, oversight and continuing governance |
+| [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) | v1.4.0, 18 October 2026 | Assessment design, evidence states (Requested, Provided, Verified, Not verified), testing, monitoring and decision records |
+| [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) | v1.2.1, 18 October 2026 | Artifact ownership, control steps, evidence, systems of record, cadence, testing, exceptions and approval |
+| [GRC method](https://github.com/rolldabones/grc) | v2.3.0, 18 October 2026 | Underlying governance, risk management and compliance operating method and companion resources |
 
 ### Authorship and production
 
-Son-U Michael Paik, GRC Solutions Korea, is the author of record. The workbook was drafted with AI assistance from the sources above and was reviewed, corrected and authorized by the author before publication, which Coetzee's Kitchen describes as Cognitive Provenance (see [coetzees-kitchen.md](./coetzees-kitchen.md)). It adds a 30-day delivery sequence, working forms, measurement rules and a fictional case. It applies the source doctrines without replacing the canonical method; the README controls in any conflict. The markdown file is the file of record; no other format is published.
+Son-U Michael Paik, GRC Solutions Korea, is the author of record. The workbook was drafted with AI assistance from the sources above and was reviewed, corrected and authorized by the author before publication, which Coetzee's Kitchen describes as Cognitive Provenance (see [coetzees-kitchen.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/coetzees-kitchen.md)). It adds a 30-day delivery sequence and calendar, delivery instruments, working forms, measurement rules and a fictional case. It applies the source doctrines without replacing the canonical method; the README controls in any conflict. The markdown file is the file of record. The [workbook/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/README.md) folder carries the same text as one derived part per section, generated from this file with the account's splitting tool and verified to rebuild it byte for byte; parts are never edited directly.
 
 ### License and attribution
 
-This file is licensed with the repository under CC BY-NC-SA 4.0; commercial use requires the author's prior written permission (see the README [License](./README.md#license)). Slow AI Kitchen and Definition of Done state CC BY-NC-SA 4.0; the GRC Workbook states CC BY-SA 4.0 and attributes the underlying GRC Capability Model 3.5 to OCEG. No OCEG endorsement is implied. Client records remain subject to the Client's confidentiality and use arrangements.
+This file is licensed with the repository under CC BY-NC-SA 4.0; commercial use requires the author's prior written permission (see the README [License](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md#license)). Slow AI Kitchen and Definition of Done state CC BY-NC-SA 4.0; the GRC Workbook states CC BY-SA 4.0 and attributes the underlying GRC Capability Model 3.5 to OCEG. No OCEG endorsement is implied. Client records remain subject to the Client's confidentiality and use arrangements.
 
 ## Resource navigator for delivery
 
@@ -1411,7 +1664,7 @@ Use when the initial engagement identifies a need for a broader capability-build
 
 **Companion use**
 
-This repository also carries the [Slow AI Cookbook](./slow-ai-cookbook.md), Tier 1 and Tier 2 recipes, and two sample operating prompts, the [compressed builder version](./sample-kitchen-prompts-compressed-builder-version.md) and the [two-layer version](./sample-kitchen-prompts-two-layer-version.md). Read each scope note before use; the README governs any conflict. Select examples that fit the Client's work and preserve human ownership of criteria, preparation and confirmation.
+This repository also carries the [Slow AI Cookbook](https://github.com/rolldabones/slow-ai-kitchen/blob/main/slow-ai-cookbook.md), Tier 1 and Tier 2 recipes, and two sample operating prompts, the [compressed builder version](https://github.com/rolldabones/slow-ai-kitchen/blob/main/sample-kitchen-prompts-compressed-builder-version.md) and the [two-layer version](https://github.com/rolldabones/slow-ai-kitchen/blob/main/sample-kitchen-prompts-two-layer-version.md). Read each scope note before use; the README governs any conflict. Select examples that fit the Client's work and preserve human ownership of criteria, preparation and confirmation.
 
 **Adopted source versions and changes for this engagement**
 
@@ -1419,7 +1672,7 @@ This repository also carries the [Slow AI Cookbook](./slow-ai-cookbook.md), Tier
 
 ---
 
-Related: [Service Record](./service-record.md) (the close-out each released service produces); [The Workshop](./README.md#the-workshop) and [The Feast](./README.md#the-feast) (README); [Addendum: Your Restaurant](./README.md#addendum-your-restaurant) (the five pillars W24 hands over); [grc-workbook](https://github.com/rolldabones/grc-workbook) (the instrument for the permanent capability the engagement points toward); [AI-Governance-Academy](https://github.com/rolldabones/AI-Governance-Academy) (program options when the engagement calls for a broader build).
+Related: [Service Record](https://github.com/rolldabones/slow-ai-kitchen/blob/main/service-record.md) (the close-out each released service produces); [The Workshop](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md#the-workshop) and [The Feast](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md#the-feast) (README); [Addendum: Your Restaurant](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md#addendum-your-restaurant) (the five pillars W24 hands over); [grc-workbook](https://github.com/rolldabones/grc-workbook) (the instrument for the permanent capability the engagement points toward); [AI-Governance-Academy](https://github.com/rolldabones/AI-Governance-Academy) (program options when the engagement calls for a broader build).
 
 *This workbook is provided for general informational purposes and for use within an authorized engagement. It does not constitute legal advice with respect to any specific matter, jurisdiction or engagement. Applicability determinations rest with the Client's counsel or qualified local counsel.*
 
