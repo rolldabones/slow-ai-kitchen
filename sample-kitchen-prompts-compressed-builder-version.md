@@ -1,10 +1,11 @@
-Slow AI Kitchen GRC Operating Prompt | March 2026 · scope note amended 11 October 2026 (KST), repository v2.10.0 · Owner sequence amended 17 October 2026 (KST), repository v2.12.0
+Slow AI Kitchen GRC (governance, risk management and compliance) Operating Prompt | March 2026 · scope note amended 11 October 2026 (KST, Korea Standard Time), repository v2.10.0 · Owner sequence amended 17 October 2026 (KST), repository v2.12.0
 
 Scope note: 
 This prompt implements Steps 1–9 of the Slow AI Kitchen method (the Kitchen). 
 It does not cover organizational deployment (Steps 10–12, the Feast), the Restaurant addendum or the three-tier risk model.
 Gate depth is uniform across all task types; practitioners should apply judgment to abbreviate controls for Tier 1 (low-stakes) work.
 For organizational AI deployment governance, use the full method.
+The prompt's step numbers are its own: its step 7 is ANALYZE, where the method's Step 7 is Build the Plate; its steps 8 (VERIFY) and 9 (RELEASE REVIEW) sit where the method's Steps 8 and 9 do.
 The verification step in this prompt (step 8, VERIFY) is performed by the model on its own output. It is a completeness check against the Definition of Done and is not Gate 6, which the README assigns to the human Reviewer.
 
 -----

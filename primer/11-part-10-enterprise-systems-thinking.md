@@ -92,7 +92,7 @@ A policy assistant with a well-tuned retrieval stack: appropriate chunking, a la
 
 A tier-four deployment routed high-impact outputs to a human approver. The control was documented, tested and audited. Approval rate: 99.8 percent. The approver was a junior analyst with two hundred items a day queued, no time to open a source, no subject-matter standing to disagree with a senior originator and a performance measure based on throughput.
 
-**Systemic diagnosis:** the control existed in the design and not in the world. **A human control requires four things and this one had one:** time to perform it, information to perform it with, standing to disagree and an incentive that does not punish disagreement. This is a **people-and-controls interaction failure**, the most dangerous of the five: it produces a complete evidence trail of a control that never operated, worse than no control, since the organization has relied on it and can prove it.
+**Systemic diagnosis:** the control existed in the design and not in the world. **A human control requires four things and this one had none:** time to perform it, information to perform it with, standing to disagree and an incentive that does not punish disagreement. This is a **people-and-controls interaction failure**, the most dangerous of the five: it produces a complete evidence trail of a control that never operated, worse than no control, since the organization has relied on it and can prove it.
 
 **Decision rule: for every human control, name the time, the information, the standing and the incentive, and if any of the four is absent the control does not exist regardless of what the evidence shows.**
 
@@ -163,7 +163,7 @@ Where to intervene, worst to best. The ranking is the argument.
 
 | Rank | Leverage point | Example | Why it sits here |
 | --- | --- | --- | --- |
-| 6 (weakest) | **Parameters** | Retrieval top-k, temperature, similarity threshold | Tuning inside a structure that produces the problem. Highest activity, lowest yield and where most effort goes |
+| 6 (weakest) | **Parameters** | Retrieval top-k, effort level, similarity threshold | Tuning inside a structure that produces the problem. Highest activity, lowest yield and where most effort goes |
 | 5 | **Buffers and stocks** | Add reviewers, extend the queue | Relieves a symptom without changing the loop that generates it. Necessary and never sufficient |
 | 4 | **Delays** | Weekly quality sampling instead of monthly; leading indicators on reviewer load | Shortening a delay stops oscillation. Cheap, high-yield and consistently overlooked |
 | 3 | **Information flows** | Show the reviewer what the system was uncertain about; show the executive the segment breakdown; publish the fix log to users | Changing who knows what, when, changes behavior without changing any rule. The best value per unit of effort in the table |
@@ -300,7 +300,7 @@ Two further properties belong to the stance rather than the list.
 1. An enterprise artificial intelligence deployment is a socio-technical system of six elements: people, artificial intelligence, workflow, governance, data and operational controls. **A change to any one changes the requirements of the other five, without exception.**
 2. Model-level thinking fails because every component can be correct while the system fails. The accurate model evaluated on a population users never send it. The well governed system whose cumulative control friction exceeded its time saving. The high-adoption system whose observability was sized for debugging rather than for the obligation period. The excellent retrieval over a corpus holding three unmarked versions of the same policy. The human control with a 99.8 percent approval rate because the reviewer had no time, no information, no standing and the wrong incentive.
 3. After it works, seven second-order effects arrive: workload displaced to review, deskilling with a succession consequence, the reviewer as bottleneck, volume induced by cheapness, gaming under any single incentivized metric, accountability diffused across four parties who each assume another is the check, and the manual path atrophying into a continuity risk.
-4. The operating model is a set of loops. The reinforcing one runs backwards at the same speed, the balancing ones are delayed by weeks to months and that delay causes oscillation, and **the corpus-pollution loop is the one nobody instruments.**
+4. The operating model is a set of loops. The reinforcing one runs backwards at the same rate or faster, the balancing ones are delayed by weeks to months and that delay causes oscillation, and **the corpus-pollution loop is the one nobody instruments.**
 5. Intervene at goals and rules before information flows and delays, and at parameters essentially never.
 6. Draw the boundary to include everything whose failure fails the outcome, and refuse local optimization, because subsystem metrics improve while the system degrades.
 7. Treat every handoff as a defect concentrator needing three things stated: what is transferred, what may be assumed and what must be checked.

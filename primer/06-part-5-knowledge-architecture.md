@@ -395,10 +395,13 @@ Retrieval-augmented generation is presented as a technique and operated as a sys
      |                                                 |
      +-----------------------------------------------+ |
                                                        v
-  EVALUATE <- CITE <- GENERATE <- ASSEMBLE <- RERANK <- INDEX
-   (quality) (arch)   (arch)      (arch)     (arch)  (platform)
+                                                     INDEX
+                                                   (platform)
+                                                       |
+                                                       v
+  EVALUATE <- CITE <- GENERATE <- ASSEMBLE <- RERANK <- RETRIEVE
+   (quality) (arch)   (arch)      (arch)     (arch)     (arch)
      ^                                                 |
-     |            RETRIEVE (arch) <--------------------+
      +---------------- query log ----------------------+
 ```
 
@@ -568,7 +571,7 @@ owner: Data Protection Officer
 approver: General Counsel
 status: authoritative
 effective_from: 2026-03-01
-review_due: 2026-09-01
+review_due: 2027-03-01
 jurisdictions: [UK, EU]
 
 scope:
@@ -728,7 +731,7 @@ The knowledge layer is architecture, not a folder. **Six components, each with a
 
 **The golden corpus** is the published, governed subset that the assistant is permitted to answer from. It is deliberately smaller than the estate. **Membership is a decision, not a default**, the decision belongs to knowledge governance, and it has three criteria: the content is authoritative, it has a living owner and it passes the orphan chunk test at section level.
 
-**Staging and publication**, operated by data engineering, is a flow with a validation gate: parse, enrich, validate, preview the chunks, publish. Validation is automated and blocking, checking metadata completeness, effective dates present and not in the past, access labels present, parse fidelity above threshold and no orphan sections above a set proportion. **A document that fails validation goes back to its owner rather than into the index with a warning**, because warnings are not read.
+**Staging and publication**, operated by data engineering, is a flow with a validation gate: parse, enrich, validate, preview the chunks, publish. Validation is automated and blocking, checking metadata completeness, effective dates present, review-due and expiry dates not in the past, access labels present, parse fidelity above threshold and no orphan sections above a set proportion. **A document that fails validation goes back to its owner rather than into the index with a warning**, because warnings are not read.
 
 **Deprecation and tombstoning**, called by the domain owner rather than by the platform. When content is superseded, it is not deleted from the knowledge system. It is **tombstoned**: removed from the serving index, retained in the archive and replaced by a record stating what superseded it and when. This matters for three reasons. Historic questions about what the rule was on a past date remain answerable. Citations in past outputs remain resolvable, which is an audit requirement. And a user who searches for the old document finds the tombstone rather than nothing, which is how they learn the rule changed.
 

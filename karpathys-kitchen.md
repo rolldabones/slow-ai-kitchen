@@ -148,11 +148,11 @@ A word on the title. The borrowing runs in one direction only. The Kitchen is th
 
 ## What This Module Adds to the Method
 
-Slow AI Kitchen states five core principles and calls them operating constraints. It then explains why they work by describing what happens to a team that prompts before it has thought. That explanation is behavioral. It is correct, and it is not sufficient for a reader who wants to know why the constraints take the shape they do rather than some other shape.
+Slow AI Kitchen states Five Operating Rules and calls them operating constraints. It then explains why they work by describing what happens to a team that prompts before it has thought. That explanation is behavioral. It is correct, and it is not sufficient for a reader who wants to know why the constraints take the shape they do rather than some other shape.
 
 This module supplies the layer beneath. It reads twelve works by an engineer rather than a governance author and shows that each of the method's controls is forced by a property of the technology itself. Verify before reliance is not caution. It is the only available response to a class of system that fails without crashing. Keep responsibility human is not sentiment. It is the consequence of a system that accrues agency without accruing responsibility.
 
-The seven-point synthesis below is not a restatement of the five core principles. Two of its points, design for silent failure and preserve the human principal, are those principles derived. The rest extend past the task register into system and program scale, where the method already operates through the Feast and the Your Restaurant addendum. Nothing in the synthesis contradicts a principle and nothing replaces one.
+The seven-point synthesis below is not a restatement of the Five Operating Rules. Two of its points, design for silent failure and preserve the human principal, are those rules derived. The rest extend past the task register into system and program scale, where the method already operates through the Feast and the Your Restaurant addendum. Nothing in the synthesis contradicts a principle and nothing replaces one.
 
 Nothing here is new doctrine. The twelve steps, the ten gates, the three tiers and the two role sets are unchanged, and this module defers to them throughout. Where it names an accountable human it names one of the method's canonical roles. Where it names a control it points at the gate that already carries it. The contribution is the derivation, not the architecture.
 

@@ -94,7 +94,7 @@ The fourth dimension deserves its own table, because "test the edge cases" is no
 
 Prompts and artificial intelligence systems are chronically under-tested because they look like they work. The output is fluent, so it looks fine, and fluency is not accuracy. Three paths present themselves after writing a prompt and two of them are traps: ship it after one try, or test against a handful of hand-picked inputs and tweak until they pass. Both feel like testing and prove almost nothing. The third is an evaluation pipeline that scores performance across many cases and produces a number.
 
-**The value of the number is not its level; it is that comparison becomes possible.** Without it, "better" means "I like it more now." It is also what makes the standing instruction operable: add complexity only when it **demonstrably** improves outcomes, and demonstrably requires a number.
+**The value of the number is not its level; it is that comparison becomes possible.** Without it, "better" means "I like it more now." It is also what makes the standing instruction operable: add complexity only when it **demonstrably** improves outcomes, and demonstrably requires a number. Evaluation before release is one of the places this Primer carries the Slow AI doctrine (see Doctrine, in the front matter).
 
 **You cannot improve what you have not defined.** An eyeball check across three examples proves nothing. The evaluation suite is the durable asset here, not the prompt: prompts get rewritten constantly, and the dataset and the graders are what let anyone rewrite them safely.
 
@@ -285,9 +285,9 @@ Code graders, model graders and human graders. **The robust pattern combines a c
 
 1. **Have detailed, clear rubrics**, with automatic-fail conditions stated explicitly. The documentation's worked example: "The answer should always mention 'Acme Inc.' in the first sentence. If it does not, the answer is automatically graded as 'incorrect.'" A single criterion may need several rubrics for holistic evaluation.
 2. **Be empirical or specific.** Instruct the grader to output only 'correct' or 'incorrect', or to judge on a 1 to 5 scale. Purely qualitative evaluation cannot be assessed quickly or at scale.
-3. **Encourage reasoning.** Ask the grader to think first before deciding a score, **and then discard the reasoning.** This increases evaluation performance, particularly for tasks requiring complex judgment.
+3. **Encourage reasoning.** Use a grader model with thinking on, **so that it reasons before it produces an evaluation score.** This increases evaluation performance, particularly for tasks requiring complex judgment.
 
-The third carries a refinement over the general advice about reasoning: the reasoning exists to improve the score and is then thrown away. It is a mechanism for better grading, not an artifact you keep.
+The third is a mechanism for better grading: the reasoning exists to improve the score, so it has to come before the score rather than be written after it to justify one.
 
 #### Named eval methods
 
@@ -367,7 +367,7 @@ A harness with one invocation point runs when somebody remembers. Four points, w
 
 ⧉ **An unbudgeted harness gets switched off quietly, and that is the most common way evaluation stops.** It is never a decision to stop measuring. It is a cost review, a line nobody owns and a cadence reduced from nightly to weekly to on request, after which quality is asserted rather than known. Three defenses: fund it as part of the system rather than as a project cost, name its owner where the model spend is owned and keep the run cheap through prefix caching, the batch lane in 8.10 and a cheaper grader model held to the calibration obligation in 8.6.
 
-Every run emits the same set: the manifest, the per-case scores with grader reasoning discarded, the segment breakdown, the aggregate with its spread and the pass or fail against the agreed threshold. Dated, retained and written where the operating team cannot edit it, that set is the evaluation artifact the evidence register in 4.9 requires. Its value is that the operation emits it rather than somebody assembling it before an inspection, the distinction between design-time and operating-effectiveness evidence.
+Every run emits the same set: the manifest, the per-case scores, the segment breakdown, the aggregate with its spread and the pass or fail against the agreed threshold. Dated, retained and written where the operating team cannot edit it, that set is the evaluation artifact the evidence register in 4.9 requires. Its value is that the operation emits it rather than somebody assembling it before an inspection, the distinction between design-time and operating-effectiveness evidence.
 
 ### ⌂ The architect's lens
 
@@ -510,7 +510,7 @@ Observability is the ability to answer questions about a running system without 
 | --- | --- |
 | **Correlation identifier** tying every step of one logical request together across model calls, tool calls and agents | Without it, multi-step systems are undebuggable. The most important item here |
 | **Prompt version and model identifier**, with effort and thinking configuration | When quality changes this is the first thing you want and the most commonly missing. Effort belongs in this set |
-| **The three token fields**: `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens` | They bill at 1x, 1.25x and the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`) respectively. Note that `input_tokens` counts **only tokens after the last cache breakpoint**, so total input is the sum of all three. Getting this wrong understates usage |
+| **The three token fields**: `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens` | They bill at 1x, the cache-write multiplier (1.25x on the five-minute lifetime, 2x on the one-hour lifetime; Appendix I, `cache.write.5m.multiplier`, `cache.write.1h.multiplier`) and the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`) respectively. Note that `input_tokens` counts **only tokens after the last cache breakpoint**, so total input is the sum of all three. Getting this wrong understates usage |
 | **Latency as a distribution**: median, p95, p99 and time-to-first-token separately | Averages hide the tail, and the tail is what users complain about |
 | **Tool calls, arguments and outcomes**, with error categories | Tells you what the system actually did |
 | **Retrieval detail**: what was retrieved, with scores, and whether the answer used it | Retrieval quality is invisible unless logged, and it is the most common cause of confident wrong answers |
@@ -575,7 +575,7 @@ Having named the class, map the symptom to the component that could have produce
 | Symptom | First suspect |
 | --- | --- |
 | Confident wrong answers beginning at a content update, model and latency unchanged | **Retrieval and indexing** |
-| Output format wrong or inconsistent | The prompt or the output contract. Enforce a schema; prefill; add examples |
+| Output format wrong or inconsistent | The prompt or the output contract. Enforce a schema with structured outputs; state the format in the instructions; add examples |
 | Fields fabricated that are absent from the source | **A required schema field that should be optional.** A required field forces invention |
 | Identical inputs producing different answers | Non-determinism, or more often criteria vague enough that several answers are defensible |
 | Quality degrading over a long conversation | Context management: accumulated clutter, summarization erosion, key facts lost from the middle |
@@ -644,7 +644,7 @@ Online comparison is A/B testing, and the discipline it requires is the one A/B 
 
 **The peeking problem is the one that catches experienced teams.** Checking the result repeatedly and stopping when it turns significant inflates the false-positive rate far above the nominal threshold, because each look is another chance for noise to cross the line. The remedy is a stopping rule fixed in advance: a target sample size, or an explicitly sequential design whose thresholds already account for repeated looks. A dashboard that anyone can watch continuously is a peeking machine, and the discipline has to be procedural because the dashboard will not enforce it.
 
-**Segment reporting multiplies the comparisons.** Reporting one primary metric across twelve segments is twelve tests, and at a conventional threshold roughly one will look significant by chance. Nominate the primary metric and the primary segment in advance; treat every other segment as exploratory, generating hypotheses for the next test rather than conclusions for this one.
+**Segment reporting multiplies the comparisons.** Reporting one primary metric across twelve segments is twelve tests, and at a conventional threshold of 0.05 there is about a 46 percent chance that at least one looks significant by chance (0.6 expected). Nominate the primary metric and the primary segment in advance; treat every other segment as exploratory, generating hypotheses for the next test rather than conclusions for this one.
 
 **Control the input distribution across arms, not only the assignment.** Random assignment of requests distributes inputs evenly in expectation and does not do so in any particular test, and at small samples the gap between those two statements is where false results live. Where the input population is heterogeneous, and a document corpus ranging from a few pages to many is the ordinary case, an arm can receive materially fewer hard cases than the other and return an improvement that is an artifact of routing. Stratify the assignment on whatever dimension drives difficulty, and report the composition of each arm alongside the result. **An unreported arm composition is an uncheckable result**, because the reader cannot distinguish a better version from an easier sample.
 
@@ -734,7 +734,7 @@ A metrics list is a dashboard nobody reads. **A metrics architecture is four lev
 | **3 Adoption** | Is it used, by whom, for what? | Weekly active users as a share of eligible, tasks per active user, repeat use rate, share of eligible work processed, abandonment rate | Weeks | Business owner |
 | **4 Business outcome** | Did it change anything that matters? | Cycle time, cost per case, throughput per person, quality of the end product, deflection rate, revenue or loss effect | Quarters | Sponsor |
 
-**Leading and lagging.** Levels 1 and 2 lead; levels 3 and 4 lag. **Override rate is the single most useful leading indicator in the set**, because users generate it while doing their job and it moves within hours where the level 4 measures move over quarters. It leads on quality rather than on outcome generally: a degradation arriving through a change in the surrounding process moves level 4 without ever touching the override rate, so a flat override rate is evidence about the system and not about the deployment. Repeat use rate is the best leading indicator of level 4, and people who tried the system twice and stopped are the most informative population in the deployment and the one nobody interviews.
+**Leading and lagging.** Levels 1 and 2 lead; levels 3 and 4 lag. **Override rate is the single most useful leading indicator in the set**, because users generate it while doing their job and it moves within hours where the level 4 measures move over quarters. It leads on quality rather than on outcome generally: a degradation arriving through a change in the surrounding process moves level 4 without ever touching the override rate, so a flat override rate is evidence about the system and not about the deployment. Repeat use rate is the best leading indicator of level 4, and abandoned users, as 7.3 defines them (activated, then no real-work usage for four consecutive weeks), are the most informative population in the deployment and the one nobody interviews.
 
 ### The vanity metrics to refuse
 
@@ -1034,7 +1034,7 @@ Cost engineering is choosing the cheap design. **Cost operations is keeping it c
 | Input | Detail |
 | --- | --- |
 | **Volume** | Requests per day, and the **peak rate**, usually several times the average. Peak is what has to fit inside rate limits |
-| **Tokens per request** | Split three ways: fresh input at 1x, cache writes at 1.25x and cache reads at the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`), with output priced separately and higher. The split is the thing most cost models get wrong. **Count the tokens on the model you will ship**, because the tokenizer changed at 4.7 and later models produce materially more tokens for the same text, so a count carried over from an earlier generation understates the bill by a margin no other line in this table can absorb |
+| **Tokens per request** | Split three ways: fresh input at 1x, cache writes at 1.25x on the five-minute lifetime or 2x on the one-hour lifetime (Appendix I, `cache.write.5m.multiplier`, `cache.write.1h.multiplier`) and cache reads at the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`), with output priced separately and higher. The split is the thing most cost models get wrong. **Count the tokens on the model you will ship**, because the tokenizer changed at 4.7 and later models produce materially more tokens for the same text, so a count carried over from an earlier generation understates the bill by a margin no other line in this table can absorb |
 | **Call multiplier** | How many model calls per completed task. Rung 0 on the complexity ladder is a single call, rung 1 is one to a few, rung 7 is a dynamic workflow whose number of calls is variable and composed at runtime, and rung 8, the autonomous agent, is the unbounded one. This is where the ladder and the cost model meet |
 | **Unit prices** | Per model, per token type. Perishable; verify |
 | **Cost per request** | The arithmetic |
@@ -1043,8 +1043,8 @@ Cost engineering is choosing the cheap design. **Cost operations is keeping it c
 | **Feasibility** | Whether it clears the business case at all |
 
 Two refinements the current pricing structure adds. **Cache hits are not deducted against rate limits**, so caching relieves a capacity constraint as well as a cost one. And **the cache hit ratio is the single most informative number in a cost model**, because the gap between 1x and the cache-read multiplier is where the money is: a system with a cold cache costs roughly ten to forty times more per input token than the same system with a warm one, depending on the model (Appendix I, `cache.read.multiplier.*`).
-**Two qualifications on the caching and batch lines above, both of which change a cost model rather than refine it.** Caching savings assume the cache is warm when the next request arrives, so a workload whose request frequency is lower than the cache lifetime will not realize them consistently: the model shows a saving the traffic pattern never delivers. And where the batch discount is load-bearing in a regulated deployment, ⚠ verify that batch processing is covered under the applicable business associate agreement and compliance configuration before routing protected data through it, because a cost model resting on a route the compliance position does not cover is not a cost model.
 
+**Two qualifications, on the caching line above and the batch section below, both of which change a cost model rather than refine it.** Caching savings assume the cache is warm when the next request arrives, so a workload whose request frequency is lower than the cache lifetime will not realize them consistently: the model shows a saving the traffic pattern never delivers. And where the batch discount is load-bearing in a regulated deployment, ⚠ verify that batch processing is covered under the applicable business associate agreement and compliance configuration before routing protected data through it, because a cost model resting on a route the compliance position does not cover is not a cost model.
 
 **Three things a sizing model is actually for.**
 
@@ -1108,13 +1108,13 @@ Nearly everything that improves quality costs time. Agentic systems in particula
 | **Tighter retrieval** | Less context to process. Reranking reduces cost and latency because the model processes less |
 | **Trimming output length** | Output tokens are generated serially, so output length drives total time more than input length |
 
-**No, nothing is blocked.** Batch processing is available at roughly half cost, with a processing window measured in hours rather than seconds and no guarantee on completion time. It suits overnight reports, periodic audits, bulk extraction and back-population. Batch also supports substantially higher output limits on current models via a beta header, which makes it the right lane for very long single outputs regardless of the cost argument.
+**No, nothing is blocked.** Batch processing is available at roughly half cost, with a processing window measured in hours rather than seconds and no guarantee on completion time. It suits overnight reports, periodic audits, bulk extraction and back-population. Batch also supports substantially higher output limits on the current Opus-, Sonnet- and Haiku-class models (Appendix I, `batch.output_300k.models`; the current Fable-class model is not listed) via a beta header, on the Claude API and Claude Platform on AWS, which makes it the right lane for very long single outputs regardless of the cost argument.
 
 **The tool-use limitation is narrower than it is usually stated, and getting it wrong excludes batch from workloads it suits.** Server-side tools run normally in a batched request, because the batch worker executes the same agentic loop the synchronous path does and in fact runs more iterations per turn before it pauses. What batch cannot do is a **client-side** tool round trip inside one request, because there is no open connection for your code to return a result on. A paused turn comes back as a result and is continued by submitting a follow-up request. **So the rule is not "no tools in batch". It is that every client-side tool call costs a round trip through the queue**, which is what makes an agent loop with client-executed tools a poor fit for the lane and a server-tool workload a good one.
 
 **The trap:** batch often finishes quickly in practice. That is not a basis for putting it inside a blocking workflow. **A guarantee you do not have is not a guarantee.**
 
-**The planning technique:** work backward from the commitment. If you have promised thirty hours and the lane guarantees twenty-four, submitting every four hours gives headroom. If you have promised two seconds, the lane is unavailable at any price.
+**The planning technique:** work backward from the commitment. If you have promised thirty hours, the lane does not cover it: twenty-four hours is an expiry, not a completion guarantee (Appendix I, `batch.expiry`), and a request that expires and is resubmitted can take up to forty-eight. Size the promise for resubmission after expiry. If you have promised two seconds, the lane is unavailable at any price.
 
 **Express the trade-off as a choice with named consequences rather than as a technical constraint.** "Two seconds at this accuracy, or ten seconds at this accuracy, and here is what each error costs" is a decision the business owner can make.
 
@@ -1276,7 +1276,7 @@ Documentation is the mechanism by which a design survives the departure of its a
 
 1. Readiness has eight dimensions, binary evidenced conditions, three outcomes and named signatories, and **a gate nobody can fail is not a gate.** Where several conditions are open at once, measurement and ownership are the absences that matter most, because they prevent you fixing the rest.
 2. Write the eval suite before the production code. It forces a measurable definition of success, exposes design assumptions while changing them is cheap, and gives you a gate with a pre-change baseline.
-3. Evaluation is the asset that outlives any prompt. Make the success criterion specific, measurable, achievable and relevant; measure the five families of accuracy, latency, cost, safety and security; combine a code grader for validity with a model grader for quality; have the grader reason and then discard the reasoning.
+3. Evaluation is the asset that outlives any prompt. Make the success criterion specific, measurable, achievable and relevant; measure the five families of accuracy, latency, cost, safety and security; combine a code grader for validity with a model grader for quality; have the grader reason, with thinking on, before it scores.
 4. Prioritize volume over quality by automating the grading rather than keeping the set small, reserve humans for calibration and sampled review, and freeze the dataset so comparison keeps meaning something.
 5. **A stale eval suite is worse than none**, because it passes while measuring behavior the system no longer produces. Update the set in the same change as the behavior it measures.
 6. The evaluation harness is the component most often specified and least often built, so ask to see it running: thirty to fifty cases per reported segment, two prompt versions, segment reporting and a deliberate breakage. Every run emits a manifest pinning model, sampling settings, dataset, grader, index and code version, because a score without one cannot be reproduced or defended. A number that moves when a known defect is fixed is what makes the harness an instrument.

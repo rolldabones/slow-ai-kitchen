@@ -4,6 +4,10 @@
 
 *Who may use the service, what may it do and who owns the result?*
 
+**Son-U Michael Paik**
+CEO, GRC Solutions Korea
+[www.grcskorea.com](http://www.grcskorea.com)
+
 | Version | Date | Status | License |
 |---|---|---|---|
 | v1.2.0 | 2026-10-11 (KST) | Final | CC BY-NC-SA 4.0 |
@@ -19,6 +23,7 @@
 - [Stop, reconcile and hand back](#stop-reconcile-and-hand-back)
 - [A worked order: investigate stalled onboarding](#a-worked-order-investigate-stalled-onboarding)
 - [Before another order](#before-another-order)
+- [Source basis and attribution](#source-basis-and-attribution)
 
 ## The order travels
 
@@ -314,7 +319,7 @@ Take-out governs what a human collects. Delivery governs what the system carries
 
 ## Source basis and attribution
 
-Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST). Revised at v1.1.0 against README v2.10.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.10.0) and at v1.2.0 against README v2.11.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.11.0) and DOCTRINE.md v1.1.1, 11 October 2026 (KST).
+Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST). Revised at v1.1.0 against README v2.10.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.10.0) and at v1.2.0 against README v2.11.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.11.0) and DOCTRINE.md v1.1.1, 11 October 2026 (KST). Re-read against README v3.0.1 on 20 October 2026 (KST): the text agrees with the current Owner sequence and Step 8 and is unchanged.
 
 On goal-directed runs: OpenAI, *Using Goals in Codex*, 9 May 2026, https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex, read 11 October 2026 (KST), which describes a goal as a "scoped, user-controlled completion contract", lists six things the strongest goals define, among them boundaries and a blocked stop condition, and states that reaching a budget limit is not the same as completing the objective.
 

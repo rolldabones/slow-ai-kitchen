@@ -19,7 +19,7 @@ The first decision is the connection mechanism itself. Three mechanisms move a c
 | --- | --- | --- |
 | **Tools** | Actions the model can invoke | The **model**, reactively, mid-task |
 | **Resources** | Read-only data the application can fetch | The **application**, proactively. No model decision involved |
-| **Prompts** | Pre-written instructions the maintainer has tested | Either |
+| **Prompts** | Pre-written instructions the maintainer has tested | The **user**, explicitly |
 
 The consequence that matters is about ownership: **the team that knows the service best maintains one integration for everyone**, instead of every application maintaining its own. In *Building Effective Agents* Anthropic frames MCP as one way to implement the augmented LLM's augmentations.
 
@@ -35,12 +35,12 @@ Calling the service the ordinary way from inside your application. Choose it whe
 
 ### Agent-to-agent: agent to peer agent
 
-Agent-to-agent connection means **A2A (Agent2Agent)**, a protocol originated by Google and now a Linux Foundation standard. Its release history, its signed-agent-card milestone and its adoption headcount are perishable and sit in Appendix I with the date they were verified. Three core concepts carry it.
+Agent-to-agent connection means **A2A (Agent2Agent)**, a protocol originated by Google and now a Linux Foundation project (Appendix I, `a2a.origin`). Its release history, its signed-agent-card milestone and its adoption headcount are perishable and sit in Appendix I with the date they were verified. Three core concepts carry it.
 
 | Concept | What it does |
 | --- | --- |
 | **Agent Cards** | The discovery mechanism. Each agent publishes a machine-readable document describing its name, capabilities, supported input and output types and authentication requirements. Analogous to a service descriptor |
-| **Tasks** | The unit of work, with a lifecycle of eight states. Two are interrupted states, **input-required** and **auth-required**, and four are terminal, **completed**, **canceled**, **rejected** and **failed**, with **submitted** and **working** in between. A task that reaches a terminal state cannot restart, so a refinement is a new task inside the same context |
+| **Tasks** | The unit of work, with a lifecycle of eight states (Appendix I, `a2a.task_states`). Two are interrupted states, **input-required** and **auth-required**, and four are terminal, **completed**, **canceled**, **rejected** and **failed**, with **submitted** and **working** in between. A task that reaches a terminal state cannot restart, so a refinement is a new task inside the same context |
 | **Messages and Artifacts** | Messages are the exchange during a task; artifacts are the deliverables the remote agent produces |
 
 The distinction to hold: **MCP is the vertical connection**, an agent reaching into its own toolbox. **A2A is the horizontal connection**, one agent reaching out to a peer it does not control and does not need to understand internally. They are complementary layers, not competitors, and production multi-agent systems commonly use both: A2A across organizational or vendor boundaries, MCP wiring each agent to its own tools and data.
@@ -146,16 +146,16 @@ The sharpest judgment in this area: logging and confirmation prompts are **detec
 Anthropic quantifies this, which turns a judgment call into a threshold.
 
 - **Tool selection accuracy degrades beyond roughly 30 to 50 tools loaded at once.**
-- **50 tools consume roughly 10,000 to 20,000 tokens** in definitions alone.
+- **50 or more MCP tools can consume around 72,000 tokens** in definitions alone (Appendix I, `tools.fifty_definitions`).
 - **A typical five-server setup** (GitHub, Slack, Sentry, Grafana, Splunk) **can consume around 55,000 tokens in definitions before Claude does any work.**
 
 And the qualitative test, which is the best line in the documentation: **if a human engineer cannot definitively say which tool should be used in a given situation, an AI agent cannot be expected to do better.**
 
 **The answer at scale is the tool search tool.** Rather than loading every definition up front, you provide all definitions and mark the ones that should not load with `defer_loading: true`, keeping at least one non-deferred tool, normally tool search itself. Claude's context initially contains only tool search and any non-deferred tools. When Claude needs a capability it does not have, it searches the catalog, which is matched against **tool names, descriptions, argument names and argument descriptions**, and the API returns matching tools as references, **up to five by default**, automatically expanded into full definitions and available for subsequent turns.
 
-**The trade-off runs in both directions.** Tool search costs one extra round trip the first time a tool is discovered, offset by smaller context on every turn. Anthropic states the boundary: **with fewer than about ten tools, loading everything up front is typically faster.** So tool search is not a free improvement, and recommending it for a small toolset is over-engineering.
+**The trade-off runs in both directions.** Tool search costs one extra round trip the first time a tool is discovered, offset by smaller context on every turn. Anthropic states the boundary: **with fewer than about ten tools, standard tool calling is a better fit**, since tool search adds a search step before the tool is used. So tool search is not a free improvement, and recommending it for a small toolset is over-engineering.
 
-**Two variants exist and they take different queries.** The regex variant has Claude write a pattern; the BM25 variant takes a natural-language query. The choice affects how tool names and descriptions should be written, which is a further reason the namespacing rule below is not cosmetic.
+**Two variants exist and they take different queries.** The regex variant has Claude write a pattern; the BM25 (Best Match 25, a keyword ranking function) variant takes a natural-language query. The choice affects how tool names and descriptions should be written, which is a further reason the namespacing rule below is not cosmetic.
 
 **Model support is a published list rather than a generation rule.** The compatibility table is the authority (Appendix I, `toolsearch.models`): it states that Opus 4.1 and earlier do not support tool search, and **Sonnet 5, absent from the table at the 2026-08-11 verification, is listed on 18 October 2026**, which is the reason to read the table rather than assume a newer model inherits the capability. The list, its date and the route-specific qualifications are in Appendix I.
 
@@ -165,7 +165,7 @@ The description is the selection mechanism, so it is a design artifact. The spec
 
 - **Aim for at least three to four sentences per tool description**, more if the tool is complex. Cover what the tool does, when to use it, what data it returns, what each parameter means and any important caveats or limitations, including what the tool does **not** return.
 - **Use meaningful namespacing.** Where tools span multiple services, prefix with the service: `github_list_prs`, `slack_send_message`. This makes selection unambiguous as the library grows and is **especially important when using tool search**, since search matches on names.
-- **Return only high-signal information.** Use semantic, stable identifiers such as slugs or UUIDs rather than opaque internal references, and include only the fields Claude needs to reason about its next step. Bloated responses waste context and make extraction harder.
+- **Return only high-signal information.** Use semantic, stable identifiers such as slugs or universally unique identifiers (UUIDs) rather than opaque internal references, and include only the fields Claude needs to reason about its next step. Bloated responses waste context and make extraction harder.
 - **Consolidate related operations into fewer tools.**
 - For complex or format-sensitive inputs, provide schema-validated **input examples** alongside the description.
 - Anthropic reports spending **more time optimizing tool definitions than the overall prompt** when building their own coding agent.
@@ -451,12 +451,12 @@ Authentication establishes who someone is. Authorization determines what they ma
 
 | Flow | Who holds the credential | Correct when |
 | --- | --- | --- |
-| **Authorization code with PKCE** | The end user, at the identity provider. The client never holds a long-lived secret | A human is present and the application acts with that human's entitlements. PKCE is now the default even for confidential clients, not an alternative for mobile |
+| **Authorization code with PKCE** (Proof Key for Code Exchange) | The end user, at the identity provider. The client never holds a long-lived secret | A human is present and the application acts with that human's entitlements. PKCE is now the default even for confidential clients, not an alternative for mobile |
 | **Client credentials** | The service itself | A backend acts as itself, with no user in the picture. Nightly batch, index refresh, system-to-system |
 | **On-behalf-of / token exchange** | Service A holds a user token and needs a token for service B | A chain of services must preserve the user's identity rather than collapse to a service identity. The mechanism that prevents the shared privileged service account |
 | **Device authorization** | The user, on a second device | A command line tool or a device with no browser |
 | **Workload identity** | The platform, attested from the runtime | A workload proves what it is (this pod, this service account, this cloud role) without a stored secret. The strongest machine identity available |
-| **mTLS** | Both sides, as certificates | Network-level mutual proof between services, often as a second factor beneath a token rather than instead of one |
+| **mTLS** (mutual Transport Layer Security) | Both sides, as certificates | Network-level mutual proof between services, often as a second factor beneath a token rather than instead of one |
 | **API key** | Whoever has the string | Nothing, strictly. In practice: low-risk read paths, partner onboarding and any system that cannot do better |
 
 **Decision rule: use the flow that carries the smallest identity sufficient to authorize the action, and prefer any mechanism that produces a short-lived credential over any mechanism that produces a stored one.**
@@ -903,7 +903,7 @@ What follows is a review checklist, not a tutorial. The architect's job is to lo
 A resilient tool-calling loop, at the level of detail an architect should be able to read.
 
 ```python
-async def run_agent(client, messages, tools, dispatch, max_turns=8):
+async def run_agent(client, messages, tools, dispatch, ctx, max_turns=8):
     for turn in range(max_turns):
         resp = await with_retry(client.messages.create)(
             model=MODEL_PIN, tools=tools, messages=messages,
@@ -927,7 +927,7 @@ async def run_agent(client, messages, tools, dispatch, max_turns=8):
                 continue
             try:
                 out = await asyncio.wait_for(
-                    handler(block.input), timeout=30)
+                    handler(block.input, ctx), timeout=30)
                 results.append(tool_ok(block.id, truncate(out, MAX_RESULT)))
             except ValidationError as e:       # model can repair this
                 results.append(tool_error(block.id, f"invalid input: {e}"))
@@ -951,6 +951,7 @@ A schema-validated tool handler, where the schema and the validation are the sam
 ```python
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal
+from uuid import UUID
 
 class RefundRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")   # rejects invented fields
@@ -959,8 +960,8 @@ class RefundRequest(BaseModel):
     currency: Literal["USD", "EUR", "GBP"]
     reason_code: Literal["damaged", "not_received",
                          "duplicate_charge", "cancelled_in_window", "other"]
-    reason_note: str | None = Field(default=None, max_length=500)
-    idempotency_key: str
+    reason_note: str = Field(default="", max_length=500)   # optional, never null
+    idempotency_key: UUID                       # "format": "uuid" in the schema
 
 TOOL_SCHEMA = {                      # one definition, two uses
     "name": "create_refund",

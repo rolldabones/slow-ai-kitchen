@@ -9,7 +9,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **5xx errors.** The HTTP status class (500 to 599) for a server-side failure to fulfill an otherwise valid request. **500** internal error, **503** service unavailable, **529** overloaded. Usually transient and resolvable with backoff, and categorically distinct from the 4xx codes, which indicate a client-side problem and mostly must not be retried unchanged. The retry decision rule is in 3.8.
 
-**A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation standard. Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
+**A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation project. Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
 
 **Accretion.** What you have instead of an architecture when you cannot name the architecture. No known failure modes, no cost model, no precedent to review against.
 
@@ -93,13 +93,11 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Decision logging.** Capturing the inputs, retrieved context, model output and routing for a single decision, keyed so that decision can be replayed and explained afterward. The same instrumentation as production observability, pointed at a different question: not whether the system is healthy but why this specific decision happened. The retention period and the query path differ accordingly, and the log is itself in scope for the compliance register.
 
-
 **Delegation map.** The artifact decomposition produces. One assignment per part of the request, each justified through Reversibility, Stakes and Accountability.
 
 **Delegation mapping.** The method for deciding which steps Claude owns, which existing systems own and which a human owns, with justification and control for each.
 
 **Delivery Route.** The bottom layer of the platform map: where API traffic terminates, determining whose infrastructure the request runs on. The five routes are Anthropic directly, Claude Platform on AWS, AWS Bedrock, GCP Vertex AI and Microsoft Foundry. Claude Platform on AWS is materially different from Bedrock in billing, feature timing and cache isolation, which is why it is counted separately.
-
 
 **Dense (embeddings).** Semantic indexing: matches semantic similarity, meaning, not words. Earns its place where queries are phrased differently from the source. Paired with sparse and hybrid.
 
@@ -115,20 +113,17 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Embedding.** A numeric representation of a text's meaning, used so that similar meanings can be found by similarity.
 
-
 **Entry Point.** The top layer of the platform map: the surface through which a solution interacts with the platform, what a person or system directly interacts with, the wrapper deciding who can talk to Claude and how. Choosing it is the fourth of the four decisions in 2.1. Note that the MCP primitive's definition uses the same phrase in the opposite direction, meaning points of access into your systems that tools expose.
 
 **Entry-point responsibility map.** A written record of which entry point owns which task and why, produced before integration begins on any deployment spanning more than one route. Prevents the characteristic multi-route failure, which is drift rather than error: a route chosen for one task quietly taking on a second because no boundary was recorded.
 
 **Eval.** Short for evaluation. A structured test set that pairs inputs with expected outputs or quality criteria, runs them against the model and produces a score comparable across model versions, prompts and configurations. The instrument that decides whether a change is an improvement or a regression before it reaches production.
 
-
 **Eval contract.** The set of behaviors a reference architecture is obliged to demonstrate. Each reference architecture carries its own eval contract. You need separate eval sets per architecture, not a single eval set for the composed system.
 
 **Evaluator-optimizer.** A workflow where one call generates and another evaluates in a loop. Fit test: responses improve when a human articulates feedback, and the model can provide that feedback.
 
 **Evidence artifact.** The concrete proof a security or legal reviewer accepts that a control is live: a signed agreement, a configuration screen, an authorization record, a returned log query. **A control named in a design document with no artifact is a claim rather than proof**, and is indistinguishable at audit from a control that is not running.
-
 
 **Existing systems.** The second of the three delegation owners: anything the organization has already paid to make reliable, such as the order-status service, the policy engine, the rules table or the database of record.
 
@@ -146,15 +141,13 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Few-shot prompting.** Teaching by worked examples. Anthropic's guidance: curate diverse canonical examples rather than stuffing edge cases.
 
+**Filter (intake).** One of the five filters of the intake and prioritization funnel in 1.6: problem, assignment, feasibility, governance (a rule-out applied before cost and latency) and portfolio. Called gates before v2.0.0.
+
 **Fixed-size / Semantic / Hierarchical.** The three chunking approaches, chosen by the structure of the source material, not by a default size. Hierarchical is the widest: it preserves document structure **and** retrieves at the level that fits.
 
 **Gate (workflow).** A programmatic check inserted between steps of a chained workflow to confirm the process is still on track. Anthropic's term. Not the Slow AI Kitchen's gates (see Gate, Kitchen) and not the intake filters of 1.6 (see Filter).
 
 **Gate (Kitchen).** One of the ten checkpoints of the Slow AI Kitchen method, Gate 1 Definition of Done to Gate 10 Operational Audit and Review Cycle, that an output or deployment decision must pass before advancing. Defined in the Kitchen README, not in this Primer; see the concordance in the front matter.
-
-**Filter (intake).** One of the five filters of the intake and prioritization funnel in 1.6: problem, assignment, feasibility, governance (a rule-out applied before cost and latency) and portfolio. Called gates before v2.0.0.
-
-**Risk tier.** In this Primer, the T1 Low to T4 Critical band a system is assigned by the additive score and overrides of 4.2. Not the Slow AI Kitchen's Tier 1 to 3 stakes tiers, and not the Public to Restricted data classification of 6.4.
 
 **GDPR (General Data Protection Regulation).** The European Union's data protection regime. Two points an architect keeps straight: it does not require European residency as such, because cross-border transfers are lawful with a valid transfer mechanism, and where a residency requirement nonetheless exists it usually comes from a contract, a regulator or internal policy rather than from the regulation itself.
 
@@ -178,20 +171,17 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Input screening.** A check running before the model call that decides whether a request reaches the model at all. Model-based where intent is ambiguous and the patterns cannot be enumerated; deterministic where the rule is crisp, because a deterministic rule cannot be talked out of its decision.
 
-
 **Judge model.** A model used to score or classify another model's output on a quality a deterministic rule cannot encode, such as toxicity, tone or policy compliance. Evadable by construction, which is why it is chained with deterministic checks rather than relied on alone, and itself a system requiring calibration before its verdicts are trusted.
 
 **Judgment erosion.** The failure where a team ships output it no longer understands because the output reads well and passes its checks. Distinct from the review-volume problem and moving in the opposite direction: volume degrades review by giving reviewers too much to read, judgment erosion by giving them something correct-looking that nobody can explain. The control is the human-understanding dimension of the verification checklist.
 
 **Just-in-time context.** Anthropic's term for loading data at runtime through lightweight references rather than pre-processing everything. The same idea is also called progressive discovery.
 
-
 **Latency percentiles.** Response time reported as a distribution rather than an average. The median describes the typical request and conceals the tail; p95 describes the experience of the worst one request in twenty and is the figure a service level is written against. A design reviewed on its median has been reviewed on its best behavior.
 
 **Least privilege.** Granting only the capability a role requires. It means **removing** what is not needed, not supervising it.
 
 **Live state.** Data whose current value is owned by a system and changes independently of any index: order status, inventory count, price, calendar slot, account balance. The correct answer at 10:00 may be wrong by 10:05. **Live state requires a tool call against the system of record, never retrieval over a snapshot of it.** The single most useful term in the reference-architecture vocabulary, because naming it is how the characteristic failure of 2.5 gets caught in review.
-
 
 **Lookback window.** The twenty-block limit on how far back prompt caching searches for a previously written cache entry. Exceeding it silently loses cache hits.
 
@@ -215,14 +205,13 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Output screening.** A check running before the response reaches the user. A judge model where the quality needs language understanding; a validator where the check is a known string, a forbidden field or a schema violation. **Judges text, not actions**, which is why it cannot substitute for authorization on a side-effecting tool call.
 
-
-**Parallelization.** Running subtasks simultaneously and aggregating. Two variations: sectioning, being independent subtasks and voting, being the same task run repeatedly.
+**Parallelization.** Running subtasks simultaneously and aggregating. Two variations: sectioning (independent subtasks) and voting (the same task run repeatedly).
 
 **Parametric knowledge.** What the model learned during training and carries in its weights. The model answering from memory, with no outside lookup. The opposite is knowledge supplied at request time: a document handed over, a retrieved chunk, a search result, a tool response. Almost every grounding decision in this primer is a decision to replace parametric knowledge with supplied knowledge.
 
 **Per-turn budget.** One of the four constraints that bind an agent in production, alongside constrained tool entry points, explicit permissions and stopping criteria. Bounds consumption per step and is the runaway-loop control.
 
-**PHI (protected health information).** Individually identifiable health information held or transmitted by a covered entity or business associate under HIPAA. Any third party processing it requires a business associate agreement, and **coverage is configuration-specific**: the same surface may be covered on one delivery route and not on another, so the check is by configuration rather than by product.
+**PHI (protected health information).** Individually identifiable health information held or transmitted by a covered entity or business associate under HIPAA. A third party that creates, receives, maintains or transmits it on a covered entity's behalf requires a business associate agreement (subject to the exclusions in 45 CFR 160.103), and **coverage is configuration-specific**: the same surface may be covered on one delivery route and not on another, so the check is by configuration rather than by product.
 
 **Plan-level approval.** A pre-action human placement where the reviewer approves an agent's intended trajectory before execution rather than each step within it. The response to consent fatigue on long agentic runs. Composes with, and does not replace, a gate on any individual irreversible or high-stakes action inside the approved plan.
 
@@ -248,7 +237,6 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **RAG (retrieval-augmented generation).** A pattern where a corpus is chunked and indexed ahead of time, and at query time the chunks most relevant to the input are retrieved into the model's context. Suited to stable reference material: manuals, internal documentation, policy and regulatory text. **Not suited to live transactional state**, where the index returns a snapshot that may already be stale and a tool call to the system of record is the correct mechanism. Retrieval quality is itself a system to evaluate and maintain, not a property that holds once configured.
 
-
 **Reciprocal rank fusion (RRF).** The default for merging the two ranked lists a hybrid index returns: each result is scored by its rank in each list, and the combined score favors items that rank well in both. The standard, low-tuning way to do it. Rank-based scoring rewards agreement between the two methods.
 
 **Reference architecture.** A documented pattern for how to wire an LLM application together to solve a recurring class of problem, already proven in the Claude ecosystem. References, not templates to adhere to. Five are named.
@@ -267,17 +255,17 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Right altitude.** Anthropic's term for the correct specificity of a system prompt: between brittle hardcoded logic and vague guidance that assumes shared context.
 
+**Risk tier.** In this Primer, the T1 Low to T4 Critical band a system is assigned by the additive score and overrides of 4.2. Not the Slow AI Kitchen's Tier 1 to 3 stakes tiers, and not the Public to Restricted data classification of 6.4.
+
 **Routing.** Classifying an input and directing it to a specialized follow-up. Anthropic's named mechanism for mixed-model cost optimization.
 
 **SDK.** Software Development Kit. A language-native library wrapping the API in idiomatic code, handling authentication, request formatting, retries, streaming and tool-use plumbing. **The same entry point as the API from the model's perspective, with different ergonomics**, and the default for most teams. The only reason to drop back to raw HTTP is an API feature the SDK has not yet exposed. Not to be confused with the Claude Agent SDK, which runs an agent loop.
-
 
 **Sectioning.** The parallelization variant where a task is split into independent subtasks.
 
 **Shippable.** Ready for production rather than working in a demo. Meets the accuracy, latency, cost and reliability bar the deployment actually requires, and has passed the evals and review gates the team uses to release. The distinction that matters: a prototype handling the happy path is not a system handling the long tail.
 
 **Single sign-on (SSO).** Centralized authentication across an organization's systems. The architectural question it raises for a model integration is where the identity boundary sits relative to the model call: identity resolved server side and injected is a control, identity asserted in the user message is a claim the caller can edit.
-
 
 **Sizing.** Capacity and cost modeling: volume, peak, token split, call multiplier, cost per outcome, sensitivity, feasibility.
 
@@ -291,11 +279,9 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Statement of the problem, as said.** The first column of a translation table, holding the stakeholder's own words in quotation marks. Not a stylistic choice: it is what lets a later reader check the translation rather than inherit it, since a row recording only the constraint has already merged the stakeholder's words with the architect's interpretation.
 
-
 **Stratified sampling.** Sampling in a way that guarantees representation of rare categories, so a failure confined to one segment is still visible.
 
 **Structured fields.** Named, typed values extracted from unstructured input, as against free prose. The unit of measurement for extraction accuracy, and the reason extraction is gradeable in code where summarization is not.
-
 
 **Structured note-taking.** Anthropic's term for an agent writing notes persisted outside the context window and pulling them back later. Also called agentic memory.
 

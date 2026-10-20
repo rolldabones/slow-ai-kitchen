@@ -71,7 +71,7 @@ Subject: approval to proceed to enterprise deployment of the contract review ass
 
 **Two of this document's conventions collide in what follows.** The six labels below are the six parts of the briefing structure above, not Parts of this primer, and the decimals are millions of currency rather than section numbers, although 1.4, 2.6, 3.2 and 4.9 are all real sections of it. The scenario is 7.8's worked adoption plan seen from the committee's side, and its baseline figures are 7.8's.
 
-**Part 1, the decision, 30 seconds.** "I ask the committee to approve enterprise deployment across all four jurisdictions, release the second tranche of 1.4 million over eighteen months and confirm the General Counsel as accountable executive for the operating model. The alternative: hold at the two pilot jurisdictions for two further quarters."
+**Part 1, the decision, 30 seconds.** "I ask the committee to approve enterprise deployment across all four jurisdictions, release the second tranche of 1.4 million over eighteen months and confirm the General Counsel as accountable executive for the operating model. The alternative: hold at the two largest jurisdictions (wave one) for two further quarters."
 
 **Part 2, the recommendation, 30 seconds.** "I recommend full deployment. Three-year total cost of ownership is 3.2 million against a measured benefit of 4.9 million, dominated by business cycle time rather than legal headcount."
 
@@ -169,7 +169,7 @@ Five properties, each present because roadmaps without it get cut.
 | **M4 to M8** | Identity and entitlement model; knowledge layer with ingest, freshness and deletion | Knowledge assistant extended to the full corpus with entitlements enforced, 400 users | Entitlement tested by adversarial retrieval. Deletion demonstrated across derived artifacts | Data owner |
 | **M7 to M11** | Control layer with defined failure behavior; human review patterns; escalation | Contract review assistant pilot, 24 lawyers, representative draw | Pre-registered thresholds met. Zero unreviewed outputs external. Kill criterion not triggered | General Counsel |
 | **M10 to M14** | Operating model: named owners, support path, incident process, change gates | Contract review assistant, wave one, two jurisdictions | Adoption gates by segment. Reviewer load inside revised capacity band | General Counsel with function head |
-| **M12 to M16** | Change and enablement capability: seven curricula, champion network funded, internal credential | Contract review assistant, waves two and three. Configurer population licensed | Segment parity or explicit accepted exception. Credential issued | Human resources with program |
+| **M12 to M16** | Change and enablement capability: seven curricula, champion network funded, internal credential | Contract review assistant, waves one and two. Configurer population licensed | Segment parity or explicit accepted exception. Credential issued | Human resources with program |
 | **M14 to M18** | Portability and exit: second-provider evaluation, migration rehearsal, decommissioning plan for the superseded manual process | Regulated decision-support use case enters design, not build | Migration rehearsed on a real workload. Exit cost and duration stated | Chief Information Officer |
 
 Note the regulated use case at month fourteen entering design rather than build, the entitlement layer at month four paying for nothing by itself and portability funded rather than assumed.

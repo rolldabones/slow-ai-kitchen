@@ -77,7 +77,7 @@ Judgment variance is the measure almost nobody collects and it is the one that m
 
 **Cycle time** is trigger to closure in elapsed time. **Touch time** is the sum of active work. The **wait ratio** between them is the most diagnostic single number a survey produces, and it routinely decides whether an AI project is worth doing at all.
 
-A high wait ratio means the constraint is queueing, batching or availability, not effort. Making a 22 minute analyst task into a 3 minute review task is real, but if the case still waits 3.2 days for triage, the business owner will report no improvement and cancel. In that shape the correct architecture is often not a better analyst step but an always-available first pass that eliminates the triage queue, which is a different design with a different value story.
+A high wait ratio means the constraint is queueing, batching or availability, not effort. Making a 22 minute analyst task into a 3 minute review task is real, but if the case still waits 3.2 days after triage for an analyst, the business owner will report no improvement and cancel. In that shape the correct architecture is often not a better analyst step but an always-available first pass that eliminates the queue before the analyst step, which is a different design with a different value story.
 
 A low wait ratio, say 3 to 1, means effort is the constraint and touch time reduction converts directly into capacity.
 
@@ -353,7 +353,7 @@ The classic failure is a decomposition that is internally tidy and collectively 
 
 ## 1.4 The seven-factor assignment score
 
-Every step surveyed must be assigned to one of four destinations. This is the enterprise-scale version of the delegation map of 1.3, and it extends it, because at portfolio scale you need a score you can defend in a governance forum rather than a judgment you formed in a workshop.
+Every step surveyed must be assigned to one of five routes: the four destinations, or leave it human below the volume floor. This is the enterprise-scale version of the delegation map of 1.3, and it extends it, because at portfolio scale you need a score you can defend in a governance forum rather than a judgment you formed in a workshop.
 
 **The decision rule: score need first, and if need is low the answer is deterministic code no matter how high the volume or how fashionable the program.**
 
@@ -397,7 +397,7 @@ Two refinements. Volume never promotes a step across a restraint boundary; it on
 | **Finance** | Assess revenue recognition on a multi-element arrangement | 4 | 5 | 9 | 5 | 5 | 5 | 5 | 20 | Human, AI-assisted at most ⚠ |
 | **Customer ops** | Change of address on an authenticated account | 1 | 1 | 2 | 3 | 2 | 3 | 2 | 10 | Deterministic automation |
 | **Customer ops** | Categorize an inbound complaint and draft a first response | 5 | 3 | 8 | 3 | 3 | 3 | 3 | 12 | AI with a human gate, sampled audit once calibrated |
-| **Customer ops** | Determine that a customer is vulnerable and requires special handling | 4 | 5 | 9 | 4 | 5 | 5 | 5 | 19 | Human ⚠ |
+| **Customer ops** | Determine that a customer is vulnerable and requires special handling | 4 | 5 | 9 | 4 | 5 | 5 | 5 | 19 | Human, AI-assisted at most ⚠ |
 
 Note the two finance rows. Both score 17 and 20 on restraint, which is high, and their destinations differ entirely, because need differs. Restraint tells you how much to constrain. Need tells you whether a model belongs there at all. Reading only restraint is how organizations end up gating a process that never needed a model, which is the worst of both outcomes: the cost of AI and the throughput of manual review.
 
@@ -559,7 +559,7 @@ The two populations are different problems, and the difference decides the respo
 
 | Population | How it arrives | Who decided | What the organization can actually do |
 | --- | --- | --- | --- |
-| **Embedded vendor capability** | A summarization, drafting or classification feature ships inside a suite, a CRM, a ticketing system or an HR platform, enabled by default or by an administrator who read a release note | The vendor, and then a system administrator with no risk mandate | Configure, tier, restrict or disable. The design itself is not negotiable |
+| **Embedded vendor capability** | A summarization, drafting or classification feature ships inside a suite, a customer relationship management (CRM) system, a ticketing system or a human resources (HR) platform, enabled by default or by an administrator who read a release note | The vendor, and then a system administrator with no risk mandate | Configure, tier, restrict or disable. The design itself is not negotiable |
 | **Individually adopted tools** | A person signs up with a work address or a personal one and pastes work into it | An employee solving a real problem faster than the organization could | Sanction it, replace it or stop it. All three require finding it first |
 
 The first is a **procurement and configuration problem** wearing an AI costume. There is already a contract, a vendor relationship and usually a renewal date, which means there is leverage and an owner. The second is an **adoption problem**: no contract, no owner, no logging and frequently no way to establish what left the building. The first is normally larger by volume of data and the second is normally larger by number of instances. Treating them as one category produces a policy that bans the second and never notices the first, which is the common shape and the wrong one.
@@ -753,7 +753,7 @@ Property 7 is the one that cannot be recovered at all: if the inputs were not re
 14. AI relaxes reading, drafting, first pass, translation and consistency checking. It does not touch being wrong, accountability or trust.
 15. Choose hub and spoke and keep the mandatory waist short enough to recite: the gateway, audit logging to the central sink, identity and secrets, data egress boundaries, the eval gate before production and the dependency register entry. Defend every addition, and leave free everything a domain expert would want to tune.
 16. Watch the center of excellence for four failures: bottleneck, ivory tower, demo factory, tollbooth. Pair every mandatory gate with a service you actually provide.
-17. Run five intake gates in order and put governance rule-out before cost and latency, never beside them.
+17. Run five intake filters in order and put governance rule-out before cost and latency, never beside them.
 18. The larger governed population never reaches intake. Find embedded vendor features through contracts and renewals, find individually adopted tools through expense, identity and network telemetry, ask people what they use rather than whether they use anything, tier what you find by capability rather than intent, and keep the inventory one nobody can be punished for adding to.
 19. A platform team needs two consumers to be a platform team. Until then it is an embedded team.
 20. Fund showback first, chargeback once cost per outcome is attributable, and never leave the platform to be funded as a side effect of a project.

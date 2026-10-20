@@ -4,7 +4,7 @@
 
 | Version | Date | Status | License |
 | --- | --- | --- | --- |
-| v2.0.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v2.0.0 | 2026-10-18 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 *Amendment record. v1.0.0, 20 August 2026 (KST), first issue. 24 August 2026: the Appendix I Sonnet price row was recast without a masthead change; recorded here on 18 October 2026, since an amendment belongs on the instrument. v2.0.0, 18 October 2026 (KST): split under ruling 2 of 15 October 2026. The drills, the self-check bank, the twenty-five artifacts, the eighteen diagrams and the enterprise vocabulary move to the [Primer Workbook](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/README.md); the interview question bank (Appendix E) leaves the public repository; perishable figures move to `primer/figures.yaml`, from which Appendix I's tables are generated, re-verified 18 October 2026, and the body names model classes rather than versions; a doctrine block, a gate and tier concordance, a How to Cite and this record are added; the intake funnel's gates become filters; worked examples are labeled illustrative; listed corrections are itemized in the slow-ai-kitchen CHANGELOG at v3.0.0.*
 
@@ -37,7 +37,7 @@ Everything here is organized against that claim. The material runs from the mech
 
 **As a review instrument.** The Practice Layer is the working tool: a twelve-question review sequence for interrogating a proposed or live system, a defect catalog of every failure mode a review can find in a built system, with its symptom and its architectural fix, a misdiagnosis catalog of the tempting wrong fixes, an evidence register naming the artifact that proves each control exists and a capability checklist. The Primer Workbook holds the twenty-five artifact templates you should be able to produce on demand and the eighteen diagrams you should be able to draw on a whiteboard without notes, with drills and a self-check bank (Appendices C, D, F and G index them).
 
-**As a competency map.** Appendix J maps seven competency areas to the sections that carry the material, and closes with a three-level self-assessment for finding your own gaps.
+**As a competency map.** Appendix J maps seven competency areas, which cut across the ten Part competencies above rather than replacing them, to the sections that carry the material, and closes with a three-level self-assessment for finding your own gaps.
 
 **As boardroom preparation.** Part 9 covers the executive briefing, the roadmap, the stakeholder map and the language discipline that survives a board.
 
@@ -341,7 +341,7 @@ Judgment variance is the measure almost nobody collects and it is the one that m
 
 **Cycle time** is trigger to closure in elapsed time. **Touch time** is the sum of active work. The **wait ratio** between them is the most diagnostic single number a survey produces, and it routinely decides whether an AI project is worth doing at all.
 
-A high wait ratio means the constraint is queueing, batching or availability, not effort. Making a 22 minute analyst task into a 3 minute review task is real, but if the case still waits 3.2 days for triage, the business owner will report no improvement and cancel. In that shape the correct architecture is often not a better analyst step but an always-available first pass that eliminates the triage queue, which is a different design with a different value story.
+A high wait ratio means the constraint is queueing, batching or availability, not effort. Making a 22 minute analyst task into a 3 minute review task is real, but if the case still waits 3.2 days after triage for an analyst, the business owner will report no improvement and cancel. In that shape the correct architecture is often not a better analyst step but an always-available first pass that eliminates the queue before the analyst step, which is a different design with a different value story.
 
 A low wait ratio, say 3 to 1, means effort is the constraint and touch time reduction converts directly into capacity.
 
@@ -617,7 +617,7 @@ The classic failure is a decomposition that is internally tidy and collectively 
 
 ## 1.4 The seven-factor assignment score
 
-Every step surveyed must be assigned to one of four destinations. This is the enterprise-scale version of the delegation map of 1.3, and it extends it, because at portfolio scale you need a score you can defend in a governance forum rather than a judgment you formed in a workshop.
+Every step surveyed must be assigned to one of five routes: the four destinations, or leave it human below the volume floor. This is the enterprise-scale version of the delegation map of 1.3, and it extends it, because at portfolio scale you need a score you can defend in a governance forum rather than a judgment you formed in a workshop.
 
 **The decision rule: score need first, and if need is low the answer is deterministic code no matter how high the volume or how fashionable the program.**
 
@@ -661,7 +661,7 @@ Two refinements. Volume never promotes a step across a restraint boundary; it on
 | **Finance** | Assess revenue recognition on a multi-element arrangement | 4 | 5 | 9 | 5 | 5 | 5 | 5 | 20 | Human, AI-assisted at most ⚠ |
 | **Customer ops** | Change of address on an authenticated account | 1 | 1 | 2 | 3 | 2 | 3 | 2 | 10 | Deterministic automation |
 | **Customer ops** | Categorize an inbound complaint and draft a first response | 5 | 3 | 8 | 3 | 3 | 3 | 3 | 12 | AI with a human gate, sampled audit once calibrated |
-| **Customer ops** | Determine that a customer is vulnerable and requires special handling | 4 | 5 | 9 | 4 | 5 | 5 | 5 | 19 | Human ⚠ |
+| **Customer ops** | Determine that a customer is vulnerable and requires special handling | 4 | 5 | 9 | 4 | 5 | 5 | 5 | 19 | Human, AI-assisted at most ⚠ |
 
 Note the two finance rows. Both score 17 and 20 on restraint, which is high, and their destinations differ entirely, because need differs. Restraint tells you how much to constrain. Need tells you whether a model belongs there at all. Reading only restraint is how organizations end up gating a process that never needed a model, which is the worst of both outcomes: the cost of AI and the throughput of manual review.
 
@@ -823,7 +823,7 @@ The two populations are different problems, and the difference decides the respo
 
 | Population | How it arrives | Who decided | What the organization can actually do |
 | --- | --- | --- | --- |
-| **Embedded vendor capability** | A summarization, drafting or classification feature ships inside a suite, a CRM, a ticketing system or an HR platform, enabled by default or by an administrator who read a release note | The vendor, and then a system administrator with no risk mandate | Configure, tier, restrict or disable. The design itself is not negotiable |
+| **Embedded vendor capability** | A summarization, drafting or classification feature ships inside a suite, a customer relationship management (CRM) system, a ticketing system or a human resources (HR) platform, enabled by default or by an administrator who read a release note | The vendor, and then a system administrator with no risk mandate | Configure, tier, restrict or disable. The design itself is not negotiable |
 | **Individually adopted tools** | A person signs up with a work address or a personal one and pastes work into it | An employee solving a real problem faster than the organization could | Sanction it, replace it or stop it. All three require finding it first |
 
 The first is a **procurement and configuration problem** wearing an AI costume. There is already a contract, a vendor relationship and usually a renewal date, which means there is leverage and an owner. The second is an **adoption problem**: no contract, no owner, no logging and frequently no way to establish what left the building. The first is normally larger by volume of data and the second is normally larger by number of instances. Treating them as one category produces a policy that bans the second and never notices the first, which is the common shape and the wrong one.
@@ -1017,7 +1017,7 @@ Property 7 is the one that cannot be recovered at all: if the inputs were not re
 14. AI relaxes reading, drafting, first pass, translation and consistency checking. It does not touch being wrong, accountability or trust.
 15. Choose hub and spoke and keep the mandatory waist short enough to recite: the gateway, audit logging to the central sink, identity and secrets, data egress boundaries, the eval gate before production and the dependency register entry. Defend every addition, and leave free everything a domain expert would want to tune.
 16. Watch the center of excellence for four failures: bottleneck, ivory tower, demo factory, tollbooth. Pair every mandatory gate with a service you actually provide.
-17. Run five intake gates in order and put governance rule-out before cost and latency, never beside them.
+17. Run five intake filters in order and put governance rule-out before cost and latency, never beside them.
 18. The larger governed population never reaches intake. Find embedded vendor features through contracts and renewals, find individually adopted tools through expense, identity and network telemetry, ask people what they use rather than whether they use anything, tier what you find by capability rather than intent, and keep the inventory one nobody can be punished for adding to.
 19. A platform team needs two consumers to be a platform team. Until then it is an embedded team.
 20. Fund showback first, chargeback once cost per outcome is attributable, and never leave the platform to be funded as a side effect of a project.
@@ -1234,7 +1234,7 @@ Further mechanical consequences:
 | --- | --- |
 | **Capability** | Topics in the model's training data that are common, recent and consistently included, where the model can answer reliably from what it learned |
 | **Limitation** | Topics that are rare, niche, private, contested or fast-changing. The model may present stale or incomplete information with the same confident tone it uses for established facts |
-| **Mitigation** | Web search, retrieval (RAG), tool use or MCP servers make an external system the source of truth instead of the model. Instead of checking the model's parametric knowledge, the authoritative answer comes from the retrieved source. When freshness or authority matters, re-introduce the data yourself rather than relying on what the model recalls |
+| **Mitigation** | Web search, retrieval (RAG), tool use or Model Context Protocol (MCP) servers make an external system the source of truth instead of the model. Instead of checking the model's parametric knowledge, the authoritative answer comes from the retrieved source. When freshness or authority matters, re-introduce the data yourself rather than relying on what the model recalls |
 
 The reliability test is worth holding on both sides. **Reliable:** common, recent, consistently included. **Unreliable:** rare, niche, private, contested, fast-changing. "Contested" is the interesting entry, because it is not about the training cutoff at all. A topic can be current, abundant in training data and still unreliable because the corpus disagrees with itself. An architect reading only the cutoff story misses that case.
 
@@ -1677,9 +1677,9 @@ Five factors, each phrased as a question, compared across the three patterns.
 | --- | --- | --- | --- | --- |
 | **Predictability** | Can you enumerate the steps in advance? | Low: single bounded task. | Low: you wrote the path. | High: trajectory is unpredictable by design. |
 | **Error cost** | What does a wrong answer cost: a retry, an audit, a lawsuit? | Medium: exposes you to the model's output distribution without step-level guards. | Low: deterministic guards sit between steps. | High: exposes you to the full output distribution across multiple turns. |
-| **Observability** | Can your operations team see what happened and reconstruct why? | Medium: a single call is easy to log but opaque inside. | Low: steps log as code does, with standard tooling. | High: the trajectory reads like a transcript; most current observability tooling isn't built to alert on this. |
+| **Observability** | Can your operations team see what happened and reconstruct why? | Medium: a single call is easy to log but opaque inside. | Low: steps log as code does, with standard tooling. | High: the trajectory reads like a transcript; most current observability tooling is not built to alert on this. |
 | **Latency budget** | What is the user-visible deadline? | Low: fastest in standard configurations, though extended thinking or retrieval adds time. | Medium: predictable but additive in duration. | High: runtime is open-ended; budget for the worst case, not the median. |
-| **Cost** | What's the per-request token cost at your expected volume? | Low: fewest tokens per request. | Medium: scales with step count. | High: iterative reasoning, multi-turn tool use, retries and growing context can materially increase token usage and latency. Poorly bounded agents are often the most expensive pattern. |
+| **Cost** | What is the per-request token cost at your expected volume? | Low: fewest tokens per request. | Medium: scales with step count. | High: iterative reasoning, multi-turn tool use, retries and growing context can materially increase token usage and latency. Poorly bounded agents are often the most expensive pattern. |
 
 **How to read the Low, Medium and High labels, because they will trip you up if you read them as ratings of the factor.** They grade **how much of that factor's burden the pattern imposes on you**, so Low is favorable throughout. A workflow is Low on predictability because you wrote the path, meaning you carry no unpredictability burden. An agent is High on observability because the observability problem it hands you is severe, not because it is well observed. Read every cell as "how much of this will hurt."
 
@@ -1936,11 +1936,11 @@ Each has two halves: what good looks like, and where projects go wrong.
 
 | # | Name | What good looks like | Where projects go wrong |
 | --- | --- | --- | --- |
-| 1 | **Agent** | The model works toward a goal by deciding which tools to call and in what order. Autonomy is kept in check by limiting what the tools can do and setting a budget on how many turns the model gets. Use this when the path through the work can't be written in advance: investigating a codebase, pulling from multiple research sources or triaging complex customer cases. | **Unbounded autonomy:** giving the model tools that change state with no human review, no turn limit and no way to measure whether the goal was met. |
+| 1 | **Agent** | The model works toward a goal by deciding which tools to call and in what order. Autonomy is kept in check by limiting what the tools can do and setting a budget on how many turns the model gets. Use this when the path through the work cannot be written in advance: investigating a codebase, pulling from multiple research sources or triaging complex customer cases. | **Unbounded autonomy:** giving the model tools that change state with no human review, no turn limit and no way to measure whether the goal was met. |
 | 2 | **Retrieval-augmented generation (RAG)** | A stable knowledge corpus, such as product manuals, internal docs or regulatory text, is chunked and indexed. When a question comes in, the most relevant chunks are retrieved and passed to the model as context. | Using RAG to answer questions about live state: order status, inventory levels, ticket queues. **The index is a snapshot.** If the underlying data has changed since the last refresh, the answer will be wrong. |
-| 3 | **Document processing pipeline → Evaluator-optimizer** | Structured extraction from semi-structured documents like claims, invoices and contracts. The pipeline handles OCR, extracts fields against a schema, validates the output and routes exceptions. An evaluator-optimizer is common here because first-pass extraction on edge cases isn't reliable enough to trust without a check. | **No exception path.** Low-confidence extractions go through the same pipeline as clean documents, with no human gate to catch the ones the model got wrong. |
+| 3 | **Document processing pipeline → Evaluator-optimizer** | Structured extraction from semi-structured documents like claims, invoices and contracts. The pipeline handles optical character recognition (OCR), extracts fields against a schema, validates the output and routes exceptions. An evaluator-optimizer is common here because first-pass extraction on edge cases is not reliable enough to trust without a check. | **No exception path.** Low-confidence extractions go through the same pipeline as clean documents, with no human gate to catch the ones the model got wrong. |
 | 4 | **Customer-service / ticket triage → Routing** | Classify intent and what the user is asking for, then route to the right backend: a knowledge retrieval layer for documentation questions, a transactional API for live state queries like order status or account changes and a human approval layer for high-consequence actions. | Using retrieval for live order status instead of calling the API directly. No escalation path to a human. Deploying an agent variant before the simpler routed workflow has been properly measured. |
-| 5 | **Coding agent (agentic exploration with deterministic edit/test/review steps)** | The work splits into two phases. First, the agent investigates the codebase to understand what needs to change: this part is agentic because the path through an unfamiliar codebase can't be written in advance. Second, the actual edits follow deterministic steps: parse, plan, propose, test, review. Subagents handle isolated tasks with enough context to do the job but not so much that the steps become unmanageable. | Letting the agent edit and commit without a human review gate. Not tracking regression rates against an eval set for each language or framework in the codebase. Treating the whole thing as a conversation rather than a structured pipeline with defined handoffs. |
+| 5 | **Coding agent (agentic exploration with deterministic edit/test/review steps)** | The work splits into two phases. First, the agent investigates the codebase to understand what needs to change: this part is agentic because the path through an unfamiliar codebase cannot be written in advance. Second, the actual edits follow deterministic steps: parse, plan, propose, test, review. Subagents handle isolated tasks with enough context to do the job but not so much that the steps become unmanageable. | Letting the agent edit and commit without a human review gate. Not tracking regression rates against an eval set for each language or framework in the codebase. Treating the whole thing as a conversation rather than a structured pipeline with defined handoffs. |
 
 Learn the five names in that order and in those words. They are the working vocabulary for everything that follows.
 
@@ -2027,7 +2027,7 @@ The two non-fixes are named deliberately: a better embedding model, and a shorte
 | --- | --- |
 | **Cost** | Composing two reference architectures roughly doubles the surface area you must maintain. **When in doubt, pick one.** |
 | **Complexity** | **Each reference architecture carries its own eval contract. You need separate eval sets per architecture, not a single eval set for the composed system.** A system that looks healthy at the top level can be masking failures in one of its components. |
-| **Risk** | Misapplying retrieval to live state produces **stale but confident answers**. The system looks healthy from the outside: normal latency, no errors. **Detection cost is high because there is no signal that something is wrong until a user notices the answer doesn't match reality.** |
+| **Risk** | Misapplying retrieval to live state produces **stale but confident answers**. The system looks healthy from the outside: normal latency, no errors. **Detection cost is high because there is no signal that something is wrong until a user notices the answer does not match reality.** |
 
 **"Each reference architecture carries its own eval contract" is the most transferable idea in this section.** An **eval contract** is the set of behaviors an architecture is obliged to demonstrate, and the rule is one eval set per architecture, never one for the composed system. The reason given is the important half: a system that looks healthy at the top level can be masking failures in one of its components. End-to-end evaluation of a composed system averages away component failure.
 
@@ -2143,7 +2143,7 @@ Anthropic's selection guidance establishes four criteria, and the fourth is the 
 | **Cost** | What is the budget, for development and for production? |
 | **Effort** | What reasoning depth does the task need *within* a model? |
 
-**The effort parameter is the important addition.** Recent Opus and Sonnet models support an `effort` parameter that trades intelligence for latency and cost **within a single model**, and Anthropic states plainly that **tuning effort is often a better lever than switching models.**
+**The effort parameter is the important addition.** Every current model class, Fable, Mythos, Opus, Sonnet and Haiku, supports an `effort` parameter (Appendix I, `<class>.effort.default`), as do recent legacy Opus and Sonnet models; it trades intelligence for latency and cost **within a single model**, and Anthropic states plainly that **tuning effort is often a better lever than switching models.**
 
 That sentence should change how you answer a whole family of questions. The older mental model was a three-rung ladder, where cost pressure meant moving down a tier and quality pressure meant moving up. The current model has a continuous dial inside each tier, which means the correct first response to "this is too slow and too expensive" may be to lower effort rather than to change model, and the correct first response to "this is not quite good enough" may be to raise it.
 
@@ -2298,9 +2298,9 @@ Relevance over volume; position awareness, since beginnings and ends are process
 
 **Extended thinking is a per-request capability: the model works through the problem in a separate block of thinking tokens before it produces the final answer.** How you control it has changed across model generations:
 
-- On Claude 4.6 and later, **adaptive thinking with the effort parameter is the recommended control**: set how much reasoning effort to apply, rather than configure a token budget.
-- **On Claude 4.7 and later, adaptive thinking is the only mode available.** That is the same fact as the next one, seen from the other side.
-- **The older manual thinking-token budget, `budget_tokens`, is deprecated on the 4.6 generation, which still accepts it, and removed on Claude 4.7 and later, where a request using it returns a 400 error.** Verify current model support against platform.claude.com.
+- On every current model, **adaptive thinking with the effort parameter is the recommended control** (Appendix I, `thinking.current`): set how much reasoning effort to apply, rather than configure a token budget.
+- **On every current model, adaptive thinking is the only mode available.** That is the same fact as the next one, seen from the other side.
+- **The older manual thinking-token budget, `budget_tokens`, is deprecated on the legacy models that still accept it and removed on every current model, where a request using it returns a 400 error (Appendix I, `thinking.extended`).** Verify current model support against platform.claude.com.
 - **Thinking tokens are billed as output tokens at the model's standard output rate, and generating them adds latency to the call.** When extended thinking is not engaged, none of that applies.
 
 This is the same effort parameter that appears under model selection as a lever trading intelligence for latency and cost within a model. One mechanism, seen from two angles: choosing a model versus controlling what a chosen model does with a given request. The two do not conflict.
@@ -2320,7 +2320,7 @@ Anthropic's own comparison of the four mechanisms, each targeting a **different 
 
 **Anthropic's recommended adoption order for a high-volume agent**, a decision sequence you can run as written:
 
-1. **Enable prompt caching on tool definitions from day one.** A cache write on the default five-minute lifetime carries a 25 percent markup over base input pricing, and the one-hour lifetime costs twice base input, so the payback point is the second request that hits the cache on the short lifetime and later on the long one.
+1. **Enable prompt caching on tool definitions from day one.** A cache write on the default five-minute lifetime carries a 25 percent markup over base input pricing, and the one-hour lifetime costs twice base input, so the write pays back after one cache read on the five-minute lifetime and after two on the one-hour lifetime (Appendix I, `cache.breakeven`).
 2. **Add tool search** once the toolset reaches roughly 10 tools, or tool definitions pass 10,000 tokens, or you aggregate multiple MCP servers, or baseline context usage becomes noticeable.
 3. **Add context editing** once individual conversations run long enough that early results become irrelevant.
 4. **Consider programmatic tool calling** if you notice repetitive chains of small tool calls that could run as one batch.
@@ -2550,7 +2550,7 @@ Practical technique: target the ambiguous cases, since two to four examples show
 
 Reasoning before answering. Helps on genuinely multi-step problems; costs tokens and latency on simple ones.
 
-Current mechanics: the documentation distinguishes **extended thinking**, **adaptive thinking** and the **effort** parameter as separate pages. On models after the 4.6 generation, extended thinking with `budget_tokens` is not accepted and **adaptive thinking is the only thinking mode**; on the current Fable-class and Opus-class models it is always on (Appendix I, `thinking.current`, `thinking.extended`). Effort defaults differ by model, even within one generation (Appendix I, `<class>.effort.default`). Defaults differ by model and are collected in Appendix I, which is the single place they are stated; 2.6 develops how to use the parameter. Do not carry a remembered default from one model to another. Newer models increasingly manage their own reasoning depth rather than working to a fixed token budget you set.
+Current mechanics: the documentation distinguishes **extended thinking**, **adaptive thinking** and the **effort** parameter as separate pages. On every current model, extended thinking with `budget_tokens` is not accepted and **adaptive thinking is the only thinking mode** (Appendix I, `thinking.extended`); on the current Fable-class and Opus-class models it is always on (Appendix I, `thinking.current`, `thinking.extended`). Effort defaults differ by model, even within one generation (Appendix I, `<class>.effort.default`). Defaults differ by model and are collected in Appendix I, which is the single place they are stated; 2.6 develops how to use the parameter. Do not carry a remembered default from one model to another. Newer models increasingly manage their own reasoning depth rather than working to a fixed token budget you set.
 
 The consequence: designs that assume you set a numeric thinking budget are dated for current models, and designs that treat thinking as an opt-in extra are dated too. The professional discipline survives the mechanical change: exhaust prompt improvement, measured through evaluations, before reaching for more reasoning, and treat reasoning depth as a parameter to tune against evals rather than to maximize.
 
@@ -2577,7 +2577,7 @@ The most mechanically detailed subject in this part, and the mechanics repay exa
 | **Automatic caching** | One `cache_control` field at the top level of the request. The system applies the breakpoint to the last cacheable block and **moves it forward as the conversation grows** | Multi-turn conversations where the growing history should be cached without managing markers |
 | **Explicit breakpoints** | `cache_control` placed on individual content blocks | Sections that change at different frequencies; fine-grained control |
 
-Automatic caching is available on the Claude API, Claude Platform on AWS, Google Cloud and Microsoft Foundry; Amazon Bedrock supports explicit breakpoints only. When mixing lifetimes in one request, longer-TTL breakpoints must appear before shorter ones: a one-hour entry must precede any five-minute entries.
+Automatic caching is available on every platform except the legacy Amazon Bedrock integration (Opus 4.6 and earlier), which supports explicit breakpoints only (Appendix I, `cache.automatic`). When mixing lifetimes in one request, longer-TTL breakpoints must appear before shorter ones: a one-hour entry must precede any five-minute entries.
 
 **The pricing structure**, as multipliers on base input price:
 
@@ -2714,7 +2714,7 @@ Any customization of Claude Code answers one of two questions: what the agent kn
 
 #### The six permission modes
 
-**Default** asks before each action. **`acceptEdits`** approves file edits and common filesystem commands (`mkdir`, `touch`, `rm`, `mv`, `cp`, `sed`); other Bash commands still prompt. **Plan mode** locks the session to read-only until the user approves a plan. **Auto mode** uses a classifier to approve safe actions and block risky ones; a research preview on all plans, admin-enabled on Team and Enterprise, defaulting to the Anthropic API as classifier provider, with an environment variable to enable the cloud platforms as providers. **`dontAsk` auto-denies anything that would prompt and runs only what your allow rules cover: the mode for locked-down CI.** **`bypassPermissions` skips all checks and is scoped to containers or CI only.**
+**Default** asks before each action. **`acceptEdits`** approves file edits and common filesystem commands (`mkdir`, `touch`, `rm`, `mv`, `cp`, `sed`); other Bash commands still prompt. **Plan mode** allows reads, plus classifier-approved commands when auto mode is available, until the user approves a plan. **Auto mode** uses a classifier to approve safe actions and block risky ones; it is available by default on Team and Enterprise, where administrators can turn it off, and by default on the Anthropic API, Claude Platform on AWS, Amazon Bedrock, Google Cloud's Agent Platform and Microsoft Foundry. **`dontAsk` auto-denies anything that would prompt and runs only what your allow rules cover: the mode for locked-down continuous integration (CI).** **`bypassPermissions` skips all checks and is for isolated containers and virtual machines only.**
 
 #### The two discriminators
 
@@ -2815,7 +2815,7 @@ Five surfaces; the platform map in 2.3 lists entry points illustratively, this i
 
 | Entry point | Description | Audience and use | Core trade-off |
 | --- | --- | --- | --- |
-| **Claude.ai** (web, mobile, desktop) | The end-user chat product: users open conversations, attach files, use Projects for shared context and connect Slack, Outlook or Google Drive through built-in connectors. Consumer tiers (Free, Pro, Max) and Claude for Work: **Team** adds admin controls, SSO and SAML, domain capture and a contractual commitment not to train on customer content; **Enterprise** adds SCIM provisioning, configurable retention, audit logs, a Compliance API and a HIPAA-ready option with a signed BAA | Knowledge workers using Claude as a thinking partner for research, drafting, analysis and review. No code is written: the entry point for applied AI users, not builders. Consumer tiers fit individuals and small teams, Claude for Work organizations needing governance and identity controls | Zero build cost versus zero integration: you get the product Anthropic ships and cannot embed it elsewhere or customize what is exposed. The right tier depends on governance needs |
+| **Claude.ai** (web, mobile, desktop) | The end-user chat product: users open conversations, attach files, use Projects for shared context and connect Slack, Outlook or Google Drive through built-in connectors. Consumer tiers (Free, Pro, Max) and Claude for Work: **Team** adds admin controls, single sign-on (SSO) and Security Assertion Markup Language (SAML), domain capture and a contractual commitment not to train on customer content; **Enterprise** adds System for Cross-domain Identity Management (SCIM) provisioning, configurable retention, audit logs, a Compliance API and an option ready for the Health Insurance Portability and Accountability Act (HIPAA) with a signed business associate agreement (BAA) | Knowledge workers using Claude as a thinking partner for research, drafting, analysis and review. No code is written: the entry point for applied AI users, not builders. Consumer tiers fit individuals and small teams, Claude for Work organizations needing governance and identity controls | Zero build cost versus zero integration: you get the product Anthropic ships and cannot embed it elsewhere or customize what is exposed. The right tier depends on governance needs |
 | **Claude Code** (terminal, IDE plugin, desktop, web) | An agentic coding tool that reads files, edits code, runs commands and executes multi-step engineering tasks under configurable permission boundaries, in a terminal, IDE plugins (VS Code, JetBrains, others), on desktop and on the web at claude.ai/code | Engineers doing development work: exploring codebases, refactoring across files, debugging, building features. Same agent, wherever you work | Purpose-built for engineering: outstanding for code, but the wrong shape for a customer-service product or any non-engineering workflow |
 | **Claude Cowork** | A desktop agent for non-developers, working with local files and applications and automating file and task management under configurable permissions. On all paid plans (Pro, Max, Team, Enterprise) via the Claude Desktop app on macOS and Windows; **Linux support is in beta** | Operations, admin and other non-engineering roles needing Claude to act on their computer rather than produce text in a chat window | Real system actions versus supervision overhead: powerful for file and task automation because Cowork operates on the machine directly, so permission scoping and human review matter more than in a chat-only entry point |
 | **Claude in Chrome** | A browsing agent inside the Chrome browser, navigating pages and taking actions on behalf of the user | Knowledge workers whose tasks are anchored in web applications rather than files or codebases | Unknown |
@@ -2828,8 +2828,8 @@ Five surfaces; the platform map in 2.3 lists entry points illustratively, this i
 | **Anthropic first-party** | The direct Anthropic API at api.anthropic.com, billed by Anthropic and authenticated with an Anthropic API key. SDKs in Python, TypeScript, C#, Java, Go, PHP and Ruby wrap this entry point | No binding cloud commitment, a wish for the newest features the day they ship or a preference to consolidate AI spend with Anthropic. Default when no procurement constraint pulls the other way |
 | **AWS Bedrock** | Claude as a managed model on AWS, called via the Messages API at /anthropic/v1/messages on AWS-managed infrastructure, billed on the AWS account, authenticated through IAM. The previous Bedrock Runtime integration (InvokeModel/Converse via boto3 or the AWS SDK) remains the documented legacy path. Regional availability matters; inference profiles solve cross-region routing | A committed AWS enterprise agreement, the rest of the stack on AWS, AI spend drawing down against that commitment. Identity, networking and audit inherit from the AWS account |
 | **Claude Platform on AWS** | Claude served by Anthropic on AWS-adjacent commercial terms rather than as a Bedrock managed model, billed and contracted differently, with feature availability tracking the first-party Claude API more closely, including workspace-level cache isolation, which Bedrock does not provide (2.7) | The organization wants AWS paper and procurement but cannot accept Bedrock's feature lag or organization-only cache isolation. Confirm current commercial terms before committing: the billing model is the part of this route that moves |
-| **GCP Vertex AI** | Claude as a managed model in Google Cloud's Vertex AI Model Garden, called via the Anthropic Vertex client or Google's SDK, billed on the GCP project, authenticated with Google Cloud credentials; models are enabled per project in the Model Garden console | The organization runs on GCP, its ML stack lives in Vertex AI and it wants a single billing and audit entry point across foundation models |
-| **Microsoft Foundry** (Azure) | Claude through Microsoft's Foundry catalog on Azure, billed on the Azure subscription, authenticated through Entra ID, deployed into its Azure region. Two hosting forms: **Hosted on Azure** (generally available; inference runs in the organization's Azure environment; the hosted-model list changes and is not restated here; Appendix I, `routes.foundry_hosted`) and **Hosted on Anthropic infrastructure** (other models; inference routes to Anthropic-managed infrastructure) | A Microsoft enterprise agreement, identity through Entra ID and a cloud footprint on Azure; Foundry consolidates AI procurement on the same paper. Verify the current hosted-model list before committing, and where residency or GDPR requirements are strict, verify the hosting form and compliance posture of the models deployed |
+| **GCP Vertex AI** | Claude as a managed model in the Model Garden of Google Cloud's Agent Platform (formerly Vertex AI), called via the Anthropic Vertex client or Google's SDK, billed on the GCP project, authenticated with Google Cloud credentials; models are enabled per project in the Model Garden console | The organization runs on GCP, its ML stack lives in Agent Platform (formerly Vertex AI) and it wants a single billing and audit entry point across foundation models |
+| **Microsoft Foundry** (Azure) | Claude through Microsoft's Foundry catalog on Azure, billed on the Azure subscription, authenticated through Entra ID, deployed into its Azure region. Two hosting forms: **Hosted on Azure** (generally available; inference runs in the organization's Azure environment; the hosted-model list changes and is not restated here; Appendix I, `routes.foundry_hosted`) and **Hosted on Anthropic infrastructure** (other models; inference routes to Anthropic-managed infrastructure) | A Microsoft enterprise agreement, identity through Entra ID and a cloud footprint on Azure; Foundry consolidates AI procurement on the same paper. Verify the current hosted-model list before committing, and where residency or General Data Protection Regulation (GDPR) requirements are strict, verify the hosting form and compliance posture of the models deployed |
 
 ### Regulated-industry constraints
 
@@ -2840,10 +2840,10 @@ A five-row map from legal and regulatory constraints to what they rule out and w
 | Constraint | What it tends to rule out | What usually survives review |
 | --- | --- | --- |
 | **Attorney-client privilege** | Consumer tiers of Claude.ai for privileged review, and anything touching privileged material through a surface the firm cannot audit end to end. Claude for Work adds admin controls and audit logging, but the firm must still confirm the configuration meets its privilege-handling bar | API or SDK behind the firm's own application, authenticated via SSO, through a firm-approved LLM gateway logging every request: the firm owns the audit trail end to end, which is what privilege review turns on |
-| **HIPAA (PHI handling)** | Any entry point without a Business Associate Agreement in place for the specific configuration in use. A BAA for one configuration does not extend to another, so an uncovered route is ruled out even when the organization holds a BAA elsewhere | API or SDK on a BAA-covered configuration via the delivery route already in use. BAA existence is not sufficient because feature eligibility matters: beta features are generally excluded unless explicitly listed as eligible |
-| **GDPR and data residency** | Routes where the region of model execution cannot be pinned, or where data leaves the approved geographic boundary at any step | A cloud-mediated route (Bedrock or Vertex) with the region pinned to a covered jurisdiction and DPA terms inherited from the cloud contract. Foundry is the route to check: verify its residency guarantees against current documentation first |
-| **FedRAMP / government** | Any path that is not on an authorized cloud environment at the required impact level | Claude for Government (C4G) for FedRAMP High civilian workloads. Bedrock GovCloud for FedRAMP High and DoD IL4/5. Vertex Assured Workloads for FedRAMP High and IL2. Authorized environments run on a model lag, so the newest models reach GovCloud and Assured Workloads after commercial release; confirm which model the route offers before committing. ⚠ **An enterprise tier on the direct API is not a substitute**: enterprise governance features are not a FedRAMP authorization, and the two are routinely conflated in procurement conversations |
-| **Internal data-residency policy** | Routes outside the approved cloud vendor list, whatever the technical capability | The delivery route on the approved cloud provider. This is procurement, not engineering: the right route is whichever the CIO has already cleared |
+| **HIPAA (handling of protected health information, PHI)** | Any entry point without a Business Associate Agreement in place for the specific configuration in use. A BAA for one configuration does not extend to another, so an uncovered route is ruled out even when the organization holds a BAA elsewhere | API or SDK on a BAA-covered configuration via the delivery route already in use. BAA existence is not sufficient because feature eligibility matters: beta features are generally excluded unless explicitly listed as eligible |
+| **GDPR and data residency** | Routes where data leaves the approved geographic boundary at any step without a transfer mechanism, or where the region of model execution cannot be pinned and the organization's policy or contract requires pinning. GDPR itself permits transfers outside the European Economic Area under an adequacy decision, appropriate safeguards or a derogation ([Arts 44 to 46 and 49](https://eur-lex.europa.eu/eli/reg/2016/679/oj)), so pinning is a contract or policy choice, not a GDPR rule | A cloud-mediated route (Bedrock or Vertex) with the region pinned to a covered jurisdiction and data processing agreement (DPA) terms inherited from the cloud contract. Foundry is the route to check: verify its residency guarantees against current documentation first |
+| **FedRAMP (Federal Risk and Authorization Management Program) / government** | Any path that is not on an authorized cloud environment at the required impact level | Claude for Government (C4G) for FedRAMP High civilian workloads. Bedrock GovCloud for FedRAMP High and Department of Defense (DoD) Impact Levels 4 and 5 (IL4/5). Vertex Assured Workloads for FedRAMP High and IL2. Authorized environments run on a model lag, so the newest models reach GovCloud and Assured Workloads after commercial release; confirm which model the route offers before committing. ⚠ **An enterprise tier on the direct API is not a substitute**: enterprise governance features are not a FedRAMP authorization, and the two are routinely conflated in procurement conversations |
+| **Internal data-residency policy** | Routes outside the approved cloud vendor list, whatever the technical capability | The delivery route on the approved cloud provider. This is procurement, not engineering: the right route is whichever the chief information officer (CIO) has already cleared |
 
 The judgment to carry: **the entry point is a compliance decision as much as a technical one**, often the decision that makes a constraint satisfiable. If a residency, authorization or "no data leaves the managed environment" requirement is stated, the entry point or the route solves it, not the prompt; the table above is that principle in worked form.
 
@@ -3265,13 +3265,13 @@ Four candidate policies. The choice is usually inherited from a product default.
 | **On a model judgment of durability** | Unmeasured until sampled and graded | Moderate, but a judgment review not a content review | Unpredictable. What is held is the model's opinion of what mattered |
 | **Only structured facts a schema admits** | Enforced at the boundary | Schema review once, then exceptions | Lowest. A field-level operation with a known blast radius |
 
-The fourth is the only one that delivers the per-individual enumerability erasure depends on, per the memory row in 4.11. It buys that by refusing to remember what the schema did not anticipate, a real cost and a defensible one.
+The fourth is the only one that delivers the per-individual enumerability erasure depends on, per the memory and conversation state item in 4.11. It buys that by refusing to remember what the schema did not anticipate, a real cost and a defensible one.
 
 **An unbounded write policy produces a store nobody can review.** Sampling is meaningful only against a defined population, and a store growing with traffic has no population, only a size. "We sample memory writes" then names an activity rather than a control.
 
 **A memory store accumulates statements that were true when they were written.** Nothing retracts them. A position changes, a preference reverses or a matter closes, and the entry recording the earlier state sits beside the later one, unrelated. The read path needs a recency and conflict rule decided at design time: whether a newer entry supersedes or coexists, which one wins when two contradict and whether entries expire. Left undecided, the model resolves it per request, differently each time, and invisibly.
 
-Scope, per user, per team or per organization, is a write-policy decision rather than a storage one, and the rule for choosing it is stated above. What the write policy adds is that **widening the scope is retroactive**: it republishes everything already written, including entries authored when the narrower boundary was the reason the user spoke freely. That is the change most likely to turn a convenience feature into a confidentiality event and the least likely to be treated as material, because no code path moves. Injected instructions that reached a write also survive into every later session in scope, the case in 4.12.
+Scope, per user, per team or per organization, is a write-policy decision rather than a storage one, and the rule for choosing it is stated above. What the write policy adds is that **widening the scope is retroactive**: it republishes everything already written, including entries authored when the narrower boundary was the reason the user spoke freely. That is the change most likely to turn a convenience feature into a confidentiality event and the least likely to be treated as material, because no code path moves. Injected instructions that reached a write also survive into every later session in scope: the durable poisoning 4.12 describes for the corpus write path, arriving through the memory write path instead.
 
 ### Cross-user and cross-matter contamination
 
@@ -3486,7 +3486,7 @@ A conventional release note lists changes. For a system whose behavior is statis
 11. Effort is a lever inside a chosen model, and tuning it is often a better move than switching models. Start efficiency-first and upgrade on a demonstrated capability gap, or capability-first and downgrade on demonstrated workflow optimization. Both exits require evidence.
 12. Context strategy and context sizing are separate decisions that interact and do not determine each other. Four architectural questions give the monolithic baseline, the progressive window, the retrieval layer and the compaction policy; four platform mechanisms answer different token pressures, tool search for definitions, programmatic tool calling for round trips, caching for cost and context editing for stale results. Pick the one that matches where the tokens are actually going.
 13. Prompts are versioned, owned and tested components, not a tuning activity. Aim at the right altitude between if-else logic in prose and guidance that assumes context you never supplied, climb the technique ladder from clear instruction and explicit criteria before reaching for extended thinking, and put any rule protecting money, identity or anything irreversible into code as a gate.
-14. Caching is a reuse decision rather than a default. It pays where a stable prefix is re-sent often enough to amortize a write at a quarter over base input, or double at the one-hour lifetime, against reads at a tenth. Order the prompt stable-first, and note that changing a tool definition or the effort value invalidates everything after it.
+14. Caching is a reuse decision rather than a default. It pays where a stable prefix is re-sent often enough to amortize a write at a quarter over base input, or double at the one-hour lifetime, against reads at a tenth or less of base input (Appendix I, `cache.read.multiplier.*`). Order the prompt stable-first, and note that changing a tool definition or the effort value invalidates everything after it.
 15. Entry point, build-time interface and five delivery routes, with governance as a rule-out filter applied before cost and latency, never beside them. Residency, business associate agreement coverage, privilege and authorized-environment constraints eliminate routes outright, and a design costed before the route is checked is a design wasted.
 16. An AI decision record adds seven clauses: model dependency, non-determinism tolerance, eval gate, oversight point, egress boundary, blast radius, and the reversal path with its switching condition.
 17. Ask what happens when the component succeeds and is wrong, not only what happens when it fails.
@@ -3537,7 +3537,7 @@ The first decision is the connection mechanism itself. Three mechanisms move a c
 | --- | --- | --- |
 | **Tools** | Actions the model can invoke | The **model**, reactively, mid-task |
 | **Resources** | Read-only data the application can fetch | The **application**, proactively. No model decision involved |
-| **Prompts** | Pre-written instructions the maintainer has tested | Either |
+| **Prompts** | Pre-written instructions the maintainer has tested | The **user**, explicitly |
 
 The consequence that matters is about ownership: **the team that knows the service best maintains one integration for everyone**, instead of every application maintaining its own. In *Building Effective Agents* Anthropic frames MCP as one way to implement the augmented LLM's augmentations.
 
@@ -3553,12 +3553,12 @@ Calling the service the ordinary way from inside your application. Choose it whe
 
 ### Agent-to-agent: agent to peer agent
 
-Agent-to-agent connection means **A2A (Agent2Agent)**, a protocol originated by Google and now a Linux Foundation standard. Its release history, its signed-agent-card milestone and its adoption headcount are perishable and sit in Appendix I with the date they were verified. Three core concepts carry it.
+Agent-to-agent connection means **A2A (Agent2Agent)**, a protocol originated by Google and now a Linux Foundation project (Appendix I, `a2a.origin`). Its release history, its signed-agent-card milestone and its adoption headcount are perishable and sit in Appendix I with the date they were verified. Three core concepts carry it.
 
 | Concept | What it does |
 | --- | --- |
 | **Agent Cards** | The discovery mechanism. Each agent publishes a machine-readable document describing its name, capabilities, supported input and output types and authentication requirements. Analogous to a service descriptor |
-| **Tasks** | The unit of work, with a lifecycle of eight states. Two are interrupted states, **input-required** and **auth-required**, and four are terminal, **completed**, **canceled**, **rejected** and **failed**, with **submitted** and **working** in between. A task that reaches a terminal state cannot restart, so a refinement is a new task inside the same context |
+| **Tasks** | The unit of work, with a lifecycle of eight states (Appendix I, `a2a.task_states`). Two are interrupted states, **input-required** and **auth-required**, and four are terminal, **completed**, **canceled**, **rejected** and **failed**, with **submitted** and **working** in between. A task that reaches a terminal state cannot restart, so a refinement is a new task inside the same context |
 | **Messages and Artifacts** | Messages are the exchange during a task; artifacts are the deliverables the remote agent produces |
 
 The distinction to hold: **MCP is the vertical connection**, an agent reaching into its own toolbox. **A2A is the horizontal connection**, one agent reaching out to a peer it does not control and does not need to understand internally. They are complementary layers, not competitors, and production multi-agent systems commonly use both: A2A across organizational or vendor boundaries, MCP wiring each agent to its own tools and data.
@@ -3664,16 +3664,16 @@ The sharpest judgment in this area: logging and confirmation prompts are **detec
 Anthropic quantifies this, which turns a judgment call into a threshold.
 
 - **Tool selection accuracy degrades beyond roughly 30 to 50 tools loaded at once.**
-- **50 tools consume roughly 10,000 to 20,000 tokens** in definitions alone.
+- **50 or more MCP tools can consume around 72,000 tokens** in definitions alone (Appendix I, `tools.fifty_definitions`).
 - **A typical five-server setup** (GitHub, Slack, Sentry, Grafana, Splunk) **can consume around 55,000 tokens in definitions before Claude does any work.**
 
 And the qualitative test, which is the best line in the documentation: **if a human engineer cannot definitively say which tool should be used in a given situation, an AI agent cannot be expected to do better.**
 
 **The answer at scale is the tool search tool.** Rather than loading every definition up front, you provide all definitions and mark the ones that should not load with `defer_loading: true`, keeping at least one non-deferred tool, normally tool search itself. Claude's context initially contains only tool search and any non-deferred tools. When Claude needs a capability it does not have, it searches the catalog, which is matched against **tool names, descriptions, argument names and argument descriptions**, and the API returns matching tools as references, **up to five by default**, automatically expanded into full definitions and available for subsequent turns.
 
-**The trade-off runs in both directions.** Tool search costs one extra round trip the first time a tool is discovered, offset by smaller context on every turn. Anthropic states the boundary: **with fewer than about ten tools, loading everything up front is typically faster.** So tool search is not a free improvement, and recommending it for a small toolset is over-engineering.
+**The trade-off runs in both directions.** Tool search costs one extra round trip the first time a tool is discovered, offset by smaller context on every turn. Anthropic states the boundary: **with fewer than about ten tools, standard tool calling is a better fit**, since tool search adds a search step before the tool is used. So tool search is not a free improvement, and recommending it for a small toolset is over-engineering.
 
-**Two variants exist and they take different queries.** The regex variant has Claude write a pattern; the BM25 variant takes a natural-language query. The choice affects how tool names and descriptions should be written, which is a further reason the namespacing rule below is not cosmetic.
+**Two variants exist and they take different queries.** The regex variant has Claude write a pattern; the BM25 (Best Match 25, a keyword ranking function) variant takes a natural-language query. The choice affects how tool names and descriptions should be written, which is a further reason the namespacing rule below is not cosmetic.
 
 **Model support is a published list rather than a generation rule.** The compatibility table is the authority (Appendix I, `toolsearch.models`): it states that Opus 4.1 and earlier do not support tool search, and **Sonnet 5, absent from the table at the 2026-08-11 verification, is listed on 18 October 2026**, which is the reason to read the table rather than assume a newer model inherits the capability. The list, its date and the route-specific qualifications are in Appendix I.
 
@@ -3683,7 +3683,7 @@ The description is the selection mechanism, so it is a design artifact. The spec
 
 - **Aim for at least three to four sentences per tool description**, more if the tool is complex. Cover what the tool does, when to use it, what data it returns, what each parameter means and any important caveats or limitations, including what the tool does **not** return.
 - **Use meaningful namespacing.** Where tools span multiple services, prefix with the service: `github_list_prs`, `slack_send_message`. This makes selection unambiguous as the library grows and is **especially important when using tool search**, since search matches on names.
-- **Return only high-signal information.** Use semantic, stable identifiers such as slugs or UUIDs rather than opaque internal references, and include only the fields Claude needs to reason about its next step. Bloated responses waste context and make extraction harder.
+- **Return only high-signal information.** Use semantic, stable identifiers such as slugs or universally unique identifiers (UUIDs) rather than opaque internal references, and include only the fields Claude needs to reason about its next step. Bloated responses waste context and make extraction harder.
 - **Consolidate related operations into fewer tools.**
 - For complex or format-sensitive inputs, provide schema-validated **input examples** alongside the description.
 - Anthropic reports spending **more time optimizing tool definitions than the overall prompt** when building their own coding agent.
@@ -3969,12 +3969,12 @@ Authentication establishes who someone is. Authorization determines what they ma
 
 | Flow | Who holds the credential | Correct when |
 | --- | --- | --- |
-| **Authorization code with PKCE** | The end user, at the identity provider. The client never holds a long-lived secret | A human is present and the application acts with that human's entitlements. PKCE is now the default even for confidential clients, not an alternative for mobile |
+| **Authorization code with PKCE** (Proof Key for Code Exchange) | The end user, at the identity provider. The client never holds a long-lived secret | A human is present and the application acts with that human's entitlements. PKCE is now the default even for confidential clients, not an alternative for mobile |
 | **Client credentials** | The service itself | A backend acts as itself, with no user in the picture. Nightly batch, index refresh, system-to-system |
 | **On-behalf-of / token exchange** | Service A holds a user token and needs a token for service B | A chain of services must preserve the user's identity rather than collapse to a service identity. The mechanism that prevents the shared privileged service account |
 | **Device authorization** | The user, on a second device | A command line tool or a device with no browser |
 | **Workload identity** | The platform, attested from the runtime | A workload proves what it is (this pod, this service account, this cloud role) without a stored secret. The strongest machine identity available |
-| **mTLS** | Both sides, as certificates | Network-level mutual proof between services, often as a second factor beneath a token rather than instead of one |
+| **mTLS** (mutual Transport Layer Security) | Both sides, as certificates | Network-level mutual proof between services, often as a second factor beneath a token rather than instead of one |
 | **API key** | Whoever has the string | Nothing, strictly. In practice: low-risk read paths, partner onboarding and any system that cannot do better |
 
 **Decision rule: use the flow that carries the smallest identity sufficient to authorize the action, and prefer any mechanism that produces a short-lived credential over any mechanism that produces a stored one.**
@@ -4421,7 +4421,7 @@ What follows is a review checklist, not a tutorial. The architect's job is to lo
 A resilient tool-calling loop, at the level of detail an architect should be able to read.
 
 ```python
-async def run_agent(client, messages, tools, dispatch, max_turns=8):
+async def run_agent(client, messages, tools, dispatch, ctx, max_turns=8):
     for turn in range(max_turns):
         resp = await with_retry(client.messages.create)(
             model=MODEL_PIN, tools=tools, messages=messages,
@@ -4445,7 +4445,7 @@ async def run_agent(client, messages, tools, dispatch, max_turns=8):
                 continue
             try:
                 out = await asyncio.wait_for(
-                    handler(block.input), timeout=30)
+                    handler(block.input, ctx), timeout=30)
                 results.append(tool_ok(block.id, truncate(out, MAX_RESULT)))
             except ValidationError as e:       # model can repair this
                 results.append(tool_error(block.id, f"invalid input: {e}"))
@@ -4469,6 +4469,7 @@ A schema-validated tool handler, where the schema and the validation are the sam
 ```python
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Literal
+from uuid import UUID
 
 class RefundRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")   # rejects invented fields
@@ -4477,8 +4478,8 @@ class RefundRequest(BaseModel):
     currency: Literal["USD", "EUR", "GBP"]
     reason_code: Literal["damaged", "not_received",
                          "duplicate_charge", "cancelled_in_window", "other"]
-    reason_note: str | None = Field(default=None, max_length=500)
-    idempotency_key: str
+    reason_note: str = Field(default="", max_length=500)   # optional, never null
+    idempotency_key: UUID                       # "format": "uuid" in the schema
 
 TOOL_SCHEMA = {                      # one definition, two uses
     "name": "create_refund",
@@ -5055,7 +5056,7 @@ Any rule simple enough to write down is too narrow, missing cases you meant to i
 
 ### Reducing hallucination
 
-Six documented techniques.
+Seven documented techniques.
 
 | Technique | Mechanism |
 | --- | --- |
@@ -5065,12 +5066,13 @@ Six documented techniques.
 | **Best-of-N verification** | Run the same prompt several times and compare. Inconsistencies across outputs indicate hallucination |
 | **Iterative refinement** | Use outputs as inputs to follow-up prompts asking for verification or expansion, catching inconsistencies |
 | **External knowledge restriction** | Explicitly instruct Claude to use only the provided documents and not its general knowledge |
+| **Chain-of-thought verification** | Use thinking with summarized display and review the summarized reasoning when an answer looks wrong. It can reveal faulty logic or assumptions |
 
 ⧉ **No technique on this list eliminates fabrication.** Anthropic's caveat: these techniques significantly reduce hallucinations but do not eliminate them. A design assuming otherwise is wrong, and the remaining exposure is accepted in writing by the named business owner or it is not accepted at all.
 
 ### Increasing output consistency
 
-Specify the exact format using JSON, XML or a template; **prefill the assistant turn** with the desired opening, bypassing preamble and enforcing structure; constrain with examples; ground answers in retrieval; break complex tasks into smaller consistent subtasks, each getting full attention. Structured outputs as a platform feature is the strongest version of the first.
+Specify the exact format using JSON, XML or a template; **state the desired opening and structure in the user turn or the system prompt**, bypassing preamble and enforcing structure (prefilling the final assistant turn is not a substitute: requests with a prefilled final assistant message return a 400 error on Claude 4.6 and later models); constrain with examples; ground answers in retrieval; break complex tasks into smaller consistent subtasks, each getting full attention. Structured outputs as a platform feature is the strongest version of the first.
 
 ### Risks and failure modes
 
@@ -5131,7 +5133,7 @@ Five layers: input, model, tool, output, process.
 
 **The strongest controls live at the tool layer**: preconditions, thresholds, allowlists, argument validation and approval gates are deterministic, permitting an action or not; the model layer is probabilistic. **The governing rule:** where a rule protects money, identity, legal exposure or anything irreversible, the control is deterministic and sits outside the model.
 
-A concrete input-layer control: **use a lightweight model such as the current Haiku-class model (Appendix I, `class.haiku.current`) to pre-screen input before the main conversation, with structured outputs constraining the verdict to a simple parseable classification.** Cheap, fast and deterministic to consume; the same pattern applies to tool output, point 7 below.
+A concrete input-layer control: **use a lightweight model such as the current Haiku-class model (Appendix I, `class.haiku.current`) to pre-screen input before the main conversation, with structured outputs constraining the verdict to a simple parseable classification.** Cheap, fast and deterministic to consume; the same pattern applies to tool output, point 7 below. **One branch the screen must carry:** the Haiku-class model's own safety classifiers can decline the screening request itself, so a response with `stop_reason: "refusal"` is treated as a harmful verdict, not as an error to retry.
 
 #### Choosing the check type at each point on the request path
 
@@ -5206,17 +5208,17 @@ Plus **continuous monitoring**: regularly analyze outputs for signs of successfu
 
 Point 5, the security area's single most counter-intuitive rule, inverts an instinct: attaching your instruction to the retrieved content it concerns places it in the channel the model is trained to distrust.
 
-For the computer use tool, Anthropic also runs classifiers detecting injections in screenshots and steers Claude to ask for user confirmation before acting.
+For the computer use tool and the browser use tool, Anthropic also runs classifiers that scan what the tools return, such as screenshots or page text, for injections and steer Claude to check whether the instruction really came from the user before acting.
 
 ### Handling a provider refusal as a typed event
 
 The controls above are the ones you build. The provider's own layer also intervenes, and when it does the application receives a structured signal that most deployments discard. **Treating every refusal as one undifferentiated event is a lost control surface**, because the classes it merges call for different handling.
 
-**The mechanism.** Where a streaming classifier intervenes, the Messages API reports `stop_reason: "refusal"` accompanied by a **`stop_details`** object carrying a policy category and a readable explanation. ⚠ Both fields are `null` where the refusal does not map to a named category, and the object itself is absent on models that predate the feature, so a handler must tolerate both and fall back to generic handling rather than assuming the shape. The category set is enumerated in the platform's stop-reasons documentation and is perishable: at the time of writing it includes `cyber`, `bio`, `frontier_llm` and `reasoning_extraction`. **Read the list at runtime or re-verify it at publish; do not hardcode it**, which is the same standing rule this primer applies to every platform enumeration.
+**The mechanism.** Where a streaming classifier intervenes, the Messages API reports `stop_reason: "refusal"` accompanied by a **`stop_details`** object carrying a policy category and a readable explanation. ⚠ Both fields are `null` where the refusal does not map to a named category, a normal and permanent value, so a handler must tolerate it and fall back to generic handling rather than assuming the shape; `stop_details` itself is `null` for every stop reason other than a refusal. The category set is enumerated in the platform's refusals documentation and is perishable: at the time of writing it is `cyber`, `bio`, `frontier_llm`, `reasoning_extraction` and `general_harms`. **Read the list at runtime or re-verify it at publish; do not hardcode it**, which is the same standing rule this primer applies to every platform enumeration.
 
 **Why the category is worth routing on.** A refusal in one category is a user who has strayed near a boundary and needs a clear message. A refusal in another is a signal worth counting, attributing to a user or tenant, and feeding to the repeat-offender handling described above. A third may indicate the deployment is being probed. **These have different owners and different responses, and a single "the model refused" branch gives all of them the same one.** The refusal log is already an evidence artifact in 4.9, where the assertion it supports is that controls stopped things and that over-refusal is measurable; carrying the category into that record is what makes over-refusal measurable by class rather than in aggregate.
 
-**The operational rule that is easy to miss: reset the conversation context after a refusal before continuing.** Remove or rephrase the turn that triggered it, or clear the history. Sending the next request on the same refused context tends to return further refusals, which presents to the user as a system that has stopped working and to the operations team as a cluster of unexplained failures. This is the refusal-handling equivalent of never retrying a 403: the condition is not transient, and repeating the request unchanged is not a strategy.
+**The operational rule that is easy to miss: reset the conversation context after a refusal before continuing.** Remove or rephrase the turn that triggered it, or clear the history. Sending the next request on the same refused context tends to return further refusals, which presents to the user as a system that has stopped working and to the operations team as a cluster of unexplained failures. Resetting is not the only recovery: the documented alternative is to send the same request to a fallback model, either through the API's server-side `fallbacks` setting (in beta on the Claude API; not available for the Haiku-class model) or a client-side retry. What is not a strategy is repeating the request unchanged on the same refused context.
 
 ### ⌂ The architect's lens
 
@@ -5678,8 +5680,8 @@ Lawful basis determines what the architecture may do, before design. It affects 
 | **Access** | Retrieve all personal data held about the individual, across primary and derived stores, within a service level | The data is scattered across chunks, embeddings, caches, logs, evaluation sets and memory. Without the derived-artifact map the search is best-effort |
 | **Rectification** | Correct at source and propagate to every derived artifact | Propagation requires reindexing and cache invalidation. A corrected source with a stale index produces the old answer confidently |
 | **Erasure** | Delete at source and from every derived artifact, and evidence it | The hardest. See below |
-| **Portability** | Export in a structured, commonly used, machine-readable form | Usually satisfied at the source system. Note whether model-generated content about the person is in scope ⚠ |
-| **Objection** | Stop the processing for that individual, prospectively | Requires a per-individual suppression capability the system probably does not have. Design it or the right cannot be honored |
+| **Portability** | Export in a structured, commonly used, machine-readable format | Usually satisfied at the source system. Under GDPR Art. 20(1) it covers only personal data the person has provided, where processing rests on consent or contract and is carried out by automated means, so model-generated inferences about the person fall outside it ⚠ |
+| **Objection** | Stop the processing for that individual, prospectively. Under GDPR it is unconditional for direct marketing (Art. 21(2) and (3)); otherwise it applies to processing based on Art. 6(1)(e) or (f), and the controller may continue on compelling legitimate grounds (Art. 21(1)) | Requires a per-individual suppression capability the system probably does not have. Design it or the right cannot be honored |
 | **Human review of an automated decision** | A named human with authority and information to reach a different outcome | The oversight design in 4.6 is the implementation. A reviewer who cannot reach a different outcome does not satisfy it |
 
 **Erasure is where AI architectures fail most reliably.** The request arrives against a source record; the data has by then propagated to at least six places with different deletion semantics:
@@ -5703,13 +5705,13 @@ Two commitments belong in the architecture rather than the contract folder, both
 
 ⚠ **They are two claims and they are routinely collapsed into one, which is a defect in a privacy notice and in a due diligence answer alike.** Data can be excluded from model training by default and still be retained or monitored, for logging, abuse prevention, legal compliance or a configured audit purpose. **Training use is a question about what the vendor may learn from the data. Retention is a question about where a copy of it exists and for how long.** Answering the first when a regulator, a client questionnaire or a data protection impact assessment asked the second is an answer that will not survive its follow-up. State each separately, evidence each separately, and where a bounded retention window exists for an abuse-prevention or compliance purpose, name that purpose rather than describing the position as zero retention.
 
-**Anonymization** removes the ability to identify an individual and takes the data out of scope; **pseudonymization** replaces identifiers with references and keeps it in scope, because the mapping exists. The distinction is legal rather than technical and organizations routinely claim the first while implementing the second ⚠. The AI-specific hazard: models are unusually good at re-identification from quasi-identifier combinations in free text, so pseudonymizing structured fields while leaving narrative text intact is frequently ineffective. Test adversarially: attempt re-identification against your own supposedly anonymized corpus and record the result.
+**Anonymization** removes the ability to identify an individual and takes the data out of scope; **pseudonymization** replaces identifiers with references and keeps it in scope for the controller holding the mapping (Recital 26); for a recipient with no means to re-identify, pseudonymized data may not be personal data (CJEU, C-413/23 P *EDPS v SRB*, 4 September 2025, paras 76 to 77 and 86). The distinction is legal rather than technical and organizations routinely claim the first while implementing the second ⚠. The AI-specific hazard: models are unusually good at re-identification from quasi-identifier combinations in free text, so pseudonymizing structured fields while leaving narrative text intact is frequently ineffective. Test adversarially: attempt re-identification against your own supposedly anonymized corpus and record the result.
 
 ## 4.12 Security
 
 ### STRIDE adapted, plus the AI-specific threats
 
-**STRIDE**'s six threat categories transfer to AI systems with one adjustment: the model is a new and highly capable confused deputy, so several categories acquire a new route.
+**STRIDE**'s six threat categories (spoofing, tampering, repudiation, information disclosure, denial of service, elevation of privilege) transfer to AI systems with one adjustment: the model is a new and highly capable confused deputy, so several categories acquire a new route.
 
 | STRIDE category | AI-specific route | Control |
 | --- | --- | --- |
@@ -5806,7 +5808,7 @@ The objection worth answering directly, because it will be raised: a bundle is o
 | **The blast radius is the population** | A prompt or model change affects every subsequent interaction, so the affected set is defined by time window rather than by system. Be able to enumerate all outputs in a window |
 | **Containment may be a configuration change** | Reverting a prompt asset, disabling a tool or pinning a prior model version are the primary containment actions. All three must be executable in minutes by an on-call person with the authority to do it |
 
-Four additional AI-specific playbook elements: a pre-agreed severity scale including harm categories; **a commander pre-named per tier rather than appointed in the room**, which is the incident row of the RACI table in 4.7 and is load-bearing here because the three containment actions above are configuration changes an on-call engineer can usually make and usually is not authorized to make; a notification decision tree that names who decides ⚠, because notification obligations are jurisdiction and regime specific; and a preservation step that reaches AI artifacts, because the instinct to disable and clean up destroys the only evidence.
+Four additional AI-specific playbook elements: a pre-agreed severity scale including harm categories; **a commander pre-named per tier rather than appointed in the room**, which is the incident row of the RACI (responsible, accountable, consulted, informed) table in 4.7 and is load-bearing here because the three containment actions above are configuration changes an on-call engineer can usually make and usually is not authorized to make; a notification decision tree that names who decides ⚠, because notification obligations are jurisdiction and regime specific; and a preservation step that reaches AI artifacts, because the instinct to disable and clean up destroys the only evidence.
 
 ⧉ **The largest security gap in most AI deployments is that no one owns the corpus write path.** Retrieval is treated as a read-side concern, ingestion is automated and the write principals outnumber the read principals and get less review. Poisoning is quiet, durable and surfaces as authoritative wrong answers rather than as an incident.
 
@@ -6005,8 +6007,8 @@ Frameworks are not interchangeable or competing answers to one question: they an
 | Family | Primary use | Unit of analysis | Evidence produced | Limits |
 | --- | --- | --- | --- | --- |
 | **Risk management frameworks** (for example the **NIST AI Risk Management Framework**, with its four functions to govern, map, measure and manage; **ISO/IEC 23894** as AI risk guidance; **ISO 31000** as the general risk parent) | Structure how risk is identified, assessed, treated and monitored | The risk, and the system it attaches to | Risk register, treatment decisions, residual risk acceptance | Voluntary and non-certifiable. Produces no independent assurance and no external certificate |
-| **Management system standards** (for example **ISO/IEC 42001** for AI management systems, **ISO/IEC 27001** for information security, **ISO/IEC 27701** as a privacy extension) | Establish a repeatable management system with defined roles, objectives and continual improvement, capable of external certification | The organization and its management system | Certificate, statement of applicability, internal audit and management review records | Certifies that a system exists and operates. Does not certify that any particular AI system is safe or compliant |
-| **Assurance and attestation standards** (for example **SOC 2** reporting against the **Trust Services Criteria**, and international attestation engagements in the **ISAE 3000** family) | Provide a third-party opinion to customers and counterparties | The service and its control set, over a period | A report with the auditor's opinion, control descriptions and test results | Scope is chosen by the reporting entity, so read the scope before the opinion. Design-only reports say nothing about operation |
+| **Management system standards** (for example **ISO/IEC 42001** for AI management systems, **ISO/IEC 27001** for information security, **ISO/IEC 27701:2025** for privacy information management, a standalone standard since the 2025 edition) | Establish a repeatable management system with defined roles, objectives and continual improvement, capable of external certification | The organization and its management system | Certificate, statement of applicability, internal audit and management review records | Certifies that a system exists and operates. Does not certify that any particular AI system is safe or compliant |
+| **Assurance and attestation standards** (for example **SOC 2** (System and Organization Controls 2) reporting against the **Trust Services Criteria**, and international attestation engagements in the **ISAE 3000** (International Standard on Assurance Engagements 3000) family) | Provide a third-party opinion to customers and counterparties | The service and its control set, over a period | A report with the auditor's opinion, control descriptions and test results | Scope is chosen by the reporting entity, so read the scope before the opinion. Design-only reports say nothing about operation |
 | **Statutory and regulator expectations** (risk-tiered AI legislation ⚠, sector regulator guidance, supervisory model risk expectations for regulated firms ⚠) | Compel specific obligations by legal force | The use case, the sector or the regulated entity | Whatever the regime requires, plus regulatory correspondence | Jurisdiction-bound, subject to change and interpretation. Do not treat guidance as settled detail ⚠ |
 | **Internal policy frameworks** | Bind the organization's own behavior and give the second line something to test against | The organization's own systems and staff | Policy, standards, exception register, attestations | Only as good as its enforcement. An unenforced internal standard is a documented gap |
 | **Binding AI-specific legislation** (for example the **EU AI Act** ⚠, with its prohibited practices, high-risk systems, Article 50 transparency obligations and otherwise unregulated (minimal-risk, in the Commission's shorthand) systems, its separate obligations regime for general-purpose models, and its split of duties between provider and deployer) | Impose mandatory obligations that attach to a defined role in respect of a defined system, with penalties for non-compliance | The AI system and the role the organization holds in respect of it | Technical documentation, conformity assessment records, registration entries, instructions for use, post-market monitoring and incident reporting records | The determinations that matter most are legal ones: whether the system is in scope, which tier it falls into and which role the organization holds. Architecture supplies the facts; it does not decide any of the three ⚠ |
@@ -6138,7 +6140,7 @@ The argument of this part is what the rows show together rather than what any on
 1. **Thesis.** Governance that arrives after the architecture is a review, not a control. Every architectural decision has a governance consequence, decided at the same moment, by a named person, leaving an artifact.
 2. **Operating model.** Three lines of defense, breaking for AI on competence inversion, speed asymmetry, vendor opacity and a diffuse first line. A committee that can say no on a Tuesday. Policy, standard, procedure and control kept distinct. Placement follows authority; competence is purchased.
 3. **Tiering.** Eight inputs scored 0 to 4, four overrides that restore the asymmetry additive scoring destroys, four tiers and seven things that change per tier. Tier by capability, not intent. Self-tiering is the weak point; calibration sampling and objective triggers are the fix. Internal tier is not a legal classification ⚠. Four compliance questions: what may be processed and on what basis, where, what must be retained and deletable and who is accountable.
-4. **Model behavior.** Model-level alignment is the provider's; system-level alignment is yours, and the model's training is not a safety control. Every rule has a false-positive and a false-negative rate. Six hallucination techniques that reduce and do not eliminate fabrication, five consistency techniques, fifteen failure modes with detection and control.
+4. **Model behavior.** Model-level alignment is the provider's; system-level alignment is yours, and the model's training is not a safety control. Every rule has a false-positive and a false-negative rate. Seven hallucination techniques that reduce and do not eliminate fabrication, five consistency techniques, fifteen failure modes with detection and control.
 5. **Guardrails.** Five layers, with the strongest controls at the tool layer because that is where actions happen. Three decision points, and they check different things, so a control at one does nothing for the others. Where a rule protects money, identity, legal exposure or anything irreversible, the control is deterministic and sits outside the model. Three failure behaviors, and a control with none is an assumption. Over-refusal is a defect, and a provider refusal is a typed event to be routed on its category, counted and followed by a context reset rather than discarded. Remove excess capability rather than logging it. Two injection threat models and the eight-point checklist.
 6. **Fairness.** Differential treatment is a property of the mechanism, differential outcome a property of the distribution, and an architecture can produce the second containing none of the first. Five routes for bias, and the corpus is the one the architect chose. Segmentation is the test, and equal accuracy with unequal error types is still unfair, but the fairness criteria cannot all hold at once, so the criterion is selected and recorded before the measurement ⚠. Generative systems have no score to threshold, so evaluate at the decision rather than the text. Group labels come from collected attributes, inferred proxies or counterfactual probes, at different evidential worth. The bias test plan fixes the question before the answer is known. Remediation by group is a legal decision ⚠. Four transparency commitments, plus contestability and accountability.
 7. **Oversight.** Five requirements: information, time, competence, authority, incentive. Six failure modes. Six measurement instruments. A 100 percent approval rate is evidence of failure.
@@ -6551,10 +6553,13 @@ Retrieval-augmented generation is presented as a technique and operated as a sys
      |                                                 |
      +-----------------------------------------------+ |
                                                        v
-  EVALUATE <- CITE <- GENERATE <- ASSEMBLE <- RERANK <- INDEX
-   (quality) (arch)   (arch)      (arch)     (arch)  (platform)
+                                                     INDEX
+                                                   (platform)
+                                                       |
+                                                       v
+  EVALUATE <- CITE <- GENERATE <- ASSEMBLE <- RERANK <- RETRIEVE
+   (quality) (arch)   (arch)      (arch)     (arch)     (arch)
      ^                                                 |
-     |            RETRIEVE (arch) <--------------------+
      +---------------- query log ----------------------+
 ```
 
@@ -6724,7 +6729,7 @@ owner: Data Protection Officer
 approver: General Counsel
 status: authoritative
 effective_from: 2026-03-01
-review_due: 2026-09-01
+review_due: 2027-03-01
 jurisdictions: [UK, EU]
 
 scope:
@@ -6884,7 +6889,7 @@ The knowledge layer is architecture, not a folder. **Six components, each with a
 
 **The golden corpus** is the published, governed subset that the assistant is permitted to answer from. It is deliberately smaller than the estate. **Membership is a decision, not a default**, the decision belongs to knowledge governance, and it has three criteria: the content is authoritative, it has a living owner and it passes the orphan chunk test at section level.
 
-**Staging and publication**, operated by data engineering, is a flow with a validation gate: parse, enrich, validate, preview the chunks, publish. Validation is automated and blocking, checking metadata completeness, effective dates present and not in the past, access labels present, parse fidelity above threshold and no orphan sections above a set proportion. **A document that fails validation goes back to its owner rather than into the index with a warning**, because warnings are not read.
+**Staging and publication**, operated by data engineering, is a flow with a validation gate: parse, enrich, validate, preview the chunks, publish. Validation is automated and blocking, checking metadata completeness, effective dates present, review-due and expiry dates not in the past, access labels present, parse fidelity above threshold and no orphan sections above a set proportion. **A document that fails validation goes back to its owner rather than into the index with a warning**, because warnings are not read.
 
 **Deprecation and tombstoning**, called by the domain owner rather than by the platform. When content is superseded, it is not deleted from the knowledge system. It is **tombstoned**: removed from the serving index, retained in the archive and replaced by a record stating what superseded it and when. This matters for three reasons. Historic questions about what the rule was on a past date remain answerable. Citations in past outputs remain resolvable, which is an audit requirement. And a user who searches for the old document finds the tombstone rather than nothing, which is how they learn the rule changed.
 
@@ -7123,14 +7128,14 @@ Three mechanical consequences to implement rather than describe.
 
 Four architectural responses, in order of preference.
 
-1. **Classify the output by purpose, not by inheritance from inputs.** The template, workflow or use case carries a floor classification, so a competitive analysis is confidential regardless of source tiers.
+1. **Classify the output by purpose as well as by inheritance from inputs.** The template, workflow or use case carries a floor classification, so a competitive analysis is confidential regardless of source tiers.
 2. **Route by combination.** Certain source combinations trigger a higher tier, as policy at the gateway rather than a judgment by the user.
 3. **Human classification at the point of export.** When content leaves the system, a person confirms its tier: the control that actually works, and the one users resist.
 4. **Restrict distribution of outputs by default** to the requesting principal, so reclassification is deliberate rather than a consequence of sharing.
 
 **Decision rule: an output's classification is the higher of its inputs' and the one its purpose implies, and purpose usually wins.**
 
-⚠ **Special categories.** Data protection regimes define categories carrying heightened obligations, commonly health, biometric and genetic, alongside sector regimes for financial, health and children's data. The set, obligations and lawful bases vary by jurisdiction and change. **The architectural consequence is fixed and the legal detail is not:** special-category content must be detectable at ingest so it can be tiered; its presence recorded as metadata so routing and logging respond; and a route must keep it inside a defined boundary. Which categories apply, what lawful basis is required and whether a purpose is permitted are for counsel and the privacy function.
+⚠ **Special categories.** Data protection regimes define categories carrying heightened obligations, for example health, biometric and genetic data among a longer list, alongside sector regimes for financial, health and children's data. The set, obligations and lawful bases vary by jurisdiction and change. **The architectural consequence is fixed and the legal detail is not:** special-category content must be detectable at ingest so it can be tiered; its presence recorded as metadata so routing and logging respond; and a route must keep it inside a defined boundary. Which categories apply, what lawful basis is required and whether a purpose is permitted are for counsel and the privacy function.
 
 ---
 
@@ -7633,7 +7638,7 @@ Where not warranted, do not impose it. An access barrier applied to a low-stakes
 
 Classroom enablement transfers understanding of the frame: what this is, what it is not, who is accountable, what happens when it is wrong. That content is genuinely durable and belongs in a session with a human in the room.
 
-Everything procedural belongs **in the workflow at the moment of use**: the prompt template surfaced in the interface, the limitation stated on the screen where the limit binds, the escalation button in the review pane, the worked example in the tooltip. Procedural training delivered in a classroom four weeks before first use has an effective retention approaching zero, and every enterprise that has measured this has found the same thing.
+Everything procedural belongs **in the workflow at the moment of use**: the prompt template surfaced in the interface, the limitation stated on the screen where the limit binds, the escalation button in the review pane, the worked example in the tooltip. Procedural training delivered in a classroom four weeks before first use is largely forgotten by the time it is needed.
 
 **Decision rule: teach the frame in a room and the procedure in the interface, and if a piece of training cannot be placed in the interface, ask whether the workflow is designed correctly.**
 
@@ -7731,7 +7736,7 @@ The four development workflows describe how one engineer works. The four integra
 
 **The review asymmetry is the governing economics of all four.** Generation is cheap and review is not, so every integration point increases the volume of work presented for human judgment while leaving the human judgment capacity unchanged. A pipeline that produces more proposals than the team can genuinely review has not accelerated delivery, it has moved the queue and hidden it. Size each integration point against review capacity, not against generation capacity, and treat an unreviewed merge as the defect it is rather than as throughput.
 
-⧉ **The unmeasured rollout is the dominant failure.** Teams deploy all four integration points, report adoption in seats and never establish whether delivery improved. The instrument already exists and is the one the engineering function already reports: lead time for change, deployment frequency, change failure rate and time to restore service. Take a baseline before the rollout, not after, because a baseline taken after deployment measures the system you already changed. Change failure rate is the one that decides the argument: a program that raises deployment frequency and raises change failure rate in the same quarter has moved work downstream into incidents, and the productivity claim is unearned.
+⧉ **The unmeasured rollout is the dominant failure.** Teams deploy all four integration points, report adoption in seats and never establish whether delivery improved. The instrument already exists and is the one the engineering function already reports: the software delivery performance metrics of DORA (DevOps Research and Assessment), change lead time, deployment frequency, change fail rate, failed deployment recovery time and deployment rework rate. Take a baseline before the rollout, not after, because a baseline taken after deployment measures the system you already changed. Change fail rate is the one that decides the argument: a program that raises deployment frequency and raises change fail rate in the same quarter has moved work downstream into incidents, and the productivity claim is unearned.
 
 **Generated code carries three exposures that a human-written commit does not raise in the same way**, and each belongs to an existing control rather than to a new one. License provenance, because a generated fragment may reproduce licensed material and the obligation attaches at distribution (4.14). Dependency introduction, because an agent will add a package to solve a problem and the package arrives without the diligence a human addition would attract. And pattern propagation, because a plausible but flawed approach spreads at repository scale, which makes remediation a fleet-wide change whose effort grows with adoption rather than a single fix.
 
@@ -7782,7 +7787,7 @@ The **internal credential** is worth building at the configurer rung and above o
 | Independent review as a workflow | Whether an AI review satisfies separation of duties, and who is accountable for what it misses | Change control policy, owned by the change advisory board |
 | Direct execution on small changes | Traceability from every production change to an approved ticket | Change record, owned by the release manager |
 | Generated code entering the repository | Static analysis, dependency scanning, secret scanning and license provenance | Secure development standard, owned by application security |
-| Improving developer workflows | Baseline and target for lead time, deployment frequency, change failure rate and restore time | Metrics baseline, owned by the engineering lead |
+| Improving developer workflows | Baseline and target for the five DORA metrics: change lead time, deployment frequency, change fail rate, failed deployment recovery time and deployment rework rate | Metrics baseline, owned by the engineering lead |
 
 **What this costs the organization.** Key person dependency is priced only when the person resigns, and by then the replacement cost includes rediscovering decisions never written down; an architect who remains the escalation path for the last system delivers the current one more slowly, on a different budget. Without an acceptance step in which a receiving operations owner signs that the run team is capable, the build team is released on a date rather than on readiness, the shortfall appears as incident volume in the first quarter of run, and the original team answers questions informally for months as shadow support, booked to no cost center. Unattributed consumption arrives as an invoice nobody owns, and the response is usually a spending freeze that stalls the adoption it was meant to create; leavers holding seats for months are both a license charge and an access finding. Generated code spreads a plausible but flawed pattern at repository scale, so remediation is a fleet-wide change whose effort scales with adoption, and licensing exposure in generated code and pulled dependencies surfaces during due diligence, long after the commit.
 
@@ -7875,11 +7880,11 @@ Six artifacts must be revised, and that revision is the change management delive
 
 The capacity model is omitted most often and does the most damage. If a reviewer's establishment assumes eight matters a day of self-produced work and the new model routes twenty machine-produced drafts to that person, the establishment is wrong by a factor, and the quality collapse that follows will be reported as a model quality problem. It is not; it is a staffing model that was never updated.
 
-1.3 raises all six from the other end and carries none of them, as the things a delegation map does not show: **moving work off people changes job descriptions, training, performance measures and, in some jurisdictions, consultation obligations.** The first three are the artifacts above. The fourth is the subject of the next subsection, and it is the one that can stop a rollout rather than merely embarrass it.
+1.3 raises the same ground from the other end and carries none of it, as the things a delegation map does not show: **moving work off people changes job descriptions, training, performance measures and, in some jurisdictions, consultation obligations.** Two of those four, job descriptions and performance measures, are artifacts above; training is 7.4's. The fourth is the subject of the next subsection, and it is the one that can stop a rollout rather than merely embarrass it.
 
 ### ⚠ Union, works council and professional-body considerations
 
-Where employees are represented, deployment of a system that monitors, measures, ranks or materially alters work is frequently subject to consultation or co-determination obligations before implementation, not after. In several European jurisdictions works council agreement is a precondition, not a courtesy, and the obligation can attach to the productivity telemetry as much as to the system itself. In professional contexts a supervisory body, a bar, a medical council or a financial regulator may have expectations about competence, supervision, delegation and disclosure to the client. These are not program-office judgments. ⚠ Obtain a jurisdiction-specific determination from counsel before any deployment that measures individual performance, alters a represented role or produces work product a professional signs, and treat it as a gate on the rollout rather than a workstream beside it.
+Where employees are represented, deployment of a system that monitors, measures, ranks or materially alters work is frequently subject to consultation or co-determination obligations before implementation, not after. In several European jurisdictions works council agreement, or a conciliation-board award that replaces it (in Germany, an Einigungsstelle award), is a precondition, not a courtesy, and the obligation can attach to productivity telemetry attributable to individuals as much as to the system itself. In professional contexts a supervisory body, a bar, a medical council or a financial regulator may have expectations about competence, supervision, delegation and disclosure to the client. These are not program-office judgments. ⚠ Obtain a jurisdiction-specific determination from counsel before any deployment that measures individual performance, alters a represented role or produces work product a professional signs, and treat it as a gate on the rollout rather than a workstream beside it.
 
 ### Communication cadence and message discipline
 
@@ -7910,16 +7915,16 @@ Four rules for handling it:
 
 **The enterprise question this section does not ask.** Which of these determinations has to be made before the pilot rather than before the rollout, given that a bounded pilot inside a represented workforce is already a deployment for this purpose and is the point at which the measurement starts.
 
-**Governance at this decision.** Four rows, and the block deliberately stops there. **The capacity model is 2.12's**, whose block already carries arrival rate, review time, queue depth and headcount as a capacity and staffing plan owned by operations, and the third job-design artifact above is that plan under another name. **Training, communication and the measurement of adoption are 7.2's** adoption plan, and **access made contingent on demonstrated competence is 7.5's** entitlement register. Restating any of them here would put two owners on one artifact.
+**Governance at this decision.** Four rows, and the block deliberately stops there. **The capacity model is 2.12's**, whose block already carries arrival rate, review time, queue depth and headcount as a capacity and staffing plan owned by operations, and the third job-design artifact above is that plan under another name. **Training, communication and the measurement of adoption are 7.2's** adoption plan, and **access made contingent on demonstrated competence is 7.4's** license register. Restating any of them here would put two owners on one artifact.
 
 | Decision here | Governance decision that belongs with it | Artifact and owner |
 | --- | --- | --- |
 | Deploying a system that monitors, measures, ranks or materially alters represented work | Whether consultation or co-determination is owed in each jurisdiction, and whether it gates the rollout date rather than running beside it ⚠ | Employee-representation determination per jurisdiction, dated and re-taken on material change. Employment counsel with the change lead |
-| Instrumenting the workflow so adoption can be measured | Whether the productivity telemetry attracts the obligation on its own, separately from the system it measures, and which fields it covers | Monitoring position naming the measured fields and the population. Data protection officer with employment counsel |
+| Instrumenting the workflow so adoption can be measured | Whether productivity telemetry attributable to individuals attracts the obligation on its own, separately from the system it measures, and which fields it covers | Monitoring position naming the measured fields and the population. Data protection officer with employment counsel |
 | Redefining the role rather than only the task | Revising the role description, the performance measures, the quality standard, the supervision model and the career progression on one date rather than as they are noticed | Revised role and measurement set, owned by the function head with human resources |
 | Producing work product a professional signs | What the supervisory body expects on competence, supervision, delegation and disclosure to the client ⚠ | Professional-body position, owned by whoever already answers to that body |
 
-**What this costs the organization.** A consultation obligation discovered after the build is a delay priced in weeks of an idle delivery team, and where agreement is a precondition it is a rollout that cannot proceed on any budget. The cost people forget is the second determination: the productivity telemetry usually attracts the obligation in its own right, and it is specified by the measurement workstream months after the legal question was asked about the system.
+**What this costs the organization.** A consultation obligation discovered after the build is a delay priced in weeks of an idle delivery team, and where agreement, or an award in its place, is a precondition it is a rollout that cannot proceed on any budget. The cost people forget is the second determination: productivity telemetry attributable to individuals usually attracts the obligation in its own right, and it is specified by the measurement workstream months after the legal question was asked about the system.
 
 **The executive translation.** In some of the jurisdictions we operate in this is a gate and not a consultation, the determination takes weeks to obtain, and it is cheaper to start it now than to hold a finished system at the border.
 
@@ -7944,7 +7949,7 @@ The two likeliest gates to fail, named now so failing is a finding, not a surpri
 
 1. Adoption fails in three ways: nobody uses it, people use it and stop, people use it wrongly. Each has a different diagnosis and a fix that worsens the other two if misapplied, so diagnose before intervening.
 2. A proof of concept, a pilot, a production rollout and a science project are four different things with different entry and exit criteria. **Any activity whose result changes no stated decision is a science project.**
-3. Pilots need eight elements including a pre-registered threshold and a kill criterion, or they produce impressions. Pilot purgatory has four structural causes, and conditional scale funding removes the worst of them. **The worked plan runs the same discipline across six phases**, each carrying an adoption gate to proceed and each building on the production data path rather than on scaffolding, and it names the two gates most likely to fail in advance so that failing one is a finding rather than a surprise.
+3. Pilots need eight elements including a pre-registered threshold and a kill criterion, or they produce impressions. Pilot purgatory has four structural causes, and conditional scale funding removes the worst of them. **The worked plan runs the same discipline across six phases**, each carrying an adoption gate to proceed and, from the pilot onward, each building on the production data path rather than on scaffolding (the proof of concept builds none), and it names the two gates most likely to fail in advance so that failing one is a finding rather than a surprise.
 4. The successful pilot that cannot scale fails on population, scaffolding, volume economics or an entitlement model that twelve users hid.
 5. Measure the six-stage funnel by ratio and by role, read cohort curves at the plateau, and interview the abandoned. **Never confuse usage with value, because usage rises when the system worsens.**
 6. Build seven curricula, reviewer first, and teach the four things nobody expects: what it cannot do, how a wrong answer looks, when to escalate stated as a trigger, and that the user remains responsible for the output.
@@ -8053,7 +8058,7 @@ The fourth dimension deserves its own table, because "test the edge cases" is no
 
 Prompts and artificial intelligence systems are chronically under-tested because they look like they work. The output is fluent, so it looks fine, and fluency is not accuracy. Three paths present themselves after writing a prompt and two of them are traps: ship it after one try, or test against a handful of hand-picked inputs and tweak until they pass. Both feel like testing and prove almost nothing. The third is an evaluation pipeline that scores performance across many cases and produces a number.
 
-**The value of the number is not its level; it is that comparison becomes possible.** Without it, "better" means "I like it more now." It is also what makes the standing instruction operable: add complexity only when it **demonstrably** improves outcomes, and demonstrably requires a number.
+**The value of the number is not its level; it is that comparison becomes possible.** Without it, "better" means "I like it more now." It is also what makes the standing instruction operable: add complexity only when it **demonstrably** improves outcomes, and demonstrably requires a number. Evaluation before release is one of the places this Primer carries the Slow AI doctrine (see Doctrine, in the front matter).
 
 **You cannot improve what you have not defined.** An eyeball check across three examples proves nothing. The evaluation suite is the durable asset here, not the prompt: prompts get rewritten constantly, and the dataset and the graders are what let anyone rewrite them safely.
 
@@ -8244,9 +8249,9 @@ Code graders, model graders and human graders. **The robust pattern combines a c
 
 1. **Have detailed, clear rubrics**, with automatic-fail conditions stated explicitly. The documentation's worked example: "The answer should always mention 'Acme Inc.' in the first sentence. If it does not, the answer is automatically graded as 'incorrect.'" A single criterion may need several rubrics for holistic evaluation.
 2. **Be empirical or specific.** Instruct the grader to output only 'correct' or 'incorrect', or to judge on a 1 to 5 scale. Purely qualitative evaluation cannot be assessed quickly or at scale.
-3. **Encourage reasoning.** Ask the grader to think first before deciding a score, **and then discard the reasoning.** This increases evaluation performance, particularly for tasks requiring complex judgment.
+3. **Encourage reasoning.** Use a grader model with thinking on, **so that it reasons before it produces an evaluation score.** This increases evaluation performance, particularly for tasks requiring complex judgment.
 
-The third carries a refinement over the general advice about reasoning: the reasoning exists to improve the score and is then thrown away. It is a mechanism for better grading, not an artifact you keep.
+The third is a mechanism for better grading: the reasoning exists to improve the score, so it has to come before the score rather than be written after it to justify one.
 
 #### Named eval methods
 
@@ -8326,7 +8331,7 @@ A harness with one invocation point runs when somebody remembers. Four points, w
 
 ⧉ **An unbudgeted harness gets switched off quietly, and that is the most common way evaluation stops.** It is never a decision to stop measuring. It is a cost review, a line nobody owns and a cadence reduced from nightly to weekly to on request, after which quality is asserted rather than known. Three defenses: fund it as part of the system rather than as a project cost, name its owner where the model spend is owned and keep the run cheap through prefix caching, the batch lane in 8.10 and a cheaper grader model held to the calibration obligation in 8.6.
 
-Every run emits the same set: the manifest, the per-case scores with grader reasoning discarded, the segment breakdown, the aggregate with its spread and the pass or fail against the agreed threshold. Dated, retained and written where the operating team cannot edit it, that set is the evaluation artifact the evidence register in 4.9 requires. Its value is that the operation emits it rather than somebody assembling it before an inspection, the distinction between design-time and operating-effectiveness evidence.
+Every run emits the same set: the manifest, the per-case scores, the segment breakdown, the aggregate with its spread and the pass or fail against the agreed threshold. Dated, retained and written where the operating team cannot edit it, that set is the evaluation artifact the evidence register in 4.9 requires. Its value is that the operation emits it rather than somebody assembling it before an inspection, the distinction between design-time and operating-effectiveness evidence.
 
 ### ⌂ The architect's lens
 
@@ -8469,7 +8474,7 @@ Observability is the ability to answer questions about a running system without 
 | --- | --- |
 | **Correlation identifier** tying every step of one logical request together across model calls, tool calls and agents | Without it, multi-step systems are undebuggable. The most important item here |
 | **Prompt version and model identifier**, with effort and thinking configuration | When quality changes this is the first thing you want and the most commonly missing. Effort belongs in this set |
-| **The three token fields**: `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens` | They bill at 1x, 1.25x and the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`) respectively. Note that `input_tokens` counts **only tokens after the last cache breakpoint**, so total input is the sum of all three. Getting this wrong understates usage |
+| **The three token fields**: `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens` | They bill at 1x, the cache-write multiplier (1.25x on the five-minute lifetime, 2x on the one-hour lifetime; Appendix I, `cache.write.5m.multiplier`, `cache.write.1h.multiplier`) and the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`) respectively. Note that `input_tokens` counts **only tokens after the last cache breakpoint**, so total input is the sum of all three. Getting this wrong understates usage |
 | **Latency as a distribution**: median, p95, p99 and time-to-first-token separately | Averages hide the tail, and the tail is what users complain about |
 | **Tool calls, arguments and outcomes**, with error categories | Tells you what the system actually did |
 | **Retrieval detail**: what was retrieved, with scores, and whether the answer used it | Retrieval quality is invisible unless logged, and it is the most common cause of confident wrong answers |
@@ -8534,7 +8539,7 @@ Having named the class, map the symptom to the component that could have produce
 | Symptom | First suspect |
 | --- | --- |
 | Confident wrong answers beginning at a content update, model and latency unchanged | **Retrieval and indexing** |
-| Output format wrong or inconsistent | The prompt or the output contract. Enforce a schema; prefill; add examples |
+| Output format wrong or inconsistent | The prompt or the output contract. Enforce a schema with structured outputs; state the format in the instructions; add examples |
 | Fields fabricated that are absent from the source | **A required schema field that should be optional.** A required field forces invention |
 | Identical inputs producing different answers | Non-determinism, or more often criteria vague enough that several answers are defensible |
 | Quality degrading over a long conversation | Context management: accumulated clutter, summarization erosion, key facts lost from the middle |
@@ -8603,7 +8608,7 @@ Online comparison is A/B testing, and the discipline it requires is the one A/B 
 
 **The peeking problem is the one that catches experienced teams.** Checking the result repeatedly and stopping when it turns significant inflates the false-positive rate far above the nominal threshold, because each look is another chance for noise to cross the line. The remedy is a stopping rule fixed in advance: a target sample size, or an explicitly sequential design whose thresholds already account for repeated looks. A dashboard that anyone can watch continuously is a peeking machine, and the discipline has to be procedural because the dashboard will not enforce it.
 
-**Segment reporting multiplies the comparisons.** Reporting one primary metric across twelve segments is twelve tests, and at a conventional threshold roughly one will look significant by chance. Nominate the primary metric and the primary segment in advance; treat every other segment as exploratory, generating hypotheses for the next test rather than conclusions for this one.
+**Segment reporting multiplies the comparisons.** Reporting one primary metric across twelve segments is twelve tests, and at a conventional threshold of 0.05 there is about a 46 percent chance that at least one looks significant by chance (0.6 expected). Nominate the primary metric and the primary segment in advance; treat every other segment as exploratory, generating hypotheses for the next test rather than conclusions for this one.
 
 **Control the input distribution across arms, not only the assignment.** Random assignment of requests distributes inputs evenly in expectation and does not do so in any particular test, and at small samples the gap between those two statements is where false results live. Where the input population is heterogeneous, and a document corpus ranging from a few pages to many is the ordinary case, an arm can receive materially fewer hard cases than the other and return an improvement that is an artifact of routing. Stratify the assignment on whatever dimension drives difficulty, and report the composition of each arm alongside the result. **An unreported arm composition is an uncheckable result**, because the reader cannot distinguish a better version from an easier sample.
 
@@ -8693,7 +8698,7 @@ A metrics list is a dashboard nobody reads. **A metrics architecture is four lev
 | **3 Adoption** | Is it used, by whom, for what? | Weekly active users as a share of eligible, tasks per active user, repeat use rate, share of eligible work processed, abandonment rate | Weeks | Business owner |
 | **4 Business outcome** | Did it change anything that matters? | Cycle time, cost per case, throughput per person, quality of the end product, deflection rate, revenue or loss effect | Quarters | Sponsor |
 
-**Leading and lagging.** Levels 1 and 2 lead; levels 3 and 4 lag. **Override rate is the single most useful leading indicator in the set**, because users generate it while doing their job and it moves within hours where the level 4 measures move over quarters. It leads on quality rather than on outcome generally: a degradation arriving through a change in the surrounding process moves level 4 without ever touching the override rate, so a flat override rate is evidence about the system and not about the deployment. Repeat use rate is the best leading indicator of level 4, and people who tried the system twice and stopped are the most informative population in the deployment and the one nobody interviews.
+**Leading and lagging.** Levels 1 and 2 lead; levels 3 and 4 lag. **Override rate is the single most useful leading indicator in the set**, because users generate it while doing their job and it moves within hours where the level 4 measures move over quarters. It leads on quality rather than on outcome generally: a degradation arriving through a change in the surrounding process moves level 4 without ever touching the override rate, so a flat override rate is evidence about the system and not about the deployment. Repeat use rate is the best leading indicator of level 4, and abandoned users, as 7.3 defines them (activated, then no real-work usage for four consecutive weeks), are the most informative population in the deployment and the one nobody interviews.
 
 ### The vanity metrics to refuse
 
@@ -8993,7 +8998,7 @@ Cost engineering is choosing the cheap design. **Cost operations is keeping it c
 | Input | Detail |
 | --- | --- |
 | **Volume** | Requests per day, and the **peak rate**, usually several times the average. Peak is what has to fit inside rate limits |
-| **Tokens per request** | Split three ways: fresh input at 1x, cache writes at 1.25x and cache reads at the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`), with output priced separately and higher. The split is the thing most cost models get wrong. **Count the tokens on the model you will ship**, because the tokenizer changed at 4.7 and later models produce materially more tokens for the same text, so a count carried over from an earlier generation understates the bill by a margin no other line in this table can absorb |
+| **Tokens per request** | Split three ways: fresh input at 1x, cache writes at 1.25x on the five-minute lifetime or 2x on the one-hour lifetime (Appendix I, `cache.write.5m.multiplier`, `cache.write.1h.multiplier`) and cache reads at the model's cache-read multiplier (Appendix I, `cache.read.multiplier.*`), with output priced separately and higher. The split is the thing most cost models get wrong. **Count the tokens on the model you will ship**, because the tokenizer changed at 4.7 and later models produce materially more tokens for the same text, so a count carried over from an earlier generation understates the bill by a margin no other line in this table can absorb |
 | **Call multiplier** | How many model calls per completed task. Rung 0 on the complexity ladder is a single call, rung 1 is one to a few, rung 7 is a dynamic workflow whose number of calls is variable and composed at runtime, and rung 8, the autonomous agent, is the unbounded one. This is where the ladder and the cost model meet |
 | **Unit prices** | Per model, per token type. Perishable; verify |
 | **Cost per request** | The arithmetic |
@@ -9002,8 +9007,8 @@ Cost engineering is choosing the cheap design. **Cost operations is keeping it c
 | **Feasibility** | Whether it clears the business case at all |
 
 Two refinements the current pricing structure adds. **Cache hits are not deducted against rate limits**, so caching relieves a capacity constraint as well as a cost one. And **the cache hit ratio is the single most informative number in a cost model**, because the gap between 1x and the cache-read multiplier is where the money is: a system with a cold cache costs roughly ten to forty times more per input token than the same system with a warm one, depending on the model (Appendix I, `cache.read.multiplier.*`).
-**Two qualifications on the caching and batch lines above, both of which change a cost model rather than refine it.** Caching savings assume the cache is warm when the next request arrives, so a workload whose request frequency is lower than the cache lifetime will not realize them consistently: the model shows a saving the traffic pattern never delivers. And where the batch discount is load-bearing in a regulated deployment, ⚠ verify that batch processing is covered under the applicable business associate agreement and compliance configuration before routing protected data through it, because a cost model resting on a route the compliance position does not cover is not a cost model.
 
+**Two qualifications, on the caching line above and the batch section below, both of which change a cost model rather than refine it.** Caching savings assume the cache is warm when the next request arrives, so a workload whose request frequency is lower than the cache lifetime will not realize them consistently: the model shows a saving the traffic pattern never delivers. And where the batch discount is load-bearing in a regulated deployment, ⚠ verify that batch processing is covered under the applicable business associate agreement and compliance configuration before routing protected data through it, because a cost model resting on a route the compliance position does not cover is not a cost model.
 
 **Three things a sizing model is actually for.**
 
@@ -9067,13 +9072,13 @@ Nearly everything that improves quality costs time. Agentic systems in particula
 | **Tighter retrieval** | Less context to process. Reranking reduces cost and latency because the model processes less |
 | **Trimming output length** | Output tokens are generated serially, so output length drives total time more than input length |
 
-**No, nothing is blocked.** Batch processing is available at roughly half cost, with a processing window measured in hours rather than seconds and no guarantee on completion time. It suits overnight reports, periodic audits, bulk extraction and back-population. Batch also supports substantially higher output limits on current models via a beta header, which makes it the right lane for very long single outputs regardless of the cost argument.
+**No, nothing is blocked.** Batch processing is available at roughly half cost, with a processing window measured in hours rather than seconds and no guarantee on completion time. It suits overnight reports, periodic audits, bulk extraction and back-population. Batch also supports substantially higher output limits on the current Opus-, Sonnet- and Haiku-class models (Appendix I, `batch.output_300k.models`; the current Fable-class model is not listed) via a beta header, on the Claude API and Claude Platform on AWS, which makes it the right lane for very long single outputs regardless of the cost argument.
 
 **The tool-use limitation is narrower than it is usually stated, and getting it wrong excludes batch from workloads it suits.** Server-side tools run normally in a batched request, because the batch worker executes the same agentic loop the synchronous path does and in fact runs more iterations per turn before it pauses. What batch cannot do is a **client-side** tool round trip inside one request, because there is no open connection for your code to return a result on. A paused turn comes back as a result and is continued by submitting a follow-up request. **So the rule is not "no tools in batch". It is that every client-side tool call costs a round trip through the queue**, which is what makes an agent loop with client-executed tools a poor fit for the lane and a server-tool workload a good one.
 
 **The trap:** batch often finishes quickly in practice. That is not a basis for putting it inside a blocking workflow. **A guarantee you do not have is not a guarantee.**
 
-**The planning technique:** work backward from the commitment. If you have promised thirty hours and the lane guarantees twenty-four, submitting every four hours gives headroom. If you have promised two seconds, the lane is unavailable at any price.
+**The planning technique:** work backward from the commitment. If you have promised thirty hours, the lane does not cover it: twenty-four hours is an expiry, not a completion guarantee (Appendix I, `batch.expiry`), and a request that expires and is resubmitted can take up to forty-eight. Size the promise for resubmission after expiry. If you have promised two seconds, the lane is unavailable at any price.
 
 **Express the trade-off as a choice with named consequences rather than as a technical constraint.** "Two seconds at this accuracy, or ten seconds at this accuracy, and here is what each error costs" is a decision the business owner can make.
 
@@ -9235,7 +9240,7 @@ Documentation is the mechanism by which a design survives the departure of its a
 
 1. Readiness has eight dimensions, binary evidenced conditions, three outcomes and named signatories, and **a gate nobody can fail is not a gate.** Where several conditions are open at once, measurement and ownership are the absences that matter most, because they prevent you fixing the rest.
 2. Write the eval suite before the production code. It forces a measurable definition of success, exposes design assumptions while changing them is cheap, and gives you a gate with a pre-change baseline.
-3. Evaluation is the asset that outlives any prompt. Make the success criterion specific, measurable, achievable and relevant; measure the five families of accuracy, latency, cost, safety and security; combine a code grader for validity with a model grader for quality; have the grader reason and then discard the reasoning.
+3. Evaluation is the asset that outlives any prompt. Make the success criterion specific, measurable, achievable and relevant; measure the five families of accuracy, latency, cost, safety and security; combine a code grader for validity with a model grader for quality; have the grader reason, with thinking on, before it scores.
 4. Prioritize volume over quality by automating the grading rather than keeping the set small, reserve humans for calibration and sampled review, and freeze the dataset so comparison keeps meaning something.
 5. **A stale eval suite is worse than none**, because it passes while measuring behavior the system no longer produces. Update the set in the same change as the behavior it measures.
 6. The evaluation harness is the component most often specified and least often built, so ask to see it running: thirty to fifty cases per reported segment, two prompt versions, segment reporting and a deliberate breakage. Every run emits a manifest pinning model, sampling settings, dataset, grader, index and code version, because a score without one cannot be reproduced or defended. A number that moves when a known defect is fixed is what makes the harness an instrument.
@@ -9332,7 +9337,7 @@ Subject: approval to proceed to enterprise deployment of the contract review ass
 
 **Two of this document's conventions collide in what follows.** The six labels below are the six parts of the briefing structure above, not Parts of this primer, and the decimals are millions of currency rather than section numbers, although 1.4, 2.6, 3.2 and 4.9 are all real sections of it. The scenario is 7.8's worked adoption plan seen from the committee's side, and its baseline figures are 7.8's.
 
-**Part 1, the decision, 30 seconds.** "I ask the committee to approve enterprise deployment across all four jurisdictions, release the second tranche of 1.4 million over eighteen months and confirm the General Counsel as accountable executive for the operating model. The alternative: hold at the two pilot jurisdictions for two further quarters."
+**Part 1, the decision, 30 seconds.** "I ask the committee to approve enterprise deployment across all four jurisdictions, release the second tranche of 1.4 million over eighteen months and confirm the General Counsel as accountable executive for the operating model. The alternative: hold at the two largest jurisdictions (wave one) for two further quarters."
 
 **Part 2, the recommendation, 30 seconds.** "I recommend full deployment. Three-year total cost of ownership is 3.2 million against a measured benefit of 4.9 million, dominated by business cycle time rather than legal headcount."
 
@@ -9430,7 +9435,7 @@ Five properties, each present because roadmaps without it get cut.
 | **M4 to M8** | Identity and entitlement model; knowledge layer with ingest, freshness and deletion | Knowledge assistant extended to the full corpus with entitlements enforced, 400 users | Entitlement tested by adversarial retrieval. Deletion demonstrated across derived artifacts | Data owner |
 | **M7 to M11** | Control layer with defined failure behavior; human review patterns; escalation | Contract review assistant pilot, 24 lawyers, representative draw | Pre-registered thresholds met. Zero unreviewed outputs external. Kill criterion not triggered | General Counsel |
 | **M10 to M14** | Operating model: named owners, support path, incident process, change gates | Contract review assistant, wave one, two jurisdictions | Adoption gates by segment. Reviewer load inside revised capacity band | General Counsel with function head |
-| **M12 to M16** | Change and enablement capability: seven curricula, champion network funded, internal credential | Contract review assistant, waves two and three. Configurer population licensed | Segment parity or explicit accepted exception. Credential issued | Human resources with program |
+| **M12 to M16** | Change and enablement capability: seven curricula, champion network funded, internal credential | Contract review assistant, waves one and two. Configurer population licensed | Segment parity or explicit accepted exception. Credential issued | Human resources with program |
 | **M14 to M18** | Portability and exit: second-provider evaluation, migration rehearsal, decommissioning plan for the superseded manual process | Regulated decision-support use case enters design, not build | Migration rehearsed on a real workload. Exit cost and duration stated | Chief Information Officer |
 
 Note the regulated use case at month fourteen entering design rather than build, the entitlement layer at month four paying for nothing by itself and portability funded rather than assumed.
@@ -9838,7 +9843,7 @@ A policy assistant with a well-tuned retrieval stack: appropriate chunking, a la
 
 A tier-four deployment routed high-impact outputs to a human approver. The control was documented, tested and audited. Approval rate: 99.8 percent. The approver was a junior analyst with two hundred items a day queued, no time to open a source, no subject-matter standing to disagree with a senior originator and a performance measure based on throughput.
 
-**Systemic diagnosis:** the control existed in the design and not in the world. **A human control requires four things and this one had one:** time to perform it, information to perform it with, standing to disagree and an incentive that does not punish disagreement. This is a **people-and-controls interaction failure**, the most dangerous of the five: it produces a complete evidence trail of a control that never operated, worse than no control, since the organization has relied on it and can prove it.
+**Systemic diagnosis:** the control existed in the design and not in the world. **A human control requires four things and this one had none:** time to perform it, information to perform it with, standing to disagree and an incentive that does not punish disagreement. This is a **people-and-controls interaction failure**, the most dangerous of the five: it produces a complete evidence trail of a control that never operated, worse than no control, since the organization has relied on it and can prove it.
 
 **Decision rule: for every human control, name the time, the information, the standing and the incentive, and if any of the four is absent the control does not exist regardless of what the evidence shows.**
 
@@ -9909,7 +9914,7 @@ Where to intervene, worst to best. The ranking is the argument.
 
 | Rank | Leverage point | Example | Why it sits here |
 | --- | --- | --- | --- |
-| 6 (weakest) | **Parameters** | Retrieval top-k, temperature, similarity threshold | Tuning inside a structure that produces the problem. Highest activity, lowest yield and where most effort goes |
+| 6 (weakest) | **Parameters** | Retrieval top-k, effort level, similarity threshold | Tuning inside a structure that produces the problem. Highest activity, lowest yield and where most effort goes |
 | 5 | **Buffers and stocks** | Add reviewers, extend the queue | Relieves a symptom without changing the loop that generates it. Necessary and never sufficient |
 | 4 | **Delays** | Weekly quality sampling instead of monthly; leading indicators on reviewer load | Shortening a delay stops oscillation. Cheap, high-yield and consistently overlooked |
 | 3 | **Information flows** | Show the reviewer what the system was uncertain about; show the executive the segment breakdown; publish the fix log to users | Changing who knows what, when, changes behavior without changing any rule. The best value per unit of effort in the table |
@@ -10046,7 +10051,7 @@ Two further properties belong to the stance rather than the list.
 1. An enterprise artificial intelligence deployment is a socio-technical system of six elements: people, artificial intelligence, workflow, governance, data and operational controls. **A change to any one changes the requirements of the other five, without exception.**
 2. Model-level thinking fails because every component can be correct while the system fails. The accurate model evaluated on a population users never send it. The well governed system whose cumulative control friction exceeded its time saving. The high-adoption system whose observability was sized for debugging rather than for the obligation period. The excellent retrieval over a corpus holding three unmarked versions of the same policy. The human control with a 99.8 percent approval rate because the reviewer had no time, no information, no standing and the wrong incentive.
 3. After it works, seven second-order effects arrive: workload displaced to review, deskilling with a succession consequence, the reviewer as bottleneck, volume induced by cheapness, gaming under any single incentivized metric, accountability diffused across four parties who each assume another is the check, and the manual path atrophying into a continuity risk.
-4. The operating model is a set of loops. The reinforcing one runs backwards at the same speed, the balancing ones are delayed by weeks to months and that delay causes oscillation, and **the corpus-pollution loop is the one nobody instruments.**
+4. The operating model is a set of loops. The reinforcing one runs backwards at the same rate or faster, the balancing ones are delayed by weeks to months and that delay causes oscillation, and **the corpus-pollution loop is the one nobody instruments.**
 5. Intervene at goals and rules before information flows and delays, and at parameters essentially never.
 6. Draw the boundary to include everything whose failure fails the outcome, and refuse local optimization, because subsystem metrics improve while the system degrades.
 7. Treat every handoff as a defect concentrator needing three things stated: what is transferred, what may be assumed and what must be checked.
@@ -10084,7 +10089,7 @@ Twelve questions in order. The order is load-bearing: each one can rule out work
 
 **9. Where are the human gates, and are they placed by reversibility and stakes?** A gate pauses execution for review. Gate any irreversible **or** high-stakes action; **sample** the rest rather than gating each one. The absent human gate is the single most repeated failure across the reference architectures, present in four of the five. Developed in 2.4, 2.5 and 2.12.
 
-**10. What is measured, and against what?** Three distinct instruments, and which one is missing is usually the finding: a **success criterion** (was the goal met), a **baseline** (was the simpler thing measured before escalating), a **regression suite** (did the last change break something). Add the two the retrieval material demands: an **eval set per architecture**, never one for the composed system and a **labeled retrieval set**, because retrieval quality is not visible in the output. Developed in 2.5, 5.3 and 8.2.
+**10. What is measured, and against what?** Three distinct instruments, and which one is missing is usually the finding: a **success criterion** (was the goal met), a **baseline** (was the simpler thing measured before escalating), a **regression suite** (did the last change break something). Add the two the retrieval material demands: an **eval set per architecture**, never one for the composed system, and a **labeled retrieval set**, because retrieval quality is not visible in the output. Developed in 2.5, 5.3 and 8.2.
 
 **11. Can operations reconstruct what happened without redeploying?** The minimum capture set, a propagated trace identifier, per-request identity and the model identifier, because "which model produced this" is the first question when quality changes. Developed in 8.5 for the capture set, and **in 3.5 for per-request identity, which 8.5's own capture table does not carry.**
 
@@ -10233,7 +10238,7 @@ Every row below carries its family, and two conventions keep the seven sufficien
 | --- | --- | --- | --- |
 | A high aggregate accuracy figure is offered as grounds for reducing review | Trust the aggregate, or use it as the promotion gate | A healthy aggregate reliably masks a broken segment. Segment before acting, and never reduce review on an aggregate. Aggregate accuracy on an evaluation set is also not accuracy on the usage population: where users route the hard cases to the system, weight the evaluation by observed usage | Destructive shortcut |
 | Hand grading is expensive | Keep the eval set small, or scale human grading as the quality mechanism | Prefer many automated cases to few hand-graded ones, and reserve humans for calibrating the grader. A twenty-five case set cannot detect a segment regression | Destructive shortcut |
-| A model grader is in use | Ask it for a bare score, or keep its reasoning as the artifact | Reasoning precedes the score and is then discarded. A bare number saturates and stops discriminating | True irrelevance |
+| A model grader is in use | Ask it for a bare score | Reasoning precedes the score: a grader model with thinking on reasons before it scores. A bare number saturates and stops discriminating | True irrelevance |
 | Output needs reviewing | Have the system review its own output | Self-review is not review. Use an independent instance | Vocabulary swap |
 | Two versions have to be compared | Test in production first, change several things at once or diff the text | Offline evaluation precedes online experimentation, always, one change at a time, with the rollback criterion set before the change. Versions of a generative system differ distributionally, and diffing prose measures nothing | True irrelevance |
 | A canary is planned | Slice it by user hash | Where the regression lives in a segment, a hash slice will not find it | True irrelevance |
@@ -10330,9 +10335,9 @@ For review and assurance work, the question is not whether a control was designe
 | **Agent constraint register**: tool allowlist, per-turn budget, permission scope, stopping criteria | The four production constraints, which are constraints rather than options. 2.4 |
 | **Gate register**: which actions pause for review, the reversibility and stakes rationale and the sampling rate for ungated actions | That gates were placed by risk rather than by convenience, and that the ungated set was a decision. 2.4, 2.12 |
 | **Guardrail failure matrix**: each control, its layer and its behavior when it fails | That the safety stack was designed as a stack. A control with no failure behavior is unfinished. 4.4 |
-| **Observability capture set**, with trace identifier, per-request identity and model identifier | That an incident can be reconstructed without redeployment, and that "who caused this action" is answerable. Per-request identity is a HIPAA audit-control requirement, not only good practice. 8.5, and 3.5 for the identity row |
+| **Observability capture set**, with trace identifier, per-request identity and model identifier | That an incident can be reconstructed without redeployment, and that "who caused this action" is answerable. ⚠ Where protected health information is in scope, HIPAA audit controls require mechanisms that record and examine activity (45 CFR 164.312(b)) and unique user identification is a separate access-control specification (164.312(a)(2)(i)); neither requires identity on every model request, so whether this design satisfies them is a determination for the compliance function. 8.5, and 3.5 for the identity row |
 | **Derived-artifact data map**: chunks, embeddings, caches, logs, eval sets | That an erasure request can actually be satisfied. 4.11 |
-| **Business associate agreement** with every vendor touching protected health information | HIPAA. Also the fastest way to find a vendor nobody inventoried. 4.2 |
+| **Business associate agreement** with every vendor that creates, receives, maintains or transmits protected health information on your behalf (subject to the exclusions in 45 CFR 160.103) | HIPAA. Also the fastest way to find a vendor nobody inventoried. 4.2 |
 | **Decision records** and a runbook | That the design survives the departure of the person who made it, which is the test of adequate documentation. 8.11 |
 
 **Two cautions for review work.** First, **the absence of an error signal is not evidence of health.** The most consequential failures produce no error at all: stale but confident answers, silent pipeline decay, a subagent dropping a unit, a cache that never caches. A system that reports itself healthy is the one to examine hardest. Second, **a compensating control is not a fix.** Making a failure visible is worth doing and is not the same as making it impossible, and mistaking the first for the second is the most common finding worth writing up.
@@ -10491,7 +10496,7 @@ Tools = **ACT**. MCP = **CONNECT**. Subagents = **ISOLATE / PARALLELIZE**. Hooks
 
 SHAPING, what it knows and does: CLAUDE.md, Skills, Subagents, MCP servers. GOVERNING, what it may touch: Hooks, Permission boundaries, Sandboxing and restricted execution.
 
-**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based, research preview), `dontAsk` (auto-denies anything outside the allow rules, the mode for locked-down CI) and `bypassPermissions` (skips all checks, containers or CI only). Developed in 2.8.
+**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based, on by default on Team and Enterprise, where administrators can turn it off), `dontAsk` (auto-denies anything outside the allow rules, the mode for locked-down CI) and `bypassPermissions` (skips all checks, isolated containers and virtual machines only). Developed in 2.8.
 
 ### The reuse decision
 
@@ -10580,7 +10585,7 @@ Patterns combine. Pick the simplest that meets the **error tolerance and observa
 
 ### Prompting and context, the named sets
 
-**The technique ladder, cheapest rung first.** Clear instructions, then examples, then reasoning before answering, then structure and prefill, then retrieval, then tools, then multi-step machinery. **Exhaust prompting before adding machinery**, and note that the rung teams skip is the second: converting dispositions into categorical criteria.
+**The technique ladder, cheapest rung first.** Clear instructions, then examples, then reasoning before answering, then structure (structured outputs and format instructions), then retrieval, then tools, then multi-step machinery. **Exhaust prompting before adding machinery**, and note that the rung teams skip is the second: converting dispositions into categorical criteria.
 
 **Zero-shot, few-shot, chain-of-thought.** Zero-shot is instruction quality alone and carries most of the available gain. Few-shot means diverse canonical examples, not an edge-case laundry list; two to four ambiguous cases teach judgment, and caching makes larger example sets economic. Chain-of-thought buys accuracy on multi-step work at the price of tokens and latency, and is not free improvement.
 
@@ -10603,13 +10608,13 @@ Token limit exceeded → **400 `invalid_request_error`**, rejected before genera
 Every figure in this block is perishable and several have changed in ways that alter what a correct answer looks like. Re-verify against Appendix I before relying on one.
 
 - Caching order: **tools → system → messages**. Everything before the breakpoint is cached
-- Cache lifetime **5 minutes**, refreshed **free** on each use; **1 hour** optional at 2x write price
-- Cache write **1.25x** base input (5m) or **2x** (1h); cache read **0.1x** on most models and lower on some current ones (Appendix I, `cache.read.multiplier.*`)
+- Cache lifetime **5 minutes**, refreshed **free** on each use; **1 hour** optional, written at 2x the base input price
+- Cache write **1.25x** base input (5m) or **2x** (1h); cache read **0.1x** on the current Haiku-class model and the default, lower on the current Fable-, Mythos-, Opus- and Sonnet-class models (Appendix I, `cache.read.multiplier.*`)
 - Up to **4 breakpoints**; **20-block** lookback; below the model's minimum cacheable length, nothing caches and **no error is returned**
 - **Modifying a tool definition invalidates the entire cache.** Changing effort invalidates message caching
 - **Cache hits are not deducted against rate limits**
 - Pre-warm with `max_tokens: 0` to remove first-request latency
-- Tool selection accuracy degrades past roughly **30 to 50 loaded tools**; 50 tools cost 10 to 20k tokens; a five-server setup can cost ~55k
+- Tool selection accuracy degrades past roughly **30 to 50 loaded tools**; 50 or more MCP tools can cost ~72k tokens; a five-server setup (58 tools) can cost ~55k
 - **Tool search** below ~10 tools is slower, not faster. Add it from ~10, or past 10,000 tokens of definitions
 - Four context-pressure strategies: tool search (definitions), programmatic tool calling (round trips), caching (cost not count), context editing (stale results)
 - Tool descriptions: **3 to 4 sentences minimum**, service-prefixed names, high-signal returns
@@ -10624,7 +10629,7 @@ Every figure in this block is perishable and several have changed in ways that a
 - **All three want the same five things:** a recorded classification, an after-the-fact explanation of a specific decision, a human who can actually override, evidence of continuous operation rather than of design and a reporting clock the incident process can meet. Build so the answer to each is yes and the regime question becomes a documentation exercise. Developed in 4.2
 - **Which role you occupy** decides which duty set applies, and four architectural acts move you to the heavier one: your name on the output, a changed purpose, a modified model or embedding the system in something you supply. Developed in 4.7 ⚠
 - GDPR: lawful basis, purpose limitation, minimization, erasure **including derived artifacts**, automated decision-making, transfers. Erasure in a retrieval system reaches chunks, embeddings, caches, logs and evaluation sets
-- HIPAA: a **business associate agreement** with any vendor touching protected health information, minimum necessary, audit controls, de-identification. A BAA for one configuration does not cover another
+- HIPAA: a **business associate agreement** with any vendor that creates, receives, maintains or transmits protected health information on your behalf (subject to the 160.103 exclusions), minimum necessary, audit controls, de-identification. A BAA for one configuration does not cover another
 - FedRAMP: authorized service offering, boundary definition, inherited controls
 - Logs contain inputs and outputs, therefore regulated data
 - **Five regulated-industry constraints:** attorney-client privilege; HIPAA; GDPR and data residency; FedRAMP and government; internal data-residency policy. Each names what it rules out and what survives review; the full table is in 2.8
@@ -10658,7 +10663,7 @@ Every figure in this block is perishable and several have changed in ways that a
 - Field the source may lack: **optional**, never required, or the model fabricates
 - Human waiting: **real-time**. Nothing blocked: deferred. "Usually finishes fast" is not a guarantee
 - Repeated large prefix: **stable content first, then cache**. Never truncate required content, never downsize blindly
-- Cost lever order: measure, cache, trim, route, parallelize, defer, stream, **shorten last**
+- Cost lever order (8.10): measure, fix retries, cache, lower effort, trim, defer tool definitions, route, parallelize, collapse tool-call chains, batch, stream, shorten, **then reconsider the model**
 - **Effort** is often a better lever than switching models
 - Deciding between models: **an evaluation set**, not an argument
 - Bigger context window does not buy **attention quality**
@@ -10751,7 +10756,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **5xx errors.** The HTTP status class (500 to 599) for a server-side failure to fulfill an otherwise valid request. **500** internal error, **503** service unavailable, **529** overloaded. Usually transient and resolvable with backoff, and categorically distinct from the 4xx codes, which indicate a client-side problem and mostly must not be retried unchanged. The retry decision rule is in 3.8.
 
-**A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation standard. Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
+**A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation project. Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
 
 **Accretion.** What you have instead of an architecture when you cannot name the architecture. No known failure modes, no cost model, no precedent to review against.
 
@@ -10835,13 +10840,11 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Decision logging.** Capturing the inputs, retrieved context, model output and routing for a single decision, keyed so that decision can be replayed and explained afterward. The same instrumentation as production observability, pointed at a different question: not whether the system is healthy but why this specific decision happened. The retention period and the query path differ accordingly, and the log is itself in scope for the compliance register.
 
-
 **Delegation map.** The artifact decomposition produces. One assignment per part of the request, each justified through Reversibility, Stakes and Accountability.
 
 **Delegation mapping.** The method for deciding which steps Claude owns, which existing systems own and which a human owns, with justification and control for each.
 
 **Delivery Route.** The bottom layer of the platform map: where API traffic terminates, determining whose infrastructure the request runs on. The five routes are Anthropic directly, Claude Platform on AWS, AWS Bedrock, GCP Vertex AI and Microsoft Foundry. Claude Platform on AWS is materially different from Bedrock in billing, feature timing and cache isolation, which is why it is counted separately.
-
 
 **Dense (embeddings).** Semantic indexing: matches semantic similarity, meaning, not words. Earns its place where queries are phrased differently from the source. Paired with sparse and hybrid.
 
@@ -10857,20 +10860,17 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Embedding.** A numeric representation of a text's meaning, used so that similar meanings can be found by similarity.
 
-
 **Entry Point.** The top layer of the platform map: the surface through which a solution interacts with the platform, what a person or system directly interacts with, the wrapper deciding who can talk to Claude and how. Choosing it is the fourth of the four decisions in 2.1. Note that the MCP primitive's definition uses the same phrase in the opposite direction, meaning points of access into your systems that tools expose.
 
 **Entry-point responsibility map.** A written record of which entry point owns which task and why, produced before integration begins on any deployment spanning more than one route. Prevents the characteristic multi-route failure, which is drift rather than error: a route chosen for one task quietly taking on a second because no boundary was recorded.
 
 **Eval.** Short for evaluation. A structured test set that pairs inputs with expected outputs or quality criteria, runs them against the model and produces a score comparable across model versions, prompts and configurations. The instrument that decides whether a change is an improvement or a regression before it reaches production.
 
-
 **Eval contract.** The set of behaviors a reference architecture is obliged to demonstrate. Each reference architecture carries its own eval contract. You need separate eval sets per architecture, not a single eval set for the composed system.
 
 **Evaluator-optimizer.** A workflow where one call generates and another evaluates in a loop. Fit test: responses improve when a human articulates feedback, and the model can provide that feedback.
 
 **Evidence artifact.** The concrete proof a security or legal reviewer accepts that a control is live: a signed agreement, a configuration screen, an authorization record, a returned log query. **A control named in a design document with no artifact is a claim rather than proof**, and is indistinguishable at audit from a control that is not running.
-
 
 **Existing systems.** The second of the three delegation owners: anything the organization has already paid to make reliable, such as the order-status service, the policy engine, the rules table or the database of record.
 
@@ -10888,15 +10888,13 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Few-shot prompting.** Teaching by worked examples. Anthropic's guidance: curate diverse canonical examples rather than stuffing edge cases.
 
+**Filter (intake).** One of the five filters of the intake and prioritization funnel in 1.6: problem, assignment, feasibility, governance (a rule-out applied before cost and latency) and portfolio. Called gates before v2.0.0.
+
 **Fixed-size / Semantic / Hierarchical.** The three chunking approaches, chosen by the structure of the source material, not by a default size. Hierarchical is the widest: it preserves document structure **and** retrieves at the level that fits.
 
 **Gate (workflow).** A programmatic check inserted between steps of a chained workflow to confirm the process is still on track. Anthropic's term. Not the Slow AI Kitchen's gates (see Gate, Kitchen) and not the intake filters of 1.6 (see Filter).
 
 **Gate (Kitchen).** One of the ten checkpoints of the Slow AI Kitchen method, Gate 1 Definition of Done to Gate 10 Operational Audit and Review Cycle, that an output or deployment decision must pass before advancing. Defined in the Kitchen README, not in this Primer; see the concordance in the front matter.
-
-**Filter (intake).** One of the five filters of the intake and prioritization funnel in 1.6: problem, assignment, feasibility, governance (a rule-out applied before cost and latency) and portfolio. Called gates before v2.0.0.
-
-**Risk tier.** In this Primer, the T1 Low to T4 Critical band a system is assigned by the additive score and overrides of 4.2. Not the Slow AI Kitchen's Tier 1 to 3 stakes tiers, and not the Public to Restricted data classification of 6.4.
 
 **GDPR (General Data Protection Regulation).** The European Union's data protection regime. Two points an architect keeps straight: it does not require European residency as such, because cross-border transfers are lawful with a valid transfer mechanism, and where a residency requirement nonetheless exists it usually comes from a contract, a regulator or internal policy rather than from the regulation itself.
 
@@ -10920,20 +10918,17 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Input screening.** A check running before the model call that decides whether a request reaches the model at all. Model-based where intent is ambiguous and the patterns cannot be enumerated; deterministic where the rule is crisp, because a deterministic rule cannot be talked out of its decision.
 
-
 **Judge model.** A model used to score or classify another model's output on a quality a deterministic rule cannot encode, such as toxicity, tone or policy compliance. Evadable by construction, which is why it is chained with deterministic checks rather than relied on alone, and itself a system requiring calibration before its verdicts are trusted.
 
 **Judgment erosion.** The failure where a team ships output it no longer understands because the output reads well and passes its checks. Distinct from the review-volume problem and moving in the opposite direction: volume degrades review by giving reviewers too much to read, judgment erosion by giving them something correct-looking that nobody can explain. The control is the human-understanding dimension of the verification checklist.
 
 **Just-in-time context.** Anthropic's term for loading data at runtime through lightweight references rather than pre-processing everything. The same idea is also called progressive discovery.
 
-
 **Latency percentiles.** Response time reported as a distribution rather than an average. The median describes the typical request and conceals the tail; p95 describes the experience of the worst one request in twenty and is the figure a service level is written against. A design reviewed on its median has been reviewed on its best behavior.
 
 **Least privilege.** Granting only the capability a role requires. It means **removing** what is not needed, not supervising it.
 
 **Live state.** Data whose current value is owned by a system and changes independently of any index: order status, inventory count, price, calendar slot, account balance. The correct answer at 10:00 may be wrong by 10:05. **Live state requires a tool call against the system of record, never retrieval over a snapshot of it.** The single most useful term in the reference-architecture vocabulary, because naming it is how the characteristic failure of 2.5 gets caught in review.
-
 
 **Lookback window.** The twenty-block limit on how far back prompt caching searches for a previously written cache entry. Exceeding it silently loses cache hits.
 
@@ -10957,14 +10952,13 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Output screening.** A check running before the response reaches the user. A judge model where the quality needs language understanding; a validator where the check is a known string, a forbidden field or a schema violation. **Judges text, not actions**, which is why it cannot substitute for authorization on a side-effecting tool call.
 
-
-**Parallelization.** Running subtasks simultaneously and aggregating. Two variations: sectioning, being independent subtasks and voting, being the same task run repeatedly.
+**Parallelization.** Running subtasks simultaneously and aggregating. Two variations: sectioning (independent subtasks) and voting (the same task run repeatedly).
 
 **Parametric knowledge.** What the model learned during training and carries in its weights. The model answering from memory, with no outside lookup. The opposite is knowledge supplied at request time: a document handed over, a retrieved chunk, a search result, a tool response. Almost every grounding decision in this primer is a decision to replace parametric knowledge with supplied knowledge.
 
 **Per-turn budget.** One of the four constraints that bind an agent in production, alongside constrained tool entry points, explicit permissions and stopping criteria. Bounds consumption per step and is the runaway-loop control.
 
-**PHI (protected health information).** Individually identifiable health information held or transmitted by a covered entity or business associate under HIPAA. Any third party processing it requires a business associate agreement, and **coverage is configuration-specific**: the same surface may be covered on one delivery route and not on another, so the check is by configuration rather than by product.
+**PHI (protected health information).** Individually identifiable health information held or transmitted by a covered entity or business associate under HIPAA. A third party that creates, receives, maintains or transmits it on a covered entity's behalf requires a business associate agreement (subject to the exclusions in 45 CFR 160.103), and **coverage is configuration-specific**: the same surface may be covered on one delivery route and not on another, so the check is by configuration rather than by product.
 
 **Plan-level approval.** A pre-action human placement where the reviewer approves an agent's intended trajectory before execution rather than each step within it. The response to consent fatigue on long agentic runs. Composes with, and does not replace, a gate on any individual irreversible or high-stakes action inside the approved plan.
 
@@ -10990,7 +10984,6 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **RAG (retrieval-augmented generation).** A pattern where a corpus is chunked and indexed ahead of time, and at query time the chunks most relevant to the input are retrieved into the model's context. Suited to stable reference material: manuals, internal documentation, policy and regulatory text. **Not suited to live transactional state**, where the index returns a snapshot that may already be stale and a tool call to the system of record is the correct mechanism. Retrieval quality is itself a system to evaluate and maintain, not a property that holds once configured.
 
-
 **Reciprocal rank fusion (RRF).** The default for merging the two ranked lists a hybrid index returns: each result is scored by its rank in each list, and the combined score favors items that rank well in both. The standard, low-tuning way to do it. Rank-based scoring rewards agreement between the two methods.
 
 **Reference architecture.** A documented pattern for how to wire an LLM application together to solve a recurring class of problem, already proven in the Claude ecosystem. References, not templates to adhere to. Five are named.
@@ -11009,17 +11002,17 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Right altitude.** Anthropic's term for the correct specificity of a system prompt: between brittle hardcoded logic and vague guidance that assumes shared context.
 
+**Risk tier.** In this Primer, the T1 Low to T4 Critical band a system is assigned by the additive score and overrides of 4.2. Not the Slow AI Kitchen's Tier 1 to 3 stakes tiers, and not the Public to Restricted data classification of 6.4.
+
 **Routing.** Classifying an input and directing it to a specialized follow-up. Anthropic's named mechanism for mixed-model cost optimization.
 
 **SDK.** Software Development Kit. A language-native library wrapping the API in idiomatic code, handling authentication, request formatting, retries, streaming and tool-use plumbing. **The same entry point as the API from the model's perspective, with different ergonomics**, and the default for most teams. The only reason to drop back to raw HTTP is an API feature the SDK has not yet exposed. Not to be confused with the Claude Agent SDK, which runs an agent loop.
-
 
 **Sectioning.** The parallelization variant where a task is split into independent subtasks.
 
 **Shippable.** Ready for production rather than working in a demo. Meets the accuracy, latency, cost and reliability bar the deployment actually requires, and has passed the evals and review gates the team uses to release. The distinction that matters: a prototype handling the happy path is not a system handling the long tail.
 
 **Single sign-on (SSO).** Centralized authentication across an organization's systems. The architectural question it raises for a model integration is where the identity boundary sits relative to the model call: identity resolved server side and injected is a control, identity asserted in the user message is a claim the caller can edit.
-
 
 **Sizing.** Capacity and cost modeling: volume, peak, token split, call multiplier, cost per outcome, sensitivity, feasibility.
 
@@ -11033,11 +11026,9 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Statement of the problem, as said.** The first column of a translation table, holding the stakeholder's own words in quotation marks. Not a stylistic choice: it is what lets a later reader check the translation rather than inherit it, since a row recording only the constraint has already merged the stakeholder's words with the architect's interpretation.
 
-
 **Stratified sampling.** Sampling in a way that guarantees representation of rare categories, so a failure confined to one segment is still visible.
 
 **Structured fields.** Named, typed values extracted from unstructured input, as against free prose. The unit of measurement for extraction accuracy, and the reason extraction is gradeable in code where summarization is not.
-
 
 **Structured note-taking.** Anthropic's term for an agent writing notes persisted outside the context window and pulling them back later. Also called agentic memory.
 
@@ -11092,7 +11083,7 @@ All public. Building Effective Agents and Effective Context Engineering for AI A
 | **Building Effective Agents** (Dec 2024) | The workflow-versus-agent line, the augmented LLM, the five workflow patterns with when-to-use conditions, the agent definition, the three implementation principles and the appendix on tool design |
 | **Effective Context Engineering for AI Agents** (Sep 2025) | Attention budget, context rot and its architectural cause, the right altitude, just-in-time context, compaction, structured note-taking, subagent architectures |
 | **Contextual Retrieval** (Sep 2024) | The measured 35 / 49 / 67 percent failure reductions, the contextualizer prompt, the rerank shape and the under-200,000-token threshold |
-| **How We Built Our Multi-Agent Research System** | Orchestrator-workers in production and where multi-agent genuinely beats single-agent |
+| **How We Built Our Multi-Agent Research System** (Jun 2025) | Orchestrator-workers in production and where multi-agent genuinely beats single-agent |
 
 ### Platform documentation, by subject
 
@@ -11106,9 +11097,9 @@ All public. Building Effective Agents and Effective Context Engineering for AI A
 
 ### Current figures, verified 18 October 2026
 
-Verified against Anthropic's documentation on 18 October 2026 (KST). Every row below whose Verified column reads 2026-10-18 was read that day from the Anthropic documentation page named in its Source column, and every number in those rows came from that page; where the page does not state a figure, the row says Unknown rather than carrying a remembered value. Rows marked not re-verified carry their last reading and are not presented as current: the Contextual Retrieval measurements (a dated publication), the A2A protocol facts (not an Anthropic source) and the entry-point and delivery-route facts. **Every one of them can change.** Every figure in the platform documentation moves: the model lineup, the effort parameter, tool search and context editing have all changed materially, and each change altered what a correct design looks like. Re-verify before relying on any of these figures in a design decision, and the fastest way to do it is the documentation pages listed above.
+Verified against Anthropic's documentation on 18 October 2026 (KST). Every row below whose Verified column reads 2026-10-18 was read that day from the Anthropic documentation page named in its Source column, and every number in those rows came from that page; where the page does not state a figure, the row says Unknown rather than carrying a remembered value. Rows marked not re-verified carry their last reading and are not presented as current, including the Contextual Retrieval measurements (a dated publication), the A2A protocol facts (not an Anthropic source) and the entry-point and delivery-route facts. **Every one of them can change.** Every figure in the platform documentation moves: the model lineup, the effort parameter, tool search and context editing have all changed materially, and each change altered what a correct design looks like. Re-verify before relying on any of these figures in a design decision, and the fastest way to do it is the documentation pages listed above.
 
-The tables are generated from `primer/figures.yaml` by `build_appendix_i.py`; edit the YAML and rebuild rather than editing a table. The body of the Primer names model classes rather than model versions ("the current Opus-class model") and cites a figure key, such as `class.opus.current` or `cache.read.multiplier.opus`, which resolves in the tables below.
+The tables are generated from `primer/figures.yaml` by `tools/build_appendix_i.py`; edit the YAML and rebuild rather than editing a table, with `python3 tools/build_appendix_i.py primer/figures.yaml enterprise-ai-architecture-primer.md` from the repository root. Prices are in US dollars per million tokens (MTok). The body of the Primer names model classes rather than model versions ("the current Opus-class model") and cites a figure key, such as `class.opus.current` or `cache.read.multiplier.opus`, which resolves in the tables below.
 
 <!-- figures:start (generated by build_appendix_i.py from primer/figures.yaml; edit the YAML, not this table) -->
 
@@ -11288,10 +11279,10 @@ The tables are generated from `primer/figures.yaml` by `build_appendix_i.py`; ed
 | `cache.breakeven` | After one cache read for the 5-minute write; after two for the 1-hour write |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | Stated for the 0.1x case |
 | `cache.breakpoints.max` | 4 per request |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Automatic caching uses one slot when combined with explicit breakpoints |
 | `cache.lookback` | 20 positions per breakpoint, counting the breakpoint itself |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
-| `cache.min_length.512` | Fable 5.1, Mythos 5.1, Opus 5.5, Opus 5, Sonnet 5.5, Fable 5, Mythos 5, Haiku 5.5 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Claude API, Claude Platform on AWS, Google Cloud and Microsoft Foundry; Bedrock publishes its own minimums |
-| `cache.min_length.1024` | Opus 4.8, Sonnet 5, Sonnet 4.6, Sonnet 4.5 (deprecated); retired Opus 4.1, Opus 4, Sonnet 4 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
-| `cache.min_length.2048` | Mythos Preview, Opus 4.7; retired Haiku 3.5 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
-| `cache.min_length.4096` | Opus 4.6, Opus 4.5, Haiku 4.5 tokens |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
+| `cache.min_length.512` | Fable 5.1, Mythos 5.1, Opus 5.5, Opus 5, Sonnet 5.5, Fable 5, Mythos 5, Haiku 5.5 |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Minimum cacheable length 512 tokens; Claude API, Claude Platform on AWS, Google Cloud and Microsoft Foundry; Bedrock publishes its own minimums |
+| `cache.min_length.1024` | Opus 4.8, Sonnet 5, Sonnet 4.6, Sonnet 4.5 (deprecated); retired Opus 4.1, Opus 4, Sonnet 4 |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Minimum cacheable length 1,024 tokens |
+| `cache.min_length.2048` | Mythos Preview, Opus 4.7; retired Haiku 3.5 |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Minimum cacheable length 2,048 tokens |
+| `cache.min_length.4096` | Opus 4.6, Opus 4.5, Haiku 4.5 |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Minimum cacheable length 4,096 tokens |
 | `cache.below_min` | Processed without caching; no error returned |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
 | `cache.isolation` | Between organizations everywhere. Per workspace on the Claude API, Claude Platform on AWS and Microsoft Foundry; Bedrock and Google Cloud are organization-level only |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
 | `cache.prewarm` | max_tokens: 0 with a cache_control breakpoint; not allowed with streaming, extended thinking, structured outputs, forced tool_choice or batch requests |  | 2026-10-18 | [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) |  |
@@ -11371,8 +11362,8 @@ The tables are generated from `primer/figures.yaml` by `build_appendix_i.py`; ed
 | `fastmode.window` | Premium pricing applies across the full context window |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
 | `fastmode.batch` | Not available with the Batch API |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
 | `fastmode.stacking` | Cache and data residency multipliers apply on top of fast mode pricing |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
-| `fastmode.speedup` | Unknown |  | not re-verified (last August 2026) |  | August 2026 reading: up to 2.5x output tokens per second, not time-to-first-token; the Fast mode page was not checked |
-| `fastmode.access` | Unknown |  | not re-verified (last August 2026) |  | August 2026 reading: beta header, access on request, unavailable with Priority Tier; not stated on the pricing page |
+| `fastmode.speedup` | Up to 2.5x higher output tokens per second (OTPS) than standard speed; not time to first token (TTFT) |  | 2026-10-20 | [https://platform.claude.com/docs/en/build-with-claude/fast-mode](https://platform.claude.com/docs/en/build-with-claude/fast-mode) |  |
+| `fastmode.access` | Claude Opus 5.5: no beta header or access request needed. Claude Opus 5 and Claude Opus 4.8 (research preview): fast-mode-2026-02-01 beta header, access through the account manager or waitlist. Not available with a Priority Tier commitment |  | 2026-10-20 | [https://platform.claude.com/docs/en/build-with-claude/fast-mode](https://platform.claude.com/docs/en/build-with-claude/fast-mode) | The August 2026 reading (beta header, access on request) now holds only for Opus 5 and Opus 4.8 |
 
 #### Tools and context
 
@@ -11383,7 +11374,7 @@ The tables are generated from `primer/figures.yaml` by `build_appendix_i.py`; ed
 | `tools.server_tools` | Web search, web fetch, code execution, MCP connectors, advisor, tool search |  | 2026-10-18 | [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) |  |
 | `tools.client_tools` | Bash, text editor, computer use, memory; ordinary token pricing |  | not re-verified (last August 2026) |  |  |
 | `tools.files_api` | Upload once, reference across requests |  | not re-verified (last August 2026) |  |  |
-| `tools.fifty_definitions` | ~10,000 to 20,000 tokens |  | not re-verified (last August 2026) |  |  |
+| `tools.fifty_definitions` | ~72,000 tokens for 50+ MCP tools; ~55,000 tokens for 58 tools across five servers |  | 2026-10-20 | [https://www.anthropic.com/engineering/advanced-tool-use](https://www.anthropic.com/engineering/advanced-tool-use) | Anthropic engineering post, not the docs. Replaces the August 2026 reading of ~10,000 to 20,000 tokens, which no Anthropic source states |
 | `tools.description_length` | 3 to 4 sentences minimum |  | not re-verified (last August 2026) |  |  |
 | `tools.websearch.price` | $10 per 1,000 searches plus standard token costs |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
 | `tools.webfetch.price` | No additional cost beyond standard token costs |  | 2026-10-18 | [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |  |
@@ -11456,10 +11447,10 @@ The tables are generated from `primer/figures.yaml` by `build_appendix_i.py`; ed
 
 | Key | Value | Model ID | Verified | Source | Note |
 | --- | --- | --- | --- | --- | --- |
-| `a2a.origin` | Unknown as at 2026-10-18. Last reading: Originated by Google in 2025; now a Linux Foundation project |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
+| `a2a.origin` | Created by Google and launched in April 2025; a Linux Foundation project since 23 June 2025 |  | 2026-10-20 | [https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents](https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents) | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
 | `a2a.stable_release` | Unknown as at 2026-10-18. Last reading: v1.0, early 2026; headline addition signed agent cards |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
 | `a2a.adoption` | Unknown as at 2026-10-18. Last reading: More than 150 supporting organizations at the one-year mark (project's own announcement) |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
-| `a2a.task_states` | Unknown as at 2026-10-18. Last reading: Eight: input-required, auth-required (interrupted); completed, canceled, rejected, failed (terminal); submitted, working (in flight). A terminal task cannot restart |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
+| `a2a.task_states` | Eight: input-required, auth-required (interrupted); completed, canceled, rejected, failed (terminal); submitted, working (in flight). A task in a terminal state cannot accept further messages |  | 2026-10-20 | [https://a2a-protocol.org/latest/specification/](https://a2a-protocol.org/latest/specification/) | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
 | `a2a.response_shapes` | Unknown as at 2026-10-18. Last reading: Stateless Message or stateful Task; artifact version history is not in the protocol |  | not re-verified (last 2026-08-11) |  | A2A project specification and documentation (Linux Foundation); not an Anthropic source |
 
 #### Entry points and build-time interfaces, not re-verified
@@ -11502,13 +11493,13 @@ The tables are generated from `primer/figures.yaml` by `build_appendix_i.py`; ed
 
 **There is no long-context premium, with one exception.** On Claude 4.6 and later models other than the current Haiku-class model, requests anywhere in the one-million-token window are charged at the same per-token rates, and prompt caching and the batch discount both apply across it (`longctx.standard`, `longctx.discounts`). This is worth stating explicitly because the opposite is a common assumption and it distorts a sizing model in the direction of under-using the window. The exception is the current Haiku-class model, which is priced by prompt length: a request whose prompt exceeds 100,000 tokens, counting cache reads and cache writes, pays the higher prices on the whole request, five times the base input rate (`longctx.haiku`, `haiku.price.input.over_100k`). For that class the sizing error runs the other way.
 
-**Pricing modifiers that stack**, and which an architect sizing a regulated deployment has to carry: the Batch API discount, which is 50 percent on both input and output, data residency and on Claude 4.6 and later a **1.1x multiplier on every token category** (input, output, cache writes, cache reads) when US-only inference is specified through `inference_geo` (`residency.multiplier`). Residency is not free, and it is charged on cached reads too, which is exactly where a caching-heavy design concentrates its volume. Fast mode is available on the Claude API and, for the current Opus-class model, on Microsoft Foundry deployments hosted on Azure; it is not available on Claude Platform on AWS or the partner-operated clouds, and its premium pricing applies across the full context window (`fastmode.platforms`, `fastmode.window`). It is unavailable with the batch lane, and switching between fast and standard speed invalidates the system and message caches (`cacheinv.speed`). The August 2026 statements that its gain is output tokens per second and not time-to-first-token, that it requires a beta header and access on request and that it is unavailable with a Priority Tier commitment were not re-verified on 18 October 2026 and are recorded as Unknown (`fastmode.speedup`, `fastmode.access`).
+**Pricing modifiers that stack**, and which an architect sizing a regulated deployment has to carry: the Batch API discount, which is 50 percent on both input and output, data residency and on Claude 4.6 and later a **1.1x multiplier on every token category** (input, output, cache writes, cache reads) when US-only inference is specified through `inference_geo` (`residency.multiplier`). Residency is not free, and it is charged on cached reads too, which is exactly where a caching-heavy design concentrates its volume. Fast mode is available on the Claude API and, for the current Opus-class model, on Microsoft Foundry deployments hosted on Azure; it is not available on Claude Platform on AWS or the partner-operated clouds, and its premium pricing applies across the full context window (`fastmode.platforms`, `fastmode.window`). It is unavailable with the batch lane, and switching between fast and standard speed invalidates the system and message caches (`cacheinv.speed`). The Fast mode page, read on 20 October 2026, states that its gain is output tokens per second and not time to first token (`fastmode.speedup`), that it is unavailable with a Priority Tier commitment and that the current Opus-class model needs no beta header or access request, while the two research-preview models still need both (`fastmode.access`).
 
 **Tool search compatibility is a published list, not a generation rule.** The August 2026 edition recorded that Claude Sonnet 5 was not on the compatibility table; on 18 October 2026 the table lists it, together with every current model (`toolsearch.models`). Read the table rather than assume a newer model inherits the capability.
 
 **Agent-to-agent (A2A).** These are external protocol facts rather than Anthropic platform facts, and they move on the protocol's release cycle rather than on the model lineup. **They are the dated specifics moved out of 3.1**, which keeps only the MCP-vertical against A2A-horizontal distinction, because that distinction survives any change to the rows below. Source is the A2A project's own specification and documentation under the Linux Foundation. They were not re-verified on 18 October 2026 and are Unknown as at that date; the `a2a.*` rows show the 11 August 2026 reading. ⧉ The adoption headcount comes from the project's own announcement and is a marketing figure as well as a factual one. Treat it as evidence the protocol is not abandoned, not as evidence it is the safe default.
 
-**Retrieval.** The `retrieval.*` rows are the measured results of Anthropic's "Introducing Contextual Retrieval" engineering post, published 2024-09-19, across codebases, fiction, ArXiv and science papers at top-20 retrieval, not a general benchmark. The skip-retrieval threshold is **the most-repeated number in the Primer, load-bearing in 5.3 and built into worked arithmetic in Appendix C**. The post gives no reranking latency figure, so 5.3's "a hundred to a few hundred milliseconds" is unsourced ⧉.
+**Retrieval.** The `retrieval.*` rows are the measured results of Anthropic's "Introducing Contextual Retrieval" engineering post, published 2024-09-19, across codebases, fiction, ArXiv and science papers at top-20 retrieval, not a general benchmark. The skip-retrieval threshold is **the most-repeated number in the Primer, load-bearing in 5.3 and built into worked arithmetic in the scenario drills**, now [primer-workbook/scenario-drills.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/scenario-drills.md) (formerly Appendix C). The post gives no reranking latency figure, so 5.3's "a hundred to a few hundred milliseconds" is unsourced ⧉.
 
 **Delivery routes.** Perishable, especially the Foundry-hosted model list, which is Unknown as at 18 October 2026 (`routes.foundry_hosted`).
 

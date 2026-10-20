@@ -18,11 +18,11 @@ source: "Enterprise AI Architecture Primer, Appendix F"
 
 | Knowledge domain | Location | Named owner | Authority | Right to index | State | Effective dates | Sensitivity | Query traffic | Ingest decision |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Approval thresholds for outbound payments | ERP configuration table | Finance systems lead | Authoritative | Own content | Current | Live | Internal | High | **Do not index.** Route to a tool call |
-| Approval thresholds, wiki page | Confluence | Unowned | Copy | Own content | Contradicted | Unknown | Internal | High | Deprecate and redirect |
-| Standard contract playbook | Document management, /legal/playbooks | Contract counsel | Authoritative | Own content | Current | From 2025-07-01 | Confidential | High | Ingest |
-| Historic negotiation notes | Shared drive | Departed | Derived | Own content | Aging | Unknown | Confidential | Low | Elicit and rewrite, or exclude |
-| Subscribed standards library | Vendor portal | Compliance lead | Authoritative | **Read license only, no index right** ⚠ | Current | Per subscription term | Confidential | Medium | **Do not index.** Link out, or negotiate an index right at renewal |
+| Approval thresholds for outbound payments | ERP configuration table | Finance systems lead | Authoritative | Permitted (own content) | Current | Live | Internal | High | **Do not index.** Route to a tool call |
+| Approval thresholds, wiki page | Confluence | Unowned | Copy | Permitted (own content) | Contradicted | Unknown | Internal | High | Deprecate and redirect |
+| Standard contract playbook | Document management, /legal/playbooks | Contract counsel | Authoritative | Permitted (own content) | Current | From 2025-07-01 | Confidential | High | Ingest |
+| Historic negotiation notes | Shared drive | Departed | Derived | Permitted (own content) | Aging | Unknown | Confidential | Low | Elicit and rewrite, or exclude |
+| Subscribed standards library | Vendor portal | Compliance lead | Authoritative | **Not permitted** (read license only) ⚠ | Current | Per subscription term | Confidential | Medium | **Do not index.** Link out, or negotiate an index right at renewal |
 
 ```
 INGESTION CONTRACT, per source that is ingested

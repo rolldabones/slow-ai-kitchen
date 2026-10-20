@@ -6,14 +6,14 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 |---|---|---|
 | 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 20 |
 | 2 | [Part 1: Workflow Architecture](01-part-1-workflow-architecture.md) | 86 |
-| 3 | [Part 2: Solution Architecture to 2.8 Entry points and delivery routes](02-part-2-solution-architecture-to-2-8-entry-points-and.md) | 232 |
-| 4 | [Part 2: Solution Architecture · 2.9 The AI architecture decision record to Solution Architecture: the one-page version](03-2-9-the-ai-architecture-decision-record-to-solution.md) | 73 |
+| 3 | [Part 2: Solution Architecture to 2.8 Entry points and delivery routes](02-part-2-solution-architecture-to-2-8-entry-points-and.md) | 233 |
+| 4 | [Part 2: Solution Architecture · 2.9 The AI architecture decision record to Solution Architecture: the one-page version](03-2-9-the-ai-architecture-decision-record-to-solution.md) | 74 |
 | 5 | [Part 3: Integration Engineering](04-part-3-integration-engineering.md) | 118 |
-| 6 | [Part 4: Governance by Design](05-part-4-governance-by-design.md) | 206 |
+| 6 | [Part 4: Governance by Design](05-part-4-governance-by-design.md) | 208 |
 | 7 | [Part 5: Knowledge Architecture](06-part-5-knowledge-architecture.md) | 74 |
 | 8 | [Part 6: Data Architecture](07-part-6-data-architecture.md) | 50 |
-| 9 | [Part 7: Organizational Adoption](08-part-7-organizational-adoption.md) | 71 |
-| 10 | [Part 8: Operations and Measurement](09-part-8-operations-and-measurement.md) | 159 |
+| 9 | [Part 7: Organizational Adoption](08-part-7-organizational-adoption.md) | 72 |
+| 10 | [Part 8: Operations and Measurement](09-part-8-operations-and-measurement.md) | 160 |
 | 11 | [Part 9: Executive Leadership](10-part-9-executive-leadership.md) | 60 |
 | 12 | [Part 10: Enterprise Systems Thinking](11-part-10-enterprise-systems-thinking.md) | 35 |
 | 13 | [THE PRACTICE LAYER](12-the-practice-layer.md) | 58 |
@@ -22,7 +22,7 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 | 16 | [Appendix C: Scenario Drills · Appendix D: Self-Check Bank · Appendix E: Interview Question Bank · Appendix F: The Architect's Artifact Set](15-appendix-f-the-architect-s-artifact-set.md) | 10 |
 | 17 | [Appendix G: The Diagram Set](16-appendix-g-the-diagram-set.md) | 4 |
 | 18 | [Appendix H: Vocabulary](17-appendix-h-vocabulary.md) | 42 |
-| 19 | [Appendix I: Sources and Current Figures](18-appendix-i-sources-and-current-figures.md) | 64 |
+| 19 | [Appendix I: Sources and Current Figures](18-appendix-i-sources-and-current-figures.md) | 66 |
 | 20 | [Appendix J: Competency Map](19-appendix-j-competency-map.md) | 5 |
 | 21 | [CLOSING](20-closing.md) | 2 |
 

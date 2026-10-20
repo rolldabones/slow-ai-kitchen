@@ -133,7 +133,7 @@ The motion ends. The reliance does not, and the accountability runs with the rel
 
 **Informed Intent → Governed Authority → Observable Action → Final Liability**
 
-Informed Intent establishes where the system is supposed to go. Authority determines how much of the world it can affect. Slow AI governs its movement through that world. Evidence and logs make the trajectory reconstructable. human gates permit intervention where consequence warrants it. Final Liability names the person who owns the delegation and its material outcomes, from specification, through confirmation, for as long as anyone relies on the result.
+Informed Intent establishes where the system is supposed to go. Authority determines how much of the world it can affect. Slow AI governs its movement through that world. Evidence and logs make the trajectory reconstructable. Human gates permit intervention where consequence warrants it. Final Liability names the person who owns the delegation and its material outcomes, from specification, through confirmation, for as long as anyone relies on the result.
 
 **Corollary II. The test.** The purpose of governance is not to eliminate machine motion. It is to make the motion governable. A governed agent is:
 

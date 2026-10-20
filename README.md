@@ -10,9 +10,9 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.0.1 | 2026-10-20 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.0.1 | 2026-10-20 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
-A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
+A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
 **Final Liability rests with the Human.**
 
@@ -139,7 +139,7 @@ Ten of the twelve steps function as gates: checkpoints that output or deployment
 | Step | Register | Name | Gate | Gate Function | Primary Role | Output |
 |---|---|---|---|---|---|---|
 | 1 | Kitchen | Define the Dish | none | Production step | Preparer | Task brief, with the named Owner |
-| 2 | Kitchen | Mise en Place | Gate 1 | Definition of Done | Preparer | DoD checklist |
+| 2 | Kitchen | Mise en Place | Gate 1 | Definition of Done | Preparer | Definition of Done (DoD) checklist |
 | 3 | Kitchen | Knife Work | Gate 2 | Manual First Pass | Preparer | Annotated sources, first-pass draft |
 | 4 | Kitchen | Read the Kitchen | Gate 3 | Socio-Technical Context | Preparer | Context and risk map |
 | 5 | Kitchen | Apply Heat | Gate 4 | Bounded AI Use | Builder | AI-assisted working draft |

@@ -39,7 +39,7 @@ Tools = **ACT**. MCP = **CONNECT**. Subagents = **ISOLATE / PARALLELIZE**. Hooks
 
 SHAPING, what it knows and does: CLAUDE.md, Skills, Subagents, MCP servers. GOVERNING, what it may touch: Hooks, Permission boundaries, Sandboxing and restricted execution.
 
-**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based, research preview), `dontAsk` (auto-denies anything outside the allow rules, the mode for locked-down CI) and `bypassPermissions` (skips all checks, containers or CI only). Developed in 2.8.
+**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based, on by default on Team and Enterprise, where administrators can turn it off), `dontAsk` (auto-denies anything outside the allow rules, the mode for locked-down CI) and `bypassPermissions` (skips all checks, isolated containers and virtual machines only). Developed in 2.8.
 
 ### The reuse decision
 
@@ -128,7 +128,7 @@ Patterns combine. Pick the simplest that meets the **error tolerance and observa
 
 ### Prompting and context, the named sets
 
-**The technique ladder, cheapest rung first.** Clear instructions, then examples, then reasoning before answering, then structure and prefill, then retrieval, then tools, then multi-step machinery. **Exhaust prompting before adding machinery**, and note that the rung teams skip is the second: converting dispositions into categorical criteria.
+**The technique ladder, cheapest rung first.** Clear instructions, then examples, then reasoning before answering, then structure (structured outputs and format instructions), then retrieval, then tools, then multi-step machinery. **Exhaust prompting before adding machinery**, and note that the rung teams skip is the second: converting dispositions into categorical criteria.
 
 **Zero-shot, few-shot, chain-of-thought.** Zero-shot is instruction quality alone and carries most of the available gain. Few-shot means diverse canonical examples, not an edge-case laundry list; two to four ambiguous cases teach judgment, and caching makes larger example sets economic. Chain-of-thought buys accuracy on multi-step work at the price of tokens and latency, and is not free improvement.
 
@@ -151,13 +151,13 @@ Token limit exceeded → **400 `invalid_request_error`**, rejected before genera
 Every figure in this block is perishable and several have changed in ways that alter what a correct answer looks like. Re-verify against Appendix I before relying on one.
 
 - Caching order: **tools → system → messages**. Everything before the breakpoint is cached
-- Cache lifetime **5 minutes**, refreshed **free** on each use; **1 hour** optional at 2x write price
-- Cache write **1.25x** base input (5m) or **2x** (1h); cache read **0.1x** on most models and lower on some current ones (Appendix I, `cache.read.multiplier.*`)
+- Cache lifetime **5 minutes**, refreshed **free** on each use; **1 hour** optional, written at 2x the base input price
+- Cache write **1.25x** base input (5m) or **2x** (1h); cache read **0.1x** on the current Haiku-class model and the default, lower on the current Fable-, Mythos-, Opus- and Sonnet-class models (Appendix I, `cache.read.multiplier.*`)
 - Up to **4 breakpoints**; **20-block** lookback; below the model's minimum cacheable length, nothing caches and **no error is returned**
 - **Modifying a tool definition invalidates the entire cache.** Changing effort invalidates message caching
 - **Cache hits are not deducted against rate limits**
 - Pre-warm with `max_tokens: 0` to remove first-request latency
-- Tool selection accuracy degrades past roughly **30 to 50 loaded tools**; 50 tools cost 10 to 20k tokens; a five-server setup can cost ~55k
+- Tool selection accuracy degrades past roughly **30 to 50 loaded tools**; 50 or more MCP tools can cost ~72k tokens; a five-server setup (58 tools) can cost ~55k
 - **Tool search** below ~10 tools is slower, not faster. Add it from ~10, or past 10,000 tokens of definitions
 - Four context-pressure strategies: tool search (definitions), programmatic tool calling (round trips), caching (cost not count), context editing (stale results)
 - Tool descriptions: **3 to 4 sentences minimum**, service-prefixed names, high-signal returns
@@ -172,7 +172,7 @@ Every figure in this block is perishable and several have changed in ways that a
 - **All three want the same five things:** a recorded classification, an after-the-fact explanation of a specific decision, a human who can actually override, evidence of continuous operation rather than of design and a reporting clock the incident process can meet. Build so the answer to each is yes and the regime question becomes a documentation exercise. Developed in 4.2
 - **Which role you occupy** decides which duty set applies, and four architectural acts move you to the heavier one: your name on the output, a changed purpose, a modified model or embedding the system in something you supply. Developed in 4.7 ⚠
 - GDPR: lawful basis, purpose limitation, minimization, erasure **including derived artifacts**, automated decision-making, transfers. Erasure in a retrieval system reaches chunks, embeddings, caches, logs and evaluation sets
-- HIPAA: a **business associate agreement** with any vendor touching protected health information, minimum necessary, audit controls, de-identification. A BAA for one configuration does not cover another
+- HIPAA: a **business associate agreement** with any vendor that creates, receives, maintains or transmits protected health information on your behalf (subject to the 160.103 exclusions), minimum necessary, audit controls, de-identification. A BAA for one configuration does not cover another
 - FedRAMP: authorized service offering, boundary definition, inherited controls
 - Logs contain inputs and outputs, therefore regulated data
 - **Five regulated-industry constraints:** attorney-client privilege; HIPAA; GDPR and data residency; FedRAMP and government; internal data-residency policy. Each names what it rules out and what survives review; the full table is in 2.8
@@ -206,7 +206,7 @@ Every figure in this block is perishable and several have changed in ways that a
 - Field the source may lack: **optional**, never required, or the model fabricates
 - Human waiting: **real-time**. Nothing blocked: deferred. "Usually finishes fast" is not a guarantee
 - Repeated large prefix: **stable content first, then cache**. Never truncate required content, never downsize blindly
-- Cost lever order: measure, cache, trim, route, parallelize, defer, stream, **shorten last**
+- Cost lever order (8.10): measure, fix retries, cache, lower effort, trim, defer tool definitions, route, parallelize, collapse tool-call chains, batch, stream, shorten, **then reconsider the model**
 - **Effort** is often a better lever than switching models
 - Deciding between models: **an evaluation set**, not an argument
 - Bigger context window does not buy **attention quality**

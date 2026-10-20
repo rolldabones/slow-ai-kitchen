@@ -179,14 +179,14 @@ Three mechanical consequences to implement rather than describe.
 
 Four architectural responses, in order of preference.
 
-1. **Classify the output by purpose, not by inheritance from inputs.** The template, workflow or use case carries a floor classification, so a competitive analysis is confidential regardless of source tiers.
+1. **Classify the output by purpose as well as by inheritance from inputs.** The template, workflow or use case carries a floor classification, so a competitive analysis is confidential regardless of source tiers.
 2. **Route by combination.** Certain source combinations trigger a higher tier, as policy at the gateway rather than a judgment by the user.
 3. **Human classification at the point of export.** When content leaves the system, a person confirms its tier: the control that actually works, and the one users resist.
 4. **Restrict distribution of outputs by default** to the requesting principal, so reclassification is deliberate rather than a consequence of sharing.
 
 **Decision rule: an output's classification is the higher of its inputs' and the one its purpose implies, and purpose usually wins.**
 
-⚠ **Special categories.** Data protection regimes define categories carrying heightened obligations, commonly health, biometric and genetic, alongside sector regimes for financial, health and children's data. The set, obligations and lawful bases vary by jurisdiction and change. **The architectural consequence is fixed and the legal detail is not:** special-category content must be detectable at ingest so it can be tiered; its presence recorded as metadata so routing and logging respond; and a route must keep it inside a defined boundary. Which categories apply, what lawful basis is required and whether a purpose is permitted are for counsel and the privacy function.
+⚠ **Special categories.** Data protection regimes define categories carrying heightened obligations, for example health, biometric and genetic data among a longer list, alongside sector regimes for financial, health and children's data. The set, obligations and lawful bases vary by jurisdiction and change. **The architectural consequence is fixed and the legal detail is not:** special-category content must be detectable at ingest so it can be tiered; its presence recorded as metadata so routing and logging respond; and a route must keep it inside a defined boundary. Which categories apply, what lawful basis is required and whether a purpose is permitted are for counsel and the privacy function.
 
 ---
 

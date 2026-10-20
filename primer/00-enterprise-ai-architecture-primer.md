@@ -7,7 +7,7 @@
 
 | Version | Date | Status | License |
 | --- | --- | --- | --- |
-| v2.0.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v2.0.0 | 2026-10-18 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 *Amendment record. v1.0.0, 20 August 2026 (KST), first issue. 24 August 2026: the Appendix I Sonnet price row was recast without a masthead change; recorded here on 18 October 2026, since an amendment belongs on the instrument. v2.0.0, 18 October 2026 (KST): split under ruling 2 of 15 October 2026. The drills, the self-check bank, the twenty-five artifacts, the eighteen diagrams and the enterprise vocabulary move to the [Primer Workbook](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/README.md); the interview question bank (Appendix E) leaves the public repository; perishable figures move to `primer/figures.yaml`, from which Appendix I's tables are generated, re-verified 18 October 2026, and the body names model classes rather than versions; a doctrine block, a gate and tier concordance, a How to Cite and this record are added; the intake funnel's gates become filters; worked examples are labeled illustrative; listed corrections are itemized in the slow-ai-kitchen CHANGELOG at v3.0.0.*
 
@@ -40,7 +40,7 @@ Everything here is organized against that claim. The material runs from the mech
 
 **As a review instrument.** The Practice Layer is the working tool: a twelve-question review sequence for interrogating a proposed or live system, a defect catalog of every failure mode a review can find in a built system, with its symptom and its architectural fix, a misdiagnosis catalog of the tempting wrong fixes, an evidence register naming the artifact that proves each control exists and a capability checklist. The Primer Workbook holds the twenty-five artifact templates you should be able to produce on demand and the eighteen diagrams you should be able to draw on a whiteboard without notes, with drills and a self-check bank (Appendices C, D, F and G index them).
 
-**As a competency map.** Appendix J maps seven competency areas to the sections that carry the material, and closes with a three-level self-assessment for finding your own gaps.
+**As a competency map.** Appendix J maps seven competency areas, which cut across the ten Part competencies above rather than replacing them, to the sections that carry the material, and closes with a three-level self-assessment for finding your own gaps.
 
 **As boardroom preparation.** Part 9 covers the executive briefing, the roadmap, the stakeholder map and the language discipline that survives a board.
 
