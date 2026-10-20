@@ -1,6 +1,6 @@
 # Enterprise Vocabulary, by Domain
 
-*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix H (the enterprise vocabulary run; the core terms stay in the Primer), on 18 October 2026 (ruling 2 of 15 October 2026); text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
+*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix H (the enterprise vocabulary run; the core terms stay in the Primer), on 18 October 2026, so that the Primer is a reference and this folder the practice set; text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
 
 Grouped by domain. Where a term is commonly confused with another, the distinction is stated in the same line.
 

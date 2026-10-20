@@ -1,8 +1,8 @@
 # Primer Workbook
 
-*Companion to the [Enterprise AI Architecture Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md) v2.0.0, slow-ai-kitchen v3.0.0, 18 October 2026 (KST).*
+*Companion to the [Enterprise AI Architecture Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md) v2.0.1, slow-ai-kitchen v3.0.2, 20 October 2026 (KST); first issued at slow-ai-kitchen v3.0.0, 18 October 2026 (KST).*
 
-The working material that was Appendices C, D, F, G and part of H of the Primer until v1.0.0, moved here under ruling 2 of 15 October 2026 so the Primer is a reference and this folder is the practice set. Each file renders on GitHub as it is. Text moved verbatim except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0.
+The working material that was Appendices C, D, F, G and part of H of the Primer until v1.0.0, moved here so the Primer is a reference and this folder is the practice set. Each file renders on GitHub as it is. Text moved verbatim except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0.
 
 | File | What it holds | Was |
 |---|---|---|

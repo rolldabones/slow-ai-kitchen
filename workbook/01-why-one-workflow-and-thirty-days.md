@@ -19,7 +19,7 @@ The initial engagement runs 30 days, scoped around one priority workflow and a n
 
 GRC Solutions Korea brings its founder's more than 25 years of legal, risk and cross-border operating experience, combined with AI audit practice and a maintained set of methods and tools. The Slow AI Kitchen supports learning and application; the [reference library](https://library.grcskorea.com/) connects that work to enterprise governance, and [The Handover](https://redcaps.substack.com/p/the-handover) is the user's guide to the whole account.
 
-The governing commitments are explicit. Informed Intent requires prior authorization stating purpose, authority, boundaries and exit, given by a human in a position to give it. Final Liability rests with the Human attaches every material outcome to a named human owner with decision rights, oversight and the power to intervene.
+The governing commitments are explicit. Informed Intent: no AI system acts without prior authorization stating its purpose, authority, boundaries and exit, given by a human who meets the five authorizer conditions. Final Liability rests with the Human: every material outcome attaches to a named human owner with decision rights, oversight and the power to intervene.
 
 Start with one valuable workflow. Demonstrate the benefit, establish the controls and give management the evidence to decide what comes next. In the kitchen's own idiom this is a soft opening: one dish on a limited menu, served to invited guests, before the decision to open.
 

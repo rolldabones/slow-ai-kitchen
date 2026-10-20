@@ -1,6 +1,6 @@
 # Self-Check Bank
 
-*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix D, on 18 October 2026 (ruling 2 of 15 October 2026); text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
+*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix D, on 18 October 2026, so that the Primer is a reference and this folder the practice set; text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
 
 162 questions, grouped by subject, weighted toward the subjects where the work is hardest rather than evenly across the ten. Answer from memory, then check the key. The section reference after each answer says where the material is developed, so a miss sends you somewhere specific.
 

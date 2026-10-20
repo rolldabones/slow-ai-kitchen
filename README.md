@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.0.1 | 2026-10-20 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.0.2 | 2026-10-20 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -486,7 +486,7 @@ A properly run workshop ends with eleven tangible artifacts:
 - [ ] brigade role assignment matrix
 - [ ] audit and review cycle design
 
-Teams leave with evidence of a process, not just slides. In a Consultant Workbook engagement the task brief, DoD checklist, first-pass notes and validated final artifact are W03, W08, W09 and W13 of [consultant-workbook.md](./consultant-workbook.md); the context and risk map is W05 and W05A, the accountability record W04, the post-action review W18, the tool registry entry W06, the brigade role assignment matrix W22 and the audit and review cycle design W24A; the AI-assisted draft is the work product W13 verifies and has no record of its own.
+Teams leave with evidence of a process, not just slides. In a Consultant Workbook engagement the task brief, DoD checklist, first-pass notes and validated final artifact are W03, W08, W09 and W13 of [consultant-workbook.md](./consultant-workbook.md); the context and risk map is W03 and W05, the accountability record W04, the post-action review W18, the tool registry entry W06, the brigade role assignment matrix W04 (roles) and the audit and review cycle design W18 (cadence), as the Workbook's Exercise 4 records them; the AI-assisted draft is the work product W13 verifies and has no record of its own.
 
 ### Facilitator Principles
 
@@ -570,7 +570,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.0.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.0.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -590,8 +590,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.0.1 (2026-10-20)**.
-LICENSE: two defects against the Creative Commons legal code corrected (the space in 'ShareAlike. In'; the CC0 sentence of the closing notice). Operative terms unchanged.
+Current version: **v3.0.2 (2026-10-20)**.
+Corrections from the independent review of 20 October 2026: the Enterprise AI Architecture Primer to v2.0.1, with the reference, module and Workbook text corrected. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---

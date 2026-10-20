@@ -21,7 +21,7 @@ The named human authors the actual tests before AI touches the task. AI may chal
 | D04 | ________________________ | ________________________ |
 | D05 | ________________________ | ________________________ |
 
-**Hard constraints and tolerable tradeoffs**
+**Hard constraints and tolerable trade-offs**
 
 State which failures prohibit release. Add tests as needed: 1 to 3 at Tier 1; 3 to 7 at Tiers 2 and 3.
 
@@ -29,7 +29,7 @@ State which failures prohibit release. Add tests as needed: 1 to 3 at Tier 1; 3 
 
 **Challenge the definition before work begins**
 
-What important option was discarded? Who structured the choices? Which tradeoff is hidden? What failure disappears inside the average? How will unknowns be handled?
+What important option was discarded? Who structured the choices? Which trade-off is hidden? What failure disappears inside the average? How will unknowns be handled?
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 

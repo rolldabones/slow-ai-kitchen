@@ -4,9 +4,9 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 
 | Part | Title | Size (KB) |
 |---|---|---|
-| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 20 |
+| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 22 |
 | 2 | [Part 1: Workflow Architecture](01-part-1-workflow-architecture.md) | 86 |
-| 3 | [Part 2: Solution Architecture to 2.8 Entry points and delivery routes](02-part-2-solution-architecture-to-2-8-entry-points-and.md) | 233 |
+| 3 | [Part 2: Solution Architecture to 2.8 Entry points and delivery routes](02-part-2-solution-architecture-to-2-8-entry-points-and.md) | 232 |
 | 4 | [Part 2: Solution Architecture · 2.9 The AI architecture decision record to Solution Architecture: the one-page version](03-2-9-the-ai-architecture-decision-record-to-solution.md) | 74 |
 | 5 | [Part 3: Integration Engineering](04-part-3-integration-engineering.md) | 118 |
 | 6 | [Part 4: Governance by Design](05-part-4-governance-by-design.md) | 208 |
@@ -18,12 +18,12 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 | 12 | [Part 10: Enterprise Systems Thinking](11-part-10-enterprise-systems-thinking.md) | 35 |
 | 13 | [THE PRACTICE LAYER](12-the-practice-layer.md) | 58 |
 | 14 | [APPENDICES · Appendix A: Twenty Principles](13-appendix-a-twenty-principles.md) | 8 |
-| 15 | [Appendix B: Quick Reference](14-appendix-b-quick-reference.md) | 24 |
+| 15 | [Appendix B: Quick Reference](14-appendix-b-quick-reference.md) | 25 |
 | 16 | [Appendix C: Scenario Drills · Appendix D: Self-Check Bank · Appendix E: Interview Question Bank · Appendix F: The Architect's Artifact Set](15-appendix-f-the-architect-s-artifact-set.md) | 10 |
 | 17 | [Appendix G: The Diagram Set](16-appendix-g-the-diagram-set.md) | 4 |
 | 18 | [Appendix H: Vocabulary](17-appendix-h-vocabulary.md) | 42 |
-| 19 | [Appendix I: Sources and Current Figures](18-appendix-i-sources-and-current-figures.md) | 66 |
-| 20 | [Appendix J: Competency Map](19-appendix-j-competency-map.md) | 5 |
+| 19 | [Appendix I: Sources and Current Figures](18-appendix-i-sources-and-current-figures.md) | 67 |
+| 20 | [Appendix J: Competency Map](19-appendix-j-competency-map.md) | 3 |
 | 21 | [CLOSING](20-closing.md) | 2 |
 
 ## Section index

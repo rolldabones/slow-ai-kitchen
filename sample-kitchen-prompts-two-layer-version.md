@@ -413,7 +413,7 @@ Assess:
 - integration burden
 - vendor assurance posture
 - lock-in and portability risk
-- cost versus maturity tradeoff
+- cost versus maturity trade-off
 
 ## Drafting standard
 When drafting policies, controls, procedures, audit programs or memos:

@@ -3,7 +3,7 @@
 <!-- nav:end -->
 ## Appendix J: Competency Map
 
-Seven competency areas, mapped to the sections that carry the material. The relative emphasis across them is a reasonable proxy for where an enterprise architect's time actually goes, and an architect whose practice is unbalanced against them is usually over-invested in solution design and under-invested in integration and evaluation.
+Seven competency areas, mapped to the sections that carry the material.
 
 Read this appendix as a reading map. Each row names the sections that carry the material, in the order they should be read.
 
@@ -16,16 +16,6 @@ Read this appendix as a reading map. Each row names the sections that carry the 
 | 5 | Governance, safety and risk management | 4.2 to 4.6, 4.10 to 4.12, 4.16 | 2.12, 4.8, 4.15, 6.8 |
 | 6 | Stakeholder communication and lifecycle | 1.2, 2.9, 9.1, 9.5, 9.7, 10.6 | 8.11, 9.2, 9.3 |
 | 7 | Developer productivity and operational enablement | 2.8, 7.5, 8.9 | 2.3, 3.10, 8.5 |
-
-### Where the emphasis sits
-
-**Three competencies carry most of the load: integration, solution design and evaluation.** The three of them share a property: they are the areas where a wrong answer is expensive and slow to surface, which is also why they are the areas where an architect is most likely to be asked to defend a decision months after making it.
-
-**The smallest area is the newest.** Developer productivity is the area where practice is least settled and where the tooling changes fastest. Weight it by volatility: the material dates faster than anything else in this document.
-
-**Governance is a modest share of the map and a considerably larger determinant of whether a system ships.** The map measures how much of the material addresses governance directly. It does not measure how often a governance defect is the reason a technically sound design does not reach production, which in enterprise practice is the more common failure.
-
-**This document carries governance heavily, and deliberately.** Part 4 and the governance material in Parts 2, 5 and 6 run to roughly a fifth of the body, for the reason above and one more: this is the material that ages slowest, a control set outliving the platform generation it was written for.
 
 ### The self-assessment
 

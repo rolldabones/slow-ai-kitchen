@@ -39,7 +39,7 @@ Tools = **ACT**. MCP = **CONNECT**. Subagents = **ISOLATE / PARALLELIZE**. Hooks
 
 SHAPING, what it knows and does: CLAUDE.md, Skills, Subagents, MCP servers. GOVERNING, what it may touch: Hooks, Permission boundaries, Sandboxing and restricted execution.
 
-**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based, on by default on Team and Enterprise, where administrators can turn it off), `dontAsk` (auto-denies anything outside the allow rules, the mode for locked-down CI) and `bypassPermissions` (skips all checks, isolated containers and virtual machines only). Developed in 2.8.
+**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based), `dontAsk` (auto-denies anything outside the allow rules, the mode for locked-down CI) and `bypassPermissions` (skips all checks, isolated containers and virtual machines only); availability in Appendix I, `entry.*`. Developed in 2.8.
 
 ### The reuse decision
 
@@ -157,10 +157,10 @@ Every figure in this block is perishable and several have changed in ways that a
 - **Modifying a tool definition invalidates the entire cache.** Changing effort invalidates message caching
 - **Cache hits are not deducted against rate limits**
 - Pre-warm with `max_tokens: 0` to remove first-request latency
-- Tool selection accuracy degrades past roughly **30 to 50 loaded tools**; 50 or more MCP tools can cost ~72k tokens; a five-server setup (58 tools) can cost ~55k
-- **Tool search** below ~10 tools is slower, not faster. Add it from ~10, or past 10,000 tokens of definitions
+- Tool selection accuracy degrades past roughly **30 to 50 loaded tools** (`tools.selection_degrades`); definitions for 50 or more tools run to tens of thousands of tokens (`tools.fifty_definitions`, `tools.five_server`)
+- **Tool search** below ~10 tools adds a search step a small toolset does not need (`toolsearch.standard_better`). Add it from ~10, or past 10,000 tokens of definitions (`toolsearch.add_from`)
 - Four context-pressure strategies: tool search (definitions), programmatic tool calling (round trips), caching (cost not count), context editing (stale results)
-- Tool descriptions: **3 to 4 sentences minimum**, service-prefixed names, high-signal returns
+- Tool descriptions: **3 to 4 sentences minimum** (`tools.description_length`), service-prefixed names, high-signal returns
 - **Corpora under ~200,000 tokens (~500 pages): skip retrieval**, cache the corpus instead
 - Contextual retrieval cuts top-20 retrieval failure by **35% / 49% / 67%**: contextual embeddings alone, with contextual BM25, with reranking
 - Rerank shape: retrieve wide (~150), rerank, pass top ~20

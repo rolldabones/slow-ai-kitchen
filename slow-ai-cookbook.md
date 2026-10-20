@@ -161,7 +161,7 @@ Paper is the cheapest place to discover that you have not yet decided what you w
 **Done Means.**
 - Leads with the decision or the ask.
 - One screen of context, not ten.
-- States real options with their tradeoffs.
+- States real options with their trade-offs.
 - Gives a recommendation with its rationale.
 - Says what happens if no decision is made.
 

@@ -187,11 +187,11 @@ Four requirements, and violating any one of them means the executive did not dec
 3. **The consequences accepted, stated for the recommended option.** Every architecture accepts costs; naming yours converts a future complaint into a decision the body already took, the element most often missing.
 4. **The reversibility classification, stated on the slide.** See below. It tells the body how much scrutiny the decision deserves and is the most useful discipline available for pace.
 
-### The three elements of a tradeoff, and the one that changes the meeting
+### The three elements of a trade-off, and the one that changes the meeting
 
-The four requirements above govern how a decision is brought. This governs how a single tradeoff inside it is described, and it is the part that decides whether an approval is informed.
+The four requirements above govern how a decision is brought. This governs how a single trade-off inside it is described, and it is the part that decides whether an approval is informed.
 
-**Every tradeoff needs three elements stated together: what the choice gains, what it gives up, and what a reversal costs once the system has been built around it.** In a regulated setting a fourth follows: what the choice does to the compliance posture. Most presentations carry the first two. **The third is the one routinely omitted, and it is the one that converts the question from "which is the better technical answer" into "which is the better business choice."**
+**Every trade-off needs three elements stated together: what the choice gains, what it gives up, and what a reversal costs once the system has been built around it.** In a regulated setting a fourth follows: what the choice does to the compliance posture. Most presentations carry the first two. **The third is the one routinely omitted, and it is the one that converts the question from "which is the better technical answer" into "which is the better business choice."**
 
 The omission is hard to see because the presentation is not wrong. An architect recommends holding a full policy document in context rather than building retrieval, describes the gain as a simpler design with fewer moving parts, and answers the per-call cost question accurately when it is asked. The decision-maker approves. Six weeks later the per-call figure meets production volume and arrives as a material monthly line, on an architecture the system now depends on. The note that follows is the one worth memorizing: *I approved a direction, not a number.* **Two of the three elements were communicated and understood. The third was load-bearing and absent.**
 
@@ -475,7 +475,7 @@ Here the role stops being technical. An engineer is accountable for whether the 
 2. Answer the four standing questions by conceding the legitimate part and ending on a fact, and **never present a number you cannot decompose in the room.**
 3. A roadmap sequences eight capabilities rather than listing use cases: foundations that unlock several use cases first, credibility wins early but never through a bypass, regulated use cases after the control layer, and nothing promised without a funded foundation. **Three horizons run concurrently on a stated funding ratio with the watching horizon hard-capped and the running horizon protected**, because underfunding what is already deployed is what cancels programs in year three. ⚠ Never promise a regulatory outcome.
 4. Bring decisions with criteria before options, real alternatives, the consequences accepted, and a reversibility classification that sets the process weight. Watch the decisions that look reversible and are not.
-5. State every tradeoff in three elements: what it gains, what it gives up and **what a reversal costs once the system is built around it.** The third is the one most often omitted and the one that changes the meeting.
+5. State every trade-off in three elements: what it gains, what it gives up and **what a reversal costs once the system is built around it.** The third is the one most often omitted and the one that changes the meeting.
 6. Three decisions are not delegable: risk appetite, named accountability and the workforce position. The accountability gap left by not answering them is the biggest executive-level risk, and it is invisible while things go well.
 7. Build versus buy is four options costed over three years including integration, change, control, internal support, model migration and exit, with vendor viability, switching cost and switching time stated and the exit plan in the same paper.
 8. Sixteen stakeholders each have an interest, a fear and an artifact that satisfies them. Engage each when the design first constrains their domain.

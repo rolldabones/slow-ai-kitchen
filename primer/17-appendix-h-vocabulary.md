@@ -9,7 +9,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **5xx errors.** The HTTP status class (500 to 599) for a server-side failure to fulfill an otherwise valid request. **500** internal error, **503** service unavailable, **529** overloaded. Usually transient and resolvable with backoff, and categorically distinct from the 4xx codes, which indicate a client-side problem and mostly must not be retried unchanged. The retry decision rule is in 3.8.
 
-**A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation project. Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
+**A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation project (Appendix I, `a2a.origin`). Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
 
 **Accretion.** What you have instead of an architecture when you cannot name the architecture. No known failure modes, no cost model, no precedent to review against.
 
@@ -55,7 +55,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Chunking.** Cutting documents into retrievable pieces. Three approaches: fixed-size, semantic and hierarchical.
 
-**Claude Agent SDK.** A managed agent runtime distributed as `@anthropic-ai/claude-agent-sdk` for TypeScript and `claude-agent-sdk` for Python. It exposes the same agent loop that powers Claude Code, iteration, tool execution, observation and termination, so an agent can be embedded inside a partner's own product rather than run in a terminal. **Distinct from the Anthropic SDK**, which is a convenience wrapper over the API and runs no loop. The two are routinely conflated because engineers say "SDK" for both.
+**Claude Agent SDK.** A managed agent runtime distributed as packages for TypeScript and Python (Appendix I, `entry.agent_sdk`). It exposes the same agent loop that powers Claude Code, iteration, tool execution, observation and termination, so an agent can be embedded inside a partner's own product rather than run in a terminal. **Distinct from the Anthropic SDK**, which is a convenience wrapper over the API and runs no loop. The two are routinely conflated because engineers say "SDK" for both.
 
 **Claude Code.** An agentic coding tool that reads files, edits code, runs commands and executes multi-step engineering work under configurable permission boundaries. Distributed as a CLI, IDE plugins, a desktop application and a web product. An entry point in the platform map, built for engineers, and customizable through the shaping and governing layers in 2.8.
 
@@ -89,7 +89,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Cost per outcome.** Total cost divided by completed successful tasks, rather than by API calls. The number that matters.
 
-**Data processing agreement (DPA).** The contract governing processing of personal data on a controller's behalf. Where it sits depends on the delivery route: on a direct API it is with the model provider, on a cloud route the terms are inherited from the cloud contract. The route therefore decides which counterparty a notification, or a regulator, lands on.
+**Data processing agreement (DPA).** The contract governing processing of personal data on a controller's behalf. Where it sits depends on the delivery route: on a direct API it is with the model provider, on a cloud route the terms are inherited from the cloud contract (Appendix I, `routes.dpa`). The route therefore decides which counterparty a notification, or a regulator, lands on.
 
 **Decision logging.** Capturing the inputs, retrieved context, model output and routing for a single decision, keyed so that decision can be replayed and explained afterward. The same instrumentation as production observability, pointed at a different question: not whether the system is healthy but why this specific decision happened. The retention period and the query path differ accordingly, and the log is itself in scope for the compliance register.
 
@@ -101,7 +101,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Dense (embeddings).** Semantic indexing: matches semantic similarity, meaning, not words. Earns its place where queries are phrased differently from the source. Paired with sparse and hybrid.
 
-**Deployment lifecycle.** The eight phases a deployment runs through, per 10.6: discovery, design, build, validate, handoff, monitor, iterate, retire. Discovery and tradeoff framing do the first two, the eval gate is validate, documentation is handoff, the feedback loop is monitor and iterate, and the decommissioning plan is retire. **Two of the eight are least often designed for, the handoff in the middle and the end**, which is why a definition stopping at iteration is the common error rather than a shorter description. Naming the phase a decision belongs to is what lets you judge whether one phase is ready to move to the next. **Do not confuse this with the eight decision-right stages of 4.7 and F14**, which cut the same life on a different axis: a phase here is where work happens, a stage there is where somebody signs.
+**Deployment lifecycle.** The eight phases a deployment runs through, per 10.6: discovery, design, build, validate, handoff, monitor, iterate, retire. Discovery and trade-off framing do the first two, the eval gate is validate, documentation is handoff, the feedback loop is monitor and iterate, and the decommissioning plan is retire. **Two of the eight are least often designed for, the handoff in the middle and the end**, which is why a definition stopping at iteration is the common error rather than a shorter description. Naming the phase a decision belongs to is what lets you judge whether one phase is ready to move to the next. **Do not confuse this with the eight decision-right stages of 4.7 and F14**, which cut the same life on a different axis: a phase here is where work happens, a stage there is where somebody signs.
 
 **Detective control.** A control that reveals a problem after it occurs, such as logging. Contrast preventive.
 
@@ -137,7 +137,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Fallback chain.** The ordered set of alternatives the system uses when the primary path returns nothing usable: a lower model tier, a cached response, a deterministic path, a degraded mode. **Belongs in the orchestration layer**, because only the orchestrator knows what an acceptable substitute for the task is. The control most often built and least often exercised, which is why fallback behavior belongs in the eval suite rather than in the design document alone.
 
-**Fast mode.** A setting on the current Opus-class model, and in research preview on two legacy Opus models (Appendix I, `fastmode.models`), delivering up to 2.5x higher output speed at premium pricing.
+**Fast mode.** A setting on the current Opus-class model, and in research preview on two legacy Opus models (Appendix I, `fastmode.models`), delivering higher output speed at premium pricing (`fastmode.speedup`).
 
 **Few-shot prompting.** Teaching by worked examples. Anthropic's guidance: curate diverse canonical examples rather than stuffing edge cases.
 
@@ -251,7 +251,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Retrieval.** Fetching relevant material from an outside source at request time and handing it to the model with the question, so the answer is grounded in that source rather than in what the model recalls. Augments the context window; it does not replace it. **The model only sees what the retriever surfaces**, which makes recall failure a silent failure.
 
-**Reversal cost.** What it costs to undo a decision after the system has been built around it. The third element of a tradeoff presentation, alongside what the choice gains and what it gives up, and the element most often omitted. **Distinct from the reversibility classification**, which sets how much process a decision deserves: a decision can be formally reversible and still expensive to reverse.
+**Reversal cost.** What it costs to undo a decision after the system has been built around it. The third element of a trade-off presentation, alongside what the choice gains and what it gives up, and the element most often omitted. **Distinct from the reversibility classification**, which sets how much process a decision deserves: a decision can be formally reversible and still expensive to reverse.
 
 **Right altitude.** Anthropic's term for the correct specificity of a system prompt: between brittle hardcoded logic and vague guidance that assumes shared context.
 

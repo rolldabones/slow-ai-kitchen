@@ -2,7 +2,7 @@
 
 **Slow AI Kitchen · one page per service · v1.1.0 · 2026-10-17 (KST)**
 
-*Amendment, 17 October 2026 (KST), v1.1.0: the header names a reviewer at Tier 2 and Tier 3 and an approver at Tier 3, as the Tier Application Map requires, and the owner is the one named at Step 1 and confirmed at Gate 5. Whole-account review of 15 October 2026, reviewer report 01, item 11.*
+*Amendment, 17 October 2026 (KST), v1.1.0: the header names a reviewer at Tier 2 and Tier 3 and an approver at Tier 3, as the Tier Application Map requires, and the owner is the one named at Step 1 and confirmed at Gate 5. Found by the whole-account review of 15 October 2026.*
 
 The Service Record is the close-out of one service: one dish, taken through Steps 1 to 9 and released at Gate 7. It is written by the named owner (named at Step 1, confirmed at Gate 5) within one day of release and kept with the evidence log. It records what the method met in contact with the work, so that the method is refined against records rather than recollection. Ten Service Records trigger a method review under Step 12, Gate 10.
 

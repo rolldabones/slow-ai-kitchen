@@ -11,7 +11,7 @@ Moved on 18 October 2026 to the Primer Workbook: [primer-workbook/self-check-ban
 
 ## Appendix E: Interview Question Bank
 
-Removed on 18 October 2026 under ruling 2 of 15 October 2026: interview preparation for named job titles is candidate material, not a practitioner reference, and is kept privately. Earlier tagged releases still carry it.
+Removed on 18 October 2026: interview preparation for named job titles is candidate material, not a practitioner reference, and is kept privately. Earlier tagged releases still carry it.
 
 ## Appendix F: The Architect's Artifact Set
 

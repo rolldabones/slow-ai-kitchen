@@ -14,9 +14,9 @@ CEO, GRC Solutions Korea
 
 **For:** consultants and Client delivery teams running a 30-day initial engagement on one priority workflow for a named business owner. The canonical method is the [README](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md); this workbook adds a delivery sequence, working records, measurement rules and a fictional teaching case.
 
-**Amendment, 18 October 2026 (KST), v1.4.0.** The workbook can now be run cold. Six delivery instruments are added: a thirty-day calendar, a discovery interview guide, a benefit scale for workflow selection, a defect severity scale, a synthetic case kit and a sponsor report. Every working record, W01 to W24A, carries a Done when line. W13 states that a model's review of its own output is not Gate 6, as the README does. The worked case's effort table uses W16's five categories; its totals are unchanged, and the rows that combined categories (manual preparation with production; review with final approval in both methods) are divided between the categories they now span. The resource register is re-verified on 18 October 2026. Links to other files in this repository are now absolute, so they resolve from the derived parts. Each section is also published as a derived part under [workbook/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/README.md). Found by the whole-account review of 15 October 2026 (doc section 5; reviewer report 02, items 25, 27 and 28 and idea 2). No gate, tier, role or principle changes; W01 to W24A keep their headings, so inbound anchors resolve.
+**Amendment, 18 October 2026 (KST), v1.4.0.** The workbook can now be run cold. Six delivery instruments are added: a thirty-day calendar, a discovery interview guide, a benefit scale for workflow selection, a defect severity scale, a synthetic case kit and a sponsor report. Every working record, W01 to W24A, carries a Done when line. W13 states that a model's review of its own output is not Gate 6, as the README does. The worked case's effort table uses W16's five categories; its totals are unchanged, and the rows that combined categories (manual preparation with production; review with final approval in both methods) are divided between the categories they now span. The resource register is re-verified on 18 October 2026. Links to other files in this repository are now absolute, so they resolve from the derived parts. Each section is also published as a derived part under [workbook/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/README.md). Found by the whole-account review of 15 October 2026. No gate, tier, role or principle changes; W01 to W24A keep their headings, so inbound anchors resolve.
 
-**Amendment, 17 October 2026 (KST), v1.3.0.** The doctrine paragraph copies the short forms of DOCTRINE.md section 8, so Final Liability carries the canon's three attributes and no others; the resource register is re-verified against the released versions of 17 October 2026 and names the GRC Workbook's release tiering as it states it; seven headings and labels regain the hyphens and commas a conversion stripped. Found by the whole-account review of 15 October 2026 (doc section 8; reviewer report 02, items 17 to 20 and 33). No record, gate or measurement rule changes.
+**Amendment, 17 October 2026 (KST), v1.3.0.** The doctrine paragraph copies the short forms of DOCTRINE.md section 8, so Final Liability carries the canon's three attributes and no others; the resource register is re-verified against the released versions of 17 October 2026 and names the GRC Workbook's release tiering as it states it; seven headings and labels regain the hyphens and commas a conversion stripped. Found by the whole-account review of 15 October 2026. No record, gate or measurement rule changes.
 
 **Final Liability rests with the Human.**
 
@@ -49,7 +49,7 @@ The initial engagement runs 30 days, scoped around one priority workflow and a n
 
 GRC Solutions Korea brings its founder's more than 25 years of legal, risk and cross-border operating experience, combined with AI audit practice and a maintained set of methods and tools. The Slow AI Kitchen supports learning and application; the [reference library](https://library.grcskorea.com/) connects that work to enterprise governance, and [The Handover](https://redcaps.substack.com/p/the-handover) is the user's guide to the whole account.
 
-The governing commitments are explicit. Informed Intent requires prior authorization stating purpose, authority, boundaries and exit, given by a human in a position to give it. Final Liability rests with the Human attaches every material outcome to a named human owner with decision rights, oversight and the power to intervene.
+The governing commitments are explicit. Informed Intent: no AI system acts without prior authorization stating its purpose, authority, boundaries and exit, given by a human who meets the five authorizer conditions. Final Liability rests with the Human: every material outcome attaches to a named human owner with decision rights, oversight and the power to intervene.
 
 Start with one valuable workflow. Demonstrate the benefit, establish the controls and give management the evidence to decide what comes next. In the kitchen's own idiom this is a soft opening: one dish on a limited menu, served to invited guests, before the decision to open.
 
@@ -772,7 +772,7 @@ The named human authors the actual tests before AI touches the task. AI may chal
 | D04 | ________________________ | ________________________ |
 | D05 | ________________________ | ________________________ |
 
-**Hard constraints and tolerable tradeoffs**
+**Hard constraints and tolerable trade-offs**
 
 State which failures prohibit release. Add tests as needed: 1 to 3 at Tier 1; 3 to 7 at Tiers 2 and 3.
 
@@ -780,7 +780,7 @@ State which failures prohibit release. Add tests as needed: 1 to 3 at Tier 1; 3 
 
 **Challenge the definition before work begins**
 
-What important option was discarded? Who structured the choices? Which tradeoff is hidden? What failure disappears inside the average? How will unknowns be handled?
+What important option was discarded? Who structured the choices? Which trade-off is hidden? What failure disappears inside the average? How will unknowns be handled?
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 

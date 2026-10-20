@@ -124,6 +124,8 @@ Metadata is not documentation about the data. **In a retrieval system metadata i
 
 ### The nine fields a chunk must carry
 
+This is the canonical chunk field list; artifact F11's ingestion contract references it rather than restating its own.
+
 | Field | Without it |
 | --- | --- |
 | **Source document identifier and version** | You cannot tell which version answered, and reindex breaks every citation |
@@ -144,8 +146,8 @@ That rule is the practical resolution of most hard cases. Content whose access r
 
 Enterprises do not delete policy. They replace it, and both versions persist because the old one governed conduct during the period it was in force. Three requirements follow.
 
-1. **Both versions are indexed**, because "what was the policy in March" is a legitimate and frequent question.
-2. **Currency is a metadata property, not an indexing decision.** The default retrieval filter selects current, and historical retrieval is an explicit mode.
+1. **The superseded version leaves the serving index and stays in the archive**, tombstoned as 5.7 describes and removed from every derived artifact as 5.4 requires, because "what was the policy in March" is a legitimate and frequent question that the archive answers.
+2. **Historical retrieval is an explicit mode over the archive, never the default.** The serving index holds current content only, so no filter can fail open onto a superseded version.
 3. **The supersession relationship is recorded on both records**, forward and backward, so that retrieving an old version can announce its own obsolescence rather than relying on the reader to notice a date.
 
 ---
@@ -373,7 +375,7 @@ The architectural constraints, which hold regardless of how the legal detail res
 
 ### Inference geography is a control with a price
 
-Restricting where inference runs is an architectural control, available on some routes and not others, and one of the few here with a published price. The documented position on Claude 4.6 and later: a **1.1x multiplier on every token category** when US-only inference is specified through `inference_geo`, meaning input, output, cache writes and **cache reads**. The figure is perishable and sits with the others in Appendix I, to be checked before it goes into a model.
+Restricting where inference runs is an architectural control, available on some routes and not others, and one of the few here with a published price. The documented position: a **multiplier on every token category** (Appendix I, `residency.multiplier`, `residency.models`) when US-only inference is specified through `inference_geo`, meaning input, output, cache writes and **cache reads**. The figure is perishable and sits with the others in Appendix I, to be checked before it goes into a model.
 
 Residency is not free, and its price scales with volume rather than with the number of restricted workloads, so a constraint accepted for one regulated use case prices every token that route carries. And **the multiplier applies to cached reads, which is exactly where a caching-heavy design concentrates its volume**. The caching and geography decisions are usually taken by different people in different weeks, and they interact.
 
@@ -434,7 +436,7 @@ This artifact actually gets requested, by a regulator, a customer's security rev
 
 1. **Retrieval quality is bounded by corpus quality.** Assess the six dimensions on the real corpus before designing anything: completeness, accuracy, consistency, timeliness, validity, uniqueness. Timeliness and uniqueness fail silently. Missing data causes fabrication. Contradiction is worse than absence. Score per source with a named owner, because remediation is addressed to a person.
 2. **Model three levels and add the eight entities transaction systems lack:** document, chunk, embedding, run, evaluation, decision, override, evidence. Chunks are first-class with stable identifiers. Embeddings carry their model version. The system of intelligence proposes; something else commits.
-3. **Metadata is what makes retrieval governable.** Nine fields per chunk: document and version, effective and expiry dates, jurisdiction, sensitivity, owner, permission set, supersession, structural path, ingest provenance. If a control cannot be a predicate over metadata, enforce it by excluding the content. Index both current and superseded, and filter on currency.
+3. **Metadata is what makes retrieval governable.** Nine fields per chunk: document and version, effective and expiry dates, jurisdiction, sensitivity, owner, permission set, supersession, structural path, ingest provenance. If a control cannot be a predicate over metadata, enforce it by excluding the content. Serve current content only; tombstone superseded versions to the archive and reach them through an explicit historical mode.
 4. **Four tiers, and classification picks the route before cost or latency.** Logging, caching and routing are all per-tier settings. Synthesis reclassifies upward, purpose sets a floor and human confirmation at export is the control that works. Special categories need detection at ingest, metadata recording and a bounded route; the legal detail is for counsel.
 5. **Taxonomy for filters, folksonomy for vocabulary, ontology only for traversal questions.** Controlled vocabularies with preferred terms, variants, stable identifiers and an owner. Most enterprise search failures are information architecture failures, and generative retrieval hides them behind fluent prose.
 6. **Lineage at three levels, and the third is the one that must be designed in.** Retrieval lineage ties a sentence to a chunk of a version of a document within a run. Persist the retrieved set including rejected candidates. Retention follows the dispute horizon, not the engineering horizon. Evidence needs identity, versions, offsets, parameters, principals, human decisions and tamper evidence.

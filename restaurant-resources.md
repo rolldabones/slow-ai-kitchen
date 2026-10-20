@@ -2,6 +2,8 @@
 
 > **Regulatory currency:** the legal and standards claims in this file were verified against primary and official sources on 14 July 2026 (KST), except where a status note below carries a later date. The EU entry was updated on 13 August 2026 (KST); the Korea and NIST entries were re-verified on 17 August 2026 (KST); the Singapore entry was added and the ISO entries were re-read against iso.org on 11 October 2026 (KST); on 15 October 2026 (KST) the EU timeline sentence was struck and re-pointed to the account's canonical note, the NIST IR 8286 and SP 800-160 entries, the paywall sentence, the AI Standards Hub entries and the MAS transition sentence were corrected, each marked in place; on 20 October 2026 (KST) the ISO/IEC 27701 description, the NIST IR 8286D and SP 800-161 citations, the Korea Act and Decree dates and the operative provision for the EU Article 50(2) transition were corrected. Each status note carries its own verification date and controls over this line. Verify again before relying on this file in client-facing or regulatory submissions.
 
+*How to read corrections.* Struck text (~~like this~~) is a superseded statement kept in place beside its correction, so a reader of an earlier version can see what changed; the correction carries its date.
+
 ---
 
 ## A Note on Standards

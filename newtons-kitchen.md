@@ -16,7 +16,7 @@ CEO, GRC Solutions Korea
 
 > **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of mechanics. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms).
 
-> **Amendment, 17 October 2026 (KST), v1.1.0.** Law I now names the authorizer's five conditions beside the four elements, and Law III states when the task-level owner is named; the doctrine block takes the uniform form shared by the three derivation modules. Found by the whole-account review of 15 October 2026 (doc section 1; reviewer report 02, items 10, 11 and 32). No law, corollary or property is added or removed.
+> **Amendment, 17 October 2026 (KST), v1.1.0.** Law I now names the authorizer's five conditions beside the four elements, and Law III states when the task-level owner is named; the doctrine block takes the uniform form shared by the three derivation modules. Found by the whole-account review of 15 October 2026. No law, corollary or property is added or removed.
 
 > **License.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Newton's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0."
 

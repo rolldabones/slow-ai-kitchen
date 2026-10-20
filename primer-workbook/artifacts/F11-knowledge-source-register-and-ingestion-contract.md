@@ -34,10 +34,15 @@ INGESTION CONTRACT, per source that is ingested
  Parse fidelity check     sampled at __%, by whom, cadence
  Reconciliation           document count at source vs count in
                           index, run daily, alert on drift
- Required metadata, all nine present or the chunk is rejected
-   document id | version | effective from | effective until |
-   supersedes | jurisdiction | classification | access labels
-   | authority flag
+ Required metadata, all nine present or the chunk is rejected,
+   per the canonical list in Primer 6.3 ("The nine fields a
+   chunk must carry"): document id and version | effective
+   and expiry dates | jurisdiction | sensitivity | owner |
+   permission set | supersession pointer | structural path |
+   ingest and index provenance
+ Authority                recorded per source in the register
+                          above and carried with the source
+                          record, not as a chunk field
  Access labels            propagated to chunk level, applied as
                           a pre-filter at query time
  Deletion propagation     source delete removes chunk,
