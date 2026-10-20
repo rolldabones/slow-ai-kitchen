@@ -2,6 +2,40 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.1.0 (2026-10-20)
+
+New module. Mondrian's Kitchen (`mondrians-kitchen.md`) joins as the fourth
+standalone derivation module: the three doctrines and the GRCnext™ primitives
+read as one composition in the register of Piet Mondrian's Neoplasticism, and
+the twelve steps read as the method of arriving at such a composition
+(observation, decomposition, composition, authorship, recomposition). States
+three limits of the analogy, including that Broadway Boogie Woogie's omission
+of black is no warrant for controls to disappear from view: the auditor's test
+is whether the grid can still be seen. Doctrine compressions copy the
+DOCTRINE.md section 8 sentence and list forms verbatim; GRCnext™ is read, not
+varied; DOCTRINE.md is unchanged. No change to the twelve steps, the ten gates,
+the three tiers, the workshop design, the Your Restaurant addendum, the primer
+or the other three derivation modules.
+
+- **`mondrians-kitchen.md`**, new, v1.0.0, Final, CC BY-NC-SA 4.0. Preface,
+  ten sections in continuous prose, a method-mapping apparatus, a provenance
+  note in the author's voice and four source entries. Museum sources (National
+  Gallery of Art collection page and audio stop 19; MoMA collection page for
+  Broadway Boogie Woogie) and the tribute pages (mondriantribute.com;
+  Awwwards Honorable Mention, 22 July 2026) read 2026-10-20 (KST). One short
+  quotation, "continuous opposition of pure means" (MoMA, quoting Mondrian);
+  the phrase "scroll to decompose" credited to the tribute's author, Onofrio
+  Napolitano. Kunstmuseum Den Haag named as holder of the tree paintings; no
+  museum page read for them.
+- **`README.md`**: title block to v3.1.0; derivation-module reader path
+  extended to four; file table row added after `coetzees-kitchen.md`; How to
+  Cite and current-version paragraph updated. The web-application paragraph
+  keeps "three derivation modules" until the application's next human release
+  carries the fourth.
+- **`CITATION.cff`**: version to 3.1.0.
+- Not in scope, logged: DOCTRINE.md section 5 names three derivation modules
+  and is unchanged; a fourth is a DOCTRINE.md v1.2.2 decision.
+
 ## v3.0.2 (2026-10-20)
 
 Patch. Independent review of 20 October 2026; changes made with Claude, approved by Michael Paik. No step, gate, tier, role or rule of the method changes, and no file is added, moved or removed.

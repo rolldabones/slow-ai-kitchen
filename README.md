@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.0.2 | 2026-10-20 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.1.0 | 2026-10-20 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -63,7 +63,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): One Workflow, Thirty Days, the engagement on one priority workflow for a named business owner, with the delivery cadence, the thirty-day calendar, six delivery instruments and twenty-six working records keyed to the steps and gates, each with a Done when line, also published one record per file under [workbook/](./workbook/README.md). It changes no step, gate, tier, role or principle.
 
-**A reader who wants the derivations.** Read the three derivation modules: [karpathys-kitchen.md](./karpathys-kitchen.md) (the principles derived from the technology's mechanisms), [newtons-kitchen.md](./newtons-kitchen.md) (the three doctrines as three laws of consequential motion) and [coetzees-kitchen.md](./coetzees-kitchen.md) (the epistemics of the working session). They change no step, gate, role or principle.
+**A reader who wants the derivations.** Read the four derivation modules: [karpathys-kitchen.md](./karpathys-kitchen.md) (the principles derived from the technology's mechanisms), [newtons-kitchen.md](./newtons-kitchen.md) (the three doctrines as three laws of consequential motion), [coetzees-kitchen.md](./coetzees-kitchen.md) (the epistemics of the working session) and [mondrians-kitchen.md](./mondrians-kitchen.md) (the doctrines and the GRCnext™ primitives seen as one composition, and the twelve steps as the method of reaching it). They change no step, gate, role or principle.
 
 **Prefer a guided tool.** A web application at https://kitchen.grcskorea.com/ carries the twelve steps and, since 11 October 2026, the Cookbook, the sample prompts, the Consultant Workbook, the agent companion, the three derivation modules, the workforce AI literacy bridge and the reference resources, in English, Korean, Vietnamese and Japanese. This repository is the text of record; the application states the release its text follows and is rebuilt from it only after a human release.
 
@@ -83,6 +83,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone module: twelve works by Andrej Karpathy read for what they establish about the technology's limits; an independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
 | [newtons-kitchen.md](./newtons-kitchen.md) | Standalone module: the three doctrines as three laws of consequential motion in the order of the *Principia*; restates DOCTRINE.md and varies nothing | You want the conceptual warrant for the method rather than its assertion |
 | [coetzees-kitchen.md](./coetzees-kitchen.md) | Standalone module: the epistemics of the human-AI working session, read through Coetzee's 2003 Nobel lecture; introduces Return to Source and Cognitive Provenance | You want to understand what working with the machine does to the person doing the work, and why the gates exist |
+| [mondrians-kitchen.md](./mondrians-kitchen.md) | Standalone module: the three doctrines and the GRCnext™ primitives read as a single Mondrian composition, with the twelve steps as the method of arriving at it; states three limits of the analogy; credits Onofrio Napolitano's interactive tribute | You want to see the governed whole before building it one gate at a time, or you teach the method and need one picture of it |
 | [service-record.md](./service-record.md) | One-page close-out of a single service, written by the named owner within a day of release; ten records trigger a method review (Step 12) | You have released a service and are closing it out, or you are refining the method against records rather than recollection |
 | [consultant-workbook.md](./consultant-workbook.md) | One Workflow, Thirty Days: the delivery instrument for a bounded engagement, with cadence, calendar, six instruments and twenty-six working records with Done when lines | You are delivering the method to a Client as a bounded engagement, or training the consultants who will |
 | [workbook/](./workbook/README.md) | The Consultant Workbook in 48 derived parts, one section or working record per file, verified to rebuild the single file byte for byte | You need one working sheet rather than the whole workbook |
@@ -570,7 +571,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.0.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.1.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -590,8 +591,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.0.2 (2026-10-20)**.
-Corrections from the independent review of 20 October 2026: the Enterprise AI Architecture Primer to v2.0.1, with the reference, module and Workbook text corrected. No step, gate, tier, role or rule of the method changes.
+Current version: **v3.1.0 (2026-10-20)**.
+New module: Mondrian's Kitchen (mondrians-kitchen.md), the fourth derivation module. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---
