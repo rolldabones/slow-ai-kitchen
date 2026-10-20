@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.0.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.0.1 | 2026-10-20 (KST) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance. It is built on one principle.
 
@@ -570,7 +570,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.0.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.0.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -590,8 +590,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.0.0 (2026-10-18)**.
-The Primer split, session T8 of the whole-account review of 15 October 2026 (KST): the Enterprise AI Architecture Primer v2.0.0 with its practice set moved to `primer-workbook/`, its perishable figures in `primer/figures.yaml` and the interview question bank removed; no change to any step, gate, tier, role or rule of the method.
+Current version: **v3.0.1 (2026-10-20)**.
+LICENSE: two defects against the Creative Commons legal code corrected (the space in 'ShareAlike. In'; the CC0 sentence of the closing notice). Operative terms unchanged.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---

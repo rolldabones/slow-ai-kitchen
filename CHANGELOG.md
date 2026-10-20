@@ -2,6 +2,11 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.0.1 (2026-10-20)
+
+- LICENSE: two defects against the Creative Commons legal code corrected (the space in 'ShareAlike. In'; the CC0 sentence of the closing notice). Operative terms unchanged.
+- README version table, Changelog section, How to Cite and `CITATION.cff` to v3.0.1 in lockstep. No change to any step, gate, tier, role or rule of the method.
+
 ## v3.0.0 (2026-10-18)
 
 The Primer split, session T8 of the whole-account review of 15 October 2026 (KST); review doc section 7 (the Primer) and section 3 (currency), reviewer reports 03 and 04, under ruling 2 of 15 October 2026. Major, because files other repositories or readers may link move or leave: five Primer appendices move to a new folder, one leaves the repository, and ten derived part files are renamed or removed. No step, gate, tier, role or rule of the method changes.
