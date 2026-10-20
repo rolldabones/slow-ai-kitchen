@@ -2,6 +2,45 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.2.0 (2026-10-21)
+
+New module. Wiszowaty's Kitchen (`wiszowatys-kitchen.md`) joins as the fifth
+standalone derivation module: the six-part Practical Reference that closes
+Karol Wiszowaty's *The One Minute Architect* (purpose and the Architecture
+Decision Record; Event Storming and Bounded Contexts; characteristics and
+constraints versus preferences; styles and technical debt; the C4 Model and
+sequence diagrams; fitness functions, Conway's Law, Team Topologies and
+cognitive load) read part by part against the steps and gates that already do
+the same work. Names the page the reference does not have: no instrument in it
+records the Human who answers for the system, which is Gate 5 and Gate 7 in the
+method. Doctrine compressions copy the DOCTRINE.md section 8 sentence and
+list forms verbatim; GRCnext™ Tolerances and Switches are read, not varied;
+DOCTRINE.md is unchanged. Records that the Purpose Statement answers to the
+purpose element of Informed Intent's instrument, not to the doctrine entire. No change to the twelve steps, the ten
+gates, the three tiers, the workshop design, the Your Restaurant addendum, the
+primer or the other four derivation modules.
+
+- **`wiszowatys-kitchen.md`**, new, v1.0.0, Final, CC BY-NC-SA 4.0. Preface,
+  seven sections in continuous prose, a method-mapping apparatus, a provenance
+  note in the author's voice and twelve source entries. The book is summarized
+  from the author's reading and is not quoted. External sources (book site,
+  publisher site, Nygard 2011, Developer to Architect resources, Conway 1968,
+  Team Topologies site) read 2026-10-21 (KST); the Thoughtworks page for
+  *Building Evolutionary Architectures* did not load and the book is cited
+  from its front matter. ISBN 978-83-982636-0-3 checksum verified. Book
+  content reviewed against the book by the author before release.
+- **`README.md`**: title block to v3.2.0; derivation-module reader path
+  extended to five; file table row added after `mondrians-kitchen.md`; How to
+  Cite and current-version paragraph updated. The web-application paragraph
+  now reads "the derivation modules (five as of the v3.2.0 rebuild of 21
+  October 2026)": the library app and kitchen.grcskorea.com are rebuilt from
+  this release immediately after it is pushed, by human release.
+- **`CITATION.cff`**: version to 3.2.0, date-released to 2026-10-21; abstract
+  corrected from "three" to "five derivation modules" (it had read "three"
+  since v2.x and was not updated at v3.1.0).
+- Not in scope, logged: DOCTRINE.md section 5 names three derivation modules
+  and is unchanged; the fourth and fifth are a DOCTRINE.md decision.
+
 ## v3.1.0 (2026-10-20)
 
 New module. Mondrian's Kitchen (`mondrians-kitchen.md`) joins as the fourth
