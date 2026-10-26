@@ -2,6 +2,13 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.2.1 (2026-10-26)
+
+Patch release. `restaurant-resources.md`: the three NIST IR 8286 addresses that returned 404 on two runs of the account's link check (8286A Rev. 1, 8286B and 8286C Rev. 1) are re-pointed to the forms csrc.nist.gov uses (`/pubs/ir/8286/a/r1/final`, `/pubs/ir/8286/b/upd1/final`, `/pubs/ir/8286/c/r1/final`). 8286A Rev. 1 and 8286C Rev. 1 were read at their new addresses on 26 October 2026 (KST), both final, December 2025; the original 8286B (February 2022) reads withdrawn on 26 February 2025, superseded by 8286B Update 1, whose address is taken from that page and was not read. The series sentence names the current editions. No other text changed.
+
+- **Record of a variance (owed since v3.2.0).** The v3.1.0 and v3.2.0 commits and annotated tags carry author and tagger `rolldabones <sonupaik@gmail.com>`, not `Michael Paik`, because the Mac's global `git config user.name` had become `rolldabones`; v3.2.0 was verified under `RELEASE_AUTHOR=rolldabones`, deliberately, and history is not rewritten. The name was reset on 21 October 2026; this release is authored by Michael Paik.
+- Prepared with Claude, approved by Michael Paik, at the weekly sweep of 26 October 2026 (KST).
+
 ## v3.2.0 (2026-10-21)
 
 New module. Wiszowaty's Kitchen (`wiszowatys-kitchen.md`) joins as the fifth

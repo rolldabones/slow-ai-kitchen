@@ -60,11 +60,11 @@ Practical guidance for carrying out risk assessments at all three tiers of the r
 `https://csrc.nist.gov/pubs/sp/800/30/r1/final`
 
 **NISTIR 8286 series.** Integrating Cybersecurity and Enterprise Risk Management (ERM)
-~~Four-document series~~ Five-document series (corrected 15 October 2026 (KST)) covering the anchor framework and four supplementary volumes: identifying and estimating cybersecurity risk (8286A), prioritizing risk responses (8286B), staging risks for ERM and governance oversight (8286C) and using business impact analysis to inform risk prioritization and response (8286D Update 1, February 2025, `https://csrc.nist.gov/pubs/ir/8286/d/upd1/final`, which supersedes the withdrawn November 2022 release; corrected 20 October 2026 (KST)). Current revised editions are 8286r1, 8286Ar1 and 8286Cr1.
+~~Four-document series~~ Five-document series (corrected 15 October 2026 (KST)) covering the anchor framework and four supplementary volumes: identifying and estimating cybersecurity risk (8286A), prioritizing risk responses (8286B), staging risks for ERM and governance oversight (8286C) and using business impact analysis to inform risk prioritization and response (8286D Update 1, February 2025, `https://csrc.nist.gov/pubs/ir/8286/d/upd1/final`, which supersedes the withdrawn November 2022 release; corrected 20 October 2026 (KST)). Current editions are 8286r1, 8286A Rev. 1 (December 2025), 8286B Update 1 and 8286C Rev. 1 (December 2025); the original 8286B of February 2022 was withdrawn on 26 February 2025 (addresses corrected 26 October 2026 (KST)).
 `https://csrc.nist.gov/pubs/ir/8286/r1/final`
-`https://csrc.nist.gov/pubs/ir/8286a/r1/final`
-`https://csrc.nist.gov/pubs/ir/8286b/final`
-`https://csrc.nist.gov/pubs/ir/8286c/r1/final`
+`https://csrc.nist.gov/pubs/ir/8286/a/r1/final`
+`https://csrc.nist.gov/pubs/ir/8286/b/upd1/final`
+`https://csrc.nist.gov/pubs/ir/8286/c/r1/final`
 
 ---
 
