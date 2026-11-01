@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.2 | 2026-11-02 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.0.3 | 2026-11-02 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
@@ -74,7 +74,7 @@ Mondrian's black lines are neither incidental nor decorative. They define where 
 
 In this account those lines are drawn by **Informed Intent**, as stated in DOCTRINE.md: no AI system acts without prior authorization stating its purpose, authority, boundaries and exit, given by a human who meets the five authorizer conditions. The four elements of the instrument are the four kinds of line a composition needs. Purpose says what the plane is for. Authority says who may draw it. Boundaries say where it stops. Exit says how it is removed or redrawn when it must be. An authorization missing its exit is a plane with three sides, and the doctrine's own word for that is a hope.
 
-The five conditions on the authorizer, Knowledge, Evidence, Authority, Time and Permission, are what distinguish a line drawn by a painter from a line drawn by a ruler held by someone who did not look. The doctrine's judgment is blunt: an instrument carrying all four elements, signed by a human lacking any of the five conditions, is paperwork. Its opposite is **Inferred Intent**, the purpose the authorizer never stated, supplied afterwards by the system or its vendor. In Mondrian's terms that is a line painted in after the color has already spread, to make it look as if someone had meant it.
+The five authorizer conditions (Knowledge, Evidence, Authority, Time, Permission) are what distinguish a line drawn by a painter from a line drawn by a ruler held by someone who did not look. The doctrine's judgment is blunt: an instrument carrying all four elements, signed by a human lacking any of the five conditions, is paperwork. Its opposite is **Inferred Intent**, the purpose the authorizer never stated, supplied afterwards by the system or its vendor. In Mondrian's terms that is a line painted in after the color has already spread, to make it look as if someone had meant it.
 
 One correction to the usual reading of constraint follows. Lines do not diminish freedom on this canvas. They are what make freedom usable, because without them there is no plane for a color to be free within. A painter who refuses all constraints may produce a masterpiece. An enterprise that refuses all constraints is more likely to produce an incident report.
 
@@ -163,7 +163,7 @@ The instruction is apt because Mondrian did not begin with rectangles. He began 
 That sequence is the Kitchen's sequence, and it is worth stating plainly because the method is sometimes mistaken for a set of restrictions on prompting.
 
 1. **Observe the landscape.** Begin with the real organization: people, power, incentives, workflows, services, dependencies and consequences. Understand what is there before deciding what ought to be. This is Step 1 and Step 4, Define the Dish and Read the Kitchen.
-2. **Decompose into essential relationships.** Identify purpose, authority, boundaries and exit, and the evidence and acceptable risk the authorizer will need, by hand, before the machine is in the room. Remove procedural complexity without removing the information judgment needs. This is Informed Intent at work in Step 2 and Step 3, the Definition of Done and Knife Work: the tree drawn and redrawn until only the lattice remains.
+2. **Decompose into essential relationships.** Identify the four elements of Informed Intent (purpose, authority, boundaries, exit), and the evidence and acceptable risk the authorizer will need, by hand, before the machine is in the room. Remove procedural complexity without removing the information judgment needs. This is Informed Intent at work in Step 2 and Step 3, the Definition of Done and Knife Work: the tree drawn and redrawn until only the lattice remains.
 3. **Build the disciplined composition.** Give the relationships operational form through bounded AI use, decision rights, records and verification. This is Slow AI at work in Steps 5, 7 and 8, Apply Heat, Build the Plate and Taste Before Service.
 4. **Preserve authorship.** The composition has a named owner with decision rights, oversight and the power to intervene, from the first step and not only at the last. This is Final Liability at Step 6 and Step 9, confirmed at the Chef de Partie and exercised at the Pass.
 5. **Recompose when circumstances change.** Services, Tolerances, Pipes, Switches and Exits keep the choices executable as the environment moves. This is the Feast, Steps 10 to 12, where the registry, the brigade and the review cycle are the Switches and Exits of an organization rather than of a task.
@@ -236,7 +236,7 @@ Cognitive Provenance asks which conclusions are the Human's and which arrived fr
 
 ## Sources
 
-- National Gallery of Art, Washington, *Tableau No. IV; Lozenge Composition with Red, Gray, Blue, Yellow, and Black*, c. 1924/1925, collection page and audio stop 19, for the museum's description of balanced asymmetry, dynamic equilibrium, the painted white center and Mondrian's remark that the diamond compositions were about cutting: https://www.nga.gov/collection/art-object-page.52614.html and https://nga.gov/visit/tours-and-guides/self-guided-tours/en/stops/stop-019.html
+- National Gallery of Art, Washington, *Tableau No. IV; Lozenge Composition with Red, Gray, Blue, Yellow, and Black*, c. 1924/1925, collection page and audio stop 19, for the museum's description of balanced asymmetry, dynamic equilibrium, the painted white center and Mondrian's remark that the diamond compositions were about cutting: https://www.nga.gov/artworks/52614-tableau-no-iv-lozenge-composition-red-gray-blue-yellow-and-black and https://www.nga.gov/node/856066
 - The Museum of Modern Art, New York, *Piet Mondrian, Broadway Boogie Woogie, 1942–43*, collection page, for the omission of black, the segmentation of the bars and Mondrian's remark on boogie-woogie: https://www.moma.org/collection/works/78682
 - Kunstmuseum Den Haag, The Hague, holder of Mondrian's tree paintings of 1908 to 1912, including *Gray Tree* (1911) and *Flowering Apple Tree* (1912); no museum page for these works was read, and the institution is named as holder only; the sequence from observation to abstraction described in Section VIII is the standard art-historical account of these works
 - Onofrio Napolitano, *A Tribute to Piet Mondrian*, interactive WebGL experience, 2026: https://www.mondriantribute.com/ ; Awwwards Honorable Mention, 22 July 2026: https://www.awwwards.com/sites/a-tribute-to-piet-mondrian . The phrase "scroll to decompose" is the site's own.

@@ -2,6 +2,14 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.3.3 (2026-11-02)
+
+Patch release.
+
+- **`mondrians-kitchen.md`** v1.0.3: line 77 lists the five authorizer conditions in the DOCTRINE.md section 8 list form; line 166 names the four elements of Informed Intent in that list form, in parentheses, with evidence and acceptable risk outside it; the two National Gallery of Art sources (line 239) move to the addresses the old ones now redirect to, the collection page at `nga.gov/artworks/52614-...` and audio stop 19 at `nga.gov/node/856066`, both read in a browser on 2 November 2026 (KST) and carrying the passages the module cites (balanced asymmetry, dynamic equilibrium, "the diamond compositions were about cutting"); the Museum of Modern Art page (line 240) read the same day and unchanged. The account's link check had listed these addresses as refused (403) or unreachable from its client.
+- **Primer citations to v3.3.3 (SAK-30):** How to Cite, the amendment-record line of v3.3.2 and `primer-workbook/README.md` name v3.3.3; the derived part 00 carries the same edits and `split_markdown.py --verify` rebuilds the monolith byte for byte.
+- Train B of the improvement rotation (review of 24 October 2026). README title block, How to Cite, Current version and `CITATION.cff` to v3.3.3. Prepared with Claude, approved by Michael Paik.
+
 ## v3.3.2 (2026-11-02)
 
 Patch release.
