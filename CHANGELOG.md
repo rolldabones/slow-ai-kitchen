@@ -2,6 +2,15 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.3.1 (2026-11-02)
+
+Patch release.
+
+- **`mondrians-kitchen.md`** v1.0.1: GRCnext™ is read as asking whether the choices can be executed within the tolerance set for each critical service, not within 72 hours (lines 123, 135 and 187); the 72-hour test belongs to RedCap-00 and GRCnext-Copilot scores against tolerance (`rolldabones/ECOSYSTEM.md`).
+- **`federal-workforce-literacy-bridge.md`**: section 8 no longer calls the module the U.S. federal workforce dimension, which contradicted the scope note of 15 October 2026; it covers the public workforce system's framework, not the federal-employee duty under OMB M-25-21.
+- **Recorded:** Michael Paik's GitHub edit 1fbacc0 of 1 November 2026, made after v3.3.0 outside the release process, changed the README's web-application paragraph from five derivation modules to six "as of the v3.3.0 rebuild of 1 November 2026"; he confirmed on 2 November 2026 that the application was rebuilt with My Kitchen that day, so the line stands and the v3.3.0 entry's statement that the application carries five is superseded.
+- Found by the whole-account review of 24 October 2026 (reader report 01); train B of the improvement rotation. README title block, How to Cite, Current version and `CITATION.cff` to v3.3.1. Prepared with Claude, approved by Michael Paik.
+
 ## v3.3.0 (2026-11-01)
 
 New module. My Kitchen (`my-kitchen.md`) joins as the sixth standalone derivation module: the method derived from where its author stands, a place, its names and the practice of listening before naming, reworked from his LinkedIn post "Names of places matter" and its first comment (1 November 2026). It reads the step names as the method's place names, which preserve each step's purpose; listening before naming as Operating Rule 1 and Steps 3 and 4; the owl drawn in the overlap of two circles as Step 5, bounded AI use; and the comment's standard, that elegance belongs to the sentence and truth to the fit between the sentence and the world, as Gate 6 and Operating Rule 4, its three questions a Return to Source at the level of the sentence. Section IV quotes the post's three moments and states where each falls short of DOCTRINE.md: "say what you mean" is the purpose element of Informed Intent only; "go slowly enough to follow the line" is read as the condition for explanation and audit, Slow AI being a precondition and not a speed limit (DOCTRINE.md section 1); "a Human signs the drawing" is the confirmation at which accountability attaches, one of DOCTRINE.md's own three moments (section 3.1). Doctrine compressions copy the DOCTRINE.md section 8 sentence and list forms verbatim; DOCTRINE.md is unchanged. No change to the twelve steps, the ten gates, the three tiers, the roles, the operating rules, the workshop design, the Your Restaurant addendum, the primer or the other five derivation modules.

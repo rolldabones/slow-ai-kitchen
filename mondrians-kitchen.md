@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.0 | 2026-10-20 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.0.1 | 2026-11-02 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
@@ -120,7 +120,7 @@ A drafting caution belongs here, and DOCTRINE.md section 3.2 supplies it. Final 
 
 Mondrian did not stop at the grid he perfected in the 1920s. The Museum of Modern Art's note on Broadway Boogie Woogie (1942 to 1943) records that the painting omits black altogether and breaks what had been uniform bars of color into multicolored segments, after a first evening in New York at which he was introduced to boogie-woogie, whose "continuous opposition of pure means" he took to be analogous to his own. The composition is still a composition. It has been recomposed.
 
-This is the register in which **GRCnext™** is read here. Traditional governance, risk management and compliance asks whether the risks were identified, documented and controlled. GRCnext™ asks what choices the enterprise will still have when the risk happens, and whether those choices can be executed within 72 hours. Governance cannot be limited to maintaining the original composition. It must preserve the organization's ability to change the composition when circumstances demand it, without losing its identity, breaching its obligations or surrendering control.
+This is the register in which **GRCnext™** is read here. Traditional governance, risk management and compliance asks whether the risks were identified, documented and controlled. GRCnext™ asks what choices the enterprise will still have when the risk happens, and whether those choices can be executed within the tolerance the enterprise has set for each critical service. Governance cannot be limited to maintaining the original composition. It must preserve the organization's ability to change the composition when circumstances demand it, without losing its identity, breaching its obligations or surrendering control.
 
 The five primitives supply the grammar of recomposition:
 
@@ -132,7 +132,7 @@ The five primitives supply the grammar of recomposition:
 | Switches | The authorized points at which a plane can be moved, isolated or repainted while the painting is on the wall |
 | Exits | The ability to remove a plane, replace it or take the painting down, built before it is needed |
 
-The 72-hour test then asks whether these are real: whether the switch can be thrown and the exit taken under pressure, by the people who will be there when the pressure arrives. A contingency plan that cannot be executed under stress is not optionality. It is documentation.
+The tolerance test then asks whether these are real: whether the switch can be thrown and the exit taken under pressure, by the people who will be there when the pressure arrives. A contingency plan that cannot be executed under stress is not optionality. It is documentation.
 
 Mondrian's lozenge compositions add one more thing. The National Gallery of Art records that he said the diamond compositions were about cutting, and in them the lines and planes run off the edge of the canvas, so that the structure plainly continues beyond what the viewer can see. For an enterprise that is the right picture of Pipes. Suppliers, platforms, financial channels and jurisdictions do not stop mattering because they lie outside the formal perimeter. GRCnext™ makes what is beyond the frame part of the design, because the frame is where most compositions fail.
 
@@ -184,7 +184,7 @@ Governance has the same two registers, and most compliance regimes live only in 
 | Does a control exist? | Does the control work, and is there evidence that it worked before anyone asked? |
 | Is someone designated to approve? | Can that person make an informed decision and intervene, under the five authorizer conditions? |
 | Is the current arrangement acceptable? | What happens when it changes or fails? |
-| Is there a documented contingency? | Can the organization execute it within 72 hours? |
+| Is there a documented contingency? | Can the organization execute it within its stated tolerance? |
 
 The comparison is conceptual. An animation, however good, demonstrates nothing about auditability, and the present author has not tested the site's full interaction sequence in a controlled setting. What it demonstrates is a design principle the method shares: show the change, not only the result. The method adds what the enterprise requires beyond that: authorization before the change, evidence of it, a named owner through it and the ability to stop or reverse it.
 
