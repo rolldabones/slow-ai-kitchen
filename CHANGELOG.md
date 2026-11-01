@@ -2,6 +2,14 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.3.2 (2026-11-02)
+
+Patch release.
+
+- **`mondrians-kitchen.md`** v1.0.2, line 166: the four elements of Informed Intent are listed in the DOCTRINE.md section 8 list form (purpose, authority, boundaries and exit), with evidence and acceptable risk named separately as what the authorizer will need, in place of a six-item list that read as the instrument.
+- **Primer citations to v3.3.2 (SAK-30):** `enterprise-ai-architecture-primer.md` How to Cite and `primer-workbook/README.md` line 3 had named Slow AI Kitchen v3.0.2; both now name v3.3.2, with a dated line in the Primer's amendment record; the Primer stays at v2.0.1. The derived part `primer/00-enterprise-ai-architecture-primer.md` carries the same two edits and `split_markdown.py --verify` rebuilds the monolith byte for byte.
+- Found by the whole-account review of 24 October 2026 (reader report 01); train B. README title block, How to Cite, Current version and `CITATION.cff` to v3.3.2. Prepared with Claude, approved by Michael Paik.
+
 ## v3.3.1 (2026-11-02)
 
 Patch release.
