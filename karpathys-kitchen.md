@@ -10,15 +10,15 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.2.0 | 2026-10-18 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.2.1 | 2026-11-03 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
 > **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of the technology. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms). GRCnext™ is the account's operating framework, not a doctrine.
 
-> **Amendment, 17 October 2026 (KST), v1.1.0.** The module gains the doctrine block the other two derivation modules carry; the Informed Intent framework connection names the canon's four elements; the five-layer correspondence is mapped to the doctrines that hold each layer; the gate map is corrected to the README's (Steps 1 and 7 are the gateless steps; Step 3 is Gate 2); the closing sentence no longer counts GRCnext™ among the doctrines; the ecosystem map row of the Link Register is re-checked. Found by the whole-account review of 15 October 2026. No derivation, quotation or source is added or removed.
+> **Amendment, 17 October 2026 (KST), v1.1.0.** The module gains the doctrine block the other two derivation modules carry; the Informed Intent framework connection names the canon's four elements; the five-layer correspondence is mapped to the doctrines that hold each layer; the gate map is corrected to the README's (Steps 1 and 7 are the gateless steps; Step 3 is Gate 2); the closing sentence no longer counts GRCnext™ among the doctrines; the ecosystem map row of the Link Register is re-checked. No derivation, quotation or source is added or removed.
 
-> **Amendment, 18 October 2026 (KST), v1.2.0.** Section 11 gains the evidence note of 11 October 2026 (Kamoi et al. 2024, Huang et al. 2024 and the author's test of 7 October 2026) that stood in the README's Step 8, moved here without change of text so that the twelve steps keep their register; the README keeps the Gate 6 rule and a pointer to this section. Found by the whole-account review of 15 October 2026. Two sources are added; no derivation or quotation changes.
+> **Amendment, 18 October 2026 (KST), v1.2.0.** Section 11 gains the evidence note of 11 October 2026 (Kamoi et al. 2024, Huang et al. 2024 and the author's test of 7 October 2026) that stood in the README's Step 8, moved here without change of text so that the twelve steps keep their register; the README keeps the Gate 6 rule and a pointer to this section. Two sources are added; no derivation or quotation changes.
 
 > **Attribution and independence.** This module is an independent reading of Andrej Karpathy's published work. He has no involvement in it, has not reviewed it and does not endorse it. The governance conclusions drawn from his work are the author's own and should not be attributed to him. The title is descriptive of the subject and signals no association, affiliation, sponsorship or endorsement.
 

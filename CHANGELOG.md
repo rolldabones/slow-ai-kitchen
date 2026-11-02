@@ -2,6 +2,14 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.3.4 (2026-11-03)
+
+Patch release. Train C of the improvement rotation (review of 24 October 2026). Prepared with Claude, approved by Michael Paik.
+
+- **Process prose out of the amendment notes.** The sentence "Found by the whole-account review of 15 October 2026." leaves seven amendment notes: `consultant-workbook.md` (two, v1.4.1), `karpathys-kitchen.md` (two, v1.2.1), `coetzees-kitchen.md` (v1.1.1), `newtons-kitchen.md` (v1.1.1) and `service-record.md` (v1.1.1). Each note keeps its date and its change; no gate, tier, role, derivation, record or rule changes. `workbook/` regenerated with `split_markdown.py` (the command of v2.13.0, which reproduced the existing 48 parts exactly before use) and verified byte for byte.
+- **Primer citations to v3.3.4 (SAK-30):** How to Cite, the amendment-record line and `primer-workbook/README.md`; the derived part 00 carries the same edits and `split_markdown.py --verify` rebuilds the monolith byte for byte; the Primer stays at v2.0.1.
+- README title block, How to Cite, Current version and `CITATION.cff` to v3.3.4.
+
 ## v3.3.3 (2026-11-02)
 
 Patch release.
