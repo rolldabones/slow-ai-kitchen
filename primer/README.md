@@ -4,7 +4,7 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 
 | Part | Title | Size (KB) |
 |---|---|---|
-| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 22 |
+| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 36 |
 | 2 | [Part 1: Workflow Architecture](01-part-1-workflow-architecture.md) | 86 |
 | 3 | [Part 2: Solution Architecture to 2.8 Entry points and delivery routes](02-part-2-solution-architecture-to-2-8-entry-points-and.md) | 232 |
 | 4 | [Part 2: Solution Architecture · 2.9 The AI architecture decision record to Solution Architecture: the one-page version](03-2-9-the-ai-architecture-decision-record-to-solution.md) | 74 |

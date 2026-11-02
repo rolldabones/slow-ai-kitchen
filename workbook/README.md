@@ -1,6 +1,6 @@
 # Consultant Workbook: reading index
 
-Derived from [consultant-workbook.md](../consultant-workbook.md), which remains the source of record and the file to cite or download. GitHub does not render markdown files above its size limit; these parts exist so the text can be read in the browser. The parts carry the source text unchanged; the only added lines are the navigation blocks at the head and foot of each part.
+Derived from [consultant-workbook.md](../consultant-workbook.md), which remains the source of record and the file to cite or download. These parts put each section in a file of its own, so that one can be opened, linked and printed without the rest. The parts carry the source text unchanged; the only added lines are the navigation blocks at the head and foot of each part.
 
 | Part | Title | Size (KB) |
 |---|---|---|

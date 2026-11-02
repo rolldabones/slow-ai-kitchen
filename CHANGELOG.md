@@ -2,6 +2,14 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.3.5 (2026-11-03)
+
+Patch release. Train C of the improvement rotation (review of 24 October 2026), rows 7 and 9. Prepared with Claude, approved by Michael Paik.
+
+- **`enterprise-ai-architecture-primer.md` v2.0.2, Contents.** The 143 links pointed to anchors that resolve only in this file, which GitHub does not render; in the reading copy's part 00 they resolved to nothing. Each now opens its section in the part file under `primer/` that carries it, with the anchor computed for that part. The boxed "Known defect in the reading copy" note is withdrawn and the paragraph says where the links go. No part, section or text outside the Contents block changes; the amendment record says so. `primer/` regenerated and verified byte for byte.
+- **`workbook/README.md`.** The index said the parts exist because GitHub does not render the source; the Workbook is 107,774 bytes and renders. Regenerated with `split_markdown.py` as changed in `account-maintenance` v1.10.31, it says the parts put each section in a file of its own, so that one can be opened, linked and printed without the rest. The 48 parts are unchanged.
+- `primer-workbook/README.md` names the Primer v2.0.2. README title block, How to Cite, Current version and `CITATION.cff` to v3.3.5.
+
 ## v3.3.4 (2026-11-03)
 
 Patch release. Train C of the improvement rotation (review of 24 October 2026). Prepared with Claude, approved by Michael Paik.
