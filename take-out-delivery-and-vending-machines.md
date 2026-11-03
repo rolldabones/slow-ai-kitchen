@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.2.0 | 2026-10-11 (KST) | Final | CC BY-NC-SA 4.0 |
+| v1.2.1 | 2026-11-04 (KST) | Final | CC BY-NC-SA 4.0 |
 
 ## Contents
 
@@ -204,7 +204,7 @@ When a stop is triggered:
 2. **Preserve and alert.** Retain the authorization, approvals, events and last known state. Notify the named responder through the tested path.
 3. **Reconcile.** Inspect the affected system. Separate confirmed success, confirmed failure, unknown outcome and work not attempted. A timeout does not prove failure.
 4. **Recover.** Apply the authorized fallback or remediation. Before retrying an uncertain action, establish whether its effect occurred. Where supported, reuse the same idempotency key so the receiving system recognizes retries of that action; follow its rules for key scope and expiry. A failed or refused delivery does not authorize an alternate recipient or channel. Use only an approved fallback; otherwise hold and escalate. Sending or disclosure may require remediation because they cannot be undone.
-5. **Hand back.** The designated human records whether work may resume. Changed scope or expired authority requires reauthorization; changed material content or preconditions requires renewed verification and release.
+5. **Hand back.** The designated human records whether work may resume. Changed scope or expired authority requires reauthorization; changed material content or preconditions requires renewed verification and release. The receipt records what continued after the stop in one of three statuses: verified ended, observed continuing or unverified. An agent's assurance that it has stopped is unverified, and so is a missing log; neither becomes ended without a record from the system that runs the work.
 
 Test the sequence using the workbook's [stop and fallback exercise](./consultant-workbook.md#w21-stop-and-fallback-exercise). The Primer explains [why an uncertain action must not be blindly retried](./primer/04-part-3-integration-engineering.md#never-retry-a-non-idempotent-action-blindly).
 
@@ -222,6 +222,7 @@ Approved actions: successful + failed + unknown + not attempted = total.
 Record every attempt, retry and blocked request separately.
 Sources checked / exceptions / unresolved uncertainty:
 Required delivery outcome / actual receipt, acknowledgment or downstream effects:
+After the stop: active workers / queued or recurring work / external dependencies / task credential access, each verified ended, observed continuing or unverified:
 Owner decision: confirm / refuse / amend and confirm; criteria and evidence:
 Remediation owner / due date / Service Record / ownership through reliance:
 ```
@@ -319,9 +320,11 @@ Take-out governs what a human collects. Delivery governs what the system carries
 
 ## Source basis and attribution
 
-Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST). Revised at v1.1.0 against README v2.10.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.10.0) and at v1.2.0 against README v2.11.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.11.0) and DOCTRINE.md v1.1.1, 11 October 2026 (KST). Re-read against README v3.0.1 on 20 October 2026 (KST): the text agrees with the current Owner sequence and Step 8 and is unchanged.
+Prepared against README v2.8.0 at repository commit [`7869f35`](https://github.com/rolldabones/slow-ai-kitchen/tree/7869f35f283f32c4ace2fd6c5e5780e8a4736319) and DOCTRINE.md v1.1.1, reviewed on 7 September 2026 (KST). Revised at v1.1.0 against README v2.10.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.10.0) and at v1.2.0 against README v2.11.0 (https://github.com/rolldabones/slow-ai-kitchen/tree/v2.11.0) and DOCTRINE.md v1.1.1, 11 October 2026 (KST). Re-read against README v3.0.1 on 20 October 2026 (KST): the text agrees with the current Owner sequence and Step 8 and is unchanged. Revised at v1.2.1 against README v3.3.6 on 4 November 2026 (KST): the receipt gains the line on what continued after a stop and Hand back names the three statuses; no other text changes.
 
 On goal-directed runs: OpenAI, *Using Goals in Codex*, 9 May 2026, https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex, read 11 October 2026 (KST), which describes a goal as a "scoped, user-controlled completion contract", lists six things the strongest goals define, among them boundaries and a blocked stop condition, and states that reaching a budget limit is not the same as completing the objective.
+
+On what continues after a stop: Nate B. Jones, *What Really Happens When AI Agents Meet in the Wild?*, AI News & Strategy Daily (YouTube), 18 October 2026, https://www.youtube.com/watch?v=btUxMt_tssA, and his Executive Briefing of the same day on the Hugging Face agent incident, https://natesnewsletter.substack.com/p/ai-agent-swarms (subscriber post; the public page carries the headline and opening), both pages read on 4 November 2026 (KST). The three statuses in the receipt, verified ended, observed continuing and unverified, and the rule that neither a missing log nor an agent's assurance is turned into verified cessation, follow his treatment of agent handoffs and stops published that day. The stop sequence itself predates it (v1.0.0, 7 September 2026). The reading is the author's; Nate Jones has no involvement in this module and does not endorse it.
 
 This companion adapts Slow AI Kitchen by Son-U Michael Paik, GRC Solutions Korea. It adds the three service patterns, ticket, receipt and fictional teaching examples. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); see [LICENSE](./LICENSE). Accountability language follows the repository's governance doctrine; this module does not allocate legal liability in any jurisdiction.
 

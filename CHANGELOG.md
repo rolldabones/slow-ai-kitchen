@@ -2,6 +2,13 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.3.6 (2026-11-04)
+
+Patch release. A completion of the service receipt, on Michael Paik's ruling of 4 November 2026. Prepared with Claude, approved by Michael Paik.
+
+- **`take-out-delivery-and-vending-machines.md` v1.2.1.** The service receipt gains one line, what continued after a stop (active workers, queued or recurring work, external dependencies, task credential access), each recorded as verified ended, observed continuing or unverified, and Hand back names the three statuses: an agent's assurance and a missing log are unverified, never ended. Source basis credits the formulation to Nate B. Jones's public video and subscriber briefing of 18 October 2026; no members-only page is cited. No step, gate, tier, role or rule of the method changes.
+- Primer How to Cite and amendment record and `primer-workbook/README.md` name v3.3.6 (SAK-30); the derived part 00 carries the same edits and `split_markdown.py --verify` rebuilds the monolith byte for byte. README title block, How to Cite, Current version and `CITATION.cff` to v3.3.6.
+
 ## v3.3.5 (2026-11-03)
 
 Patch release. Train C of the improvement rotation (review of 24 October 2026), rows 7 and 9. Prepared with Claude, approved by Michael Paik.
