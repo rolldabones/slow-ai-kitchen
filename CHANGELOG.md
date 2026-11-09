@@ -2,6 +2,13 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.3.7 (2026-11-09)
+
+Patch release. Train D of the improvement rotation (review of 24 October 2026). Prepared with Claude, approved by Michael Paik.
+
+- README, License: one line points to `rolldabones/LICENSING.md` (v1.0.0, new), which states once what the account's two licenses permit, that a Client's use in its own operations may fall outside NonCommercial, how to ask and why the two licenses do not mix.
+- Primer How to Cite and amendment record and `primer-workbook/README.md` name v3.3.7 (SAK-30); the derived part 00 carries the same edits and `split_markdown.py --verify` rebuilds the monolith byte for byte. README title block, How to Cite, Current version and `CITATION.cff` to v3.3.7. No step, gate, tier, role or rule of the method changes.
+
 ## v3.3.6 (2026-11-04)
 
 Patch release. A completion of the service receipt, on Michael Paik's ruling of 4 November 2026. Prepared with Claude, approved by Michael Paik.
