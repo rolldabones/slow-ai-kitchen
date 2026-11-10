@@ -3,7 +3,7 @@
 <!-- nav:end -->
 ## Appendix G: The Diagram Set
 
-Eighteen diagrams, now one file each in the Primer Workbook, [primer-workbook/diagrams/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/README.md), as Mermaid sources GitHub renders, each with its ASCII original. References in this Primer of the form G1 to G18 resolve there.
+Eighteen diagrams, now one file each in the Primer Workbook, [primer-workbook/diagrams/](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/README.md), as Mermaid sources GitHub renders, each with its American Standard Code for Information Interchange (ASCII) original. References in this Primer of the form G1 to G18 resolve there.
 
 | ID | Diagram | File |
 | --- | --- | --- |
@@ -13,13 +13,13 @@ Eighteen diagrams, now one file each in the Primer Workbook, [primer-workbook/di
 | G4 | The reference architecture composition | [G04-the-reference-architecture-composition.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G04-the-reference-architecture-composition.md) |
 | G5 | The retrieval pipeline with owners | [G05-the-retrieval-pipeline-with-owners.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G05-the-retrieval-pipeline-with-owners.md) |
 | G6 | The trust boundary diagram for an agentic system | [G06-the-trust-boundary-diagram-for-an-agentic-system.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G06-the-trust-boundary-diagram-for-an-agentic-system.md) |
-| G7 | The AI gateway as a control point | [G07-the-ai-gateway-as-a-control-point.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G07-the-ai-gateway-as-a-control-point.md) |
+| G7 | The artificial intelligence (AI) gateway as a control point | [G07-the-ai-gateway-as-a-control-point.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G07-the-ai-gateway-as-a-control-point.md) |
 | G8 | The human-in-the-loop placements | [G08-the-human-in-the-loop-placements.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G08-the-human-in-the-loop-placements.md) |
 | G9 | The evaluation and monitoring loop | [G09-the-evaluation-and-monitoring-loop.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G09-the-evaluation-and-monitoring-loop.md) |
 | G10 | The governance moment | [G10-the-governance-moment.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G10-the-governance-moment.md) |
 | G11 | The risk tiering funnel | [G11-the-risk-tiering-funnel.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G11-the-risk-tiering-funnel.md) |
 | G12 | The lineage chain from source document to cited sentence | [G12-the-lineage-chain-from-source-document-to-cited-sentence.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G12-the-lineage-chain-from-source-document-to-cited-sentence.md) |
-| G13 | The three lines of defense applied to AI | [G13-the-three-lines-of-defense-applied-to-ai.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G13-the-three-lines-of-defense-applied-to-ai.md) |
+| G13 | The IIA's Three Lines Model (2020; formerly the Three Lines of Defense) applied to AI | [G13-the-three-lines-of-defense-applied-to-ai.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G13-the-three-lines-of-defense-applied-to-ai.md) |
 | G14 | The adoption funnel | [G14-the-adoption-funnel.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G14-the-adoption-funnel.md) |
 | G15 | The roadmap dependency graph | [G15-the-roadmap-dependency-graph.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G15-the-roadmap-dependency-graph.md) |
 | G16 | The incident containment ladder | [G16-the-incident-containment-ladder.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/diagrams/G16-the-incident-containment-ladder.md) |

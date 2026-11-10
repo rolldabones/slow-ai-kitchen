@@ -20,7 +20,7 @@ Readiness has **eight dimensions**. Each has a small number of binary conditions
 | **Commercial** | Cost per completed outcome known at expected and at three times expected volume; budget approved; unit economics clear the business case | Sizing model, budget approval |
 | **Change** | Prompt, model, tool, corpus and guardrail changes all trigger an eval run; versioning in place; no path to production that bypasses the gate | Change policy, pipeline configuration |
 
-**Two design rules make the gate real.** **Every condition is binary and evidenced**: "security reviewed" is not a condition, "threat review completed and findings closed or accepted in writing" is. And **failing a condition produces one of exactly three outcomes**: remediate and re-present, ship with a time-bounded accepted risk signed by a named person, or do not ship. The absence of a fourth outcome is what gives the gate teeth.
+**Two design rules make the gate real.** **Every condition is binary and evidenced**: "security reviewed" is not a condition, "threat review completed and findings closed or accepted in writing" is. And **failing a condition produces one of exactly three outcomes**: remediate and re-present, ship with a time-bounded accepted risk signed by a named person or do not ship. The absence of a fourth outcome is what gives the gate teeth.
 
 **Two questions the eight dimensions do not ask on their own face, and both belong in the evidence.** The first is human review: is there a routing rule, a reviewer capacity assumption and a handoff package. A quality threshold implies a destination for everything that misses it and the capacity to absorb it, and neither is visible in a functional scope statement. The second is documentation: could a competent person who has never met you operate, diagnose and change this system. That is a stricter test than the presence of a runbook, and it is set out under documentation and handoff below.
 
@@ -70,7 +70,7 @@ A proof of concept is designed to demonstrate capability. It runs at low volume,
 | **Cost** | Ten to fifty requests a day produces a negligible bill. Monthly cost at production volume is a different calculation entirely | The billing figure exceeds the budget signed off at project approval, and the architecture is renegotiated after deployment |
 | **Latency** | A demo runs one request at a time. The p95 under concurrent load is a different number from the median under a single request | Service level breaches and user abandonment. Latency acceptable in a demo can be unacceptable in a real-time workflow |
 | **Reliability** | A demo has no retry logic, no fallback and no circuit breaker. When it fails the developer refreshes. There are no users waiting | Any transient failure takes the whole user-facing workflow down instead of degrading gracefully |
-| **Failure modes** | A demo is tested on the inputs the developer expected. Production supplies the ones nobody thought of, and the modes are specific to the architecture | Silent degradation, fabricated outputs on edge-case inputs, or complete failure on an input class that was never tested |
+| **Failure modes** | A demo is tested on the inputs the developer expected. Production supplies the ones nobody thought of, and the modes are specific to the architecture | Silent degradation, fabricated outputs on edge-case inputs or complete failure on an input class that was never tested |
 
 **The compact statement of all four rows: a proof of concept establishes capability and establishes nothing else.** It is not a cost model, not a distribution model and not a reliability model, and the failure that follows is almost always a proof of concept quietly promoted into all three at once. Where demonstration figures are shown to a business owner, extrapolate them to expected volume with the error bounds stated, because raw demonstration costs presented without that step become the number the budget was approved against.
 
@@ -83,7 +83,7 @@ The fourth dimension deserves its own table, because "test the edge cases" is no
 | Architecture | What breaks first | Mitigation |
 | --- | --- | --- |
 | **Agent** | Unbounded tool use and growing context. An agent that can call tools without budget constraints or turn limits runs up cost and latency in ways that stay invisible until a single request exceeds the ceiling | Per-turn token budgets, maximum tool call counts and explicit stopping criteria. Constrain the tool set to the minimum required. Evaluate the stopping behavior, not only the output quality |
-| **Retrieval-augmented generation** | Retrieval quality drift. The retrieval layer degrades when documents are added or removed without reindexing, when the query and the document representation fall out of alignment, or when the index refresh schedule creates staleness for live-state queries | Keep retrieval quality inside the evaluation loop. Monitor retrieval precision and recall as system metrics rather than only output quality. Separate live-state queries from static knowledge queries |
+| **Retrieval-augmented generation** | Retrieval quality drift. The retrieval layer degrades when documents are added or removed without reindexing, when the query and the document representation fall out of alignment or when the index refresh schedule creates staleness for live-state queries | Keep retrieval quality inside the evaluation loop. Monitor retrieval precision and recall as system metrics rather than only output quality. Separate live-state queries from static knowledge queries |
 | **Document processing pipeline** | No exception path for low-confidence extractions. A pipeline routing every document through the same flow regardless of extraction confidence produces wrong outputs on edge cases at the same rate it produces correct ones on clean documents | Confidence scoring at the extraction step. Route low-confidence extractions to a human review queue rather than to downstream processing. Include edge cases and difficult documents in the evaluation set |
 | **Orchestrator and workers** | Failure boundaries between the orchestrator and its subagents blur, traces fragment and a dropped subagent fails silently at synthesis | Define recoverable failures, which belong to the subagent as a retry or a flag, against unrecoverable ones, which belong to the orchestrator. A shared trace identifier across all agents. Reconcile coverage at synthesis so results equal units submitted |
 
@@ -141,7 +141,7 @@ The four tests, and the examples in the bad and good columns, follow Anthropic's
 | Test | Meaning | Bad | Good |
 | --- | --- | --- | --- |
 | **Specific** | Define what you want to achieve | "Good performance" | "Accurate sentiment classification" |
-| **Measurable** | Quantitative metrics, or well-defined qualitative scales consistently applied | "Safe outputs" | "Fewer than 0.1% of outputs across 10,000 trials flagged for toxicity by our content filter" |
+| **Measurable** | Quantitative metrics, or well-defined qualitative scales consistently applied | "Safe outputs" | "Less than 0.1% of outputs out of 10,000 trials flagged for toxicity by the content filter." |
 | **Achievable** | Base targets on industry benchmarks, prior experiments, research or expert knowledge | A target beyond current frontier capability | A target grounded in a measured baseline |
 | **Relevant** | Align to the application's purpose | Citation accuracy for a casual chatbot | Citation accuracy for a medical application |
 
@@ -279,7 +279,7 @@ Code graders, model graders and human graders. **The robust pattern combines a c
 | **Model-based** | Fast and flexible, scalable, suitable for complex judgment. **Test to ensure reliability first, then scale** | Likert scale, binary classification, ordinal scale |
 | **Human** | Most flexible and highest quality, but slow and expensive. **Avoid if possible** | Manual review |
 
-**Human grading is not a gold standard to scale toward.** Anthropic's documented position is that it is the most flexible and highest quality method but slow and expensive, and to avoid it where possible. Proposing to scale human review as the quality mechanism is the wrong move; automating the grader and reserving humans for calibration is the right one. Human review is expensive, finite and best spent where error is costly, which here means calibrating the automated grader and sampling production.
+**Human grading is not a gold standard to scale toward.** Anthropic's documented position is that it is the most flexible and a high-quality method but slow and expensive, and to avoid it if possible. Proposing to scale human review as the quality mechanism is the wrong move; automating the grader and reserving humans for calibration is the right one. Human review is expensive, finite and best spent where error is costly, which here means calibrating the automated grader and sampling production.
 
 #### Three tips for model-based grading
 
@@ -338,7 +338,7 @@ A harness whose number moves for reasons nobody can name is not an instrument. B
 | Pinned | Why a run is not comparable without it |
 | --- | --- |
 | **Model identifier and version** | The most common silent mover: a provider-initiated change arrives without a deployment on your side |
-| **Sampling settings** | Effort, thinking configuration and maximum tokens. Effort and thinking are the ones omitted, and 8.5 already names them as a first suspect. Temperature, top-p and top-k are not pinned: the model deprecations page states that a non-default value returns a 400 error on Claude 4.7 and later models (Appendix I, `params.sampling`) |
+| **Sampling settings** | Effort, thinking configuration and maximum tokens. Effort and thinking are the ones omitted, and 8.5 already names them as a first suspect. Temperature, top-p and top-k are not pinned: the model deprecations page states that they are removed in API version 2026-10-21, where they return a 400 error, and that earlier API versions return a 400 error when they are set to a non-default value on Claude 4.7 and later models and Claude Mythos Preview (Appendix I, `params.sampling`) |
 | **Dataset version** | A set that gained four cases between runs produced two scores over two populations |
 | **Grader version, including the grader's own prompt and the model it runs on** | The instrument's own calibration. An edited rubric moves the score with nothing changed in the system, and it is the field least versioned |
 | **Retrieval index snapshot** | An index rebuilt with different chunking is a behavior change of prompt magnitude, per the release tuple in 2.15 |
@@ -640,7 +640,7 @@ Evaluation as a launch artifact is a photograph. **Evaluation as a running contr
 
 Online comparison is A/B testing, and the discipline it requires is the one A/B testing has always required, with one addition specific to non-deterministic systems.
 
-**Decide the sample size before the test starts.** The size follows from three numbers: the baseline rate of the primary metric, the smallest improvement that would change the decision and the variability of the measure. Skip the calculation and one of two things happens. The test is underpowered, returns no significant difference, and the change is abandoned although it worked. Or the test runs until a difference appears, which is guaranteed eventually and means nothing.
+**Decide the sample size before the test starts.** The size follows from three numbers: the baseline rate of the primary metric, the smallest improvement that would change the decision and the variability of the measure. Skip the calculation and one of two things happens. The test is underpowered, returns no significant difference and the change is abandoned although it worked. Or the test runs until a difference appears, which is guaranteed eventually and means nothing.
 
 **The peeking problem is the one that catches experienced teams.** Checking the result repeatedly and stopping when it turns significant inflates the false-positive rate far above the nominal threshold, because each look is another chance for noise to cross the line. The remedy is a stopping rule fixed in advance: a target sample size, or an explicitly sequential design whose thresholds already account for repeated looks. A dashboard that anyone can watch continuously is a peeking machine, and the discipline has to be procedural because the dashboard will not enforce it.
 
@@ -650,7 +650,7 @@ Online comparison is A/B testing, and the discipline it requires is the one A/B 
 
 **The addition for non-deterministic systems is the self-disagreement floor.** Before comparing two versions, measure how much the *same* version disagrees with itself across runs on the same inputs. That figure is the floor beneath which no comparison is meaningful, and it is frequently larger than the effect being tested. 2.15 develops the method under shadow and canary deployment; the point here is that it belongs at the design of the test, not at the interpretation of the result.
 
-**Where traffic is scarce, the design changes rather than the standard.** A low-volume workflow will not accumulate the sample a clean split needs in any useful period. The honest options are to lengthen the window and accept the delay, to test on a proxy metric that moves faster while validating the proxy against the outcome metric separately, or to abandon the online test and rely on offline comparison plus staged rollout with tight monitoring. The dishonest option, which is common, is to run the underpowered test anyway and present the result as evidence.
+**Where traffic is scarce, the design changes rather than the standard.** A low-volume workflow will not accumulate the sample a clean split needs in any useful period. The honest options are to lengthen the window and accept the delay, to test on a proxy metric that moves faster while validating the proxy against the outcome metric separately or to abandon the online test and rely on offline comparison plus staged rollout with tight monitoring. The dishonest option, which is common, is to run the underpowered test anyway and present the result as evidence.
 
 #### The interaction effect classical A/B testing does not have
 
@@ -662,7 +662,7 @@ The usual shape is seasonal. A workload whose input mix shifts at a quarter end,
 
 Shadow deployment appears in 2.15 and 8.5 as a step in a release sequence. It is also a **choice of experiment design**, and it is the right one more often than teams assume.
 
-**The mechanism.** Run the candidate in parallel with the incumbent, send it a copy of live requests, and serve every user the incumbent's response. The candidate's outputs are logged rather than returned and scored offline afterward. **The deployment decision is made before a single user has seen the new version**, which is the whole of its value.
+**The mechanism.** Run the candidate in parallel with the incumbent, send it a copy of live requests and serve every user the incumbent's response. The candidate's outputs are logged rather than returned and scored offline afterward. **The deployment decision is made before a single user has seen the new version**, which is the whole of its value.
 
 | | Live split | Shadow |
 | --- | --- | --- |
@@ -957,8 +957,8 @@ The mapping is short enough to be written down, which is what makes it transfera
 | Symptom | Likely architecture cause | First action |
 | --- | --- | --- |
 | **Quality degraded gradually with no code change** | A model or prompt change, or retrieval drift as the corpus grew | Compare against the eval set; establish what changed in the model, the prompt or the corpus |
-| **Latency spiked** | Context size grew, a tool became slow, or the cache stopped hitting | Find the slowest span in the trace: token counts per request, slowest tool call, cache hit rate |
-| **Intermittent tool failures** | Authorization, rate limits, or an unhandled error path | Inspect the failing tool's authorization and limits; trace one failed call end to end |
+| **Latency spiked** | Context size grew, a tool became slow or the cache stopped hitting | Find the slowest span in the trace: token counts per request, slowest tool call, cache hit rate |
+| **Intermittent tool failures** | Authorization, rate limits or an unhandled error path | Inspect the failing tool's authorization and limits; trace one failed call end to end |
 | **Cost rose with no usage change** | Model tier crept up, or caching regressed | Check per-request tier and cache hit rate against the budget model |
 
 **The first row is the one whose absence is expensive**, and its absence has a signature: dashboards stay green for a quarter while answer quality slides, because a gradual decline crosses no threshold. A runbook entry saying that gradual quality decline with no code change points at the model, the prompt or retrieval drift converts that from a quarterly-review discovery into an afternoon's work for a first-line engineer. **The signals were visible throughout. The path from signal to suspect was what nobody had.**
@@ -975,7 +975,7 @@ A scheduled job collects the period's errors. A model reads them, discards noise
 
 The reference design above is a scheduled batch job. The harder case is the live one: an engineer under incident pressure pointing an agent at a production problem. It is the highest-leverage use of the capability and the one most likely to convert an incident into a worse incident, and it resolves into three rules.
 
-**Read before write, enforced by the environment.** Diagnosis is a read activity. An agent doing incident diagnosis should hold read access to logs, traces, metrics, configuration and the repository, with no write access to any of them and with the restriction imposed by the credential and the permission mode rather than by the instruction not to change anything. Plan-mode or an equivalent read-only lock is the correct default for incident work, because the pressure that makes the capability attractive is the same pressure that makes an unreviewed remediation attractive.
+**Read before write, enforced by the environment.** Diagnosis is a read activity. An agent doing incident diagnosis should hold read access to logs, traces, metrics, configuration and the repository, with no write access to any of them and with the restriction imposed by the credential and the permission mode rather than by the instruction not to change anything. Plan mode (Claude Code's `plan` permission mode, which blocks file edits until a plan is approved) or an equivalent read-only lock is the correct default for incident work, because the pressure that makes the capability attractive is the same pressure that makes an unreviewed remediation attractive. Plan mode alone is not a strict no-write lock: shell commands can still run, and its blocks are not enforced in interactive terminal sessions where bypass permissions are available, so add deny rules or sandboxing for a hard guarantee.
 
 **A proposed fix enters normal change control.** The output of agent-assisted diagnosis is a hypothesis and a proposed change, and the proposed change is a change. It goes through the same review, the same approval and the same record as any other, and the fact that it was produced during an incident is a reason to shorten the queue rather than to skip it. An emergency change procedure that already exists is the right route; a new route invented at three in the morning is not.
 
@@ -998,7 +998,7 @@ The objective of operational support is not that the architect can operate the s
 | **Roll back the model or version** | Wide | Minutes to hours | The regression followed a model change and shadow evaluation was skipped |
 | **Kill switch** | Total | Immediate | Severity 1 with ongoing harm and no narrower option contains it |
 
-**Every one of these must be executable without a deployment and tested before launch**, in the readiness gate under the resilience dimension. A kill switch that requires a release is not a kill switch, and a rollback path nobody has exercised is a hypothesis.
+**Every one of these must be executable without a deployment and tested before launch**, in the readiness gate under the operational dimension, whose condition is rollback without a deployment. A kill switch that requires a release is not a kill switch, and a rollback path nobody has exercised is a hypothesis.
 
 **Communication.** Three audiences on three clocks: affected users need to know immediately what to distrust and what to do instead; the business owner needs exposure and expected restoration; the governance, risk management and compliance function needs the facts as facts, early, without speculation about cause. **State what the system got wrong and what people should do about it before you know why**, because the cause takes hours and the exposure continues while you investigate.
 
@@ -1010,7 +1010,7 @@ The objective of operational support is not that the architect can operate the s
 
 ### ⌂ The architect's lens
 
-**The enterprise question this section does not ask.** What severity is this incident, who is paged out of hours, and does anything about it start a regulatory or contractual notification clock?
+**The enterprise question this section does not ask.** What severity is this incident, who is paged out of hours and does anything about it start a regulatory or contractual notification clock?
 
 **Governance at this decision.**
 
@@ -1044,7 +1044,7 @@ Cost engineering is choosing the cheap design. **Cost operations is keeping it c
 
 Two refinements the current pricing structure adds. **Cache hits are not deducted against rate limits**, so caching relieves a capacity constraint as well as a cost one. And **the cache hit ratio is the single most informative number in a cost model**, because the gap between 1x and the cache-read multiplier is where the money is: a system with a cold cache costs roughly ten to forty times more per input token than the same system with a warm one, depending on the model (Appendix I, `cache.read.multiplier.*`).
 
-**Two qualifications, on the caching line above and the batch section below, both of which change a cost model rather than refine it.** Caching savings assume the cache is warm when the next request arrives, so a workload whose request frequency is lower than the cache lifetime will not realize them consistently: the model shows a saving the traffic pattern never delivers. And where the batch discount is load-bearing in a regulated deployment, ⚠ verify that batch processing is covered under the applicable business associate agreement and compliance configuration before routing protected data through it, because a cost model resting on a route the compliance position does not cover is not a cost model.
+**Two qualifications, on the caching line above and the batch section below, both of which change a cost model rather than refine it.** Caching savings assume the cache is warm when the next request arrives, so a workload whose request frequency is lower than the cache lifetime will not realize them consistently: the model shows a saving the traffic pattern never delivers. And where the batch discount is load-bearing in a regulated deployment, ⚠ note that Anthropic's documentation lists batch processing (the Message Batches API) as not eligible under the Health Insurance Portability and Accountability Act (HIPAA), so protected health information does not go through it under the business associate agreement; use a HIPAA-eligible synchronous configuration instead and confirm any exception in writing with the vendor, because a cost model resting on a route the compliance position does not cover is not a cost model.
 
 **Three things a sizing model is actually for.**
 
@@ -1083,7 +1083,7 @@ Nearly everything that improves quality costs time. Agentic systems in particula
 | --- | --- | --- |
 | **Gateway and routing** | Small, and constant | Connection reuse, colocation, removing a hop |
 | **Retrieval** | Frequently the largest non-model share | Index choice, candidate count, whether a rerank stage runs, whether the query is expanded |
-| **Rerank** | Moderate, and often optional | Reducing the candidate set, a cheaper reranker, or removing the stage where the measured quality gain does not pay for it |
+| **Rerank** | Moderate, and often optional | Reducing the candidate set, a cheaper reranker or removing the stage where the measured quality gain does not pay for it |
 | **Model, time to first token** | Depends on prompt size and cache state | Prompt caching, prefix stability, prompt size |
 | **Model, generation** | Proportional to output length | Output trimming, effort, model choice, streaming, which changes perceived latency without changing total |
 | **Tool calls** | Unbounded, and the usual surprise | Parallelism where calls are independent, timeouts and removing a call that the design does not need |
@@ -1100,8 +1100,8 @@ Nearly everything that improves quality costs time. Agentic systems in particula
 | Lever | Effect |
 | --- | --- |
 | **Lower effort** | Trades intelligence for latency and cost within the same model. Frequently the first thing to try |
-| **Fast mode** (current Opus-class model; research preview on two legacy Opus models; Appendix I, `fastmode.models`) | Higher output **tokens per second** at premium pricing (`fastmode.speedup`). It does not move time-to-first-token, so it is a lever on the generation segment and not on the wait before the first character. Not available with the batch lane |
-| **Prompt caching** | Cuts time-to-first-token; **pre-warming** with `max_tokens: 0` removes the first-request penalty |
+| **Fast mode** (the current Fable-, Mythos- and Opus-class models; research preview on two legacy Opus models; Appendix I, `fastmode.models`) | Higher output **tokens per second** at premium pricing (`fastmode.speedup`). It does not move time-to-first-token, so it is a lever on the generation segment and not on the wait before the first character. Not available with the batch lane |
+| **Prompt caching** | Cuts time-to-first-token; **pre-warming** with `max_tokens: 0` reduces the first-request cache-miss penalty, provided the real request follows within the cache lifetime (Appendix I, `cache.prewarm`) |
 | **A smaller model** | The current Haiku-class model (Appendix I, `class.haiku.current`) for the easy majority, with escalation |
 | **Streaming** | Improves perceived latency where total time cannot be reduced |
 | **Parallel rather than sequential calls** | Where subtasks are independent |
@@ -1127,7 +1127,7 @@ One order answers two questions: what to do when a budget alarm fires, and what 
 3. **Cache the stable prefix, and restore a collapsed hit ratio.** A collapsed ratio is the most common cause of a cost rise with flat volume, usually a changed prefix rather than a configuration error. Caching cuts latency as well as cost with no loss of content, and pre-warming removes the first-request penalty
 4. **Lower effort** where the model supports it. This is often a better lever than switching models
 5. **Trim what is not used.** Tool outputs returning forty fields when five matter, retrieved chunks never cited and stale tool results, which **context editing** removes as a platform feature
-6. **Defer tool definitions** with tool search, once the catalog reaches roughly ten, or definitions pass 10,000 tokens, or several MCP servers are aggregated
+6. **Defer tool definitions** with tool search, once the catalog reaches roughly ten, or definitions pass 10,000 tokens, or several Model Context Protocol (MCP) servers are aggregated
 7. **Route by difficulty.** Cheap fast path for the easy majority, escalation for the hard minority. Frequently the largest single saving
 8. **Parallelize independent work**
 9. **Collapse tool-call chains** with programmatic tool calling, where a sequence could run as one script
@@ -1255,7 +1255,7 @@ Documentation is the mechanism by which a design survives the departure of its a
 
 ### ⌂ The architect's lens
 
-**The enterprise question this section does not ask.** Where do these artifacts live, who owns them once the architect has moved on, what detects that the diagram no longer matches the running system, and what does the organization hold that proves it can operate the system without the people who built it?
+**The enterprise question this section does not ask.** Where do these artifacts live, who owns them once the architect has moved on, what detects that the diagram no longer matches the running system and what does the organization hold that proves it can operate the system without the people who built it?
 
 **Governance at this decision.**
 
@@ -1265,7 +1265,7 @@ Documentation is the mechanism by which a design survives the departure of its a
 | Writing a data flow for security and legal | Assigning it to information governance rather than to the build team | Data view, owned by the information governance lead |
 | Applying the adequacy test once | Detecting drift, with a review date and a named reviewer | Review schedule, owned by the service owner |
 | Documenting design decisions | Producing the intended-use statement where a regime treats documentation as a deliverable | Documentation set, owned by compliance |
-| Declaring the handoff complete | Assembling the operating model, the rota, the entitlement register and cost attribution as evidence of readiness | Operational readiness pack, owned by the service owner |
+| Declaring the handoff complete | Assembling the operating model, the on-call rotation, the entitlement register and cost attribution as evidence of readiness | Operational readiness pack, owned by the service owner |
 | Treating handoff as knowledge transfer | Baselining the delivery and incident metrics that will show whether it worked | Metrics baseline, owned by the engineering lead |
 
 **What this costs the organization.** Documentation without an owner outside the delivery team decays at the rate the system changes, and the failure surfaces as an audit finding rather than as an outage. Handoff declared complete on a training attendance count rather than on evidence leaves the run team holding a system it cannot diagnose, which appears as escalation volume for two quarters and as slower resolution against a commitment somebody has signed. Two costs are forgotten: the recurring review effort, which is a standing allocation on someone's objectives rather than a one-time write, and the builders, who remain the real support function while nominally working on the next thing.
@@ -1275,7 +1275,7 @@ Documentation is the mechanism by which a design survives the departure of its a
 ## Operations and Measurement: the one-page version
 
 1. Readiness has eight dimensions, binary evidenced conditions, three outcomes and named signatories, and **a gate nobody can fail is not a gate.** Where several conditions are open at once, measurement and ownership are the absences that matter most, because they prevent you fixing the rest.
-2. Write the eval suite before the production code. It forces a measurable definition of success, exposes design assumptions while changing them is cheap, and gives you a gate with a pre-change baseline.
+2. Write the eval suite before the production code. It forces a measurable definition of success, exposes design assumptions while changing them is cheap and gives you a gate with a pre-change baseline.
 3. Evaluation is the asset that outlives any prompt. Make the success criterion specific, measurable, achievable and relevant; measure the five families of accuracy, latency, cost, safety and security; combine a code grader for validity with a model grader for quality; have the grader reason, with thinking on, before it scores.
 4. Prioritize volume over quality by automating the grading rather than keeping the set small, reserve humans for calibration and sampled review, and freeze the dataset so comparison keeps meaning something.
 5. **A stale eval suite is worse than none**, because it passes while measuring behavior the system no longer produces. Update the set in the same change as the behavior it measures.
@@ -1287,15 +1287,15 @@ Documentation is the mechanism by which a design survives the departure of its a
 11. Logs tell you the system ran and only evaluation tells you it was right. Watch five drifts, and remember user drift is the one always missed.
 12. Absence of errors is not evidence of health, so sample the high-confidence stratum and alert on distribution shift.
 13. Classify the failure before attributing it: prompt failure, hallucination, model mismatch or an orchestrator-workers boundary. **Stronger instruction never fixes a hallucination.**
-14. Evaluation becomes a running control with six instruments. The golden set grows by addition, comparison runs offline before online, the judge is calibrated on a schedule, and all five change types are gated including corpus publication, which is the one omitted everywhere.
+14. Evaluation becomes a running control with six instruments. The golden set grows by addition, comparison runs offline before online, the judge is calibrated on a schedule and all five change types are gated including corpus publication, which is the one omitted everywhere.
 15. Decide the sample size, the primary metric and the stopping rule before the test. Where exposure to a worse version is unacceptable, shadow testing is the design rather than the fallback, and its cost is the loss of downstream signal.
-16. Metrics are four levels on four clocks. Refuse the vanity metrics because each rises as the system worsens, name the attribution method rather than letting the reader assume a stronger one, and measure the baseline before launch or agree value will not be claimed. The value statement answers the earlier question of whether to build at all: a baseline in a business unit, the post-deployment state in the same unit, the run cost taken from the sizing model and a payback period quoted with its sensitivity.
-17. The improvement loop needs a cadence, an owner and a queue. It triages instance against class, writes every correction back into the eval set, and closes visibly or the signal stops.
+16. Metrics are four levels on four clocks. Refuse the vanity metrics because each rises as the system worsens, name the attribution method rather than letting the reader assume a stronger one and measure the baseline before launch or agree value will not be claimed. The value statement answers the earlier question of whether to build at all: a baseline in a business unit, the post-deployment state in the same unit, the run cost taken from the sizing model and a payback period quoted with its sensitivity.
+17. The improvement loop needs a cadence, an owner and a queue. It triages instance against class, writes every correction back into the eval set and closes visibly or the signal stops.
 18. Build the governance table before launch, mapping each signal to a trigger, an owner and an action, including the drifts that never cross a threshold and the regulated checkpoints that fire on a calendar.
 19. An availability commitment and a quality target are different promises, and a quality commitment needs a metric, a population, a routing rule and an agreed consequence for a miss.
-20. Incident severity must include harm with no technical signature. Run the loop from notice to capture, let the machine do the tedium while a human keeps the decision, and contain with the narrowest of six options, all executable without a deployment. ⚠ Notifiability is counsel's judgment.
+20. Incident severity must include harm with no technical signature. Run the loop from notice to capture, let the machine do the tedium while a human keeps the decision and contain with the narrowest of six options, all executable without a deployment. ⚠ Notifiability is counsel's judgment.
 21. Support is translation, not firefighting. Leave the team a runbook of symptom-to-cause paths and an escalation boundary, so you are needed for the new problem rather than the familiar one.
-22. Cost operations sizes on volume, token split, call multiplier and cache hit ratio, tracks fully loaded cost per completed task including human minutes, attributes it from day one, fixes retries before touching the model, and treats the cost-quality frontier as a decision rather than a drift. Decompose the latency budget by segment before choosing a lever and budget against the ninety-fifth percentile, because **the tail is the design problem, not the mean**, and it is owned by a retry loop, an untimed tool call or a cold cache.
+22. Cost operations sizes on volume, token split, call multiplier and cache hit ratio, tracks fully loaded cost per completed task including human minutes, attributes it from day one, fixes retries before touching the model and treats the cost-quality frontier as a decision rather than a drift. Decompose the latency budget by segment before choosing a lever and budget against the ninety-fifth percentile, because **the tail is the design problem, not the mean**, and it is owned by a retry loop, an untimed tool call or a cold cache.
 23. Documentation passes one test: whether a competent stranger could operate, diagnose and change the system. The decision records are load-bearing because they preserve the reasoning rather than the shape.
 24. The ninth artifact faces outward, a system description written for a regulator, an auditor, a procurement questionnaire or an affected person, every claim in which the evidence register has to support, because sending internal documentation outside either says too much or says something the organization cannot stand behind.
 25. A tenth artifact faces the sponsor: the outcome document, carrying the before metric, the after metric on the same definition, the control that makes the comparison auditable and the measurement owner. **The before metric cannot be reconstructed later.**

@@ -7,13 +7,13 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 ### Core terms
 
-**5xx errors.** The HTTP status class (500 to 599) for a server-side failure to fulfill an otherwise valid request. **500** internal error, **503** service unavailable, **529** overloaded. Usually transient and resolvable with backoff, and categorically distinct from the 4xx codes, which indicate a client-side problem and mostly must not be retried unchanged. The retry decision rule is in 3.8.
+**5xx errors.** The Hypertext Transfer Protocol (HTTP) status class (500 to 599) for a server-side failure to fulfill an otherwise valid request. **500** internal error, **503** service unavailable, **529** overloaded. Usually transient and resolvable with backoff, and categorically distinct from the 4xx codes, which indicate a client-side problem and mostly must not be retried unchanged. The retry decision rule is in 3.8.
 
 **A2A (Agent2Agent).** A protocol for one autonomous agent to delegate work to a peer it does not control. Originated by Google in 2025, now a Linux Foundation project (Appendix I, `a2a.origin`). Three concepts: agent cards for discovery, tasks with a lifecycle, messages and artifacts for payload. The horizontal counterpart to MCP's vertical connection.
 
 **Accretion.** What you have instead of an architecture when you cannot name the architecture. No known failure modes, no cost model, no precedent to review against.
 
-**Adaptive thinking.** Reasoning depth managed by the model rather than set by a token budget. The only mode available on Claude 4.7 and later, which is the same fact as the removal of `budget_tokens` seen from the other side.
+**Adaptive thinking.** Reasoning depth managed by the model rather than set by a token budget. The only way to turn thinking on for Claude 4.7 and later models, since `thinking.type: "enabled"` with `budget_tokens` returns a 400 error on them (Claude Mythos Preview still accepts it), which is the same fact as the removal of `budget_tokens` seen from the other side. It is not their only setting: several also accept thinking turned off (`disabled`, on some models only at high effort or below); Claude Sonnet 5.5 accepts `between_tools`, which turns off up-front thinking; on Claude Opus 4.7 and 4.8 thinking stays off until set to adaptive (Appendix I, `thinking.extended`, `thinking.current`).
 
 **Agent.** A system where the model dynamically directs its own processes and tool usage, maintaining control over how it accomplishes tasks. Anthropic's simplest formulation: a model autonomously using tools in a loop.
 
@@ -35,11 +35,11 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Attention budget.** Anthropic's term for the finite capacity a model draws on when parsing context. Every token spends some of it.
 
-**Augmented LLM.** The foundational building block: a model enhanced with retrieval, tools and memory. Anthropic's guidance is that for many applications, optimizing single augmented calls is enough.
+**Augmented LLM.** The foundational building block: a model enhanced with retrieval, tools and memory. Anthropic's guidance is that for many applications, optimizing single large language model (LLM) calls with retrieval and in-context examples is usually enough.
 
 **Behavior properties.** The four properties of how Claude behaves that tell you what Claude can be trusted with.
 
-**BM25.** A classical lexical search method weighting rare words more heavily than common ones. Complements semantic search, which cannot match exact strings reliably.
+**Best Match 25 (BM25).** A classical lexical search method weighting rare words more heavily than common ones. Complements semantic search, which cannot match exact strings reliably.
 
 **Build-time Interface.** The middle layer of the platform map: how an engineer programs against Claude, the layer your code is written to. The direct API, the SDKs, MCP, the Agent SDK.
 
@@ -55,9 +55,9 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Chunking.** Cutting documents into retrievable pieces. Three approaches: fixed-size, semantic and hierarchical.
 
-**Claude Agent SDK.** A managed agent runtime distributed as packages for TypeScript and Python (Appendix I, `entry.agent_sdk`). It exposes the same agent loop that powers Claude Code, iteration, tool execution, observation and termination, so an agent can be embedded inside a partner's own product rather than run in a terminal. **Distinct from the Anthropic SDK**, which is a convenience wrapper over the API and runs no loop. The two are routinely conflated because engineers say "SDK" for both.
+**Claude Agent SDK.** A library for TypeScript and Python that runs in a process you operate, not one Anthropic hosts, unlike Claude Managed Agents (Appendix I, `entry.agent_sdk`). It exposes the same tools, agent loop and context management that power Claude Code (iteration, tool execution, observation and termination), so an agent can be embedded inside a partner's own product rather than run in a terminal. **Distinct from the Anthropic client SDK**, a general-purpose Messages API client: you write the tool loop yourself or use its beta tool runner, and it has none of Claude Code's built-in tools or agent runtime. The two are routinely conflated because engineers say "SDK" for both.
 
-**Claude Code.** An agentic coding tool that reads files, edits code, runs commands and executes multi-step engineering work under configurable permission boundaries. Distributed as a CLI, IDE plugins, a desktop application and a web product. An entry point in the platform map, built for engineers, and customizable through the shaping and governing layers in 2.8.
+**Claude Code.** An agentic coding tool that reads files, edits code, runs commands and executes multi-step engineering work under configurable permission boundaries. Distributed as a command-line interface (CLI), integrated development environment (IDE) plugins, a desktop application and a web product. An entry point in the platform map, built for engineers, and customizable through the shaping and governing layers in 2.8.
 
 **Claude.ai.** The end-user chat product, reached through web, mobile and desktop. Users sign in, open conversations, attach files, share context through Projects and connect services through built-in connectors. No code is written. **An entry point for users rather than builders**, which is the fact that rules it out of most embedding decisions and most regulated reviews.
 
@@ -75,13 +75,13 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Context editing.** A platform feature that removes old tool-result blocks from conversation history without restarting the conversation.
 
-**Context engineering.** Anthropic's term for the strategies for curating and maintaining the optimal set of tokens during inference. The successor discipline to prompt engineering.
+**Context engineering.** Anthropic's term for the set of strategies for curating and maintaining the optimal set of tokens (information) during LLM inference; Anthropic describes it as the natural progression of prompt engineering.
 
-**Context rot.** As context length rises, recall accuracy from that context decreases. Emerges across all models. A gradient, not a cliff.
+**Context rot.** As context length rises, the model's ability to accurately recall information from that context decreases. Anthropic states that this emerges across all models, though some degrade more gently, and Chroma's 2025 "Context Rot" report observed it in all 18 models it tested. A gradient, not a cliff.
 
 **Contextual retrieval.** Prepending a short model-generated situating note to each chunk before embedding. Anthropic's measured reduction in top-20 retrieval failure: 35 percent alone, 49 percent with contextual BM25, 67 percent with reranking added.
 
-**Control register.** The table mapping each compliance obligation to a technical control, a named accountable owner and an evidence artifact, so a regulated deployment is auditable as a register rather than asserted as a narrative. Developed as the evidence register in 4.9.
+**Control register.** The table mapping each compliance obligation to a technical control, a named accountable owner and an evidence artifact, so a regulated deployment is auditable as a register rather than asserted as a narrative. Developed as the control register of 4.16, distinct from the evidence register of 4.9 that it feeds.
 
 **Corpus.** The body of documents a retrieval system searches over. Loaded and indexed ahead of time, which is exactly why it serves stable reference material and not live state.
 
@@ -97,7 +97,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Delegation mapping.** The method for deciding which steps Claude owns, which existing systems own and which a human owns, with justification and control for each.
 
-**Delivery Route.** The bottom layer of the platform map: where API traffic terminates, determining whose infrastructure the request runs on. The five routes are Anthropic directly, Claude Platform on AWS, AWS Bedrock, GCP Vertex AI and Microsoft Foundry. Claude Platform on AWS is materially different from Bedrock in billing, feature timing and cache isolation, which is why it is counted separately.
+**Delivery Route.** The bottom layer of the platform map: where API traffic terminates, determining whose infrastructure the request runs on. The five routes are Anthropic directly (the Claude API), Claude Platform on AWS, AWS Bedrock (Amazon Bedrock), GCP Vertex AI (Google Cloud, which offers two routes: Claude Models on Google Cloud, Google managed or Anthropic managed) and Microsoft Foundry. Claude Platform on AWS is materially different from Bedrock in billing, feature timing and cache isolation, which is why it is counted separately.
 
 **Dense (embeddings).** Semantic indexing: matches semantic similarity, meaning, not words. Earns its place where queries are phrased differently from the source. Paired with sparse and hybrid.
 
@@ -127,7 +127,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Existing systems.** The second of the three delegation owners: anything the organization has already paid to make reliable, such as the order-status service, the policy engine, the rules table or the database of record.
 
-**Experience word.** A stakeholder's summary of a desired outcome rather than a requirement: seamless, easy, fast, simple, intuitive, smooth. **A signal that more discovery is needed, never something to record.** Converted into constraints by asking what would break the experience, what the user must never notice, and what must still be true when something goes wrong.
+**Experience word.** A stakeholder's summary of a desired outcome rather than a requirement: seamless, easy, fast, simple, intuitive, smooth. **A signal that more discovery is needed, never something to record.** Converted into constraints by asking what would break the experience, what the user must never notice and what must still be true when something goes wrong.
 
 **Exponential backoff.** Retrying a failed call after a delay that grows with each attempt, usually with jitter added so that a fleet of clients does not retry in unison. The correct response to a transient error and the wrong response to a validation or permission error, which will fail identically however long you wait.
 
@@ -137,7 +137,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Fallback chain.** The ordered set of alternatives the system uses when the primary path returns nothing usable: a lower model tier, a cached response, a deterministic path, a degraded mode. **Belongs in the orchestration layer**, because only the orchestrator knows what an acceptable substitute for the task is. The control most often built and least often exercised, which is why fallback behavior belongs in the eval suite rather than in the design document alone.
 
-**Fast mode.** A setting on the current Opus-class model, and in research preview on two legacy Opus models (Appendix I, `fastmode.models`), delivering higher output speed at premium pricing (`fastmode.speedup`).
+**Fast mode.** A setting on the current Fable-, Mythos- and Opus-class models, and in research preview on two legacy Opus models, one of them deprecated for fast mode (Appendix I, `fastmode.models`), delivering up to 2.5x higher output tokens per second at premium pricing (`fastmode.speedup`).
 
 **Few-shot prompting.** Teaching by worked examples. Anthropic's guidance: curate diverse canonical examples rather than stuffing edge cases.
 
@@ -165,9 +165,9 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Hybrid.** Indexing that runs dense and sparse and combines the results. The common production case: it recovers the exact-match results dense retrieval misses.
 
-**Indirect prompt injection.** Adversarial instructions embedded in third-party content Claude reads on a trusted user's behalf: an email body, a fetched page, OCR output, a tool result. Distinct threat model from a jailbreak, with distinct mitigations.
+**Indirect prompt injection.** Adversarial instructions embedded in third-party content Claude reads on a trusted user's behalf: an email body, a fetched page, optical character recognition (OCR) output, a tool result. Distinct threat model from a jailbreak, with distinct mitigations.
 
-**Injection point (fairness).** A specific place where unequal outcomes can enter a system: the retrieval corpus, the prompt framing, the chosen few-shot examples, or the downstream routing of the output. Naming them is what converts fairness from a model attribute you assume into an architecture property you instrument.
+**Injection point (fairness).** A specific place where unequal outcomes can enter a system: the retrieval corpus, the prompt framing, the chosen few-shot examples or the downstream routing of the output. Naming them is what converts fairness from a model attribute you assume into an architecture property you instrument.
 
 **Input screening.** A check running before the model call that decides whether a request reaches the model at all. Model-based where intent is ambiguous and the patterns cannot be enumerated; deterministic where the rule is crisp, because a deterministic rule cannot be talked out of its decision.
 
@@ -175,7 +175,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Judgment erosion.** The failure where a team ships output it no longer understands because the output reads well and passes its checks. Distinct from the review-volume problem and moving in the opposite direction: volume degrades review by giving reviewers too much to read, judgment erosion by giving them something correct-looking that nobody can explain. The control is the human-understanding dimension of the verification checklist.
 
-**Just-in-time context.** Anthropic's term for loading data at runtime through lightweight references rather than pre-processing everything. The same idea is also called progressive discovery.
+**Just-in-time context.** Anthropic's term for loading data at runtime through lightweight references rather than pre-processing everything. Anthropic notes that it also enables progressive disclosure, in which agents discover relevant context step by step through exploration.
 
 **Latency percentiles.** Response time reported as a distribution rather than an average. The median describes the typical request and conceals the tail; p95 describes the experience of the worst one request in twenty and is the figure a service level is written against. A design reviewed on its median has been reviewed on its best behavior.
 
@@ -189,19 +189,19 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **MCP (Model Context Protocol).** A standard for exposing tools, readable resources and prepared prompts to any client that speaks it, so the service owner maintains one integration for everyone. Does not replace tool use; redistributes who maintains it.
 
-**MCP resource.** Read-only data a server exposes, fetched proactively by the application without a model decision. Contrast a tool, used reactively when the model decides it needs something done.
+**MCP resource.** Data a server exposes, identified by URI, for context. Resources are application-driven: the host decides how to include them, by user selection, by heuristics or by the model's selection. Contrast a tool, used reactively when the model decides it needs something done.
 
-**Minimum detectable effect.** The smallest improvement that would actually change the decision, fixed before an experiment rather than discovered from its result. One of the three inputs to a sample-size calculation, with the baseline rate and the variability of the measure. Naming it is what converts "did it get better" into a question a sample size can answer.
+**Minimum detectable effect.** The smallest improvement that would actually change the decision, fixed before an experiment rather than discovered from its result. One of the inputs to a sample-size calculation, together with the baseline rate or the variability of the measure, the significance level (α) and the desired power (1−β). Naming it is what converts "did it get better" into a question a sample size can answer.
 
 **Monolithic context.** Pre-processing and loading everything up front. Simple, predictable, cacheable, wasteful at scale.
 
-**Multi-turn evaluation.** Scoring a system across a conversation rather than on one prompt and response. Distinct from multi-step evaluation, which scores one task executed across several internal steps. Checks three things a single-turn set cannot see: whether prior context is kept straight, whether a follow-up is answered without inventing detail never stated, and whether quality holds as the conversation lengthens. Requires its own golden dataset of full transcripts, which cannot be assembled by concatenating single-turn cases.
+**Multi-turn evaluation.** Scoring a system across a conversation rather than on one prompt and response. Distinct from multi-step evaluation, which scores one task executed across several internal steps. Checks three things a single-turn set cannot see: whether prior context is kept straight, whether a follow-up is answered without inventing detail never stated and whether quality holds as the conversation lengthens. Requires its own golden dataset of full transcripts, which cannot be assembled by concatenating single-turn cases.
 
 **Orchestrator.** One of the two roles in a multi-agent system. It owns the goal: it decomposes the work, decides what to delegate and synthesizes the results into a single answer. The orchestrator never does the sub-task work itself. Its failures are often unrecoverable, unlike a subagent's.
 
 **Orchestrator-workers.** A workflow where a central model dynamically breaks down tasks, delegates to workers and synthesizes. Distinguished from parallelization by whether the subtasks are pre-defined.
 
-**Outcome document.** The post-deployment artifact written for the sponsor who was not on the build and has to justify the deployment upward. Six fields: use case with scope boundary, metric before, metric after on the same definition, the control that makes the comparison auditable, the measurement owner, and reuse potential. Distinct from the value statement of 8.7, which argues the system is worth building; this establishes what it turned out to be worth.
+**Outcome document.** The post-deployment artifact written for the sponsor who was not on the build and has to justify the deployment upward. Six fields: use case with scope boundary, metric before, metric after on the same definition, the control that makes the comparison auditable, the measurement owner and reuse potential. Distinct from the value statement of 8.7, which argues the system is worth building; this establishes what it turned out to be worth.
 
 **Output screening.** A check running before the response reaches the user. A judge model where the quality needs language understanding; a validator where the check is a known string, a forbidden field or a schema violation. **Judges text, not actions**, which is why it cannot substitute for authorization on a side-effecting tool call.
 
@@ -211,7 +211,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Per-turn budget.** One of the four constraints that bind an agent in production, alongside constrained tool entry points, explicit permissions and stopping criteria. Bounds consumption per step and is the runaway-loop control.
 
-**PHI (protected health information).** Individually identifiable health information held or transmitted by a covered entity or business associate under HIPAA. A third party that creates, receives, maintains or transmits it on a covered entity's behalf requires a business associate agreement (subject to the exclusions in 45 CFR 160.103), and **coverage is configuration-specific**: the same surface may be covered on one delivery route and not on another, so the check is by configuration rather than by product.
+**PHI (protected health information).** Individually identifiable health information transmitted or maintained in any form or medium (45 CFR 160.103), excluding education records under the Family Educational Rights and Privacy Act (FERPA), employment records held by a covered entity as employer and information on persons deceased more than 50 years; Health Insurance Portability and Accountability Act (HIPAA)'s rules apply to it in the hands of covered entities and business associates. A third party that creates, receives, maintains or transmits it on a covered entity's behalf requires a business associate agreement (subject to the exclusions in 45 CFR 160.103), and **coverage is configuration-specific**: the same surface may be covered on one delivery route and not on another, so the check is by configuration rather than by product.
 
 **Plan-level approval.** A pre-action human placement where the reviewer approves an agent's intended trajectory before execution rather than each step within it. The response to consent fatigue on long agentic runs. Composes with, and does not replace, a gate on any individual irreversible or high-stakes action inside the approved plan.
 
@@ -221,9 +221,9 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Primitive.** A platform building block that combines with others. There are seven, each with a stated job: Tools (ACT), MCP (CONNECT), Subagents (ISOLATE / PARALLELIZE), Hooks (GUARANTEE), Skills (PACKAGE A PROCEDURE), Agent Teams (COORDINATE PEERS), Dynamic Workflows (COMPOSE AT RUNTIME). Slash commands and plugins are not among them.
 
-**Programmatic tool calling.** Collapsing a chain of tool calls into a single script Claude writes and a sandbox runs, so intermediate results never enter conversation history.
+**Programmatic tool calling.** Collapsing a chain of tool calls into a single script Claude writes and a sandbox runs, so intermediate tool results are not loaded into Claude's context window; only the script's final output is.
 
-**Progressive context.** Loading context in stages as the work requires it rather than all at once. Gives the model only what the next step needs, which keeps the working set focused and the per-call cost lower. **The right default for most production workloads.** Where it breaks down: tasks needing long-range coherence across the full history, decisions depending on detail dropped in an earlier turn, and caching, since a prefix that mutates each turn does not cache. It also complicates debugging, because the exact input the model saw at step N is no longer reconstructable.
+**Progressive context.** Loading context in stages as the work requires it rather than all at once. Gives the model only what the next step needs, which keeps the working set focused and the per-call cost lower. **The right default for most production workloads.** Where it breaks down: tasks needing long-range coherence across the full history, decisions depending on detail dropped in an earlier turn and caching, since a prefix that mutates each turn does not cache. It also complicates debugging, because the exact input the model saw at step N is no longer reconstructable.
 
 **Progressive disclosure.** Revealing information incrementally as it becomes relevant rather than all at once. Appears at five layers: tool search, Skills, resources, retrieval and subagents.
 
@@ -257,7 +257,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Risk tier.** In this Primer, the T1 Low to T4 Critical band a system is assigned by the additive score and overrides of 4.2. Not the Slow AI Kitchen's Tier 1 to 3 stakes tiers, and not the Public to Restricted data classification of 6.4.
 
-**Routing.** Classifying an input and directing it to a specialized follow-up. Anthropic's named mechanism for mixed-model cost optimization.
+**Routing.** Classifying an input and directing it to a specialized follow-up task. One of Anthropic's examples routes easy or common questions to smaller, cost-efficient models and hard or unusual ones to more capable models.
 
 **SDK.** Software Development Kit. A language-native library wrapping the API in idiomatic code, handling authentication, request formatting, retries, streaming and tool-use plumbing. **The same entry point as the API from the model's perspective, with different ergonomics**, and the default for most teams. The only reason to drop back to raw HTTP is an API feature the SDK has not yet exposed. Not to be confused with the Claude Agent SDK, which runs an agent loop.
 
@@ -309,9 +309,9 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Transient error.** A failure that will likely succeed on retry: rate limiting, an overloaded endpoint, a network interruption, a server-side error in the 500 range. The first of the four failure classes a resilient design distinguishes, and the only one retrying is the right answer to. Treating every failure as transient turns a permission problem into a retry storm.
 
-**Translation table.** The output artifact of discovery. One row per item, four columns: the stakeholder statement as said, the implied constraint, the required architectural decision, and the assumption being documented until confirmed. The fourth column is the control, since **a requirement traces to something a stakeholder actually said and an assumption does not**.
+**Translation table.** The output artifact of discovery. One row per item, four columns: the stakeholder statement as said, the implied constraint, the required architectural decision and the assumption being documented until confirmed. The fourth column is the control, since **a requirement traces to something a stakeholder actually said and an assumption does not**.
 
-**Verification checklist.** The explicit set of checks generated output must pass before production, written by the team for itself. Four dimensions: correctness, security, maintainability, and **human understanding**, meaning the person submitting the change can explain what it does and why. The first three are automatable and the fourth is not, because its subject is the reviewer rather than the artifact.
+**Verification checklist.** The explicit set of checks generated output must pass before production, written by the team for itself. Four dimensions: correctness, security, maintainability and **human understanding**, meaning the person submitting the change can explain what it does and why. The first three are automatable and the fourth is not, because its subject is the reviewer rather than the artifact.
 
 **Voting.** The parallelization variant where the same task is run multiple times for diverse outputs.
 

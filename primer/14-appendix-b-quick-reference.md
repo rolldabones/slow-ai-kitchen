@@ -21,11 +21,11 @@ Non-determinism (feeds evaluation). Context as a finite resource (feeds model an
 
 ### The platform map, three layers
 
-**Entry Points.** Who can talk to Claude and how, chosen for the user and the work. The five end-user surfaces are the set: Claude.ai, Claude Code, Claude Cowork, Claude in Chrome, Claude for Excel. A custom application built on the API is an entry point in the platform map's sense, because it is a way people reach Claude, but it is not one of the five end-user surfaces.
+**Entry Points.** Who can talk to Claude and how, chosen for the user and the work. The five end-user surfaces this Primer develops are Claude (Claude.ai and the desktop and mobile apps), Claude Code, Claude Cowork, Claude in Chrome and Claude for Excel (part of Claude for Microsoft 365). The set is not exhaustive: Anthropic also lists Claude Duet, Claude Tag, Claude Science, Claude Security, Claude for Google Workspace and other Microsoft 365 and Slack extensions. A custom application built on the application programming interface (API) is an entry point in the platform map's sense, because it is a way people reach Claude, but it is not one of the five end-user surfaces.
 
-**Build-time Interfaces.** What the code is written to, chosen for the engineering team: the direct API, the SDKs, MCP, the Agent SDK.
+**Build-time Interfaces.** What the code is written to, chosen for the engineering team: the direct API (the Messages API), the client software development kits (SDKs), Model Context Protocol (MCP) and the Agent SDK, the four developed in 2.8. Claude Managed Agents, which Anthropic hosts, is a further build-time surface the Primer does not develop.
 
-**Delivery Routes.** Where traffic terminates and whose infrastructure runs it, chosen for the organization's cloud: Anthropic directly, AWS Bedrock, Claude Platform on AWS, GCP Vertex AI, Microsoft Foundry.
+**Delivery Routes.** Where traffic terminates and whose infrastructure runs it, chosen for the organization's cloud: Anthropic directly (the Claude API), Claude in Amazon Bedrock (plus the legacy Bedrock integration), Claude Platform on AWS, Claude Models on Google Cloud (Google managed on Google Cloud's Agent Platform, or Anthropic managed) and Microsoft Foundry.
 
 Three distinct decisions, not alternatives. Every deployment has all three. Named in 2.3, with entry points and delivery routes developed in 2.8.
 
@@ -39,7 +39,7 @@ Tools = **ACT**. MCP = **CONNECT**. Subagents = **ISOLATE / PARALLELIZE**. Hooks
 
 SHAPING, what it knows and does: CLAUDE.md, Skills, Subagents, MCP servers. GOVERNING, what it may touch: Hooks, Permission boundaries, Sandboxing and restricted execution.
 
-**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based), `dontAsk` (auto-denies anything outside the allow rules, the mode for locked-down CI) and `bypassPermissions` (skips all checks, isolated containers and virtual machines only); availability in Appendix I, `entry.*`. Developed in 2.8.
+**Six permission modes:** default, `acceptEdits`, plan mode, auto mode (classifier-based), `dontAsk` (auto-denies every tool call that would otherwise prompt, while file reads in the working directories, read-only Bash commands, allow-rule matches and PreToolUse-hook approvals still run; the mode for locked-down continuous integration (CI) and scripts) and `bypassPermissions` (skips permission prompts and most safety checks; isolated containers and virtual machines without internet access only); availability in Appendix I, `entry.*`. Developed in 2.8.
 
 ### The reuse decision
 
@@ -88,7 +88,7 @@ Patterns combine. Pick the simplest that meets the **error tolerance and observa
 
 ### The five reference architectures
 
-**Agent**. **Retrieval-augmented generation (RAG)**. **Document processing pipeline → Evaluator-optimizer**. **Customer-service / ticket triage → Routing**. **Coding agent (agentic exploration with deterministic edit/test/review steps)**. The arrow means "is well served by." All five point back to the three patterns and the workflow sub-patterns. A reference architecture is a documented pattern for how to wire an LLM application together to solve a recurring class of problem, and they are references, not blueprints to adhere to.
+**Agent**. **Retrieval-augmented generation (RAG)**. **Document processing pipeline → Evaluator-optimizer**. **Customer-service / ticket triage → Routing**. **Coding agent (agentic exploration with deterministic edit/test/review steps)**. The arrow means "is well served by." All five point back to the three patterns and the workflow sub-patterns. A reference architecture is a documented pattern for how to wire a large language model (LLM) application together to solve a recurring class of problem, and they are references, not blueprints to adhere to.
 
 **The named failures.** Nine across the five rows, one each in rows 1 to 3 and three each in rows 4 and 5. Agent → unbounded autonomy (state-changing tools, no human review, no turn limit, no way to measure whether the goal was met). RAG → used for live state; the index is a snapshot. Document pipeline → no exception path; low-confidence extractions treated like clean ones. Ticket triage → retrieval for live order status; no escalation path; deploying an agent before the routed workflow was measured. Coding agent → edit and commit without a human review gate; no regression tracking against a per-language eval set; treating it as a conversation rather than a pipeline with defined handoffs. **The absent human gate appears in four of the five.**
 
@@ -110,13 +110,13 @@ Patterns combine. Pick the simplest that meets the **error tolerance and observa
 
 **Chunking, chosen by what the corpus is.** **Fixed-size** for homogeneous unstructured text with weak natural boundaries, simplest to operate. **Semantic** for prose where a chunk must be self-contained, reducing mid-idea cuts. **Hierarchical** for contracts, manuals and policies, where section context carries meaning; retrieve at the level that fits. "A chunk is the unit that gets retrieved." Not chosen by a default size.
 
-**Indexing, chosen by how queries are phrased.** **Dense (embeddings)** for paraphrase, intent and concept matching. **Sparse (keyword, e.g. BM25)** for part numbers, statute citations and error codes. **Hybrid** for mixed patterns, "the common production case", merged with **reciprocal rank fusion**, "the standard, low-tuning way", scoring each result by its rank in each list. "Indexing decides what 'similar' means when a query arrives."
+**Indexing, chosen by how queries are phrased.** **Dense (embeddings)** for paraphrase, intent and concept matching. **Sparse (keyword, e.g. Best Match 25 (BM25))** for part numbers, statute citations and error codes. **Hybrid** for mixed patterns, "the common production case", merged with **reciprocal rank fusion**, "the standard, low-tuning way", scoring each result by its rank in each list. "Indexing decides what 'similar' means when a query arrives."
 
 **Three trade-offs.** Retrieval quality (does the right chunk come back?), latency (how long does retrieval add?), maintenance (what does it cost to keep correct as the corpus grows?). **Smaller chunks plus hybrid raise quality and latency together.** Larger chunks plus dense-only lower latency and maintenance but miss exact-match queries. "Retrieval quality is not visible in the output, it has to be measured against a labeled set."
 
 ### Model selection, the named sets
 
-**Four criteria, in order of use.** Capabilities, speed, cost and **effort**, which is the dial *within* a model rather than a choice between models. **Raise effort before changing models**, because a model swap invalidates the eval baseline and effort does not.
+**Four criteria, in order of use.** Capabilities, speed, cost and **effort**, which is the dial *within* a model rather than a choice between models. **Raise effort before changing models**, because tuning effort is often a better lever than switching models (2.6); an effort change still needs an eval run against the pinned baseline (8.3).
 
 **Two starting strategies, with asymmetric exits.** **Efficiency first**: start on the cheapest plausible model, escalate when the eval set says quality is short. **Capability first**: start on the strongest, step down while the eval set still passes. The exits are asymmetric because escalating is a quality decision made against a failing set, and stepping down is a cost decision made against a passing one.
 
@@ -128,9 +128,9 @@ Patterns combine. Pick the simplest that meets the **error tolerance and observa
 
 ### Prompting and context, the named sets
 
-**The technique ladder, cheapest rung first.** Clear instructions, then examples, then reasoning before answering, then structure (structured outputs and format instructions), then retrieval, then tools, then multi-step machinery. **Exhaust prompting before adding machinery**, and note that the rung teams skip is the second: converting dispositions into categorical criteria.
+**The technique ladder, cheapest rung first (2.7).** Clear instruction, then explicit criteria, then structure with tags or headers, then few-shot examples, then chain-of-thought, then extended thinking, then architectural change. **Exhaust prompting before adding machinery**, and note that the rung teams skip is the second: converting dispositions into categorical criteria.
 
-**Zero-shot, few-shot, chain-of-thought.** Zero-shot is instruction quality alone and carries most of the available gain. Few-shot means diverse canonical examples, not an edge-case laundry list; two to four ambiguous cases teach judgment, and caching makes larger example sets economic. Chain-of-thought buys accuracy on multi-step work at the price of tokens and latency, and is not free improvement.
+**Zero-shot, few-shot, chain-of-thought.** Zero-shot is instruction quality alone and carries most of the available gain. Few-shot means diverse, canonical examples, not a laundry list of edge cases; Anthropic recommends three to five examples for best results, and caching makes larger example sets economic. Chain-of-thought buys accuracy on multi-step work at the price of tokens and latency, and is not free improvement.
 
 **Right altitude.** Between hardcoded prose if-else at one extreme and unconstraining generality at the other. Minimal set of information that fully outlines expected behavior, where minimal does not mean short.
 
@@ -150,13 +150,13 @@ Token limit exceeded → **400 `invalid_request_error`**, rejected before genera
 
 Every figure in this block is perishable and several have changed in ways that alter what a correct answer looks like. Re-verify against Appendix I before relying on one.
 
-- Caching order: **tools → system → messages**. Everything before the breakpoint is cached
+- Caching order: **tools → system → messages**. Everything up to and including the block marked with `cache_control` is cached
 - Cache lifetime **5 minutes**, refreshed **free** on each use; **1 hour** optional, written at 2x the base input price
 - Cache write **1.25x** base input (5m) or **2x** (1h); cache read **0.1x** on the current Haiku-class model and the default, lower on the current Fable-, Mythos-, Opus- and Sonnet-class models (Appendix I, `cache.read.multiplier.*`)
 - Up to **4 breakpoints**; **20-block** lookback; below the model's minimum cacheable length, nothing caches and **no error is returned**
 - **Modifying a tool definition invalidates the entire cache.** Changing effort invalidates message caching
 - **Cache hits are not deducted against rate limits**
-- Pre-warm with `max_tokens: 0` to remove first-request latency
+- Pre-warm with `max_tokens: 0` and an explicit `cache_control` breakpoint to reduce first-request cache-miss latency (Appendix I, `cache.prewarm`)
 - Tool selection accuracy degrades past roughly **30 to 50 loaded tools** (`tools.selection_degrades`); definitions for 50 or more tools run to tens of thousands of tokens (`tools.fifty_definitions`, `tools.five_server`)
 - **Tool search** below ~10 tools adds a search step a small toolset does not need (`toolsearch.standard_better`). Add it from ~10, or past 10,000 tokens of definitions (`toolsearch.add_from`)
 - Four context-pressure strategies: tool search (definitions), programmatic tool calling (round trips), caching (cost not count), context editing (stale results)
@@ -167,12 +167,12 @@ Every figure in this block is perishable and several have changed in ways that a
 
 ### Compliance
 
-- Named regimes: **GDPR, HIPAA, FedRAMP**, plus three AI-specific family shapes
+- Named regimes: **General Data Protection Regulation (GDPR), Health Insurance Portability and Accountability Act (HIPAA), Federal Risk and Authorization Management Program (FedRAMP)**, plus three AI-specific family shapes
 - **AI-specific regimes come in three shapes.** Risk-tiered legislation attaches obligations to a classification of the use, so the classification must be recorded and defensible, technical documentation becomes a regulatory artifact, post-market monitoring is continuous and serious-incident reporting has a clock. Consequential-decision statutes trigger on a decision affecting access to employment, credit, housing, insurance, healthcare or education, and demand notice, an explanation of the principal factors, a real route to human review and impact assessment on a cadence. Framework legislation sets duties filled in later by subordinate regulation, so the design must absorb a specification that does not exist yet
 - **All three want the same five things:** a recorded classification, an after-the-fact explanation of a specific decision, a human who can actually override, evidence of continuous operation rather than of design and a reporting clock the incident process can meet. Build so the answer to each is yes and the regime question becomes a documentation exercise. Developed in 4.2
-- **Which role you occupy** decides which duty set applies, and four architectural acts move you to the heavier one: your name on the output, a changed purpose, a modified model or embedding the system in something you supply. Developed in 4.7 ⚠
+- **Which role you occupy** decides which duty set applies, and under EU AI Act Art. 25 four acts make you the provider of a high-risk AI system: putting your name or trademark on a high-risk AI system (25(1)(a)); making a substantial modification to a high-risk AI system (25(1)(b)); modifying the intended purpose of an AI system so that it becomes high-risk (25(1)(c)); or, as a product manufacturer, placing a high-risk AI safety component on the market or putting it into service with your product under your name or trademark (25(3)). Developed in 4.7 ⚠
 - GDPR: lawful basis, purpose limitation, minimization, erasure **including derived artifacts**, automated decision-making, transfers. Erasure in a retrieval system reaches chunks, embeddings, caches, logs and evaluation sets
-- HIPAA: a **business associate agreement** with any vendor that creates, receives, maintains or transmits protected health information on your behalf (subject to the 160.103 exclusions), minimum necessary, audit controls, de-identification. A BAA for one configuration does not cover another
+- HIPAA: a **business associate agreement** with any vendor that creates, receives, maintains or transmits protected health information on your behalf (subject to the 160.103 exclusions), minimum necessary, audit controls, de-identification. A business associate agreement (BAA) for one configuration does not cover another
 - FedRAMP: authorized service offering, boundary definition, inherited controls
 - Logs contain inputs and outputs, therefore regulated data
 - **Five regulated-industry constraints:** attorney-client privilege; HIPAA; GDPR and data residency; FedRAMP and government; internal data-residency policy. Each names what it rules out and what survives review; the full table is in 2.8
@@ -202,7 +202,7 @@ Every figure in this block is perishable and several have changed in ways that a
 - Corpus fits the window and rarely changes: **no pipeline**, cache it instead
 - Counting or aggregating over a corpus: **not retrieval**, use a structured query
 - Large or heterogeneous surface: **progressive disclosure**. Small, stable, mostly relevant: monolithic and cached
-- Single consumer: **direct API**, not a protocol layer. MCP connects tools and data; A2A is agent to agent; a **Skill** carries a procedure, which is the fourth mechanism and the only one that moves a procedure rather than a capability
+- Single consumer: **direct API**, not a protocol layer. MCP connects tools and data; Agent2Agent (A2A) is agent to agent; a **Skill** carries a procedure, which is the fourth mechanism and the only one that moves a procedure rather than a capability
 - Field the source may lack: **optional**, never required, or the model fabricates
 - Human waiting: **real-time**. Nothing blocked: deferred. "Usually finishes fast" is not a guarantee
 - Repeated large prefix: **stable content first, then cache**. Never truncate required content, never downsize blindly

@@ -35,9 +35,9 @@ Read this page first and last. It carries how to think. Appendix B carries what 
 
 **9. Architectures are references, not blueprints.** Name one, then adapt it. Compose two only when the halves fail differently in ways worth managing separately, because reaching for a second pattern while the problem is still undecided is a deferral dressed as a design.
 
-**10. The orchestrator owns the goal and never does the work.** Subagent failures are recoverable and orchestrator failures usually are not, so make subagent work idempotent, protect orchestrator state, propagate one trace end to end and give every subagent what it needs because it inherits nothing.
+**10. The orchestrator owns the goal and never does the work.** Subagent failures are recoverable and orchestrator failures usually are not, so make subagent work idempotent, protect orchestrator state, propagate one trace end to end and give every subagent what it needs in its task prompt, because unless it is a fork it does not see the parent's conversation history or tool results.
 
-**11. Context is a finite resource, not a container to fill.** Attention degrades as the window grows, so the target is the smallest set of high-signal tokens that produces the outcome. Carry identifiers and fetch at runtime rather than pre-loading. When work outruns the window, compact it, write notes outside it, or hand the exploration to a subagent that returns a summary. A larger window buys room, never relevance.
+**11. Context is a finite resource, not a container to fill.** Attention degrades as the window grows, so the target is the smallest set of high-signal tokens that produces the outcome. Carry identifiers and fetch at runtime rather than pre-loading. When work outruns the window, compact it, write notes outside it or hand the exploration to a subagent that returns a summary. A larger window buys room, never relevance.
 
 ### Data and integration
 
@@ -45,7 +45,7 @@ Read this page first and last. It carries how to think. Appendix B carries what 
 
 **13. The corpus chooses the chunking and the queries choose the indexing.** Never a default size, never one index shape for every query shape, and ask first whether a pipeline is needed at all rather than assuming one.
 
-**14. A chunk pulled from its document loses its bearings.** Situate each one before embedding it, run lexical alongside semantic because that single addition recovers the most, and retrieve wide then rerank down rather than retrieving narrow and hoping.
+**14. A chunk pulled from its document loses its bearings.** Situate each one before embedding it, the step that recovers the most; run lexical alongside semantic, because the gains stack (5.3); and retrieve wide then rerank down rather than retrieving narrow and hoping.
 
 **15. Excess capability is removed, not logged, confirmed or gated.** Where the catalog is legitimately large, removal is unavailable and the answer is to defer the definitions instead. Authorization always sits outside the model.
 

@@ -19,7 +19,7 @@ Twenty-five artifacts, now one file each in the Primer Workbook, [primer-workboo
 
 | ID | Artifact | Owner | Produced | File |
 | --- | --- | --- | --- | --- |
-| F1 | AI use case intake form | Requesting business function, completed with the architect. | Before any design work, at first request. | [F01-ai-use-case-intake-form.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F01-ai-use-case-intake-form.md) |
+| F1 | Artificial intelligence (AI) use case intake form | Requesting business function, completed with the architect. | Before any design work, at first request. | [F01-ai-use-case-intake-form.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F01-ai-use-case-intake-form.md) |
 | F2 | AI architecture decision record | Architect. | At design approval, and again on any material change to model, tools, corpus or oversight placement. | [F02-ai-architecture-decision-record.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F02-ai-architecture-decision-record.md) |
 | F3 | Risk tiering assessment and classification record | Business system owner, scored with the architect. | At intake, and on any of the nine re-tier triggers. | [F03-risk-tiering-assessment-and-classification-record.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F03-risk-tiering-assessment-and-classification-record.md) |
 | F4 | Delegation map | Architect. | Before pattern selection, and re-issued whenever a step moves owner. | [F04-delegation-map.md](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F04-delegation-map.md) |

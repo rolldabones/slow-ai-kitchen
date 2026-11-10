@@ -15,7 +15,7 @@ These are places where reasonable inference gives the wrong answer, which makes 
 
 ## The stance
 
-Nearly half of this material is about things that are not code: governance, risk, compliance, discovery, trade-off communication, documentation, handoff and the end of a system's life. That is not the soft part of the discipline. It is the part that describes what an architect actually is, and it is the part where a career spent making consequential decisions under constraint counts for more than any amount of product recall.
+Nearly half of this material is about things that are not code: governance, risk management and compliance, discovery, trade-off communication, documentation, handoff and the end of a system's life. That is not the soft part of the discipline. It is the part that describes what an architect actually is, and it is the part where a career spent making consequential decisions under constraint counts for more than any amount of product recall.
 
 The single highest-yield habit in the whole document is the one the Practice Layer is built around. Given a system, ask what is wrong with it in a fixed order, and let each question rule out the work you would otherwise do next. Most expensive pivots are not failures of skill. They are decisions taken in the wrong order by people who never wrote the order down.
 

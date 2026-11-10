@@ -45,9 +45,9 @@ SECTIONS = [
     ("thinking", "Thinking control"),
     ("params", "Request parameters"),
     ("retrieval", "Retrieval (Contextual Retrieval post, not re-verified)"),
-    ("a2a", "Agent-to-agent (A2A), not an Anthropic source, not re-verified"),
-    ("entry", "Entry points and build-time interfaces, not re-verified"),
-    ("routes", "Delivery routes and compliance mechanics, not re-verified"),
+    ("a2a", "Agent-to-agent (A2A), not an Anthropic source"),
+    ("entry", "Entry points and build-time interfaces"),
+    ("routes", "Delivery routes and compliance mechanics"),
 ]
 PAGES = {
     "https://platform.claude.com/docs/en/models/overview": "Models overview",

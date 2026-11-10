@@ -206,7 +206,7 @@ Read the third column as the answer key it is: each row is a scenario-to-approac
 
 **The discriminator between fixed-size and semantic is self-containment, not text quality.** The two compete over the same material, prose without strong structure, so the tiebreak has to come from their own selectors. Fixed-size carries operational simplicity. Semantic carries the requirement that a retrieved chunk stand alone. **The question to ask is whether one chunk has to carry the whole answer.** If the answer can be assembled from two or three adjacent retrieved spans, fixed-size is enough and its operational simplicity decides. If a single chunk has to stand alone, semantic earns its cost.
 
-Whatever the approach, **experiment with chunk size, boundary and overlap** rather than adopting a default, which is Anthropic's stated implementation advice. Small chunks retrieve precisely and lose context; large chunks carry context, dilute the match and consume more window per hit.
+Whatever the approach, **consider how documents are split**: Anthropic's stated implementation advice is that the choice of chunk size, chunk boundary and chunk overlap can affect retrieval performance. Small chunks retrieve precisely and lose context; large chunks carry context, dilute the match and consume more window per hit.
 
 ### Indexing: chosen by how queries are phrased
 
@@ -215,7 +215,7 @@ Whatever the approach, **experiment with chunk size, boundary and overlap** rath
 | Strategy | What it matches | When it earns its place |
 | --- | --- | --- |
 | **Dense** (embeddings) | Semantic similarity, meaning, not words | Queries phrased differently from the source; paraphrase, intent, concept matching |
-| **Sparse** (keyword, e.g. BM25) | Exact terms, identifiers, codes, names | Queries that hinge on specific tokens: part numbers, statute citations, error codes |
+| **Sparse** (keyword, e.g. Best Match 25 (BM25)) | Exact terms, identifiers, codes, names | Queries that hinge on specific tokens: part numbers, statute citations, error codes |
 | **Hybrid** | Both, with the results combined | Mixed query patterns, the common production case; recovers the exact-match results dense retrieval misses |
 
 Dense retrieval is also called semantic search, and sparse retrieval lexical search; the distinction is the same one under either vocabulary. Dense handles paraphrase, synonyms and concepts, and is weak on exact strings: product codes, case numbers, acronyms, defined terms. Sparse matches words, weighting rare ones more heavily, so it nails exact terms and has no idea attorney and lawyer are the same idea. Neither suffices alone, which is why production systems run both and merge.
@@ -283,7 +283,7 @@ The deliverable here is articulating the trade-off, not choosing an optimum. **T
 
 Before designing a pipeline, ask whether you need one. Anthropic's guidance is specific: **for knowledge bases under roughly 200,000 tokens, about 500 pages, the better option is often to include the entire knowledge base in the prompt and skip retrieval entirely**, using prompt caching to make it economical.
 
-This is the highest-value single fact in the section, because it is a named number attached to a real decision and the correct answer is the counter-intuitive one. A retrieval pipeline is infrastructure you maintain forever: ingestion, indexing, freshness monitoring, permission filtering. Skipping it when the corpus fits wins on accuracy, latency, cost and maintainability simultaneously.
+This is the highest-value single fact in the section, because it is a named number attached to a real decision and the correct answer is the counter-intuitive one. A retrieval pipeline is infrastructure you maintain forever: ingestion, indexing, freshness monitoring, permission filtering. Skipping it when the corpus fits, under about 200,000 tokens or roughly 500 pages, removes the need for retrieval-augmented generation (RAG), and prompt caching makes the whole-corpus prompt significantly faster and more cost-effective.
 
 ### The seven design stages
 
@@ -297,7 +297,7 @@ For a corpus that clears the threshold, the design sequence has seven stages.
 
 **4. Retrieve**, with both methods, dense and sparse, merged by reciprocal rank fusion as above. Neither method suffices alone; production systems run both.
 
-**5. Rerank.** The documented procedure is specific and worth knowing as a shape: **retrieve a wide initial candidate set, in Anthropic's tests the top 150; pass those plus the query through a reranking model; select the top-K, in their tests 20; pass those into the prompt.** Reranking provides better responses **and reduces cost and latency**, because the model processes less information. The latency cost of the rerank call itself is not quantified by the source (Appendix I records it as not verified); measure it in your own stack.
+**5. Rerank.** The documented procedure is specific and worth knowing as a shape: **retrieve a wide initial candidate set, in Anthropic's tests the top 150; pass those plus the query through a reranking model; select the top-K, in their tests 20; pass those into the prompt.** Reranking provides better responses **and reduces cost and latency**, because the model processes less information. The latency cost of the rerank call itself is not quantified by the source, which says only that reranking adds a small amount of latency (Appendix I records it as Unknown, `retrieval.rerank_latency`); measure it in your own stack.
 
 **6. Assemble and generate.** Question plus retrieved chunks with sources attached, and an instruction to answer from the supplied material and to say when it does not contain the answer.
 
@@ -345,7 +345,7 @@ The chunking and indexing selectors generalize into a fuller mapping. By data sh
 | Shape | Approach |
 | --- | --- |
 | Long prose with reliable structure: contracts, statutes, manuals | Hierarchical chunking on natural units; hybrid search; metadata filters on type and date |
-| Short self-contained records: FAQs, product entries, ticket summaries | One chunk per record, no splitting; lexical weighted heavily, since users search by name and identifier |
+| Short self-contained records: frequently asked questions (FAQs), product entries, ticket summaries | One chunk per record, no splitting; lexical weighted heavily, since users search by name and identifier |
 | Tables and numbers | **Do not retrieve.** Query the source system, or use code execution to compute over it. Retrieved table fragments produce confident arithmetic errors |
 | Code | Hierarchical chunking by function or file, plus symbol search. Anthropic notes code retrieval punishes vague chunks hard, because near-duplicate snippets are everywhere and queries rarely share the snippet's wording |
 | Heterogeneous corpus, many types and owners | Metadata filter first, then search the filtered set |
@@ -515,7 +515,7 @@ The pairing that localizes a failure: **high recall with low faithfulness is a g
 
 ## 5.5 The asset types
 
-Enterprises use eleven names for written knowledge and use most of them interchangeably. They are not interchangeable, and an AI system consuming them behaves differently for each. **Precision here is not pedantry: it determines what the system is allowed to do with the content.**
+Enterprises use eleven names for written knowledge and use most of them interchangeably. They are not interchangeable, and an artificial intelligence (AI) system consuming them behaves differently for each. **Precision here is not pedantry: it determines what the system is allowed to do with the content.**
 
 | Asset | What it is for | Authored by | Approved by | Revision trigger | Behavior when an AI consumes it |
 | --- | --- | --- | --- | --- | --- |
@@ -637,7 +637,10 @@ decision_points:
       - condition: "yes, third party has consented"
         goto: s5
         evidence: third_party_consent_record
-      - condition: "yes, no consent"
+      - condition: "yes, disclosure without consent is reasonable in all the circumstances (UK: DPA 2018 Sch. 2 para. 16(2)(b) and (3); EU: balance under GDPR Art. 15(4))"
+        goto: s5
+        evidence: third_party_disclosure_assessment
+      - condition: "yes, redact or withhold the third-party data"
         goto: escalate.third_party_redaction
   - id: d2
     at: s1

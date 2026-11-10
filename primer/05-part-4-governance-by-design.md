@@ -32,7 +32,7 @@ The test is not whether an organization has a policy but whether you can pick an
 
 ### Three lines of defense and where the model breaks for AI
 
-The **three lines of defense** model assigns risk ownership to the first line, which builds and operates; oversight and challenge to the second, which sets policy and monitors; and independent assurance to the third, internal audit, reporting to the board rather than to management. It is the default in every regulated enterprise and the right starting point for AI, and it breaks in four specific ways: knowing which four separates an operating model from an org chart.
+The **three lines of defense** model assigns risk ownership to the first line, which builds and operates; oversight and challenge to the second, which sets policy and monitors; and independent assurance to the third, internal audit, reporting to the board rather than to management. It is the default in every regulated enterprise and the right starting point for artificial intelligence (AI), and it breaks in four specific ways: knowing which four separates an operating model from an org chart.
 
 | Break | Mechanism | Architectural consequence |
 | --- | --- | --- |
@@ -243,8 +243,8 @@ What a regime demands of an architecture is smaller than its statutory text and 
 
 #### The four compliance questions
 
-1. **What data may be processed, on what basis, for what purpose?** GDPR's lawful basis and purpose limitation; HIPAA's minimum necessary.
-2. **Where may it be processed?** Residency, transfers and FedRAMP's authorized service offering constraint. This is where the entry point decision in 2.8 becomes a compliance decision.
+1. **What data may be processed, on what basis, for what purpose?** General Data Protection Regulation (GDPR)'s lawful basis and purpose limitation; Health Insurance Portability and Accountability Act (HIPAA)'s minimum necessary.
+2. **Where may it be processed?** Residency, transfers and Federal Risk and Authorization Management Program (FedRAMP)'s authorized service offering constraint. This is where the entry point decision in 2.8 becomes a compliance decision.
 3. **What must be retained, and what must be deletable?** The hard one in AI systems, because personal data ends up in chunks, embeddings, caches, logs and evaluation datasets. Keep the mapping from source record to every derived artifact, or you cannot execute a deletion request and cannot evidence that you did.
 4. **Who is accountable, and can it be evidenced?** Audit controls, per-request attribution and a named human decision-maker where decisions affect individuals.
 
@@ -254,7 +254,7 @@ What a regime demands of an architecture is smaller than its statutory text and 
 
 | Requirement | Architectural consequence |
 | --- | --- |
-| Lawful basis and purpose limitation | You need a basis and may not repurpose. Feeding a service corpus into a marketing model is a purpose problem before a technical one |
+| Lawful basis and purpose limitation | You need a lawful basis (Art. 6) and may not further process data for purposes incompatible with those for which it was collected (Arts 5(1)(b) and 6(4)). Feeding a service corpus into a marketing model is a purpose problem before a technical one |
 | Data minimization | Send and store only what the task requires. An argument for input redaction and for trimming what enters logs |
 | Access and erasure rights | **Hard in a retrieval system**, for exactly the reason the third compliance question gives. The derived-artifact map, developed in 4.11, is what makes deletion executable and evidenced |
 | Automated decision-making | Decisions made solely by automated means with significant effects attract specific obligations, pushing toward a meaningful human decision-maker rather than a rubber stamp |
@@ -292,7 +292,7 @@ Two rows carry more design weight than their length suggests. **The clock is the
 
 **Upstream model obligations arrive as paper, and paper has to be caught at the contract.** A deployer that cannot produce the model documentation its own obligation depends on is exposed by an omission it did not commit, and the retention point is the one that gets missed: documentation obtained at onboarding and not re-obtained when the provider ships a new model version describes a system that is no longer running. Tie vendor documentation retention to the model version register, so a version change triggers the refresh. The documentation row's other consequence is not a longer document but a generated one, because a hand-maintained description of a system diverges from it within one release cycle and the divergence is the finding.
 
-**Consequential-decision statutes.** The trigger in this family is neither the technology nor the sector. **It is a decision that affects a person's access to something they want**: employment, credit, housing, insurance, healthcare or education. Two properties matter architecturally. The system usually does not have to make the decision, because a system that screens, scores, ranks, prioritizes or filters ahead of a human decision is commonly within reach of the trigger ⚠, which places a large population of tools nobody describes as a decision system inside the family. And the trigger follows the affected person, so the applicable rules often follow where that person is rather than where the system runs, which is an entry point and residency question arriving from an unexpected direction.
+**Consequential-decision statutes.** The trigger in this family is neither the technology nor the sector. **It is a decision that affects a person's access to something they want**, for example employment, credit or lending, housing, insurance, healthcare, education or essential government services; the lists vary by statute. Two properties matter architecturally. The system usually does not have to make the decision, because a system that screens, scores, ranks, prioritizes or filters ahead of a human decision is commonly within reach of the trigger ⚠, which places a large population of tools nobody describes as a decision system inside the family. And the trigger follows the affected person, so the applicable rules often follow where that person is rather than where the system runs, which is an entry point and residency question arriving from an unexpected direction.
 
 | Obligation shape | Architectural consequence |
 | --- | --- |
@@ -364,7 +364,7 @@ Model-level alignment is easier to reason about, and easier to describe to a reg
 
 **The document is used in two ways during training**, and both are worth knowing because they explain the shape of what you inherit. It is used to generate the examples the model learns from, and to rank candidate responses. That is a mechanism for shifting a distribution, which is the same statement as "not a control you can rely on" made constructively rather than as a caution.
 
-**It states a priority order for conflicts:** be broadly safe, be ethical, comply with the provider's guidelines, and be genuinely helpful to operators and users. Two properties of that ordering carry into design.
+**It states a priority order for conflicts:** be broadly safe, be ethical, comply with the provider's guidelines and be genuinely helpful to operators and users. Two properties of that ordering carry into design.
 
 - **The ordering exists because helpfulness and safety genuinely conflict**, and a system that assumes they do not has no account of what the model will do when they do.
 - **The ordering is holistic rather than strict.** Higher-priority goals generally take precedence, and the model weighs them together rather than applying a lexical sequence. **A holistic ordering is not a decision procedure, and it cannot be cited as one.** An assurance narrative claiming that a given category of output is impossible because safety ranks above helpfulness has over-read the document. What the ordering supports is a claim about tendency across a population of requests, which is the kind of claim an evaluation measures.
@@ -397,7 +397,7 @@ Seven documented techniques.
 
 ### Increasing output consistency
 
-Specify the exact format using JSON, XML or a template; **state the desired opening and structure in the user turn or the system prompt**, bypassing preamble and enforcing structure (prefilling the final assistant turn is not a substitute: requests with a prefilled final assistant message return a 400 error on Claude 4.6 and later models); constrain with examples; ground answers in retrieval; break complex tasks into smaller consistent subtasks, each getting full attention. Structured outputs as a platform feature is the strongest version of the first.
+Specify the exact format using JavaScript Object Notation (JSON), Extensible Markup Language (XML) or a template; **state the desired opening and structure in the user turn or the system prompt**, bypassing preamble and enforcing structure (prefilling the final assistant turn is not a substitute: requests with a prefilled final assistant message return a 400 error on Claude 4.6 and later models); constrain with examples; ground answers in retrieval; break complex tasks into smaller consistent subtasks, each getting full attention. Structured outputs as a platform feature is the strongest version of the first.
 
 ### Risks and failure modes
 
@@ -507,7 +507,7 @@ The guardrails doctrine separates injection into two categories with **different
 | Category | Who is the adversary | What you are protecting |
 | --- | --- | --- |
 | **Jailbreaks and direct prompt injection** | **The user of your application**, crafting inputs to bypass your guardrails | Your application, and Anthropic's usage policy |
-| **Indirect prompt injection** | **A third party** who influenced content Claude reads: an inbound email body, a fetched web page, OCR from an uploaded file, a tool result | **Your user**, from instructions embedded in content read on their behalf |
+| **Indirect prompt injection** | **A third party** who influenced content Claude reads: an inbound email body, a fetched web page, optical character recognition (OCR) from an uploaded file, a tool result | **Your user**, from instructions embedded in content read on their behalf |
 
 #### Mitigations for direct injection and jailbreaks
 
@@ -539,11 +539,11 @@ For the computer use tool and the browser use tool, Anthropic also runs classifi
 
 The controls above are the ones you build. The provider's own layer also intervenes, and when it does the application receives a structured signal that most deployments discard. **Treating every refusal as one undifferentiated event is a lost control surface**, because the classes it merges call for different handling.
 
-**The mechanism.** Where a streaming classifier intervenes, the Messages API reports `stop_reason: "refusal"` accompanied by a **`stop_details`** object carrying a policy category and a readable explanation. ⚠ Both fields are `null` where the refusal does not map to a named category, a normal and permanent value, so a handler must tolerate it and fall back to generic handling rather than assuming the shape; `stop_details` itself is `null` for every stop reason other than a refusal. The category set is enumerated in the platform's refusals documentation and is perishable: at the time of writing it is `cyber`, `bio`, `frontier_llm`, `reasoning_extraction` and `general_harms`. **Read the list at runtime or re-verify it at publish; do not hardcode it**, which is the same standing rule this primer applies to every platform enumeration.
+**The mechanism.** Where a streaming classifier intervenes, the Messages API reports `stop_reason: "refusal"` accompanied by a **`stop_details`** object carrying a policy category and a readable explanation. ⚠ Both fields are `null` where the refusal does not map to a named category, a normal and permanent value, so a handler must tolerate it and fall back to generic handling rather than assuming the shape; `stop_details` itself is `null` for every stop reason other than a refusal. The category set is enumerated in the platform's refusals documentation and is perishable (Appendix I, `stop.details.categories`). **Read the list at runtime or re-verify it at publish; do not hardcode it**, which is the same standing rule this primer applies to every platform enumeration.
 
 **Why the category is worth routing on.** A refusal in one category is a user who has strayed near a boundary and needs a clear message. A refusal in another is a signal worth counting, attributing to a user or tenant, and feeding to the repeat-offender handling described above. A third may indicate the deployment is being probed. **These have different owners and different responses, and a single "the model refused" branch gives all of them the same one.** The refusal log is already an evidence artifact in 4.9, where the assertion it supports is that controls stopped things and that over-refusal is measurable; carrying the category into that record is what makes over-refusal measurable by class rather than in aggregate.
 
-**The operational rule that is easy to miss: reset the conversation context after a refusal before continuing.** Remove or rephrase the turn that triggered it, or clear the history. Sending the next request on the same refused context tends to return further refusals, which presents to the user as a system that has stopped working and to the operations team as a cluster of unexplained failures. Resetting is not the only recovery: the documented alternative is to send the same request to a fallback model, either through the API's server-side `fallbacks` setting (in beta on the Claude API; not available for the Haiku-class model) or a client-side retry. What is not a strategy is repeating the request unchanged on the same refused context.
+**The operational rule that is easy to miss: reset the conversation context after a refusal before continuing.** Remove or rephrase the turn that triggered it, or clear the history. Sending the next request on the same refused context tends to return further refusals, which presents to the user as a system that has stopped working and to the operations team as a cluster of unexplained failures. Resetting is not the only recovery: the documented alternative is to send the same request to a fallback model, either through the application programming interface (API)'s server-side `fallbacks` setting (in beta on the Claude API; not available for the Haiku-class model) or a client-side retry. What is not a strategy is repeating the request unchanged on the same refused context.
 
 ### ⌂ The architect's lens
 
@@ -572,7 +572,7 @@ Two distinct failures are both called bias, and conflating them is why fairness 
 
 **Differential treatment** is the system doing something different because of a protected characteristic: a rule reading the attribute, an instruction directing different handling, a routing branch keyed to a group, a property of the mechanism usually visible in code or prompt. **Differential outcome** is measurably different results across groups by whatever route, a property of the output distribution invisible in the code by construction.
 
-**An architecture can produce the second while containing none of the first.** No component reads a protected attribute, no instruction mentions one, every code path is identical, and outcomes still diverge: the corpus over-represents one population, a proxy carries the attribute's signal, one group's phrasing sits further from the training distribution and is understood less well, or a threshold calibrated on the aggregate falls elsewhere on each subpopulation's distribution. None of those is a rule about a group; all produce results about groups.
+**An architecture can produce the second while containing none of the first.** No component reads a protected attribute, no instruction mentions one, every code path is identical, and outcomes still diverge: the corpus over-represents one population, a proxy carries the attribute's signal, one group's phrasing sits further from the training distribution and is understood less well or a threshold calibrated on the aggregate falls elsewhere on each subpopulation's distribution. None of those is a rule about a group; all produce results about groups.
 
 So **inspection of the design is not a fairness test**: a review establishing that no component reads a protected attribute has answered the easier question and reported it as the harder one. The only route to differential outcome is measurement, which requires knowing who is in which group. ⚠ Which of the two a non-discrimination regime reaches, and on what showing, is jurisdiction-specific and for counsel.
 
@@ -727,12 +727,12 @@ Responsible does the work, Accountable answers for the outcome and holds the dec
 | **Design approval** | Architect | Delivery team | Second-line risk, security, privacy, legal for T3 and above | System owner |
 | **Data approval** | Data owner for the source system | Delivery team | Privacy, legal, records management | Architect, system owner |
 | **Evaluation sign-off** | Quality or evaluation owner | Delivery team | Second-line risk, affected business function | Governance committee |
-| **Go-live** | Business system owner for T1, function head for T2, governance committee for T3, executive or board for T4 | Delivery lead | Security, operations, second line | All parties |
+| **Go-live** | Business system owner, a named executive by role, at every tier. Approves: the business system owner for T1, the function head for T2, the governance committee for T3, the executive or the board for T4 | Delivery lead | Security, operations, second line | All parties |
 | **Change** | Change owner, who is the asset owner for that asset | Delivery team | Second line where the change crosses a re-tier trigger | System owner |
 | **Incident** | Incident commander, pre-named per tier | Response team | Legal, privacy, communications, second line | Executive, per severity |
 | **Retirement** | Business system owner | Delivery team | Records management, legal for hold obligations, privacy for erasure | Governance committee |
 
-Two things matter more than the table. First, **go-live accountability moves with tier, and design and data accountability do not**: moving them by tier teaches the organization that low-tier systems have no owner. Second, **incident accountability is pre-named rather than assigned at the time**: an incident commander appointed during an incident is appointed by whoever is in the room.
+Two things matter more than the table. First, **go-live approval authority moves with tier, and accountability for go-live, design and data does not**: moving accountability by tier teaches the organization that low-tier systems have no owner. Second, **incident accountability is pre-named rather than assigned at the time**: an incident commander appointed during an incident is appointed by whoever is in the room.
 
 ### Delegation and its limits
 
@@ -1006,7 +1006,7 @@ Lawful basis determines what the architecture may do, before design. It affects 
 | **Rectification** | Correct at source and propagate to every derived artifact | Propagation requires reindexing and cache invalidation. A corrected source with a stale index produces the old answer confidently |
 | **Erasure** | Delete at source and from every derived artifact, and evidence it | The hardest. See below |
 | **Portability** | Export in a structured, commonly used, machine-readable format | Usually satisfied at the source system. Under GDPR Art. 20(1) it covers only personal data the person has provided, where processing rests on consent or contract and is carried out by automated means, so model-generated inferences about the person fall outside it ⚠ |
-| **Objection** | Stop the processing for that individual, prospectively. Under GDPR it is unconditional for direct marketing (Art. 21(2) and (3)); otherwise it applies to processing based on Art. 6(1)(e) or (f), and the controller may continue on compelling legitimate grounds (Art. 21(1)) | Requires a per-individual suppression capability the system probably does not have. Design it or the right cannot be honored |
+| **Objection** | Stop the processing for that individual, prospectively. Under GDPR it is unconditional for direct marketing (Art. 21(2) and (3)); otherwise it applies to processing based on Art. 6(1)(e) or (f), and the controller may continue only if it demonstrates compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject, or for the establishment, exercise or defense of legal claims (Art. 21(1)) | Requires a per-individual suppression capability the system probably does not have. Design it or the right cannot be honored |
 | **Human review of an automated decision** | A named human with authority and information to reach a different outcome | The oversight design in 4.6 is the implementation. A reviewer who cannot reach a different outcome does not satisfy it |
 
 **Erasure is where AI architectures fail most reliably.** The request arrives against a source record; the data has by then propagated to at least six places with different deletion semantics:
@@ -1096,7 +1096,7 @@ Insecure output handling is the most commonly missed: teams that treat inbound c
 
 ### The supply chain for packaged capability
 
-Skills, plugins, community MCP servers and any other bundle of instructions plus executable code introduce a threat class the trust boundary above does not address, because the bundle enters the environment before any request does. **The distribution model is the risk.** A bundle can carry logic that runs commands, opens network connections, reads the file system or reads credentials the moment it is invoked, and none of the runtime controls in 4.4 are positioned to see it. Input screening and prompt screening watch the conversation. The malicious behavior was baked in upstream. Output monitoring may catch a downstream effect, and by then the code has run.
+Skills, plugins, community Model Context Protocol (MCP) servers and any other bundle of instructions plus executable code introduce a threat class the trust boundary above does not address, because the bundle enters the environment before any request does. **The distribution model is the risk.** A bundle can carry logic that runs commands, opens network connections, reads the file system or reads credentials the moment it is invoked, and none of the runtime controls in 4.4 are positioned to see it. Input screening and prompt screening watch the conversation. The malicious behavior was baked in upstream. Output monitoring may catch a downstream effect, and by then the code has run.
 
 The objection worth answering directly, because it will be raised: a bundle is opaque until it executes, so how can it be trusted at all? **The answer is not to establish trust. It is to build compensating controls that make an unverified bundle survivable.** Three of them, and they are not alternatives.
 
@@ -1303,7 +1303,7 @@ The recurring failure is a benchmark figure from a curated set restated as a gen
 
 ### Product liability and defect framing
 
-Defect-based liability reaches software in more places than it used to ⚠, and its frame differs from every other in this part: not whether the organization was careful, but whether what was supplied was defective, measured against what a user was entitled to expect.
+Defect-based liability reaches software in more places than it used to ⚠, and its frame differs from every other in this part: not whether the organization was careful, but whether what was supplied was defective, which under Directive (EU) 2024/2853 means it did not provide the safety that a person is entitled to expect, judged objectively by what the public at large is entitled to expect, or that Union or national law requires.
 
 Three architectural consequences follow, all artifacts that exist before deployment or not at all.
 
