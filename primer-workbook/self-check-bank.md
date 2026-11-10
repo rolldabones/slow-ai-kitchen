@@ -1,6 +1,6 @@
 # Self-Check Bank
 
-*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix D, on 18 October 2026, so that the Primer is a reference and this folder the practice set; text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
+*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix D, on 18 October 2026, so that the Primer is a reference and this folder the practice set; text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0 and v3.4.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
 
 162 questions, grouped by subject, weighted toward the subjects where the work is hardest rather than evenly across the ten. Answer from memory, then check the key. The section reference after each answer says where the material is developed, so a miss sends you somewhere specific.
 
@@ -194,7 +194,7 @@
 159. Which model tier do you start a new deployment on absent other constraints, and what is the documented default for the unsure case?
 160. Name the five end-user entry points, and which one is purpose-built for engineering rather than general knowledge work.
 161. Name Claude Code's six permission modes, and which two are scoped to unattended or CI use rather than interactive work.
-162. Name the five delivery routes and, for each, the one fact that most directly signals when a client should pick it.
+162. Name the six delivery routes and, for each, the one fact that most directly signals when a client should pick it.
 
 ## Answer key
 
@@ -359,6 +359,6 @@
 159. The vendor's stated default: start capability-first on it and move down a class only on evidence from the evaluation set (8.2). The models overview names the current Opus-class model, "for most workloads" (Appendix I, `vendor.start.default`). A class is not a pinned generation, and the figure is perishable. (2.6, Appendix I)
 160. Claude.ai, Claude Code, Claude Cowork, Claude in Chrome, Claude for Excel. Claude Code is purpose-built for engineering, and it could be the wrong shape for a customer-service product or any non-engineering workflow. (2.8, Appendix I)
 161. Default, `acceptEdits`, plan mode, auto mode, `dontAsk`, `bypassPermissions`. `dontAsk` and `bypassPermissions` are the two scoped to unattended or CI use: `dontAsk` auto-denies anything not covered by allow rules, and `bypassPermissions` skips all checks and is scoped to containers or CI only. (2.8, Appendix I)
-162. Anthropic first-party: no binding cloud commitment, wants newest features immediately. AWS Bedrock: a committed AWS enterprise agreement. Claude Platform on AWS: an AWS commitment to draw down, but first-party feature timing and cache isolation matter more than Bedrock's operational model. GCP Vertex AI: the rest of the ML stack already lives in Vertex AI. Microsoft Foundry: a Microsoft enterprise agreement and identity through Entra ID. (2.8, Appendix I)
+162. Anthropic first-party: no binding cloud commitment, wants newest features immediately. AWS Bedrock: a committed AWS enterprise agreement. Claude Platform on AWS: an AWS commitment to draw down, but first-party feature timing and cache isolation matter more than Bedrock's operational model. GCP Vertex AI: the rest of the ML stack already lives in Vertex AI. Claude Models on Google Cloud (Anthropic managed): Google Cloud paper and billing with the Claude API operated by Anthropic. Microsoft Foundry: a Microsoft enterprise agreement and identity through Entra ID. (2.8, Appendix I)
 
 **Final Liability rests with the Human.**

@@ -1,6 +1,6 @@
 # Enterprise Vocabulary, by Domain
 
-*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix H (the enterprise vocabulary run; the core terms stay in the Primer), on 18 October 2026, so that the Primer is a reference and this folder the practice set; text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
+*Primer Workbook, slow-ai-kitchen v3.0.0. Moved from the Enterprise AI Architecture Primer v1.0.0, Appendix H (the enterprise vocabulary run; the core terms stay in the Primer), on 18 October 2026, so that the Primer is a reference and this folder the practice set; text unchanged except the corrections itemized in the slow-ai-kitchen CHANGELOG at v3.0.0 and v3.4.0; section references are to the [Primer](https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md).*
 
 Grouped by domain. Where a term is commonly confused with another, the distinction is stated in the same line.
 
@@ -162,7 +162,7 @@ Grouped by domain. Where a term is commonly confused with another, the distincti
 
 **Self-tiering.** A team assessing the risk tier of its own system. The largest single failure point in any tiering model, because the team scoring the system is the team whose delivery date depends on a low score. Mitigated by calibration sampling and by objective triggers that bypass scoring entirely.
 
-**Three lines of defense.** First line owns and runs the risk, second line sets standards and challenges, third line provides independent assurance. Widely used, widely criticized, and the vocabulary any assurance conversation will be conducted in.
+**Three lines of defense (the Three Lines Model of the Institute of Internal Auditors since 2020).** First line owns and runs the risk, second line sets standards and challenges, third line provides independent assurance. Widely used and widely criticized, it is the vocabulary any assurance conversation will be conducted in.
 
 **Tier drift.** The gap between the tier a system was assessed at and the tier its current behavior warrants. Four causes: scope creep, corpus creep, usage creep and dependency creep. Only the first is dishonest.
 

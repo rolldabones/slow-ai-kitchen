@@ -2,6 +2,21 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.4.0 (2026-11-10)
+
+Minor release. Michael Paik's rulings of 10 November 2026 on D1 to D7 of `Book Review 2026-11-10/12_Primer_Review/Primer_Carry_Forward_v0.1.md`, the decisions the v3.3.8 review release left open: every recommendation approved. Prepared with Claude, approved by Michael Paik.
+
+- **`enterprise-ai-architecture-primer.md` v2.1.0.** No part or section is added or removed; the amendment record says so.
+  - **D1, six delivery routes.** Claude Models on Google Cloud (Anthropic managed), "the Claude API, run by Anthropic and reached through your Google Cloud project" (Anthropic-managed page, read 10 November 2026), becomes a route of its own, as Claude Platform on AWS is beside Bedrock: a row in 2.8's route table (Google Cloud Marketplace billing, claude.googleapis.com, the Claude API request format, `roles/claude.*`, a separate Anthropic organization under Anthropic's Commercial Terms, Anthropic as data processor), the 2.3 platform map and currency note, the 2.15 one-page item, Appendix B (two places) and Appendix H. The GCP Vertex AI row is labeled as the Google-managed offering. The 2.8 heading reads "the six delivery routes".
+  - **D2.** 8.6 states that the significance level and the power are fixed by convention before the test, so the three numbers it names agree with Appendix H's minimum detectable effect.
+  - **D3.** 4.1's subsection and 4.18's one-page item name the Institute of Internal Auditors' Three Lines Model (2020; formerly the Three Lines of Defense), as Appendix G's G13 does since v3.3.8.
+  - **D4.** The browser use tool joins the Anthropic-schema client tools in 2.3 and 3.3 (tool use overview, read 10 November 2026), matching `tools.client_tools`.
+  - **D5.** 2.4 calls mixed-model cost optimization one use of routing, as Appendix H does since v3.3.8.
+  - **D6.** "this Primer" throughout: 15 lowercase self-references capitalized.
+  - **D7, deferred by the ruling.** The Claude Cowork row and name are read against the product pages at the next re-verification of `primer/figures.yaml`; no text changes.
+- **`primer-workbook/`.** `self-check-bank.md` question and answer 162 name six routes and the Anthropic-managed offering (D1); `diagrams/G13-the-three-lines-of-defense-applied-to-ai.md` and `diagrams/README.md` carry the G13 title of Appendix G, the file name unchanged (D3); `enterprise-vocabulary.md` notes the IIA's 2020 name in its three lines entry and drops a serial comma (D3); the two files' headers name v3.4.0 among their correction releases; `README.md` names the Primer v2.1.0.
+- `primer/` regenerated with `split_markdown.py --section-index --max-bytes 240000 --title "Enterprise AI Architecture Primer" --h2-split "APPENDICES"` and verified to rebuild the monolith byte for byte. How to Cite and the amendment record name v3.4.0; README title block, How to Cite, Current version and `CITATION.cff` to v3.4.0. No step, gate, tier, role or rule of the method changes.
+
 ## v3.3.8 (2026-11-10)
 
 Patch release. The review and verification of the Enterprise AI Architecture Primer of 10 November 2026 (801 findings by Opus and Sonnet, every quotation checked by script; 1,371 claims checked against primary sources), applied on Michael Paik's rulings of 10 November 2026, which accepted every recommendation of Recommended_Rulings_Primer_v0.1. Prepared with Claude, approved by Michael Paik.

@@ -3,7 +3,7 @@
 <!-- nav:end -->
 # THE PRACTICE LAYER
 
-This layer reorganizes the primer for the situation the body does not address: a system already proposed, already built or already running, which someone has to interrogate. Where the body teaches design, this teaches review, and a design review is a scenario with the defect already planted. Every claim below is developed somewhere in the body and is cross-referenced there.
+This layer reorganizes the Primer for the situation the body does not address: a system already proposed, already built or already running, which someone has to interrogate. Where the body teaches design, this teaches review, and a design review is a scenario with the defect already planted. Every claim below is developed somewhere in the body and is cross-referenced there.
 
 ## The review sequence
 
@@ -37,7 +37,7 @@ Twelve questions in order. The order is load-bearing: each one can rule out work
 
 ## The defect catalog
 
-**Every failure mode the primer names that a review can find in a system already proposed, built or running**, with the symptom that reveals it and the fix that actually works. **It is not an index of every failure the primer names, and the boundary is deliberate**: the adoption failures of Part 7, the executive and program failures of Part 9 and the second-order effects of 10.3 arrive months after the artifact is reviewable and are not findable in a design review, so they stay with the Parts that argue them. **The pattern across the whole table is that the fix is almost never a tuning parameter.**
+**Every failure mode the Primer names that a review can find in a system already proposed, built or running**, with the symptom that reveals it and the fix that actually works. **It is not an index of every failure the Primer names, and the boundary is deliberate**: the adoption failures of Part 7, the executive and program failures of Part 9 and the second-order effects of 10.3 arrive months after the artifact is reviewable and are not findable in a design review, so they stay with the Parts that argue them. **The pattern across the whole table is that the fix is almost never a tuning parameter.**
 
 | Defect | What it looks like | What it actually is | The fix |
 | --- | --- | --- | --- |

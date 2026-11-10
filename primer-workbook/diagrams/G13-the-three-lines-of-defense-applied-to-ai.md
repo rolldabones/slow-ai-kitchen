@@ -1,4 +1,4 @@
-# G13. The three lines of defense applied to AI
+# G13. The IIA's Three Lines Model (2020; formerly the Three Lines of Defense) applied to AI
 
 *Enterprise AI Architecture Primer, Appendix G, entry G13. Source of record for the text: this file; the ASCII original is preserved below.*
 

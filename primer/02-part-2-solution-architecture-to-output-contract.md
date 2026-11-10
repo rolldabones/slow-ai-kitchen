@@ -18,7 +18,7 @@ Two refinements. **Decision 02 is not a topology question.** The finer vocabular
 
 ### The section map and the characteristic failures
 
-Each decision is developed in its own section of this primer, and each has a characteristic failure worth knowing before the development.
+Each decision is developed in its own section of this Primer, and each has a characteristic failure worth knowing before the development.
 
 | Decision | Developed in | What it asks | The characteristic failure |
 | --- | --- | --- | --- |
@@ -169,7 +169,7 @@ The pillar is not a framing device for the business case. It selects the metric 
 
 ## 2.2 How Claude behaves: four properties, four consequences
 
-Three frameworks share this section: the four properties of the model, each read as a capability paired with a limitation and a mitigation; the four design consequences that follow for the architect, each landing in a specific part of this primer; and the cost, complexity and risk case for taking the properties seriously.
+Three frameworks share this section: the four properties of the model, each read as a capability paired with a limitation and a mitigation; the four design consequences that follow for the architect, each landing in a specific part of this Primer; and the cost, complexity and risk case for taking the properties seriously.
 
 The properties are **present whether your architecture acknowledges them or not**. They are not weaknesses to apologize for. They are the material properties of the thing you are building with, in the same way that tensile strength and thermal expansion are properties of steel.
 
@@ -299,7 +299,7 @@ Further consequences:
 
 ### The four design consequences
 
-Each property carries a consequence for the architect, and each consequence lands in a specific part of this primer. Map property to consequence now so the connection is in place before you need it.
+Each property carries a consequence for the architect, and each consequence lands in a specific part of this Primer. Map property to consequence now so the connection is in place before you need it.
 
 | # | The consequence, named | What it means | Where it lands |
 | --- | --- | --- | --- |
@@ -339,7 +339,7 @@ Four properties, four verbs.
 | Working memory | the window is a hard edge | **CURATE** and size the context |
 | Steerability | steering is probabilistic | **CONSTRAIN** what must always hold |
 
-**Verify, supply, curate, constrain.** Nearly every sound design move in this primer is one of those four. When a design stalls or a review deadlocks, ask which property is being violated and apply the matching verb.
+**Verify, supply, curate, constrain.** Nearly every sound design move in this Primer is one of those four. When a design stalls or a review deadlocks, ask which property is being violated and apply the matching verb.
 
 ### ⌂ The architect's lens
 
@@ -400,7 +400,7 @@ The three layers are not alternatives: every deployment involves all three, and 
 | --- | --- | --- |
 | **Entry points** | What a person or system directly interacts with. Entry points are the wrappers that decide who can talk to Claude and how | Claude.ai (web, mobile, desktop), Claude Code, a custom application built on the API |
 | **Build-time interfaces** | How an engineer programs against Claude, the layer the integration code is written to | The direct API, the SDKs, MCP, the Agent SDK |
-| **Delivery routes** | Where API traffic terminates. Delivery routes determine whose infrastructure the request runs on | Anthropic directly (the Claude API), Amazon Bedrock (Claude in Amazon Bedrock, plus the legacy InvokeModel and Converse integration for Opus 4.6 and earlier), Claude Platform on AWS, Google Cloud (Claude Models on Google Cloud, Google managed on Agent Platform or Anthropic managed), Microsoft Foundry |
+| **Delivery routes** | Where API traffic terminates. Delivery routes determine whose infrastructure the request runs on | Anthropic directly (the Claude API), Amazon Bedrock (Claude in Amazon Bedrock, plus the legacy InvokeModel and Converse integration for Opus 4.6 and earlier), Claude Platform on AWS, Claude Models on Google Cloud (Google managed, on Google Cloud's Agent Platform), Claude Models on Google Cloud (Anthropic managed), Microsoft Foundry |
 
 Each layer is chosen for a different reason: entry point for the user and the work, build-time interface for the engineering team and the integration, delivery route for the organization's cloud. That attribution gives each a different decision-maker and criterion:
 
@@ -412,7 +412,7 @@ Each layer is chosen for a different reason: entry point for the user and the wo
 
 **⧉ The biggest risk this framework addresses is a category error in a procurement or compliance conversation.** "Can we use Claude" is three questions. A regulator requiring processing inside a specific cloud constrains the **delivery route**, nothing else; a client forbidding a public web interface, the **entry point**, nothing else. Conflating them either kills a viable deployment or waves through a non-compliant one. Decision 04's rule bites here: governance and regulated-industry constraints rule out a route **before** any cost or latency trade-off.
 
-**A currency note on the route menu.** The five routes above are the stable design-conversation menu, but names move, and the menu in 2.8 keeps the shorthand: "Anthropic directly" (2.8's "Anthropic first-party") is **the Claude API**, "AWS Bedrock" is **Amazon Bedrock** and "GCP Vertex AI" is **Google Cloud**, which offers two routes: Claude Models on Google Cloud (Google managed), part of Google Cloud's Agent Platform, which takes `anthropic_version` in the request body set to `vertex-2023-10-16` or to API version `2026-10-21`; and Claude Models on Google Cloud (Anthropic managed), which uses the Claude API request format. **Claude Platform on AWS** and **Microsoft Foundry** carry the same name in both. Claude Platform on AWS differs materially from Bedrock in billing and feature timing. Verify the live list. Per-route mechanics and a regulated-industry constraints table are in 2.8.
+**A currency note on the route menu.** The six routes above are the stable design-conversation menu, but names move, and the menu in 2.8 keeps the shorthand: "Anthropic directly" (2.8's "Anthropic first-party") is **the Claude API**, "AWS Bedrock" is **Amazon Bedrock** and "GCP Vertex AI" is **Claude Models on Google Cloud (Google managed)**, part of Google Cloud's Agent Platform, which takes `anthropic_version` in the request body set to `vertex-2023-10-16` or to API version `2026-10-21`. **Claude Platform on AWS**, **Claude Models on Google Cloud (Anthropic managed)**, which uses the Claude API request format, and **Microsoft Foundry** carry the same name in both. Claude Platform on AWS differs materially from Bedrock in billing and feature timing; the two Google Cloud offerings differ in who operates them, Anthropic running the Claude API in one and Google operating the model in Agent Platform in the other. Verify the live list. Per-route mechanics and a regulated-industry constraints table are in 2.8.
 
 **One vocabulary trap.** "Entry points" has two senses here. In the platform map it is a layer, the surface a human or system talks to. In the MCP primitive's definition, a protocol lets "multiple Claude clients reach the same entry points," which are access points into *your* systems that the tools expose. Same phrase, opposite direction: read which side of the boundary it is on.
 
@@ -519,7 +519,7 @@ All of the following are real, documented parts of the platform; none is one of 
 | **Prompt caching** | A cost and latency mechanic. Central to architecture, not a building block |
 | **Extended thinking, adaptive thinking, effort** | Model configuration controls |
 | **Batch processing** | An execution mode |
-| **Web search, web fetch, code execution, tool search; the memory tool, bash, text editor, computer use** | Instances of primitive 1. The first four are server tools, run by Anthropic; the memory tool, bash, text editor and computer use are Anthropic-schema client tools, run by your code (3.3; Appendix I, `tools.server_tools`, `tools.client_tools`) |
+| **Web search, web fetch, code execution, tool search; the memory tool, bash, text editor, computer use, browser use** | Instances of primitive 1. The first four are server tools, run by Anthropic; the memory tool, bash, text editor, computer use and browser use are Anthropic-schema client tools, run by your code (3.3; Appendix I, `tools.server_tools`, `tools.client_tools`) |
 | **The conventions file** | Always-loaded project instructions. Contrast with skills, which load on demand |
 
 The server-tools row catches people: **server tools are Tools.** Web search is not a peer category of Tools; it is an instance of one.
@@ -763,7 +763,7 @@ The sub-pattern table says when each shape earns its place. What follows is how 
 
 **Prompt chaining.** Programmatic checks, called **gates**, can be added on intermediate steps to ensure the process is still on track. The pattern's purpose, in Anthropic's words: "The main goal is to trade off latency for higher accuracy, by making each LLM call an easier task." That sentence is a discriminator: if the problem in front of you is latency, chaining is the wrong answer, because chaining spends latency deliberately. Worked shapes: generating marketing copy then translating it; writing an outline, checking it meets criteria, then writing the document. Failure mode: error propagation, which is what the gates are for.
 
-**Routing.** Use it where there are distinct categories better handled separately **and where classification can be handled accurately**. The example to remember, in Anthropic's words: "Routing easy/common questions to smaller, cost-efficient models like Claude Haiku 4.5 and hard/unusual questions to more capable models like Claude Sonnet 4.5 to optimize for best performance." Routing is the named mechanism for mixed-model cost optimization, so when a design has a cost problem and a mix of easy and hard requests, routing is a strong candidate. Failure mode: misclassification, which is silent, because the request is answered competently by the wrong specialist.
+**Routing.** Use it where there are distinct categories better handled separately **and where classification can be handled accurately**. The example to remember, in Anthropic's words: "Routing easy/common questions to smaller, cost-efficient models like Claude Haiku 4.5 and hard/unusual questions to more capable models like Claude Sonnet 4.5 to optimize for best performance." Mixed-model cost optimization is one use of routing, the one in Anthropic's example, so when a design has a cost problem and a mix of easy and hard requests, routing is a strong candidate. Failure mode: misclassification, which is silent, because the request is answered competently by the wrong specialist.
 
 **Parallelization.** Two named variations: **sectioning**, breaking a task into independent subtasks run in parallel, and **voting**, running the same task repeatedly for diverse outputs. And the quality argument, not just the speed one: for complex tasks with multiple considerations, models generally perform better when each consideration is handled by a separate call. The guardrails example makes the point: one instance answering while another screens performs better than one call doing both. Failure modes: cost multiplied by call count, reconciliation of contradictory findings and, for voting, consensus suppressing a real problem only one reviewer caught.
 
@@ -1485,7 +1485,7 @@ Return only the JSON object defined by the {{schema_id}} schema.
 
 #### The guardrail rule
 
-A standing design rule, and it recurs throughout this primer. Prompt-level guardrails are **probabilistic**. They work most of the time and fail some percentage of the time. Where a rule protects money, identity, legal exposure or anything irreversible, the guardrail belongs in code as a gate that makes the violation impossible, not as an instruction that makes it unlikely.
+A standing design rule, and it recurs throughout this Primer. Prompt-level guardrails are **probabilistic**. They work most of the time and fail some percentage of the time. Where a rule protects money, identity, legal exposure or anything irreversible, the guardrail belongs in code as a gate that makes the violation impossible, not as an instruction that makes it unlikely.
 
 Anthropic's own documentation supports the distinction from the other direction: the guardrails cluster is titled *Strengthen guardrails*, and the techniques in it are framed as reducing rates, not eliminating failures. The hallucination page closes by saying that while these techniques significantly reduce hallucinations, they do not eliminate them entirely.
 

@@ -30,9 +30,9 @@ The test is not whether an organization has a policy but whether you can pick an
                  on a trigger, not on request)
 ```
 
-### Three lines of defense and where the model breaks for AI
+### The Three Lines Model and where it breaks for AI
 
-The **three lines of defense** model assigns risk ownership to the first line, which builds and operates; oversight and challenge to the second, which sets policy and monitors; and independent assurance to the third, internal audit, reporting to the board rather than to management. It is the default in every regulated enterprise and the right starting point for artificial intelligence (AI), and it breaks in four specific ways: knowing which four separates an operating model from an org chart.
+The Institute of Internal Auditors' **Three Lines Model** (2020; formerly the Three Lines of Defense) assigns risk ownership to the first line, which builds and operates; oversight and challenge to the second, which sets policy and monitors; and independent assurance to the third, internal audit, reporting to the board rather than to management. It is the default in every regulated enterprise and the right starting point for artificial intelligence (AI), and it breaks in four specific ways: knowing which four separates an operating model from an org chart.
 
 | Break | Mechanism | Architectural consequence |
 | --- | --- | --- |
@@ -539,7 +539,7 @@ For the computer use tool and the browser use tool, Anthropic also runs classifi
 
 The controls above are the ones you build. The provider's own layer also intervenes, and when it does the application receives a structured signal that most deployments discard. **Treating every refusal as one undifferentiated event is a lost control surface**, because the classes it merges call for different handling.
 
-**The mechanism.** Where a streaming classifier intervenes, the Messages API reports `stop_reason: "refusal"` accompanied by a **`stop_details`** object carrying a policy category and a readable explanation. ⚠ Both fields are `null` where the refusal does not map to a named category, a normal and permanent value, so a handler must tolerate it and fall back to generic handling rather than assuming the shape; `stop_details` itself is `null` for every stop reason other than a refusal. The category set is enumerated in the platform's refusals documentation and is perishable (Appendix I, `stop.details.categories`). **Read the list at runtime or re-verify it at publish; do not hardcode it**, which is the same standing rule this primer applies to every platform enumeration.
+**The mechanism.** Where a streaming classifier intervenes, the Messages API reports `stop_reason: "refusal"` accompanied by a **`stop_details`** object carrying a policy category and a readable explanation. ⚠ Both fields are `null` where the refusal does not map to a named category, a normal and permanent value, so a handler must tolerate it and fall back to generic handling rather than assuming the shape; `stop_details` itself is `null` for every stop reason other than a refusal. The category set is enumerated in the platform's refusals documentation and is perishable (Appendix I, `stop.details.categories`). **Read the list at runtime or re-verify it at publish; do not hardcode it**, which is the same standing rule this Primer applies to every platform enumeration.
 
 **Why the category is worth routing on.** A refusal in one category is a user who has strayed near a boundary and needs a clear message. A refusal in another is a signal worth counting, attributing to a user or tenant, and feeding to the repeat-offender handling described above. A third may indicate the deployment is being probed. **These have different owners and different responses, and a single "the model refused" branch gives all of them the same one.** The refusal log is already an evidence artifact in 4.9, where the assertion it supports is that controls stopped things and that over-refusal is measurable; carrying the category into that record is what makes over-refusal measurable by class rather than in aggregate.
 
@@ -1321,9 +1321,9 @@ Contestability appears in 4.5 as what makes transparency usable; externally it i
 
 The complaint arrives long after the interaction, and the clock commonly starts when the person learns of the decision, not when it was made ⚠. **An evidence trail that has expired is indistinguishable from no evidence**, and the organization's position becomes whatever the complainant remembers. Two consequences: retention is set by the longest plausible complaint period rather than operational need, a number from counsel rather than the log tier's default; and the retained set must include what the person actually saw, the rendered output with its disclosures and interface context, not only the model's response, because the interface is part of the representation in dispute.
 
-### The boundary this primer draws
+### The boundary this Primer draws
 
-**Most of this primer is written from internal deployments**, where the architect can enumerate the affected population, name the reviewers, reach every user with a change and see failures in the same week. Better stated than left implicit. It is not a different discipline: no external control set, only the controls above with a longer clock, a wider population and much lower tolerance for a claim the evidence cannot support.
+**Most of this Primer is written from internal deployments**, where the architect can enumerate the affected population, name the reviewers, reach every user with a change and see failures in the same week. Better stated than left implicit. It is not a different discipline: no external control set, only the controls above with a longer clock, a wider population and much lower tolerance for a claim the evidence cannot support.
 
 ## 4.16 Frameworks and control mapping
 
@@ -1463,7 +1463,7 @@ The argument of this part is what the rows show together rather than what any on
 ## Governance by Design: the one-page version
 
 1. **Thesis.** Governance that arrives after the architecture is a review, not a control. Every architectural decision has a governance consequence, decided at the same moment, by a named person, leaving an artifact.
-2. **Operating model.** Three lines of defense, breaking for AI on competence inversion, speed asymmetry, vendor opacity and a diffuse first line. A committee that can say no on a Tuesday. Policy, standard, procedure and control kept distinct. Placement follows authority; competence is purchased.
+2. **Operating model.** The Three Lines Model, breaking for AI on competence inversion, speed asymmetry, vendor opacity and a diffuse first line. A committee that can say no on a Tuesday. Policy, standard, procedure and control kept distinct. Placement follows authority; competence is purchased.
 3. **Tiering.** Eight inputs scored 0 to 4, four overrides that restore the asymmetry additive scoring destroys, four tiers and seven things that change per tier. Tier by capability, not intent. Self-tiering is the weak point; calibration sampling and objective triggers are the fix. Internal tier is not a legal classification ⚠. Four compliance questions: what may be processed and on what basis, where, what must be retained and deletable and who is accountable.
 4. **Model behavior.** Model-level alignment is the provider's; system-level alignment is yours, and the model's training is not a safety control. Every rule has a false-positive and a false-negative rate. Seven hallucination techniques that reduce and do not eliminate fabrication, five consistency techniques, fifteen failure modes with detection and control.
 5. **Guardrails.** Five layers, with the strongest controls at the tool layer because that is where actions happen. Three decision points, and they check different things, so a control at one does nothing for the others. Where a rule protects money, identity, legal exposure or anything irreversible, the control is deterministic and sits outside the model. Three failure behaviors, and a control with none is an assumption. Over-refusal is a defect, and a provider refusal is a typed event to be routed on its category, counted and followed by a context reset rather than discarded. Remove excess capability rather than logging it. Two injection threat models and the eight-point checklist.

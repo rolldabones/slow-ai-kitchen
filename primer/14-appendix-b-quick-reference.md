@@ -25,7 +25,7 @@ Non-determinism (feeds evaluation). Context as a finite resource (feeds model an
 
 **Build-time Interfaces.** What the code is written to, chosen for the engineering team: the direct API (the Messages API), the client software development kits (SDKs), Model Context Protocol (MCP) and the Agent SDK, the four developed in 2.8. Claude Managed Agents, which Anthropic hosts, is a further build-time surface the Primer does not develop.
 
-**Delivery Routes.** Where traffic terminates and whose infrastructure runs it, chosen for the organization's cloud: Anthropic directly (the Claude API), Claude in Amazon Bedrock (plus the legacy Bedrock integration), Claude Platform on AWS, Claude Models on Google Cloud (Google managed on Google Cloud's Agent Platform, or Anthropic managed) and Microsoft Foundry.
+**Delivery Routes.** Where traffic terminates and whose infrastructure runs it, chosen for the organization's cloud: Anthropic directly (the Claude API), Claude in Amazon Bedrock (plus the legacy Bedrock integration), Claude Platform on AWS, Claude Models on Google Cloud (Google managed, on Google Cloud's Agent Platform), Claude Models on Google Cloud (Anthropic managed) and Microsoft Foundry.
 
 Three distinct decisions, not alternatives. Every deployment has all three. Named in 2.3, with entry points and delivery routes developed in 2.8.
 
@@ -176,7 +176,7 @@ Every figure in this block is perishable and several have changed in ways that a
 - FedRAMP: authorized service offering, boundary definition, inherited controls
 - Logs contain inputs and outputs, therefore regulated data
 - **Five regulated-industry constraints:** attorney-client privilege; HIPAA; GDPR and data residency; FedRAMP and government; internal data-residency policy. Each names what it rules out and what survives review; the full table is in 2.8
-- **The five delivery routes:** Anthropic first-party, AWS Bedrock, Claude Platform on AWS, GCP Vertex AI, Microsoft Foundry, each with its own billing, identity and "when to pick" logic, developed in 2.8. Claude Platform on AWS is not Bedrock: it differs in billing, feature timing and cache isolation
+- **The six delivery routes:** Anthropic first-party, AWS Bedrock, Claude Platform on AWS, GCP Vertex AI, Claude Models on Google Cloud (Anthropic managed), Microsoft Foundry, each with its own billing, identity and "when to pick" logic, developed in 2.8. Claude Platform on AWS is not Bedrock: it differs in billing, feature timing and cache isolation
 
 ### Decision rules, one line each
 

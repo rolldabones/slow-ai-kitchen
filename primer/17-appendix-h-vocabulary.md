@@ -97,7 +97,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Delegation mapping.** The method for deciding which steps Claude owns, which existing systems own and which a human owns, with justification and control for each.
 
-**Delivery Route.** The bottom layer of the platform map: where API traffic terminates, determining whose infrastructure the request runs on. The five routes are Anthropic directly (the Claude API), Claude Platform on AWS, AWS Bedrock (Amazon Bedrock), GCP Vertex AI (Google Cloud, which offers two routes: Claude Models on Google Cloud, Google managed or Anthropic managed) and Microsoft Foundry. Claude Platform on AWS is materially different from Bedrock in billing, feature timing and cache isolation, which is why it is counted separately.
+**Delivery Route.** The bottom layer of the platform map: where API traffic terminates, determining whose infrastructure the request runs on. The six routes are Anthropic directly (the Claude API), Claude Platform on AWS, AWS Bedrock (Amazon Bedrock), GCP Vertex AI (Claude Models on Google Cloud, Google managed), Claude Models on Google Cloud (Anthropic managed) and Microsoft Foundry. Claude Platform on AWS is materially different from Bedrock in billing, feature timing and cache isolation, which is why it is counted separately; the Anthropic-managed Google Cloud offering is counted apart from Vertex AI because Anthropic, not Google, operates it.
 
 **Dense (embeddings).** Semantic indexing: matches semantic similarity, meaning, not words. Earns its place where queries are phrased differently from the source. Paired with sparse and hybrid.
 
@@ -207,7 +207,7 @@ Two runs. The core terms first, in one alphabetical sequence. Then the enterpris
 
 **Parallelization.** Running subtasks simultaneously and aggregating. Two variations: sectioning (independent subtasks) and voting (the same task run repeatedly).
 
-**Parametric knowledge.** What the model learned during training and carries in its weights. The model answering from memory, with no outside lookup. The opposite is knowledge supplied at request time: a document handed over, a retrieved chunk, a search result, a tool response. Almost every grounding decision in this primer is a decision to replace parametric knowledge with supplied knowledge.
+**Parametric knowledge.** What the model learned during training and carries in its weights. The model answering from memory, with no outside lookup. The opposite is knowledge supplied at request time: a document handed over, a retrieved chunk, a search result, a tool response. Almost every grounding decision in this Primer is a decision to replace parametric knowledge with supplied knowledge.
 
 **Per-turn budget.** One of the four constraints that bind an agent in production, alongside constrained tool entry points, explicit permissions and stopping criteria. Bounds consumption per step and is the runaway-loop control.
 

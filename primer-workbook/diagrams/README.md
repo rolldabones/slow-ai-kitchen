@@ -18,7 +18,7 @@ These are the eighteen diagrams of Appendix G of the Enterprise AI Architecture 
 | G10 | The governance moment | [G10-the-governance-moment.md](G10-the-governance-moment.md) |
 | G11 | The risk tiering funnel | [G11-the-risk-tiering-funnel.md](G11-the-risk-tiering-funnel.md) |
 | G12 | The lineage chain from source document to cited sentence | [G12-the-lineage-chain-from-source-document-to-cited-sentence.md](G12-the-lineage-chain-from-source-document-to-cited-sentence.md) |
-| G13 | The three lines of defense applied to AI | [G13-the-three-lines-of-defense-applied-to-ai.md](G13-the-three-lines-of-defense-applied-to-ai.md) |
+| G13 | The IIA's Three Lines Model (2020; formerly the Three Lines of Defense) applied to AI | [G13-the-three-lines-of-defense-applied-to-ai.md](G13-the-three-lines-of-defense-applied-to-ai.md) |
 | G14 | The adoption funnel | [G14-the-adoption-funnel.md](G14-the-adoption-funnel.md) |
 | G15 | The roadmap dependency graph | [G15-the-roadmap-dependency-graph.md](G15-the-roadmap-dependency-graph.md) |
 | G16 | The incident containment ladder | [G16-the-incident-containment-ladder.md](G16-the-incident-containment-ladder.md) |

@@ -69,7 +69,7 @@ These four arrive in almost every executive session. Each has a defensive wrong 
 
 Subject: approval to proceed to enterprise deployment of the contract review assistant across the legal function.
 
-**Two of this document's conventions collide in what follows.** The six labels below are the six parts of the briefing structure above, not Parts of this primer, and the decimals are millions of currency rather than section numbers, although 1.4, 2.6, 3.2 and 4.9 are all real sections of it. The scenario is 7.8's worked adoption plan seen from the committee's side, and its baseline figures are 7.8's.
+**Two of this document's conventions collide in what follows.** The six labels below are the six parts of the briefing structure above, not Parts of this Primer, and the decimals are millions of currency rather than section numbers, although 1.4, 2.6, 3.2 and 4.9 are all real sections of it. The scenario is 7.8's worked adoption plan seen from the committee's side, and its baseline figures are 7.8's.
 
 **Part 1, the decision, 30 seconds.** "I ask the committee to approve enterprise deployment across all four jurisdictions, release the second tranche of 1.4 million over eighteen months and confirm the General Counsel as accountable executive for the operating model. The alternative: hold at the two largest jurisdictions (wave one) for two further quarters."
 
