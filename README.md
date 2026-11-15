@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.4.0 | 2026-11-10 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.5.0 | 2026-11-15 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -63,6 +63,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): One Workflow, Thirty Days, the engagement on one priority workflow for a named business owner, with the delivery cadence, the thirty-day calendar, six delivery instruments and twenty-six working records keyed to the steps and gates, each with a Done when line, also published one record per file under [workbook/](./workbook/README.md). It changes no step, gate, tier, role or principle.
 
+**A business owner, architect or finance reviewer asking what it costs.** Read [lean-ai.md](./lean-ai.md), a work in progress: the cost of one accepted outcome measured with the records the Consultant Workbook already has, and the pilot that a savings claim needs.
+
 **A reader who wants the derivations.** Read the six derivation modules: [karpathys-kitchen.md](./karpathys-kitchen.md) (the principles derived from the technology's mechanisms), [newtons-kitchen.md](./newtons-kitchen.md) (the three doctrines as three laws of consequential motion), [coetzees-kitchen.md](./coetzees-kitchen.md) (the epistemics of the working session), [mondrians-kitchen.md](./mondrians-kitchen.md) (the doctrines and the GRCnext™ primitives seen as one composition, and the twelve steps as the method of reaching it), [wiszowatys-kitchen.md](./wiszowatys-kitchen.md) (a software architect's six-part practical reference set against the steps and gates, and the page it does not have) and [my-kitchen.md](./my-kitchen.md) (the author's own place and its names: listening before naming, and what lies beneath a name). They change no step, gate, role or principle.
 
 **Prefer a guided tool.** A web application at https://kitchen.grcskorea.com/ carries the twelve steps and, since 11 October 2026, the Cookbook, the sample prompts, the Consultant Workbook, the agent companion, the derivation modules (six as of the v3.3.0 rebuild of 1 November 2026), the workforce AI literacy bridge and the reference resources, in English, Korean, Vietnamese and Japanese. This repository is the text of record; the application states the release its text follows and is rebuilt from it only after a human release.
@@ -90,6 +92,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [consultant-workbook.md](./consultant-workbook.md) | One Workflow, Thirty Days: the delivery instrument for a bounded engagement, with cadence, calendar, six instruments and twenty-six working records with Done when lines | You are delivering the method to a Client as a bounded engagement, or training the consultants who will |
 | [workbook/](./workbook/README.md) | The Consultant Workbook in 48 derived parts, one section or working record per file, verified to rebuild the single file byte for byte | You need one working sheet rather than the whole workbook |
 | [take-out-delivery-and-vending-machines.md](./take-out-delivery-and-vending-machines.md) | Operating companion for AI agents: three service patterns, a service ticket and receipt keyed to Informed Intent and a stop, reconcile and hand-back procedure | You are commissioning an agent run or maintaining a reusable agent service under the existing method |
+| [lean-ai.md](./lean-ai.md) | Operating module, a work in progress (WIP): the cost of one accepted outcome, counted once across every attempt and everyone's effort; constrained model choice as a scenario; a resource envelope in the authorization; an exit that is tested. Connects W15 to W17, F22 and F24 and adds no step, gate, tier or doctrine | You must show what an AI-enabled workflow costs per accepted outcome, or whether it survives a narrower or dearer choice of models |
+| [lean-ai/](./lean-ai/README.md) | The Lean AI pilot protocol (not yet run) and the dated evidence behind the module: the audit and validation report of 15 November 2026, its derived records and the scripts that rerun them | You are planning a Lean AI pilot, or checking what the module's evidence does and does not establish |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
@@ -573,7 +577,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.4.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.5.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -595,8 +599,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.4.0 (2026-11-10)**.
-The License section points to LICENSING.md in the profile repository, which states the commercial route once. No step, gate, tier, role or rule of the method changes.
+Current version: **v3.5.0 (2026-11-15)**.
+New module, a work in progress (WIP): Lean AI (lean-ai.md), on the cost of one accepted outcome, with its pilot protocol and its evidence in lean-ai/. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---

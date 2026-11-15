@@ -86,7 +86,7 @@ Where this Primer serves the Kitchen's gates: Part 2's patterns and 2.12 bear on
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Enterprise AI Architecture Primer*, v2.1.0. In *Slow AI Kitchen*, v3.4.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md
+> Paik, Son-U Michael. *Enterprise AI Architecture Primer*, v2.1.0. In *Slow AI Kitchen*, v3.5.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen/blob/main/enterprise-ai-architecture-primer.md
 
 ---
 

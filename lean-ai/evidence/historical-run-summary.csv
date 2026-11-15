@@ -1,0 +1,7 @@
+source,run,model,cases,input_tokens,output_tokens,truncated,headers_verified,prompt_sha256
+GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R1_claude-opus-5-5_run.json,20261027-R1,claude-opus-5-5,26,238107,105268,0,26,288c580084cc17a66dba3831d5797faec541337acda291fbd6146453f871186f
+GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R1_claude-sonnet-5-5_run.json,20261027-R1,claude-sonnet-5-5,26,238107,110127,2,26,288c580084cc17a66dba3831d5797faec541337acda291fbd6146453f871186f
+GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R2_claude-opus-5-5_run.json,20261027-R2,claude-opus-5-5,26,242629,110892,0,26,bea208c313a6c5ed022e946e58ab1d807b5dccbe8850b4ad4bc10099c7b11f7b
+GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R2_claude-sonnet-5-5_run.json,20261027-R2,claude-sonnet-5-5,26,242629,127107,0,26,bea208c313a6c5ed022e946e58ab1d807b5dccbe8850b4ad4bc10099c7b11f7b
+master-prompt-for-in-house-legal-and-compliance/tests/transcripts/20261018-T5_claude-opus-5-5_run.json,20261018-T5,claude-opus-5-5,16,119247,48175,0,16,8b49e8c79dc7a70bff5fa8b8875744c9ae6983d4d17f4e8f98688253f2dffb75
+master-prompt-for-in-house-legal-and-compliance/tests/transcripts/20261018-T5_claude-sonnet-5-5_run.json,20261018-T5,claude-sonnet-5-5,16,119247,41286,0,16,8b49e8c79dc7a70bff5fa8b8875744c9ae6983d4d17f4e8f98688253f2dffb75

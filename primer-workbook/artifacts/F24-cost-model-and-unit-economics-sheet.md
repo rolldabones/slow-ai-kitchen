@@ -67,4 +67,6 @@ OPERATING LEVERS WHEN AN ALARM FIRES
  measuring attempts per completed task
 ```
 
+**A note on the worked figures and on what "fully loaded" covers.** The Modeled and Actual columns hold the worked example this set supplies for a tabular artifact, continued from F1's procurement scenario. They are not observations from a deployment, and "Actual" marks where measured values go. The three totals are cost per attempt times attempts per completed task, plus human minutes times the loaded cost per minute: 0.31 × 1.2 + 9 × 1.40 = 12.97 in the Modeled column. That is the cost of processing the cases. Monitoring, support, recurring evaluation, maintenance and a share of the build are inside it only where the loaded rate is shown to carry them. Where it is not, add them as a recurring line of their own before the figure enters a business case, and keep the allocation record. [Lean AI](../../lean-ai.md) section 4 sets out the three cost views.
+
 **Final Liability rests with the Human.**

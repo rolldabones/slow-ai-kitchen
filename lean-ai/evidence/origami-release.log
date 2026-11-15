@@ -1,0 +1,10 @@
+  masthead v1.5.8 · 2026-11-09
+  companions checked: 7; substance test NOT CHECKED (no git history available)
+  internal links checked: 92 across 9 markdown files (18 verbatim run records under evidence/ not link-checked)
+  required packet fields: 13
+  packets checked in worked-example.md: 3
+  instrument block (instructions.md): 7890 characters, sha256 951378a5d59d...
+  candidate file: no candidate pending; block identical to instructions.md
+  candidate block: 7890 characters (10 below the warning ceiling)
+  closing line last: checked in 27 markdown files
+OK: all checks passed

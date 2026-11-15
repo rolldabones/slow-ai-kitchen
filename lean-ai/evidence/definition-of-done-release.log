@@ -1,0 +1,10 @@
+  note: README release v1.4.1 · 2026-11-09 · Final
+  note: CHANGELOG entries: 17, oldest v1.0.0 (2026-07-10)
+  note: companions checked: 15; changed-since-release test NOT CHECKED (no git history available)
+  note: run records under evidence/ excluded from the masthead check: 13
+  note: internal links checked: 165 across 31 markdown files
+  note: tier test counts agree: Tier 1 1 to 3, Tier 2 and 3 3 to 7
+  note: Kitchen version pinned: v3.3.7, consistent across README and both templates
+  note: house style: closing line and em-dash check run on every markdown file except LICENSE.md
+
+PASS: every check passed

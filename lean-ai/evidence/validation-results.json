@@ -1,0 +1,274 @@
+{
+  "checks": [
+    {
+      "test": "C01 all attempts retained",
+      "pass": true,
+      "evidence": "150 total including failed-work cost / 5 accepted = 30"
+    },
+    {
+      "test": "C02 zero accepted is undefined",
+      "pass": true,
+      "evidence": "No successful denominator, never zero cost"
+    },
+    {
+      "test": "C03 missing cost blocks full result",
+      "pass": true,
+      "evidence": "Missing is not zero"
+    },
+    {
+      "test": "C04 negative cost rejected",
+      "pass": true,
+      "evidence": "Input validation"
+    },
+    {
+      "test": "C05 one-time cost shown separately",
+      "pass": true,
+      "evidence": "Recurring 14; pilot including setup 44"
+    },
+    {
+      "test": "C06 human effort can reverse token savings",
+      "pass": true,
+      "evidence": "Illustrative 19 vs 12, not an observed enterprise result"
+    },
+    {
+      "test": "C07 price shock applies only to model component",
+      "pass": true,
+      "evidence": "Illustrative model 20 -> 60; human 100 unchanged"
+    },
+    {
+      "test": "C08 lower unit cost need not lower spend",
+      "pass": true,
+      "evidence": "Illustrative: unit cost 8 against 10, volume 150 against 100, spend 1200 against 1000"
+    },
+    {
+      "test": "C09 failed mandatory gate blocks recommendation",
+      "pass": true,
+      "evidence": "Gate evaluated before savings; an undefined unit cost never recommends"
+    },
+    {
+      "test": "C10 safe refusal separate from accepted output",
+      "pass": true,
+      "evidence": "10 attempted, 8 accepted, 2 refused; refusals not denominator"
+    },
+    {
+      "test": "C11 means are not summed ratios",
+      "pass": true,
+      "evidence": "Pooled cost 100 / 10, not mean(60/2,40/8)"
+    },
+    {
+      "test": "C12 changed configuration needs revalidation",
+      "pass": true,
+      "evidence": "Configuration identity changes with the model even when the prompt does not"
+    },
+    {
+      "test": "C13 F24 displayed arithmetic",
+      "pass": true,
+      "evidence": [
+        {
+          "column": "modeled",
+          "computed": "12.97",
+          "printed": "12.97",
+          "match": true
+        },
+        {
+          "column": "month1",
+          "computed": "23.24",
+          "printed": "23.24",
+          "match": true
+        },
+        {
+          "column": "month3",
+          "computed": "14.43",
+          "printed": "14.43",
+          "match": true
+        }
+      ]
+    },
+    {
+      "test": "C14 workbook fictional worked example",
+      "pass": true,
+      "evidence": "5 hours case saving - 16 setup = -11 before other costs; synthetic"
+    },
+    {
+      "test": "C15 module section 4 illustration reproduces",
+      "pass": true,
+      "evidence": {
+        "case_processing": "446.00",
+        "per_accepted": "55.75",
+        "full_recurring_per_accepted": "70.75",
+        "pilot_per_accepted": "170.75",
+        "per_attempted_wrong": "44.60",
+        "price_x2": "59.00",
+        "price_x5": "68.75",
+        "x5_rise_pct": "23.3",
+        "understatement_pct": "20.0"
+      }
+    },
+    {
+      "test": "E01 manifest tokens agree with transcript headers",
+      "pass": true,
+      "evidence": {
+        "records": 136,
+        "unmatched": []
+      }
+    },
+    {
+      "test": "E02 R2 paired case sets match",
+      "pass": true,
+      "evidence": {
+        "cases": 26
+      }
+    },
+    {
+      "test": "E03 R2 input tokens match per case",
+      "pass": true,
+      "evidence": {
+        "cases": 26
+      }
+    },
+    {
+      "test": "E04 R2 prompt hashes match",
+      "pass": true,
+      "evidence": "Same recorded prompt hash"
+    },
+    {
+      "test": "E05 acceptance arithmetic reproduces recorded contrast",
+      "pass": true,
+      "evidence": {
+        "claude-opus-5-5": {
+          "critical_pass": 12,
+          "critical_total": 12,
+          "other_pass": 13,
+          "other_total": 14,
+          "arithmetic_gate_pass": true,
+          "failed_cases": [
+            "SC2"
+          ]
+        },
+        "claude-sonnet-5-5": {
+          "critical_pass": 11,
+          "critical_total": 12,
+          "other_pass": 11,
+          "other_total": 14,
+          "arithmetic_gate_pass": false,
+          "failed_cases": [
+            "B8",
+            "B10",
+            "A6",
+            "SC3"
+          ]
+        }
+      }
+    }
+  ],
+  "passed": 20,
+  "total": 20,
+  "runs": [
+    {
+      "source": "GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R1_claude-opus-5-5_run.json",
+      "run": "20261027-R1",
+      "model": "claude-opus-5-5",
+      "cases": 26,
+      "input_tokens": 238107,
+      "output_tokens": 105268,
+      "truncated": 0,
+      "headers_verified": 26,
+      "prompt_sha256": "288c580084cc17a66dba3831d5797faec541337acda291fbd6146453f871186f"
+    },
+    {
+      "source": "GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R1_claude-sonnet-5-5_run.json",
+      "run": "20261027-R1",
+      "model": "claude-sonnet-5-5",
+      "cases": 26,
+      "input_tokens": 238107,
+      "output_tokens": 110127,
+      "truncated": 2,
+      "headers_verified": 26,
+      "prompt_sha256": "288c580084cc17a66dba3831d5797faec541337acda291fbd6146453f871186f"
+    },
+    {
+      "source": "GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R2_claude-opus-5-5_run.json",
+      "run": "20261027-R2",
+      "model": "claude-opus-5-5",
+      "cases": 26,
+      "input_tokens": 242629,
+      "output_tokens": 110892,
+      "truncated": 0,
+      "headers_verified": 26,
+      "prompt_sha256": "bea208c313a6c5ed022e946e58ab1d807b5dccbe8850b4ad4bc10099c7b11f7b"
+    },
+    {
+      "source": "GRCnext-Copilot/tests/prompt-runs/transcripts/20261027-R2_claude-sonnet-5-5_run.json",
+      "run": "20261027-R2",
+      "model": "claude-sonnet-5-5",
+      "cases": 26,
+      "input_tokens": 242629,
+      "output_tokens": 127107,
+      "truncated": 0,
+      "headers_verified": 26,
+      "prompt_sha256": "bea208c313a6c5ed022e946e58ab1d807b5dccbe8850b4ad4bc10099c7b11f7b"
+    },
+    {
+      "source": "master-prompt-for-in-house-legal-and-compliance/tests/transcripts/20261018-T5_claude-opus-5-5_run.json",
+      "run": "20261018-T5",
+      "model": "claude-opus-5-5",
+      "cases": 16,
+      "input_tokens": 119247,
+      "output_tokens": 48175,
+      "truncated": 0,
+      "headers_verified": 16,
+      "prompt_sha256": "8b49e8c79dc7a70bff5fa8b8875744c9ae6983d4d17f4e8f98688253f2dffb75"
+    },
+    {
+      "source": "master-prompt-for-in-house-legal-and-compliance/tests/transcripts/20261018-T5_claude-sonnet-5-5_run.json",
+      "run": "20261018-T5",
+      "model": "claude-sonnet-5-5",
+      "cases": 16,
+      "input_tokens": 119247,
+      "output_tokens": 41286,
+      "truncated": 0,
+      "headers_verified": 16,
+      "prompt_sha256": "8b49e8c79dc7a70bff5fa8b8875744c9ae6983d4d17f4e8f98688253f2dffb75"
+    }
+  ],
+  "r2_comparison": {
+    "opus_output_tokens": 110892,
+    "sonnet_output_tokens": 127107,
+    "sonnet_vs_opus_output_pct": 14.622,
+    "interpretation": "Recorded output-token counts only; not price, cost, latency, human effort or a causal savings estimate."
+  },
+  "recorded_acceptance": {
+    "claude-opus-5-5": {
+      "critical_pass": 12,
+      "critical_total": 12,
+      "other_pass": 13,
+      "other_total": 14,
+      "arithmetic_gate_pass": true,
+      "failed_cases": [
+        "SC2"
+      ]
+    },
+    "claude-sonnet-5-5": {
+      "critical_pass": 11,
+      "critical_total": 12,
+      "other_pass": 11,
+      "other_total": 14,
+      "arithmetic_gate_pass": false,
+      "failed_cases": [
+        "B8",
+        "B10",
+        "A6",
+        "SC3"
+      ]
+    }
+  },
+  "fresh_model_calls": 0,
+  "enterprise_savings_validation": "NOT ESTABLISHED",
+  "missing": [
+    "paired baseline and intervention workflow observations",
+    "measured human effort",
+    "invoice or attributable billing",
+    "pre-agreed enterprise thresholds",
+    "independent human acceptance of new module"
+  ]
+}

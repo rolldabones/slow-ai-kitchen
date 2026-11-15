@@ -1,0 +1,32 @@
+[
+  {
+    "check": "grcnext-fixtures",
+    "exit_code": 0,
+    "stdout": "41 checked, 0 mismatched, 0 missing\n",
+    "stderr": ""
+  },
+  {
+    "check": "definition-of-done-release",
+    "exit_code": 0,
+    "stdout": "  note: README release v1.4.1 \u00b7 2026-11-09 \u00b7 Final\n  note: CHANGELOG entries: 17, oldest v1.0.0 (2026-07-10)\n  note: companions checked: 15; changed-since-release test NOT CHECKED (no git history available)\n  note: run records under evidence/ excluded from the masthead check: 13\n  note: internal links checked: 165 across 31 markdown files\n  note: tier test counts agree: Tier 1 1 to 3, Tier 2 and 3 3 to 7\n  note: Kitchen version pinned: v3.3.7, consistent across README and both templates\n  note: house style: closing line and em-dash check run on every markdown file except LICENSE.md\n\nPASS: every check passed\n",
+    "stderr": ""
+  },
+  {
+    "check": "origami-release",
+    "exit_code": 0,
+    "stdout": "  masthead v1.5.8 \u00b7 2026-11-09\n  companions checked: 7; substance test NOT CHECKED (no git history available)\n  internal links checked: 92 across 9 markdown files (18 verbatim run records under evidence/ not link-checked)\n  required packet fields: 13\n  packets checked in worked-example.md: 3\n  instrument block (instructions.md): 7890 characters, sha256 951378a5d59d...\n  candidate file: no candidate pending; block identical to instructions.md\n  candidate block: 7890 characters (10 below the warning ceiling)\n  closing line last: checked in 27 markdown files\nOK: all checks passed\n",
+    "stderr": ""
+  },
+  {
+    "check": "kitchen-appendix-canonical",
+    "exit_code": 0,
+    "stdout": "build_appendix_i: slow-ai-kitchen/enterprise-ai-architecture-primer.md up to date (256 figures)\n",
+    "stderr": ""
+  },
+  {
+    "check": "kitchen-appendix-split",
+    "exit_code": 0,
+    "stdout": "build_appendix_i: slow-ai-kitchen/primer/18-appendix-i-sources-and-current-figures.md up to date (256 figures)\n",
+    "stderr": ""
+  }
+]
