@@ -2,6 +2,15 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.5.1 (2026-11-16)
+
+Patch release on Michael Paik's ruling of 16 November 2026. Prepared with Claude, approved by Michael Paik.
+
+- **`README.md`, four link texts.** The library at library.grcskorea.com takes a page's title from the text of the first link in its file table row, so three rows were listed by folder name. The rows for `primer/`, `primer-workbook/` and `workbook/` now link as "Enterprise AI Architecture Primer: reading index", "Primer Workbook" and "Consultant Workbook: reading index", the headings of the pages they open, and the consultant's reader path names the workbook's reading index the same way. No link target changes; each row keeps its three cells.
+- **Recorded here, already on `main`.** The untagged commit `3c1daeb` of 15 November 2026 gave the `lean-ai/` row the link text "Lean AI: Protocol and Evidence". This release is the first tag that carries it.
+- README title block, How to Cite, Current version and `CITATION.cff` to v3.5.1. Primer How to Cite and `primer-workbook/README.md` name v3.5.1 (SAK-30); the derived part 00 carries the same edit and `split_markdown.py --verify` rebuilds the monolith byte for byte. The Primer stays at v2.1.0. No step, gate, tier, role or rule of the method changes.
+- Not in scope, logged: the web application at kitchen.grcskorea.com names v3.5.0 until a rebuild that Michael Paik releases.
+
 ## v3.5.0 (2026-11-15)
 
 New module, issued as a work in progress (WIP). Lean AI (`lean-ai.md`) joins as an operating module beside the Service Record, the Consultant Workbook and Take-Out, Delivery & Vending Machines: the cost of one accepted outcome, counted once across every attempt and everyone's effort; constrained model choice as a scenario, not a forecast; a resource envelope in the authorization; an exit that is tested; and no saving claimed before a comparison under W15 to W17. It connects instruments the Kitchen already has and replaces none. It is not a derivation module, and the count of six is unchanged. No change to the twelve steps, the ten gates, the three tiers, the roles, the operating rules, the workshop design, the Your Restaurant addendum, the Primer's text or the six derivation modules. DOCTRINE.md is unchanged and the module adds no doctrine.

@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.5.0 | 2026-11-15 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.5.1 | 2026-11-16 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -61,7 +61,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A function or program owner.** Read [The Feast](#the-feast) and [Your Restaurant](#addendum-your-restaurant), then start the tool registry at Step 10. The [restaurant resources](./restaurant-resources.md) file collects the referenced standards; the [workforce AI literacy bridge](./federal-workforce-literacy-bridge.md) aligns the method with the U.S. Department of Labor's AI Literacy Framework (TEN 07-25).
 
-**A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): One Workflow, Thirty Days, the engagement on one priority workflow for a named business owner, with the delivery cadence, the thirty-day calendar, six delivery instruments and twenty-six working records keyed to the steps and gates, each with a Done when line, also published one record per file under [workbook/](./workbook/README.md). It changes no step, gate, tier, role or principle.
+**A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): One Workflow, Thirty Days, the engagement on one priority workflow for a named business owner, with the delivery cadence, the thirty-day calendar, six delivery instruments and twenty-six working records keyed to the steps and gates, each with a Done when line, also published one record per file under workbook/, with its [Consultant Workbook: reading index](./workbook/README.md). It changes no step, gate, tier, role or principle.
 
 **A business owner, architect or finance reviewer asking what it costs.** Read [lean-ai.md](./lean-ai.md), a work in progress: the cost of one accepted outcome measured with the records the Consultant Workbook already has, and the pilot that a savings claim needs.
 
@@ -80,8 +80,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [restaurant-resources.md](./restaurant-resources.md) | Reference standards and supervisory guidance for the Restaurant addendum (ISO/IEC 42001, NIST, MAS), with a note on certification versus substance | You are building the program governance layer |
 | [federal-workforce-literacy-bridge.md](./federal-workforce-literacy-bridge.md) | Standalone module aligning the method with the U.S. Department of Labor AI Literacy Framework (TEN 07-25) for the public workforce and education systems | You are aligning training to the DOL framework for state workforce agencies, boards, grantees and colleges |
 | [enterprise-ai-architecture-primer.md](./enterprise-ai-architecture-primer.md) | Companion architecture reference across ten competencies, grounded in one vendor's platform, with its own How to Cite and amendment record; perishable figures in [primer/figures.yaml](./primer/figures.yaml); on method questions this README controls | You are designing or reviewing the systems the Kitchen governs |
-| [primer/](./primer/README.md) | The Primer in 21 derived parts with a reading index and a section index, verified to rebuild the single file byte for byte | You want to read the Primer rather than download it |
-| [primer-workbook/](./primer-workbook/README.md) | The Primer's practice set: scenario drills, the self-check bank, twenty-five artifact templates, eighteen diagrams as Mermaid sources and the enterprise vocabulary, each file rendering as it is | You want to practice the Primer or copy an artifact template |
+| [Enterprise AI Architecture Primer: reading index](./primer/README.md) | The Primer in 21 derived parts with a reading index and a section index, verified to rebuild the single file byte for byte | You want to read the Primer rather than download it |
+| [Primer Workbook](./primer-workbook/README.md) | The Primer's practice set: scenario drills, the self-check bank, twenty-five artifact templates, eighteen diagrams as Mermaid sources and the enterprise vocabulary, each file rendering as it is | You want to practice the Primer or copy an artifact template |
 | [karpathys-kitchen.md](./karpathys-kitchen.md) | Standalone module: twelve works by Andrej Karpathy read for what they establish about the technology's limits; an independent reading, not endorsed by its subject | You need the technical warrant for the method rather than its assertion |
 | [newtons-kitchen.md](./newtons-kitchen.md) | Standalone module: the three doctrines as three laws of consequential motion in the order of the *Principia*; restates DOCTRINE.md and varies nothing | You want the conceptual warrant for the method rather than its assertion |
 | [coetzees-kitchen.md](./coetzees-kitchen.md) | Standalone module: the epistemics of the human-AI working session, read through Coetzee's 2003 Nobel lecture; introduces Return to Source and Cognitive Provenance | You want to understand what working with the machine does to the person doing the work, and why the gates exist |
@@ -90,7 +90,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [my-kitchen.md](./my-kitchen.md) | Standalone module: the author's LinkedIn post "Names of places matter" and its first comment reworked against the steps and gates: what a name preserves, listening before naming, the owl in the overlap at Step 5, the post's three moments read against DOCTRINE.md and the comment's standard placed under Gate 6 | You want the method derived from where its author stands, or a plain account of why the machine's elegant sentences must be held to the world |
 | [service-record.md](./service-record.md) | One-page close-out of a single service, written by the named owner within a day of release; ten records trigger a method review (Step 12) | You have released a service and are closing it out, or you are refining the method against records rather than recollection |
 | [consultant-workbook.md](./consultant-workbook.md) | One Workflow, Thirty Days: the delivery instrument for a bounded engagement, with cadence, calendar, six instruments and twenty-six working records with Done when lines | You are delivering the method to a Client as a bounded engagement, or training the consultants who will |
-| [workbook/](./workbook/README.md) | The Consultant Workbook in 48 derived parts, one section or working record per file, verified to rebuild the single file byte for byte | You need one working sheet rather than the whole workbook |
+| [Consultant Workbook: reading index](./workbook/README.md) | The Consultant Workbook in 48 derived parts, one section or working record per file, verified to rebuild the single file byte for byte | You need one working sheet rather than the whole workbook |
 | [take-out-delivery-and-vending-machines.md](./take-out-delivery-and-vending-machines.md) | Operating companion for AI agents: three service patterns, a service ticket and receipt keyed to Informed Intent and a stop, reconcile and hand-back procedure | You are commissioning an agent run or maintaining a reusable agent service under the existing method |
 | [lean-ai.md](./lean-ai.md) | Operating module, a work in progress (WIP): the cost of one accepted outcome, counted once across every attempt and everyone's effort; constrained model choice as a scenario; a resource envelope in the authorization; an exit that is tested. Connects W15 to W17, F22 and F24 and adds no step, gate, tier or doctrine | You must show what an AI-enabled workflow costs per accepted outcome, or whether it survives a narrower or dearer choice of models |
 | [Lean AI: Protocol and Evidence](./lean-ai/README.md) | The Lean AI pilot protocol (not yet run) and the dated evidence behind the module: the audit and validation report of 15 November 2026, its derived records and the scripts that rerun them | You are planning a Lean AI pilot, or checking what the module's evidence does and does not establish |
@@ -577,7 +577,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.5.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.5.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -599,8 +599,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.5.0 (2026-11-15)**.
-New module, a work in progress (WIP): Lean AI (lean-ai.md), on the cost of one accepted outcome, with its pilot protocol and its evidence in lean-ai/. No step, gate, tier, role or rule of the method changes.
+Current version: **v3.5.1 (2026-11-16)**.
+Patch release: four README links to the reading indexes of the Primer and the Consultant Workbook and to the Primer Workbook carry the title of the page they open. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---
