@@ -4,16 +4,16 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 
 | Part | Title | Size (KB) |
 |---|---|---|
-| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 38 |
-| 2 | [Part 1: Workflow Architecture](01-part-1-workflow-architecture.md) | 87 |
-| 3 | [Part 2: Solution Architecture to Output contract](02-part-2-solution-architecture-to-output-contract.md) | 200 |
-| 4 | [Part 2: Solution Architecture · 2.8 Entry points and delivery routes to Solution Architecture: the one-page version](03-2-8-entry-points-and-delivery-routes-to-solution.md) | 111 |
-| 5 | [Part 3: Integration Engineering](04-part-3-integration-engineering.md) | 120 |
-| 6 | [Part 4: Governance by Design](05-part-4-governance-by-design.md) | 209 |
-| 7 | [Part 5: Knowledge Architecture](06-part-5-knowledge-architecture.md) | 74 |
+| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 39 |
+| 2 | [Part 1: Workflow Architecture](01-part-1-workflow-architecture.md) | 89 |
+| 3 | [Part 2: Solution Architecture to Output contract](02-part-2-solution-architecture-to-output-contract.md) | 204 |
+| 4 | [Part 2: Solution Architecture · 2.8 Entry points and delivery routes to Solution Architecture: the one-page version](03-2-8-entry-points-and-delivery-routes-to-solution.md) | 117 |
+| 5 | [Part 3: Integration Engineering](04-part-3-integration-engineering.md) | 122 |
+| 6 | [Part 4: Governance by Design](05-part-4-governance-by-design.md) | 214 |
+| 7 | [Part 5: Knowledge Architecture](06-part-5-knowledge-architecture.md) | 77 |
 | 8 | [Part 6: Data Architecture](07-part-6-data-architecture.md) | 50 |
 | 9 | [Part 7: Organizational Adoption](08-part-7-organizational-adoption.md) | 72 |
-| 10 | [Part 8: Operations and Measurement](09-part-8-operations-and-measurement.md) | 161 |
+| 10 | [Part 8: Operations and Measurement](09-part-8-operations-and-measurement.md) | 163 |
 | 11 | [Part 9: Executive Leadership](10-part-9-executive-leadership.md) | 60 |
 | 12 | [Part 10: Enterprise Systems Thinking](11-part-10-enterprise-systems-thinking.md) | 35 |
 | 13 | [THE PRACTICE LAYER](12-the-practice-layer.md) | 59 |
@@ -22,7 +22,7 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 | 16 | [Appendix C: Scenario Drills · Appendix D: Self-Check Bank · Appendix E: Interview Question Bank · Appendix F: The Architect's Artifact Set](15-appendix-f-the-architect-s-artifact-set.md) | 10 |
 | 17 | [Appendix G: The Diagram Set](16-appendix-g-the-diagram-set.md) | 4 |
 | 18 | [Appendix H: Vocabulary](17-appendix-h-vocabulary.md) | 44 |
-| 19 | [Appendix I: Sources and Current Figures](18-appendix-i-sources-and-current-figures.md) | 72 |
+| 19 | [Appendix I: Sources and Current Figures](18-appendix-i-sources-and-current-figures.md) | 77 |
 | 20 | [Appendix J: Competency Map](19-appendix-j-competency-map.md) | 3 |
 | 21 | [CLOSING](20-closing.md) | 2 |
 

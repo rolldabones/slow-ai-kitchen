@@ -650,6 +650,8 @@ Online comparison is A/B testing, and the discipline it requires is the one A/B 
 
 **The addition for non-deterministic systems is the self-disagreement floor.** Before comparing two versions, measure how much the *same* version disagrees with itself across runs on the same inputs. That figure is the floor beneath which no comparison is meaningful, and it is frequently larger than the effect being tested. 2.15 develops the method under shadow and canary deployment; the point here is that it belongs at the design of the test, not at the interpretation of the result.
 
+**Trials per case are how the floor is measured and how it is beaten.** Run each case several times per configuration and score each case by its pass rate across the runs. The spread of one case's observed pass rate shrinks with the square root of the number of runs: for a case that passes 70 percent of the time, the standard error of its observed rate is about 0.20 at five runs and about 0.10 at twenty. Two consequences follow for the design. Compare the two configurations case by case on the same inputs, a paired comparison, so that differences between cases do not swamp the difference between configurations. And set the number of runs from the effect that has to be seen: an improvement smaller than the per-case standard error at the chosen run count is invisible in any single case, visible only in the aggregate and only if the case count supports it.
+
 **Where traffic is scarce, the design changes rather than the standard.** A low-volume workflow will not accumulate the sample a clean split needs in any useful period. The honest options are to lengthen the window and accept the delay, to test on a proxy metric that moves faster while validating the proxy against the outcome metric separately or to abandon the online test and rely on offline comparison plus staged rollout with tight monitoring. The dishonest option, which is common, is to run the underpowered test anyway and present the result as evidence.
 
 #### The interaction effect classical A/B testing does not have
@@ -693,6 +695,19 @@ A model grader is a system in production with all the properties of one, and it 
 **Watch the two structural biases.** Model graders reward fluency and length independently of correctness, and they are lenient toward outputs from the same model family. Both are correctable in the rubric and neither is correctable by hoping.
 
 **Decision rule:** any metric produced by a model grader is reported with the date of its last human calibration attached, and an uncalibrated judge score is not admissible evidence for a change.
+
+#### Matching the correction to the bias
+
+When a judge's scores disagree with human review, the disagreement has a shape, and the shape names the bias. Each bias has a correction in the design of the evaluation, not only in the judge's instructions.
+
+| What the disagreement looks like | The bias | The correction |
+| --- | --- | --- |
+| In pairwise comparisons the judge prefers whichever answer it reads first, or second, more often than human reviewers do | **Position** | Grade each pair in both orders and count a preference only where the two orders agree; randomize order across the set |
+| The judge scores longer or more fluent answers higher where reviewers see no quality difference | **Verbosity** | A rubric that scores named criteria rather than overall quality, length-matched comparison sets and a check that the score does not track length |
+| The judge favors outputs from its own model family over equally good outputs from another | **Self-preference** | A judge from a different family from the system under test, or a panel, calibrated against the same human set |
+| Agreement with the frozen human set moves although the system did not change | **Judge drift** | The judge's model and prompt pinned as versioned configuration, and the frozen calibration set re-run on a schedule and on every change to the judge |
+
+**The test of a correction is the calibration set, not the argument for it.** Re-measure agreement per class after the change; a correction that does not move agreement toward the human set has not corrected anything.
 
 ### The change-management link
 

@@ -582,6 +582,18 @@ Five routes: the training data, which you do not control; **the retrieval corpus
 
 ⧉ **The retrieval corpus is the bias source the architect most controls and most easily fixes, because the architect chose the corpus.** If the indexed material over-represents one region, client type or period, every answer inherits the skew. Training-data bias arrives with the model; corpus bias is a design decision and the route most often overlooked in review.
 
+### Reading the evidence: data, framing or the evaluation itself
+
+A disparity across groups, in outputs or in a dataset, is evidence that bias exists somewhere, not evidence of where. The mitigation depends on the source, and the three sources an architect can act on leave different evidence.
+
+| Source | The evidence that points to it | The mitigation |
+| --- | --- | --- |
+| **Data**: the retrieval corpus or the records the system reads | The disparity follows what the corpus holds for each group, such as fewer, older or lower-quality documents for one, and it persists across prompt wordings | Fix the corpus: coverage, recency and authority by group. Changing the prompt will not move it |
+| **Prompt framing** | The disparity moves when a framing element changes: a presupposition, examples drawn from one group, a proxy field the prompt surfaces | Remove the presupposition, balance the examples and withhold the proxy, then re-test with counterfactual inputs that change only the group signal |
+| **Evaluation design** | The disparity appears in the scores but not in blind human review of the same outputs; or the test set under-represents a group; or the rubric rewards a style one group's inputs produce | Fix the instrument: stratify the set and calibrate the grader per group against human review (8.6). The system may not be biased; the measurement is |
+
+**Counterfactual pairs are the cheapest discriminator.** Hold the case constant, change only the group signal and compare. A difference that appears there is in the system's handling; a difference that appears only across naturally occurring cases may be in the data those cases carry.
+
 ### Testing is segmentation
 
 Measure accuracy and error rates separately by group, never in aggregate. The refinement: **equal overall accuracy with unequal error types across groups is still a fairness problem**, because a false positive and a false negative have different consequences for the person affected: a system erring toward denial for one group and approval for the other is not fair even when equally accurate for both.
@@ -1117,6 +1129,19 @@ The objection worth answering directly, because it will be raised: a bundle is o
 
 ⚠ **One rule of candor applies throughout: do not assume the platform screens these bundles for you.** Verify what automated vetting actually exists, read the documentation, and establish the scope of any scanning and what it does and does not catch. An assurance narrative resting on a vetting process nobody has confirmed is the same defect as a control with no evidence artifact, and it fails in the same place.
 
+### Ranking a deployment's risks by exposure
+
+A risk register that lists every category at the same weight has not ranked anything. Exposure is what turns the list into an order: how reachable the risk is from outside the organization's control, how large the effect is when it lands and how many systems share the dependency. Four categories are routinely mis-ranked on agent deployments.
+
+| Category | How it is mis-ranked | What raises its exposure |
+| --- | --- | --- |
+| **Attack surface**: the untrusted content the agent reads and the tools it can call | By the number of tools rather than by what untrusted content can make them do | Any path from content the system did not choose to a tool with a side effect |
+| **Failure modes** of the model and the integration | By frequency, when severity and detectability matter more | A failure that is silent and reaches a client or a record before anyone sees it |
+| **Token and quota exhaustion** | As a cost line rather than an availability risk | A shared organization-level limit or spend cap: one runaway agent loop exhausts it and every system drawing on it stops together, because a reached spend cap fails every request until access resumes (Appendix I, `params.errors`) |
+| **Dependency and supply-chain risk**: models, routes, connectors, Skills, packages | As vendor risk left to procurement | A third-party component that executes on invocation or reads untrusted content (the supply chain section above), or a single route with no accepted fallback (3.8) |
+
+**The ranking rule: reachable from outside, silent when it fails and shared across systems rank first, in that order.** Per-run budgets, separate workspaces and limits for separate systems and an alert well below the cap are the controls that move token exhaustion down the list.
+
 ### Secure defaults, red teaming and incident response
 
 **Secure defaults** means the safe configuration is what you get without doing anything: no retention, no training use, no tools, no external network access, minimum scope, logging on. Every relaxation is a decision with an owner and a record. The alternative, secure configuration on request, makes the secure ones the exception, at a ratio nobody knows.
@@ -1397,6 +1422,21 @@ Findings come in two grades. A **minor nonconformity** is a lapse inside an othe
 The practical rule for reading a counterparty's certificate, in order: **scope first, statement of applicability second, date and surveillance status third and the certificate itself last.** By then you know what the certificate is worth, and in most vendor conversations the first three questions establish whether anyone on the other side has read it either.
 
 ⚠ Be careful with framework names, versions and content in any document that leaves the building: misdescribing what a standard requires is a credibility failure with the specialist audience who reads these documents. Where you are not certain of a standard's content, state the control you operate and the assertion it supports, and let someone who has read the current text confirm the mapping.
+
+### From an obligation to the control set that evidences it
+
+The crosswalk maps controls to frameworks. The architect's more frequent question runs the other way: given one stated obligation, which architectural controls evidence it, and which plausible-looking control does not.
+
+| Obligation as stated | The control set that evidences it | The control that looks right and is not |
+| --- | --- | --- |
+| Data must be processed in a named jurisdiction | The delivery route and hosting form (2.8), the inference geography where the route offers one (6.8) and a data flow record showing every hop | A zero-data-retention arrangement, which governs how long data is held, not where it is processed |
+| The provider must not retain prompts or outputs | A zero-data-retention arrangement on the configuration in use, and a check that every feature in the design is eligible under it, since stateful features can fall outside it (Appendix I, `entry.managed_agents_data`) | A contractual statement about retention, made without checking which features the design uses |
+| PHI may be processed only under a BAA | A covered configuration, using features listed as eligible (2.8, regulated-industry constraints) | A BAA held for another configuration |
+| Personal data is minimized before it reaches the model | Detection and redaction of personal data before the prompt is assembled, with each redaction logged | An instruction to the model not to repeat personal data it has already received |
+| Every consequential decision must be reconstructable | Audit logging of inputs, retrieved sources, model and prompt versions, tool calls and the human decision (4.8) | Retaining the final output only |
+| Clients' material must not mix | Tenant isolation at the retrieval filter, the cache scope and the memory store (5.4, 2.13) | Isolation at the application layer while a shared index or cache serves every tenant |
+
+**Read the third column first.** Each row names the control a design review will be offered as the answer and that does not evidence the obligation.
 
 ## 4.17 Operational resilience
 

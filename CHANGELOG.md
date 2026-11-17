@@ -2,6 +2,26 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.7.0 (2026-11-18)
+
+Minor release on Michael Paik's request of 18 November 2026 to add to the Primer the subjects the December 2026 revision of the Claude Certified Architect – Professional objectives brings forward. The Primer body stays free of exam and certification references; no partner-confidential material is used. Prepared with Claude, approved by Michael Paik.
+
+- **`enterprise-ai-architecture-primer.md` v2.2.0.** Thirteen subsections added inside existing sections, about 4,000 words; no existing sentence changes, and no part or section is added or removed, so the Contents and its 143 links stand.
+  - **1.2** Commitments the architecture cannot keep: five drafted commitments, why each fails and what resolves it.
+  - **2.4** Skills as the pattern: when the procedure is the asset, and where the delegation boundary sits.
+  - **2.6** Effort and the context lifecycle of a long-running agent: effort as the reasoning dial and its cache behavior; compaction, context editing and the memory tool compared.
+  - **2.8** Promoting a team's workflow to the organization: what managed policy fixes and what teams keep, decided by the unattended case. The agent runtime, decided with the route: a loop on the Messages API, the Agent SDK or headless Claude Code, or Claude Managed Agents, and session state as a data-custody decision.
+  - **2.9** Stating the residual risk without overstating certainty.
+  - **3.8** Reading the trace to choose the control: five failure patterns, with fallback routing and the spend-cap case.
+  - **4.5** Reading the evidence for bias: data, prompt framing or the evaluation itself.
+  - **4.12** Ranking a deployment's risks by exposure, including token and quota exhaustion.
+  - **4.16** From an obligation to the control set that evidences it, with the control that looks right and is not.
+  - **5.4** Three retrieval architectures: full-corpus context, agentic search with tools and the pre-built pipeline.
+  - **8.6** Trials per case, with the standard error arithmetic, and matching the correction to the judge's bias (position, verbosity, self-preference, drift).
+- **`primer/figures.yaml`**: six keys, each read on 18 November 2026 against platform.claude.com or code.claude.com: `thinking.effort`, `tools.context_lifecycle`, `params.errors`, `entry.managed_agents`, `entry.managed_agents_data`, `entry.managed_settings`. Appendix I regenerated with `tools/build_appendix_i.py` (262 figures) and checked.
+- `primer/` regenerated with `split_markdown.py --section-index --max-bytes 240000 --title "Enterprise AI Architecture Primer" --h2-split "APPENDICES"` and verified to rebuild the monolith byte for byte. How to Cite and the amendment record name v2.2.0 in v3.7.0; README title block, How to Cite, Current version and `CITATION.cff` to v3.7.0; `primer-workbook/README.md` names v2.2.0 and v3.7.0 (SAK-30). No step, gate, tier, role or rule of the method changes.
+- Not in scope, logged: the Primer Workbook's self-check bank and drills are not extended to the new subsections; the web application at kitchen.grcskorea.com follows at a rebuild that Michael Paik releases.
+
 ## v3.6.0 (2026-11-17)
 
 Minor release on Michael Paik's request of 17 November 2026, under express reopening of the no-further-additions rule for this entry. Prepared with Claude, approved by Michael Paik.

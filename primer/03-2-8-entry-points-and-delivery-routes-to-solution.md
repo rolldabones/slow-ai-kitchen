@@ -86,6 +86,18 @@ The table above selects the **kind** of asset. This selects the **channel**, whi
 
 ⌂ The marketplace is the governance artifact here, not the plugin. It makes the configuration estate enumerable, the precondition for saying what is deployed, revoking a component that turns out to be wrong and evidencing to an auditor that the standard the policy describes is the standard the engineers run. Teams pasting configuration files into a chat channel can do none of the three.
 
+#### Promoting a team's workflow to the organization: what the center fixes
+
+A workflow proven on one team reaches the organization as a plugin from a marketplace the organization runs (the selection rule above). Packaging is the easy half. The hard half is deciding which of the workflow's settings travel with it as defaults and which the center fixes, and the test is the one the configuration hierarchy already states: **a control the person it binds can change is documentation.**
+
+| Fix centrally, in managed policy | Leave to the team, in project or user settings |
+| --- | --- |
+| Deny rules for destructive and egress commands; the marketplace and plugins the organization requires; the bypass mode disabled, and auto mode too where a classifier is not an acceptable approver (Appendix I, `entry.managed_settings`) | The workflow's own allow rules for the commands it needs, the Skills and subagents it ships, its conventions file |
+| Hooks that must run, such as the audit-log write at session end | Hooks that help, such as a formatter after an edit |
+| The permitted model set and the effort ceiling, where spend is governed | The model and effort a task uses within that set |
+
+**The unattended case decides the line.** A workflow a person watches can lean on the person: a prompt they read, a plan they approve. The same workflow run headless in a pipeline has nobody to ask, so whatever the person was doing has to be done by a deny rule, a hook or the sandbox, and none of those may sit where the pipeline's author can lift it. Two settings facts make this concrete: project-level settings cannot start a session in auto or bypass mode, and managed policy can remove both modes outright (`entry.managed_settings`). Design the unattended run against managed policy and the auto-deny mode, and treat any need for more as an exception with a named approver.
+
 #### Hook events and the guarantee they buy
 
 2.3 names Hooks as the primitive whose job is *guarantee*. That guarantee is only as good as the event it fires on; the events divide into three useful classes.
@@ -149,6 +161,22 @@ Five surfaces; the platform map in 2.3 lists entry points illustratively, and th
 | **GCP Vertex AI** (Claude Models on Google Cloud, Google managed) | Claude as a managed model in the Model Garden of Google Cloud's Agent Platform (formerly Vertex AI), called via the Anthropic Vertex client or Google's SDK, billed on the Google Cloud Platform (GCP) project, authenticated with Google Cloud credentials; models are enabled per project in the Model Garden console | The organization runs on GCP, its machine learning (ML) stack lives in Agent Platform (formerly Vertex AI) and it wants a single billing and audit entry point across foundation models |
 | **Claude Models on Google Cloud (Anthropic managed)** | The Claude API, run by Anthropic and reached through the organization's Google Cloud project: billed through Google Cloud Marketplace, called at claude.googleapis.com in the Claude API request format through the `AnthropicGoogleCloud` client, authenticated with Google Cloud credentials and the `roles/claude.*` IAM roles. Setup creates a separate Anthropic organization under Anthropic's Commercial Terms, and Anthropic is the data processor | The organization wants Google Cloud paper, billing and identity with the Claude API operated by Anthropic rather than a model operated by Google in Agent Platform: it stands to GCP Vertex AI as Claude Platform on AWS stands to AWS Bedrock. Confirm current commercial terms before committing |
 | **Microsoft Foundry** (Azure) | Claude through Microsoft's Foundry catalog on Azure, billed on the Azure subscription, authenticated through Entra ID or an Azure API key, deployed into its Azure region. Two hosting forms: **Hosted on Azure** (an Anthropic-operated service running on Azure infrastructure; prompts and completions remain within Azure, and only usage metadata and content flagged by Anthropic's safety systems go to Anthropic; the hosted-model list changes and is not restated here; Appendix I, `routes.foundry_hosted`) and **Hosted on Anthropic infrastructure** (inference runs on Anthropic infrastructure) | A Microsoft enterprise agreement, identity through Entra ID and a cloud footprint on Azure; Foundry consolidates AI procurement on the same paper. Verify the current hosted-model list before committing, and where residency or General Data Protection Regulation (GDPR) requirements are strict, verify the hosting form and compliance posture of the models deployed |
+
+### The agent runtime, decided with the route
+
+The route answers who runs the model. A second question sits beside it whenever the design is an agent: **who runs the loop**, meaning the code that calls the model, executes the tools it asks for, holds the session's state between turns and contains what the agent can touch. Three runtimes answer it, and they divide ownership differently.
+
+| Runtime | Who owns the loop, the sandbox and the session state | Where it fits | What it costs the design |
+| --- | --- | --- | --- |
+| **A loop you write on the Messages API** | The organization owns all three | Short, bounded agents inside the organization's own product, on any route, since every route serves the Messages API | Retries, tool execution, state, containment and observability are all the organization's code, and all of it is the organization's to evidence |
+| **The Agent SDK, or Claude Code run headless, in the organization's own process** | The organization owns the process, the sandbox and the session store; the package owns the loop (Appendix I, `entry.agent_sdk`) | Agents that must run inside the organization's network, next to its data, on the route procurement already cleared | Containment is the organization's environment, so the permission mode and the sandbox are its controls (the Claude Code section above) |
+| **Claude Managed Agents** | Anthropic hosts the harness; sessions run in an Anthropic-managed cloud sandbox or in a sandbox the organization hosts, and the service keeps the session's event history (`entry.managed_agents`) | Long-running and asynchronous work, minutes to hours, where the team does not want to build a loop, a sandbox or a tool-execution layer | Offered on fewer routes than the Messages API and in beta, and its stored sessions change the data-handling answer (`entry.managed_agents_data`) |
+
+**The two decisions constrain each other, which is why they are made together.** A hosted runtime is reachable only on the routes that offer it, so a residency or procurement requirement that forces a cloud-managed route can rule it out, and the organization then owns the loop and its session state. The reverse also holds: choosing the hosted runtime for its convenience narrows the routes, and with them the residency and feature-availability options in the table above.
+
+**Session state is a data-custody decision, not an engineering detail.** A runtime that keeps transcripts, files and sandbox state between turns holds client material for as long as the session lives. Where a zero-data-retention arrangement or a business associate agreement is part of the design, check the runtime's eligibility as well as the route's, because the hosted runtime's stored sessions are what take it out of scope (`entry.managed_agents_data`). The documented exception is a self-hosted deployment, which moves the stored data, and the duty to govern it, back to the organization.
+
+⌂ Name the owner of each of the three in the decision record (2.9): the loop, the sandbox and the session store. A design that cannot say who owns the session store cannot say who answers a deletion request against it.
 
 ### Regulated-industry constraints
 
@@ -263,6 +291,10 @@ Clause 6 deserves emphasis because it is the clause conventional records come cl
 | **Reversal path and switching condition** | Configuration flag reverts to manual assembly with no deployment, under 5 minutes. Prior release tuple retained for 90 days. The condition that would reopen the decision: citation validity below 90 percent on any payer segment for two consecutive weeks, or a payer withdrawing acceptance of assembled evidence |
 
 Note that every clause is answerable in one or two lines. The record's value is not its length, it is that seven questions with expensive answers were asked before the build rather than after.
+
+### Stating the residual risk without overstating certainty
+
+A decision record fails a stakeholder most often in one sentence: the one that describes how the model will behave. "The model will not disclose personal data" is a claim about behavior no one can guarantee. The record should state the control and its measured performance instead: personal data is redacted before the prompt is assembled; on an evaluation set of a stated size the residual disclosure rate was a stated figure; a sampled audit checks it in production; a named person accepted the residual. **The test of a record's honesty is whether each statement about the model's behavior is either a measured rate on a named set or a control outside the model.** A stakeholder constraint the record does not address is a missing clause, and the revision adds the trade-off and its residual risk, not a stronger adjective.
 
 ## 2.10 Portfolio-level architecture
 

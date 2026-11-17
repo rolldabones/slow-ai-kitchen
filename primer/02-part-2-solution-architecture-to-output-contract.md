@@ -612,6 +612,10 @@ The four production constraints are the single most useful list in this section 
 
 And the sentence to give a client: an unbounded agent is a liability. "Deploy the agent and monitor it" is not a bounded design; "deploy the agent with per-turn budgets, scoped tools, explicit permissions and stopping criteria" is.
 
+#### Skills as the pattern: when the procedure is the asset
+
+A fourth design is common enough to name: an augmented model or an agent whose capability arrives as **Skills**, procedures with instructions and scripts loaded on demand (2.3). It is the right shape when the thing worth reusing is a method rather than a system, used across many tasks or teams, and when governance wants that method versioned, owned and revocable in one place (2.8, the distribution channels). **Its delegation boundary is specific: the Skill fixes how the work is done, and the model decides when to use it.** That is acceptable where invoking the wrong procedure, or none, is caught downstream. Where the risk profile requires that the procedure always runs, at a known step, the invocation belongs in code, which makes the design a workflow that calls the Skill rather than a model that chooses it.
+
 ### Mapping use cases by predictability and autonomy
 
 Plot any use case on two axes: how predictable the path is, and how much autonomy you are willing to grant the model.
@@ -1305,6 +1309,24 @@ These compose without conflict, because each solves a different part of the prob
 For tasks that exceed the window regardless of discipline: **compaction**, **structured note-taking** and **subagent architectures**, developed in 2.2 under the working-memory property, including Anthropic's three-way rule for choosing between them. Compaction and context editing now exist as documented platform features rather than only as patterns you implement yourself.
 
 The three are worth re-reading in the context of model choice, because a cheaper model with disciplined context often beats an expensive model with sloppy context, and knowing that is an architect's judgment rather than a product fact.
+
+#### Effort and the context lifecycle of a long-running agent
+
+Two settings decide whether an agent that runs for hours still works in its last hour: how much it reasons per turn, and what happens to its history as the history grows.
+
+**Effort is the reasoning dial, and it moves every output token, not only thinking.** Lower effort means fewer and terser tool calls as well as less thinking; it is a behavioral signal rather than a token budget, and the default differs by model class (Appendix I, `thinking.effort`). The architectural rules follow from those two facts. Set it explicitly and sweep it on the evaluation set rather than inheriting a default from the previous model. Give subagents doing bounded lookups a lower setting than the orchestrator that plans. And **hold the top-level setting constant inside a conversation that depends on its cache**, because changing it between requests can invalidate the cached prefix; where the model supports a per-message change, that form preserves the cache (`thinking.effort`).
+
+**Three platform mechanisms manage the history, and they do different jobs** (Appendix I, `tools.context_lifecycle`):
+
+| Mechanism | What it does to the history | What survives | Choose it when |
+| --- | --- | --- | --- |
+| **Compaction** | Replaces older turns with a summary written server-side, on demand or at a token threshold | The summary, plus recent turns where they are kept word for word | The default for a long conversation or agent task; the platform documents it as the primary strategy |
+| **Context editing** | Clears specific content by rule: the oldest tool results, older thinking blocks | Everything not cleared, unsummarized | Old tool results make up most of the history and are no longer needed, and finer control than summarization is wanted |
+| **Memory tool** | Nothing; it gives the agent files outside the window that it reads and writes | Whatever the agent recorded, across sessions | State must outlive the session or the summary: progress logs, decisions, a feature checklist |
+
+**They compose rather than compete.** Compaction keeps the active context small; the memory tool holds what must survive summarization; context editing warns the agent to write to memory before results are cleared. The selection error to avoid is treating either of the first two as persistence: **a summary is lossy and a cleared result is gone, so anything the next session must know belongs in memory, written deliberately.**
+
+**Each mechanism has a cost that lands elsewhere in the design.** Clearing invalidates the cached prefix at the point of clearing, so a clear should remove enough to pay for the cache write it causes. And the memory tool is client-side: the organization stores the files, so their retention, size, expiry and path validation are the organization's controls, the last of them a security control, since an unvalidated path lets the agent read outside its directory (2.13, 4.12).
 
 ### Progressive discovery versus monolithic context
 

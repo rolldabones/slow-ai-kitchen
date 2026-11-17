@@ -767,6 +767,20 @@ The mechanisms above are usually specified without a location, and a control at 
 
 **Fallback behavior belongs in the eval suite.** It is the control most often built and least often exercised, because the condition that triggers it does not occur during development. A fallback path that has never been scored is an assumption about what the system does under load, and the first time it runs will be the first time anyone sees its output.
 
+#### Reading the trace to choose the control
+
+The mechanisms above are chosen from the failure pattern in the error traces, not from a general preference for resilience. Five patterns account for most incidents on a production model integration, and each has one control that addresses it without creating a second problem.
+
+| What the trace shows | What it means | The control | What it must not do |
+| --- | --- | --- | --- |
+| Bursts of rate-limit responses carrying a retry-after value | The organization is over a rate limit for a moment | Backoff with jitter that honors the retry-after value, under a retry budget; the client SDKs retry a small number of times by default (Appendix I, `params.errors`) | Retry immediately, or retry without a global budget |
+| Rate-limit responses with no retry-after value, persisting | A spend cap has been reached, and retrying will not succeed until access resumes (`params.errors`) | Stop, alert the cost owner and degrade to the defined reduced mode | Retry at all: every retry is wasted load and a misleading log line |
+| Overloaded or server errors across many callers at once | The provider or the route is degraded | Backoff, then a circuit breaker at the service boundary and **fallback routing** to a second route or model tier the orchestrator has accepted in advance (2.11) | Fail over to a route the residency or data-handling decision excluded |
+| Client-side timeouts on long requests | The response outlived the connection | Streaming, or batch for work that can wait; inner timeouts shorter than outer ones | Raise every timeout until the symptom disappears |
+| Timeouts after a tool with a side effect has run | The action may have completed and the client does not know | An idempotency key on every side-effecting call, and query before retry (below) | Retry with a fresh key, or rely on an instruction telling the model to check first |
+
+**The last row is the one with consequences, and the instruction is the tempting wrong answer.** The retry usually happens in a client wrapper the model never sees, so a prompt telling the model to check for an earlier payment cannot stop a duplicate the wrapper creates. The guard has to be enforced where the side effect happens.
+
 ### Never retry a non-idempotent action blindly
 
 The rule has a stronger form for agents. **An agent's tool call that changed external state and then timed out is in an unknown state, and the correct response is to query, not to retry.** Three steps, in order.

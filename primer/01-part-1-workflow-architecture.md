@@ -238,6 +238,20 @@ A discovery interview produces material. It does not produce scope. The step bet
 ⧉ **A capability list that names four capabilities and an architecture sketch that assigns three of them has not identified a gap; it has hidden one.** The unassigned capability is being performed by somebody, usually the user, usually unbudgeted, and it will appear in the cost model only after launch.
 
 
+### Commitments the architecture cannot keep
+
+Discovery notes and draft service levels carry commitments written by people who do not know which of them a probabilistic component can meet. Finding them before signature is cheaper than explaining them after, and they come in recognizable forms.
+
+| The commitment as drafted | Why the architecture cannot keep it | What resolves it |
+| --- | --- | --- |
+| "100 percent accurate", "no hallucinations", "always cites correctly" | No model output is guaranteed; accuracy is a measured rate on a defined population (8.2) | A target rate on a named evaluation set, with a human control for the residual (2.12) |
+| "The same answer every time" | Generation is non-deterministic, and model versions change | Determinism in code where it is required; elsewhere a consistency target and a pinned model version (2.11) |
+| A latency percentile set without reference to the design | High reasoning effort, long contexts and multi-step agents trade latency for quality (2.6) | Either the target or the design changes: a lower effort setting, a smaller model, a cache, a different pattern |
+| "Uses the newest model the day it ships" alongside a cloud-managed route | Feature and model availability on managed routes can lag the first-party API (2.8) | Decide which commitment binds, and record the one given up |
+| A residency or no-retention promise alongside a feature that stores state | Stateful features can fall outside the data-handling arrangement (4.16) | Drop the feature or change the promise; do not keep both |
+
+**The resolution is a clarification or an architectural change, never silence.** A commitment the system cannot meet that stays in the document becomes the service credit, the dispute or the regulator's question later.
+
 ## 1.3 Delegation: the three owners and the mapping method
 
 Decomposition produces a **delegation map**, and it answers the first of the four decisions (2.1): what part of the work Claude should own.

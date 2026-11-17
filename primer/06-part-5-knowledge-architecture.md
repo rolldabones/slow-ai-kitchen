@@ -423,6 +423,20 @@ Retrieval-augmented generation is presented as a technique and operated as a sys
 
 **⧉ The single largest risk in the whole chapter is failure attribution.** "The answer was wrong" is reported as a model defect roughly always and is a model defect roughly never. The distribution in practice is heavily weighted toward source, parse, enrich and retrieve. The consequence of misattribution is specific and expensive: teams upgrade models, rewrite prompts and add reasoning steps against a corpus problem, observe no improvement, conclude the technology is immature and stop. **An architect's most valuable single capability in a retrieval program is localizing a failure to one of thirteen stages within an hour.**
 
+### Three retrieval architectures, only one of which is a pipeline
+
+The thirteen stages describe a pre-built pipeline. It is one of three ways to give a model the material it needs, and the choice between them comes before any stage is designed.
+
+| Architecture | How the material reaches the model | Fits | Fails |
+| --- | --- | --- | --- |
+| **Full-corpus context** | The whole corpus in the window, cached | Small, stable corpora that fit with room to work (5.3) | Corpora that grow, change often or carry entitlements that differ by user |
+| **Agentic search with tools** | The agent searches at runtime with tools, such as file search, pattern matching or targeted queries, and reads what it finds (2.6, just-in-time context) | Navigable estates such as code, file shares and well-named databases; freshness-critical material, since there is no index to go stale | Large unstructured prose where lexical search misses paraphrase; latency- and cost-bound paths, since every search is a round trip |
+| **Pre-built pipeline** | Chunked, embedded and indexed in advance; retrieved, reranked and assembled per query (the thirteen stages) | Large unstructured estates queried at volume under latency limits | Estates whose index cannot be kept fresh, or whose permission model the index does not carry |
+
+**Where a pipeline is chosen, two configuration choices do most of the work.** Contextual retrieval, which adds a short chunk-specific context before embedding and combines embeddings with lexical matching and reranking, reduces retrieval failures by the margins recorded in Appendix I (`retrieval.contextual_embeddings`, `retrieval.plus_bm25`, `retrieval.plus_rerank`). And a defined fallback for the query the index cannot answer, whether an agentic search over the source, a wider retrieval or an honest inability, keeps a miss from becoming a confident wrong answer.
+
+**The hybrid is common and legitimate.** A stable core loaded in full, a pipeline for the large estate and agentic search for the freshness-critical tail is the retrieval form of the hybrid 2.6 recommends for context.
+
 ### The diagnostic table
 
 | Symptom | Most likely stage | Fix |
