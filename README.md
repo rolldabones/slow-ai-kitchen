@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.5.2 | 2026-11-17 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.6.0 | 2026-11-17 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -67,6 +67,8 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A reader who wants the derivations.** Read the six derivation modules: [karpathys-kitchen.md](./karpathys-kitchen.md) (the principles derived from the technology's mechanisms), [newtons-kitchen.md](./newtons-kitchen.md) (the three doctrines as three laws of consequential motion), [coetzees-kitchen.md](./coetzees-kitchen.md) (the epistemics of the working session), [mondrians-kitchen.md](./mondrians-kitchen.md) (the doctrines and the GRCnext™ primitives seen as one composition, and the twelve steps as the method of reaching it), [wiszowatys-kitchen.md](./wiszowatys-kitchen.md) (a software architect's six-part practical reference set against the steps and gates, and the page it does not have) and [my-kitchen.md](./my-kitchen.md) (the author's own place and its names: listening before naming, and what lies beneath a name). They change no step, gate, role or principle.
 
+**A reader who has finished the method.** Follow the coda sign to [coda.md](./coda.md), *Coda: An Ode to Tom Sawyer*: the closing passage, on who the method needs the reader to be. It changes no step, gate, role or principle.
+
 **Prefer a guided tool.** A web application at https://kitchen.grcskorea.com/ carries the twelve steps and, since 11 October 2026, the Cookbook, the sample prompts, the Consultant Workbook, the agent companion, the derivation modules (six as of the v3.3.0 rebuild of 1 November 2026), the workforce AI literacy bridge and the reference resources, in English, Korean, Vietnamese and Japanese. This repository is the text of record; the application states the release its text follows and is rebuilt from it only after a human release.
 
 ## Repository Contents
@@ -94,6 +96,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [take-out-delivery-and-vending-machines.md](./take-out-delivery-and-vending-machines.md) | Operating companion for AI agents: three service patterns, a service ticket and receipt keyed to Informed Intent and a stop, reconcile and hand-back procedure | You are commissioning an agent run or maintaining a reusable agent service under the existing method |
 | [lean-ai.md](./lean-ai.md) | Operating module, a work in progress (WIP): the cost of one accepted outcome, counted once across every attempt and everyone's effort; constrained model choice as a scenario; a resource envelope in the authorization; an exit that is tested. Connects W15 to W17, F22 and F24 and adds no step, gate, tier or doctrine | You must show what an AI-enabled workflow costs per accepted outcome, or whether it survives a narrower or dearer choice of models |
 | [Lean AI: Protocol and Evidence](./lean-ai/README.md) | The Lean AI pilot protocol (not yet run) and the dated evidence behind the module: the audit and validation report of 15 November 2026, its derived records and the scripts that rerun them | You are planning a Lean AI pilot, or checking what the module's evidence does and does not establish |
+| [coda.md](./coda.md) | Closing passage, reached by the coda sign at the end of the twelve steps: Rush's "Tom Sawyer" and Twain's *The Adventures of Tom Sawyer* read for the person the method needs, with Rush's integration of Anika Nilles as the model for bringing AI into a going concern; adds no step, gate, tier or doctrine and is not a derivation module | You have finished the method and want to be reminded who it needs you to be |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
 
@@ -363,6 +366,8 @@ The event does not end when the last plate goes out. It ends when the debrief is
 
 *Output: Operational audit log, incident record, revised tool registry and updated training standards.*
 
+<img src="./coda-sign.svg" alt="Coda sign" height="20"> **To Coda.** The twelve steps end here. The closing passage, [Coda: An Ode to Tom Sawyer](./coda.md), is about the person the method needs to carry them.
+
 ---
 
 ## Definition of Done for the Method Itself
@@ -577,7 +582,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.5.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.6.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -599,8 +604,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.5.2 (2026-11-17)**.
-Patch release: four README links to the reading indexes of the Primer and the Consultant Workbook and to the Primer Workbook carry the title of the page they open. No step, gate, tier, role or rule of the method changes.
+Current version: **v3.6.0 (2026-11-17)**.
+Minor release: a closing passage, [Coda: An Ode to Tom Sawyer](./coda.md), reached by the coda sign at the end of the twelve steps. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---

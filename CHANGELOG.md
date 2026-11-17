@@ -2,6 +2,16 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.6.0 (2026-11-17)
+
+Minor release on Michael Paik's request of 17 November 2026, under express reopening of the no-further-additions rule for this entry. Prepared with Claude, approved by Michael Paik.
+
+- **`coda.md`**, new, v1.0.0, CC BY-NC-SA 4.0: *Coda: An Ode to Tom Sawyer*, a closing passage reached by the coda sign at the end of the twelve steps. Rush's "Tom Sawyer" (1981) and Twain's *The Adventures of Tom Sawyer* (1876) are read for the person the method needs: a mind not for rent (Gate 5), the company a piece of work keeps (Gate 3), attention as the scarce input (Slow AI), reserve that holds a release (Gates 6 and 7), change expected (the Your Restaurant addendum, GRCnext™) and the exit (Informed Intent, Final Liability holding through reliance). Section VIII takes its argument from the author's LinkedIn post of 3 November 2026 on Rush's integration of Anika Nilles: integration, not replacement, as the way to bring AI into a going concern. The passage closes with an ode of seven imperatives. No line of the song is reproduced; one three-word phrase is quoted. The title of Pye Dubois's original poem differs between sources and is not given. It is not a derivation module and the count of six is unchanged.
+- **`coda-sign.svg`**, new: the coda sign drawn as an image, in a neutral gray that reads on light and dark pages. Unicode U+1D10C rendered as an empty placeholder box in a desktop browser on macOS with GitHub's font stack on 17 November 2026 (KST), so the repository uses the image, with alternative text "Coda sign" and the word "Coda" beside it.
+- **`README.md`**: a "To Coda" line with the sign after Step 12's output; a reader path for the reader who has finished the method; a row in Repository Contents; title block, How to Cite and Current version to v3.6.0. `CITATION.cff` version and abstract. Primer How to Cite and `primer-workbook/README.md` name v3.6.0 (SAK-30); the derived part 00 carries the same edit and `split_markdown.py --verify` rebuilds the monolith byte for byte. The Primer stays at v2.1.0.
+- No change to the twelve steps, the ten gates, the three tiers, the roles, the operating rules, the workshop design, the Your Restaurant addendum, the six derivation modules or the operating modules. DOCTRINE.md is unchanged and the coda adds no doctrine.
+- Not in scope, logged: ECOSYSTEM.md is unchanged; its slow-ai-kitchen cell stands at its 40-word cap and does not list every file. The web application at kitchen.grcskorea.com follows at a rebuild that Michael Paik releases.
+
 ## v3.5.2 (2026-11-17)
 
 Patch release on Michael Paik's ruling of 17 November 2026. Prepared with Claude, approved by Michael Paik.
