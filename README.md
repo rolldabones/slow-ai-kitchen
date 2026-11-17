@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.5.1 | 2026-11-16 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.5.2 | 2026-11-17 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -577,7 +577,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.5.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.5.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -599,7 +599,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.5.1 (2026-11-16)**.
+Current version: **v3.5.2 (2026-11-17)**.
 Patch release: four README links to the reading indexes of the Primer and the Consultant Workbook and to the Primer Workbook carry the title of the page they open. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 

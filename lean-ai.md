@@ -12,15 +12,17 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v0.1.0 | 2026-11-15 (KST) | WIP (work in progress): documentary and retrospective checks only, no enterprise pilot run | CC BY-NC-SA 4.0 |
+| v0.1.1 | 2026-11-17 (KST) | WIP (work in progress): documentary and retrospective checks only, no enterprise pilot run | CC BY-NC-SA 4.0 |
 
 **Final Liability rests with the Human.**
 
-> **Status: WIP.** This module is a work in progress, first issued at v0.1.0 and open to revision. The documentary and retrospective checks described in [What the present evidence establishes](#9-what-the-present-evidence-establishes) were completed and rerun on 15 November 2026 (KST). No enterprise pilot has been run, and no saving is established. A savings claim needs a pilot run under [lean-ai/pilot-protocol.md](./lean-ai/pilot-protocol.md) and reported whatever its result.
+> **Status: WIP.** This module is a work in progress, first issued at v0.1.0 and open to revision. The documentary and retrospective checks described in [What the present evidence establishes](#9-what-the-present-evidence-establishes) were completed and rerun on 15 November 2026 (KST). No enterprise pilot has been run, and no saving is established. A savings claim needs a pilot run under [lean-ai/pilot-protocol.md](./lean-ai/pilot-protocol.md) and reported whatever its result. At v0.1.1, 17 November 2026 (KST), this status is unchanged.
 
 > **Scope note.** This module adds an economic operating practice to the Kitchen. It adds no doctrine, step, gate, tier, role or rule. The [doctrine canon](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) governs, and where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. No claim of novelty or of exclusive ownership of the term "Lean AI" is made.
 
 > **Link currency.** The three policy sources under [Sources](#sources-and-integration-references) were read on 15 November 2026 (KST). All other links are internal to the account.
+
+**Amendment, 17 November 2026 (KST), v0.1.1.** Sources and integration references gains one line, a pointer to the working paper *The Boundary and the Limit* in AI-Governance-Academy, which sets out the theory behind this module. No section, measure, record or status changes.
 
 ---
 
@@ -226,5 +228,6 @@ Use the Service Record to identify who gained time and who inherited more work. 
 - [E1] [GRCnext prompt evaluation cases](https://github.com/rolldabones/GRCnext-Copilot/blob/main/tests/prompt-evaluation-cases.md), R2 of 27 October 2026, and associated run manifests and transcripts. The captured inventory and the calculations are under [lean-ai/evidence/](./lean-ai/README.md).
 - [Kitchen method](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md); [F24](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F24-cost-model-and-unit-economics-sheet.md); [W15](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/30-w15-measurement-protocol.md); [W16](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/31-w16-case-observation-record.md); [W17](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/32-w17-results-and-business-value.md); [Service Record](https://github.com/rolldabones/slow-ai-kitchen/blob/main/service-record.md); [Take-Out](https://github.com/rolldabones/slow-ai-kitchen/blob/main/take-out-delivery-and-vending-machines.md).
 - [Computational Drafting](https://github.com/rolldabones/computational-drafting); [Definition of Done: Trade-Offs](https://github.com/rolldabones/definition-of-done/blob/main/05-trade-offs.md); [GRCnext methodology](https://github.com/rolldabones/GRCnext-Copilot/blob/main/methodology/method-and-logic.md).
+- [*The Boundary and the Limit: Effectiveness, Lean AI and the Theory of the Governed Firm*](https://github.com/rolldabones/AI-Governance-Academy/blob/main/the-boundary-and-the-limit.md), working paper, version 1.4, 17 November 2026: the theory behind this module, why its unit is the accepted outcome (its Section 4) and why the power to stop comes before economy (its Section 9). It changes nothing in this module.
 
 **Final Liability rests with the Human.**

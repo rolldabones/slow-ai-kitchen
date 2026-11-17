@@ -2,6 +2,14 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.5.2 (2026-11-17)
+
+Patch release on Michael Paik's ruling of 17 November 2026. Prepared with Claude, approved by Michael Paik.
+
+- **`lean-ai.md` v0.1.1.** Sources and integration references gains one line: a pointer to *The Boundary and the Limit: Effectiveness, Lean AI and the Theory of the Governed Firm*, the working paper published the same day in `AI-Governance-Academy` v1.25.0, which sets out the theory behind this module: why its unit is the accepted outcome and why the power to stop comes before economy. A dated amendment note says so, and the Status line says that the status is unchanged at v0.1.1. No section, measure or record of the module changes; it remains a work in progress with no pilot run. The `lean-ai/` folder does not change: its README, protocol and evidence were issued with v0.1.0.
+- README title block, How to Cite, Current version and `CITATION.cff` to v3.5.2. Primer How to Cite and `primer-workbook/README.md` name v3.5.2 (SAK-30); the derived part 00 carries the same edit and `split_markdown.py --verify` rebuilds the monolith byte for byte. The Primer stays at v2.1.0. No step, gate, tier, role or rule of the method changes.
+- Not in scope, logged: the web application at kitchen.grcskorea.com follows this release at its next sync or rebuild.
+
 ## v3.5.1 (2026-11-16)
 
 Patch release on Michael Paik's ruling of 16 November 2026. Prepared with Claude, approved by Michael Paik.
