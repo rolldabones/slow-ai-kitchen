@@ -2,6 +2,13 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.7.1 (2026-11-18)
+
+Patch release: `restaurant-resources.md` gains a section, Public AI Incident Monitors, from the Stanford AI Index Report 2026, Chapter 3 integration of 18 November 2026 (account-maintenance `DECISIONS.md` section A), under Michael Paik's reopening of the no-further-additions rule for this work behind a Phase 0 gate. Prepared with Claude, approved by Michael Paik.
+
+- **`restaurant-resources.md`:** the AI Incident Database and the OECD AI Incidents and Hazards Monitor, each with how it collects incidents, as stated on its own about and methodology pages read on 18 November 2026 (KST); placed before the URL Stability Notes, as a section of its own because neither belongs to the NIST, ISO or regulatory layers. No method, gate or Pantry text changes.
+- To v3.7.1: the Primer's How to Cite (the Primer itself stays at v2.2.0), with `primer/` regenerated with the flags of v3.3.8 and verified byte for byte; the `primer-workbook` README; the README masthead, Current version and How to Cite; `CITATION.cff`.
+
 ## v3.7.0 (2026-11-18)
 
 Minor release on Michael Paik's request of 18 November 2026 to add to the Primer the subjects the December 2026 revision of the Claude Certified Architect – Professional objectives brings forward. The Primer body stays free of exam and certification references; no partner-confidential material is used. Prepared with Claude, approved by Michael Paik.

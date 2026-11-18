@@ -300,6 +300,19 @@ Search: `https://www.iso.org` for ISO/IEC 12792
 
 ---
 
+## Public AI Incident Monitors
+
+Added 18 November 2026 (KST). Two public records of AI incidents, for the Restaurant's continuous improvement: what has gone wrong elsewhere, with systems like its own. They differ in method and are best read together. Counts in either change as records are added and reclassified, so record the date of any figure taken from them.
+
+**AI Incident Database.** A project of the Responsible AI Collaborative. Incidents are submitted by anyone and admitted by human editors who review each submission.
+`https://incidentdatabase.ai`
+
+**OECD AI Incidents and Hazards Monitor (AIM).** Detects AI incidents and hazards from news articles aggregated by Event Registry and classifies them with language models, in a pipeline that runs daily; the OECD does not independently verify the information it displays. Its methodology page states how it works.
+`https://oecd.ai/en/incidents`
+Methodology: `https://oecd.ai/en/incidents-methodology`
+
+---
+
 ## URL Stability Notes
 
 NIST links point to official `.gov` domains. NIST periodically revises publications; if a CSRC link resolves to a redirect, navigate from the AIRC centerpiece at `https://airc.nist.gov` to locate the current version. The AI RMF and Playbook remained under active revision as at 17 August 2026 (KST), the NIST entries' last re-verification; monitor the AIRC for updated versions.
