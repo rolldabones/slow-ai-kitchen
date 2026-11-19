@@ -1,15 +1,20 @@
-# Lean AI: Protocol and Evidence
+# Lean AI: Plan, Book, Tiny Servants and Evidence
 
-**Slow AI Kitchen · companion folder to [Lean AI](../lean-ai.md) v0.1.0 · 2026-11-15 (KST) · WIP (work in progress)**
+**Slow AI Kitchen · the working folder of [Lean AI](../lean-ai.md) · 2026-11-19 (KST) · WIP (work in progress)**
 
-The module is [../lean-ai.md](../lean-ai.md). This folder holds what stands behind it: the plan for the pilot that has not been run and the record of the checks that have.
+The module is [../lean-ai.md](../lean-ai.md). This folder holds what stands behind it and what is being built from it: the plan, a book in progress, sample workflows called Lean Tiny Servants, the plan for the pilot that has not been run and the record of the checks that have. All of it is a work in progress. The pilot protocol, the report, the evidence and the tools were issued with the module's v0.1.0 on 15 November 2026 (KST) and are unchanged.
 
 | File | What it holds | Read it when |
 |---|---|---|
+| [PLAN.md](PLAN.md) | What is being built, in what order and under what rules, with the log of what has shipped | You want to know where the work stands and what comes next |
+| [book/](book/README.md) | *Slow AI, Lean AI: The Owner's Acceptance and the Power to Stop*, a book in progress: its thesis, its contents and, as they are written, its chapters | You want the argument at length |
+| [tiny-servants/](tiny-servants/README.md) | The Lean Tiny Servants: what one is, the card each carries, the two stages each passes and, as they are built, the servants and their test records | You want a small workflow that you can read, run and check |
 | [pilot-protocol.md](pilot-protocol.md) | A ready-to-complete extension of W15 to W17: charter, three candidate workflow families, data model, execution steps and ten adversarial cases | You have one authorized workflow and want to test whether a Lean change saves anything |
 | [audit-and-validation-report.md](audit-and-validation-report.md) | What was checked on 15 November 2026 (KST), what was found and what was not done | You want to know what the module's evidence does and does not establish |
 | [evidence/](evidence/) | The derived records: the captured inventory of 1,658 files in 22 repositories, the per-file and per-link results, the token records of six published runs and the results of the twenty checks | You want to check a figure in the module or the report |
 | [tools/](tools/) | `audit.py`, `validate.py` and `repository_checks.py` | You want to rerun the checks |
+
+The theory behind the module is in the working paper [*The Boundary and the Limit: Effectiveness, Lean AI and the Theory of the Governed Firm*](https://github.com/rolldabones/AI-Governance-Academy/blob/main/the-boundary-and-the-limit.md), which stays in AI-Governance-Academy. On the theory, the paper governs.
 
 ## What the evidence is
 

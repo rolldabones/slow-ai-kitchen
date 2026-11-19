@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.7.1 | 2026-11-18 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.8.0 | 2026-11-19 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -63,7 +63,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 
 **A consultant or facilitator delivering an engagement.** Read [consultant-workbook.md](./consultant-workbook.md): One Workflow, Thirty Days, the engagement on one priority workflow for a named business owner, with the delivery cadence, the thirty-day calendar, six delivery instruments and twenty-six working records keyed to the steps and gates, each with a Done when line, also published one record per file under workbook/, with its [Consultant Workbook: reading index](./workbook/README.md). It changes no step, gate, tier, role or principle.
 
-**A business owner, architect or finance reviewer asking what it costs.** Read [lean-ai.md](./lean-ai.md), a work in progress: the cost of one accepted outcome measured with the records the Consultant Workbook already has, and the pilot that a savings claim needs.
+**A business owner, architect or finance reviewer asking what it costs.** Read [lean-ai.md](./lean-ai.md), a work in progress: the cost of one accepted outcome measured with the records the Consultant Workbook already has, and the pilot that a savings claim needs. The work continues in [Lean AI: Plan, Book, Tiny Servants and Evidence](./lean-ai/README.md): a plan, a book in progress and sample workflows, the Lean Tiny Servants.
 
 **A reader who wants the derivations.** Read the six derivation modules: [karpathys-kitchen.md](./karpathys-kitchen.md) (the principles derived from the technology's mechanisms), [newtons-kitchen.md](./newtons-kitchen.md) (the three doctrines as three laws of consequential motion), [coetzees-kitchen.md](./coetzees-kitchen.md) (the epistemics of the working session), [mondrians-kitchen.md](./mondrians-kitchen.md) (the doctrines and the GRCnext™ primitives seen as one composition, and the twelve steps as the method of reaching it), [wiszowatys-kitchen.md](./wiszowatys-kitchen.md) (a software architect's six-part practical reference set against the steps and gates, and the page it does not have) and [my-kitchen.md](./my-kitchen.md) (the author's own place and its names: listening before naming, and what lies beneath a name). They change no step, gate, role or principle.
 
@@ -95,7 +95,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [Consultant Workbook: reading index](./workbook/README.md) | The Consultant Workbook in 48 derived parts, one section or working record per file, verified to rebuild the single file byte for byte | You need one working sheet rather than the whole workbook |
 | [take-out-delivery-and-vending-machines.md](./take-out-delivery-and-vending-machines.md) | Operating companion for AI agents: three service patterns, a service ticket and receipt keyed to Informed Intent and a stop, reconcile and hand-back procedure | You are commissioning an agent run or maintaining a reusable agent service under the existing method |
 | [lean-ai.md](./lean-ai.md) | Operating module, a work in progress (WIP): the cost of one accepted outcome, counted once across every attempt and everyone's effort; constrained model choice as a scenario; a resource envelope in the authorization; an exit that is tested. Connects W15 to W17, F22 and F24 and adds no step, gate, tier or doctrine | You must show what an AI-enabled workflow costs per accepted outcome, or whether it survives a narrower or dearer choice of models |
-| [Lean AI: Protocol and Evidence](./lean-ai/README.md) | The Lean AI pilot protocol (not yet run) and the dated evidence behind the module: the audit and validation report of 15 November 2026, its derived records and the scripts that rerun them | You are planning a Lean AI pilot, or checking what the module's evidence does and does not establish |
+| [Lean AI: Plan, Book, Tiny Servants and Evidence](./lean-ai/README.md) | The Lean AI working folder, all of it a work in progress (WIP): the plan and its log; the book in progress, *Slow AI, Lean AI: The Owner's Acceptance and the Power to Stop*; the Lean Tiny Servants, sample workflows specified and then run and tested one at a time; the pilot protocol (not yet run) and the dated evidence behind the module, the audit and validation report of 15 November 2026 with its derived records and the scripts that rerun them | You want to follow Lean AI as it is developed, are planning a Lean AI pilot or are checking what the module's evidence does and does not establish |
 | [coda.md](./coda.md) | Closing passage, reached by the coda sign at the end of the twelve steps: Rush's "Tom Sawyer" and Twain's *The Adventures of Tom Sawyer* read for the person the method needs, with Rush's integration of Anika Nilles as the model for bringing AI into a going concern; adds no step, gate, tier or doctrine and is not a derivation module | You have finished the method and want to be reminded who it needs you to be |
 
 Both sample prompts carry scope notes identifying where they deviate from the canonical method. The scope note governs. Where a prompt and this README conflict, this README controls.
@@ -582,7 +582,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.7.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.8.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -604,8 +604,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.7.1 (2026-11-18)**.
-Minor release: a closing passage, [Coda: An Ode to Tom Sawyer](./coda.md), reached by the coda sign at the end of the twelve steps. No step, gate, tier, role or rule of the method changes.
+Current version: **v3.8.0 (2026-11-19)**.
+Minor release: Lean AI gains a plan, a book in progress and sample workflows, the Lean Tiny Servants, in [Lean AI: Plan, Book, Tiny Servants and Evidence](./lean-ai/README.md), all of it a work in progress. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---
