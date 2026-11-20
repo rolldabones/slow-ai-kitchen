@@ -24,6 +24,12 @@ All public. Building Effective Agents and Effective Context Engineering for AI A
 | **Governance and safety** | Mitigate jailbreaks; Reduce hallucinations; Increase output consistency; Reduce prompt leak; Skills for enterprise |
 | **Pricing and deprecations** | Pricing; Model deprecations; the Models API, for querying capabilities and limits programmatically rather than remembering them |
 
+### Other works
+
+| Source | What it supplies |
+| --- | --- |
+| **The Little Book of Agent Engineering**, Giuseppe A. Paleologo, credited "Gappy + Agents" (14 Nov 2026), shared in his public LinkedIn post: https://www.linkedin.com/feed/update/urn:li:ugcPost:7527881140511068160/ | The line in 8.3 between testing the orchestration with a scripted model and measuring a real model's choices (Preface, sections 2.5 and 3.6, and the Chapter 2 summary) |
+
 ### Current figures, verified 18 October 2026
 
 Verified against Anthropic's documentation on 18 October 2026 (KST), with later readings on 20 October and 10 November 2026; each row's Verified column gives the date it was read. Every row whose Verified column carries a date was read that day from the page named in its Source column (or, where a row has no Source, the pages its note names), and every number in those rows came from that page; where the page does not state a figure, the row says Unknown rather than carrying a remembered value. Rows marked not re-verified carry their last reading and are not presented as current; they include most of the Contextual Retrieval measurements (a dated publication) and some of the A2A protocol facts (not an Anthropic source), the entry-point facts and the delivery-route facts, and each row's Verified column says which. **Every one of them can change.** Every figure in the platform documentation moves: the model lineup, the effort parameter, tool search and context editing have all changed materially, and each change altered what a correct design looks like. Re-verify before relying on any of these figures in a design decision, and the fastest way to do it is the documentation pages listed above.

@@ -2,6 +2,15 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.8.1 (2026-11-21)
+
+Patch release on Michael Paik's ruling of 20 November 2026: a completion of the Primer's 8.3 from his reading of Giuseppe A. Paleologo's *The Little Book of Agent Engineering* (14 November 2026), shared in the author's public LinkedIn post, read and the link confirmed to resolve signed out on 20 November 2026 (KST). Of his notes on the book, this was the one point the account did not already carry: the model as a stochastic policy, judgment over many runs, untrusted input and the autonomy spectrum are in the Primer (8.3, 8.4, 4.4 and Part 2) and the model and harness split is in the Academy's *The Compression and the Harness*. Prepared with Claude, approved by Michael Paik.
+
+- **`enterprise-ai-architecture-primer.md` v2.2.1.** 8.3 gains one subsection after Harness reproducibility, Two kinds of test, and which one the evidence is: a scripted-model test establishes the orchestration, a real-model run measures the choices across several runs, a deployment needs both and the evidence says which it is. Appendix I gains Other works, one row citing the book and the post. Amendment record and How to Cite to v2.2.1. No existing sentence changes; no part or section is added or removed, so the Contents and its links stand.
+- `primer/` regenerated with `split_markdown.py --section-index --max-bytes 240000 --title "Enterprise AI Architecture Primer" --h2-split "APPENDICES"` and verified to rebuild the monolith byte for byte; `build_appendix_i.py --check` passes, the figures block being untouched.
+- README title block, How to Cite, Current version and the Changelog section's summary line to v3.8.1. `CITATION.cff` version and date. `primer-workbook/README.md` names v2.2.1 and v3.8.1 (SAK-30). No step, gate, tier, role or rule of the method changes. DOCTRINE.md is unchanged and nothing here adds doctrine.
+- Not in scope, logged: his hired-chef framing of the same notes stays out of the repository; the web application at kitchen.grcskorea.com is unchanged; the account-maintenance record of this out-of-rotation completion is for the Monday run of 23 November 2026.
+
 ## v3.8.0 (2026-11-19)
 
 Minor release on Michael Paik's request and rulings of 19 November 2026: Lean AI is to be developed in `lean-ai/` one unit a week, as a fuller module, a book in progress and sample workflows. Under express reopening of the no-further-additions rule for Lean AI and nothing else (account-maintenance `DECISIONS.md` section A). Prepared with Claude, approved by Michael Paik.

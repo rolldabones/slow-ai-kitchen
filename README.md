@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.8.0 | 2026-11-19 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.8.1 | 2026-11-21 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance. It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -582,7 +582,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.8.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.8.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -604,8 +604,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.8.0 (2026-11-19)**.
-Minor release: Lean AI gains a plan, a book in progress and sample workflows, the Lean Tiny Servants, in [Lean AI: Plan, Book, Tiny Servants and Evidence](./lean-ai/README.md), all of it a work in progress. No step, gate, tier, role or rule of the method changes.
+Current version: **v3.8.1 (2026-11-21)**.
+Patch release: the [Enterprise AI Architecture Primer](./enterprise-ai-architecture-primer.md) v2.2.1 completes 8.3 with one subsection separating a scripted-model test of the orchestration from a measurement of the real model, from Giuseppe A. Paleologo's *The Little Book of Agent Engineering*. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---

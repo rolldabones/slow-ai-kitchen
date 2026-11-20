@@ -350,6 +350,10 @@ A harness whose number moves for reasons nobody can name is not an instrument. B
 
 An irreducible remainder is left, because the system under test is not deterministic and no pinning makes it so. The response is arithmetic: **run the unchanged system several times and report the spread alongside the mean, never a single figure.** The sizing method in 8.2 turns that spread into the noise floor deciding which differences count as results, and 8.6 gives the same quantity its comparative form as the self-disagreement floor. The mechanical consequence: the spread is an output of every run, and a harness reporting one number per run cannot produce it.
 
+### Two kinds of test, and which one the evidence is
+
+**A test that replaces the model with scripted decisions and a test that runs the real model prove different things, and the evidence has to say which it is.** With the model's choices fixed, the orchestration around it should behave deterministically: the loop ends, tools are called as specified, the permission check refuses what it should and the log records what happened. That establishes the plumbing and nothing about which choices a real model would make. A run on the real model observes those choices, and because the model is non-deterministic it supports a claim only across several runs with the spread reported, as above. A deployment needs both. **A passing scripted replay offered as evidence of model behavior is the proof-of-concept error of 8.1 in another form:** it establishes the plumbing and is read as establishing the judgment. Giuseppe A. Paleologo's *The Little Book of Agent Engineering* draws the same line for its own companion code: a scripted model "tests the harness; it does not measure the model", harness there meaning the agent's orchestration rather than the evaluation harness of this section (Appendix I, Other works).
+
 ### Where the harness runs, and what it costs
 
 A harness with one invocation point runs when somebody remembers. Four points, with different scopes and gates.
