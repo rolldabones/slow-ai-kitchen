@@ -161,7 +161,7 @@ The pillar is not a framing device for the business case. It selects the metric 
 | --- | --- | --- |
 | What work Claude owns | Whether policy permits delegating this work to a model at all | Use case intake record with a risk tier. Artificial intelligence governance lead |
 | Which business value pillar is claimed | The baseline it is measured against and who is held to it | Benefits case with baseline and target. Business sponsor |
-| Holding the four answers | Where they live afterward and who may change them | Architecture decision records in a register. Architecture review board |
+| Holding the four answers | Where they live afterward and who may change them | Architecture decision records in a register. Architecture review board chair, by role |
 
 **What this costs the organization.** The recognition discipline gives the reader a next move but never a next owner, so four answers dissolve back into conversation unless someone writes them down. The cost people forget is portfolio cost: with no triage front door scoring candidates against a common model, the enterprise funds five overlapping assistants, each with its own run cost and its own unfunded retirement.
 
@@ -1093,7 +1093,7 @@ The pass takes ten minutes and it is the difference between an architecture and 
 
 | Decision here | Governance decision that belongs with it | Artifact and owner |
 | --- | --- | --- |
-| Selecting an architecture | Conformance to the approved shape, or a recorded and approved variance | Architecture decision record with variance approval. Architecture review board |
+| Selecting an architecture | Conformance to the approved shape, or a recorded and approved variance | Architecture decision record with variance approval. Architecture review board chair, by role |
 | Committing to an eval contract | Its threshold, run cadence, result retention and the consequence of a miss | Eval contract register with signers. Quality owner |
 | Composing two architectures | Who funds the doubled maintained surface and the second eval contract | Costed change to the run budget. Service owner |
 

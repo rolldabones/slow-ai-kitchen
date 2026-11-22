@@ -276,7 +276,7 @@ The third row is the one most designs get wrong by collapsing it into the first.
 | **Stakes** | What does a wrong call cost? |
 | **Accountability** | Who must answer for it? |
 
-**⧉ The biggest risk in the triad is reading it as a single axis.** Reversibility and stakes are not the same axis: a cheap error that cannot be undone (a message sent to a client) and an expensive error that can (a miscalculated quote caught before issue) call for different designs. And accountability is a third axis independent of both, the criterion a technically minded architect is most likely to omit and the one a regulator will ask about first. Where accountability sits with a named person, the work is human-retained or collaborative regardless of how reversible or cheap the error is.
+**⧉ The biggest risk in the triad is reading it as a single axis.** Reversibility and stakes are not the same axis: a cheap error that cannot be undone (a message sent to a client) and an expensive error that can (a miscalculated quote caught before issue) call for different designs. And accountability is a third axis independent of both, the criterion a technically minded architect is most likely to omit and the one a regulator will ask about first. Accountability always sits with a named person. Where that person must decide each case rather than confirm against criteria defined in advance, the work is human-retained or collaborative regardless of how reversible or cheap the error is.
 
 The instrument for the assignment is the four **behavior properties** of 2.2, which tell you what Claude can be trusted with. That section is not background: it is the lens through which every row of the delegation map is decided.
 

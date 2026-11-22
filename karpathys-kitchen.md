@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.2.1 | 2026-11-03 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.2.2 | 2026-11-23 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
@@ -19,6 +19,8 @@ CEO, GRC Solutions Korea
 > **Amendment, 17 October 2026 (KST), v1.1.0.** The module gains the doctrine block the other two derivation modules carry; the Informed Intent framework connection names the canon's four elements; the five-layer correspondence is mapped to the doctrines that hold each layer; the gate map is corrected to the README's (Steps 1 and 7 are the gateless steps; Step 3 is Gate 2); the closing sentence no longer counts GRCnext™ among the doctrines; the ecosystem map row of the Link Register is re-checked. No derivation, quotation or source is added or removed.
 
 > **Amendment, 18 October 2026 (KST), v1.2.0.** Section 11 gains the evidence note of 11 October 2026 (Kamoi et al. 2024, Huang et al. 2024 and the author's test of 7 October 2026) that stood in the README's Step 8, moved here without change of text so that the twelve steps keep their register; the README keeps the Gate 6 rule and a pointer to this section. Two sources are added; no derivation or quotation changes.
+
+> **Amendment, 23 November 2026 (KST), v1.2.2.** The note on the blogs names microgpt as the one post since 2024 on the original blog, read against the karpathy.github.io and Bear blog indexes on 23 November 2026 (KST). No derivation or quotation changes.
 
 > **Attribution and independence.** This module is an independent reading of Andrej Karpathy's published work. He has no involvement in it, has not reviewed it and does not endorse it. The governance conclusions drawn from his work are the author's own and should not be attributed to him. The title is descriptive of the subject and signals no association, affiliation, sponsorship or endorsement.
 
@@ -815,7 +817,7 @@ This is the pass to give an executive, a board member or a new team member. It i
 - Zero to Hero GitHub repository: https://github.com/karpathy/nn-zero-to-hero
 - nanochat, the full ChatGPT-style pipeline in roughly eight thousand lines: https://github.com/karpathy/nanochat
 
-A note on the blogs, because it costs an hour to discover the hard way. Karpathy has written on three platforms and the material is not consolidated. The original blog at karpathy.github.io carries the training recipe and microgpt. Software 2.0 sits alone on Medium. Everything since 2024, including the two shortest and most governance-relevant posts in this guide, is on the Bear blog. A reader who stops at the first blog will conclude he has written almost nothing since 2022, which is wrong by a wide margin.
+A note on the blogs, because it costs an hour to discover the hard way. Karpathy has written on three platforms and the material is not consolidated. The original blog at karpathy.github.io carries the training recipe and microgpt. Software 2.0 sits alone on Medium. Everything since 2024 except microgpt (February 2026), which returned to the original blog, is on the Bear blog, including the two shortest and most governance-relevant posts in this guide. A reader who stops at the first blog will conclude he wrote almost nothing between 2022 and 2026, which is wrong by a wide margin.
 
 ---
 

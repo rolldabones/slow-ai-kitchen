@@ -705,7 +705,7 @@ Three failure modes of gateways worth pre-empting, because each turns the contro
 | Decision here | Governance decision that belongs with it | Artifact and owner |
 | --- | --- | --- |
 | Making the gateway the mandatory path for model traffic | Who may authorize a bypass, on what grounds and for how long | Bypass register with an expiry on every entry. Platform owner with the risk owner |
-| Setting routing and policy by data classification | Which forum approves a policy change, given that it changes behavior in every application at once and without a release | Versioned policy set with an approval record. Architecture review board |
+| Setting routing and policy by data classification | Which forum approves a policy change, given that it changes behavior in every application at once and without a release | Versioned policy set with an approval record. Architecture review board chair, by role |
 | Enforcing tenant isolation of keys, caches, logs and quotas | Whether the isolation is tested rather than asserted, since a cache or a log crossing tenants is a disclosure event | Isolation test evidence per release. Security architect |
 
 The logging retention and access rows that also run through here belong to 8.5, and the budget ceiling and its lifting authority to 8.10. They are not repeated, because the artifact has one owner.

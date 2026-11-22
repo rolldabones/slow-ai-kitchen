@@ -209,7 +209,7 @@ Every row below carries its family, and two conventions keep the seven sufficien
 | Caches and logs sit beneath a correct access control | Treat them as infrastructure | They are copies. Cache keys are scoped by tenant and classification, or the cache is a disclosure channel beneath the control | Vocabulary swap |
 | Data classification is being applied | Weigh cost and latency first, and inherit the source classification | Classification sets the route before cost or latency is weighed, and it does not inherit safely: a synthesis of public documents can be sensitive, and purpose sets a floor | True irrelevance |
 | Uneven outcomes across groups are alleged | Offer aggregate metrics as evidence | Uneven outcomes live in segments, and an aggregate can neither establish nor refute the claim. Segmentation is the fairness test | True irrelevance |
-| Accountability is recorded | Write that the team reviews it | Named accountability, not team accountability. Name a person and an artifact | Vocabulary swap |
+| Accountability is recorded | Write that the team reviews it | Named accountability, not team accountability. Name a person with decision rights, oversight and the power to intervene, and an artifact | Vocabulary swap |
 | One component performs what were two separated duties | Read it as a single job | A segregation of duties control collapses quietly inside a component that looks like one job | Vocabulary swap |
 | A vendor or partner runs part of the system | Treat partnering as transferring regulatory accountability | It does not transfer | Vocabulary swap |
 | Observability retention is set | Set it by debugging need | Retention is set by the obligation. ⚠ Counsel determines the period | True irrelevance |

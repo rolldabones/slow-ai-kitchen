@@ -4,12 +4,12 @@ Derived from [enterprise-ai-architecture-primer.md](../enterprise-ai-architectur
 
 | Part | Title | Size (KB) |
 |---|---|---|
-| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 40 |
+| 1 | [Enterprise AI Architecture Primer](00-enterprise-ai-architecture-primer.md) | 41 |
 | 2 | [Part 1: Workflow Architecture](01-part-1-workflow-architecture.md) | 89 |
 | 3 | [Part 2: Solution Architecture to Output contract](02-part-2-solution-architecture-to-output-contract.md) | 204 |
 | 4 | [Part 2: Solution Architecture · 2.8 Entry points and delivery routes to Solution Architecture: the one-page version](03-2-8-entry-points-and-delivery-routes-to-solution.md) | 117 |
 | 5 | [Part 3: Integration Engineering](04-part-3-integration-engineering.md) | 122 |
-| 6 | [Part 4: Governance by Design](05-part-4-governance-by-design.md) | 214 |
+| 6 | [Part 4: Governance by Design](05-part-4-governance-by-design.md) | 215 |
 | 7 | [Part 5: Knowledge Architecture](06-part-5-knowledge-architecture.md) | 77 |
 | 8 | [Part 6: Data Architecture](07-part-6-data-architecture.md) | 50 |
 | 9 | [Part 7: Organizational Adoption](08-part-7-organizational-adoption.md) | 72 |

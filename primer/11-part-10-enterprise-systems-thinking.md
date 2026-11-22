@@ -92,7 +92,7 @@ A policy assistant with a well-tuned retrieval stack: appropriate chunking, a la
 
 A tier-four deployment routed high-impact outputs to a human approver. The control was documented, tested and audited. Approval rate: 99.8 percent. The approver was a junior analyst with two hundred items a day queued, no time to open a source, no subject-matter standing to disagree with a senior originator and a performance measure based on throughput.
 
-**Systemic diagnosis:** the control existed in the design and not in the world. **A human control requires four things and this one had none:** time to perform it, information to perform it with, standing to disagree and an incentive that does not punish disagreement. This is a **people-and-controls interaction failure**, the most dangerous of the five: it produces a complete evidence trail of a control that never operated, worse than no control, since the organization has relied on it and can prove it.
+**Systemic diagnosis:** the control existed in the design and not in the world. **A human control requires four things and this one had none:** time to perform it, information to perform it with, standing to disagree and an incentive that does not punish disagreement (the design requirements of 4.6, not the authorizer conditions of Informed Intent). This is a **people-and-controls interaction failure**, the most dangerous of the five: it produces a complete evidence trail of a control that never operated, worse than no control, since the organization has relied on it and can prove it.
 
 **Decision rule: for every human control, name the time, the information, the standing and the incentive, and if any of the four is absent the control does not exist regardless of what the evidence shows.**
 
@@ -285,7 +285,7 @@ An **enterprise artificial intelligence architect** is accountable for six thing
 
 **The exit.** What survives the system, what must be extractable, what the manual capability is, what migration costs and how long obligations run past the last day of operation. An architecture with no exit is a dependency the organization did not know it chose.
 
-**The accountability position.** Who answers when it is wrong, in writing, agreed before deployment rather than negotiated after an incident. Not the model, not the committee, not the vendor: a named person who knows they are named and what they accept.
+**The accountability position.** Who answers when it is wrong, in writing, agreed before deployment rather than negotiated after an incident. Not the model, not the committee, not the vendor: a named person with decision rights, oversight and the power to intervene, who knows they are named and what they accept.
 
 Two further properties belong to the stance rather than the list.
 

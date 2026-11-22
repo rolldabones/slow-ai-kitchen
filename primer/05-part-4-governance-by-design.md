@@ -311,7 +311,7 @@ One point deserves separating from the table, because it cannot be retrofitted. 
 | Fixed by the framework early | Arrives later | What the architecture builds now |
 | --- | --- | --- |
 | Who is in scope and in what role | The tests that decide borderline cases ⚠ | The record of the facts that will decide the test: purpose, population, autonomy, data classes, jurisdictions |
-| The duties in outline: safety, transparency, human oversight, documentation, redress | The specified form of each duty, often per sector | The duty discharged in the form good practice already requires, with the artifact named and owned |
+| The duties in outline: safety, transparency, human oversight, documentation, redress | The specified form of each duty, often per sector | The duty advanced and evidenced in the form good practice already requires, with the artifact named and owned |
 | That sectors will get their own guidance | The guidance and its interaction with the sector regulator already supervising the firm ⚠ | A control register that maps many-to-many, so a new requirement lands on existing controls rather than creating a parallel set |
 | That evidence will be required | The evidence format, the period and the retention | Continuous generation, because format can be rendered from a record and a missing period cannot be recovered |
 
@@ -696,7 +696,7 @@ Meaningful human control is a property of the design, not a role in the process.
 
 ### The five design requirements
 
-Five conditions; the absence of any one voids the others.
+Five requirements; the absence of any one voids the others. They are the design requirements of oversight, not the five authorizer conditions of Informed Intent, which are stated in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#2-informed-intent).
 
 1. **Information.** The reviewer sees what the system saw, retrieved, called, suppressed and is uncertain about.
 2. **Time.** The task budget derives from measured reading time of the material, not an assumption, and reviewer capacity constrains throughput by design.
@@ -750,8 +750,8 @@ Two things matter more than the table. First, **go-live approval authority moves
 
 Delegation moves the doing, not the answering. Four limits, stated as rules:
 
-1. Accountability may be delegated only to a named individual, never to a team, a vendor or a committee.
-2. The delegate must have the authority and the budget to discharge it. Delegation without resource is abandonment with paperwork.
+1. Responsibility and decision authority may be delegated only to a named individual, never to a team, a vendor or a committee, and the delegation is recorded. The accountable owner of record stays named and keeps the power to intervene.
+2. The delegate must have the authority and the budget to carry it out. Delegation without resource is abandonment with paperwork.
 3. Certain decisions are non-delegable and belong in the charter by name: tier assignment at T4, acceptance of residual risk above the stated appetite, approval to deploy without a required control and any decision binding the organization's position on privilege or regulatory classification.
 4. Delegation is recorded, dated and time-bounded. Permanent delegation is a role change and should be processed as one.
 
@@ -1380,7 +1380,7 @@ Five decision rules, one for each of the first five families:
 **The control is the unit and the framework requirement is an attribute of it, not the other way around.** Five steps:
 
 1. **Build one control register** with a stable identifier per control, its owner, its type (preventive, detective, corrective), its failure behavior and its evidence artifact. It is the organization's own list and does not change when a framework does.
-2. **Map framework requirements onto controls**, many to many: one control commonly satisfies several requirements across several frameworks and one requirement commonly needs several controls.
+2. **Map framework requirements onto controls**, many to many: one control commonly evidences several requirements across several frameworks and one requirement commonly needs several controls.
 3. **Collect evidence once per control**, not once per framework. The evidence register in 4.9 is organized this way deliberately.
 4. **Identify contradictions explicitly** where two frameworks pull the control in different directions, most often on retention periods and on logging depth versus minimization. Three resolutions, in the order to try them: **split the artifact**, where the two demands turn out to attach to separable parts of it, which is the case worked below and is the only resolution that satisfies both; resolve to the stricter requirement, where one genuinely is stricter; or record a deliberate exception with an owner ⚠. **Reaching for the stricter requirement first is the common error**, because it presumes a ranking that frequently does not exist.
 5. **Report by framework as a view over the register**, generated rather than maintained. Framework reporting maintained separately from the register diverges from it, and an auditor finds the divergence.
@@ -1399,7 +1399,7 @@ The spine below is five controls from the evidence register in 4.9, given the st
 | **C-11 Access entitlement** | Entitlement snapshot plus recertification record, human and non-human | Exposure from excess privilege is assessed and treated | Access is provisioned, reviewed and revoked under a defined procedure | Entitlements were reviewed at the stated cadence and exceptions were resolved | Access to regulated data is restricted and auditable ⚠ |
 | **C-14 Vendor commitment conformance** | Production configuration attestation against contracted terms | Third-party dependency risk is identified and monitored | Externally provided processes are controlled | The subservice organization is carved out or included, and complementary controls are stated | Processor obligations and transfer conditions are met in fact rather than in the contract ⚠ |
 
-Read it in both directions, each showing a different half of the relationship. Across a row, **one control satisfies four requirements from four different families and emits one artifact to do it.** C-04 is a single review event record answering the risk framework on whether the treatment operates, the management system standard on competence and procedure, the assurance standard on operation across a period and a statutory question about meaningful human involvement. Four requesters, one log. Without the mapping an organization produces that record four times, in four formats, on four cadences, owned by four people, and finds the discrepancies during an audit. Down a column, **one family's requirement is rarely satisfied by one control**: the assurance column's completeness demand reaches C-01, C-07 and C-11 together, because a population assertion about tiered systems differs from one about request-level verdicts and both must hold before any sampling means anything. Across a full register, **the number of distinct controls is far smaller than the number of requirements**, usually by a multiple.
+Read it in both directions, each showing a different half of the relationship. Across a row, **one control evidences four requirements from four different families and emits one artifact to do it.** C-04 is a single review event record answering the risk framework on whether the treatment operates, the management system standard on competence and procedure, the assurance standard on operation across a period and a statutory question about meaningful human involvement. Four requesters, one log. Without the mapping an organization produces that record four times, in four formats, on four cadences, owned by four people, and finds the discrepancies during an audit. Down a column, **one family's requirement is rarely evidenced by one control**: the assurance column's completeness demand reaches C-01, C-07 and C-11 together, because a population assertion about tiered systems differs from one about request-level verdicts and both must hold before any sampling means anything. Across a full register, **the number of distinct controls is far smaller than the number of requirements**, usually by a multiple.
 
 The contradiction is where the exercise earns its cost. Take C-07: the assurance and statutory columns both want the control verdict log retained long enough to sample across a period and to answer a request arriving long after the event. The minimization requirement inside that same statutory family wants the opposite, because the log holds inputs and outputs and therefore whatever regulated data the inputs contained. Both are real obligations, and this is the case step 4 puts the split first for: neither requirement is stricter, so there is nothing to resolve to.
 

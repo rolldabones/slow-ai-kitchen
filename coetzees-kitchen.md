@@ -10,13 +10,15 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.1.1 | 2026-11-03 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.1.2 | 2026-11-23 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
 > **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of the working session. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms). **Return to Source** and **Cognitive Provenance**, introduced below, are disciplines of this module, not doctrine: they operationalize the doctrines inside the human-AI loop and state no rule of their own.
 
 > **Amendment, 17 October 2026 (KST), v1.1.0.** Section VII gains the question of authority and the authorizer, Final Liability is stated with the canon's three attributes and as governing the whole span rather than exit, and the scope note counts the five gates the disciplines land on. No discipline, gate or doctrine is added.
+
+> **Amendment, 23 November 2026 (KST), v1.1.2.** Section VIII states Slow AI as a precondition, not a speed limit, with the architecture of attention as its reading at the level of the session. No discipline, gate or doctrine is added.
 
 > **License.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Coetzee's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0."
 
@@ -251,7 +253,7 @@ Human attention is finite. Context is finite, our ability to switch between prob
 
 Slow AI therefore means something different. It means creating enough structure around fast machines for humans to retain meaningful judgment. It means governing the loop. Ask, look and listen. Challenge and compare. Return to source, and notice when the question changes. Preserve provenance when consequence warrants it, insert friction where friction creates judgment and create gates where the next step is difficult to reverse.
 
-Slow AI is therefore less a speed limit than an architecture of attention. The machine may operate in milliseconds.
+Slow AI is therefore not a speed limit but a precondition, and at the level of the session it reads as an architecture of attention. The machine may operate in milliseconds.
 
 The decision does not have to.
 

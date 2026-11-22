@@ -10,13 +10,15 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.1.1 | 2026-11-03 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.1.2 | 2026-11-23 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
 > **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module restates them at the altitude of mechanics. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms).
 
 > **Amendment, 17 October 2026 (KST), v1.1.0.** Law I now names the authorizer's five conditions beside the four elements, and Law III states when the task-level owner is named; the doctrine block takes the uniform form shared by the three derivation modules. No law, corollary or property is added or removed.
+
+> **Amendment, 23 November 2026 (KST), v1.1.2.** The doctrine lines of Law I and Law II and Law II of the General Scholium no longer narrow the doctrines to consequential action; each states its doctrine for every AI system, as DOCTRINE.md does. No law, corollary or property is added or removed.
 
 > **License.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Newton's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0."
 
@@ -78,7 +80,7 @@ This reframes the central question. Instead of asking only how capable the model
 
 ***An agent's default state is rest. It moves only when authorized and only as authorized, and it stops at the exit.***
 
-**Doctrine.** No consequential AI without **Informed Intent**: prior authorization that specifies what the system may do, on whose authority, within what boundaries and with what exit. Four elements, all required. The human who gives the authorization meets five conditions, all required: Knowledge, Evidence, Authority, Time, Permission ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) §2). Define the trajectory before permitting the motion.
+**Doctrine.** No AI system acts without **Informed Intent**: prior authorization that specifies what the system may do, on whose authority, within what boundaries and with what exit. Four elements, all required. The human who gives the authorization meets five conditions, all required: Knowledge, Evidence, Authority, Time, Permission ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) §2). Define the trajectory before permitting the motion.
 
 Newton's mechanics begins from a state a body keeps unless something acts on it. Governance begins from the same place. Nothing acts on the organization's behalf until authorized, and the authorization is the reference against which every later observation is read. Without it an organization can record what the system did but cannot say whether the system did what was intended, and governance collapses into retrospective explanation.
 
@@ -99,7 +101,7 @@ The agentic case is the hard case and the reason the law is stated at this stren
 
 ***The consequence an agent can produce is bounded by its authority and its reach, not by its intelligence.***
 
-**Doctrine.** No consequential motion by a system that cannot be governed, explained and audited, however fast it would make the business. That is **Slow AI** ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) §1). Govern the motion, not only the machine.
+**Doctrine.** No motion by a system that cannot be governed, explained and audited, however fast it would make the business. That is **Slow AI** ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) §1). Govern the motion, not only the machine.
 
 A highly capable model confined to a sandbox may have little ability to affect the world. A far less capable system permitted to execute payments, modify production systems, publish externally, disclose information or decide cases presents the greater operational risk. The critical variable is not what the system knows or what the model can generate. It is what the system can cause to happen. Hence the working heuristic: classify the agent by its verb. Pay, publish, disclose, decide. Govern the verb, the boundary and the consequence.
 
@@ -185,7 +187,7 @@ Three laws.
 
 **Law I. Intent.** An agent's default state is rest. Informed Intent: no AI system acts without prior authorization stating its purpose, authority, boundaries and exit, given by a human who meets the five authorizer conditions.
 
-**Law II. Motion.** What an agent can cause is bounded by its authority and its reach, not by its intelligence. No consequential motion by a system that cannot be governed, explained and audited.
+**Law II. Motion.** What an agent can cause is bounded by its authority and its reach, not by its intelligence. No motion by a system that cannot be governed, explained and audited.
 
 **Law III. Liability.** Delegation transfers action, not accountability. No material consequence without a named human owner holding decision rights, oversight and the power to intervene, from specification, through confirmation, for as long as anyone relies on the result.
 

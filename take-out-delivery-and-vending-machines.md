@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.2.1 | 2026-11-04 (KST) | Final | CC BY-NC-SA 4.0 |
+| v1.2.2 | 2026-11-23 (KST) | Final | CC BY-NC-SA 4.0 |
 
 ## Contents
 
@@ -101,7 +101,7 @@ Apply the existing Feast and [Your Restaurant](./README.md#addendum-your-restaur
 |---|---|
 | **Menu and access** | Permitted tasks, intended users, task tiers and prohibited uses. Each request is checked against the caller's current access and the specific records it needs. A visible menu is not permission to use every item. |
 | **Sources and versions** | Approved source, model, instruction and tool versions; freshness requirements; review dates; changes requiring revalidation. Stale or unverified items are held or withdrawn. |
-| **Ownership and coverage** | The organizational AI Owner is accountable for the service. Each task has a named human Owner with decision rights, oversight and intervention power. Reviewers, operators and escalation coverage are available when required. |
+| **Ownership and coverage** | The organizational AI Owner is accountable for the service. Each task has a named human Owner with decision rights, oversight and the power to intervene. Reviewers, operators and escalation coverage are available when required. |
 | **All active locations** | An inventory of interfaces and running instances, their configurations and permissions and limits on total workload, spending and reach. Opening another instance does not reset shared limits. |
 | **Intervention and withdrawal** | Tested suspension across affected locations, queues and delegated work, with a manual fallback and a record of operations already in flight. Previously released outputs remain traceable for correction and follow-up. |
 
@@ -157,7 +157,7 @@ Who may resume, under what conditions:
 Evidence location, access, retention and Service Record deadline:
 ```
 
-Under [Informed Intent](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#2-informed-intent), the authorizer must have **Knowledge, Evidence, Authority, Time and Permission**: understanding of the specific action; evidence of tests, residual risk, dissent and alternatives; current institutional authority; time to consider; and freedom to decline without retaliation. A filled form does not establish those conditions by itself.
+Under [Informed Intent](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#2-informed-intent), the authorizer must have **Knowledge, Evidence, Authority, Time, Permission**: understanding of the specific action; evidence of tests, residual risk, dissent and alternatives; current institutional authority; time to consider; and freedom to decline without retaliation. A filled form does not establish those conditions by itself.
 
 Set materiality in advance with regard to affected people and cumulative consequences. Set limits on counts, not rates: a tenfold better error rate at a hundredfold volume is ten times the errors, and each one is a wrong payment, a false denial or a changed record. A grant may authorize a bounded first batch and count its errors before it is extended. Record unresolved limits as unresolved. They grant no additional permission.
 

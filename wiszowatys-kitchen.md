@@ -10,13 +10,15 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.0.0 | 2026-10-21 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
+| v1.0.1 | 2026-11-23 (KST) | Final | CC BY-NC-SA 4.0 (see the license convention below) |
 
 **Final Liability rests with the Human.**
 
 > **Doctrine.** The three doctrines engaged here, Slow AI, Informed Intent and Final Liability, are stated normatively once, in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) in the profile repository. This module sets them against the practice of software architecture. It does not vary them. Where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. Where this module compresses a doctrine, it copies the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms). GRCnext™, named in Sections III and VI, is a framework of this account, stated in the [grc](https://github.com/rolldabones/grc) repository; it is not doctrine, and this module adds nothing to it.
 
-> **License.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Wiszowaty's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0." The book read here is the work of its author and publisher and is excluded from this grant. It is summarized, not reproduced; no passage of it is quoted.
+> **Amendment, 23 November 2026 (KST), v1.0.1.** Section VII and Where the Reference Lands in the Method state that Step 6 confirms the owner named at Step 1, as the method does, and the license note says that short phrases are paraphrased and no passage is quoted at length. No gate, step or doctrine is added.
+
+> **License.** The text of this module is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Suggested attribution: "Wiszowaty's Kitchen by Son-U Michael Paik, GRC Solutions Korea, licensed under CC BY-NC-SA 4.0." The book read here is the work of its author and publisher and is excluded from this grant. It is summarized, not reproduced; short phrases are paraphrased; no passage is quoted at length.
 
 > **Link currency.** This module cites the third-party sources listed under [Sources](#sources). The book's site, the publisher's site, Nygard's post, the Developer to Architect resources page, Conway's paper and the Team Topologies site were read on 21 October 2026 (KST). *Building Evolutionary Architectures* is cited from the book itself; the publisher's page did not load on that date. All other links are internal to the account.
 
@@ -137,7 +139,7 @@ It is not, and the reason is one page the reference does not have.
 
 Nothing in the six parts names the Human who answers for the system. The Purpose Statement names the people the system is for. The Architecture Decision Record preserves the decision and its reasoning. Event Storming puts the right people in the room. Team Topologies organizes the people who build and run the system, and Conway's Law explains why their arrangement matters. Not one of these instruments records who had the authority to release the system, who is accountable when it causes harm and who holds that accountability through the period of reliance. The reference describes, with care, how good decisions are made and recorded. It does not say who answers for them.
 
-In the vocabulary of Section I, the reference supplies purpose and boundaries and never arrives at authority. That is not a defect in the book. It is a boundary of the craft the book describes. Software architecture is a discipline of structure, and accountability is not a structure. It is a relationship between a system and a person, and establishing that relationship is what the method exists to do. The doctrine states it in one sentence: Final Liability rests with the Human: every material outcome attaches to a named human owner with decision rights, oversight and the power to intervene. The owner is named at specification, attaches at confirmation, holds through reliance. Step 6 of the method, Name the Chef de Partie, is Gate 5, the point at which that Human is named before the output moves. Step 9, Open the Pass, is Gate 7, the point at which that Human releases it, with no model in the room.
+In the vocabulary of Section I, the reference supplies purpose and boundaries and never arrives at authority. That is not a defect in the book. It is a boundary of the craft the book describes. Software architecture is a discipline of structure, and accountability is not a structure. It is a relationship between a system and a person, and establishing that relationship is what the method exists to do. The doctrine states it in one sentence: Final Liability rests with the Human: every material outcome attaches to a named human owner with decision rights, oversight and the power to intervene. Accountability is named at specification, attaches at confirmation, holds through reliance. Step 6 of the method, Name the Chef de Partie, is Gate 5, the point at which the owner named at Step 1 is confirmed before the output moves. Step 9, Open the Pass, is Gate 7, the point at which that Human releases it, with no model in the room.
 
 The reference ends with cognitive load. The method begins where the reference ends, with the one load that cannot be delegated to a platform team or cut by design: answering for the system. That page is mine. The method is where I keep it.
 
@@ -159,7 +161,7 @@ The module adds no discipline and no gate. It supplies a correspondence, and the
 
 **Part Six, Tests and People,** is Gate 6 (Verification and Validation) carried into Step 12 (Run the Event, Gate 10, Operational Audit and Review Cycle) for fitness functions, and Step 11 (Staff the Brigade, Gate 9) for Conway's Law, Team Topologies and cognitive load.
 
-**The missing page** is Step 6 (Name the Chef de Partie, Gate 5, Final Liability) and Step 9 (Open the Pass, Gate 7, Human Release Decision). The reference has no instrument at either gate. The method has nothing else at either gate.
+**The missing page** is Step 6 (Name the Chef de Partie, Gate 5, Final Liability: the owner named at Step 1, confirmed here) and Step 9 (Open the Pass, Gate 7, Human Release Decision). The reference has no instrument at either gate. The method has nothing else at either gate.
 
 ---
 
