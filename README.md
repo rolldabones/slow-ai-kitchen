@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.8.2 | 2026-11-23 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.9.0 | 2026-11-25 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance, with the Enterprise AI Architecture Primer, six derivation modules and Lean AI (in progress). It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -94,7 +94,7 @@ A 12-step governed AI methodology for professional work, from individual task di
 | [consultant-workbook.md](./consultant-workbook.md) | One Workflow, Thirty Days: the delivery instrument for a bounded engagement, with cadence, calendar, six instruments and twenty-six working records with Done when lines | You are delivering the method to a Client as a bounded engagement, or training the consultants who will |
 | [Consultant Workbook: reading index](./workbook/README.md) | The Consultant Workbook in 48 derived parts, one section or working record per file, verified to rebuild the single file byte for byte | You need one working sheet rather than the whole workbook |
 | [take-out-delivery-and-vending-machines.md](./take-out-delivery-and-vending-machines.md) | Operating companion for AI agents: three service patterns, a service ticket and receipt keyed to Informed Intent and a stop, reconcile and hand-back procedure | You are commissioning an agent run or maintaining a reusable agent service under the existing method |
-| [lean-ai.md](./lean-ai.md) | Operating module, a work in progress (WIP): the cost of one accepted outcome, counted once across every attempt and everyone's effort; constrained model choice as a scenario; a resource envelope in the authorization; an exit that is tested. Connects W15 to W17, F22 and F24 and adds no step, gate, tier or doctrine | You must show what an AI-enabled workflow costs per accepted outcome, or whether it survives a narrower or dearer choice of models |
+| [lean-ai.md](./lean-ai.md) | Operating module, a work in progress (WIP): the cost of one accepted outcome, counted once across every attempt and everyone's effort; oversight load per owner and the governed share; constrained model choice as a scenario; a resource envelope in the authorization; an exit that is tested. Connects W15 to W17, F22 and F24 and adds no step, gate, tier or doctrine | You must show what an AI-enabled workflow costs per accepted outcome, or whether it survives a narrower or dearer choice of models |
 | [Lean AI: Plan, Book, Tiny Servants and Evidence](./lean-ai/README.md) | The Lean AI working folder, all of it a work in progress (WIP): the plan and its log; the book in progress, *Slow AI, Lean AI: The Owner's Acceptance and the Power to Stop*; the Lean Tiny Servants, sample workflows specified and then run and tested one at a time; the pilot protocol (not yet run) and the dated evidence behind the module, the audit and validation report of 15 November 2026 with its derived records and the scripts that rerun them | You want to follow Lean AI as it is developed, are planning a Lean AI pilot or are checking what the module's evidence does and does not establish |
 | [coda.md](./coda.md) | Closing passage, reached by the coda sign at the end of the twelve steps: Rush's "Tom Sawyer" and Twain's *The Adventures of Tom Sawyer* read for the person the method needs, with Rush's integration of Anika Nilles as the model for bringing AI into a going concern; adds no step, gate, tier or doctrine and is not a derivation module | You have finished the method and want to be reminded who it needs you to be |
 
@@ -582,7 +582,7 @@ Nearest neighbors:
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.8.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.9.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -604,8 +604,8 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.8.2 (2026-11-23)**.
-Patch release: doctrine wording brought into line with DOCTRINE.md in the [Enterprise AI Architecture Primer](./enterprise-ai-architecture-primer.md) v2.2.2, four derivation modules, Take-Out, Delivery & Vending Machines and the workforce literacy bridge; a control evidences an obligation and does not discharge it, and the owner is named at Step 1 and confirmed at Step 6. No step, gate, tier, role or rule of the method changes.
+Current version: **v3.9.0 (2026-11-25)**.
+Minor release: [Lean AI](./lean-ai.md) v0.2.0, unit 1 of its Wednesday program. The owner's hours (oversight load per owner and the governed share), the order of the two pillars and a reading of a vendor's usage analytics; the pilot protocol gains the record of an owner's hours. Invented figures only, recomputed by script. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 
 ---

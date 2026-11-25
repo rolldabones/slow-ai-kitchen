@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-25 (KST)",
+  "status": "invented figures; arithmetic only; not a measurement",
+  "source": "lean-ai.md v0.2.0, section 4, The owner's hours; The Boundary and the Limit v1.4, Section 8",
+  "minutes by W16 category": {
+    "preparation and first-pass work": 40,
+    "production or AI interaction": 80,
+    "initial review": 100,
+    "correction and re-review including fallback": 50,
+    "final approval and case-specific administration": 30
+  },
+  "figures": {
+    "total minutes": 300,
+    "oversight minutes": 180,
+    "case-processing cost": "446.00",
+    "case-processing cost per accepted outcome": "55.75",
+    "oversight effort": "252.00",
+    "oversight share of case-processing cost": "56.5%",
+    "oversight per accepted outcome": "31.50",
+    "cost per accepted outcome with no model charges": "52.50",
+    "hours demanded D": "4.0",
+    "hours available O": "3.5",
+    "oversight load D/O": "1.14",
+    "governed share O/D": "87.5%",
+    "designed oversight not performable": "12.5%"
+  },
+  "all displayed figures reproduce": true,
+  "mismatches": {},
+  "displayed figures absent from the module": []
+}

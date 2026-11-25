@@ -12,17 +12,19 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v0.1.1 | 2026-11-17 (KST) | WIP (work in progress): documentary and retrospective checks only, no enterprise pilot run | CC BY-NC-SA 4.0 |
+| v0.2.0 | 2026-11-25 (KST) | WIP (work in progress): documentary and retrospective checks only, no enterprise pilot run | CC BY-NC-SA 4.0 |
 
 **Final Liability rests with the Human.**
 
-> **Status: WIP.** This module is a work in progress, first issued at v0.1.0 and open to revision. The documentary and retrospective checks described in [What the present evidence establishes](#9-what-the-present-evidence-establishes) were completed and rerun on 15 November 2026 (KST). No enterprise pilot has been run, and no saving is established. A savings claim needs a pilot run under [lean-ai/pilot-protocol.md](./lean-ai/pilot-protocol.md) and reported whatever its result. At v0.1.1, 17 November 2026 (KST), this status is unchanged.
+> **Status: WIP.** This module is a work in progress, first issued at v0.1.0 and open to revision. The documentary and retrospective checks described in [What the present evidence establishes](#9-what-the-present-evidence-establishes) were completed and rerun on 15 November 2026 (KST). No enterprise pilot has been run, and no saving is established. A savings claim needs a pilot run under [lean-ai/pilot-protocol.md](./lean-ai/pilot-protocol.md) and reported whatever its result. At v0.1.1, 17 November 2026 (KST), and at v0.2.0, 25 November 2026 (KST), this status is unchanged.
 
 > **Scope note.** This module adds an economic operating practice to the Kitchen. It adds no doctrine, step, gate, tier, role or rule. The [doctrine canon](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) governs, and where a formulation below and DOCTRINE.md differ, DOCTRINE.md controls. No claim of novelty or of exclusive ownership of the term "Lean AI" is made.
 
-> **Link currency.** The three policy sources under [Sources](#sources-and-integration-references) were read on 15 November 2026 (KST). All other links are internal to the account.
+> **Link currency.** The three policy sources under [Sources](#sources-and-integration-references) were read on 15 November 2026 (KST), and the help article [V1] on 25 November 2026 (KST). All other links are internal to the account.
 
 **Amendment, 17 November 2026 (KST), v0.1.1.** Sources and integration references gains one line, a pointer to the working paper *The Boundary and the Limit* in AI-Governance-Academy, which sets out the theory behind this module. No section, measure, record or status changes.
+
+**Amendment, 25 November 2026 (KST), v0.2.0.** Purpose and boundary gains the order of the two pillars. Section 4 gains two subsections: The owner's hours, the oversight load per owner and the governed share, with an invented illustration that `lean-ai/tools/oversight.py` recomputes; and Reading a vendor's usage analytics. Section 9 names the new script and Sources gains [V1]. The [pilot protocol](./lean-ai/pilot-protocol.md), at v0.2.0, gains the record of an owner's hours. No doctrine, step, gate, tier, role or rule is added, and no saving is established.
 
 ---
 
@@ -35,6 +37,8 @@ Its unit is one accepted business outcome. Its question is: what is the least co
 The answer may be a stronger model, a smaller model, ordinary software, a reusable template, a human decision or discontinuing work whose recipient cannot explain its value. Lower model expenditure is one possible result. It is not the acceptance criterion.
 
 Lean AI must remain within the purpose, authority, boundaries and exit already authorized for the workflow. No financial advantage overrides an applicable mandatory constraint.
+
+**The power to stop comes first.** Toyota's account of its production system rests on two pillars and lists *jidoka*, stopping at an abnormality, before just-in-time, the economy of making only what is needed. Lean AI keeps that order ([*The Boundary and the Limit*](https://github.com/rolldabones/AI-Governance-Academy/blob/main/the-boundary-and-the-limit.md), Section 9.3). The doctrine canon says of Slow AI: "It is a precondition" ([DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#1-slow-ai)). Economy without the power to stop makes agents cheaper and nothing else. In this module the resource envelope of section 6 and the exit of section 7 come before any saving sought under section 8. This orders the module's existing sections. It adds no step or gate.
 
 **Who uses it.** The business owner owns value and the decision to fund the service. The architect and operational owner measure and change the system. Finance reviews cost allocation and claims of cash savings. The designated reviewer and approver retain the Kitchen's tier-specific responsibilities. One person may hold several roles where the existing governance permits it; the roles and decisions still remain distinct.
 
@@ -138,6 +142,48 @@ F24 counts completed tasks and this module counts accepted outcomes. The two agr
 
 Capacity released is not automatically cash saved. Identify the actual expense avoided, capacity redeployed or service improvement realized. Keep uncertain incident losses and disruption exposures in separate scenario analysis rather than burying speculative precision in the unit cost.
 
+### The owner's hours
+
+The cost per accepted outcome prices the minutes people spend overseeing the work. Those minutes have a second limit, which no price shows: the hours of the named owner who answers for the workflow. [*The Boundary and the Limit*](https://github.com/rolldabones/AI-Governance-Academy/blob/main/the-boundary-and-the-limit.md) sets out the arithmetic in its Section 8, and on the theory the paper governs. This module carries it as the second of three measures, between cost per accepted outcome and time to exit (the paper's Section 9.4).
+
+For each named owner, over a week or a month and in the busiest period, compare the hours of oversight the owner's workflows demand, D, with the qualified hours the owner, or people the owner has authorized, can give, O. For each workflow, D counts the items N, the routine minutes per item a, the share of items that need a person e, the minutes to resolve each such item t and the standing hours s:
+
+**D = the sum, over the owner's workflows, of N × (a + e × t) / 60 + s**
+
+The **oversight load** is D / O. The **governed share** is O / D, capped at one: the largest part of the designed oversight that the owner can in fact perform. Unlike a ratio of activity, the share has a ceiling.
+
+The terms come from records the Kitchen already keeps. W16's three oversight categories (initial review; correction and re-review including fallback; final approval) and its first-pass result give a, e and t. The standing hours are in W18, W20 and W24A, and W22 settles whose hours count toward O. The pilot protocol's [record of an owner's hours](./lean-ai/pilot-protocol.md#3a-owners-hours) takes them down. A minute counted here is the same minute already in the case total, read against a second limit and not priced again.
+
+**The illustration again, with invented figures.** Split the 300 minutes of the month above into W16's five categories: preparation and first-pass work 40, production or AI interaction 80, initial review 100, correction and re-review 50, final approval 30. Oversight is the last three, 180 minutes. The month's owner has a standing hour of review and 3.5 qualified hours to give.
+
+| Line | Figure |
+|---|---:|
+| Oversight effort, 180 minutes at 1.40 | 252.00 |
+| Share of the case-processing cost of 446.00 that was oversight | 56.5% |
+| Oversight in the 55.75 per accepted outcome | 31.50 |
+| D: 180 minutes, plus the standing hour | 4.0 hours |
+| O: the owner's qualified hours | 3.5 hours |
+| Oversight load, D / O | 1.14 |
+| Governed share, O / D | 87.5% |
+
+Two things the illustration shows. More than half of what an accepted outcome costs here is oversight, and a model that cost nothing would still leave 52.50 of the 55.75. And the owner is asked for half an hour more than the owner has, so 12.5% of the designed oversight cannot be performed as designed, whatever the unit cost says. The figures are invented to show the arithmetic; `lean-ai/tools/oversight.py` recomputes them and checks each one against this page.
+
+When the load passes one, the choice is the owner's or the management body's: fewer items, a better specification, more qualified hours or an accepted risk, with the name of the person who accepted it (the paper's Appendix C). Read the arithmetic with the paper's own limits (its Section 8.5). It has no term for errors that pass unseen, so it is read beside the material defects of the minimum result set. It counts hours and not competence. It is read at the peak, because work arrives in bursts. It cannot see one person who both operates and oversees a workflow. And it does not set the threshold. In the paper's words, "It has no equilibrium and it proves nothing."
+
+### Reading a vendor's usage analytics
+
+Vendors now offer reports built from a workforce's AI sessions. Claude Enterprise's smart reports are the example here, as Anthropic's help article described them when read in full on 25 November 2026 (KST) [V1]: available on Enterprise plans and off by default, built by Claude reading a sample of the sessions in scope and pricing spend at list price. Check the current article before relying on any detail. Such a report can feed this module. It cannot replace it.
+
+| What the report gives | Where it goes in this module | What it does not give |
+|---|---|---|
+| Spend by workstream and type of output, at list price | Model and tool charges, one line of case-processing cost | Billed cost, human effort, recurring and transition cost; label any figure built from it partial |
+| Deliverables produced and task outcomes, from a sample of sessions as Claude reads them | Attempted and completed counts, once sessions are mapped to cases | A full count, because the report reads a sample; acceptance under the owner's definition of done, because completion is not acceptance (section 4) |
+| Pain points: a connector not set up, output that did not match the ask, approval or sign-in gating, tool failures, rework loops | Candidate bottlenecks for section 5 | Proof of the bottleneck; observe it before optimizing against it |
+| Recurring workflows worth turning into shared skills | Candidates for removal or standardization in section 3 | The record section 3 requires: owner, former purpose, evidence that the change is permissible |
+| Inefficiencies: sessions that produced nothing usable, with their cost | Unsuccessful attempts, which section 4 already counts in the numerator | A judgment that the work was waste; exploratory work is preserved where exploration is authorized (section 3) |
+
+Before the report is used here, the people whose sessions are read are told, and consulted where the law of their workplace requires it, before the feature is turned on. Attribution to individuals stays off, because this module counts the cost of outcomes, not the performance of people. The article itself says the reports should not be used to evaluate individual performance or to make employment decisions, and it describes attribution as off by default, with each reveal of names logged. Each team sees its own report first and names the fixes. Acceptance comes from the owner, not from a classifier reading transcripts after the fact.
+
 ## 5. Optimize against an observed bottleneck
 
 Primer section 8.10 remains the operational reference. The following sequence adds an upstream question about unnecessary work and a downstream requirement to validate the result; it does not replace the Primer's detailed playbook.
@@ -208,6 +254,8 @@ This supports a narrow conclusion: output consumption and acceptance can differ 
 
 **Checks.** Twenty checks pass: fifteen worked examples of the accounting and decision rules in section 4 and section 8, the illustration in section 4 among them, and five consistency checks on the historical records. They are arithmetic and logic. They are not behavioral acceptance tests of any deployed system and they confer no acceptance on this module. Five existing repository checks (GRCnext fixtures, the Definition of Done and Origami release checks and the two Appendix I figure checks) also pass, on the captured files and again in the working clones with their Git history.
 
+**From v0.2.0.** `lean-ai/tools/oversight.py` recomputes the invented figures of [The owner's hours](#the-owners-hours), checks each against this page and writes `lean-ai/evidence/oversight-illustration.json`, dated 25 November 2026 (KST). It needs no captured sources and changes neither the twenty checks nor the record of 15 November 2026.
+
 **Empirical enterprise validation: pending.** No new model benchmark and no enterprise pilot was run for this issue.
 
 ## 10. Operate and learn
@@ -225,9 +273,10 @@ Use the Service Record to identify who gained time and who inherited more work. 
 - [P1] White House, [America's AI Action Plan](https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf), July 2025, “Encourage Open-Source and Open-Weight AI”, printed pages 4 to 5. Read 15 November 2026.
 - [P2] White House, [Promoting Advanced Artificial Intelligence Innovation and Security](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/), 2 June 2026, section 3(c). Read 15 November 2026.
 - [P3] Department of Homeland Security, [notice concerning DeepSeek exclusion and removal](https://www.govinfo.gov/content/pkg/FR-2026-10-20/html/2026-21447.htm), 91 FR 66346, 20 October 2026, summary and supplementary information. Read 15 November 2026. This module does not interpret the full signed order or its application to a particular contractor.
+- [V1] Anthropic, [Get started with smart reports](https://support.claude.com/en/articles/16893491-get-started-with-smart-reports), Claude Help Center, read in full on 25 November 2026 (KST); the page gives no publication date. A dated description of a vendor feature, cited as an example, not as a recommendation.
 - [E1] [GRCnext prompt evaluation cases](https://github.com/rolldabones/GRCnext-Copilot/blob/main/tests/prompt-evaluation-cases.md), R2 of 27 October 2026, and associated run manifests and transcripts. The captured inventory and the calculations are under [lean-ai/evidence/](./lean-ai/README.md).
 - [Kitchen method](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md); [F24](https://github.com/rolldabones/slow-ai-kitchen/blob/main/primer-workbook/artifacts/F24-cost-model-and-unit-economics-sheet.md); [W15](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/30-w15-measurement-protocol.md); [W16](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/31-w16-case-observation-record.md); [W17](https://github.com/rolldabones/slow-ai-kitchen/blob/main/workbook/32-w17-results-and-business-value.md); [Service Record](https://github.com/rolldabones/slow-ai-kitchen/blob/main/service-record.md); [Take-Out](https://github.com/rolldabones/slow-ai-kitchen/blob/main/take-out-delivery-and-vending-machines.md).
 - [Computational Drafting](https://github.com/rolldabones/computational-drafting); [Definition of Done: Trade-Offs](https://github.com/rolldabones/definition-of-done/blob/main/05-trade-offs.md); [GRCnext methodology](https://github.com/rolldabones/GRCnext-Copilot/blob/main/methodology/method-and-logic.md).
-- [*The Boundary and the Limit: Effectiveness, Lean AI and the Theory of the Governed Firm*](https://github.com/rolldabones/AI-Governance-Academy/blob/main/the-boundary-and-the-limit.md), working paper, version 1.4, 17 November 2026: the theory behind this module, why its unit is the accepted outcome (its Section 4) and why the power to stop comes before economy (its Section 9). It changes nothing in this module.
+- [*The Boundary and the Limit: Effectiveness, Lean AI and the Theory of the Governed Firm*](https://github.com/rolldabones/AI-Governance-Academy/blob/main/the-boundary-and-the-limit.md), working paper, version 1.4, 17 November 2026: the theory behind this module, why its unit is the accepted outcome (its Section 4), the arithmetic of the owner's hours (its Section 8) and why the power to stop comes before economy (its Section 9). On the theory, the paper governs.
 
 **Final Liability rests with the Human.**

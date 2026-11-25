@@ -2,6 +2,18 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.9.0 (2026-11-25)
+
+Minor release: Lean AI unit 1, the first Lean Wednesday (`lean-ai/PLAN.md`, cycle 1), on Michael Paik's approval of the gate of 25 November 2026 and his rulings of 21 November 2026 on the smart reports carry-in. Prepared with Claude, approved by Michael Paik.
+
+- **`lean-ai.md` v0.2.0.** Purpose and boundary: the power to stop comes first, *jidoka* before just-in-time (*The Boundary and the Limit*, Section 9.3; DOCTRINE.md: Slow AI "is a precondition"); it orders sections 6 and 7 before section 8 and adds no step or gate. Section 4 gains The owner's hours: the paper's oversight inequality, the oversight load per owner and the governed share, the module's second measure, with its terms taken from W16, W18, W20, W22 and W24A and the paper's Section 8.5 limits carried in; the section 4 illustration is extended with invented figures (oversight 252.00 of 446.00, 56.5%; load 1.14; governed share 87.5%). Section 4 also gains Reading a vendor's usage analytics, with Claude Enterprise's smart reports as the dated example, the help article read in full in the browser on 25 November 2026 (KST); "generally available from 28 October 2026", in the draft of 21 November 2026, is not in the article and is not carried; the report reads a sample of sessions, so it gives no full count. Section 9 names the new script; Sources gains [V1]; masthead, status and link currency to v0.2.0.
+- **`lean-ai/tools/oversight.py`** (new) recomputes the invented figures, checks each against the module's page and writes **`lean-ai/evidence/oversight-illustration.json`** (new). Standard library only, no sources; the evidence and twenty checks of 15 November 2026 are unchanged.
+- **`lean-ai/pilot-protocol.md` v0.2.0.** Section 3a, the record of an owner's hours; `owner` among the case fields; adversarial case 11, an owner asked for more hours than the owner has; the owner's hours among the evidence of section 6.
+- **`lean-ai/README.md`** to v0.2.0: the folder's versions come level at the module's v0.2.0 (ruling of 19 November 2026), except `audit-and-validation-report.md`, which keeps v0.1.0 as the dated record of 15 November 2026 (gate question 6).
+- **`lean-ai/PLAN.md`**: state of the pieces, the log row for unit 1 with its carried-in source and the author's oversight log (rule 6), first row.
+- `README.md` title block, the `lean-ai.md` row, How to Cite and the Changelog summary line; `CITATION.cff`; the Kitchen version in the Primer's How to Cite (monolith and `primer/00`, verified with `split_markdown.py --verify`) and in `primer-workbook/README.md`, to v3.9.0.
+- Not in scope, logged: the servant card's ledger line does not name the share of cost that was oversight; the paper's Section 9.4 still calls the second measure "proposed here". One inbox row each. No doctrine, step, gate, tier, role or rule is added, and no saving is claimed.
+
 ## v3.8.2 (2026-11-23)
 
 Patch release on Michael Paik's rulings of 23 November 2026 (Gate 1 of the Monday run, rows R24 to R27 and R29), working rotation slot T-C: findings #67 to #82 of the account review of 10 November 2026, the nine DOCTRINE rows of the Primer carry-forward and the DOCTRINE Medium and Low rows the slot tested. Each was confirmed against the live tree before the edit. Prepared with Claude, approved by Michael Paik.

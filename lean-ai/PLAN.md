@@ -1,17 +1,17 @@
 # Lean AI: Plan and Log
 
-**Slow AI Kitchen · [Lean AI](../lean-ai.md) · the plan for this folder and the log of what has shipped · 2026-11-19 (KST) · WIP (work in progress)**
+**Slow AI Kitchen · [Lean AI](../lean-ai.md) · the plan for this folder and the log of what has shipped · 2026-11-25 (KST) · WIP (work in progress)**
 
 Lean AI is being developed in the open, one unit a week. This page says what is being built, in what order and under what rules, and it logs each unit as it ships. It is a plan, so it will change, and each change is dated in the log.
 
 ## What is being built
 
-| Piece | What it is | Where | State on 19 November 2026 |
+| Piece | What it is | Where | State on 25 November 2026 |
 |---|---|---|---|
-| The module | The operating practice: the cost of one accepted outcome, counted once | [../lean-ai.md](../lean-ai.md) | v0.1.1. The next unit takes it to v0.2.0 |
+| The module | The operating practice: the cost of one accepted outcome, counted once | [../lean-ai.md](../lean-ai.md) | v0.2.0 (unit 1): the owner's hours, the order of the two pillars and a vendor's usage analytics |
 | The book | *Slow AI, Lean AI: The Owner's Acceptance and the Power to Stop* | [book/](book/README.md) | Title, thesis and contents set. No chapter drafted |
 | The Lean Tiny Servants | Sample workflows for the workplace, each specified, then run and tested | [tiny-servants/](tiny-servants/README.md) | The card and the two stages set. None specified |
-| The pilot protocol and the evidence | The plan for a pilot and the dated record behind the module | [pilot-protocol.md](pilot-protocol.md), [audit-and-validation-report.md](audit-and-validation-report.md) | As issued on 15 November 2026. No pilot run |
+| The pilot protocol and the evidence | The plan for a pilot and the dated record behind the module | [pilot-protocol.md](pilot-protocol.md), [audit-and-validation-report.md](audit-and-validation-report.md) | The protocol at v0.2.0 (unit 1), with the record of an owner's hours; the report and evidence as issued on 15 November 2026. No pilot run |
 | The theory | *The Boundary and the Limit*, a working paper | [AI-Governance-Academy](https://github.com/rolldabones/AI-Governance-Academy/blob/main/the-boundary-and-the-limit.md) | Version 1.4. On the theory, the paper governs |
 
 ## The thesis the work serves
@@ -61,5 +61,14 @@ The order is a default. The author chooses each next unit when the last one ship
 | Date (KST) | Unit | Shipped in |
 |---|---|---|
 | 19 November 2026 | Foundation: this plan, the folder index, the book's front matter and contents, the Lean Tiny Servant card and stages | slow-ai-kitchen v3.8.0 |
+| 25 November 2026 | Unit 1: module v0.2.0 (the owner's hours: oversight load per owner and the governed share; the order of the two pillars; reading a vendor's usage analytics) and pilot protocol v0.2.0 (the record of an owner's hours). Source carried in: the author's LinkedIn post and first comment on Claude Enterprise smart reports, 21 November 2026 | slow-ai-kitchen v3.9.0 |
+
+## The author's oversight log
+
+Rule 6: the author's own minutes on each unit, reading, correcting and approving, and whether he accepted it at the first read. Self-administered evidence from one owner, and nothing more.
+
+| Date (KST) | Unit | Reading | Correcting | Approving | Accepted at first read |
+|---|---|---:|---:|---:|---|
+| 25 November 2026 | Unit 1, module v0.2.0 | 30, reading and approving together | 0 | in the 30 | Yes, after working through it with a second AI model (Astra 6.2) |
 
 **Final Liability rests with the Human.**
