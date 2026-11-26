@@ -13,7 +13,9 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v1.4.1 | 2026-11-03 (KST) | Final | CC BY-NC-SA 4.0 (see [License](https://github.com/rolldabones/slow-ai-kitchen/blob/main/consultant-workbook.md#license-and-attribution)) |
+| v1.4.2 | 2026-11-26 (KST) | Final | CC BY-NC-SA 4.0 (see [License](https://github.com/rolldabones/slow-ai-kitchen/blob/main/consultant-workbook.md#license-and-attribution)) |
+
+> **Four sources of this workbook were archived on 26 November 2026.** [The Definition of Done](https://github.com/rolldabones/definition-of-done), the [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool), the [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) and the [GRC method](https://github.com/rolldabones/grc) are dated editions from that day and receive no corrections, legal ones included. The first three carry an instrument whose last test was not accepted. Use each as a dated reference, check its statements of law against a current primary source, and read its output yourself; [DISPOSITION.md](https://github.com/rolldabones/rolldabones/blob/main/DISPOSITION.md) lists what is maintained.
 
 **For:** consultants and Client delivery teams running a 30-day initial engagement on one priority workflow for a named business owner. The canonical method is the [README](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md); this workbook adds a delivery sequence, working records, measurement rules and a fictional teaching case.
 

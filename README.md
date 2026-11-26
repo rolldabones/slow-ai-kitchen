@@ -10,7 +10,7 @@ CEO, GRC Solutions Korea
 
 | Version | Date | Status | License |
 |---|---|---|---|
-| v3.9.0 | 2026-11-25 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
+| v3.9.1 | 2026-11-26 (KST, Korea Standard Time) | Final | CC BY-NC-SA 4.0 (see [License](#license)) |
 
 A 12-step governed AI methodology for professional work, from individual task discipline through organizational deployment and institutional program governance, with the Enterprise AI Architecture Primer, six derivation modules and Lean AI (in progress). It includes risk tiers, role architecture, a workshop guide and an addendum on sustained AI governance, risk management and compliance (GRC). It is built on one principle.
 
@@ -400,7 +400,7 @@ If those are not true, the method was not followed, even if AI was used producti
 
 The workshop teaches teams how to use AI properly in the normal course of work. It is not a prompt trick session. It is not a tour of features. It is a discipline workshop. Participants leave with a completed artifact, not a slide deck.
 
-The Workshop is a facilitation design, not a priced offering: it is Day 2 of the Academy's [Practitioner Academy](https://github.com/rolldabones/AI-Governance-Academy/blob/main/04-practitioner-academy.md) and the exercise form [The AI Generalist](https://github.com/rolldabones/the-ai-generalist) draws on; the Half-Day format is a variant of the same design.
+The Workshop is a facilitation design, not a priced offering: it is Day 2 of the Academy's [Practitioner Academy](https://github.com/rolldabones/AI-Governance-Academy/blob/main/04-practitioner-academy.md) and the exercise form [The AI Generalist](https://github.com/rolldabones/the-ai-generalist), an archived edition, draws on; the Half-Day format is a variant of the same design.
 
 ### Learning Objectives
 
@@ -572,17 +572,19 @@ This method is one component of a larger body of AI governance, risk management 
 The three doctrines are used in this repository as stated in [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md), the account's single normative statement; where this repository compresses a doctrine, it uses the short forms of [DOCTRINE.md section 8](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md#8-short-forms).
 
 Nearest neighbors:
-- [definition-of-done](https://github.com/rolldabones/definition-of-done): the depth companion to Gates 1, 6 and 7
-- [origami-method](https://github.com/rolldabones/origami-method): the workflow-design discipline within this method's larger arc; use it to turn a recurring Kitchen task into a repeatable, gated workflow
-- [grc](https://github.com/rolldabones/grc): the working method on the OCEG spine; the Feast's tool registry, tiers and escalation chains map to the GRCnext™ primitives as a Service inventory, Tolerances and Switches, run as an engine in GRCnext-Copilot
+- [definition-of-done](https://github.com/rolldabones/definition-of-done) (archived edition): the depth companion to Gates 1, 6 and 7
+- [origami-method](https://github.com/rolldabones/origami-method) (archived edition): the workflow-design discipline within this method's larger arc; use it to turn a recurring Kitchen task into a repeatable, gated workflow
+- [grc](https://github.com/rolldabones/grc) (archived edition): the working method on the OCEG spine; the Feast's tool registry, tiers and escalation chains map to the GRCnext™ primitives as a Service inventory, Tolerances and Switches, run as an engine in GRCnext-Copilot
 - [grc-workbook](https://github.com/rolldabones/grc-workbook): the module-by-module instrument for building the permanent governance, risk management and compliance capability the Restaurant addendum describes
-- [the-ai-generalist](https://github.com/rolldabones/the-ai-generalist): the one-day corporate workshop that compresses this method for a general professional audience
+- [the-ai-generalist](https://github.com/rolldabones/the-ai-generalist) (archived edition): the one-day corporate workshop that compresses this method for a general professional audience
+
+Entries marked archived edition are dated editions that receive no corrections; [DISPOSITION.md](https://github.com/rolldabones/rolldabones/blob/main/DISPOSITION.md) lists them.
 
 ---
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.9.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
+> Paik, Son-U Michael. *Slow AI Kitchen: Method and Workshop Guide*, v3.9.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/slow-ai-kitchen
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
@@ -604,7 +606,7 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ## Changelog
 
-Current version: **v3.9.0 (2026-11-25)**.
+Current version: **v3.9.1 (2026-11-26)**.
 Minor release: [Lean AI](./lean-ai.md) v0.2.0, unit 1 of its Wednesday program. The owner's hours (oversight load per owner and the governed share), the order of the two pillars and a reading of a vendor's usage analytics; the pilot protocol gains the record of an owner's hours. Invented figures only, recomputed by script. No step, gate, tier, role or rule of the method changes.
 The full version history is in [CHANGELOG.md](./CHANGELOG.md).
 

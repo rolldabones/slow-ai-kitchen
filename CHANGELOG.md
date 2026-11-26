@@ -2,6 +2,16 @@
 
 All notable changes to the Slow AI Kitchen repository. Versions apply to the repository as a whole; README.md carries the current version in its title block. Prior versions are superseded, never silently overwritten.
 
+## v3.9.1 (2026-11-26)
+
+Patch release: pointers and wording only. On Michael Paik's rulings of 26 November 2026, recorded in DISPOSITION.md in the profile repository: thirteen repositories of the account were archived that day as dated editions. Prepared with Claude, approved by Michael Paik. The method is unchanged: no step, gate, tier, role, principle, Pantry source or module changes, and no file is added, removed, renamed or moved.
+
+- **`README.md`, Part of the ecosystem:** the 4 archived neighbors are marked "archived edition", with one sentence pointing to DISPOSITION.md; the Workshop paragraph says The AI Generalist is an archived edition.
+- **`enterprise-ai-architecture-primer.md`:** the masthead states the Primer as a dated edition, not updated after 23 November 2026. Its version stays v2.2.2 and no heading, anchor or path changes. How to Cite names this release.
+- **`consultant-workbook.md` to v1.4.2:** a note under the masthead names the four sources archived on 26 November 2026 (The Definition of Done, the AI Impact Assessment Tool, the AI GRC Copilot and the GRC method) and says that they receive no corrections; the source table gives each one's archive date and final version beside the version the workbook was prepared against. No working record, rule or step of the engagement changes.
+- `primer/` and `workbook/`: the same passages are changed in the derived parts, which `split_markdown.py --verify` confirms rebuild their sources byte for byte.
+- README title block, How to Cite, Current version, `CITATION.cff` and `primer-workbook/README.md` to v3.9.1.
+
 ## v3.9.0 (2026-11-25)
 
 Minor release: Lean AI unit 1, the first Lean Wednesday (`lean-ai/PLAN.md`, cycle 1), on Michael Paik's approval of the gate of 25 November 2026 and his rulings of 21 November 2026 on the smart reports carry-in. Prepared with Claude, approved by Michael Paik.

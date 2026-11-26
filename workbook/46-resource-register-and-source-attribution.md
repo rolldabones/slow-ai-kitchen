@@ -10,11 +10,11 @@ The resources below anchor the workbook. Sources are cited by name throughout; v
 | [Slow AI Kitchen](https://github.com/rolldabones/slow-ai-kitchen/blob/main/README.md) (this repository) | Moves with this repository; the README controls | Canonical 12 steps, 10 gates, roles, risk tiers, workshop and the five institutional pillars |
 | [Service Record](https://github.com/rolldabones/slow-ai-kitchen/blob/main/service-record.md) (this repository) | Moves with this repository | One-page close-out after Gate 7; required Tier 3, recommended Tier 2, optional Tier 1 |
 | [DOCTRINE.md](https://github.com/rolldabones/rolldabones/blob/main/DOCTRINE.md) | v1.2.0, 17 October 2026 | Normative statement of Slow AI, Informed Intent (two limbs) and Final Liability, with the short forms (section 8) |
-| [Definition of Done](https://github.com/rolldabones/definition-of-done) | v1.2.5, 18 October 2026 | Human definition and confirmation of done; four lenses for material factors |
+| [Definition of Done](https://github.com/rolldabones/definition-of-done) | v1.2.5, 18 October 2026; archived 26 November 2026 at v1.4.3 | Human definition and confirmation of done; four lenses for material factors |
 | [GRC Workbook](https://github.com/rolldabones/grc-workbook) | v4.3.3, 18 October 2026 | Operating cycle, the authorizer's five conditions (Module 10), release tiering from observation to autonomous operation (recorded here as the operating tier), accountability, oversight and continuing governance |
-| [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) | v1.4.0, 18 October 2026 | Assessment design, evidence states (Requested, Provided, Verified, Not verified), testing, monitoring and decision records |
-| [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) | v1.2.1, 18 October 2026 | Artifact ownership, control steps, evidence, systems of record, cadence, testing, exceptions and approval |
-| [GRC method](https://github.com/rolldabones/grc) | v2.3.0, 18 October 2026 | Underlying governance, risk management and compliance operating method and companion resources |
+| [AI Impact Assessment Tool](https://github.com/rolldabones/AI-Impact-Assessment-Tool) | v1.4.0, 18 October 2026; archived 26 November 2026 at v1.6.2 | Assessment design, evidence states (Requested, Provided, Verified, Not verified), testing, monitoring and decision records |
+| [AI GRC Copilot](https://github.com/rolldabones/AI-GRC-Copilot) | v1.2.1, 18 October 2026; archived 26 November 2026 at v1.2.8 | Artifact ownership, control steps, evidence, systems of record, cadence, testing, exceptions and approval |
+| [GRC method](https://github.com/rolldabones/grc) | v2.3.0, 18 October 2026; archived 26 November 2026 at v2.4.4 | Underlying governance, risk management and compliance operating method and companion resources |
 
 ### Authorship and production
 
